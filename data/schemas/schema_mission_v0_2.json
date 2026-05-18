@@ -1,0 +1,405 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://music-atlas.local/schemas/mission_v0_2.json",
+  "title": "Music Atlas Mission v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mission_id",
+    "mission_title",
+    "mission_version",
+    "created_at",
+    "mission_type",
+    "recommended_format",
+    "hypothesis",
+    "inflation_warning",
+    "success_bar",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "mission.v0.2"
+    },
+    "mission_id": {
+      "type": "string",
+      "pattern": "^MIS_[A-Z0-9_]+$"
+    },
+    "mission_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mission_version": {
+      "type": "string",
+      "pattern": "^v\\d+\\.\\d+(\\.\\d+)?$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mission_type": {
+      "type": "string",
+      "enum": [
+        "track_probe",
+        "album_test",
+        "station_seed",
+        "playlist_bleed",
+        "false_nearby_test"
+      ]
+    },
+    "recommended_format": {
+      "type": "string",
+      "enum": [
+        "play_items_in_order",
+        "album_first",
+        "station_from_seed",
+        "manual_playlist",
+        "single_track_spike"
+      ]
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inflation_warning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "success_bar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimum_items_to_resolve",
+        "minimum_items_to_play",
+        "minimum_reactions_required",
+        "requires_physical_iphone"
+      ],
+      "properties": {
+        "minimum_items_to_resolve": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minimum_items_to_play": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minimum_reactions_required": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requires_physical_iphone": {
+          "type": "boolean",
+          "const": true
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "run_instructions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "listen_in_order": {
+          "type": "boolean"
+        },
+        "shuffle_allowed": {
+          "type": "boolean"
+        },
+        "raw_text": {
+          "type": "string"
+        }
+      }
+    },
+    "post_run_inference_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "trigger",
+          "inference"
+        ],
+        "properties": {
+          "trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inference": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "sequence",
+          "item_type",
+          "artist",
+          "title",
+          "apple_music_resolution"
+        ],
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "pattern": "^ITEM_[A-Z0-9_]+$"
+          },
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "item_type": {
+            "type": "string",
+            "enum": [
+              "track",
+              "album"
+            ]
+          },
+          "artist": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "album": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          },
+          "why_included": {
+            "type": "string"
+          },
+          "expected_test_signal": {
+            "type": "string"
+          },
+          "player_card": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "flip_side": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "song_hypothesis": {
+                    "type": "string"
+                  },
+                  "detail": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "feedback_chip_sets": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "hit": {
+                "$ref": "#/$defs/feedback_chip_array"
+              },
+              "partial": {
+                "$ref": "#/$defs/feedback_chip_array"
+              },
+              "ok_shelf": {
+                "$ref": "#/$defs/feedback_chip_array"
+              },
+              "miss": {
+                "$ref": "#/$defs/feedback_chip_array"
+              }
+            }
+          },
+          "apple_music_resolution": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "unresolved",
+                  "resolved",
+                  "ambiguous",
+                  "skipped",
+                  "unavailable_region",
+                  "unavailable_subscription",
+                  "failed"
+                ]
+              },
+              "catalog_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "catalog_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "artwork_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "storefront": {
+                "type": "string",
+                "minLength": 2
+              },
+              "resolved_title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "resolved_artist": {
+                "type": "string",
+                "minLength": 1
+              },
+              "resolved_album": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "resolver": {
+                "type": "string",
+                "enum": [
+                  "not_attempted",
+                  "automatic_search",
+                  "manual_selection",
+                  "cached",
+                  "system"
+                ]
+              },
+              "resolved_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "candidate_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "error_code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "error_message": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "resolved"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "catalog_id",
+                    "resolved_title",
+                    "resolved_artist",
+                    "confidence",
+                    "resolver",
+                    "resolved_at"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "enum": [
+                        "unresolved",
+                        "skipped",
+                        "unavailable_region",
+                        "unavailable_subscription",
+                        "failed"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "reason"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "ambiguous"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "candidate_count",
+                    "reason"
+                  ]
+                }
+              }
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "feedback_chip_array": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tag_id",
+          "label"
+        ],
+        "properties": {
+          "tag_id": {
+            "type": "string",
+            "pattern": "^TAG_[A-Z0-9_]+$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

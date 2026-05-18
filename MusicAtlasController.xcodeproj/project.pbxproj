@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* MusicAtlasControllerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000101 /* MusicAtlasControllerApp.swift */; };
+		100000000000000000000002 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000102 /* AppModel.swift */; };
+		100000000000000000000003 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000103 /* Mission.swift */; };
+		100000000000000000000004 /* ReactionSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000104 /* ReactionSession.swift */; };
+		100000000000000000000005 /* MissionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000105 /* MissionLoader.swift */; };
+		100000000000000000000006 /* MusicAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000106 /* MusicAuthorizationService.swift */; };
+		100000000000000000000007 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000107 /* RootView.swift */; };
+		100000000000000000000008 /* MissionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000108 /* MissionListView.swift */; };
+		100000000000000000000009 /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000109 /* MissionDetailView.swift */; };
+		10000000000000000000000A /* MusicAuthorizationPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010A /* MusicAuthorizationPanel.swift */; };
+		10000000000000000000000B /* ResolverStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010B /* ResolverStatusView.swift */; };
+		10000000000000000000000C /* NowTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010C /* NowTestingView.swift */; };
+		10000000000000000000000D /* ExportPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010D /* ExportPreviewView.swift */; };
+		10000000000000000000000E /* sample_mission_love_tributaries_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010E /* sample_mission_love_tributaries_v0_2.json */; };
+		10000000000000000000000F /* schema_mission_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010F /* schema_mission_v0_2.json */; };
+		100000000000000000000010 /* schema_reaction_session_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000110 /* schema_reaction_session_v0_2.json */; };
+		100000000000000000000011 /* MusicSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000114 /* MusicSearchService.swift */; };
+		100000000000000000000012 /* ReactionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000115 /* ReactionStore.swift */; };
+		100000000000000000000013 /* SessionExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000116 /* SessionExporter.swift */; };
+		100000000000000000000014 /* MissionDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000117 /* MissionDecodingTests.swift */; };
+		100000000000000000000015 /* SessionExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000118 /* SessionExporterTests.swift */; };
+		100000000000000000000016 /* sample_mission_love_tributaries_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000010E /* sample_mission_love_tributaries_v0_2.json */; };
+		100000000000000000000017 /* MusicPlaybackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011A /* MusicPlaybackService.swift */; };
+		100000000000000000000018 /* sample_mission_lithuanian_discovery_v0_3_alpha.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011B /* sample_mission_lithuanian_discovery_v0_3_alpha.json */; };
+		100000000000000000000019 /* sample_mission_lithuanian_discovery_v0_3_alpha.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011B /* sample_mission_lithuanian_discovery_v0_3_alpha.json */; };
+		10000000000000000000001A /* MissionReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011C /* MissionReviewView.swift */; };
+		10000000000000000000001B /* waymark_matt_10_personal_missions_v0_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */; };
+		10000000000000000000001C /* waymark_matt_10_personal_missions_v0_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */; };
+		10000000000000000000001D /* SessionPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011E /* SessionPersistenceStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		100000000000000000000901 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100000000000000000000601 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100000000000000000000401;
+			remoteInfo = MusicAtlasController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		100000000000000000000101 /* MusicAtlasControllerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAtlasControllerApp.swift; sourceTree = "<group>"; };
+		100000000000000000000102 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		100000000000000000000103 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		100000000000000000000104 /* ReactionSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionSession.swift; sourceTree = "<group>"; };
+		100000000000000000000105 /* MissionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionLoader.swift; sourceTree = "<group>"; };
+		100000000000000000000106 /* MusicAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAuthorizationService.swift; sourceTree = "<group>"; };
+		100000000000000000000107 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		100000000000000000000108 /* MissionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionListView.swift; sourceTree = "<group>"; };
+		100000000000000000000109 /* MissionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailView.swift; sourceTree = "<group>"; };
+		10000000000000000000010A /* MusicAuthorizationPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAuthorizationPanel.swift; sourceTree = "<group>"; };
+		10000000000000000000010B /* ResolverStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverStatusView.swift; sourceTree = "<group>"; };
+		10000000000000000000010C /* NowTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTestingView.swift; sourceTree = "<group>"; };
+		10000000000000000000010D /* ExportPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPreviewView.swift; sourceTree = "<group>"; };
+		10000000000000000000010E /* sample_mission_love_tributaries_v0_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_mission_love_tributaries_v0_2.json; sourceTree = "<group>"; };
+		10000000000000000000010F /* schema_mission_v0_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema_mission_v0_2.json; sourceTree = "<group>"; };
+		100000000000000000000110 /* schema_reaction_session_v0_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema_reaction_session_v0_2.json; sourceTree = "<group>"; };
+		100000000000000000000111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100000000000000000000112 /* MusicKitSetup.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MusicKitSetup.md; sourceTree = "<group>"; };
+		100000000000000000000113 /* MusicAtlasController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicAtlasController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		100000000000000000000114 /* MusicSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchService.swift; sourceTree = "<group>"; };
+		100000000000000000000115 /* ReactionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionStore.swift; sourceTree = "<group>"; };
+		100000000000000000000116 /* SessionExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionExporter.swift; sourceTree = "<group>"; };
+		100000000000000000000117 /* MissionDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDecodingTests.swift; sourceTree = "<group>"; };
+		100000000000000000000118 /* SessionExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionExporterTests.swift; sourceTree = "<group>"; };
+		100000000000000000000119 /* MusicAtlasControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAtlasControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10000000000000000000011A /* MusicPlaybackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaybackService.swift; sourceTree = "<group>"; };
+		10000000000000000000011B /* sample_mission_lithuanian_discovery_v0_3_alpha.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_mission_lithuanian_discovery_v0_3_alpha.json; sourceTree = "<group>"; };
+		10000000000000000000011C /* MissionReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionReviewView.swift; sourceTree = "<group>"; };
+		10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = waymark_matt_10_personal_missions_v0_1.json; sourceTree = "<group>"; };
+		10000000000000000000011E /* SessionPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPersistenceStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100000000000000000000201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100000000000000000000202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100000000000000000000301 = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000302 /* MusicAtlasController */,
+				100000000000000000000309 /* MusicAtlasControllerTests */,
+				100000000000000000000303 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100000000000000000000302 /* MusicAtlasController */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000101 /* MusicAtlasControllerApp.swift */,
+				100000000000000000000304 /* Models */,
+				100000000000000000000305 /* Services */,
+				100000000000000000000306 /* Views */,
+				100000000000000000000307 /* Resources */,
+				100000000000000000000308 /* Support */,
+			);
+			path = MusicAtlasController;
+			sourceTree = "<group>";
+		};
+		100000000000000000000303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000113 /* MusicAtlasController.app */,
+				100000000000000000000119 /* MusicAtlasControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		100000000000000000000304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000102 /* AppModel.swift */,
+				100000000000000000000103 /* Mission.swift */,
+				100000000000000000000104 /* ReactionSession.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		100000000000000000000305 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000105 /* MissionLoader.swift */,
+				100000000000000000000106 /* MusicAuthorizationService.swift */,
+				100000000000000000000114 /* MusicSearchService.swift */,
+				10000000000000000000011A /* MusicPlaybackService.swift */,
+				100000000000000000000115 /* ReactionStore.swift */,
+				100000000000000000000116 /* SessionExporter.swift */,
+				10000000000000000000011E /* SessionPersistenceStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		100000000000000000000306 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000107 /* RootView.swift */,
+				100000000000000000000108 /* MissionListView.swift */,
+				100000000000000000000109 /* MissionDetailView.swift */,
+				10000000000000000000010A /* MusicAuthorizationPanel.swift */,
+				10000000000000000000010B /* ResolverStatusView.swift */,
+				10000000000000000000010C /* NowTestingView.swift */,
+				10000000000000000000011C /* MissionReviewView.swift */,
+				10000000000000000000010D /* ExportPreviewView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		100000000000000000000307 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10000000000000000000010E /* sample_mission_love_tributaries_v0_2.json */,
+				10000000000000000000011B /* sample_mission_lithuanian_discovery_v0_3_alpha.json */,
+				10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */,
+				10000000000000000000010F /* schema_mission_v0_2.json */,
+				100000000000000000000110 /* schema_reaction_session_v0_2.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		100000000000000000000308 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000111 /* Info.plist */,
+				100000000000000000000112 /* MusicKitSetup.md */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		100000000000000000000309 /* MusicAtlasControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000117 /* MissionDecodingTests.swift */,
+				100000000000000000000118 /* SessionExporterTests.swift */,
+			);
+			path = MusicAtlasControllerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100000000000000000000401 /* MusicAtlasController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000000000701 /* Build configuration list for PBXNativeTarget "MusicAtlasController" */;
+			buildPhases = (
+				100000000000000000000501 /* Sources */,
+				100000000000000000000201 /* Frameworks */,
+				100000000000000000000502 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicAtlasController;
+			productName = MusicAtlasController;
+			productReference = 100000000000000000000113 /* MusicAtlasController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		100000000000000000000402 /* MusicAtlasControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000000000702 /* Build configuration list for PBXNativeTarget "MusicAtlasControllerTests" */;
+			buildPhases = (
+				100000000000000000000503 /* Sources */,
+				100000000000000000000202 /* Frameworks */,
+				100000000000000000000504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100000000000000000000902 /* PBXTargetDependency */,
+			);
+			name = MusicAtlasControllerTests;
+			productName = MusicAtlasControllerTests;
+			productReference = 100000000000000000000119 /* MusicAtlasControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100000000000000000000601 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					100000000000000000000401 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					100000000000000000000402 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 100000000000000000000401;
+					};
+				};
+			};
+			buildConfigurationList = 100000000000000000000700 /* Build configuration list for PBXProject "MusicAtlasController" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100000000000000000000301;
+			productRefGroup = 100000000000000000000303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100000000000000000000401 /* MusicAtlasController */,
+				100000000000000000000402 /* MusicAtlasControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100000000000000000000502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10000000000000000000000E /* sample_mission_love_tributaries_v0_2.json in Resources */,
+				100000000000000000000018 /* sample_mission_lithuanian_discovery_v0_3_alpha.json in Resources */,
+				10000000000000000000001B /* waymark_matt_10_personal_missions_v0_1.json in Resources */,
+				10000000000000000000000F /* schema_mission_v0_2.json in Resources */,
+				100000000000000000000010 /* schema_reaction_session_v0_2.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100000000000000000000504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000016 /* sample_mission_love_tributaries_v0_2.json in Resources */,
+				100000000000000000000019 /* sample_mission_lithuanian_discovery_v0_3_alpha.json in Resources */,
+				10000000000000000000001C /* waymark_matt_10_personal_missions_v0_1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100000000000000000000501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000001 /* MusicAtlasControllerApp.swift in Sources */,
+				100000000000000000000002 /* AppModel.swift in Sources */,
+				100000000000000000000003 /* Mission.swift in Sources */,
+				100000000000000000000004 /* ReactionSession.swift in Sources */,
+				100000000000000000000005 /* MissionLoader.swift in Sources */,
+				100000000000000000000006 /* MusicAuthorizationService.swift in Sources */,
+				100000000000000000000007 /* RootView.swift in Sources */,
+				100000000000000000000008 /* MissionListView.swift in Sources */,
+				100000000000000000000009 /* MissionDetailView.swift in Sources */,
+				10000000000000000000000A /* MusicAuthorizationPanel.swift in Sources */,
+				10000000000000000000000B /* ResolverStatusView.swift in Sources */,
+				10000000000000000000000C /* NowTestingView.swift in Sources */,
+				10000000000000000000001A /* MissionReviewView.swift in Sources */,
+				10000000000000000000000D /* ExportPreviewView.swift in Sources */,
+				100000000000000000000011 /* MusicSearchService.swift in Sources */,
+				100000000000000000000017 /* MusicPlaybackService.swift in Sources */,
+				100000000000000000000012 /* ReactionStore.swift in Sources */,
+				100000000000000000000013 /* SessionExporter.swift in Sources */,
+				10000000000000000000001D /* SessionPersistenceStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100000000000000000000503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000014 /* MissionDecodingTests.swift in Sources */,
+				100000000000000000000015 /* SessionExporterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100000000000000000000902 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100000000000000000000401 /* MusicAtlasController */;
+			targetProxy = 100000000000000000000901 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		100000000000000000000801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7XQQ46X8QQ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		100000000000000000000802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7XQQ46X8QQ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		100000000000000000000803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MusicAtlasController/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vytisstudios.MusicAtlasController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		100000000000000000000804 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MusicAtlasController/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vytisstudios.MusicAtlasController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		100000000000000000000805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vytisstudios.MusicAtlasControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicAtlasController.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MusicAtlasController";
+			};
+			name = Debug;
+		};
+		100000000000000000000806 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vytisstudios.MusicAtlasControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicAtlasController.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MusicAtlasController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100000000000000000000700 /* Build configuration list for PBXProject "MusicAtlasController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000801 /* Debug */,
+				100000000000000000000802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100000000000000000000701 /* Build configuration list for PBXNativeTarget "MusicAtlasController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000803 /* Debug */,
+				100000000000000000000804 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100000000000000000000702 /* Build configuration list for PBXNativeTarget "MusicAtlasControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000805 /* Debug */,
+				100000000000000000000806 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 100000000000000000000601 /* Project object */;
+}
