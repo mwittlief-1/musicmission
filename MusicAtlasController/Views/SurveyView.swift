@@ -506,17 +506,15 @@ private struct SurveyGridPageSurface: View {
 
     var body: some View {
         GeometryReader { proxy in
-            let gridSpacing: CGFloat = 9
-            let verticalPadding: CGFloat = 10
-            let titleHeight: CGFloat = 42
-            let availableHeight = proxy.size.height - (verticalPadding * 2) - titleHeight - 10
-            let rawTileHeight = (availableHeight - (gridSpacing * 3)) / 4
-            let tileHeight = min(max(rawTileHeight, 92), 138)
+            let gridSpacing: CGFloat = 8
+            let verticalPadding: CGFloat = 8
+            let columnCount = max(1, columns.count)
+            let rowCount = max(1, Int(ceil(Double(page.items.count) / Double(columnCount))))
+            let availableHeight = proxy.size.height - (verticalPadding * 2)
+            let rawTileHeight = (availableHeight - (gridSpacing * CGFloat(max(0, rowCount - 1)))) / CGFloat(rowCount)
+            let tileHeight = min(max(rawTileHeight, 84), 132)
 
-            VStack(alignment: .leading, spacing: 10) {
-                SurveyPageTitle(page: page)
-                    .frame(height: titleHeight, alignment: .topLeading)
-
+            VStack(alignment: .leading, spacing: 0) {
                 LazyVGrid(columns: columns, spacing: gridSpacing) {
                     ForEach(page.items) { item in
                         SurveyGridTile(
@@ -561,6 +559,24 @@ private struct SurveyGridTile: View {
                 ZStack(alignment: .topTrailing) {
                     SurveyArtworkView(item: item, artworkURL: artworkURL, gradient: tileGradient, initials: initials)
                         .frame(height: artworkHeight)
+                        .overlay(alignment: .bottomLeading) {
+                            Text(item.title)
+                                .font(.caption.weight(.bold))
+                                .foregroundStyle(.white)
+                                .lineLimit(item.kind == .artist ? 2 : 1)
+                                .multilineTextAlignment(.leading)
+                                .minimumScaleFactor(0.68)
+                                .padding(.horizontal, 6)
+                                .padding(.vertical, 5)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(
+                                    LinearGradient(
+                                        colors: [.black.opacity(0), .black.opacity(0.72)],
+                                        startPoint: .top,
+                                        endPoint: .bottom
+                                    )
+                                )
+                        }
 
                     HStack(spacing: 4) {
                         if nuanceCount > 0 || hasNote {
@@ -582,23 +598,14 @@ private struct SurveyGridTile: View {
                     .padding(5)
                 }
 
-                VStack(spacing: 1) {
-                    Text(item.title)
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.white)
-                        .lineLimit(item.subtitle == nil ? 2 : 1)
-                        .multilineTextAlignment(.center)
+                if let subtitle = item.subtitle {
+                    Text(subtitle)
+                        .font(.caption2)
+                        .foregroundStyle(SurveyStyle.secondaryText)
+                        .lineLimit(1)
                         .minimumScaleFactor(0.72)
-
-                    if let subtitle = item.subtitle {
-                        Text(subtitle)
-                            .font(.caption2)
-                            .foregroundStyle(SurveyStyle.secondaryText)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.72)
-                    }
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
             .padding(6)
             .frame(maxWidth: .infinity, minHeight: tileHeight, maxHeight: tileHeight, alignment: .top)
@@ -620,7 +627,8 @@ private struct SurveyGridTile: View {
     }
 
     private var artworkHeight: CGFloat {
-        max(44, tileHeight * (item.kind == .artist ? 0.48 : 0.52))
+        let reservedTextHeight: CGFloat = item.subtitle == nil ? 0 : 18
+        return max(52, tileHeight - reservedTextHeight - 12)
     }
 
     private var initials: String {
@@ -678,6 +686,8 @@ private struct SurveyArtworkView: View {
                         image
                             .resizable()
                             .scaledToFill()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .clipped()
                     case .failure:
                         placeholder
                     @unknown default:
@@ -688,6 +698,7 @@ private struct SurveyArtworkView: View {
                 placeholder
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 

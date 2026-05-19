@@ -401,34 +401,58 @@ private struct PlaybackMeter: View {
     let seekAction: (TimeInterval) -> Void
     @State private var isSeeking = false
     @State private var seekProgress = 0.0
+    @State private var committedSeekProgress: Double?
 
     var body: some View {
         VStack(spacing: 4) {
             if let duration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
                duration > 0 {
-                Slider(
-                    value: Binding(
-                        get: {
-                            isSeeking ? seekProgress : progress
-                        },
-                        set: { newValue in
-                            seekProgress = min(1, max(0, newValue))
-                        }
-                    ),
-                    in: 0...1,
-                    onEditingChanged: { editing in
-                        if editing {
-                            seekProgress = progress
-                            isSeeking = true
-                        } else {
-                            isSeeking = false
-                            seekAction(seekProgress * duration)
-                        }
+                GeometryReader { geometry in
+                    let width = max(1, geometry.size.width)
+                    let currentProgress = displayedProgress
+                    let fillWidth = width * currentProgress
+
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(Color.white.opacity(0.18))
+                            .frame(height: 5)
+
+                        Capsule()
+                            .fill(Color.white.opacity(0.88))
+                            .frame(width: fillWidth, height: 5)
+
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 16, height: 16)
+                            .shadow(color: .black.opacity(0.35), radius: 3, x: 0, y: 1)
+                            .offset(x: min(max(0, fillWidth - 8), max(0, width - 16)))
                     }
-                )
-                .tint(.white)
-                .frame(height: 14)
+                    .frame(maxHeight: .infinity)
+                    .contentShape(Rectangle())
+                    .gesture(
+                        DragGesture(minimumDistance: 0)
+                            .onChanged { value in
+                                seekProgress = boundedProgress(for: value.location.x, width: width)
+                                isSeeking = true
+                            }
+                            .onEnded { value in
+                                let finalProgress = boundedProgress(for: value.location.x, width: width)
+                                seekProgress = finalProgress
+                                committedSeekProgress = finalProgress
+                                isSeeking = false
+                                seekAction(finalProgress * duration)
+
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+                                    if !isSeeking {
+                                        committedSeekProgress = nil
+                                    }
+                                }
+                            }
+                    )
+                }
+                .frame(height: 24)
                 .accessibilityLabel("Playback position")
+                .accessibilityValue("\(Int(displayedProgress * 100)) percent")
             } else {
                 GeometryReader { geometry in
                     ZStack(alignment: .leading) {
@@ -459,8 +483,20 @@ private struct PlaybackMeter: View {
         }
     }
 
+    private var displayedProgress: Double {
+        if isSeeking {
+            return seekProgress
+        }
+
+        return committedSeekProgress ?? progress
+    }
+
     private var progress: Double {
         max(snapshot.progress, playback.status == .notAttempted ? 0 : 0.04)
+    }
+
+    private func boundedProgress(for xPosition: CGFloat, width: CGFloat) -> Double {
+        min(1, max(0, Double(xPosition / max(1, width))))
     }
 
     private var leftTime: String {

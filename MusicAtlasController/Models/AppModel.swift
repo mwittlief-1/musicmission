@@ -48,6 +48,7 @@ final class AppModel: ObservableObject {
     private let sessionPersistenceStore: SessionPersistenceStore
     private var persistedSessionLibrary: PersistedSessionLibrary = .empty
     private var playbackPollingTask: Task<Void, Never>?
+    private var playbackPollingSuppressedUntil: Date?
 
     init(
         stubSearchService: any MusicSearchServing = StubMusicSearchService(),
@@ -363,6 +364,7 @@ final class AppModel: ObservableObject {
             lastActionMessage = "\(musicServiceMode.displayName) marked \(item.title) as played."
         case .playing:
             lastActionMessage = "\(musicServiceMode.displayName) started playback for \(item.title)."
+            suppressPlaybackPollingBriefly()
             startPlaybackPolling(for: item.itemID)
             return true
         case .failed:
@@ -410,6 +412,8 @@ final class AppModel: ObservableObject {
             let currentPlayback = playback(for: currentItem)
             let advancedAt = Date()
             if currentPlayback.status == .playing {
+                _ = await activePlaybackService.pause(currentPlayback: currentPlayback, at: advancedAt)
+
                 if currentPlayback.hasReachedCompletionThreshold(at: advancedAt) {
                     playbackRecords[currentItem.itemID] = currentPlayback.endedAsPlayed(at: advancedAt)
                     ensureDefaultNoSignalReaction(for: currentItem, at: advancedAt)
@@ -497,6 +501,7 @@ final class AppModel: ObservableObject {
             stopPlaybackPolling()
             lastActionMessage = playback.errorMessage ?? "Playback resume failed for \(item.title)."
         } else {
+            suppressPlaybackPollingBriefly()
             startPlaybackPolling(for: item.itemID)
             lastActionMessage = "Resumed \(item.title)."
         }
@@ -527,7 +532,9 @@ final class AppModel: ObservableObject {
             boundedElapsed = max(0, elapsedSeconds)
         }
 
-        let playback = await activePlaybackService.seek(to: boundedElapsed, currentPlayback: currentPlayback, at: Date())
+        let seekedAt = Date()
+        let playback = (await activePlaybackService.seek(to: boundedElapsed, currentPlayback: currentPlayback, at: seekedAt))
+            .movedPlaybackPosition(to: boundedElapsed, at: seekedAt)
         playbackRecords[item.itemID] = playback
         activePlaybackSnapshot = PlaybackSnapshot(
             runtimeStatus: currentSnapshot.runtimeStatus == .paused ? .paused : .playing,
@@ -540,6 +547,7 @@ final class AppModel: ObservableObject {
 
         if activePlaybackSnapshot.runtimeStatus == .playing {
             observedPlaybackItemID = item.itemID
+            suppressPlaybackPollingBriefly()
             startPlaybackPolling(for: item.itemID)
         }
     }
@@ -897,6 +905,15 @@ final class AppModel: ObservableObject {
     private func stopPlaybackPolling() {
         playbackPollingTask?.cancel()
         playbackPollingTask = nil
+        playbackPollingSuppressedUntil = nil
+    }
+
+    private func suppressPlaybackPollingBriefly() {
+        guard musicServiceMode == .liveMusicKit else {
+            return
+        }
+
+        playbackPollingSuppressedUntil = Date().addingTimeInterval(0.85)
     }
 
     private func refreshPlaybackSnapshot(for itemID: String) async {
@@ -904,6 +921,12 @@ final class AppModel: ObservableObject {
             stopPlaybackPolling()
             return
         }
+
+        if let playbackPollingSuppressedUntil,
+           Date() < playbackPollingSuppressedUntil {
+            return
+        }
+        playbackPollingSuppressedUntil = nil
 
         guard let item = mission?.items.first(where: { $0.itemID == itemID }) else {
             stopPlaybackPolling()
@@ -942,13 +965,14 @@ final class AppModel: ObservableObject {
         }
 
         let wallElapsed = max(0, Date().timeIntervalSince(startedAt))
+        let observedElapsed = snapshot.elapsedSeconds > 0.5 ? snapshot.elapsedSeconds : wallElapsed
         if snapshot.runtimeStatus == .stopped || snapshot.runtimeStatus == .completed {
             guard let totalDuration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
                   totalDuration > 0 else {
                 return true
             }
 
-            return max(wallElapsed, snapshot.elapsedSeconds) / totalDuration >= 0.9
+            return observedElapsed / totalDuration >= 0.9
         }
 
         guard let totalDuration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
@@ -956,7 +980,6 @@ final class AppModel: ObservableObject {
             return false
         }
 
-        let observedElapsed = max(wallElapsed, snapshot.elapsedSeconds)
         guard observedElapsed / totalDuration >= 0.9 else {
             return false
         }

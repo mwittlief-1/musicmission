@@ -178,6 +178,23 @@ struct PlaybackRecord: Codable {
         )
     }
 
+    func movedPlaybackPosition(to elapsedSeconds: TimeInterval, at date: Date) -> PlaybackRecord {
+        guard status == .playing else {
+            return self
+        }
+
+        let boundedElapsed = max(0, elapsedSeconds)
+        return PlaybackRecord(
+            status: status,
+            attemptedAt: attemptedAt ?? date,
+            startedAt: date.addingTimeInterval(-boundedElapsed),
+            endedAt: nil,
+            durationSeconds: durationSeconds,
+            errorCode: errorCode,
+            errorMessage: errorMessage
+        )
+    }
+
     var hasPlaybackStarted: Bool {
         startedAt != nil || status == .playing || status == .played
     }
