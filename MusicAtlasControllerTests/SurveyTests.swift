@@ -11,14 +11,24 @@ final class SurveyTests: XCTestCase {
         XCTAssertEqual(SurveySignalState.notForMe.next, .dontKnow)
     }
 
-    func testArtistPageOneIsAppleMusicHeavyTwentyItemSeed() throws {
+    func testArtistPageOneIsAppleMusicHeavyTwelveItemSeed() throws {
         let page = try XCTUnwrap(SurveyFixtureLibrary.page(for: .artistPage1, responses: [:]))
 
-        XCTAssertEqual(page.items.count, 20)
+        XCTAssertEqual(page.items.count, SurveyFixtureLibrary.gridPageItemLimit)
         XCTAssertEqual(page.kind, .artist)
-        XCTAssertEqual(page.items.filter { $0.source == .appleMusicDerived }.count, 14)
+        XCTAssertEqual(page.items.filter { $0.source == .appleMusicDerived }.count, 8)
+        XCTAssertTrue(page.items.contains { $0.source == .broadCalibration })
         XCTAssertTrue(page.items.contains { $0.source == .sleeperProbe })
         XCTAssertTrue(page.items.contains { $0.source == .rejectionProbe })
+    }
+
+    func testSurveyGridPagesStayWithinOneScreenLimit() throws {
+        let steps: [SurveyStep] = [.artistPage1, .artistPage2, .artistPage3, .albumPage1, .songPage1]
+
+        for step in steps {
+            let page = try XCTUnwrap(SurveyFixtureLibrary.page(for: step, responses: [:]))
+            XCTAssertLessThanOrEqual(page.items.count, SurveyFixtureLibrary.gridPageItemLimit)
+        }
     }
 
     func testSurveyStorePersistsResponsesAndFreeformSignals() throws {
@@ -63,6 +73,6 @@ final class SurveyTests: XCTestCase {
         )
 
         XCTAssertFalse(page.items.contains(answeredItem))
-        XCTAssertLessThanOrEqual(page.items.count, 20)
+        XCTAssertLessThanOrEqual(page.items.count, SurveyFixtureLibrary.gridPageItemLimit)
     }
 }

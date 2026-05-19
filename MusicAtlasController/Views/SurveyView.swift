@@ -6,7 +6,7 @@ struct SurveyView: View {
     @State private var nuanceItem: SurveyItem?
     @State private var freeformDraft = ""
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 4)
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 9), count: 3)
 
     var body: some View {
         NavigationStack {
@@ -133,31 +133,15 @@ struct SurveyView: View {
     private var gridView: some View {
         VStack(spacing: 0) {
             if let page = surveyStore.currentPage {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 14) {
-                        SurveyPageTitle(page: page)
-
-                        LazyVGrid(columns: columns, spacing: 8) {
-                            ForEach(page.items) { item in
-                                SurveyGridTile(
-                                    item: item,
-                                    state: surveyStore.state(for: item),
-                                    nuanceCount: surveyStore.nuances(for: item).count,
-                                    hasNote: !surveyStore.note(for: item).isEmpty,
-                                    tap: {
-                                        surveyStore.cycleState(for: item)
-                                    },
-                                    longPress: {
-                                        nuanceItem = item
-                                    }
-                                )
-                            }
-                        }
-                    }
-                    .padding(.horizontal, 14)
-                    .padding(.top, 12)
-                    .padding(.bottom, 92)
-                }
+                SurveyGridPageSurface(
+                    page: page,
+                    columns: columns,
+                    stateForItem: { surveyStore.state(for: $0) },
+                    nuanceCountForItem: { surveyStore.nuances(for: $0).count },
+                    hasNoteForItem: { !surveyStore.note(for: $0).isEmpty },
+                    tapItem: { surveyStore.cycleState(for: $0) },
+                    longPressItem: { nuanceItem = $0 }
+                )
 
                 SurveyBottomBar(
                     leadingTitle: "Back",
@@ -289,13 +273,14 @@ struct SurveyView: View {
                     }
 
                     if let page = surveyStore.currentPage {
-                        LazyVGrid(columns: columns, spacing: 8) {
+                        LazyVGrid(columns: columns, spacing: 9) {
                             ForEach(page.items) { item in
                                 SurveyGridTile(
                                     item: item,
                                     state: surveyStore.state(for: item),
                                     nuanceCount: surveyStore.nuances(for: item).count,
                                     hasNote: !surveyStore.note(for: item).isEmpty,
+                                    tileHeight: 132,
                                     tap: {
                                         surveyStore.cycleState(for: item)
                                     },
@@ -486,27 +471,65 @@ private struct SurveyPageTitle: View {
     let page: SurveyGridPage
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            HStack {
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(page.title)
-                        .font(.title3.weight(.bold))
-                        .foregroundStyle(.white)
+        VStack(alignment: .leading, spacing: 3) {
+            Text(page.title)
+                .font(.title3.weight(.bold))
+                .foregroundStyle(.white)
+                .lineLimit(1)
 
-                    Text(page.subtitle)
-                        .font(.caption)
-                        .foregroundStyle(SurveyStyle.secondaryText)
+            Text(page.subtitle)
+                .font(.caption)
+                .foregroundStyle(SurveyStyle.secondaryText)
+                .lineLimit(1)
+        }
+    }
+}
+
+private struct SurveyGridPageSurface: View {
+    let page: SurveyGridPage
+    let columns: [GridItem]
+    let stateForItem: (SurveyItem) -> SurveySignalState
+    let nuanceCountForItem: (SurveyItem) -> Int
+    let hasNoteForItem: (SurveyItem) -> Bool
+    let tapItem: (SurveyItem) -> Void
+    let longPressItem: (SurveyItem) -> Void
+
+    var body: some View {
+        GeometryReader { proxy in
+            let gridSpacing: CGFloat = 9
+            let verticalPadding: CGFloat = 10
+            let titleHeight: CGFloat = 42
+            let availableHeight = proxy.size.height - (verticalPadding * 2) - titleHeight - 10
+            let rawTileHeight = (availableHeight - (gridSpacing * 3)) / 4
+            let tileHeight = min(max(rawTileHeight, 92), 138)
+
+            VStack(alignment: .leading, spacing: 10) {
+                SurveyPageTitle(page: page)
+                    .frame(height: titleHeight, alignment: .topLeading)
+
+                LazyVGrid(columns: columns, spacing: gridSpacing) {
+                    ForEach(page.items) { item in
+                        SurveyGridTile(
+                            item: item,
+                            state: stateForItem(item),
+                            nuanceCount: nuanceCountForItem(item),
+                            hasNote: hasNoteForItem(item),
+                            tileHeight: tileHeight,
+                            tap: {
+                                tapItem(item)
+                            },
+                            longPress: {
+                                longPressItem(item)
+                            }
+                        )
+                    }
                 }
 
-                Spacer()
-
-                Text("\(page.items.count)")
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(.white.opacity(0.82))
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 7)
-                    .background(SurveyStyle.panel, in: Capsule())
+                Spacer(minLength: 0)
             }
+            .padding(.horizontal, 14)
+            .padding(.vertical, verticalPadding)
+            .frame(width: proxy.size.width, height: proxy.size.height, alignment: .top)
         }
     }
 }
@@ -516,43 +539,42 @@ private struct SurveyGridTile: View {
     let state: SurveySignalState
     let nuanceCount: Int
     let hasNote: Bool
+    let tileHeight: CGFloat
     let tap: () -> Void
     let longPress: () -> Void
 
     var body: some View {
         Button(action: tap) {
-            VStack(spacing: 7) {
+            VStack(spacing: 6) {
                 ZStack(alignment: .topTrailing) {
-                    RoundedRectangle(cornerRadius: 9)
-                        .fill(tileGradient)
-                        .frame(height: item.kind == .artist ? 48 : 56)
-                        .overlay {
-                            if item.kind == .artist {
-                                Text(initials)
-                                    .font(.title3.weight(.bold))
-                                    .foregroundStyle(.white)
-                            } else {
-                                Image(systemName: item.kind == .album ? "square.stack" : "music.note")
-                                    .font(.title3.weight(.bold))
-                                    .foregroundStyle(.white)
-                            }
+                    SurveyArtworkView(item: item, gradient: tileGradient, initials: initials)
+                        .frame(height: artworkHeight)
+
+                    HStack(spacing: 4) {
+                        if nuanceCount > 0 || hasNote {
+                            Image(systemName: hasNote ? "text.bubble.fill" : "tag.fill")
+                                .font(.caption2.weight(.bold))
+                                .foregroundStyle(.white)
+                                .frame(width: 21, height: 21)
+                                .background(.black.opacity(0.52), in: Circle())
                         }
 
-                    if nuanceCount > 0 || hasNote {
-                        Image(systemName: hasNote ? "text.bubble.fill" : "tag.fill")
-                            .font(.caption2.weight(.bold))
-                            .foregroundStyle(.white)
-                            .padding(5)
-                            .background(.black.opacity(0.36), in: Circle())
-                            .padding(5)
+                        if let systemImage = state.systemImage {
+                            Image(systemName: systemImage)
+                                .font(.caption2.weight(.black))
+                                .foregroundStyle(state.foregroundColor)
+                                .frame(width: 21, height: 21)
+                                .background(.black.opacity(0.58), in: Circle())
+                        }
                     }
+                    .padding(5)
                 }
 
-                VStack(spacing: 2) {
+                VStack(spacing: 1) {
                     Text(item.title)
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.white)
-                        .lineLimit(2)
+                        .lineLimit(item.subtitle == nil ? 2 : 1)
                         .multilineTextAlignment(.center)
                         .minimumScaleFactor(0.72)
 
@@ -564,23 +586,16 @@ private struct SurveyGridTile: View {
                             .minimumScaleFactor(0.72)
                     }
                 }
-                .frame(maxWidth: .infinity, minHeight: item.subtitle == nil ? 30 : 42, alignment: .top)
-
-                Text(state.shortLabel)
-                    .font(.caption2.weight(.bold))
-                    .foregroundStyle(state.foregroundColor)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 4)
-                    .frame(maxWidth: .infinity)
-                    .background(state.tintColor.opacity(0.24), in: Capsule())
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
-            .padding(7)
-            .frame(maxWidth: .infinity, minHeight: item.kind == .artist ? 130 : 148, alignment: .top)
-            .background(SurveyStyle.panel, in: RoundedRectangle(cornerRadius: 10))
+            .padding(6)
+            .frame(maxWidth: .infinity, minHeight: tileHeight, maxHeight: tileHeight, alignment: .top)
+            .background(state.surfaceColor, in: RoundedRectangle(cornerRadius: 10))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(state.tintColor.opacity(state == .dontKnow ? 0.12 : 0.62), lineWidth: state == .dontKnow ? 1 : 1.4)
+                    .stroke(state.tintColor.opacity(state == .dontKnow ? 0.16 : 0.78), lineWidth: state == .dontKnow ? 1 : 1.6)
             )
+            .contentShape(RoundedRectangle(cornerRadius: 10))
         }
         .buttonStyle(.plain)
         .simultaneousGesture(
@@ -589,6 +604,11 @@ private struct SurveyGridTile: View {
                     longPress()
                 }
         )
+        .accessibilityLabel("\(item.title), \(state.displayName)")
+    }
+
+    private var artworkHeight: CGFloat {
+        max(44, tileHeight * (item.kind == .artist ? 0.48 : 0.52))
     }
 
     private var initials: String {
@@ -623,6 +643,61 @@ private struct SurveyGridTile: View {
         }
 
         return LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
+private struct SurveyArtworkView: View {
+    let item: SurveyItem
+    let gradient: LinearGradient
+    let initials: String
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .fill(gradient)
+
+            if let artworkURL {
+                AsyncImage(url: artworkURL) { phase in
+                    switch phase {
+                    case .empty:
+                        placeholder
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFill()
+                    case .failure:
+                        placeholder
+                    @unknown default:
+                        placeholder
+                    }
+                }
+            } else {
+                placeholder
+            }
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+
+    private var artworkURL: URL? {
+        guard let url = item.artworkURL,
+              let scheme = url.scheme?.lowercased(),
+              scheme == "http" || scheme == "https" else {
+            return nil
+        }
+        return url
+    }
+
+    @ViewBuilder
+    private var placeholder: some View {
+        if item.kind == .artist {
+            Text(initials)
+                .font(.title3.weight(.bold))
+                .foregroundStyle(.white)
+        } else {
+            Image(systemName: item.kind == .album ? "square.stack.fill" : "music.note")
+                .font(.title3.weight(.bold))
+                .foregroundStyle(.white)
+        }
     }
 }
 
@@ -890,18 +965,42 @@ private extension SurveySignalState {
         }
     }
 
+    var systemImage: String? {
+        switch self {
+        case .dontKnow:
+            return nil
+        case .fine:
+            return "circle.fill"
+        case .like:
+            return "heart.fill"
+        case .favorite:
+            return "star.fill"
+        case .notForMe:
+            return "xmark"
+        }
+    }
+
     var tintColor: Color {
         switch self {
         case .dontKnow:
             return .white.opacity(0.42)
         case .fine:
-            return .yellow
+            return .cyan
         case .like:
             return .green
         case .favorite:
-            return .blue
+            return .yellow
         case .notForMe:
             return .red
+        }
+    }
+
+    var surfaceColor: Color {
+        switch self {
+        case .dontKnow:
+            return SurveyStyle.panel
+        default:
+            return tintColor.opacity(0.16)
         }
     }
 
@@ -910,11 +1009,11 @@ private extension SurveySignalState {
         case .dontKnow:
             return .white.opacity(0.72)
         case .fine:
-            return .yellow.opacity(0.92)
+            return .cyan.opacity(0.95)
         case .like:
             return .green.opacity(0.92)
         case .favorite:
-            return .blue.opacity(0.92)
+            return .yellow.opacity(0.96)
         case .notForMe:
             return .red.opacity(0.92)
         }

@@ -126,6 +126,7 @@ struct SurveyItem: Codable, Identifiable, Hashable {
     let kind: SurveyItemKind
     let title: String
     let subtitle: String?
+    let artworkURL: URL?
     let source: SurveyItemSource
     let objective: SurveyBatchObjective
     let rationale: String
