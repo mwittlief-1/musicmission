@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum AppTab: Hashable {
+    case survey
     case mission
     case resolve
     case player
@@ -9,10 +10,16 @@ enum AppTab: Hashable {
 }
 
 struct RootView: View {
-    @State private var selectedTab: AppTab = .player
+    @State private var selectedTab: AppTab = .survey
 
     var body: some View {
         TabView(selection: $selectedTab) {
+            SurveyView()
+                .tabItem {
+                    Label("Survey", systemImage: "square.grid.3x3")
+                }
+                .tag(AppTab.survey)
+
             MissionListView()
                 .tabItem {
                     Label("Mission", systemImage: "music.note.list")

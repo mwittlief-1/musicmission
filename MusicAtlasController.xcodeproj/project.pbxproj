@@ -36,6 +36,11 @@
 		10000000000000000000001B /* waymark_matt_10_personal_missions_v0_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */; };
 		10000000000000000000001C /* waymark_matt_10_personal_missions_v0_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */; };
 		10000000000000000000001D /* SessionPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011E /* SessionPersistenceStore.swift */; };
+		10000000000000000000001E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000011F /* Survey.swift */; };
+		10000000000000000000001F /* SurveyFixtureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000120 /* SurveyFixtureLibrary.swift */; };
+		100000000000000000000020 /* SurveyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000121 /* SurveyStore.swift */; };
+		100000000000000000000021 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000122 /* SurveyView.swift */; };
+		100000000000000000000022 /* SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000123 /* SurveyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		10000000000000000000011C /* MissionReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionReviewView.swift; sourceTree = "<group>"; };
 		10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = waymark_matt_10_personal_missions_v0_1.json; sourceTree = "<group>"; };
 		10000000000000000000011E /* SessionPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPersistenceStore.swift; sourceTree = "<group>"; };
+		10000000000000000000011F /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		100000000000000000000120 /* SurveyFixtureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFixtureLibrary.swift; sourceTree = "<group>"; };
+		100000000000000000000121 /* SurveyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStore.swift; sourceTree = "<group>"; };
+		100000000000000000000122 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		100000000000000000000123 /* SurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,7 @@
 				100000000000000000000102 /* AppModel.swift */,
 				100000000000000000000103 /* Mission.swift */,
 				100000000000000000000104 /* ReactionSession.swift */,
+				10000000000000000000011F /* Survey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +161,8 @@
 				100000000000000000000115 /* ReactionStore.swift */,
 				100000000000000000000116 /* SessionExporter.swift */,
 				10000000000000000000011E /* SessionPersistenceStore.swift */,
+				100000000000000000000120 /* SurveyFixtureLibrary.swift */,
+				100000000000000000000121 /* SurveyStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 				10000000000000000000010B /* ResolverStatusView.swift */,
 				10000000000000000000010C /* NowTestingView.swift */,
 				10000000000000000000011C /* MissionReviewView.swift */,
+				100000000000000000000122 /* SurveyView.swift */,
 				10000000000000000000010D /* ExportPreviewView.swift */,
 			);
 			path = Views;
@@ -195,6 +209,7 @@
 			children = (
 				100000000000000000000117 /* MissionDecodingTests.swift */,
 				100000000000000000000118 /* SessionExporterTests.swift */,
+				100000000000000000000123 /* SurveyTests.swift */,
 			);
 			path = MusicAtlasControllerTests;
 			sourceTree = "<group>";
@@ -324,6 +339,10 @@
 				100000000000000000000012 /* ReactionStore.swift in Sources */,
 				100000000000000000000013 /* SessionExporter.swift in Sources */,
 				10000000000000000000001D /* SessionPersistenceStore.swift in Sources */,
+				10000000000000000000001E /* Survey.swift in Sources */,
+				10000000000000000000001F /* SurveyFixtureLibrary.swift in Sources */,
+				100000000000000000000020 /* SurveyStore.swift in Sources */,
+				100000000000000000000021 /* SurveyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +352,7 @@
 			files = (
 				100000000000000000000014 /* MissionDecodingTests.swift in Sources */,
 				100000000000000000000015 /* SessionExporterTests.swift in Sources */,
+				100000000000000000000022 /* SurveyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
