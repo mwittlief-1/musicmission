@@ -14,6 +14,8 @@ struct ExportPreviewView: View {
                     LabeledContent("Acceptance path", value: "data/exports/acceptance/")
                 }
 
+                AppleMusicSignalProbePanel()
+
                 MissionExportReadinessSection(progress: appModel.missionProgress)
 
                 Section("Current Mission") {
