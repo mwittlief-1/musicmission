@@ -482,6 +482,25 @@ final class SessionExporterTests: XCTestCase {
     }
 
     @MainActor
+    func testSeekSelectedPlaybackUpdatesPlaybackSnapshot() async throws {
+        let appModel = AppModel(
+            stubPlaybackService: StartedPlaybackService(),
+            sessionPersistenceStore: .disabled
+        )
+        appModel.loadSampleMission()
+        let firstItem = try XCTUnwrap(appModel.selectedItem)
+
+        await appModel.resolveSelectedItemWithStub()
+        await appModel.playSelectedItem()
+        await appModel.seekSelectedPlayback(to: 75)
+
+        let snapshot = appModel.playbackSnapshot(for: firstItem)
+        XCTAssertEqual(snapshot.runtimeStatus, .playing)
+        XCTAssertEqual(snapshot.elapsedSeconds, 75)
+        XCTAssertEqual(snapshot.totalDurationSeconds, 180)
+    }
+
+    @MainActor
     func testMissionReviewSnapshotSurfacesSkippedNoSignalAndAllowsReviewEdit() async throws {
         let appModel = AppModel(
             stubPlaybackService: StartedPlaybackService(),

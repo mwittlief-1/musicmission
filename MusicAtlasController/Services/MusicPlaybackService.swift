@@ -9,7 +9,14 @@ protocol MusicPlaybackServing {
     func resume(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord
     func pause(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord
     func stop(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord
+    func seek(to elapsedSeconds: TimeInterval, currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord
     func snapshot(currentPlayback: PlaybackRecord) -> PlaybackSnapshot
+}
+
+extension MusicPlaybackServing {
+    func seek(to elapsedSeconds: TimeInterval, currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback
+    }
 }
 
 struct StubMusicPlaybackService: MusicPlaybackServing {
@@ -39,6 +46,10 @@ struct StubMusicPlaybackService: MusicPlaybackServing {
 
     func stop(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
         currentPlayback.hasPlaybackStarted ? currentPlayback.endedAsPlayed(at: date) : currentPlayback
+    }
+
+    func seek(to elapsedSeconds: TimeInterval, currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback
     }
 
     func snapshot(currentPlayback: PlaybackRecord) -> PlaybackSnapshot {
@@ -171,6 +182,30 @@ struct MusicKitPlaybackService: MusicPlaybackServing {
         #if canImport(MusicKit)
         ApplicationMusicPlayer.shared.stop()
         return currentPlayback.hasPlaybackStarted ? currentPlayback.endedAsPlayed(at: date) : currentPlayback
+        #else
+        return PlaybackRecord(
+            status: .failed,
+            attemptedAt: date,
+            startedAt: nil,
+            endedAt: nil,
+            durationSeconds: nil,
+            errorCode: "music_kit_unavailable",
+            errorMessage: "MusicKit is not available in this build environment."
+        )
+        #endif
+    }
+
+    func seek(to elapsedSeconds: TimeInterval, currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        #if canImport(MusicKit)
+        let boundedElapsed: TimeInterval
+        if let duration = currentPlayback.durationSeconds, duration > 0 {
+            boundedElapsed = min(max(0, elapsedSeconds), duration)
+        } else {
+            boundedElapsed = max(0, elapsedSeconds)
+        }
+
+        ApplicationMusicPlayer.shared.playbackTime = boundedElapsed
+        return currentPlayback
         #else
         return PlaybackRecord(
             status: .failed,

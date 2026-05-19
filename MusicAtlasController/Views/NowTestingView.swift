@@ -81,6 +81,11 @@ struct NowTestingView: View {
                                     Task {
                                         await appModel.playNextItem()
                                     }
+                                },
+                                seekAction: { elapsedSeconds in
+                                    Task {
+                                        await appModel.seekSelectedPlayback(to: elapsedSeconds)
+                                    }
                                 }
                             )
 
@@ -327,6 +332,7 @@ private struct CompactPlayerSurface: View {
     let previousAction: () -> Void
     let primaryPlaybackAction: () -> Void
     let nextAction: () -> Void
+    let seekAction: (TimeInterval) -> Void
 
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
@@ -354,7 +360,7 @@ private struct CompactPlayerSurface: View {
                     }
                 }
 
-                PlaybackMeter(playback: playback, snapshot: playbackSnapshot)
+                PlaybackMeter(playback: playback, snapshot: playbackSnapshot, seekAction: seekAction)
 
                 HStack(spacing: 18) {
                     TransportButton(systemImage: "backward.fill", size: 36, action: previousAction)
@@ -392,26 +398,56 @@ private struct CompactPlayerSurface: View {
 private struct PlaybackMeter: View {
     let playback: PlaybackRecord
     let snapshot: PlaybackSnapshot
+    let seekAction: (TimeInterval) -> Void
+    @State private var isSeeking = false
+    @State private var seekProgress = 0.0
 
     var body: some View {
         VStack(spacing: 4) {
-            GeometryReader { geometry in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(Color.white.opacity(0.18))
-                        .frame(height: 4)
+            if let duration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
+               duration > 0 {
+                Slider(
+                    value: Binding(
+                        get: {
+                            isSeeking ? seekProgress : progress
+                        },
+                        set: { newValue in
+                            seekProgress = min(1, max(0, newValue))
+                        }
+                    ),
+                    in: 0...1,
+                    onEditingChanged: { editing in
+                        if editing {
+                            seekProgress = progress
+                            isSeeking = true
+                        } else {
+                            isSeeking = false
+                            seekAction(seekProgress * duration)
+                        }
+                    }
+                )
+                .tint(.white)
+                .frame(height: 14)
+                .accessibilityLabel("Playback position")
+            } else {
+                GeometryReader { geometry in
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(Color.white.opacity(0.18))
+                            .frame(height: 4)
 
-                    Capsule()
-                        .fill(Color.white.opacity(0.88))
-                        .frame(width: geometry.size.width * progress, height: 4)
+                        Capsule()
+                            .fill(Color.white.opacity(0.88))
+                            .frame(width: geometry.size.width * progress, height: 4)
 
-                    Circle()
-                        .fill(Color.white)
-                        .frame(width: 8, height: 8)
-                        .offset(x: max(0, geometry.size.width * progress - 4))
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 8, height: 8)
+                            .offset(x: max(0, geometry.size.width * progress - 4))
+                    }
                 }
+                .frame(height: 8)
             }
-            .frame(height: 8)
 
             HStack {
                 Text(leftTime)

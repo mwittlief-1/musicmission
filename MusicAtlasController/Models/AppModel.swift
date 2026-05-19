@@ -346,7 +346,14 @@ final class AppModel: ObservableObject {
         let playback = await activePlaybackService.play(resolution: resolution(for: item), at: now)
         playbackRecords[item.itemID] = playback
         observedPlaybackItemID = item.itemID
-        activePlaybackSnapshot = activePlaybackService.snapshot(currentPlayback: playback)
+        let playbackSnapshot = activePlaybackService.snapshot(currentPlayback: playback)
+        activePlaybackSnapshot = playback.status == .playing
+            ? PlaybackSnapshot(
+                runtimeStatus: .playing,
+                elapsedSeconds: playbackSnapshot.elapsedSeconds,
+                totalDurationSeconds: playbackSnapshot.totalDurationSeconds ?? playback.durationSeconds
+            )
+            : playbackSnapshot
         exportPreview = nil
         savedExport = nil
         persistCurrentSession()
@@ -437,9 +444,14 @@ final class AppModel: ObservableObject {
         }
 
         let currentPlayback = playback(for: item)
+        let currentSnapshot = playbackSnapshot(for: item)
         let playback = await activePlaybackService.pause(currentPlayback: currentPlayback, at: Date())
         playbackRecords[item.itemID] = playback
-        activePlaybackSnapshot = activePlaybackService.snapshot(currentPlayback: playback)
+        activePlaybackSnapshot = PlaybackSnapshot(
+            runtimeStatus: .paused,
+            elapsedSeconds: currentSnapshot.elapsedSeconds,
+            totalDurationSeconds: currentSnapshot.totalDurationSeconds ?? playback.durationSeconds
+        )
         stopPlaybackPolling()
         exportPreview = nil
         savedExport = nil
@@ -471,7 +483,12 @@ final class AppModel: ObservableObject {
         let playback = await activePlaybackService.resume(currentPlayback: currentPlayback, at: Date())
         playbackRecords[item.itemID] = playback
         observedPlaybackItemID = item.itemID
-        activePlaybackSnapshot = activePlaybackService.snapshot(currentPlayback: playback)
+        let resumedSnapshot = activePlaybackService.snapshot(currentPlayback: playback)
+        activePlaybackSnapshot = PlaybackSnapshot(
+            runtimeStatus: .playing,
+            elapsedSeconds: resumedSnapshot.elapsedSeconds,
+            totalDurationSeconds: resumedSnapshot.totalDurationSeconds ?? playback.durationSeconds
+        )
         exportPreview = nil
         savedExport = nil
         persistCurrentSession()
@@ -482,6 +499,48 @@ final class AppModel: ObservableObject {
         } else {
             startPlaybackPolling(for: item.itemID)
             lastActionMessage = "Resumed \(item.title)."
+        }
+    }
+
+    func seekSelectedPlayback(to elapsedSeconds: TimeInterval) async {
+        guard let item = selectedItem else {
+            lastActionMessage = "Select an item before seeking playback."
+            return
+        }
+
+        guard await ensureCanUseActiveMusicService() else {
+            return
+        }
+
+        let currentPlayback = playback(for: item)
+        guard currentPlayback.hasPlaybackStarted else {
+            lastActionMessage = "Start playback before seeking."
+            return
+        }
+
+        let currentSnapshot = playbackSnapshot(for: item)
+        let boundedElapsed: TimeInterval
+        if let duration = currentSnapshot.totalDurationSeconds ?? currentPlayback.durationSeconds,
+           duration > 0 {
+            boundedElapsed = min(max(0, elapsedSeconds), duration)
+        } else {
+            boundedElapsed = max(0, elapsedSeconds)
+        }
+
+        let playback = await activePlaybackService.seek(to: boundedElapsed, currentPlayback: currentPlayback, at: Date())
+        playbackRecords[item.itemID] = playback
+        activePlaybackSnapshot = PlaybackSnapshot(
+            runtimeStatus: currentSnapshot.runtimeStatus == .paused ? .paused : .playing,
+            elapsedSeconds: boundedElapsed,
+            totalDurationSeconds: currentSnapshot.totalDurationSeconds ?? playback.durationSeconds
+        )
+        exportPreview = nil
+        savedExport = nil
+        persistCurrentSession()
+
+        if activePlaybackSnapshot.runtimeStatus == .playing {
+            observedPlaybackItemID = item.itemID
+            startPlaybackPolling(for: item.itemID)
         }
     }
 
@@ -883,6 +942,15 @@ final class AppModel: ObservableObject {
         }
 
         let wallElapsed = max(0, Date().timeIntervalSince(startedAt))
+        if snapshot.runtimeStatus == .stopped || snapshot.runtimeStatus == .completed {
+            guard let totalDuration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
+                  totalDuration > 0 else {
+                return true
+            }
+
+            return max(wallElapsed, snapshot.elapsedSeconds) / totalDuration >= 0.9
+        }
+
         guard let totalDuration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
               totalDuration > 0 else {
             return false

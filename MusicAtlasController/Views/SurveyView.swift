@@ -3,6 +3,7 @@ import SwiftUI
 struct SurveyView: View {
     @EnvironmentObject private var appModel: AppModel
     @StateObject private var surveyStore = SurveyStore()
+    @StateObject private var artworkStore = SurveyArtworkStore()
     @State private var nuanceItem: SurveyItem?
     @State private var freeformDraft = ""
 
@@ -139,9 +140,13 @@ struct SurveyView: View {
                     stateForItem: { surveyStore.state(for: $0) },
                     nuanceCountForItem: { surveyStore.nuances(for: $0).count },
                     hasNoteForItem: { !surveyStore.note(for: $0).isEmpty },
+                    artworkURLForItem: { artworkStore.artworkURL(for: $0) },
                     tapItem: { surveyStore.cycleState(for: $0) },
                     longPressItem: { nuanceItem = $0 }
                 )
+                .task(id: page.id) {
+                    await artworkStore.fetchArtwork(for: page.items)
+                }
 
                 SurveyBottomBar(
                     leadingTitle: "Back",
@@ -280,6 +285,7 @@ struct SurveyView: View {
                                     state: surveyStore.state(for: item),
                                     nuanceCount: surveyStore.nuances(for: item).count,
                                     hasNote: !surveyStore.note(for: item).isEmpty,
+                                    artworkURL: artworkStore.artworkURL(for: item),
                                     tileHeight: 132,
                                     tap: {
                                         surveyStore.cycleState(for: item)
@@ -289,6 +295,9 @@ struct SurveyView: View {
                                     }
                                 )
                             }
+                        }
+                        .task(id: page.id) {
+                            await artworkStore.fetchArtwork(for: page.items)
                         }
                     }
 
@@ -491,6 +500,7 @@ private struct SurveyGridPageSurface: View {
     let stateForItem: (SurveyItem) -> SurveySignalState
     let nuanceCountForItem: (SurveyItem) -> Int
     let hasNoteForItem: (SurveyItem) -> Bool
+    let artworkURLForItem: (SurveyItem) -> URL?
     let tapItem: (SurveyItem) -> Void
     let longPressItem: (SurveyItem) -> Void
 
@@ -514,6 +524,7 @@ private struct SurveyGridPageSurface: View {
                             state: stateForItem(item),
                             nuanceCount: nuanceCountForItem(item),
                             hasNote: hasNoteForItem(item),
+                            artworkURL: artworkURLForItem(item),
                             tileHeight: tileHeight,
                             tap: {
                                 tapItem(item)
@@ -539,6 +550,7 @@ private struct SurveyGridTile: View {
     let state: SurveySignalState
     let nuanceCount: Int
     let hasNote: Bool
+    let artworkURL: URL?
     let tileHeight: CGFloat
     let tap: () -> Void
     let longPress: () -> Void
@@ -547,7 +559,7 @@ private struct SurveyGridTile: View {
         Button(action: tap) {
             VStack(spacing: 6) {
                 ZStack(alignment: .topTrailing) {
-                    SurveyArtworkView(item: item, gradient: tileGradient, initials: initials)
+                    SurveyArtworkView(item: item, artworkURL: artworkURL, gradient: tileGradient, initials: initials)
                         .frame(height: artworkHeight)
 
                     HStack(spacing: 4) {
@@ -648,6 +660,7 @@ private struct SurveyGridTile: View {
 
 private struct SurveyArtworkView: View {
     let item: SurveyItem
+    let artworkURL: URL?
     let gradient: LinearGradient
     let initials: String
 
@@ -656,8 +669,8 @@ private struct SurveyArtworkView: View {
             RoundedRectangle(cornerRadius: 8)
                 .fill(gradient)
 
-            if let artworkURL {
-                AsyncImage(url: artworkURL) { phase in
+            if let imageURL {
+                AsyncImage(url: imageURL) { phase in
                     switch phase {
                     case .empty:
                         placeholder
@@ -678,8 +691,8 @@ private struct SurveyArtworkView: View {
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
-    private var artworkURL: URL? {
-        guard let url = item.artworkURL,
+    private var imageURL: URL? {
+        guard let url = artworkURL ?? item.artworkURL,
               let scheme = url.scheme?.lowercased(),
               scheme == "http" || scheme == "https" else {
             return nil
