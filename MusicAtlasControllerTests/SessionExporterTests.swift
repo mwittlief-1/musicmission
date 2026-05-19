@@ -445,6 +445,43 @@ final class SessionExporterTests: XCTestCase {
     }
 
     @MainActor
+    func testNinetyPercentPlayingProgressAutoStartsNextPlayableItem() async throws {
+        let appModel = AppModel(
+            stubPlaybackService: PlayingAtCompletionThresholdService(),
+            sessionPersistenceStore: .disabled
+        )
+        appModel.loadSampleMission()
+        let firstItem = try XCTUnwrap(appModel.selectedItem)
+
+        await appModel.resolveSelectedItemWithStub()
+        await appModel.playSelectedItem()
+        await appModel.refreshActivePlaybackSnapshot()
+
+        XCTAssertEqual(appModel.playback(for: firstItem).status, .played)
+        XCTAssertEqual(appModel.playerActionLog.first?.action, .completedByThreshold)
+        XCTAssertEqual(appModel.selectedItem?.sequence, 2)
+        XCTAssertEqual(appModel.playback(for: try XCTUnwrap(appModel.selectedItem)).status, .playing)
+    }
+
+    @MainActor
+    func testPausedPlaybackAtCompletionThresholdDoesNotAutoAdvance() async throws {
+        let appModel = AppModel(
+            stubPlaybackService: PausedAtCompletionThresholdService(),
+            sessionPersistenceStore: .disabled
+        )
+        appModel.loadSampleMission()
+        let firstItem = try XCTUnwrap(appModel.selectedItem)
+
+        await appModel.resolveSelectedItemWithStub()
+        await appModel.playSelectedItem()
+        await appModel.refreshActivePlaybackSnapshot()
+
+        XCTAssertEqual(appModel.selectedItem?.itemID, firstItem.itemID)
+        XCTAssertEqual(appModel.playback(for: firstItem).status, .playing)
+        XCTAssertTrue(appModel.playerActionLog.isEmpty)
+    }
+
+    @MainActor
     func testMissionReviewSnapshotSurfacesSkippedNoSignalAndAllowsReviewEdit() async throws {
         let appModel = AppModel(
             stubPlaybackService: StartedPlaybackService(),
@@ -580,6 +617,74 @@ private struct CompletedPlaybackService: MusicPlaybackServing {
         PlaybackSnapshot(
             runtimeStatus: .stopped,
             elapsedSeconds: 162,
+            totalDurationSeconds: currentPlayback.durationSeconds
+        )
+    }
+}
+
+private struct PlayingAtCompletionThresholdService: MusicPlaybackServing {
+    func play(resolution: AppleMusicResolution, at date: Date) async -> PlaybackRecord {
+        PlaybackRecord(
+            status: .playing,
+            attemptedAt: date,
+            startedAt: date.addingTimeInterval(-163),
+            endedAt: nil,
+            durationSeconds: 180,
+            errorCode: nil,
+            errorMessage: nil
+        )
+    }
+
+    func resume(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback
+    }
+
+    func pause(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback
+    }
+
+    func stop(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback.endedAsPlayed(at: date)
+    }
+
+    func snapshot(currentPlayback: PlaybackRecord) -> PlaybackSnapshot {
+        PlaybackSnapshot(
+            runtimeStatus: .playing,
+            elapsedSeconds: 163,
+            totalDurationSeconds: currentPlayback.durationSeconds
+        )
+    }
+}
+
+private struct PausedAtCompletionThresholdService: MusicPlaybackServing {
+    func play(resolution: AppleMusicResolution, at date: Date) async -> PlaybackRecord {
+        PlaybackRecord(
+            status: .playing,
+            attemptedAt: date,
+            startedAt: date.addingTimeInterval(-170),
+            endedAt: nil,
+            durationSeconds: 180,
+            errorCode: nil,
+            errorMessage: nil
+        )
+    }
+
+    func resume(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback
+    }
+
+    func pause(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback
+    }
+
+    func stop(currentPlayback: PlaybackRecord, at date: Date) async -> PlaybackRecord {
+        currentPlayback.endedAsPlayed(at: date)
+    }
+
+    func snapshot(currentPlayback: PlaybackRecord) -> PlaybackSnapshot {
+        PlaybackSnapshot(
+            runtimeStatus: .paused,
+            elapsedSeconds: 170,
             totalDurationSeconds: currentPlayback.durationSeconds
         )
     }

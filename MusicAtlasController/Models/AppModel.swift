@@ -440,6 +440,7 @@ final class AppModel: ObservableObject {
         let playback = await activePlaybackService.pause(currentPlayback: currentPlayback, at: Date())
         playbackRecords[item.itemID] = playback
         activePlaybackSnapshot = activePlaybackService.snapshot(currentPlayback: playback)
+        stopPlaybackPolling()
         exportPreview = nil
         savedExport = nil
         persistCurrentSession()
@@ -877,10 +878,6 @@ final class AppModel: ObservableObject {
             return false
         }
 
-        guard snapshot.runtimeStatus == .stopped || snapshot.runtimeStatus == .completed else {
-            return false
-        }
-
         guard let startedAt = playback.startedAt else {
             return false
         }
@@ -892,7 +889,16 @@ final class AppModel: ObservableObject {
         }
 
         let observedElapsed = max(wallElapsed, snapshot.elapsedSeconds)
-        return observedElapsed / totalDuration >= 0.9
+        guard observedElapsed / totalDuration >= 0.9 else {
+            return false
+        }
+
+        switch snapshot.runtimeStatus {
+        case .playing, .stopped, .completed:
+            return true
+        case .idle, .paused, .interrupted, .seeking:
+            return false
+        }
     }
 
     private func playNextPlayableItem(afterCompletedItemID itemID: String) async {
