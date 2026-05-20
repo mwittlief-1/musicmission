@@ -445,7 +445,7 @@ final class SessionExporterTests: XCTestCase {
     }
 
     @MainActor
-    func testNinetyPercentPlayingProgressAutoStartsNextPlayableItem() async throws {
+    func testNinetyPercentPlayingProgressDoesNotAutoAdvanceWhileStillPlaying() async throws {
         let appModel = AppModel(
             stubPlaybackService: PlayingAtCompletionThresholdService(),
             sessionPersistenceStore: .disabled
@@ -457,10 +457,9 @@ final class SessionExporterTests: XCTestCase {
         await appModel.playSelectedItem()
         await appModel.refreshActivePlaybackSnapshot()
 
-        XCTAssertEqual(appModel.playback(for: firstItem).status, .played)
-        XCTAssertEqual(appModel.playerActionLog.first?.action, .completedByThreshold)
-        XCTAssertEqual(appModel.selectedItem?.sequence, 2)
-        XCTAssertEqual(appModel.playback(for: try XCTUnwrap(appModel.selectedItem)).status, .playing)
+        XCTAssertEqual(appModel.selectedItem?.itemID, firstItem.itemID)
+        XCTAssertEqual(appModel.playback(for: firstItem).status, .playing)
+        XCTAssertTrue(appModel.playerActionLog.isEmpty)
     }
 
     @MainActor

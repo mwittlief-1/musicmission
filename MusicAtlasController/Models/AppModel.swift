@@ -414,19 +414,11 @@ final class AppModel: ObservableObject {
             if currentPlayback.status == .playing {
                 _ = await activePlaybackService.pause(currentPlayback: currentPlayback, at: advancedAt)
 
-                if currentPlayback.hasReachedCompletionThreshold(at: advancedAt) {
-                    playbackRecords[currentItem.itemID] = currentPlayback.endedAsPlayed(at: advancedAt)
-                    ensureDefaultNoSignalReaction(for: currentItem, at: advancedAt)
-                    appendPlayerAction(.completedByThreshold, item: currentItem, at: advancedAt)
-                    persistCurrentSession()
-                    lastActionMessage = "Completed \(currentItem.title)."
-                } else {
-                    playbackRecords[currentItem.itemID] = currentPlayback.endedAsSkipped(at: advancedAt)
-                    ensureDefaultNoSignalReaction(for: currentItem, at: advancedAt)
-                    appendPlayerAction(.skipAfterStart, item: currentItem, at: advancedAt)
-                    persistCurrentSession()
-                    lastActionMessage = "Skipped \(currentItem.title)."
-                }
+                playbackRecords[currentItem.itemID] = currentPlayback.endedAsSkipped(at: advancedAt)
+                ensureDefaultNoSignalReaction(for: currentItem, at: advancedAt)
+                appendPlayerAction(.skipAfterStart, item: currentItem, at: advancedAt)
+                persistCurrentSession()
+                lastActionMessage = "Skipped \(currentItem.title)."
             } else if !currentPlayback.hasPlaybackStarted {
                 appendPlayerAction(.skipBeforeStart, item: currentItem, at: advancedAt)
                 persistCurrentSession()
@@ -964,32 +956,22 @@ final class AppModel: ObservableObject {
             return false
         }
 
-        let wallElapsed = max(0, Date().timeIntervalSince(startedAt))
-        let observedElapsed = snapshot.elapsedSeconds > 0.5 ? snapshot.elapsedSeconds : wallElapsed
-        if snapshot.runtimeStatus == .stopped || snapshot.runtimeStatus == .completed {
-            guard let totalDuration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
-                  totalDuration > 0 else {
-                return true
-            }
-
-            return observedElapsed / totalDuration >= 0.9
+        guard snapshot.runtimeStatus == .stopped || snapshot.runtimeStatus == .completed else {
+            return false
         }
 
         guard let totalDuration = snapshot.totalDurationSeconds ?? playback.durationSeconds,
               totalDuration > 0 else {
-            return false
+            return true
         }
 
+        let wallElapsed = max(0, Date().timeIntervalSince(startedAt))
+        let observedElapsed = snapshot.elapsedSeconds > 0.5 ? snapshot.elapsedSeconds : wallElapsed
         guard observedElapsed / totalDuration >= 0.9 else {
             return false
         }
 
-        switch snapshot.runtimeStatus {
-        case .playing, .stopped, .completed:
-            return true
-        case .idle, .paused, .interrupted, .seeking:
-            return false
-        }
+        return true
     }
 
     private func playNextPlayableItem(afterCompletedItemID itemID: String) async {
