@@ -1,6 +1,7 @@
 .DS_Store
 
 # Xcode
+build/
 DerivedData/
 *.xcuserstate
 *.xcworkspace/xcuserdata/
@@ -20,6 +21,13 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Local secrets
+waymark-ai-tests/.env
+supabase/functions/.env
+supabase/functions/.env.*
+!supabase/functions/.env.example
+supabase/.temp/
 
 # Local exports
 data/exports/*
