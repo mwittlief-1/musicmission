@@ -45,6 +45,9 @@
 		100000000000000000000024 /* AppleMusicSignalProbeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000125 /* AppleMusicSignalProbeService.swift */; };
 		100000000000000000000025 /* AppleMusicSignalProbeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000126 /* AppleMusicSignalProbeView.swift */; };
 		100000000000000000000026 /* SurveyArtworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000127 /* SurveyArtworkService.swift */; };
+		100000000000000000000027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000128 /* Assets.xcassets */; };
+		100000000000000000000028 /* alpha_compact_candidate_pool_alpha_v0.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000129 /* alpha_compact_candidate_pool_alpha_v0.json */; };
+		100000000000000000000029 /* alpha_compact_candidate_pool_alpha_v0.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000129 /* alpha_compact_candidate_pool_alpha_v0.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,8 @@
 		100000000000000000000125 /* AppleMusicSignalProbeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSignalProbeService.swift; sourceTree = "<group>"; };
 		100000000000000000000126 /* AppleMusicSignalProbeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSignalProbeView.swift; sourceTree = "<group>"; };
 		100000000000000000000127 /* SurveyArtworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyArtworkService.swift; sourceTree = "<group>"; };
+		100000000000000000000128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100000000000000000000129 /* alpha_compact_candidate_pool_alpha_v0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = alpha_compact_candidate_pool_alpha_v0.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +206,8 @@
 				10000000000000000000010E /* sample_mission_love_tributaries_v0_2.json */,
 				10000000000000000000011B /* sample_mission_lithuanian_discovery_v0_3_alpha.json */,
 				10000000000000000000011D /* waymark_matt_10_personal_missions_v0_1.json */,
+				100000000000000000000129 /* alpha_compact_candidate_pool_alpha_v0.json */,
+				100000000000000000000128 /* Assets.xcassets */,
 				10000000000000000000010F /* schema_mission_v0_2.json */,
 				100000000000000000000110 /* schema_reaction_session_v0_2.json */,
 			);
@@ -307,9 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10000000000000000000000E /* sample_mission_love_tributaries_v0_2.json in Resources */,
-				100000000000000000000018 /* sample_mission_lithuanian_discovery_v0_3_alpha.json in Resources */,
-				10000000000000000000001B /* waymark_matt_10_personal_missions_v0_1.json in Resources */,
+				100000000000000000000028 /* alpha_compact_candidate_pool_alpha_v0.json in Resources */,
+				100000000000000000000027 /* Assets.xcassets in Resources */,
 				10000000000000000000000F /* schema_mission_v0_2.json in Resources */,
 				100000000000000000000010 /* schema_reaction_session_v0_2.json in Resources */,
 			);
@@ -322,6 +328,7 @@
 				100000000000000000000016 /* sample_mission_love_tributaries_v0_2.json in Resources */,
 				100000000000000000000019 /* sample_mission_lithuanian_discovery_v0_3_alpha.json in Resources */,
 				10000000000000000000001C /* waymark_matt_10_personal_missions_v0_1.json in Resources */,
+				100000000000000000000029 /* alpha_compact_candidate_pool_alpha_v0.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,9 +509,14 @@
 		100000000000000000000803 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MusicAtlasController/Support/MusicAtlasController.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 7XQQ46X8QQ;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MusicAtlasController/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -515,6 +527,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vytisstudios.MusicAtlasController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -525,9 +538,18 @@
 		100000000000000000000804 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MusicAtlasController/Support/MusicAtlasController.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 7XQQ46X8QQ;
+				EXCLUDED_SOURCE_FILE_NAMES = (
+					sample_mission_love_tributaries_v0_2.json,
+					sample_mission_lithuanian_discovery_v0_3_alpha.json,
+					waymark_matt_10_personal_missions_v0_1.json,
+				);
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MusicAtlasController/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -538,6 +560,7 @@
 				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vytisstudios.MusicAtlasController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -550,7 +573,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -573,7 +596,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

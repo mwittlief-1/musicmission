@@ -77,7 +77,31 @@ final class SessionExporterTests: XCTestCase {
         XCTAssertEqual(session.itemResults[0].reaction.reactionValue, .hit)
         XCTAssertEqual(session.itemResults[0].reaction.selectedTags?.first?.tagID, "TAG_BITE")
         XCTAssertEqual(session.itemResults[0].reaction.notes.text, "better with bite")
+        let atlasBundle = try XCTUnwrap(session.atlasSignalCandidateBundle)
+        XCTAssertEqual(atlasBundle.recordType, "atlas_signal_candidate_bundle")
+        XCTAssertEqual(atlasBundle.schemaVersion, "atlas_signal_candidate_bundle.v0.1")
+        XCTAssertEqual(atlasBundle.candidateStatus, "ingestion_candidate")
+        XCTAssertEqual(atlasBundle.promotionState, "not_promoted")
+        XCTAssertFalse(atlasBundle.writesAtlasTruth)
+        XCTAssertFalse(atlasBundle.canonicalGraphMutationAllowed)
+        XCTAssertEqual(atlasBundle.candidates.count, 6)
+        XCTAssertEqual(preview.atlasSignalCandidateCount, atlasBundle.candidates.count)
+        XCTAssertFalse(atlasBundle.candidates.contains { $0.writesAtlasTruth })
+
+        let reactionCandidate = try XCTUnwrap(atlasBundle.candidates.first { $0.eventType == .reaction })
+        XCTAssertEqual(reactionCandidate.evidence.reactionValue, .hit)
+        XCTAssertEqual(reactionCandidate.evidence.reactionOperation, .strongPositive)
+        XCTAssertEqual(reactionCandidate.evidence.reactionLabel, "Love")
+        XCTAssertEqual(reactionCandidate.evidence.selectedChips?.first?.tagID, "TAG_BITE")
+        XCTAssertFalse(reactionCandidate.evidence.shownUnselectedChips?.contains { $0.tagID == "TAG_BITE" } ?? true)
+
+        let chipCandidate = try XCTUnwrap(atlasBundle.candidates.first { $0.eventType == .chip })
+        XCTAssertEqual(chipCandidate.evidence.selectedChip?.tagID, "TAG_BITE")
+
+        let noteCandidate = try XCTUnwrap(atlasBundle.candidates.first { $0.eventType == .note })
+        XCTAssertEqual(noteCandidate.evidence.noteText, "better with bite")
         XCTAssertTrue(preview.markdownString.contains("Tags: Bite"))
+        XCTAssertTrue(preview.markdownString.contains("Atlas Signal Candidates"))
     }
 
     func testDevelopmentExportCanIncludeMultipleMissionItems() async throws {
@@ -292,7 +316,8 @@ final class SessionExporterTests: XCTestCase {
         }
         let appModel = AppModel(
             exportFileStore: ExportFileStore(baseDirectoryURL: tempDirectory),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
 
@@ -329,7 +354,8 @@ final class SessionExporterTests: XCTestCase {
         let persistenceStore = SessionPersistenceStore(baseDirectoryURL: tempDirectory)
         let appModel = AppModel(
             exportFileStore: ExportFileStore(baseDirectoryURL: tempDirectory),
-            sessionPersistenceStore: persistenceStore
+            sessionPersistenceStore: persistenceStore,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -340,7 +366,8 @@ final class SessionExporterTests: XCTestCase {
 
         let restoredModel = AppModel(
             exportFileStore: ExportFileStore(baseDirectoryURL: tempDirectory),
-            sessionPersistenceStore: persistenceStore
+            sessionPersistenceStore: persistenceStore,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         restoredModel.loadSampleMission()
 
@@ -361,7 +388,8 @@ final class SessionExporterTests: XCTestCase {
         let appModel = AppModel(
             stubPlaybackService: StartedPlaybackService(),
             exportFileStore: ExportFileStore(baseDirectoryURL: tempDirectory),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -388,13 +416,25 @@ final class SessionExporterTests: XCTestCase {
         XCTAssertEqual(skippedResult.reaction.reactionValue, .unresolved)
         XCTAssertEqual(session.sessionSummary?.playedCount, 1)
         XCTAssertEqual(session.sessionSummary?.reactionCount, 1)
+        let atlasBundle = try XCTUnwrap(session.atlasSignalCandidateBundle)
+        let skipCandidate = try XCTUnwrap(
+            atlasBundle.candidates.first {
+                $0.eventType == .skip && $0.missionItemID == firstItem.itemID
+            }
+        )
+
+        XCTAssertEqual(skipCandidate.reviewState, "needs_review")
+        XCTAssertEqual(skipCandidate.evidence.skipPolicy, "started_track_then_user_advanced")
+        XCTAssertEqual(skipCandidate.evidence.reviewFlags, ["skipped_no_signal"])
+        XCTAssertEqual(skipCandidate.evidence.reviewNeeded, true)
     }
 
     @MainActor
     func testNextAfterStartedPlaybackPreservesExplicitReaction() async throws {
         let appModel = AppModel(
             stubPlaybackService: StartedPlaybackService(),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -410,7 +450,10 @@ final class SessionExporterTests: XCTestCase {
 
     @MainActor
     func testNextBeforePlaybackStartedLogsSkipButCreatesNoEvidence() async throws {
-        let appModel = AppModel(sessionPersistenceStore: .disabled)
+        let appModel = AppModel(
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
+        )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
 
@@ -428,7 +471,8 @@ final class SessionExporterTests: XCTestCase {
     func testNinetyPercentCompletionAutoStartsNextPlayableItem() async throws {
         let appModel = AppModel(
             stubPlaybackService: CompletedPlaybackService(),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -448,7 +492,8 @@ final class SessionExporterTests: XCTestCase {
     func testNinetyPercentPlayingProgressDoesNotAutoAdvanceWhileStillPlaying() async throws {
         let appModel = AppModel(
             stubPlaybackService: PlayingAtCompletionThresholdService(),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -466,7 +511,8 @@ final class SessionExporterTests: XCTestCase {
     func testPausedPlaybackAtCompletionThresholdDoesNotAutoAdvance() async throws {
         let appModel = AppModel(
             stubPlaybackService: PausedAtCompletionThresholdService(),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -484,7 +530,8 @@ final class SessionExporterTests: XCTestCase {
     func testSeekSelectedPlaybackUpdatesPlaybackSnapshot() async throws {
         let appModel = AppModel(
             stubPlaybackService: StartedPlaybackService(),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -503,7 +550,8 @@ final class SessionExporterTests: XCTestCase {
     func testSeekBackwardResetsCompletionClock() async throws {
         let appModel = AppModel(
             stubPlaybackService: RecordBackedPlaybackService(startingElapsedSeconds: 170),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -522,7 +570,8 @@ final class SessionExporterTests: XCTestCase {
     func testMissionReviewSnapshotSurfacesSkippedNoSignalAndAllowsReviewEdit() async throws {
         let appModel = AppModel(
             stubPlaybackService: StartedPlaybackService(),
-            sessionPersistenceStore: .disabled
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [try loadSampleMission()])
         )
         appModel.loadSampleMission()
         let firstItem = try XCTUnwrap(appModel.selectedItem)
@@ -559,6 +608,94 @@ final class SessionExporterTests: XCTestCase {
         XCTAssertEqual(ReactionDisplayConfiguration.current.label(for: .okShelf), "Ok")
         XCTAssertEqual(ReactionDisplayConfiguration.current.label(for: .miss), "Dislike")
         XCTAssertEqual(ReactionDisplayConfiguration.current.label(for: .unresolved), "No Signal")
+    }
+
+    func testLiveMissionGenerationRequestUsesSupabaseSessionBearer() throws {
+        let config = SupabaseAlphaConfig(
+            projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
+            anonKey: "sb_publishable_test",
+            generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            testerAlias: "trusted-alpha-test"
+        )
+        let client = LiveSupabaseMissionGenerationClient(config: config)
+        let request = MissionGenerationRequest(
+            clientRequestID: "client-request-1",
+            testerAlias: "trusted-alpha-test",
+            requestedBatchSize: 3,
+            surveyEvidenceExport: Data(#"{"schema_version":"survey"}"#.utf8),
+            missionGenerationDigestView: Data(#"{"schema_version":"digest"}"#.utf8),
+            candidatePool: Data(#"{"candidates":[]}"#.utf8),
+            promptContext: MissionGenerationPromptContext(
+                alphaScope: "first_batch_after_required_survey",
+                generationMode: "live_app_generation",
+                sourceAppVersion: "0.2",
+                sourceAppBuild: "2",
+                storefront: "us",
+                surveyPageCount: SurveyPageCount(artist: 4, album: 2, song: 4)
+            )
+        )
+
+        let urlRequest = try client.makeURLRequest(request: request, accessToken: "session.jwt")
+        XCTAssertEqual(urlRequest.value(forHTTPHeaderField: "apikey"), "sb_publishable_test")
+        XCTAssertEqual(urlRequest.value(forHTTPHeaderField: "Authorization"), "Bearer session.jwt")
+        XCTAssertEqual(urlRequest.url?.absoluteString, "https://example.supabase.co/functions/v1/generate-first-mission-batch")
+
+        let body = try XCTUnwrap(urlRequest.httpBody)
+        let object = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
+        XCTAssertEqual(object["client_request_id"] as? String, "client-request-1")
+        XCTAssertNotNil(object["survey_evidence_export"] as? [String: Any])
+        XCTAssertNotNil(object["mission_generation_digest_view"] as? [String: Any])
+        XCTAssertNotNil(object["candidate_pool"] as? [String: Any])
+    }
+
+    func testLiveEvidenceUploadRequestUsesSessionBearerAndConsent() throws {
+        let config = SupabaseAlphaConfig(
+            projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
+            anonKey: "sb_publishable_test",
+            generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            testerAlias: "trusted-alpha-test"
+        )
+        let client = LiveEvidenceUploadClient(config: config)
+        let directoryURL = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark-evidence-upload-test-\(UUID().uuidString)", isDirectory: true)
+        try FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true)
+        let jsonURL = directoryURL.appendingPathComponent("acceptance_reaction_session_test.json")
+        let markdownURL = directoryURL.appendingPathComponent("acceptance_reaction_session_test.md")
+        try Data(#"{"schema_version":"reaction_session.v0.2","payload":"ok"}"#.utf8).write(to: jsonURL)
+        try Data("ok".utf8).write(to: markdownURL)
+
+        let savedExport = SavedExport(
+            kind: .acceptance,
+            directoryURL: directoryURL,
+            jsonURL: jsonURL,
+            markdownURL: markdownURL
+        )
+        let requestedAt = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-22T12:00:00Z"))
+        let request = EvidenceUploadRequest(
+            testerAlias: "trusted-alpha-test",
+            savedExport: savedExport,
+            requestedAt: requestedAt,
+            sourceAppVersion: "0.2",
+            sourceAppBuild: "2",
+            termsVersion: "alpha_terms_2026_05_22",
+            acceptedAt: requestedAt
+        )
+
+        let urlRequest = try client.makeURLRequest(request: request, accessToken: "session.jwt")
+        XCTAssertEqual(urlRequest.value(forHTTPHeaderField: "apikey"), "sb_publishable_test")
+        XCTAssertEqual(urlRequest.value(forHTTPHeaderField: "Authorization"), "Bearer session.jwt")
+        XCTAssertEqual(urlRequest.url?.absoluteString, "https://example.supabase.co/functions/v1/submit-alpha-evidence")
+
+        let body = try XCTUnwrap(urlRequest.httpBody)
+        let object = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
+        XCTAssertEqual(object["artifact_type"] as? String, "reaction_session")
+        XCTAssertEqual(object["schema_version"] as? String, "reaction_session.v0.2")
+        let consent = try XCTUnwrap(object["consent"] as? [String: Any])
+        XCTAssertEqual(consent["evidence_upload_allowed"] as? Bool, true)
+        XCTAssertEqual(consent["terms_version"] as? String, "alpha_terms_2026_05_22")
+        XCTAssertNotNil(object["payload"] as? [String: Any])
     }
 
     private static func liveResolution(for item: MissionItem, at date: Date) -> AppleMusicResolution {
