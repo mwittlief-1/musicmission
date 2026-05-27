@@ -1,0 +1,60 @@
+{
+  "client_request_id": "fixture_non_candidate_item",
+  "tester_alias": "trusted-alpha-fixture",
+  "requested_batch_size": 1,
+  "survey_evidence_export": {
+    "schema_version": "waymark.survey_evidence_export.v0.1"
+  },
+  "mission_generation_digest_view": {
+    "schema_version": "waymark.mission_generation_digest_view.v0.1"
+  },
+  "candidate_pool": {
+    "schema_version": "waymark.candidate_pool.v0.1",
+    "candidates": [
+      {
+        "candidate_id": "POOL_001",
+        "artist": "Nirvana",
+        "title": "Serve the Servants",
+        "app_route_item_id": "ITEM_ALPHA_TRACK_NIRVANA_SERVE_THE_SERVANTS_POOL_001",
+        "route_candidate_key": "route:track:nirvana-serve-the-servants",
+        "route_batch_dedupe_key": "track:nirvana-serve-the-servants",
+        "route_display_identity_key": "track:nirvana:serve-the-servants"
+      }
+    ]
+  },
+  "prompt_context": {
+    "alpha_scope": "first_batch_after_required_survey",
+    "source_app_version": "0.2",
+    "source_app_build": "12"
+  },
+  "replay_generation_output": {
+    "schema_version": "waymark.mission_output.v0.1",
+    "mission_id": "non_candidate_item_fixture",
+    "title": "Non-Candidate Guard Fixture",
+    "hypothesis": "Backend validation should block route items that do not copy a supplied candidate_id.",
+    "review_config": {
+      "ready_for_app_import": true,
+      "requires_human_review": false
+    },
+    "route": {
+      "route_summary": "A deliberately invalid route with a candidate_id outside the supplied pool.",
+      "items": [
+        {
+          "route_index": 1,
+          "item_id": "item_outside_pool_001",
+          "candidate_id": "NOT_IN_POOL_001",
+          "item_type": "track",
+          "display_metadata": {
+            "artist": "Nirvana",
+            "title": "Serve the Servants"
+          },
+          "music_kit_search_hint": {
+            "search_query": "Nirvana Serve the Servants",
+            "artist": "Nirvana",
+            "title": "Serve the Servants"
+          }
+        }
+      ]
+    }
+  }
+}

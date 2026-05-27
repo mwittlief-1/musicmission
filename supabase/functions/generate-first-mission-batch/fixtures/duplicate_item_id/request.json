@@ -1,0 +1,204 @@
+{
+  "client_request_id": "fixture_duplicate_item_id",
+  "tester_alias": "trusted-alpha-fixture",
+  "requested_batch_size": 1,
+  "survey_evidence_export": {
+    "schema_version": "waymark.survey_evidence_export.v0.1"
+  },
+  "mission_generation_digest_view": {
+    "schema_version": "waymark.mission_generation_digest_view.v0.1"
+  },
+  "candidate_pool": {
+    "schema_version": "waymark.candidate_pool.v0.1",
+    "candidates": [
+      {
+        "candidate_id": "NIR_CUR_001",
+        "artist": "Nirvana",
+        "title": "Serve the Servants",
+        "app_route_item_id": "ITEM_ALPHA_TRACK_NIRVANA_SERVE_THE_SERVANTS_NIR_CUR_001",
+        "route_candidate_key": "route:track:nirvana-serve-the-servants",
+        "route_batch_dedupe_key": "track:nirvana-serve-the-servants",
+        "route_display_identity_key": "track:nirvana:serve-the-servants"
+      },
+      {
+        "candidate_id": "NIR_CUR_002",
+        "artist": "Wipers",
+        "title": "Over the Edge",
+        "app_route_item_id": "ITEM_ALPHA_TRACK_WIPERS_OVER_THE_EDGE_NIR_CUR_002",
+        "route_candidate_key": "route:track:wipers-over-the-edge",
+        "route_batch_dedupe_key": "track:wipers-over-the-edge",
+        "route_display_identity_key": "track:wipers:over-the-edge"
+      }
+    ]
+  },
+  "prompt_context": {
+    "alpha_scope": "first_batch_after_required_survey",
+    "source_app_version": "0.2",
+    "source_app_build": "12"
+  },
+  "replay_generation_output": {
+    "schema_version": "waymark.mission_output.v0.1",
+    "mission_id": "duplicate_item_id_fixture",
+    "title": "Duplicate Identity Guard Fixture",
+    "hypothesis": "Backend validation should block duplicate route identity before app import.",
+    "review_config": {
+      "ready_for_app_import": true,
+      "requires_human_review": false
+    },
+    "route": {
+      "route_summary": "A deliberately invalid route with a repeated route item id.",
+      "items": [
+        {
+          "route_index": 1,
+          "item_id": "survey-f7-song_recording-2pac-feat-dr-dre-california-love-047",
+          "candidate_id": "NIR_CUR_001",
+          "item_type": "track",
+          "display_metadata": {
+            "artist": "Nirvana",
+            "title": "Serve the Servants",
+            "album": "In Utero",
+            "release_year": 1993
+          },
+          "why_selected": "Fixture first item.",
+          "route_function": "Fixture route function.",
+          "item_hypothesis": "Fixture hypothesis.",
+          "expected_positive_signal": "Positive fixture signal.",
+          "expected_negative_signal": "Negative fixture signal.",
+          "feedback_chip_sets": {
+            "love": [
+              {
+                "chip_id": "love_1",
+                "label": "Body hit",
+                "signal_meaning": "Strong body signal"
+              },
+              {
+                "chip_id": "love_2",
+                "label": "Hook pressure",
+                "signal_meaning": "Strong hook signal"
+              }
+            ],
+            "like": [
+              {
+                "chip_id": "like_1",
+                "label": "Works",
+                "signal_meaning": "Partial positive"
+              },
+              {
+                "chip_id": "like_2",
+                "label": "Texture",
+                "signal_meaning": "Texture positive"
+              }
+            ],
+            "keep": [
+              {
+                "chip_id": "keep_1",
+                "label": "Useful",
+                "signal_meaning": "Keep around"
+              },
+              {
+                "chip_id": "keep_2",
+                "label": "Reference",
+                "signal_meaning": "Reference point"
+              }
+            ],
+            "not_for_me": [
+              {
+                "chip_id": "miss_1",
+                "label": "Flat",
+                "signal_meaning": "Weak signal"
+              },
+              {
+                "chip_id": "miss_2",
+                "label": "Wrong road",
+                "signal_meaning": "Boundary signal"
+              }
+            ]
+          },
+          "music_kit_search_hint": {
+            "search_query": "Nirvana Serve the Servants In Utero",
+            "artist": "Nirvana",
+            "title": "Serve the Servants"
+          },
+          "route_candidate_key": "route:track:nirvana-serve-the-servants",
+          "route_batch_dedupe_key": "track:nirvana-serve-the-servants",
+          "route_display_identity_key": "track:nirvana:serve-the-servants"
+        },
+        {
+          "route_index": 2,
+          "item_id": "survey-f7-song_recording-2pac-feat-dr-dre-california-love-047",
+          "candidate_id": "NIR_CUR_002",
+          "item_type": "track",
+          "display_metadata": {
+            "artist": "Wipers",
+            "title": "Over the Edge",
+            "album": "Over the Edge",
+            "release_year": 1983
+          },
+          "why_selected": "Fixture second item repeats item_id.",
+          "route_function": "Fixture route function.",
+          "item_hypothesis": "Fixture hypothesis.",
+          "expected_positive_signal": "Positive fixture signal.",
+          "expected_negative_signal": "Negative fixture signal.",
+          "feedback_chip_sets": {
+            "love": [
+              {
+                "chip_id": "love_3",
+                "label": "Pressure",
+                "signal_meaning": "Strong pressure"
+              },
+              {
+                "chip_id": "love_4",
+                "label": "Source code",
+                "signal_meaning": "Source signal"
+              }
+            ],
+            "like": [
+              {
+                "chip_id": "like_3",
+                "label": "Works",
+                "signal_meaning": "Partial positive"
+              },
+              {
+                "chip_id": "like_4",
+                "label": "Bridge",
+                "signal_meaning": "Bridge positive"
+              }
+            ],
+            "keep": [
+              {
+                "chip_id": "keep_3",
+                "label": "Useful",
+                "signal_meaning": "Keep around"
+              },
+              {
+                "chip_id": "keep_4",
+                "label": "Reference",
+                "signal_meaning": "Reference point"
+              }
+            ],
+            "not_for_me": [
+              {
+                "chip_id": "miss_3",
+                "label": "Too thin",
+                "signal_meaning": "Weak signal"
+              },
+              {
+                "chip_id": "miss_4",
+                "label": "Wrong road",
+                "signal_meaning": "Boundary signal"
+              }
+            ]
+          },
+          "music_kit_search_hint": {
+            "search_query": "Wipers Over the Edge",
+            "artist": "Wipers",
+            "title": "Over the Edge"
+          },
+          "route_candidate_key": "route:track:wipers-over-the-edge",
+          "route_batch_dedupe_key": "track:wipers-over-the-edge",
+          "route_display_identity_key": "track:wipers:over-the-edge"
+        }
+      ]
+    }
+  }
+}

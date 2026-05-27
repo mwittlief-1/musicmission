@@ -1,0 +1,79 @@
+{
+  "client_request_id": "fixture_batch_memory_repeat",
+  "tester_alias": "trusted-alpha-fixture",
+  "requested_batch_size": 1,
+  "survey_evidence_export": {
+    "schema_version": "waymark.survey_evidence_export.v0.1"
+  },
+  "mission_generation_digest_view": {
+    "schema_version": "waymark.mission_generation_digest_view.v0.1"
+  },
+  "candidate_pool": {
+    "schema_version": "waymark.candidate_pool.v0.1",
+    "candidates": [
+      {
+        "candidate_id": "POOL_001",
+        "artist": "Nirvana",
+        "title": "Serve the Servants",
+        "app_route_item_id": "ITEM_ALPHA_TRACK_NIRVANA_SERVE_THE_SERVANTS_POOL_001",
+        "route_candidate_key": "route:track:nirvana-serve-the-servants",
+        "route_batch_dedupe_key": "track:nirvana-serve-the-servants",
+        "route_display_identity_key": "track:nirvana:serve-the-servants"
+      },
+      {
+        "candidate_id": "POOL_002",
+        "artist": "Wipers",
+        "title": "Over the Edge",
+        "app_route_item_id": "ITEM_ALPHA_TRACK_WIPERS_OVER_THE_EDGE_POOL_002",
+        "route_candidate_key": "route:track:wipers-over-the-edge",
+        "route_batch_dedupe_key": "track:wipers-over-the-edge",
+        "route_display_identity_key": "track:wipers:over-the-edge"
+      }
+    ]
+  },
+  "prompt_context": {
+    "alpha_scope": "first_batch_after_required_survey",
+    "already_selected_route_item_ids": [
+      "item_pool_001"
+    ],
+    "already_selected_candidate_ids": [
+      "POOL_001"
+    ],
+    "already_selected_display_keys": [
+      "track:nirvana:serve the servants"
+    ]
+  },
+  "replay_generation_output": {
+    "schema_version": "waymark.mission_output.v0.1",
+    "mission_id": "batch_memory_repeat_fixture",
+    "title": "Batch Memory Repeat Guard Fixture",
+    "hypothesis": "Backend validation should block reuse of already-selected batch route items.",
+    "review_config": {
+      "ready_for_app_import": true,
+      "requires_human_review": false
+    },
+    "route": {
+      "route_summary": "A deliberately invalid route that repeats a prior batch item.",
+      "items": [
+        {
+          "route_index": 1,
+          "item_id": "item_pool_001",
+          "candidate_id": "POOL_001",
+          "item_type": "track",
+          "display_metadata": {
+            "artist": "Nirvana",
+            "title": "Serve the Servants"
+          },
+          "music_kit_search_hint": {
+            "search_query": "Nirvana Serve the Servants",
+            "artist": "Nirvana",
+            "title": "Serve the Servants"
+          },
+          "route_candidate_key": "route:track:nirvana-serve-the-servants",
+          "route_batch_dedupe_key": "track:nirvana-serve-the-servants",
+          "route_display_identity_key": "track:nirvana:serve-the-servants"
+        }
+      ]
+    }
+  }
+}

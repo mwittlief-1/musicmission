@@ -21,6 +21,10 @@ type ValidationResult = {
   errors: string[];
 };
 
+type RouteIdentityValidationResult = ValidationResult & {
+  summary: JsonObject;
+};
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
@@ -33,6 +37,8 @@ const appMissionSchemaVersion =
   Deno.env.get("WAYMARK_APP_MISSION_SCHEMA_VERSION") ?? "mission.v0.2";
 const adapterVersion =
   Deno.env.get("WAYMARK_APP_MISSION_ADAPTER_VERSION") ?? "supabase_generate_first_mission_batch_adapter_v0_1";
+const reviewNeededAppMissionPolicy =
+  Deno.env.get("WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY") ?? "return_app_valid_missions";
 
 const missionOutputSchema = {
   type: "object",
@@ -90,6 +96,9 @@ const missionOutputSchema = {
               "route_index",
               "item_id",
               "candidate_id",
+              "route_candidate_key",
+              "route_batch_dedupe_key",
+              "route_display_identity_key",
               "item_type",
               "display_metadata",
               "selection_role",
@@ -109,6 +118,9 @@ const missionOutputSchema = {
               route_index: { type: "integer", minimum: 1 },
               item_id: { type: "string", minLength: 1 },
               candidate_id: { type: "string" },
+              route_candidate_key: { type: "string" },
+              route_batch_dedupe_key: { type: "string" },
+              route_display_identity_key: { type: "string" },
               item_type: { type: "string", enum: ["track", "album"] },
               display_metadata: {
                 type: "object",
@@ -375,18 +387,34 @@ Deno.serve(async (request: Request) => {
 
     const generatedText = extractOutputText(rawOpenAIResponse);
     const parsedGeneration = JSON.parse(generatedText) as JsonObject;
-    const generationValidation = validateMissionOutput(parsedGeneration);
-    const appMissions = generationValidation.valid && isReadyForAppImport(parsedGeneration)
-      ? [toAppMission(parsedGeneration)]
+    const candidateMetadata = candidateMetadataFromPool(inputPacket.candidate_pool);
+    const routeIdentityValidation = validateRouteIdentityAndCandidateMembership(
+      parsedGeneration,
+      inputPacket.candidate_pool,
+      inputPacket.prompt_context,
+    );
+    const generationValidation = combineValidationResults(
+      validateMissionOutput(parsedGeneration),
+      routeIdentityValidation,
+    );
+    const adaptedAppMissions = generationValidation.valid
+      ? [toAppMission(parsedGeneration, candidateMetadata)]
       : [];
-    const appMissionValidation = appMissions.length > 0
-      ? validateAppMission(appMissions[0] as JsonObject)
+    const appMissionValidation = adaptedAppMissions.length > 0
+      ? validateAppMission(adaptedAppMissions[0] as JsonObject)
       : { valid: true, errors: [] };
     const appImportStatus = deriveAppImportStatus(
       generationValidation,
       appMissionValidation,
       parsedGeneration,
     );
+    const alphaImportPolicy = buildAlphaImportPolicy(
+      appImportStatus,
+      parsedGeneration,
+      adaptedAppMissions,
+      appMissionValidation,
+    );
+    const returnedAppMissions = alphaImportPolicy.app_missions_returned ? adaptedAppMissions : [];
     const status = appImportStatus;
     const latencyMs = Math.round(performance.now() - startedAt);
     const usage = extractUsage(rawOpenAIResponse);
@@ -396,10 +424,12 @@ Deno.serve(async (request: Request) => {
       app_import_status: appImportStatus,
       raw_openai_response: rawOpenAIResponse,
       parsed_generation: parsedGeneration,
-      app_missions: appMissions,
+      app_missions: adaptedAppMissions,
       validation: {
         generation: generationValidation,
+        route_identity: routeIdentityValidation.summary,
         app_mission: appMissionValidation,
+        alpha_import_policy: alphaImportPolicy,
       },
       token_usage: usage,
       latency_ms: latencyMs,
@@ -415,10 +445,13 @@ Deno.serve(async (request: Request) => {
       app_mission_schema_version: appMissionSchemaVersion,
       input_packet_sha256: inputPacketSha256,
       generation: parsedGeneration,
-      app_missions: appImportStatus === "app_import_candidate" ? appMissions : [],
+      app_missions: returnedAppMissions,
+      alpha_import_policy: alphaImportPolicy,
       validation: {
         generation: generationValidation,
+        route_identity: routeIdentityValidation.summary,
         app_mission: appMissionValidation,
+        alpha_import_policy: alphaImportPolicy,
       },
       usage,
       latency_ms: latencyMs,
@@ -465,8 +498,14 @@ function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaG
     "If the candidate pool includes mission_intent, mission_request, or mission_portfolio_slot, treat them as controlling context for the mission archetype, route shape, risk model, and objective.",
     "Mission intents are generic Atlas-signal tests. Do not turn fixture examples, known tester taste, or a named artist/country into the mission concept unless that named object is present in the supplied candidate pool and source signal refs.",
     "Do not use songs merely because they appeared in the Survey grid; route items must come from the supplied candidate pool and serve the mission_request.",
+    "Digest, Survey, Atlas, and strong-region examples are context only; they are not route-item sources unless the exact object also appears in candidate_pool.candidates.",
     "A mission is a structured listening experiment, not a playlist.",
     "Do not promote provisional evidence into Atlas truth.",
+    "Do not set review_config.ready_for_app_import false merely because a route-ready risky, frontier, trap, dead-end, waypoint, or contradiction item correctly carries review flags.",
+    "Set ready_for_app_import false only for hard blockers such as schema uncertainty, pseudo-playable route items, duplicate route items, duplicate candidates, non-candidate route items, unsafe/quarantined candidates, hidden/private source leakage, or Atlas/canonical overclaiming.",
+    "Every route item must use a unique item_id, unique candidate_id, and unique artist/title identity. Repeating the same track or album inside a mission is a hard import blocker.",
+    "Artist/title similarity is not enough. Every route.items[].candidate_id must exactly match a row in candidate_pool.candidates.",
+    "Respect prompt_context batch memory fields such as already_selected_route_item_ids, already_selected_candidate_ids, already_selected_display_keys, excluded_route_item_ids, and excluded_candidate_ids. If the remaining pool cannot satisfy the route, block/retry instead of repeating.",
     "Return only JSON matching the provided schema.",
   ].join(" ");
 
@@ -479,6 +518,29 @@ function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaG
     prompt_context: packet.prompt_context ?? {},
     output_contract_notes: {
       app_gate: "Set review_config.ready_for_app_import true only when every route item is concrete and playable via MusicKit search.",
+      trusted_alpha_review_tolerance: "Route-ready item-level review flags are expected Alpha diagnostics and do not by themselves block app import when the app mission adapter validates.",
+      hard_import_blockers: [
+        "rich schema invalid",
+        "app mission adapter invalid",
+        "duplicate route item_id",
+        "duplicate route candidate_id",
+        "duplicate route artist/title identity",
+        "non-candidate route item",
+        "pseudo-playable route title",
+        "unresolved candidate-search slot",
+        "unsafe or quarantined candidate",
+        "hidden truth or raw graph leakage",
+        "promoted Atlas truth or canonical graph mutation",
+      ],
+      uniqueness_rules: [
+        "Every route.items[].item_id must be unique within the mission.",
+        "Every route.items[].candidate_id must be unique within the mission.",
+        "Every route artist/title/type identity must be unique within the mission.",
+        "Every route.items[].candidate_id must exist in candidate_pool.candidates.",
+        "No route item may appear in prompt_context.already_selected_route_item_ids, already_selected_candidate_ids, already_selected_display_keys, excluded_route_item_ids, or excluded_candidate_ids.",
+      ],
+      candidate_pool_only: "MissionGenerationDigestView, Survey evidence, Atlas examples, and strong-region summaries are context only; playable route items must be selected from candidate_pool.candidates by exact candidate_id.",
+      blocked_retry_rule: "If no valid non-duplicate pool candidate fits a required slot, set ready_for_app_import=false and explain the blocked/retry reason rather than inventing a route item.",
       mission_shape: "Respect candidate_pool.mission_intent, candidate_pool.mission_request, and candidate_pool.mission_portfolio_slot when present.",
       reaction_operations: ["love", "like", "keep", "not_for_me"],
       no_overclaiming: "All possible Atlas updates must stay review-gated.",
@@ -619,6 +681,98 @@ function validateMissionOutput(output: JsonObject): ValidationResult {
   return { valid: errors.length === 0, errors };
 }
 
+function validateRouteIdentityAndCandidateMembership(
+  output: JsonObject,
+  candidatePool: unknown,
+  promptContext: unknown = {},
+): RouteIdentityValidationResult {
+  const errors: string[] = [];
+  const candidateIDs = candidateIDsFromPool(candidatePool);
+  const candidateMetadata = candidateMetadataFromPool(candidatePool);
+  const blockedRouteItemIDs = stringsFromPromptContext(promptContext, [
+    "already_selected_route_item_ids",
+    "excluded_route_item_ids",
+  ]);
+  const blockedCandidateIDs = stringsFromPromptContext(promptContext, [
+    "already_selected_candidate_ids",
+    "excluded_candidate_ids",
+    "prior_imported_candidate_ids",
+  ]);
+  const blockedDisplayKeys = stringsFromPromptContext(promptContext, [
+    "already_selected_display_keys",
+    "excluded_display_keys",
+  ]);
+  const items = isObject(output.route) && Array.isArray(output.route.items)
+    ? output.route.items.filter(isObject)
+    : [];
+
+  const routeItemIDs = items
+    .map((item) => normalizedNonEmptyString(item.item_id))
+    .filter((value): value is string => value !== null);
+  const routeCandidateIDs = items
+    .map((item) => normalizedNonEmptyString(item.candidate_id))
+    .filter((value): value is string => value !== null);
+  const routeDisplayKeys = items
+    .map((item) => routeDisplayIdentityKey(item, candidateMetadata))
+    .filter((value): value is string => value !== null);
+
+  const duplicateRouteItemIDs = duplicates(routeItemIDs);
+  const duplicateCandidateIDs = duplicates(routeCandidateIDs);
+  const duplicateDisplayKeys = duplicates(routeDisplayKeys);
+  const missingCandidateIDs = items
+    .map((item, index) => ({ index, candidateID: normalizedNonEmptyString(item.candidate_id) }))
+    .filter((entry) => entry.candidateID === null)
+    .map((entry) => `route.items[${entry.index}].candidate_id`);
+  const nonCandidateIDs = candidateIDs.size > 0
+    ? routeCandidateIDs.filter((candidateID) => !candidateIDs.has(candidateID))
+    : [];
+  const repeatedRouteItemIDs = routeItemIDs.filter((itemID) => blockedRouteItemIDs.has(itemID));
+  const repeatedCandidateIDs = routeCandidateIDs.filter((candidateID) => blockedCandidateIDs.has(candidateID));
+  const repeatedDisplayKeys = routeDisplayKeys.filter((displayKey) => blockedDisplayKeys.has(displayKey));
+
+  for (const duplicateID of duplicateRouteItemIDs) {
+    errors.push(`duplicate route item_id ${duplicateID}`);
+  }
+  for (const duplicateID of duplicateCandidateIDs) {
+    errors.push(`duplicate route candidate_id ${duplicateID}`);
+  }
+  for (const duplicateKey of duplicateDisplayKeys) {
+    errors.push(`duplicate route display identity ${duplicateKey}`);
+  }
+  for (const missingID of missingCandidateIDs) {
+    errors.push(`${missingID} is required`);
+  }
+  for (const candidateID of [...new Set(nonCandidateIDs)].sort()) {
+    errors.push(`non-candidate route candidate_id ${candidateID}`);
+  }
+  for (const itemID of [...new Set(repeatedRouteItemIDs)].sort()) {
+    errors.push(`route item_id repeated from prompt_context batch memory ${itemID}`);
+  }
+  for (const candidateID of [...new Set(repeatedCandidateIDs)].sort()) {
+    errors.push(`route candidate_id repeated from prompt_context batch memory ${candidateID}`);
+  }
+  for (const displayKey of [...new Set(repeatedDisplayKeys)].sort()) {
+    errors.push(`route display identity repeated from prompt_context batch memory ${displayKey}`);
+  }
+
+  const summary = withoutUndefined({
+    route_item_count: items.length,
+    candidate_pool_count: candidateIDs.size,
+    duplicate_route_item_ids: duplicateRouteItemIDs,
+    duplicate_candidate_ids: duplicateCandidateIDs,
+    duplicate_display_identity_keys: duplicateDisplayKeys,
+    missing_candidate_id_refs: missingCandidateIDs,
+    non_candidate_ids: [...new Set(nonCandidateIDs)].sort(),
+    repeated_route_item_ids_from_batch_memory: [...new Set(repeatedRouteItemIDs)].sort(),
+    repeated_candidate_ids_from_batch_memory: [...new Set(repeatedCandidateIDs)].sort(),
+    repeated_display_keys_from_batch_memory: [...new Set(repeatedDisplayKeys)].sort(),
+    checked_candidate_membership: candidateIDs.size > 0,
+    checked_batch_memory: blockedRouteItemIDs.size > 0 || blockedCandidateIDs.size > 0 || blockedDisplayKeys.size > 0,
+  });
+
+  return { valid: errors.length === 0, errors, summary };
+}
+
 function validateAppMission(mission: JsonObject): ValidationResult {
   const errors: string[] = [];
   if (mission.schema_version !== appMissionSchemaVersion) {
@@ -631,6 +785,13 @@ function validateAppMission(mission: JsonObject): ValidationResult {
     errors.push("items must be non-empty");
   }
   const items = Array.isArray(mission.items) ? mission.items : [];
+  const appItemIDs = items
+    .filter(isObject)
+    .map((item) => normalizedNonEmptyString(item.item_id))
+    .filter((value): value is string => value !== null);
+  for (const duplicateID of duplicates(appItemIDs)) {
+    errors.push(`duplicate item_id ${duplicateID}`);
+  }
   for (const [index, rawItem] of items.entries()) {
     if (!isObject(rawItem)) {
       errors.push(`items[${index}] must be an object`);
@@ -643,6 +804,11 @@ function validateAppMission(mission: JsonObject): ValidationResult {
       errors.push(`items[${index}].apple_music_resolution must start unresolved`);
     }
   }
+  return { valid: errors.length === 0, errors };
+}
+
+function combineValidationResults(...results: ValidationResult[]): ValidationResult {
+  const errors = results.flatMap((result) => result.errors);
   return { valid: errors.length === 0, errors };
 }
 
@@ -661,11 +827,63 @@ function isReadyForAppImport(generation: JsonObject): boolean {
   return isObject(generation.review_config) && generation.review_config.ready_for_app_import === true;
 }
 
-function toAppMission(generation: JsonObject): JsonObject {
+function buildAlphaImportPolicy(
+  appImportStatus: "app_import_candidate" | "review_needed" | "blocked",
+  generation: JsonObject,
+  adaptedAppMissions: JsonObject[],
+  appMissionValidation: ValidationResult,
+): JsonObject {
+  const reviewConfig = isObject(generation.review_config) ? generation.review_config : {};
+  const appMissionValid = appMissionValidation.valid && adaptedAppMissions.length > 0;
+  const returnReviewNeededMissions = appImportStatus === "review_needed" &&
+    appMissionValid &&
+    reviewNeededAppMissionPolicy === "return_app_valid_missions";
+  const returnCleanMissions = appImportStatus === "app_import_candidate" && appMissionValid;
+  const appMissionsReturned = returnCleanMissions || returnReviewNeededMissions;
+
+  return withoutUndefined({
+    policy: reviewNeededAppMissionPolicy,
+    app_import_status: appImportStatus,
+    app_import_allowed_for_trusted_alpha: appMissionsReturned,
+    app_missions_returned: appMissionsReturned,
+    returned_app_mission_count: appMissionsReturned ? adaptedAppMissions.length : 0,
+    app_mission_validation_passed: appMissionValidation.valid,
+    review_required: appImportStatus === "review_needed" || reviewConfig.requires_human_review === true,
+    review_needed_allowed_by_policy: returnReviewNeededMissions,
+    status_reason: alphaImportStatusReason(appImportStatus, appMissionValidation, appMissionValid),
+    default_item_review_needed_for: Array.isArray(reviewConfig.default_item_review_needed_for)
+      ? reviewConfig.default_item_review_needed_for
+      : undefined,
+    review_focus: Array.isArray(reviewConfig.review_focus) ? reviewConfig.review_focus : undefined,
+    review_notes: typeof reviewConfig.notes === "string" ? reviewConfig.notes : undefined,
+  });
+}
+
+function alphaImportStatusReason(
+  appImportStatus: "app_import_candidate" | "review_needed" | "blocked",
+  appMissionValidation: ValidationResult,
+  appMissionValid: boolean,
+): string {
+  if (appImportStatus === "blocked") {
+    return "generation_or_app_mission_validation_failed";
+  }
+  if (!appMissionValid) {
+    return appMissionValidation.valid ? "no_adapted_app_mission" : "adapted_app_mission_failed_validation";
+  }
+  if (appImportStatus === "review_needed" && reviewNeededAppMissionPolicy === "return_app_valid_missions") {
+    return "review_needed_but_app_valid_for_trusted_alpha";
+  }
+  if (appImportStatus === "review_needed") {
+    return "review_needed_policy_strict";
+  }
+  return "app_import_candidate";
+}
+
+function toAppMission(generation: JsonObject, candidateMetadata: Map<string, JsonObject> = new Map()): JsonObject {
   const route = generation.route as JsonObject;
   const rawItems = Array.isArray(route.items) ? route.items.filter(isObject) : [];
   const createdAt = new Date().toISOString();
-  const appItems = rawItems.map((item, index) => toAppMissionItem(item, index));
+  const appItems = rawItems.map((item, index) => toAppMissionItem(item, index, candidateMetadata));
 
   return withoutUndefined({
     schema_version: appMissionSchemaVersion,
@@ -700,13 +918,25 @@ function toAppMission(generation: JsonObject): JsonObject {
   });
 }
 
-function toAppMissionItem(item: JsonObject, index: number): JsonObject {
+function toAppMissionItem(
+  item: JsonObject,
+  index: number,
+  candidateMetadata: Map<string, JsonObject> = new Map(),
+): JsonObject {
+  const candidate = candidateMetadataForItem(item, candidateMetadata);
   const metadata = isObject(item.display_metadata) ? item.display_metadata : {};
   const searchHint = isObject(item.music_kit_search_hint) ? item.music_kit_search_hint : {};
   const reviewState = isObject(item.review_state) ? item.review_state : {};
 
   return withoutUndefined({
     item_id: appID("ITEM", item.item_id, `GENERATED_${index + 1}`),
+    candidate_id: firstNonEmptyString(item.candidate_id, candidate?.candidate_id),
+    route_candidate_key: firstNonEmptyString(item.route_candidate_key, candidate?.route_candidate_key),
+    route_batch_dedupe_key: firstNonEmptyString(item.route_batch_dedupe_key, candidate?.route_batch_dedupe_key),
+    route_display_identity_key: firstNonEmptyString(
+      item.route_display_identity_key,
+      candidate?.route_display_identity_key,
+    ),
     sequence: index + 1,
     item_type: item.item_type === "album" ? "album" : "track",
     artist: String(metadata.artist ?? searchHint.artist ?? "Unknown Artist"),
@@ -855,6 +1085,150 @@ function appID(prefix: string, value: unknown, fallback: string): string {
     return slug;
   }
   return `${prefix}_${slug || fallback}`;
+}
+
+function candidateIDsFromPool(candidatePool: unknown): Set<string> {
+  const ids = new Set<string>();
+  collectCandidateIDs(candidatePool, ids);
+  return ids;
+}
+
+function candidateMetadataFromPool(candidatePool: unknown): Map<string, JsonObject> {
+  const metadata = new Map<string, JsonObject>();
+  collectCandidateMetadata(candidatePool, metadata);
+  return metadata;
+}
+
+function collectCandidateMetadata(value: unknown, metadata: Map<string, JsonObject>): void {
+  if (Array.isArray(value)) {
+    for (const child of value) {
+      collectCandidateMetadata(child, metadata);
+    }
+    return;
+  }
+
+  if (!isObject(value)) {
+    return;
+  }
+
+  const candidateID = normalizedNonEmptyString(value.candidate_id);
+  if (candidateID) {
+    metadata.set(candidateID, value);
+  }
+
+  for (const child of Object.values(value)) {
+    collectCandidateMetadata(child, metadata);
+  }
+}
+
+function collectCandidateIDs(value: unknown, ids: Set<string>): void {
+  if (Array.isArray(value)) {
+    for (const child of value) {
+      collectCandidateIDs(child, ids);
+    }
+    return;
+  }
+
+  if (!isObject(value)) {
+    return;
+  }
+
+  const candidateID = normalizedNonEmptyString(value.candidate_id);
+  if (candidateID) {
+    ids.add(candidateID);
+  }
+
+  for (const child of Object.values(value)) {
+    collectCandidateIDs(child, ids);
+  }
+}
+
+function stringsFromPromptContext(promptContext: unknown, fieldNames: string[]): Set<string> {
+  const values = new Set<string>();
+  if (!isObject(promptContext)) {
+    return values;
+  }
+  for (const fieldName of fieldNames) {
+    const rawValues = promptContext[fieldName];
+    if (!Array.isArray(rawValues)) {
+      continue;
+    }
+    for (const rawValue of rawValues) {
+      const value = normalizedNonEmptyString(rawValue);
+      if (value) {
+        values.add(value);
+      }
+    }
+  }
+  return values;
+}
+
+function candidateMetadataForItem(item: JsonObject, candidateMetadata: Map<string, JsonObject>): JsonObject | undefined {
+  const candidateID = normalizedNonEmptyString(item.candidate_id);
+  return candidateID ? candidateMetadata.get(candidateID) : undefined;
+}
+
+function routeDisplayIdentityKey(
+  item: JsonObject,
+  candidateMetadata: Map<string, JsonObject> = new Map(),
+): string | null {
+  const explicitKey = normalizedNonEmptyString(item.route_display_identity_key);
+  if (explicitKey) {
+    return explicitKey;
+  }
+
+  const candidateKey = normalizedNonEmptyString(candidateMetadataForItem(item, candidateMetadata)?.route_display_identity_key);
+  if (candidateKey) {
+    return candidateKey;
+  }
+
+  const metadata = isObject(item.display_metadata) ? item.display_metadata : {};
+  const searchHint = isObject(item.music_kit_search_hint) ? item.music_kit_search_hint : {};
+  const artist = normalizedIdentityPart(metadata.artist ?? searchHint.artist);
+  const title = normalizedIdentityPart(metadata.title ?? searchHint.title);
+  const itemType = normalizedIdentityPart(item.item_type);
+  if (!artist || !title || !itemType) {
+    return null;
+  }
+  return `${itemType}:${artist}:${title}`;
+}
+
+function duplicates(values: string[]): string[] {
+  const counts = new Map<string, number>();
+  for (const value of values) {
+    counts.set(value, (counts.get(value) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .filter(([, count]) => count > 1)
+    .map(([value]) => value)
+    .sort();
+}
+
+function normalizedNonEmptyString(value: unknown): string | null {
+  return typeof value === "string" && value.trim().length > 0 ? value.trim() : null;
+}
+
+function firstNonEmptyString(...values: unknown[]): string | undefined {
+  for (const value of values) {
+    const normalized = normalizedNonEmptyString(value);
+    if (normalized) {
+      return normalized;
+    }
+  }
+  return undefined;
+}
+
+function normalizedIdentityPart(value: unknown): string | null {
+  if (typeof value !== "string") {
+    return null;
+  }
+  const normalized = value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  return normalized.length > 0 ? normalized : null;
 }
 
 async function sha256JSON(value: unknown): Promise<string> {

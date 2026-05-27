@@ -1,0 +1,40 @@
+{
+  "client_artifact_id": "client_diag_client_state_snapshot_test",
+  "tester_alias": "trusted-alpha-001",
+  "artifact_type": "client_state_snapshot",
+  "schema_version": "waymark.alpha_client_diagnostic_artifact.v0.1",
+  "survey_session_id": "survey_session_test",
+  "source_app_version": "0.2",
+  "source_app_build": "12",
+  "redaction_level": "support_diagnostic",
+  "upload_cadence": "manual_share",
+  "client_created_at": "2026-05-25T12:00:00.000Z",
+  "consent": {
+    "diagnostic_upload_allowed": true,
+    "terms_version": "alpha_privacy_terms_v0_1",
+    "accepted_at": "2026-05-25T12:00:00.000Z"
+  },
+  "payload": {
+    "schema_version": "waymark.client_state_snapshot.v0.1",
+    "source_app_version": "0.2",
+    "source_app_build": "12",
+    "computed_root_stage": "generation",
+    "alpha_state": {
+      "state_version": "alpha1_fresh_read_quarantine_2026_05_24_01",
+      "accepted_terms_version": "alpha_terms_2026_05_23",
+      "onboarding_completed": true,
+      "survey_completed": true,
+      "generation_status": "generation_failed"
+    },
+    "mission_generation": {
+      "reviewed_mission_count": 0,
+      "target_mission_count": 10,
+      "state": "failed"
+    },
+    "redaction": {
+      "auth_tokens_included": false,
+      "service_role_keys_included": false,
+      "apple_identity_tokens_included": false
+    }
+  }
+}

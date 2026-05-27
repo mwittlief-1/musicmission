@@ -75,6 +75,7 @@ const requiredFiles = [
   "supabase/migrations/20260521160000_alpha_generation_logs.sql",
   "supabase/migrations/20260522190000_alpha1_auth_and_evidence_upload.sql",
   "supabase/migrations/20260524170000_alpha_client_diagnostics.sql",
+  "supabase/migrations/20260525120000_alpha_client_state_snapshot_diagnostics.sql",
   "supabase/functions/generate-first-mission-batch/fixtures/app_import_candidate/request.json",
   "supabase/functions/generate-first-mission-batch/fixtures/review_needed/request.json",
   "supabase/functions/generate-first-mission-batch/fixtures/blocked/request.json",
@@ -83,6 +84,7 @@ const requiredFiles = [
   "supabase/functions/submit-alpha-evidence/fixtures/survey_evidence_export/request.json",
   "supabase/functions/submit-alpha-evidence/fixtures/invalid_consent/request.json",
   "supabase/functions/submit-alpha-diagnostic/fixtures/apple_music_signal_payload/request.json",
+  "supabase/functions/submit-alpha-diagnostic/fixtures/client_state_snapshot/request.json",
   "supabase/functions/submit-alpha-diagnostic/fixtures/mission_import_result/request.json",
   "supabase/functions/submit-alpha-diagnostic/fixtures/invalid_consent/request.json",
   "scripts/summarize_alpha_live_run.mjs",
@@ -151,7 +153,7 @@ function collectLiveStatus(projectRef) {
   const projectLine = projects
     ?.split("\n")
     .find((line) => line.includes(projectRef));
-  const migrationIds = ["20260521160000", "20260522190000", "20260524170000"];
+  const migrationIds = ["20260521160000", "20260522190000", "20260524170000", "20260525120000"];
   const blockers = [];
 
   if (!projects) {
@@ -232,7 +234,6 @@ function writeReport({ supabaseVersion, npxSupabaseVersion, denoVersion, nodeVer
     "## Result",
     "",
     failed.length === 0 ? "`offline_acceptance_pass`" : "`offline_acceptance_fail`",
-    "",
   ];
 
   mkdirSync(dirname(reportPath), { recursive: true });
