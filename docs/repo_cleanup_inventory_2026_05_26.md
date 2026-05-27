@@ -252,6 +252,6 @@ Remaining follow-ups:
 
 1. Review all `data/**/*.zip`, `review_packets/*.zip`, and harness review packet zips for external artifact storage.
 2. Promote selected generated reports into `docs/` only when they are accepted as evidence.
-3. Review `data/deprecated_mission_fixtures/` before deleting or archiving duplicate mission fixtures.
+3. Owner-review `data/deprecated_mission_fixtures/` before deleting or consolidating duplicate mission fixtures; app-resource retirement coverage is documented in that directory's README.
 4. Treat the remaining iOS app/resource/test changes as an app-runtime slice, not repo cleanup, unless the owner explicitly asks cleanup to stage or validate that work.
 5. Keep the current Cartenza brand packet tracked as active design input, but move future bulky generated brand iterations to external design storage or manifest-only tracking.
