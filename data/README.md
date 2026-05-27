@@ -69,7 +69,7 @@ These paths are generated evidence or historical review material. Do not treat t
 | `data/survey_simulation/runs/` | Generated simulator runs. |
 | `data/survey_simulation/reports/` | Generated simulator reports. |
 | `data/survey_simulation/llm_profile_review/` | Generated LLM review evidence and evidence bundles. |
-| `data/waymark_canonical_graph_chatgpt_review_packet_*/` | Extracted generated review packets. Keep only if actively reviewed; otherwise archive externally with a manifest. |
+| `data/waymark_canonical_graph_chatgpt_review_packet_*/` | Extracted generated review packets. Ignored by default after manifesting under `docs/reviews/canonical_graph/`; promote only specific artifacts that remain active. |
 
 ## Promotion Rule
 
