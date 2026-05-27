@@ -4,7 +4,7 @@ Scope: initial repo stewardship pass for `/Users/matt_wittlief_home/Documents/Gi
 
 Initial inventory pass: no files were deleted, moved, reverted, or reformatted. The first codebase changes were `.gitignore` additions and repo stewardship docs.
 
-Follow-up classification-to-action pass: root canonical-graph review Markdown moved into `docs/reviews/canonical_graph/`; `README.md`, `docs/repo_map.md`, this inventory, and `data/README.md` were updated with the accepted structure decisions. Later data slices promoted first-class graph, survey, mission-generation, closed-loop, and Atlas explainer surfaces while leaving generated archives ignored. Runtime/app/Supabase source remained untouched.
+Follow-up classification-to-action pass: root canonical-graph review Markdown moved into `docs/reviews/canonical_graph/`; `README.md`, `docs/repo_map.md`, this inventory, and `data/README.md` were updated with the accepted structure decisions. Later data slices promoted first-class graph, survey, mission-generation, closed-loop, Atlas explainer, and Supabase backend surfaces while leaving generated archives ignored. Runtime app source remains active and intentionally uncommitted by the repo-cleanup lane.
 
 ## Method
 
@@ -27,6 +27,8 @@ Subagent sidecar inventories were used only for read-only classification:
 ## Worktree State
 
 The worktree is active and contains many unrelated runtime and mission-logic changes. This pass intentionally avoided Swift, Supabase runtime, resource JSON, and mission-generation edits.
+
+Update after the 2026-05-27 backend cleanup slice: Supabase config, Edge Functions, migrations, fixtures, `.env.example`, README, and the alpha infra acceptance report are now tracked first-class backend/runtime material. Remaining unstaged changes are concentrated in the iOS app, app resources, app tests, and affinity/sidecar scripts.
 
 Notable modified runtime areas at the start of inventory included:
 
@@ -74,7 +76,7 @@ Tracked repo contents are still comparatively small and mostly include:
 - tracked `data/exports/**/.gitkeep`
 - tracked v0.2 app-dev kickoff packet
 - tracked validation scripts
-- `supabase/functions/generate-first-mission-batch/index.ts`
+- Supabase config, migrations, Edge Functions, backend fixtures, env example, and alpha infra acceptance report
 - `tests/README.md`
 
 No tracked `.zip` files were found.
@@ -119,9 +121,9 @@ Added in this pass:
 | `MusicAtlasController/Views/` | SwiftUI app views. Active changes present. |
 | `MusicAtlasController/Support/` | Info.plist, entitlements, MusicKit setup notes. |
 | `MusicAtlasController/Resources/` | App-bundled icons, schemas, and current alpha JSON resources. Several new large runtime resource candidates are untracked and should be reviewed before committing. |
-| `supabase/functions/` | Edge Functions. `generate-first-mission-batch` is tracked and modified; submit diagnostic/evidence functions are untracked runtime candidates. |
-| `supabase/migrations/` | Untracked database migrations; likely backend runtime source. |
-| `supabase/config.toml` | Untracked Supabase project config; likely backend runtime source. |
+| `supabase/functions/` | Edge Functions and deterministic backend fixtures. `generate-first-mission-batch`, `submit-alpha-evidence`, and `submit-alpha-diagnostic` are tracked runtime source. |
+| `supabase/migrations/` | Tracked database migrations for alpha generation logs, evidence upload, diagnostics, and client-state snapshot diagnostics. |
+| `supabase/config.toml` | Tracked Supabase project config; `supabase/.temp/` remains ignored local CLI state. |
 | selected `scripts/` | Validation, generation, smoke, and import scripts that support runtime contracts. Many are untracked and should be reviewed by purpose. |
 
 ### Test/Source Fixture
@@ -158,7 +160,7 @@ Added in this pass:
 | `docs/app_dev/kickoff_v0_2/` | Tracked v0.2 controlling product and implementation packet. |
 | `docs/alpha_backlog/` | Active alpha lane backlog and dispatch material. |
 | `docs/infra/` | Supabase, diagnostics, evidence upload, and operations contracts. |
-| `supabase/README.md` and `supabase/alpha_infra_acceptance_report.md` | Untracked infra docs. |
+| `supabase/README.md` and `supabase/alpha_infra_acceptance_report.md` | Tracked infra docs and acceptance evidence. The acceptance report records local fixture/typecheck status plus remote project/function/secret checks when available. |
 
 ### Generated Artifact
 
@@ -251,3 +253,4 @@ Remaining follow-ups:
 4. Classify `data/atlas_schema/ingestion_proof/` into contract proof fixtures vs generated run evidence.
 5. Decide whether `docs/app_dev/brand_assets/*.png` are canonical brand inputs or external design artifacts.
 6. Review `data/deprecated_mission_fixtures/` before deleting or archiving duplicate mission fixtures.
+7. Treat the remaining iOS app/resource/test changes as an app-runtime slice, not repo cleanup, unless the owner explicitly asks cleanup to stage or validate that work.
