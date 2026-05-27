@@ -99,6 +99,7 @@ Added in this pass:
 - Xcode archive/result artifacts: `*.xcarchive/`, `*.xcresult/`, `*.dSYM/`, `*.ipa`
 - harness local env variants for `waymark-ai-tests/` and `waymark-atlas-tests/`
 - generated/archive zip patterns: `data/*.zip`, `data/**/*.zip`, `review_packets/*.zip`, `waymark-ai-tests/review_packets/*.zip`
+- generated review packet workspace: `review_packets/**` is ignored after classification; `docs/reviews/review_packets_manifest_2026_05_27.md` records the local archive contents observed on 2026-05-27
 - generated harness outputs and reports:
   - `waymark-ai-tests/outputs/*`
   - `waymark-ai-tests/reports/*`
@@ -172,7 +173,7 @@ Added in this pass:
 | `data/atlas_schema/node_interpretation_smoke/` and `wwtsf_substrate_smoke/` | Generated smoke outputs. |
 | `data/atlas_explainer/AtlasExplainerPack_v0_2_Checkpoint/`, `AtlasExplainerPack_v0_2_All_Archetypes/`, `AtlasExplainerPack_v0_2_1_SourceDeepened/`, and `AtlasExplainerPack_v0_2_2_SourceRecovery/` | Rebuildable intermediate Atlas explainer packages. Ignored by default unless an older package is promoted. |
 | `data/atlas_explainer/**/*.zip`, Finder duplicate `* 2*` paths, and `**/indexes/schema_validation_report_*.md` | Generated Atlas explainer archives, duplicate expansions, and local validation logs. Ignored by default. |
-| `review_packets/*.zip` | Generated review packets, now ignored for future accidental adds. |
+| `review_packets/**` | Generated review packets and extracted review archives, now ignored for future accidental adds. |
 | `waymark-ai-tests/outputs/` | 153 timestamped generated run directories, now ignored except `.gitkeep`. |
 | `waymark-ai-tests/reports/` | Generated harness reports, now ignored except `.gitkeep`. |
 | `waymark-atlas-tests/outputs/` | Generated Atlas ingestion run directories, now ignored except `.gitkeep`. |
@@ -203,6 +204,7 @@ Added in this pass:
 | `data/deprecated_mission_fixtures/` | Deprecated duplicate fixtures; requires owner approval before removal. |
 | `docs/app_dev/brand_assets/*.png` | Large generated/reference PNGs, about 11M total; keep only if they are canonical design inputs. |
 | `docs/reviews/canonical_graph/` | Home for generated canonical graph review Markdown moved out of repo root. Archive externally or into a dated docs archive when no longer active. |
+| `docs/reviews/review_packets_manifest_2026_05_27.md` | Manifest for local `review_packets/` archives; keeps the repo aware of ignored packet contents without tracking generated bulk. |
 | old local `build/*.xcarchive` directories | Local build artifacts; can be deleted locally only after confirming no dSYM/archive retention need. |
 
 ## Large Artifact Findings
