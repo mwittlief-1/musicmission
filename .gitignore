@@ -52,14 +52,19 @@ data/exports/acceptance/*
 data/*.zip
 data/**/*.zip
 review_packets/*.zip
+review_packets/**/*.zip
+review_packets/**/.DS_Store
 waymark-ai-tests/review_packets/*.zip
 
 # Generated data evidence
 data/atlas_schema/ingestion_proof/
 data/atlas_schema/node_interpretation_smoke/
 data/atlas_schema/wwtsf_substrate_smoke/
+data/atlas_explainer/**/* 2*
+data/atlas_explainer/**/__MACOSX/
 data/canonical_graph/depth_hardening_v0_1/
 data/canonical_graph/depth_hardening_v0_2/
+data/closed_loop_simulation/**/profile_*/
 data/survey_simulation/**/* 2*
 data/survey_simulation/runs/
 data/survey_simulation/reports/

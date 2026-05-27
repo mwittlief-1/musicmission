@@ -1,0 +1,292 @@
+{
+  "generated_at": "2026-05-21T15:52:43.554759Z",
+  "input_roots": {
+    "ingestion_proof": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/atlas_schema/ingestion_proof/a3_gpt_5_5_3x3",
+    "node_interpretation": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/atlas_schema/node_interpretation_smoke/a3_v0_1_1",
+    "wwtsf_substrate": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/atlas_schema/wwtsf_substrate_smoke/a3_v0_1_2"
+  },
+  "model": "gpt-5.4-mini",
+  "output_root": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1",
+  "profile_results": [
+    {
+      "atlas_update_summary": {
+        "auto_promotions": 0,
+        "canonical_graph_mutations": 0,
+        "confidence_deltas": 18,
+        "contradiction_clusters": 0,
+        "possible_update_candidates_created": 18,
+        "role_change_candidates": 18,
+        "signals_created": 18
+      },
+      "feedback_summary": {
+        "playback_status_counts": {
+          "no_signal": 4,
+          "played": 11,
+          "skipped": 3
+        },
+        "primary_reaction_counts": {
+          "keep": 1,
+          "no_signal": 4,
+          "qualified_positive": 6,
+          "skipped": 3,
+          "strong_positive": 2,
+          "unknown": 2
+        },
+        "route_items": 18,
+        "secondary_tag_rate_among_signaled": 0.273,
+        "signal_rate": 0.611,
+        "signaled_items": 11,
+        "tagged_signaled_items": 3
+      },
+      "final_status": "closed_loop_pass",
+      "first_batch": {
+        "estimated_total_cost_usd": 0.123399,
+        "input_tokens": 31980,
+        "latency_seconds": 118.02,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_01/first_batch_missions.json",
+        "output_tokens": 22092,
+        "valid": true
+      },
+      "first_batch_evaluation": {
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      },
+      "profile": "01",
+      "profile_id": "profile_01_A3",
+      "qualitative_review_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_01/qualitative_review_profile_01.md",
+      "second_batch": {
+        "estimated_total_cost_usd": 0.137357,
+        "input_tokens": 41957,
+        "latency_seconds": 136.154,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_01/second_batch_missions.json",
+        "output_tokens": 23531,
+        "valid": true
+      },
+      "second_batch_evaluation": {
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      }
+    },
+    {
+      "atlas_update_summary": {
+        "auto_promotions": 0,
+        "canonical_graph_mutations": 0,
+        "confidence_deltas": 18,
+        "contradiction_clusters": 0,
+        "possible_update_candidates_created": 18,
+        "role_change_candidates": 18,
+        "signals_created": 18
+      },
+      "feedback_summary": {
+        "playback_status_counts": {
+          "no_signal": 4,
+          "played": 11,
+          "skipped": 3
+        },
+        "primary_reaction_counts": {
+          "keep": 2,
+          "negative": 1,
+          "no_signal": 4,
+          "qualified_positive": 5,
+          "skipped": 3,
+          "strong_positive": 1,
+          "unknown": 2
+        },
+        "route_items": 18,
+        "secondary_tag_rate_among_signaled": 0.273,
+        "signal_rate": 0.611,
+        "signaled_items": 11,
+        "tagged_signaled_items": 3
+      },
+      "final_status": "closed_loop_pass",
+      "first_batch": {
+        "estimated_total_cost_usd": 0.116113,
+        "input_tokens": 29903,
+        "latency_seconds": 102.25,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_05/first_batch_missions.json",
+        "output_tokens": 20819,
+        "valid": true
+      },
+      "first_batch_evaluation": {
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      },
+      "profile": "05",
+      "profile_id": "profile_05_A3",
+      "qualitative_review_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_05/qualitative_review_profile_05.md",
+      "second_batch": {
+        "estimated_total_cost_usd": 0.130414,
+        "input_tokens": 39917,
+        "latency_seconds": 124.573,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_05/second_batch_missions.json",
+        "output_tokens": 22328,
+        "valid": true
+      },
+      "second_batch_evaluation": {
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      }
+    },
+    {
+      "atlas_update_summary": {
+        "auto_promotions": 0,
+        "canonical_graph_mutations": 0,
+        "confidence_deltas": 18,
+        "contradiction_clusters": 0,
+        "possible_update_candidates_created": 18,
+        "role_change_candidates": 18,
+        "signals_created": 18
+      },
+      "feedback_summary": {
+        "playback_status_counts": {
+          "no_signal": 3,
+          "played": 11,
+          "skipped": 4
+        },
+        "primary_reaction_counts": {
+          "keep": 2,
+          "negative": 1,
+          "no_signal": 3,
+          "qualified_positive": 4,
+          "skipped": 4,
+          "strong_positive": 3,
+          "unknown": 1
+        },
+        "route_items": 18,
+        "secondary_tag_rate_among_signaled": 0.273,
+        "signal_rate": 0.611,
+        "signaled_items": 11,
+        "tagged_signaled_items": 3
+      },
+      "final_status": "closed_loop_pass",
+      "first_batch": {
+        "estimated_total_cost_usd": 0.124402,
+        "input_tokens": 28266,
+        "latency_seconds": 127.089,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_06/first_batch_missions.json",
+        "output_tokens": 22934,
+        "valid": true
+      },
+      "first_batch_evaluation": {
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      },
+      "profile": "06",
+      "profile_id": "profile_06_A3",
+      "qualitative_review_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_06/qualitative_review_profile_06.md",
+      "second_batch": {
+        "estimated_total_cost_usd": 0.128416,
+        "input_tokens": 38105,
+        "latency_seconds": 118.778,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1/profile_06/second_batch_missions.json",
+        "output_tokens": 22186,
+        "valid": true
+      },
+      "second_batch_evaluation": {
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      }
+    }
+  ],
+  "profiles": [
+    "profile_01_A3",
+    "profile_05_A3",
+    "profile_06_A3"
+  ],
+  "prohibited_inputs": {
+    "canonical_graph_mutation_allowed": false,
+    "hidden_truth_used_for_generation_or_atlas": false,
+    "profile_writer_outputs_used_as_evidence": false,
+    "raw_a3_payloads_used_for_generation": false
+  },
+  "run_type": "live_api",
+  "schema_version": "waymark.closed_loop_manifest.v0.1",
+  "simulation_parameters": {
+    "primary_signal_ratio": 0.6,
+    "secondary_tag_ratio_among_signaled": 0.3
+  }
+}

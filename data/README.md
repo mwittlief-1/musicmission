@@ -35,6 +35,8 @@ These paths are deterministic fixtures or golden packets. Track them when they a
 | `data/atlas_schema/examples/` | Atlas contract examples. |
 | `data/canonical_graph/import_dry_run/` | Generated dry-run output promoted as a read-only fixture for legacy survey simulation and review tooling. |
 | `data/canonical_graph/normalization_pass_2/` | Generated normalization output promoted as active alpha survey/app-resource input. |
+| `data/closed_loop_simulation/*/closed_loop_manifest.json`, `*schema*.json`, and `closed_loop_acceptance_report.md` | Promoted closed-loop simulation contracts and acceptance summaries. Raw profile outputs remain generated evidence. |
+| `data/deprecated_mission_fixtures/` | Retired mission fixtures kept as a small archive while app resource deletions are reviewed. Do not use for runtime wiring. |
 | `data/survey_pilot/` | Survey pilot inputs and fixtures, pending deeper split if generated runs appear. |
 | `data/survey_simulation/schemas/` | Survey simulator schemas. |
 | `data/survey_simulation/fake_profiles/` | Survey simulator source profiles. |
@@ -54,8 +56,8 @@ These paths are generated evidence or historical review material. Do not treat t
 | `data/atlas_schema/wwtsf_substrate_smoke/` | Generated smoke evidence. |
 | `data/canonical_graph/depth_hardening_v0_1/` | Historical generated hardening pass. Ignored by default; archive externally unless a specific artifact is promoted. |
 | `data/canonical_graph/depth_hardening_v0_2/` | Historical generated hardening pass that produced `current/`. Ignored by default to avoid tracking redundant pass C/pass D bulk. |
-| `data/closed_loop_simulation/` | Generated closed-loop evidence and adaptive-learning review material. |
-| `data/deprecated_mission_fixtures/` | Deprecated duplicate fixtures. Archive/remove only after owner approval. |
+| `data/closed_loop_simulation/**/profile_*/` | Raw per-profile generated closed-loop API outputs, hidden evaluator traces, requests, responses, and qualitative profile reviews. Ignored by default; promote only selected fixtures. |
+| `data/atlas_explainer/**/*.zip` and Finder duplicate `* 2*` paths | Generated packet archives and local duplicate expansions. Ignored by default. |
 | `data/mission_generation/**/[0-9][0-9][0-9][0-9]*Z*/` and timestamped request/response attempts | Generated run evidence. |
 | `data/mission_generation/alpha_first_batch_route_ready_v0_1/` | Generated first-batch route-ready attempts, except promoted contracts/manifests. |
 | `data/survey_simulation/runs/` | Generated simulator runs. |

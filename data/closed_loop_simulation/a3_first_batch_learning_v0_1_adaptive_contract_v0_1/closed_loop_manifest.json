@@ -1,0 +1,749 @@
+{
+  "adaptive_contract_version": "waymark.adaptive_second_batch_contract.v0.1",
+  "adaptive_second_batch_report": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/waymark-ai-tests/reports/adaptive_second_batch_report_20260521T175205Z.md",
+  "generated_at": "2026-05-21T17:52:05.763273Z",
+  "input_roots": {
+    "ingestion_proof": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/atlas_schema/ingestion_proof/a3_gpt_5_5_3x3",
+    "node_interpretation": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/atlas_schema/node_interpretation_smoke/a3_v0_1_1",
+    "wwtsf_substrate": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/atlas_schema/wwtsf_substrate_smoke/a3_v0_1_2"
+  },
+  "model": "gpt-5.4-mini",
+  "output_root": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1",
+  "profile_results": [
+    {
+      "atlas_delta_summary": {
+        "action_counts": {
+          "deepen": 3,
+          "pivot": 1,
+          "retire_pause": 2
+        },
+        "contradictions_to_check": [],
+        "dead_ends_to_confirm": [],
+        "deepened_paths": [
+          "atlas_delta:profile_01_A3:001",
+          "atlas_delta:profile_01_A3:002",
+          "atlas_delta:profile_01_A3:003"
+        ],
+        "delta_count": 6,
+        "paused_or_retired_paths": [
+          "atlas_delta:profile_01_A3:005",
+          "atlas_delta:profile_01_A3:006"
+        ],
+        "pivots": [
+          "atlas_delta:profile_01_A3:004"
+        ],
+        "what_batch_1_taught": "Batch 1 produced interpreted AtlasDelta entries for second-batch routing; every adaptive mission must consume at least one delta."
+      },
+      "atlas_update_summary": {
+        "auto_promotions": 0,
+        "canonical_graph_mutations": 0,
+        "confidence_deltas": 18,
+        "contradiction_clusters": 0,
+        "possible_update_candidates_created": 18,
+        "role_change_candidates": 18,
+        "signals_created": 18
+      },
+      "feedback_summary": {
+        "playback_status_counts": {
+          "no_signal": 3,
+          "played": 11,
+          "skipped": 4
+        },
+        "primary_reaction_counts": {
+          "keep": 2,
+          "no_signal": 3,
+          "qualified_positive": 3,
+          "skipped": 4,
+          "strong_positive": 5,
+          "unknown": 1
+        },
+        "route_items": 18,
+        "secondary_tag_rate_among_signaled": 0.273,
+        "signal_rate": 0.611,
+        "signaled_items": 11,
+        "tagged_signaled_items": 3
+      },
+      "final_status": "closed_loop_pass",
+      "first_batch": {
+        "estimated_total_cost_usd": 0.101247,
+        "input_tokens": 45164,
+        "latency_seconds": 121.678,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_01/first_batch_missions.json",
+        "output_tokens": 21692,
+        "valid": true
+      },
+      "first_batch_evaluation": {
+        "adaptive_mission_results": [],
+        "adaptive_summary": null,
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      },
+      "profile": "01",
+      "profile_id": "profile_01_A3",
+      "qualitative_review_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_01/qualitative_review_profile_01.md",
+      "second_batch": {
+        "estimated_total_cost_usd": 0.131909,
+        "input_tokens": 30181,
+        "latency_seconds": 124.326,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_01/second_batch_missions.json",
+        "output_tokens": 24283,
+        "valid": true
+      },
+      "second_batch_evaluation": {
+        "adaptive_mission_results": [
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_07_safe_anchor_fleetwood_mac_deepen",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_01_A3:001"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Fleetwood Mac anchor, with Dreams still held separate",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_08_nearby_road_tom_petty_dire_straits_deepen",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_01_A3:002"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Tom Petty to Dire Straits: nearby road, now tightened",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_09_frontier_garth_nin_ghost_deepen",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_01_A3:003"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Frontier probe: Garth Brooks, Nine Inch Nails, Ghost, tightened",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "pivot",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_10_dead_end_buddy_holly_confirmation",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_01_A3:004"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Buddy Holly: dead-end confirmation, not broad rejection",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "retire_pause",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "review_needed",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "search_calibration_only",
+            "errors": [],
+            "mission_id": "mission_11_waypoint_sonic_youth_useful_not_canon",
+            "placeholder_count": 1,
+            "product_status": "product_review_needed",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_01_A3:005"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Sonic Youth as a waypoint, not a Landmark",
+            "warnings": [
+              "Declared resolution_quality_status `search_calibration_only` differs from computed `one_placeholder`."
+            ]
+          },
+          {
+            "adaptation_action": "retire_pause",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "review_needed",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "search_calibration_only",
+            "errors": [],
+            "mission_id": "mission_12_wildcard_delight_better_informed",
+            "placeholder_count": 1,
+            "product_status": "product_review_needed",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_01_A3:006"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Wildcard delight: a better-informed surprise bet",
+            "warnings": [
+              "Declared resolution_quality_status `search_calibration_only` differs from computed `one_placeholder`."
+            ]
+          }
+        ],
+        "adaptive_summary": {
+          "adaptation_action_counts": {
+            "deepen": 3,
+            "pivot": 1,
+            "retire_pause": 2
+          },
+          "errors": [],
+          "mission_failures": [],
+          "mission_product_status_counts": {
+            "product_pass_candidate": 4,
+            "product_review_needed": 2
+          },
+          "valid": true,
+          "visible_adaptive_mission_count": 6
+        },
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      }
+    },
+    {
+      "atlas_delta_summary": {
+        "action_counts": {
+          "deepen": 1,
+          "pivot": 1,
+          "retire_pause": 4
+        },
+        "contradictions_to_check": [],
+        "dead_ends_to_confirm": [],
+        "deepened_paths": [
+          "atlas_delta:profile_05_A3:002"
+        ],
+        "delta_count": 6,
+        "paused_or_retired_paths": [
+          "atlas_delta:profile_05_A3:001",
+          "atlas_delta:profile_05_A3:003",
+          "atlas_delta:profile_05_A3:005",
+          "atlas_delta:profile_05_A3:006"
+        ],
+        "pivots": [
+          "atlas_delta:profile_05_A3:004"
+        ],
+        "what_batch_1_taught": "Batch 1 produced interpreted AtlasDelta entries for second-batch routing; every adaptive mission must consume at least one delta."
+      },
+      "atlas_update_summary": {
+        "auto_promotions": 0,
+        "canonical_graph_mutations": 0,
+        "confidence_deltas": 18,
+        "contradiction_clusters": 0,
+        "possible_update_candidates_created": 18,
+        "role_change_candidates": 18,
+        "signals_created": 18
+      },
+      "feedback_summary": {
+        "playback_status_counts": {
+          "no_signal": 1,
+          "played": 11,
+          "skipped": 6
+        },
+        "primary_reaction_counts": {
+          "keep": 5,
+          "no_signal": 1,
+          "qualified_positive": 3,
+          "skipped": 6,
+          "strong_positive": 1,
+          "unknown": 2
+        },
+        "route_items": 18,
+        "secondary_tag_rate_among_signaled": 0.273,
+        "signal_rate": 0.611,
+        "signaled_items": 11,
+        "tagged_signaled_items": 3
+      },
+      "final_status": "closed_loop_pass",
+      "first_batch": {
+        "estimated_total_cost_usd": 0.12653,
+        "input_tokens": 42629,
+        "latency_seconds": 99.809,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_05/first_batch_missions.json",
+        "output_tokens": 21013,
+        "valid": true
+      },
+      "first_batch_evaluation": {
+        "adaptive_mission_results": [],
+        "adaptive_summary": null,
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      },
+      "profile": "05",
+      "profile_id": "profile_05_A3",
+      "qualitative_review_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_05/qualitative_review_profile_05.md",
+      "second_batch": {
+        "estimated_total_cost_usd": 0.131072,
+        "input_tokens": 29695,
+        "latency_seconds": 145.459,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_05/second_batch_missions.json",
+        "output_tokens": 24178,
+        "valid": true
+      },
+      "second_batch_evaluation": {
+        "adaptive_mission_results": [
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "review_needed",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "one_placeholder",
+            "errors": [],
+            "mission_id": "mission_07_safe_anchor_profile_05_A3",
+            "placeholder_count": 1,
+            "product_status": "product_review_needed",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_05_A3:001",
+              "atlas_delta:profile_05_A3:002"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Kendrick anchor, but only the dense lane",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_08_nearby_road_profile_05_A3",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_05_A3:002"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "SZA / Frank Ocean / Sade named-object density, deepened carefully",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "pivot",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "review_needed",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "one_placeholder",
+            "errors": [],
+            "mission_id": "mission_09_frontier_profile_05_A3",
+            "placeholder_count": 1,
+            "product_status": "product_review_needed",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_05_A3:003",
+              "atlas_delta:profile_05_A3:004"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Crazy in Love as a sharper frontier probe, not a pop verdict",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "pivot",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "review_needed",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "one_placeholder",
+            "errors": [],
+            "mission_id": "mission_10_dead_end_or_contradiction_check_profile_05_A3",
+            "placeholder_count": 1,
+            "product_status": "product_review_needed",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_05_A3:004"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Shania Twain scope check, now as a contradiction review",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "pivot",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_11_waypoint_useful_not_canon_profile_05_A3",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_05_A3:004",
+              "atlas_delta:profile_05_A3:005"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Use the waypoints, but keep them as waypoints",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "retire_pause",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "review_needed",
+            "computed_resolution_quality_status": "search_calibration_only",
+            "declared_resolution_quality_status": "search_calibration_only",
+            "errors": [],
+            "mission_id": "mission_12_wildcard_delight_profile_05_A3",
+            "placeholder_count": 1,
+            "product_status": "product_review_needed",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_05_A3:005",
+              "atlas_delta:profile_05_A3:006"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "A playful but bounded delight bet: Doja Cat plus a safe contrast",
+            "warnings": []
+          }
+        ],
+        "adaptive_summary": {
+          "adaptation_action_counts": {
+            "deepen": 2,
+            "pivot": 3,
+            "retire_pause": 1
+          },
+          "errors": [],
+          "mission_failures": [],
+          "mission_product_status_counts": {
+            "product_pass_candidate": 2,
+            "product_review_needed": 4
+          },
+          "valid": true,
+          "visible_adaptive_mission_count": 6
+        },
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      }
+    },
+    {
+      "atlas_delta_summary": {
+        "action_counts": {
+          "dead_end_confirmation": 1,
+          "deepen": 4,
+          "retire_pause": 1
+        },
+        "contradictions_to_check": [],
+        "dead_ends_to_confirm": [
+          "atlas_delta:profile_06_A3:004"
+        ],
+        "deepened_paths": [
+          "atlas_delta:profile_06_A3:001",
+          "atlas_delta:profile_06_A3:002",
+          "atlas_delta:profile_06_A3:005",
+          "atlas_delta:profile_06_A3:006"
+        ],
+        "delta_count": 6,
+        "paused_or_retired_paths": [
+          "atlas_delta:profile_06_A3:003"
+        ],
+        "pivots": [],
+        "what_batch_1_taught": "Batch 1 produced interpreted AtlasDelta entries for second-batch routing; every adaptive mission must consume at least one delta."
+      },
+      "atlas_update_summary": {
+        "auto_promotions": 0,
+        "canonical_graph_mutations": 0,
+        "confidence_deltas": 18,
+        "contradiction_clusters": 0,
+        "possible_update_candidates_created": 18,
+        "role_change_candidates": 18,
+        "signals_created": 18
+      },
+      "feedback_summary": {
+        "playback_status_counts": {
+          "no_signal": 5,
+          "played": 11,
+          "skipped": 2
+        },
+        "primary_reaction_counts": {
+          "keep": 1,
+          "negative": 1,
+          "no_signal": 5,
+          "qualified_positive": 7,
+          "skipped": 2,
+          "strong_positive": 2
+        },
+        "route_items": 18,
+        "secondary_tag_rate_among_signaled": 0.273,
+        "signal_rate": 0.611,
+        "signaled_items": 11,
+        "tagged_signaled_items": 3
+      },
+      "final_status": "closed_loop_pass",
+      "first_batch": {
+        "estimated_total_cost_usd": 0.130047,
+        "input_tokens": 41366,
+        "latency_seconds": 130.294,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_06/first_batch_missions.json",
+        "output_tokens": 22005,
+        "valid": true
+      },
+      "first_batch_evaluation": {
+        "adaptive_mission_results": [],
+        "adaptive_summary": null,
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      },
+      "profile": "06",
+      "profile_id": "profile_06_A3",
+      "qualitative_review_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_06/qualitative_review_profile_06.md",
+      "second_batch": {
+        "estimated_total_cost_usd": 0.140063,
+        "input_tokens": 29976,
+        "latency_seconds": 131.153,
+        "output_file": "/Users/matt_wittlief_home/Documents/GitHub/musicmission/data/closed_loop_simulation/a3_first_batch_learning_v0_1_adaptive_contract_v0_1/profile_06/second_batch_missions.json",
+        "output_tokens": 26129,
+        "valid": true
+      },
+      "second_batch_evaluation": {
+        "adaptive_mission_results": [
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "one_placeholder",
+            "errors": [],
+            "mission_id": "mission_06_A3_07",
+            "placeholder_count": 1,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_06_A3:001"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Lin-Manuel Miranda anchor deepening with adjacent theater controls",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_06_A3_08",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_06_A3:002"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Disney adjacent theatrical-pop road refinement",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "retire_pause",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_06_A3_09",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_06_A3:003"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Queen and Prince frontier narrowing after weak/no-signal evidence",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "contradiction_check",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "one_placeholder",
+            "declared_resolution_quality_status": "one_placeholder",
+            "errors": [],
+            "mission_id": "mission_06_A3_10",
+            "placeholder_count": 1,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_06_A3:004"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Ariana Grande scoped dead-end confirmation with bounded controls",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_06_A3_11",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_06_A3:005"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Shania Twain route-building waypoint without canon inflation",
+            "warnings": []
+          },
+          {
+            "adaptation_action": "deepen",
+            "app_import_ready": true,
+            "closed_loop_learning_suitability": "suitable",
+            "computed_resolution_quality_status": "resolved",
+            "declared_resolution_quality_status": "resolved",
+            "errors": [],
+            "mission_id": "mission_06_A3_12",
+            "placeholder_count": 0,
+            "product_status": "product_pass_candidate",
+            "source_atlas_delta_refs": [
+              "atlas_delta:profile_06_A3:006"
+            ],
+            "source_signal_ref_count": 3,
+            "source_update_candidate_ref_count": 3,
+            "title": "Aventura delight probe with playful controls",
+            "warnings": []
+          }
+        ],
+        "adaptive_summary": {
+          "adaptation_action_counts": {
+            "contradiction_check": 1,
+            "deepen": 4,
+            "retire_pause": 1
+          },
+          "errors": [],
+          "mission_failures": [],
+          "mission_product_status_counts": {
+            "product_pass_candidate": 6
+          },
+          "valid": true,
+          "visible_adaptive_mission_count": 6
+        },
+        "errors": [],
+        "missing_slots": [],
+        "mission_count": 6,
+        "mission_validation_errors": [],
+        "portfolio_slots": [
+          "safe_anchor",
+          "nearby_road",
+          "frontier",
+          "dead_end_or_contradiction_check",
+          "waypoint_useful_not_canon",
+          "wildcard_delight"
+        ],
+        "route_item_failures": [],
+        "route_items_ready": 18,
+        "route_items_total": 18,
+        "valid": true
+      }
+    }
+  ],
+  "profiles": [
+    "profile_01_A3",
+    "profile_05_A3",
+    "profile_06_A3"
+  ],
+  "prohibited_inputs": {
+    "canonical_graph_mutation_allowed": false,
+    "hidden_truth_used_for_generation_or_atlas": false,
+    "profile_writer_outputs_used_as_evidence": false,
+    "raw_a3_payloads_used_for_generation": false
+  },
+  "run_type": "live_api",
+  "schema_version": "waymark.closed_loop_manifest.v0.1",
+  "simulation_parameters": {
+    "primary_signal_ratio": 0.6,
+    "secondary_tag_ratio_among_signaled": 0.3
+  }
+}
