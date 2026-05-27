@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "artifact_name": "Context Leak Review Flags v0.3.1",
+    "source": "affinity_sparse_pilot_song_tags_v0_3.json",
+    "flag_count": 6
+  },
+  "flags": [
+    {
+      "canonical_song_recording_id": "bing-crosby-white-christmas",
+      "song_title": "White Christmas",
+      "artist_names": [
+        "Bing Crosby"
+      ],
+      "family_number": 17,
+      "archetype_ids": [
+        "112"
+      ],
+      "core_tags_present": [
+        "communal_vocal",
+        "celebration",
+        "polished_studio",
+        "dancefloor",
+        "single_craft"
+      ],
+      "overlay_tags_present": [
+        "holiday_context",
+        "overfamiliar_anchor"
+      ],
+      "review_reason_codes": [
+        "family_17_context_surface_core_tag_review"
+      ],
+      "recommendation": "Retag core affinity from the song/recording itself; keep social/routing behavior in membership_context_overlays."
+    },
+    {
+      "canonical_song_recording_id": "brenda-lee-rockin-around-the-christmas-tree",
+      "song_title": "Rockin' Around the Christmas Tree",
+      "artist_names": [
+        "Brenda Lee"
+      ],
+      "family_number": 17,
+      "archetype_ids": [
+        "112"
+      ],
+      "core_tags_present": [
+        "communal_vocal",
+        "celebration",
+        "polished_studio",
+        "single_craft"
+      ],
+      "overlay_tags_present": [
+        "holiday_context",
+        "context_dependent",
+        "overfamiliar_anchor"
+      ],
+      "review_reason_codes": [
+        "family_17_context_surface_core_tag_review"
+      ],
+      "recommendation": "Retag core affinity from the song/recording itself; keep social/routing behavior in membership_context_overlays."
+    },
+    {
+      "canonical_song_recording_id": "raffi-baby-beluga",
+      "song_title": "Baby Beluga",
+      "artist_names": [
+        "Raffi"
+      ],
+      "family_number": 17,
+      "archetype_ids": [
+        "114"
+      ],
+      "core_tags_present": [
+        "communal_vocal",
+        "romantic_longing",
+        "synthetic_texture",
+        "dancefloor",
+        "single_craft"
+      ],
+      "overlay_tags_present": [
+        "family_shared_context"
+      ],
+      "review_reason_codes": [
+        "family_17_context_surface_core_tag_review",
+        "pm_named_context_leak_example"
+      ],
+      "recommendation": "Retag core affinity from the song/recording itself; keep social/routing behavior in membership_context_overlays."
+    },
+    {
+      "canonical_song_recording_id": "cupid-cupid-shuffle",
+      "song_title": "Cupid Shuffle",
+      "artist_names": [
+        "Cupid"
+      ],
+      "family_number": 17,
+      "archetype_ids": [
+        "113"
+      ],
+      "core_tags_present": [
+        "communal_vocal",
+        "celebration",
+        "polished_studio",
+        "novelty_object"
+      ],
+      "overlay_tags_present": [
+        "party_context",
+        "context_dependent",
+        "novelty_risk"
+      ],
+      "review_reason_codes": [
+        "family_17_context_surface_core_tag_review"
+      ],
+      "recommendation": "Retag core affinity from the song/recording itself; keep social/routing behavior in membership_context_overlays."
+    },
+    {
+      "canonical_song_recording_id": "dj-casper-cha-cha-slide",
+      "song_title": "Cha Cha Slide",
+      "artist_names": [
+        "DJ Casper"
+      ],
+      "family_number": 17,
+      "archetype_ids": [
+        "113"
+      ],
+      "core_tags_present": [
+        "celebration",
+        "polished_studio",
+        "dancefloor",
+        "novelty_object"
+      ],
+      "overlay_tags_present": [
+        "party_context",
+        "context_dependent",
+        "novelty_risk"
+      ],
+      "review_reason_codes": [
+        "family_17_context_surface_core_tag_review"
+      ],
+      "recommendation": "Retag core affinity from the song/recording itself; keep social/routing behavior in membership_context_overlays."
+    },
+    {
+      "canonical_song_recording_id": "queen-bohemian-rhapsody",
+      "song_title": "Bohemian Rhapsody",
+      "artist_names": [
+        "Queen"
+      ],
+      "family_number": 17,
+      "archetype_ids": [
+        "113"
+      ],
+      "core_tags_present": [
+        "celebration",
+        "polished_studio",
+        "dancefloor",
+        "single_craft"
+      ],
+      "overlay_tags_present": [
+        "karaoke_context",
+        "false_nearby_risk",
+        "context_dependent"
+      ],
+      "review_reason_codes": [
+        "family_17_context_surface_core_tag_review",
+        "pm_named_context_leak_example"
+      ],
+      "recommendation": "Retag core affinity from the song/recording itself; keep social/routing behavior in membership_context_overlays."
+    }
+  ]
+}

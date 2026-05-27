@@ -1,0 +1,26 @@
+# Family 17 Album Candidates
+
+| archetype_id | album_title | artist_name | proposed_album_id | existing_seed | release_year | album_object_type | recognition_tier | survey_tier | roles | archetype_membership_weight | inclusion_reason | consolidation_warning |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 111 | Dare to Be Stupid | Weird Al Yankovic | weird-al-yankovic-dare-to-be-stupid | false | 1985 | studio_album | medium | edge | gateway; song_first | 0.70 | Comedy-pop album doorway, kept edge. |  |
+| 111 | Bad Hair Day | Weird Al Yankovic | weird-al-yankovic-bad-hair-day | false | 1996 | studio_album | high | edge | gateway; song_first | 0.72 | Best Weird Al 90s mass-comedy album prompt. |  |
+| 111 | Ray Stevens' Greatest Hits | Ray Stevens | ray-stevens-ray-stevens-greatest-hits | false | 1987 | compilation | medium | edge | compilation_gateway; song_first | 0.68 | Practical container for novelty song recognition. |  |
+| 111 | Dr. Demento 20th Anniversary Collection | Various Artists | various-artists-dr-demento-20th-anniversary-collection | false | 1991 | compilation | medium | edge | compilation_gateway; deepening | 0.70 | Novelty-comp gateway without treating novelty as ordinary genre appetite. |  |
+| 112 | Merry Christmas | Bing Crosby | bing-crosby-merry-christmas | false | 1945 | compilation | mass | standard | compilation_gateway; gateway | 0.80 | Holiday/crooner gateway object. |  |
+| 112 | The Christmas Song | Nat King Cole | nat-king-cole-the-christmas-song | false | 1960 | compilation | mass | standard | compilation_gateway; gateway | 0.78 | Holiday standards gateway object. |  |
+| 112 | Merry Christmas | Mariah Carey | mariah-carey-merry-christmas | true | 1994 | studio_album | mass | standard | album_anchor; gateway | 0.88 | Named Mariah Carey Christmas object represented as album container. | Keep seasonal row distinct from Family 12 Mariah. |
+| 112 | Christmas | Michael Buble | michael-buble-christmas | true | 2011 | studio_album | high | standard | album_anchor; gateway | 0.80 | Named Michael Buble Christmas object represented as album container. |  |
+| 112 | Christmas Eve and Other Stories | Trans-Siberian Orchestra | trans-siberian-orchestra-christmas-eve-and-other-stories | false | 1996 | studio_album | high | standard | album_anchor; gateway | 0.78 | Holiday rock/instrumental album gateway. |  |
+| 112 | A Charlie Brown Christmas | Vince Guaraldi Trio | vince-guaraldi-trio-a-charlie-brown-christmas | false | 1965 | soundtrack | mass | standard | album_anchor; gateway | 0.82 | Holiday/family/jazz context album gateway. |  |
+| 112 | Mannheim Steamroller Christmas | Mannheim Steamroller | mannheim-steamroller-mannheim-steamroller-christmas | false | 1984 | studio_album | high | standard | album_anchor; gateway | 0.74 | Holiday instrumental household-listening album object. |  |
+| 112 | A Christmas Gift for You from Phil Spector | Various Artists | various-artists-a-christmas-gift-for-you-from-phil-spector | false | 1963 | compilation | mass | standard | compilation_gateway; gateway | 0.76 | Holiday canon compilation with pop-family overlap. |  |
+| 113 | Journey Greatest Hits | Journey | journey-journey-greatest-hits | false | 1988 | compilation | mass | standard | compilation_gateway; false_nearby | 0.72 | Container for karaoke/bar-singalong recognition only. |  |
+| 113 | Slippery When Wet | Bon Jovi | bon-jovi-slippery-when-wet | false | 1986 | studio_album | mass | standard | gateway; false_nearby | 0.70 | Album container for bar/karaoke hit, not full rock import here. |  |
+| 113 | Hot August Night | Neil Diamond | neil-diamond-hot-august-night | false | 1972 | live_album | high | edge | live_gateway; false_nearby | 0.66 | Live singalong container for Neil Diamond context rows. |  |
+| 113 | Gold: Greatest Hits | ABBA | abba-gold-greatest-hits | false | 1992 | compilation | mass | standard | compilation_gateway; false_nearby | 0.74 | Wedding/party ABBA container. |  |
+| 113 | Come On Over | Shania Twain | shania-twain-come-on-over | false | 1997 | studio_album | mass | standard | gateway; false_nearby | 0.70 | Country-pop party/wedding boundary container. |  |
+| 113 | Direct Hits | The Killers | the-killers-direct-hits | false | 2013 | compilation | high | edge | compilation_gateway; false_nearby | 0.64 | Container for Mr. Brightside context use. |  |
+| 114 | Kidz Bop | Kidz Bop | kidz-bop-kidz-bop | true | 2001 | compilation | high | edge | compilation_gateway; false_nearby | 0.70 | Named Kidz Bop family-context object. |  |
+| 114 | Singable Songs for the Very Young | Raffi | raffi-singable-songs-for-the-very-young | false | 1976 | studio_album | high | standard | album_anchor; gateway | 0.78 | Core Raffi household-listening album. |  |
+| 114 | Disney Children's Favorites | Various Artists | various-artists-disney-childrens-favorites | false | 1979 | compilation | high | edge | compilation_gateway; false_nearby | 0.66 | Family/household Disney container; specific songs may live in Family 15. |  |
+| 114 | Frozen | Various Artists | various-artists-frozen | false | 2013 | soundtrack | mass | edge | false_nearby; gateway | 0.64 | Family-context spillover only; primary ownership belongs to soundtrack family. |  |

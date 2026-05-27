@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "artifact_name": "affinity_song_tags_graphwide_fixture",
+    "schema_version": "v0.3.1",
+    "note": "Illustrative shape only; do not treat tag choices as normative."
+  },
+  "songs": [
+    {
+      "canonical_song_recording_id": "example-song-id",
+      "canonical_composition_id": "example-composition-id",
+      "song_title": "Example Song",
+      "artist_names": [
+        "Example Artist"
+      ],
+      "release_years": [
+        1975
+      ],
+      "canonical_song_affinity_tags": {
+        "vocal_performance": {
+          "primary": [
+            "urgent_delivery"
+          ],
+          "secondary": [
+            "communal_vocal"
+          ]
+        },
+        "emotion_theme": {
+          "primary": [
+            "self_mythology"
+          ],
+          "secondary": [
+            "comic_absurdity"
+          ]
+        },
+        "sonic_texture": {
+          "primary": [
+            "studio_architecture"
+          ],
+          "secondary": [
+            "guitar_forward"
+          ]
+        },
+        "rhythm_body": {
+          "primary": [
+            "anthemic_build"
+          ],
+          "secondary": []
+        },
+        "form_container": {
+          "primary": [
+            "concept_piece"
+          ],
+          "secondary": [
+            "anthem"
+          ]
+        }
+      },
+      "membership_context_overlays": [
+        {
+          "song_archetype_membership_id": "example-membership-id",
+          "family_id": "example-family-id",
+          "family_number": 17,
+          "family_scope": "Example family/surface",
+          "archetype_id": "example-archetype-id",
+          "archetype_name": "Example Archetype",
+          "membership_roles": [
+            "anchor"
+          ],
+          "recognition_tier": "mass",
+          "survey_tier": "gateway",
+          "social_context": {
+            "primary": [
+              "karaoke_context"
+            ],
+            "secondary": [
+              "communal_ritual_context"
+            ]
+          },
+          "routing_caution": {
+            "primary": [
+              "context_dependent"
+            ],
+            "secondary": [
+              "overfamiliar_anchor"
+            ]
+          },
+          "overlay_notes": "Example overlay demonstrates that karaoke behavior belongs here, not in intrinsic song profile."
+        }
+      ],
+      "review": {
+        "identity_review_needed": false,
+        "tag_review_needed": false,
+        "selection_bucket_review_needed": false,
+        "duplicate_context_review_needed": false,
+        "context_leak_review_needed": false,
+        "review_reason": "",
+        "review_reason_codes": []
+      },
+      "tagging_notes": "Example only.",
+      "source_confidence": "medium"
+    }
+  ]
+}

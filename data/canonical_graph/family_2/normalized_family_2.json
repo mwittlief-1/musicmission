@@ -1,0 +1,3414 @@
+{
+  "metadata": {
+    "family_number": 2,
+    "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+    "source_report": "/Users/matt_wittlief_home/Library/Mobile Documents/com~apple~CloudDocs/Family2.md",
+    "generated_date": "2026-05-19",
+    "normalization": {
+      "id_style": "lowercase kebab-case",
+      "source_rows_existing_seed": true,
+      "added_rows_existing_seed": false,
+      "version_policy": "Distinct versions and covers are not merged; ambiguous risks are flagged in warnings."
+    },
+    "allowed_enums": {
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "artist_anchor",
+        "boundary",
+        "bridge",
+        "compilation_gateway",
+        "contrast",
+        "deepening",
+        "false_nearby",
+        "gateway",
+        "live_gateway",
+        "song_first"
+      ],
+      "recognition_tier": [
+        "mass",
+        "high",
+        "medium",
+        "low",
+        "cult"
+      ],
+      "survey_tier": [
+        "core",
+        "standard",
+        "edge",
+        "suppress"
+      ],
+      "album_object_type": [
+        "studio_album",
+        "live_album",
+        "compilation",
+        "soundtrack",
+        "ep"
+      ]
+    },
+    "row_counts": {
+      "artists": 43,
+      "albums": 52,
+      "songs": 72,
+      "total": 167,
+      "existing_seed": 65,
+      "added_missing_obvious": 102
+    },
+    "second_pass_crosscheck": {
+      "reviewed_sources": [
+        "/Users/matt_wittlief_home/Library/Mobile Documents/com~apple~CloudDocs/F2-2.md",
+        "/Users/matt_wittlief_home/Library/Mobile Documents/com~apple~CloudDocs/F3-2.md",
+        "/Users/matt_wittlief_home/Library/Mobile Documents/com~apple~CloudDocs/F4-2.md"
+      ],
+      "merged_on": "2026-05-19",
+      "merge_policy": "Curated missing-obvious and high-survey-value additions only; collector-depth and unstable boundary suggestions retained as warnings/addendum rather than full import rows."
+    },
+    "normalization_updates": [
+      {
+        "date": "2026-05-19",
+        "change": "Normalized song artist_survey_status values to artist_survey_worthy/song_survey_first/song_survey_only enum after Family 1 packet validation."
+      }
+    ]
+  },
+  "artists": [
+    {
+      "archetype_id": "008",
+      "artist_name": "The Beatles",
+      "proposed_artist_id": "the-beatles",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 1,
+      "inclusion_reason": "Central Family 2 artist anchor across British Invasion, album-era pop-rock, and psych-pop.",
+      "object_specificity_note": "Artist object is required; do not substitute only albums or songs.",
+      "likely_canonical_albums": [
+        "A Hard Day's Night",
+        "Rubber Soul",
+        "Revolver",
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "Magical Mystery Tour"
+      ],
+      "likely_canonical_songs": [
+        "I Want to Hold Your Hand",
+        "A Hard Day's Night",
+        "Yesterday",
+        "Strawberry Fields Forever"
+      ],
+      "consolidation_warning": "Cross-family mass object; keep Family 2 membership but allow links to later classic-rock and pop families."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "The Rolling Stones",
+      "proposed_artist_id": "the-rolling-stones",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.95,
+      "inclusion_reason": "Essential Beatles counter-pole and bridge from British Invasion into blues-rock, psych, and hard rock.",
+      "object_specificity_note": "Artist object carries broader recognition than any single 60s album row.",
+      "likely_canonical_albums": [
+        "Aftermath",
+        "Beggars Banquet"
+      ],
+      "likely_canonical_songs": [
+        "(I Can't Get No) Satisfaction",
+        "Paint It, Black"
+      ],
+      "consolidation_warning": "Avoid collapsing later 1970s Stones canon into this 60s family row."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "The Who",
+      "proposed_artist_id": "the-who",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Core mod/British Invasion act with strong bridge value into hard rock, punk, and art-rock.",
+      "object_specificity_note": "Artist object should coexist with album and song anchors.",
+      "likely_canonical_albums": [
+        "The Who Sell Out",
+        "Tommy"
+      ],
+      "likely_canonical_songs": [
+        "My Generation"
+      ],
+      "consolidation_warning": "Later arena/classic-rock identity should not dominate this family row."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "The Kinks",
+      "proposed_artist_id": "the-kinks",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "British Invasion and literate pop-rock anchor with major downstream punk, new wave, and Britpop influence.",
+      "object_specificity_note": "Artist object covers both riff singles and late-60s album craft.",
+      "likely_canonical_albums": [
+        "Face to Face",
+        "The Kinks Are the Village Green Preservation Society"
+      ],
+      "likely_canonical_songs": [
+        "You Really Got Me",
+        "All Day and All of the Night"
+      ],
+      "consolidation_warning": "Preserve distinction between early riff-rock hits and later album-world Kinks."
+    },
+    {
+      "archetype_id": "009",
+      "artist_name": "The Searchers",
+      "proposed_artist_id": "the-searchers",
+      "existing_seed": true,
+      "recognition_tier": "medium",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Best artist-level entry for Merseybeat and jangle lane.",
+      "object_specificity_note": "Artist recognition is secondary to singles but useful for lane navigation.",
+      "likely_canonical_albums": [
+        "Meet The Searchers"
+      ],
+      "likely_canonical_songs": [
+        "Needles and Pins"
+      ],
+      "consolidation_warning": "Do not inflate to Beatles-level anchor status."
+    },
+    {
+      "archetype_id": "009",
+      "artist_name": "The Hollies",
+      "proposed_artist_id": "the-hollies",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Harmony/jangle act connecting British Invasion pop to folk-rock textures.",
+      "object_specificity_note": "Artist row supports multiple song-first entries without requiring deep album build.",
+      "likely_canonical_albums": [
+        "Evolution",
+        "Butterfly"
+      ],
+      "likely_canonical_songs": [
+        "Bus Stop"
+      ],
+      "consolidation_warning": "Keep separate from Graham Nash solo / CSN graph."
+    },
+    {
+      "archetype_id": "009",
+      "artist_name": "The Byrds",
+      "proposed_artist_id": "the-byrds",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Key American jangle and folk-rock bridge from British Invasion textures into psych and country-rock.",
+      "object_specificity_note": "Artist object is important because songs and albums point into different archetypes.",
+      "likely_canonical_albums": [
+        "Mr. Tambourine Man",
+        "Younger Than Yesterday",
+        "The Notorious Byrd Brothers"
+      ],
+      "likely_canonical_songs": [
+        "Mr. Tambourine Man",
+        "Turn! Turn! Turn!"
+      ],
+      "consolidation_warning": "Do not merge Byrds Dylan covers with Dylan originals."
+    },
+    {
+      "archetype_id": "010",
+      "artist_name": "Bob Dylan",
+      "proposed_artist_id": "bob-dylan",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Foundational folk-rock crossover artist and bridge to singer-songwriter canons.",
+      "object_specificity_note": "Include here only for electric/folk-rock 60s impact.",
+      "likely_canonical_albums": [
+        "Bringing It All Back Home",
+        "Highway 61 Revisited",
+        "Blonde on Blonde"
+      ],
+      "likely_canonical_songs": [
+        "Like a Rolling Stone",
+        "Subterranean Homesick Blues"
+      ],
+      "consolidation_warning": "Strong adjacent-family ownership; avoid overloading Family 2 with full Dylan canon."
+    },
+    {
+      "archetype_id": "010",
+      "artist_name": "Buffalo Springfield",
+      "proposed_artist_id": "buffalo-springfield",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "bridge",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Short-lived but historically dense folk-rock bridge toward country-rock and 70s songwriter lineages.",
+      "object_specificity_note": "Artist row is useful because band members disperse into major later nodes.",
+      "likely_canonical_albums": [
+        "Buffalo Springfield Again"
+      ],
+      "likely_canonical_songs": [
+        "For What It's Worth"
+      ],
+      "consolidation_warning": "Keep separate from Neil Young, Stephen Stills, and CSNY artist entities."
+    },
+    {
+      "archetype_id": "010",
+      "artist_name": "The Lovin' Spoonful",
+      "proposed_artist_id": "the-lovin-spoonful",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Good-time folk-rock/pop bridge that broadens the archetype beyond protest seriousness.",
+      "object_specificity_note": "Artist object is secondary to song-first gateway.",
+      "likely_canonical_albums": [
+        "Do You Believe in Magic"
+      ],
+      "likely_canonical_songs": [
+        "Do You Believe in Magic",
+        "Summer in the City"
+      ],
+      "consolidation_warning": "Apostrophe normalized in slug; do not create duplicate `lovin-spoonful`."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "The Animals",
+      "proposed_artist_id": "the-animals",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Missing-obvious British Invasion blues-rock artist with a mass song anchor.",
+      "object_specificity_note": "Artist row supports `House of the Rising Sun` and later harder-edged singles.",
+      "likely_canonical_albums": [
+        "The Animals"
+      ],
+      "likely_canonical_songs": [
+        "House of the Rising Sun",
+        "We Gotta Get Out of This Place"
+      ],
+      "consolidation_warning": "Traditional-song overlap requires version-specific song matching."
+    },
+    {
+      "archetype_id": "012",
+      "artist_name": "The Zombies",
+      "proposed_artist_id": "the-zombies",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "bridge",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Missing-obvious artist bridge between British Invasion singles and baroque/psych album canon.",
+      "object_specificity_note": "Artist row ties `She's Not There`, `Time of the Season`, and `Odessey and Oracle`.",
+      "likely_canonical_albums": [
+        "Odessey and Oracle"
+      ],
+      "likely_canonical_songs": [
+        "She's Not There",
+        "Time of the Season"
+      ],
+      "consolidation_warning": "Source contains both song and album rows; keep one artist entity."
+    },
+    {
+      "archetype_id": "010",
+      "artist_name": "Simon & Garfunkel",
+      "proposed_artist_id": "simon-and-garfunkel",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Major harmony-folk/pop artist omitted as artist despite seeded album coverage.",
+      "object_specificity_note": "Artist row captures public recognition that exceeds any single Family 2 album.",
+      "likely_canonical_albums": [
+        "Sounds of Silence",
+        "Bookends",
+        "Bridge Over Troubled Water"
+      ],
+      "likely_canonical_songs": [
+        "Mrs. Robinson",
+        "The Sound of Silence"
+      ],
+      "consolidation_warning": "Adjacent folk/singer-songwriter ownership likely."
+    },
+    {
+      "archetype_id": "013",
+      "artist_name": "The Beach Boys",
+      "proposed_artist_id": "the-beach-boys",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Missing artist-level anchor for West Coast studio pop, baroque pop, and sunshine psych.",
+      "object_specificity_note": "Family 2 row should emphasize 1966-1967 studio/psych phase, not surf-era totality.",
+      "likely_canonical_albums": [
+        "Pet Sounds",
+        "Smiley Smile",
+        "Wild Honey"
+      ],
+      "likely_canonical_songs": [
+        "Good Vibrations",
+        "Heroes and Villains"
+      ],
+      "consolidation_warning": "Strong surf/pop family overlap; avoid merging all Beach Boys eras into this family."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "The Yardbirds",
+      "proposed_artist_id": "the-yardbirds",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "bridge",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Missing-obvious British blues-rock/psych bridge into hard rock and guitar-hero lineage.",
+      "object_specificity_note": "Artist row is more important than album row for recognition and influence.",
+      "likely_canonical_albums": [
+        "Having a Rave Up with The Yardbirds"
+      ],
+      "likely_canonical_songs": [
+        "For Your Love",
+        "Shapes of Things"
+      ],
+      "consolidation_warning": "Later Clapton/Beck/Page graph should link, not merge."
+    },
+    {
+      "archetype_id": "010",
+      "artist_name": "The Mamas & the Papas",
+      "proposed_artist_id": "the-mamas-and-the-papas",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Missing artist-level harmony/folk-pop anchor behind `California Dreamin'`.",
+      "object_specificity_note": "Artist recognition is high enough to support a canonical artist row.",
+      "likely_canonical_albums": [
+        "If You Can Believe Your Eyes and Ears"
+      ],
+      "likely_canonical_songs": [
+        "California Dreamin'",
+        "Monday, Monday"
+      ],
+      "consolidation_warning": "Apostrophe and ampersand normalized in slug."
+    },
+    {
+      "archetype_id": "013",
+      "artist_name": "The Monkees",
+      "proposed_artist_id": "the-monkees",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "artist_anchor",
+        "contrast"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Missing pop-psych/TV-pop artist gateway; useful contrast to self-contained rock-band authenticity narratives.",
+      "object_specificity_note": "Artist row contextualizes seeded `Pisces, Aquarius, Capricorn & Jones Ltd.`.",
+      "likely_canonical_albums": [
+        "Pisces, Aquarius, Capricorn & Jones Ltd.",
+        "Headquarters"
+      ],
+      "likely_canonical_songs": [
+        "I'm a Believer",
+        "Pleasant Valley Sunday"
+      ],
+      "consolidation_warning": "Do not suppress solely as manufactured pop; keep as contrast/gateway."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "The Jimi Hendrix Experience",
+      "proposed_artist_id": "the-jimi-hendrix-experience",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Missing artist-level anchor despite seeded Hendrix album rows.",
+      "object_specificity_note": "Artist row should remain Experience-era, not full Hendrix estate aggregation.",
+      "likely_canonical_albums": [
+        "Are You Experienced",
+        "Electric Ladyland",
+        "Axis: Bold as Love"
+      ],
+      "likely_canonical_songs": [
+        "Purple Haze",
+        "All Along the Watchtower"
+      ],
+      "consolidation_warning": "Distinguish Experience from Jimi Hendrix solo/posthumous releases."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "Cream",
+      "proposed_artist_id": "cream",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Missing artist-level heavy psych and blues-rock power trio anchor.",
+      "object_specificity_note": "Artist row connects seeded studio and live/jam album objects.",
+      "likely_canonical_albums": [
+        "Disraeli Gears",
+        "Wheels of Fire"
+      ],
+      "likely_canonical_songs": [
+        "Sunshine of Your Love",
+        "White Room"
+      ],
+      "consolidation_warning": "Avoid merging with Eric Clapton solo or Blind Faith."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "The Doors",
+      "proposed_artist_id": "the-doors",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Missing artist-level dark psych/album-rock anchor despite seeded album rows.",
+      "object_specificity_note": "Artist row is needed because self-titled album slug can be ambiguous.",
+      "likely_canonical_albums": [
+        "The Doors",
+        "Strange Days"
+      ],
+      "likely_canonical_songs": [
+        "Light My Fire",
+        "Break On Through"
+      ],
+      "consolidation_warning": "Self-titled album requires separate album ID."
+    },
+    {
+      "archetype_id": "012",
+      "artist_name": "Love",
+      "proposed_artist_id": "love",
+      "existing_seed": false,
+      "recognition_tier": "medium",
+      "survey_tier": "standard",
+      "roles": [
+        "bridge",
+        "artist_anchor",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Missing artist entity for seeded `Forever Changes` and Los Angeles psych/baroque bridge.",
+      "object_specificity_note": "Artist object is lower recognition than album but useful for graph paths.",
+      "likely_canonical_albums": [
+        "Forever Changes"
+      ],
+      "likely_canonical_songs": [
+        "Alone Again Or"
+      ],
+      "consolidation_warning": "Generic artist name creates slug/search ambiguity."
+    },
+    {
+      "archetype_id": "015",
+      "artist_name": "The Velvet Underground",
+      "proposed_artist_id": "the-velvet-underground",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "bridge",
+        "artist_anchor",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Missing artist-level source-code bridge for punk, indie, noise, and art-rock lineages.",
+      "object_specificity_note": "Artist row should coexist with `The Velvet Underground & Nico` album row.",
+      "likely_canonical_albums": [
+        "The Velvet Underground & Nico",
+        "White Light/White Heat"
+      ],
+      "likely_canonical_songs": [
+        "Heroin",
+        "I'm Waiting for the Man"
+      ],
+      "consolidation_warning": "Album artist credit with Nico must not create duplicate band entity."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "Herman's Hermits",
+      "proposed_artist_id": "hermans-hermits",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "false_nearby",
+        "contrast"
+      ],
+      "archetype_membership_weight": 0.46,
+      "inclusion_reason": "Useful British Invasion false-nearby for pop-facing chart success without deep family-shaping influence.",
+      "object_specificity_note": "Artist row is intentionally edge/suppress-adjacent but retained for contrast.",
+      "likely_canonical_albums": [
+        "Herman's Hermits"
+      ],
+      "likely_canonical_songs": [
+        "I'm Henry VIII, I Am",
+        "Mrs. Brown, You've Got a Lovely Daughter"
+      ],
+      "consolidation_warning": "Do not promote as core despite mass 60s visibility."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "The Dave Clark Five",
+      "proposed_artist_id": "the-dave-clark-five",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "contrast"
+      ],
+      "archetype_membership_weight": 0.62,
+      "inclusion_reason": "Major British Invasion chart act missing from source; useful secondary gateway and contrast.",
+      "object_specificity_note": "Artist row captures invasion breadth without deep album-world treatment.",
+      "likely_canonical_albums": [
+        "Glad All Over"
+      ],
+      "likely_canonical_songs": [
+        "Glad All Over",
+        "Bits and Pieces"
+      ],
+      "consolidation_warning": "Avoid over-weighting relative to Beatles/Stones/Who/Kinks."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "Gerry and the Pacemakers",
+      "proposed_artist_id": "gerry-and-the-pacemakers",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Second-pass Merseybeat mass-memory anchor missing from initial artifact.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Ferry Cross the Mersey"
+      ],
+      "likely_canonical_songs": [
+        "Ferry Cross the Mersey",
+        "How Do You Do It?"
+      ],
+      "consolidation_warning": "Song-led Merseybeat object; do not inflate as album-world anchor."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "Manfred Mann",
+      "proposed_artist_id": "manfred-mann",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "British Invasion keyboard-pop hitmaker with clear song-first value.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "The Five Faces of Manfred Mann"
+      ],
+      "likely_canonical_songs": [
+        "Do Wah Diddy Diddy",
+        "Pretty Flamingo"
+      ],
+      "consolidation_warning": "Keep 1960s Manfred Mann separate from later Manfred Mann's Earth Band objects."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "Small Faces",
+      "proposed_artist_id": "small-faces",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "bridge",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Mod-pop to psych transition anchor highlighted by second pass.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Ogdens' Nut Gone Flake",
+        "Small Faces"
+      ],
+      "likely_canonical_songs": [
+        "All or Nothing",
+        "Itchycoo Park",
+        "Tin Soldier"
+      ],
+      "consolidation_warning": "Bridge into 013; avoid whole-catalog overcapture."
+    },
+    {
+      "archetype_id": "008",
+      "artist_name": "Spencer Davis Group",
+      "proposed_artist_id": "spencer-davis-group",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Blue-eyed R&B bridge into heavier British Invasion and proto-classic-rock lanes.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Autumn 66"
+      ],
+      "likely_canonical_songs": [
+        "Gimme Some Lovin'",
+        "I'm a Man"
+      ],
+      "consolidation_warning": "Mostly song-led; Steve Winwood-related merges need review."
+    },
+    {
+      "archetype_id": "010",
+      "artist_name": "Donovan",
+      "proposed_artist_id": "donovan",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "bridge",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Folk-pop to psych-pop hinge missing as artist object.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Sunshine Superman",
+        "Mellow Yellow"
+      ],
+      "likely_canonical_songs": [
+        "Catch the Wind",
+        "Sunshine Superman",
+        "Hurdy Gurdy Man"
+      ],
+      "consolidation_warning": "Split folk-side and psych-side evidence by object."
+    },
+    {
+      "archetype_id": "011",
+      "artist_name": "The Kingsmen",
+      "proposed_artist_id": "the-kingsmen",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Louie Louie is indispensable garage/proto-punk cultural furniture.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "The Kingsmen in Person"
+      ],
+      "likely_canonical_songs": [
+        "Louie Louie"
+      ],
+      "consolidation_warning": "Artist row should stay light; song object carries survey value."
+    },
+    {
+      "archetype_id": "011",
+      "artist_name": "The Sonics",
+      "proposed_artist_id": "the-sonics",
+      "existing_seed": false,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "bridge",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Proto-punk garage reference point useful beyond collector-only depth.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Here Are the Sonics",
+        "Boom"
+      ],
+      "likely_canonical_songs": [
+        "The Witch",
+        "Psycho",
+        "Strychnine"
+      ],
+      "consolidation_warning": "High graph value, lower normal-user recognition."
+    },
+    {
+      "archetype_id": "011",
+      "artist_name": "Paul Revere & the Raiders",
+      "proposed_artist_id": "paul-revere-and-the-raiders",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Nationally known garage-pop bridge with strong single objects.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Midnight Ride",
+        "Spirit of 67"
+      ],
+      "likely_canonical_songs": [
+        "Kicks",
+        "Hungry"
+      ],
+      "consolidation_warning": "Boundary between British-Invasion pop, garage, and TV-era pop."
+    },
+    {
+      "archetype_id": "012",
+      "artist_name": "Procol Harum",
+      "proposed_artist_id": "procol-harum",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "A Whiter Shade of Pale needs artist context without forcing full artist scale.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Procol Harum",
+        "A Salty Dog"
+      ],
+      "likely_canonical_songs": [
+        "A Whiter Shade of Pale",
+        "Homburg"
+      ],
+      "consolidation_warning": "Song outranks artist for many users; prog overlap."
+    },
+    {
+      "archetype_id": "012",
+      "artist_name": "Bee Gees (early)",
+      "proposed_artist_id": "bee-gees-early",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "bridge",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Early orchestral/baroque-pop phase matters separately from later disco identity.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Bee Gees' 1st",
+        "Odessa"
+      ],
+      "likely_canonical_songs": [
+        "To Love Somebody",
+        "Massachusetts",
+        "New York Mining Disaster 1941"
+      ],
+      "consolidation_warning": "Do not merge with later Bee Gees disco/pop family behavior."
+    },
+    {
+      "archetype_id": "012",
+      "artist_name": "The Moody Blues (early)",
+      "proposed_artist_id": "the-moody-blues-early",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "bridge",
+        "album_anchor"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Orchestral-pop bridge into symphonic rock and Family 3 prog.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Days of Future Passed"
+      ],
+      "likely_canonical_songs": [
+        "Nights in White Satin"
+      ],
+      "consolidation_warning": "Cross-family prog ownership required."
+    },
+    {
+      "archetype_id": "013",
+      "artist_name": "The Turtles",
+      "proposed_artist_id": "the-turtles",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Sunshine psych/melodic-pop row with strong normal-user recognition.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Happy Together",
+        "The Turtles Present the Battle of the Bands"
+      ],
+      "likely_canonical_songs": [
+        "Happy Together",
+        "Elenore"
+      ],
+      "consolidation_warning": "Song-first for most users; do not overbuild albums."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "Iron Butterfly",
+      "proposed_artist_id": "iron-butterfly",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "album_anchor"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Singular acid-rock mass object required by second pass.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "In-A-Gadda-Da-Vida"
+      ],
+      "likely_canonical_songs": [
+        "In-A-Gadda-Da-Vida"
+      ],
+      "consolidation_warning": "One-object artist; avoid broad hard-rock inflation."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "Steppenwolf",
+      "proposed_artist_id": "steppenwolf",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Born to Be Wild is an obvious proto-hard-rock/acid-rock survey object.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Steppenwolf"
+      ],
+      "likely_canonical_songs": [
+        "Born to Be Wild",
+        "Magic Carpet Ride"
+      ],
+      "consolidation_warning": "Later classic-rock overlap; song-first treatment."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "Grateful Dead",
+      "proposed_artist_id": "grateful-dead",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "bridge",
+        "live_gateway"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Live/acid-jam document matters as a Family 2 bridge without importing whole jam family.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Live/Dead",
+        "Anthem of the Sun"
+      ],
+      "likely_canonical_songs": [
+        "Dark Star"
+      ],
+      "consolidation_warning": "Deeper jam-family ownership later."
+    },
+    {
+      "archetype_id": "014",
+      "artist_name": "Big Brother and the Holding Company",
+      "proposed_artist_id": "big-brother-and-the-holding-company",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "bridge",
+        "album_anchor"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Janis-led acid-blues album and song gateway belongs in heavy-psych edge.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "Cheap Thrills"
+      ],
+      "likely_canonical_songs": [
+        "Piece of My Heart"
+      ],
+      "consolidation_warning": "Janis Joplin solo/family ownership later."
+    },
+    {
+      "archetype_id": "015",
+      "artist_name": "The United States of America",
+      "proposed_artist_id": "the-united-states-of-america",
+      "existing_seed": false,
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Electronic/experimental art-damaged source-code LP from second pass.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "The United States of America"
+      ],
+      "likely_canonical_songs": [
+        "The American Metaphysical Circus"
+      ],
+      "consolidation_warning": "Low normal-user recognition; keep as edge import row."
+    },
+    {
+      "archetype_id": "015",
+      "artist_name": "Nico",
+      "proposed_artist_id": "nico",
+      "existing_seed": false,
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.6,
+      "inclusion_reason": "The Marble Index adds stark avant-folk/art-damaged branch.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "The Marble Index"
+      ],
+      "likely_canonical_songs": [
+        "Frozen Warnings"
+      ],
+      "consolidation_warning": "Distinct from Velvet Underground & Nico album artist."
+    },
+    {
+      "archetype_id": "015",
+      "artist_name": "The Fugs",
+      "proposed_artist_id": "the-fugs",
+      "existing_seed": false,
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.58,
+      "inclusion_reason": "Underground/bohemian source-code object useful for adventurous branch.",
+      "object_specificity_note": "Second-pass accepted artist object; keep object-level survey follow-through separate.",
+      "likely_canonical_albums": [
+        "The Fugs First Album"
+      ],
+      "likely_canonical_songs": [
+        "Nothing"
+      ],
+      "consolidation_warning": "Edge only; avoid collector-depth bloat."
+    }
+  ],
+  "albums": [
+    {
+      "archetype_id": "010",
+      "album_title": "Mr. Tambourine Man",
+      "artist_name": "The Byrds",
+      "proposed_album_id": "the-byrds-mr-tambourine-man",
+      "existing_seed": true,
+      "release_year": 1965,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Core American folk-rock/jangle album gateway.",
+      "consolidation_warning": "Do not merge album with song row or Dylan composition."
+    },
+    {
+      "archetype_id": "010",
+      "album_title": "Sounds of Silence",
+      "artist_name": "Simon & Garfunkel",
+      "proposed_album_id": "simon-and-garfunkel-sounds-of-silence",
+      "existing_seed": true,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Strong harmony-folk album object backing Simon & Garfunkel coverage.",
+      "consolidation_warning": "Title differs from song `The Sound of Silence`; preserve album title."
+    },
+    {
+      "archetype_id": "011",
+      "album_title": "Nuggets: Original Artyfacts From the First Psychedelic Era, 1965-1968",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+      "existing_seed": true,
+      "release_year": 1972,
+      "album_object_type": "compilation",
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "compilation_gateway",
+        "gateway",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Canon-shaping garage compilation and essential Nuggets logic object.",
+      "consolidation_warning": "Compilation, not a single-artist album."
+    },
+    {
+      "archetype_id": "012",
+      "album_title": "Odessey and Oracle",
+      "artist_name": "The Zombies",
+      "proposed_album_id": "the-zombies-odessey-and-oracle",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Key baroque/psych album object and correct album-scale Zombies row.",
+      "consolidation_warning": "Preserve misspelling `Odessey` as official title."
+    },
+    {
+      "archetype_id": "012",
+      "album_title": "Begin",
+      "artist_name": "The Millennium",
+      "proposed_album_id": "the-millennium-begin",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Curt Boettcher sunshine-baroque studio-pop deepening object.",
+      "consolidation_warning": "Low artist recognition; avoid artist overbuild."
+    },
+    {
+      "archetype_id": "012",
+      "album_title": "Forever Changes",
+      "artist_name": "Love",
+      "proposed_album_id": "love-forever-changes",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Crucial baroque, psych, and late-60s album bridge.",
+      "consolidation_warning": "Generic artist name can create search ambiguity."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Magical Mystery Tour",
+      "artist_name": "The Beatles",
+      "proposed_album_id": "the-beatles-magical-mystery-tour",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "soundtrack",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Efficient Beatles psych-pop album-scale object.",
+      "consolidation_warning": "UK/US format differences should be handled by release metadata, not duplicate rows."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Pet Sounds",
+      "artist_name": "The Beach Boys",
+      "proposed_album_id": "the-beach-boys-pet-sounds",
+      "existing_seed": true,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Essential West Coast studio/baroque/psych-pop album.",
+      "consolidation_warning": "Strong surf/pop overlap; Family 2 claim is 1966 studio-pop phase."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Nuggets: Come to the Sunshine",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "nuggets-come-to-the-sunshine",
+      "existing_seed": true,
+      "release_year": 2017,
+      "album_object_type": "compilation",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "compilation_gateway",
+        "gateway",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Later curation object validating sunshine pop and soft psych.",
+      "consolidation_warning": "Later compilation; do not treat as original 1960s release."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Pisces, Aquarius, Capricorn & Jones Ltd.",
+      "artist_name": "The Monkees",
+      "proposed_album_id": "the-monkees-pisces-aquarius-capricorn-and-jones-ltd",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway",
+        "contrast"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Correct Monkees psych-pop album object.",
+      "consolidation_warning": "Ampersand normalized to `and` in slug."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Are You Experienced",
+      "artist_name": "The Jimi Hendrix Experience",
+      "proposed_album_id": "the-jimi-hendrix-experience-are-you-experienced",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.94,
+      "inclusion_reason": "Primary Hendrix heavy-psych and guitar vocabulary album anchor.",
+      "consolidation_warning": "Distinguish UK/US track-list variants outside canonical ID."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Electric Ladyland",
+      "artist_name": "The Jimi Hendrix Experience",
+      "proposed_album_id": "the-jimi-hendrix-experience-electric-ladyland",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Sprawling studio acid-rock and album-era Hendrix object.",
+      "consolidation_warning": "Keep Experience-era credit."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Disraeli Gears",
+      "artist_name": "Cream",
+      "proposed_album_id": "cream-disraeli-gears",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Clear heavy-psych album and hard-rock bridge.",
+      "consolidation_warning": "Do not merge with Cream artist row."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Wheels of Fire",
+      "artist_name": "Cream",
+      "proposed_album_id": "cream-wheels-of-fire",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "live_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "live_gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Scales heavy psych and live/jam improvisation.",
+      "consolidation_warning": "Hybrid studio/live double album; object type set to live_album because source emphasized jam bridge."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "The Doors",
+      "artist_name": "The Doors",
+      "proposed_album_id": "the-doors-the-doors",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Mass dark-psych album anchor.",
+      "consolidation_warning": "Self-titled album must remain distinct from artist row."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Strange Days",
+      "artist_name": "The Doors",
+      "proposed_album_id": "the-doors-strange-days",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Deeper Doors psych album object.",
+      "consolidation_warning": "Avoid duplicating the self-titled debut's role."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "The Psychedelic Sounds of the 13th Floor Elevators",
+      "artist_name": "13th Floor Elevators",
+      "proposed_album_id": "13th-floor-elevators-the-psychedelic-sounds-of-the-13th-floor-elevators",
+      "existing_seed": true,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Acid-rock source album connecting garage, psych, and art-damaged paths.",
+      "consolidation_warning": "Artist may appear with or without leading `The`; slug omits it."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Vincebus Eruptum",
+      "artist_name": "Blue Cheer",
+      "proposed_album_id": "blue-cheer-vincebus-eruptum",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Proto-metal and maximal heavy-psych graph object.",
+      "consolidation_warning": "Lower casual recall than influence value."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Velvet Underground & Nico",
+      "artist_name": "The Velvet Underground & Nico",
+      "proposed_album_id": "the-velvet-underground-and-nico-the-velvet-underground-and-nico",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Major bridge LP for punk, indie, noise, art-rock, and alternative genealogy.",
+      "consolidation_warning": "Album artist credit differs from added artist entity."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Stooges",
+      "artist_name": "The Stooges",
+      "proposed_album_id": "the-stooges-the-stooges",
+      "existing_seed": true,
+      "release_year": 1969,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Proto-punk source-code album with high downstream influence.",
+      "consolidation_warning": "Self-titled album distinct from artist."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "Kick Out the Jams",
+      "artist_name": "MC5",
+      "proposed_album_id": "mc5-kick-out-the-jams",
+      "existing_seed": true,
+      "release_year": 1969,
+      "album_object_type": "live_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "live_gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Detroit live manifesto bridging garage, psych, and proto-punk.",
+      "consolidation_warning": "Live album; do not normalize as studio_album."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "Freak Out!",
+      "artist_name": "The Mothers of Invention",
+      "proposed_album_id": "the-mothers-of-invention-freak-out",
+      "existing_seed": true,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Early conceptual satire and art-rock source-code album.",
+      "consolidation_warning": "Keep Mothers credit separate from Frank Zappa solo."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "Safe as Milk",
+      "artist_name": "Captain Beefheart & His Magic Band",
+      "proposed_album_id": "captain-beefheart-and-his-magic-band-safe-as-milk",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Blues mutation and outsider-psych bridge.",
+      "consolidation_warning": "Cult recognition; high influence should not become mass tier."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Piper at the Gates of Dawn",
+      "artist_name": "Pink Floyd",
+      "proposed_album_id": "pink-floyd-the-piper-at-the-gates-of-dawn",
+      "existing_seed": true,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "UK psych-art source album with later art-rock bridge value.",
+      "consolidation_warning": "Pink Floyd has stronger adjacent-family ownership."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "Black Monk Time",
+      "artist_name": "The Monks",
+      "proposed_album_id": "the-monks-black-monk-time",
+      "existing_seed": true,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Low-recognition but important punk-minimalist source-code LP.",
+      "consolidation_warning": "Keep cult tier despite high graph value."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "Silver Apples",
+      "artist_name": "Silver Apples",
+      "proposed_album_id": "silver-apples-silver-apples",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.6,
+      "inclusion_reason": "Electronic minimalism and underground experimentation bridge.",
+      "consolidation_warning": "Artist/album self-title requires distinct album row."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Soft Machine",
+      "artist_name": "Soft Machine",
+      "proposed_album_id": "soft-machine-the-soft-machine",
+      "existing_seed": true,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.6,
+      "inclusion_reason": "Canterbury/art-rock bridge keeping source-code coverage transatlantic.",
+      "consolidation_warning": "Later prog ownership likely."
+    },
+    {
+      "archetype_id": "008",
+      "album_title": "A Hard Day's Night",
+      "artist_name": "The Beatles",
+      "proposed_album_id": "the-beatles-a-hard-days-night",
+      "existing_seed": false,
+      "release_year": 1964,
+      "album_object_type": "soundtrack",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "gateway",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Missing Beatles invasion-era film/album object.",
+      "consolidation_warning": "Same title as song; keep ID artist-prefixed."
+    },
+    {
+      "archetype_id": "010",
+      "album_title": "Rubber Soul",
+      "artist_name": "The Beatles",
+      "proposed_album_id": "the-beatles-rubber-soul",
+      "existing_seed": false,
+      "release_year": 1965,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Missing bridge from beat-pop into folk-rock and album-era songwriting.",
+      "consolidation_warning": "UK/US configurations should not create duplicate canonical objects."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Revolver",
+      "artist_name": "The Beatles",
+      "proposed_album_id": "the-beatles-revolver",
+      "existing_seed": false,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Missing obvious studio/psych-pop breakthrough album.",
+      "consolidation_warning": "Cross-family classic-rock ownership likely."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Sgt. Pepper's Lonely Hearts Club Band",
+      "artist_name": "The Beatles",
+      "proposed_album_id": "the-beatles-sgt-peppers-lonely-hearts-club-band",
+      "existing_seed": false,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.94,
+      "inclusion_reason": "Missing obvious psychedelic album-era mass anchor.",
+      "consolidation_warning": "Apostrophe stripped in slug only."
+    },
+    {
+      "archetype_id": "008",
+      "album_title": "Aftermath",
+      "artist_name": "The Rolling Stones",
+      "proposed_album_id": "the-rolling-stones-aftermath",
+      "existing_seed": false,
+      "release_year": 1966,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Missing Stones 60s album-world transition object.",
+      "consolidation_warning": "UK/US versions should be metadata variants."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Who Sell Out",
+      "artist_name": "The Who",
+      "proposed_album_id": "the-who-the-who-sell-out",
+      "existing_seed": false,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Missing art-pop/psych concept bridge for The Who.",
+      "consolidation_warning": "Do not collapse into Tommy."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "Tommy",
+      "artist_name": "The Who",
+      "proposed_album_id": "the-who-tommy",
+      "existing_seed": false,
+      "release_year": 1969,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Missing rock-opera bridge from 60s pop-rock into album-era art/classic rock.",
+      "consolidation_warning": "Adjacent classic-rock family likely."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Kinks Are the Village Green Preservation Society",
+      "artist_name": "The Kinks",
+      "proposed_album_id": "the-kinks-the-kinks-are-the-village-green-preservation-society",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Missing Kinks album-world object for literate British art-pop.",
+      "consolidation_warning": "Long slug; preserve official title."
+    },
+    {
+      "archetype_id": "010",
+      "album_title": "Buffalo Springfield Again",
+      "artist_name": "Buffalo Springfield",
+      "proposed_album_id": "buffalo-springfield-buffalo-springfield-again",
+      "existing_seed": false,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Missing folk-rock/psych/country-rock bridge album.",
+      "consolidation_warning": "Do not merge with self-titled debut."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Surrealistic Pillow",
+      "artist_name": "Jefferson Airplane",
+      "proposed_album_id": "jefferson-airplane-surrealistic-pillow",
+      "existing_seed": false,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Missing San Francisco psych-pop/acid-rock gateway album.",
+      "consolidation_warning": "Strong adjacent psych family ownership."
+    },
+    {
+      "archetype_id": "008",
+      "album_title": "Having a Rave Up with The Yardbirds",
+      "artist_name": "The Yardbirds",
+      "proposed_album_id": "the-yardbirds-having-a-rave-up-with-the-yardbirds",
+      "existing_seed": false,
+      "release_year": 1965,
+      "album_object_type": "studio_album",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.58,
+      "inclusion_reason": "Missing Yardbirds album object for British blues-rock/psych transition.",
+      "consolidation_warning": "Artist row may be more useful than album row."
+    },
+    {
+      "archetype_id": "010",
+      "album_title": "Bookends",
+      "artist_name": "Simon & Garfunkel",
+      "proposed_album_id": "simon-and-garfunkel-bookends",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Missing late-60s folk-pop album object tied to `Mrs. Robinson`.",
+      "consolidation_warning": "Keep separate from later `Bridge Over Troubled Water`."
+    },
+    {
+      "archetype_id": "011",
+      "album_title": "Pebbles, Volume 1",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "pebbles-volume-1",
+      "existing_seed": false,
+      "release_year": 1978,
+      "album_object_type": "compilation",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Second garage compilation gateway for Page 2 depth.",
+      "consolidation_warning": "Compilation object; do not inflate every Pebbles artist."
+    },
+    {
+      "archetype_id": "011",
+      "album_title": "Here Are the Sonics",
+      "artist_name": "The Sonics",
+      "proposed_album_id": "the-sonics-here-are-the-sonics",
+      "existing_seed": false,
+      "release_year": 1965,
+      "album_object_type": "studio_album",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Proto-punk garage benchmark album.",
+      "consolidation_warning": "Cult graph value exceeds broad recognition."
+    },
+    {
+      "archetype_id": "012",
+      "album_title": "Bee Gees' 1st",
+      "artist_name": "Bee Gees",
+      "proposed_album_id": "bee-gees-bee-gees-1st",
+      "existing_seed": false,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Early Bee Gees orchestral-pop anchor.",
+      "consolidation_warning": "Later-era Bee Gees identity is a merge risk."
+    },
+    {
+      "archetype_id": "012",
+      "album_title": "Days of Future Passed",
+      "artist_name": "The Moody Blues",
+      "proposed_album_id": "the-moody-blues-days-of-future-passed",
+      "existing_seed": false,
+      "release_year": 1967,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Orchestral bridge from baroque pop toward symphonic rock.",
+      "consolidation_warning": "Also Family 3/prog object."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Present Tense",
+      "artist_name": "Sagittarius",
+      "proposed_album_id": "sagittarius-present-tense",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Soft-psych studio-pop cornerstone from second pass.",
+      "consolidation_warning": "Cult row; keep adaptive, not Page 1."
+    },
+    {
+      "archetype_id": "013",
+      "album_title": "Ogdens' Nut Gone Flake",
+      "artist_name": "Small Faces",
+      "proposed_album_id": "small-faces-ogdens-nut-gone-flake",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "U.K. psych-pop concept LP with real graph value.",
+      "consolidation_warning": "008 overlap."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "In-A-Gadda-Da-Vida",
+      "artist_name": "Iron Butterfly",
+      "proposed_album_id": "iron-butterfly-in-a-gadda-da-vida",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Singular heavy-psych song/album mass object.",
+      "consolidation_warning": "One-object artist; album and song need distinct rows."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Cheap Thrills",
+      "artist_name": "Big Brother and the Holding Company",
+      "proposed_album_id": "big-brother-and-the-holding-company-cheap-thrills",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Janis-led acid-blues album anchor.",
+      "consolidation_warning": "Later Janis ownership needs review."
+    },
+    {
+      "archetype_id": "014",
+      "album_title": "Live/Dead",
+      "artist_name": "Grateful Dead",
+      "proposed_album_id": "grateful-dead-live-dead",
+      "existing_seed": false,
+      "release_year": 1969,
+      "album_object_type": "live_album",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "live_gateway",
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Live acid-jam document useful as gateway object.",
+      "consolidation_warning": "Jam-family overlap; keep edge."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "White Light/White Heat",
+      "artist_name": "The Velvet Underground",
+      "proposed_album_id": "the-velvet-underground-white-light-white-heat",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Noise/proto-punk escalation object from second pass.",
+      "consolidation_warning": "Later alt/noise overlap."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The United States of America",
+      "artist_name": "The United States of America",
+      "proposed_album_id": "the-united-states-of-america-the-united-states-of-america",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Experimental electronic/art-psych source-code LP.",
+      "consolidation_warning": "Edge only."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Marble Index",
+      "artist_name": "Nico",
+      "proposed_album_id": "nico-the-marble-index",
+      "existing_seed": false,
+      "release_year": 1968,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Avant-folk/art-damaged album branch.",
+      "consolidation_warning": "Keep distinct from VU rows."
+    },
+    {
+      "archetype_id": "015",
+      "album_title": "The Fugs First Album",
+      "artist_name": "The Fugs",
+      "proposed_album_id": "the-fugs-the-fugs-first-album",
+      "existing_seed": false,
+      "release_year": 1965,
+      "album_object_type": "studio_album",
+      "recognition_tier": "cult",
+      "survey_tier": "edge",
+      "roles": [
+        "album_anchor",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.62,
+      "inclusion_reason": "Underground bohemian source-code object.",
+      "consolidation_warning": "Title/version variance needs import check."
+    }
+  ],
+  "songs": [
+    {
+      "archetype_id": "008",
+      "song_title": "House of the Rising Sun",
+      "artist_name": "The Animals",
+      "proposed_song_id": "the-animals-house-of-the-rising-sun",
+      "existing_seed": true,
+      "release_year": 1964,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Definitive British Invasion single-object with blues-rock force.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Traditional song; preserve Animals recording identity."
+    },
+    {
+      "archetype_id": "009",
+      "song_title": "Needles and Pins",
+      "artist_name": "The Searchers",
+      "proposed_song_id": "the-searchers-needles-and-pins",
+      "existing_seed": true,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Clean Searchers/jangle lane object.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Duplicate source mention consolidated."
+    },
+    {
+      "archetype_id": "009",
+      "song_title": "Bus Stop",
+      "artist_name": "The Hollies",
+      "proposed_song_id": "the-hollies-bus-stop",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "British harmony-pop and folk-jangle crossover single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Duplicate source mention consolidated."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "She's Not There",
+      "artist_name": "The Zombies",
+      "proposed_song_id": "the-zombies-shes-not-there",
+      "existing_seed": true,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Efficient Zombies invasion-era single before album-scale psych coverage.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Source row malformed; corrected artist/year."
+    },
+    {
+      "archetype_id": "009",
+      "song_title": "Mr. Tambourine Man",
+      "artist_name": "The Byrds",
+      "proposed_song_id": "the-byrds-mr-tambourine-man",
+      "existing_seed": true,
+      "release_year": 1965,
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Key American jangle/folk-rock single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not merge with Dylan composition or recordings."
+    },
+    {
+      "archetype_id": "010",
+      "song_title": "For What It's Worth",
+      "artist_name": "Buffalo Springfield",
+      "proposed_song_id": "buffalo-springfield-for-what-its-worth",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Protest-era folk-rock single with broad recognition.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Apostrophe stripped only in slug."
+    },
+    {
+      "archetype_id": "010",
+      "song_title": "California Dreamin'",
+      "artist_name": "The Mamas & the Papas",
+      "proposed_song_id": "the-mamas-and-the-papas-california-dreamin",
+      "existing_seed": true,
+      "release_year": 1965,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Major folk-pop/sunshine gateway.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Preserve trailing apostrophe in display title if renderer supports it."
+    },
+    {
+      "archetype_id": "010",
+      "song_title": "Do You Believe in Magic",
+      "artist_name": "The Lovin' Spoonful",
+      "proposed_song_id": "the-lovin-spoonful-do-you-believe-in-magic",
+      "existing_seed": true,
+      "release_year": 1965,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Lighter Greenwich Village folk-rock/pop gateway.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Artist slug normalizes apostrophe."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "96 Tears",
+      "artist_name": "? and the Mysterians",
+      "proposed_song_id": "question-mark-and-the-mysterians-96-tears",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Prototype garage hit with proto-punk afterlife.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Punctuation-expanded slug required."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Psychotic Reaction",
+      "artist_name": "Count Five",
+      "proposed_song_id": "count-five-psychotic-reaction",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Canonical garage one-hit object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Do not inflate Count Five artist row by default."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Pushin' Too Hard",
+      "artist_name": "The Seeds",
+      "proposed_song_id": "the-seeds-pushin-too-hard",
+      "existing_seed": true,
+      "release_year": 1965,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Minimal garage/proto-punk source single.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Apostrophe stripped only in slug."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Dirty Water",
+      "artist_name": "The Standells",
+      "proposed_song_id": "the-standells-dirty-water",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Garage classic with durable pop-cultural afterlife.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Boston association is song mythos, not artist origin."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Gloria",
+      "artist_name": "The Shadows of Knight",
+      "proposed_song_id": "the-shadows-of-knight-gloria",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "U.S. garage-facing cover/version of the song.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Must not merge with Them/Van Morrison version."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Little Girl",
+      "artist_name": "Syndicate of Sound",
+      "proposed_song_id": "syndicate-of-sound-little-girl",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.58,
+      "inclusion_reason": "Classic garage one-hit profile.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Keep edge; low artist recall."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "I Had Too Much to Dream (Last Night)",
+      "artist_name": "The Electric Prunes",
+      "proposed_song_id": "the-electric-prunes-i-had-too-much-to-dream-last-night",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Psych-garage single and Nuggets opening-track signal.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Parenthetical stripped in slug."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Talk Talk",
+      "artist_name": "The Music Machine",
+      "proposed_song_id": "the-music-machine-talk-talk",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.62,
+      "inclusion_reason": "Proto-punk bridge object with high influence relative to recall.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Keep separate from later Talk Talk artist."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "You're Gonna Miss Me",
+      "artist_name": "13th Floor Elevators",
+      "proposed_song_id": "13th-floor-elevators-youre-gonna-miss-me",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "medium",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Intersection of garage, acid-rock, and outsider psych.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Artist leading `The` varies by source."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "Walk Away Renee",
+      "artist_name": "The Left Banke",
+      "proposed_song_id": "the-left-banke-walk-away-renee",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Quintessential baroque-pop song-first object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Diacritic omitted for ASCII import."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "Pretty Ballerina",
+      "artist_name": "The Left Banke",
+      "proposed_song_id": "the-left-banke-pretty-ballerina",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "medium",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Essential companion Left Banke baroque-pop object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Do not merge with `Walk Away Renee`."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "Never My Love",
+      "artist_name": "The Association",
+      "proposed_song_id": "the-association-never-my-love",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Durable harmony/baroque-pop single.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Song recognition exceeds artist need."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "My World Fell Down",
+      "artist_name": "Sagittarius",
+      "proposed_song_id": "sagittarius-my-world-fell-down",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.58,
+      "inclusion_reason": "Studio-pop/baroque-psych object with graph value above public recall.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Keep as song-first studio project."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Strawberry Fields Forever",
+      "artist_name": "The Beatles",
+      "proposed_song_id": "the-beatles-strawberry-fields-forever",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Universal psych-pop single anchor.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Single/album context differs by territory."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Good Vibrations",
+      "artist_name": "The Beach Boys",
+      "proposed_song_id": "the-beach-boys-good-vibrations",
+      "existing_seed": true,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "One of the strongest psych-pop single objects in the family.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not reduce to surf-pop."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Incense and Peppermints",
+      "artist_name": "Strawberry Alarm Clock",
+      "proposed_song_id": "strawberry-alarm-clock-incense-and-peppermints",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Bubble-psych mass hit; song is the object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Artist recall lower than song recall."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Green Tambourine",
+      "artist_name": "The Lemon Pipers",
+      "proposed_song_id": "the-lemon-pipers-green-tambourine",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Psych-pop one-hit gateway.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Keep edge despite hit familiarity."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Happy Together",
+      "artist_name": "The Turtles",
+      "proposed_song_id": "the-turtles-happy-together",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Sunshine-pop mass anchor.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Turtles artist row optional in later pass."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Yellow Balloon",
+      "artist_name": "The Yellow Balloon",
+      "proposed_song_id": "the-yellow-balloon-yellow-balloon",
+      "existing_seed": true,
+      "release_year": 1967,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.52,
+      "inclusion_reason": "Bright studio-built sunshine psych deepening row.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Self-titled song/artist ambiguity."
+    },
+    {
+      "archetype_id": "015",
+      "song_title": "Open My Eyes",
+      "artist_name": "Nazz",
+      "proposed_song_id": "nazz-open-my-eyes",
+      "existing_seed": true,
+      "release_year": 1968,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.6,
+      "inclusion_reason": "Art-damaged/power-pop bridge object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Do not merge Nazz with Todd Rundgren solo."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "I Want to Hold Your Hand",
+      "artist_name": "The Beatles",
+      "proposed_song_id": "the-beatles-i-want-to-hold-your-hand",
+      "existing_seed": false,
+      "release_year": 1963,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Missing obvious U.S. British Invasion breakthrough single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Keep separate from Beatles artist row."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "A Hard Day's Night",
+      "artist_name": "The Beatles",
+      "proposed_song_id": "the-beatles-a-hard-days-night",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Missing obvious early Beatles film/single anchor.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Same title as album row."
+    },
+    {
+      "archetype_id": "010",
+      "song_title": "Yesterday",
+      "artist_name": "The Beatles",
+      "proposed_song_id": "the-beatles-yesterday",
+      "existing_seed": false,
+      "release_year": 1965,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Missing mass Beatles song object bridging pop-rock and chamber pop.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Cover-heavy composition; preserve Beatles recording."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "(I Can't Get No) Satisfaction",
+      "artist_name": "The Rolling Stones",
+      "proposed_song_id": "the-rolling-stones-satisfaction",
+      "existing_seed": false,
+      "release_year": 1965,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Missing Stones mass single anchor.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Slug uses common shorthand `satisfaction`."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "Paint It, Black",
+      "artist_name": "The Rolling Stones",
+      "proposed_song_id": "the-rolling-stones-paint-it-black",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Missing Stones psych-tinged mass single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Comma stripped only in slug."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "My Generation",
+      "artist_name": "The Who",
+      "proposed_song_id": "the-who-my-generation",
+      "existing_seed": false,
+      "release_year": 1965,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Missing mod/proto-punk anthem for Who coverage.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not merge with album title unless album row added later."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "You Really Got Me",
+      "artist_name": "The Kinks",
+      "proposed_song_id": "the-kinks-you-really-got-me",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Missing Kinks riff-rock mass anchor and hard-rock bridge.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Preserve original Kinks recording."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "All Day and All of the Night",
+      "artist_name": "The Kinks",
+      "proposed_song_id": "the-kinks-all-day-and-all-of-the-night",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Companion Kinks riff-pop object.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not duplicate role of `You Really Got Me`."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "We Gotta Get Out of This Place",
+      "artist_name": "The Animals",
+      "proposed_song_id": "the-animals-we-gotta-get-out-of-this-place",
+      "existing_seed": false,
+      "release_year": 1965,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Missing Animals working-class British Invasion anthem.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "UK/US single variations may exist."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "Time of the Season",
+      "artist_name": "The Zombies",
+      "proposed_song_id": "the-zombies-time-of-the-season",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Missing mass psych-pop Zombies hit tied to `Odessey and Oracle`.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Released after album sessions; preserve song year."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "A Whiter Shade of Pale",
+      "artist_name": "Procol Harum",
+      "proposed_song_id": "procol-harum-a-whiter-shade-of-pale",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Missing baroque/proto-prog pop single at Family 2 boundary.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Strong prog-family boundary."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Somebody to Love",
+      "artist_name": "Jefferson Airplane",
+      "proposed_song_id": "jefferson-airplane-somebody-to-love",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Missing San Francisco psych-pop gateway.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Do not merge with Great Society version."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "White Rabbit",
+      "artist_name": "Jefferson Airplane",
+      "proposed_song_id": "jefferson-airplane-white-rabbit",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Missing psych-pop/acid-rock mass single.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Adjacent psych-family claim."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Sunshine Superman",
+      "artist_name": "Donovan",
+      "proposed_song_id": "donovan-sunshine-superman",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Missing British psych-pop/folk crossover single.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Donovan artist likely belongs to folk/psych boundary."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Friday on My Mind",
+      "artist_name": "The Easybeats",
+      "proposed_song_id": "the-easybeats-friday-on-my-mind",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.62,
+      "inclusion_reason": "Missing global 60s beat-pop single outside UK/US core.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Australian act; keep as boundary rather than British Invasion core."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Wild Thing",
+      "artist_name": "The Troggs",
+      "proposed_song_id": "the-troggs-wild-thing",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Missing primitive garage/pop-rock mass single.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Preserve Troggs recording, not later covers."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Hurdy Gurdy Man",
+      "artist_name": "Donovan",
+      "proposed_song_id": "donovan-hurdy-gurdy-man",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.62,
+      "inclusion_reason": "Missing psych-folk/heavy-psych edge object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Adjacent folk/psych boundary."
+    },
+    {
+      "archetype_id": "010",
+      "song_title": "Turn! Turn! Turn!",
+      "artist_name": "The Byrds",
+      "proposed_song_id": "the-byrds-turn-turn-turn",
+      "existing_seed": false,
+      "release_year": 1965,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Missing second Byrds folk-rock mass gateway.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Punctuation normalized in slug."
+    },
+    {
+      "archetype_id": "010",
+      "song_title": "Mrs. Robinson",
+      "artist_name": "Simon & Garfunkel",
+      "proposed_song_id": "simon-and-garfunkel-mrs-robinson",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Missing mass folk-pop song object for late-60s mainstream crossover.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Film soundtrack context may create alternate object links."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "Purple Haze",
+      "artist_name": "The Jimi Hendrix Experience",
+      "proposed_song_id": "the-jimi-hendrix-experience-purple-haze",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Missing Hendrix mass single anchor.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Experience-era recording."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "Sunshine of Your Love",
+      "artist_name": "Cream",
+      "proposed_song_id": "cream-sunshine-of-your-love",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Missing Cream heavy-psych riff single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not merge with later live versions."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "Light My Fire",
+      "artist_name": "The Doors",
+      "proposed_song_id": "the-doors-light-my-fire",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Missing Doors mass psych single anchor.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Single edit and album version should link as versions, not duplicate canonical song rows."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "For Your Love",
+      "artist_name": "The Yardbirds",
+      "proposed_song_id": "the-yardbirds-for-your-love",
+      "existing_seed": false,
+      "release_year": 1965,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Missing Yardbirds British pop-to-psych transition single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not merge with album compilation titles."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Crimson and Clover",
+      "artist_name": "Tommy James and the Shondells",
+      "proposed_song_id": "tommy-james-and-the-shondells-crimson-and-clover",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "contrast",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.58,
+      "inclusion_reason": "Pop-psych false-nearby/contrast object with durable recognition.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Group name ampersand normalized."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Pictures of Matchstick Men",
+      "artist_name": "Status Quo",
+      "proposed_song_id": "status-quo-pictures-of-matchstick-men",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "false_nearby",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.56,
+      "inclusion_reason": "Psych-pop one-hit U.S. gateway but artist's later identity is outside Family 2.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Do not merge with later boogie-rock Status Quo canon."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Glad All Over",
+      "artist_name": "The Dave Clark Five",
+      "proposed_song_id": "the-dave-clark-five-glad-all-over",
+      "existing_seed": false,
+      "release_year": 1963,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "contrast"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Missing secondary British Invasion chart gateway.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not overpromote to core anchor."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Because",
+      "artist_name": "The Dave Clark Five",
+      "proposed_song_id": "the-dave-clark-five-because",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Softer-side DC5 British Invasion object from second pass.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Do not overbuild DC5 albums."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Ferry Cross the Mersey",
+      "artist_name": "Gerry and the Pacemakers",
+      "proposed_song_id": "gerry-and-the-pacemakers-ferry-cross-the-mersey",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Indispensable Merseybeat memory object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "009 overlap."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Do Wah Diddy Diddy",
+      "artist_name": "Manfred Mann",
+      "proposed_song_id": "manfred-mann-do-wah-diddy-diddy",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Giant keyboard-pop British Invasion single.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Keep 60s Manfred Mann distinct from Earth Band."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Gimme Some Lovin'",
+      "artist_name": "Spencer Davis Group",
+      "proposed_song_id": "spencer-davis-group-gimme-some-lovin",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Too-obvious blue-eyed R&B/British Invasion bridge.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Steve Winwood-related merge risk."
+    },
+    {
+      "archetype_id": "008",
+      "song_title": "Gloria",
+      "artist_name": "Them",
+      "proposed_song_id": "them-gloria",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Distinct R&B/garage bridge version missing from first artifact.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Do not merge with Shadows of Knight version."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Louie Louie",
+      "artist_name": "The Kingsmen",
+      "proposed_song_id": "the-kingsmen-louie-louie",
+      "existing_seed": false,
+      "release_year": 1963,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Absolute garage/proto-punk cultural-furniture object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Song outranks artist."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Kicks",
+      "artist_name": "Paul Revere & the Raiders",
+      "proposed_song_id": "paul-revere-and-the-raiders-kicks",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Nationally recognized garage-pop single.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "008/011 boundary."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "Action Woman",
+      "artist_name": "The Litter",
+      "proposed_song_id": "the-litter-action-woman",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Compiler-canon garage depth row with Page 2 value.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Keep depth-sized."
+    },
+    {
+      "archetype_id": "011",
+      "song_title": "A Question of Temperature",
+      "artist_name": "The Balloon Farm",
+      "proposed_song_id": "the-balloon-farm-a-question-of-temperature",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Garage-psych one-shot with real compiler-canon value.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Artist likely unnecessary."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "God Only Knows",
+      "artist_name": "The Beach Boys",
+      "proposed_song_id": "the-beach-boys-god-only-knows",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.94,
+      "inclusion_reason": "Essential Pet Sounds song object, not just album evidence.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Also 013 bridge."
+    },
+    {
+      "archetype_id": "012",
+      "song_title": "Wouldn't It Be Nice",
+      "artist_name": "The Beach Boys",
+      "proposed_song_id": "the-beach-boys-wouldnt-it-be-nice",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Second indispensable Pet Sounds hook.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Also 013 bridge."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Penny Lane",
+      "artist_name": "The Beatles",
+      "proposed_song_id": "the-beatles-penny-lane",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Bright psych-pop counterweight to Strawberry Fields Forever.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Cap Beatles overcapture."
+    },
+    {
+      "archetype_id": "013",
+      "song_title": "Itchycoo Park",
+      "artist_name": "Small Faces",
+      "proposed_song_id": "small-faces-itchycoo-park",
+      "existing_seed": false,
+      "release_year": 1967,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Core U.K. psych-pop single.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "008 overlap."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "In-A-Gadda-Da-Vida",
+      "artist_name": "Iron Butterfly",
+      "proposed_song_id": "iron-butterfly-in-a-gadda-da-vida",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Singular acid-rock mass object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Artist mostly one-object."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "Born to Be Wild",
+      "artist_name": "Steppenwolf",
+      "proposed_song_id": "steppenwolf-born-to-be-wild",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Biker/proto-hard-rock shorthand.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Classic-rock overlap."
+    },
+    {
+      "archetype_id": "014",
+      "song_title": "Piece of My Heart",
+      "artist_name": "Big Brother and the Holding Company",
+      "proposed_song_id": "big-brother-and-the-holding-company-piece-of-my-heart",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Janis-led acid-blues breakthrough.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Later Janis ownership."
+    },
+    {
+      "archetype_id": "015",
+      "song_title": "I Wanna Be Your Dog",
+      "artist_name": "The Stooges",
+      "proposed_song_id": "the-stooges-i-wanna-be-your-dog",
+      "existing_seed": false,
+      "release_year": 1969,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Proto-punk starter object missing from initial artifact song layer.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Later punk overlap."
+    },
+    {
+      "archetype_id": "015",
+      "song_title": "White Light/White Heat",
+      "artist_name": "The Velvet Underground",
+      "proposed_song_id": "the-velvet-underground-white-light-white-heat",
+      "existing_seed": false,
+      "release_year": 1968,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "bridge",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Title-track exposure to harsher VU lane.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Noise/alt overlap."
+    }
+  ]
+}

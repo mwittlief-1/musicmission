@@ -1,0 +1,73 @@
+{
+  "generated_date": "2026-05-20",
+  "status": "dry_run_ready_with_warnings",
+  "family_count": 18,
+  "expected_family_count": 18,
+  "remaining_family_count": 0,
+  "family_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "input_files": [
+    "data/canonical_graph/family_1/normalized_family_1.json",
+    "data/canonical_graph/family_2/normalized_family_2.json",
+    "data/canonical_graph/family_3/normalized_family_3.json",
+    "data/canonical_graph/family_4/normalized_family_4.json",
+    "data/canonical_graph/family_5/normalized_family_5.json",
+    "data/canonical_graph/family_6/normalized_family_6.json",
+    "data/canonical_graph/family_7/normalized_family_7.json",
+    "data/canonical_graph/family_8/normalized_family_8.json",
+    "data/canonical_graph/family_9/normalized_family_9.json",
+    "data/canonical_graph/family_10/normalized_family_10.json",
+    "data/canonical_graph/family_11/normalized_family_11.json",
+    "data/canonical_graph/family_12/normalized_family_12.json",
+    "data/canonical_graph/family_13/normalized_family_13.json",
+    "data/canonical_graph/family_14/normalized_family_14.json",
+    "data/canonical_graph/family_15/normalized_family_15.json",
+    "data/canonical_graph/family_16/normalized_family_16.json",
+    "data/canonical_graph/family_17/normalized_family_17.json",
+    "data/canonical_graph/family_18/normalized_family_18.json"
+  ],
+  "validation_error_count": 0,
+  "validation_warning_count": 9,
+  "errors": [],
+  "warnings": [
+    "family 4 song f4-026-song-we-shall-overcome-pete-seeger-et-al-traditional: release_year is `None`",
+    "family 4 song f4-026-song-house-of-the-rising-sun-traditional-revival-circuit-object: release_year is `None`",
+    "artist `kool-and-the-gang` has multiple display/source names: Kool & The Gang; Kool & the Gang",
+    "artist `martha-and-the-vandellas` has multiple display/source names: Martha & the Vandellas; Martha and the Vandellas",
+    "artist `simon-and-garfunkel` has multiple display/source names: Simon & Garfunkel; Simon and Garfunkel",
+    "artist `smokey-robinson-and-the-miracles` has multiple display/source names: Smokey Robinson & The Miracles; Smokey Robinson and the Miracles",
+    "album `the-sonics-here-are-the-sonics` has multiple display/source names: Here Are The Sonics; Here Are the Sonics",
+    "song_recording `martha-and-the-vandellas-dancing-in-the-street` has conflicting `artist_names` values: Martha & the Vandellas; Martha and the Vandellas",
+    "song_recording `shania-twain-man-i-feel-like-a-woman` has conflicting `release_years` values: 1997; 1999"
+  ],
+  "entity_counts": {
+    "canonical_artists": 1499,
+    "canonical_albums": 1207,
+    "canonical_song_recordings": 1917
+  },
+  "membership_counts": {
+    "artist_archetype_memberships": 1612,
+    "album_archetype_memberships": 1245,
+    "song_archetype_memberships": 1983
+  },
+  "composition_review_count": 24,
+  "warning_snippet_count": 99
+}

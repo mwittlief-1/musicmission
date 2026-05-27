@@ -20,6 +20,7 @@ These paths are repo source-of-truth and should be tracked when changed intentio
 | `data/canonical_graph/current/` | Active Canonical Graph v1 source-of-truth corpus for mission engine, tagging, linking, Atlas targets, Apple ID resolution, and album sidecar planning. |
 | `data/canonical_graph/canonical_graph_source_of_truth_manifest.json` | Root pointer to the active Canonical Graph source-of-truth corpus. |
 | `data/canonical_graph/CURRENT_CANONICAL_GRAPH.md` | Human-readable current graph source-of-truth pointer and gate summary. |
+| `data/canonical_graph/affinity_contracts/` | Active graphwide affinity tagging contracts, allowed tags, validation schema, and QA evidence. |
 | `data/canonical_graph/policy_hardening/` | Canonical graph policy source material. |
 | `data/canonical_graph/canonical_graph_import_runbook.md` | Canonical graph import runbook. |
 
@@ -32,6 +33,8 @@ These paths are deterministic fixtures or golden packets. Track them when they a
 | `data/missions/` | App/test mission fixtures. |
 | `data/alpha_packets/golden_alpha_packet_v0_1/` | Golden mission-generation/app-import packet. |
 | `data/atlas_schema/examples/` | Atlas contract examples. |
+| `data/canonical_graph/import_dry_run/` | Generated dry-run output promoted as a read-only fixture for legacy survey simulation and review tooling. |
+| `data/canonical_graph/normalization_pass_2/` | Generated normalization output promoted as active alpha survey/app-resource input. |
 | `data/survey_pilot/` | Survey pilot inputs and fixtures, pending deeper split if generated runs appear. |
 | `data/survey_simulation/schemas/` | Survey simulator schemas. |
 | `data/survey_simulation/fake_profiles/` | Survey simulator source profiles. |
@@ -49,8 +52,8 @@ These paths are generated evidence or historical review material. Do not treat t
 | `data/atlas_schema/ingestion_proof/` | Generated ingestion proof evidence. Promote selected fixtures/docs explicitly if needed. |
 | `data/atlas_schema/node_interpretation_smoke/` | Generated smoke evidence. |
 | `data/atlas_schema/wwtsf_substrate_smoke/` | Generated smoke evidence. |
-| `data/canonical_graph/import_dry_run/` | Generated import dry-run output. |
-| `data/canonical_graph/normalization_pass_2/` | Generated normalization output unless promoted as canonical app/resource input. |
+| `data/canonical_graph/depth_hardening_v0_1/` | Historical generated hardening pass. Ignored by default; archive externally unless a specific artifact is promoted. |
+| `data/canonical_graph/depth_hardening_v0_2/` | Historical generated hardening pass that produced `current/`. Ignored by default to avoid tracking redundant pass C/pass D bulk. |
 | `data/closed_loop_simulation/` | Generated closed-loop evidence and adaptive-learning review material. |
 | `data/deprecated_mission_fixtures/` | Deprecated duplicate fixtures. Archive/remove only after owner approval. |
 | `data/mission_generation/**/[0-9][0-9][0-9][0-9]*Z*/` and timestamped request/response attempts | Generated run evidence. |

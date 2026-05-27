@@ -1,0 +1,54 @@
+{
+  "generated_on": "2026-05-26",
+  "status": "source_of_truth",
+  "source_version": "canonical_graph_v1",
+  "promoted_from": "data/canonical_graph/depth_hardening_v0_2/pass_d",
+  "pm_decision": "all_current_identity_collisions_approved_as_multi_membership",
+  "gates": {
+    "archetypes_ready": 120,
+    "remaining_effective_gap": 0,
+    "pass_c_row_errors": 0,
+    "unresolved_rows_excluded_from_v1": 804
+  },
+  "counts": {
+    "active_inventory_rows": 11697,
+    "active_baseline_rows": 6872,
+    "active_pass_c_rows": 4825,
+    "approved_multi_memberships": 13,
+    "tagging_corpus_rows": 7409,
+    "apple_id_resolution_queue_rows": 7409,
+    "album_sidecar_seed_rows": 2231,
+    "graph_linking_node_rows": 11309
+  },
+  "current_artifacts": {
+    "active_inventory": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_csv": "data/canonical_graph/current/canonical_graph_active_inventory.csv",
+    "graph_tagging_corpus": "data/canonical_graph/current/graph_tagging_corpus.json",
+    "graph_tagging_corpus_csv": "data/canonical_graph/current/graph_tagging_corpus.csv",
+    "apple_id_resolution_queue": "data/canonical_graph/current/apple_id_resolution_queue.json",
+    "apple_id_resolution_queue_csv": "data/canonical_graph/current/apple_id_resolution_queue.csv",
+    "album_sidecar_seed_albums": "data/canonical_graph/current/album_sidecar_seed_albums.json",
+    "album_sidecar_seed_albums_csv": "data/canonical_graph/current/album_sidecar_seed_albums.csv",
+    "atlas_archetype_profile_targets": "data/canonical_graph/current/atlas_archetype_profile_targets.json",
+    "atlas_archetype_profile_targets_csv": "data/canonical_graph/current/atlas_archetype_profile_targets.csv",
+    "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
+    "graph_linking_node_set_csv": "data/canonical_graph/current/graph_linking_node_set.csv",
+    "pm_multi_membership_decisions": "data/canonical_graph/current/pm_multi_membership_decisions.json",
+    "pm_multi_membership_decisions_csv": "data/canonical_graph/current/pm_multi_membership_decisions.csv",
+    "freeze_manifest": "data/canonical_graph/current/canonical_graph_freeze_manifest.json",
+    "freeze_manifest_md": "data/canonical_graph/current/canonical_graph_freeze_manifest.md"
+  },
+  "legacy_inputs": {
+    "family_normalized_exports": "data/canonical_graph/family_*/normalized_family_*.json",
+    "prior_import_dry_run": "data/canonical_graph/import_dry_run/",
+    "pass_a_b_normalized_inventory": "data/canonical_graph/depth_hardening_v0_2/graph_hardening_v0_2_normalized_inventory.json",
+    "pass_c_compiled_additions": "data/canonical_graph/depth_hardening_v0_2/pass_c/graph_hardening_pass_c_compiled_additions.json",
+    "pass_d_freeze": "data/canonical_graph/depth_hardening_v0_2/pass_d/"
+  },
+  "source_of_truth_policy": [
+    "Use data/canonical_graph/current/* for downstream mission engine, tagging, linking, Atlas profile targets, and Apple ID resolution.",
+    "Do not use depth_hardening_v0_1 totals or pre-hardening import_dry_run outputs as active source-of-truth inputs.",
+    "Family normalized exports remain historical/source-material inputs, not the active mission-effective corpus.",
+    "Rows in the v0.2 needs-resolution queue remain excluded until explicitly cleaned and re-promoted."
+  ]
+}

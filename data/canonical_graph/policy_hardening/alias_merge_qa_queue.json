@@ -1,0 +1,200 @@
+{
+  "generated_date": "2026-05-20",
+  "purpose": "Structured QA queue for alias, merge, composition, cast/show/soundtrack, worship, and traditional-song risks. This is not an automatic merge list.",
+  "categories": {
+    "safe_display_name_normalization": [
+      {
+        "issue_id": "display-ampersand-martha-vandellas",
+        "examples": ["Martha & the Vandellas", "Martha and the Vandellas"],
+        "recommended_action": "Normalize display aliases after confirming same entity.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "display-ampersand-simon-garfunkel",
+        "examples": ["Simon & Garfunkel", "Simon and Garfunkel"],
+        "recommended_action": "Normalize display aliases after confirming same entity.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "display-case-kool-gang",
+        "examples": ["Kool & The Gang", "Kool & the Gang"],
+        "recommended_action": "Normalize case; preserve source display names.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "display-punctuation-b52s",
+        "examples": ["The B-52's", "The B-52s", "Love Shack"],
+        "recommended_action": "Confirm same artist and recording, then normalize display alias.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "display-article-staple-singers",
+        "examples": ["Staple Singers", "The Staple Singers", "I'll Take You There"],
+        "recommended_action": "Confirm same artist identity and recording, then normalize.",
+        "priority": "medium"
+      }
+    ],
+    "likely_same_artist_entity": [
+      {
+        "issue_id": "smokey-miracles-display",
+        "examples": ["Smokey Robinson & The Miracles", "Smokey Robinson and the Miracles"],
+        "recommended_action": "Create alias row; do not duplicate artist.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "rap-aliases",
+        "examples": ["2Pac / Tupac", "Mos Def / Yasiin Bey", "Jeezy / Young Jeezy"],
+        "recommended_action": "Create explicit alias table entries before hard lock.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "electronic-project-aliases",
+        "examples": ["Larry Heard / Mr. Fingers / Fingers Inc.", "Juan Atkins / Model 500 / Cybotron", "Kevin Saunderson / Inner City"],
+        "recommended_action": "Human review; project aliases may be linked but not collapsed by default.",
+        "priority": "high"
+      }
+    ],
+    "must_remain_separate": [
+      {
+        "issue_id": "group-vs-solo",
+        "examples": ["Diana Ross vs The Supremes", "Michael Jackson vs Jackson 5", "Beyonce vs Destiny's Child", "Darius Rucker vs Hootie & the Blowfish"],
+        "recommended_action": "Keep separate canonical artists; link through relationship metadata later.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "different-artists-similar-name",
+        "examples": ["Sleep vs Sleep Token", "U.S. Wailers vs Bob Marley & The Wailers", "Jimmie Rodgers pop vs country Jimmie Rodgers"],
+        "recommended_action": "Keep separate canonical IDs.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "different-compositions-same-title",
+        "examples": ["Fela Kuti - Zombie", "The Cranberries - Zombie", "Korn - Blind", "Hercules & Love Affair - Blind", "Mastodon - Oblivion", "Grimes - Oblivion"],
+        "recommended_action": "Keep separate composition IDs and recording IDs.",
+        "priority": "high"
+      }
+    ],
+    "needs_human_review": [
+      {
+        "issue_id": "buddy-holly-crickets",
+        "examples": ["The Crickets", "Buddy Holly and the Crickets", "Buddy Holly solo"],
+        "recommended_action": "Decide canonical entity and credit alias model.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "gene-vincent-blue-caps",
+        "examples": ["Gene Vincent", "Gene Vincent and His Blue Caps"],
+        "recommended_action": "Decide canonical entity and recording-credit model.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "release-year-shania",
+        "examples": ["Shania Twain - Man! I Feel Like a Woman!", "1997", "1999"],
+        "recommended_action": "Decide album-release vs single-release policy.",
+        "priority": "medium"
+      }
+    ],
+    "composition_vs_recording_review": [
+      {
+        "issue_id": "hound-dog",
+        "examples": ["Big Mama Thornton - Hound Dog", "Elvis Presley - Hound Dog"],
+        "recommended_action": "Keep recordings separate; link composition only after source review.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "the-twist",
+        "examples": ["Hank Ballard & The Midnighters - The Twist", "Chubby Checker - The Twist"],
+        "recommended_action": "Keep recordings separate.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "shake-rattle-and-roll",
+        "examples": ["Big Joe Turner - Shake, Rattle and Roll", "Bill Haley & His Comets - Shake, Rattle and Roll"],
+        "recommended_action": "Keep recordings separate.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "thats-all-right",
+        "examples": ["Arthur Big Boy Crudup - That's All Right", "Elvis Presley - That's All Right"],
+        "recommended_action": "Keep recordings separate.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "walk-this-way",
+        "examples": ["Aerosmith - Walk This Way", "Run-DMC - Walk This Way"],
+        "recommended_action": "Keep original and remake separate.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "gloria",
+        "examples": ["Patti Smith - Gloria", "The Shadows of Knight - Gloria", "Them - Gloria", "The Cadillacs - Gloria"],
+        "recommended_action": "Manual composition review; do not merge by title.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "house-of-the-rising-sun",
+        "examples": ["The Animals - House of the Rising Sun", "Traditional / revival circuit object"],
+        "recommended_action": "Composition-first traditional-song model needed.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "god-only-knows",
+        "examples": ["The Beach Boys - God Only Knows", "for KING & COUNTRY - God Only Knows"],
+        "recommended_action": "Review likely separate compositions; do not merge by title.",
+        "priority": "medium"
+      },
+      {
+        "issue_id": "zombie",
+        "examples": ["Fela Kuti - Zombie", "The Cranberries - Zombie"],
+        "recommended_action": "Separate compositions and recordings.",
+        "priority": "high"
+      }
+    ],
+    "cast_show_soundtrack_review": [
+      {
+        "issue_id": "we-dont-talk-about-bruno",
+        "examples": ["Encanto Cast", "Carolina Gaitan, Mauro Castillo, Adassa, Rhenzy Feliz, Diane Guerrero, Stephanie Beatriz and Encanto Cast"],
+        "recommended_action": "Model film/show, cast recording, performers, and recording separately.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "score-vs-curated-soundtrack",
+        "examples": ["Black Panther score", "Black Panther curated soundtrack", "Guardians of the Galaxy: Awesome Mix Vol. 1"],
+        "recommended_action": "Separate score album, curated soundtrack album, and source song recordings.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "fictional-performer",
+        "examples": ["The Soggy Bottom Boys - Man of Constant Sorrow"],
+        "recommended_action": "Preserve fictional performer credit; link traditional composition separately.",
+        "priority": "medium"
+      }
+    ],
+    "worship_traditional_review": [
+      {
+        "issue_id": "we-shall-overcome",
+        "examples": ["We Shall Overcome", "Pete Seeger et al. / traditional"],
+        "recommended_action": "Composition-first movement-standard model needed.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "amazing-grace",
+        "examples": ["Amazing Grace", "Aretha Franklin", "traditional hymn"],
+        "recommended_action": "Composition-first hymn model; preserve definitive recordings.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "modern-worship-standards",
+        "examples": ["Shout to the Lord", "In Christ Alone", "Build My Life", "Way Maker"],
+        "recommended_action": "Songbook composition plus recording variants.",
+        "priority": "high"
+      },
+      {
+        "issue_id": "church-brand-splits",
+        "examples": ["Hillsong Worship", "Hillsong United", "Bethel Music", "Elevation Worship", "Maverick City Music", "Passion"],
+        "recommended_action": "Keep brands and individual performers distinct until relationship table exists.",
+        "priority": "high"
+      }
+    ]
+  }
+}

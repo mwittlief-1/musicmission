@@ -1,0 +1,1969 @@
+{
+  "metadata": {
+    "family_number": 17,
+    "family_name": "Nostalgia, Novelty, Context, Shared Listening",
+    "source_report": "/Users/matt_wittlief_home/Library/Mobile Documents/com~apple~CloudDocs/waymark_pass_one_dispatches_families_005_018.md",
+    "generated_date": "2026-05-20",
+    "source_package_note": "Controlling source is Packet 017 from the shared dispatch file. Standalone `F17.md` was not used because the user identified it as an unresolved/template report that lacked the taxonomy.",
+    "normalization": {
+      "id_style": "lowercase kebab-case",
+      "source_rows_existing_seed": true,
+      "added_rows_existing_seed": false,
+      "version_policy": "Dispatch-named objects are source seeds when instantiated; missing-obvious album/song additions are marked existing_seed=false and version risks are flagged in warnings."
+    },
+    "allowed_enums": {
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "artist_anchor",
+        "boundary",
+        "bridge",
+        "compilation_gateway",
+        "contrast",
+        "deepening",
+        "false_nearby",
+        "gateway",
+        "live_gateway",
+        "song_first"
+      ],
+      "recognition_tier": [
+        "mass",
+        "high",
+        "medium",
+        "low",
+        "cult"
+      ],
+      "survey_tier": [
+        "core",
+        "standard",
+        "edge",
+        "suppress"
+      ],
+      "album_object_type": [
+        "studio_album",
+        "live_album",
+        "compilation",
+        "soundtrack",
+        "ep"
+      ],
+      "artist_survey_status": [
+        "artist_survey_worthy",
+        "song_survey_first",
+        "song_survey_only"
+      ]
+    },
+    "row_counts": {
+      "artists": 35,
+      "albums": 22,
+      "songs": 42,
+      "total": 99,
+      "existing_seed": 35,
+      "added_missing_obvious": 64
+    },
+    "archetypes": {
+      "111": "Novelty / Comedy / Weird Pop",
+      "112": "Holiday / Christmas / Seasonal Canon",
+      "113": "Party / Wedding / Karaoke / Bar Singalong Canon",
+      "114": "Kids / Family / Household Context Music"
+    },
+    "duplicate_membership_counts": {
+      "artists": 0,
+      "albums": 0,
+      "songs": 0
+    }
+  },
+  "artists": [
+    {
+      "archetype_id": "111",
+      "artist_name": "Weird Al Yankovic",
+      "proposed_artist_id": "weird-al-yankovic",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first",
+        "artist_anchor"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Named comedy-pop seed; artist-worthy but still mostly context-aware.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Dare to Be Stupid",
+        "Bad Hair Day"
+      ],
+      "likely_canonical_songs": [
+        "Eat It",
+        "Amish Paradise",
+        "White & Nerdy"
+      ]
+    },
+    {
+      "archetype_id": "111",
+      "artist_name": "Spike Jones",
+      "proposed_artist_id": "spike-jones",
+      "existing_seed": true,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "deepening",
+        "boundary",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Named novelty/comedy old-pop seed for deeper context coverage.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "111",
+      "artist_name": "Ray Stevens",
+      "proposed_artist_id": "ray-stevens",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Named novelty one-hit/comedy-country-pop seed.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Ray Stevens' Greatest Hits"
+      ],
+      "likely_canonical_songs": [
+        "The Streak",
+        "Ahab the Arab"
+      ]
+    },
+    {
+      "archetype_id": "111",
+      "artist_name": "Bobby Boris Pickett",
+      "proposed_artist_id": "bobby-boris-pickett",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Missing-obvious novelty seasonal song artist.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Monster Mash"
+      ]
+    },
+    {
+      "archetype_id": "111",
+      "artist_name": "Sheb Wooley",
+      "proposed_artist_id": "sheb-wooley",
+      "existing_seed": false,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Missing-obvious novelty one-hit object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "The Purple People Eater"
+      ]
+    },
+    {
+      "archetype_id": "111",
+      "artist_name": "Napoleon XIV",
+      "proposed_artist_id": "napoleon-xiv",
+      "existing_seed": false,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Missing-obvious weird-pop one-hit row.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "They're Coming to Take Me Away, Ha-Haaa!"
+      ]
+    },
+    {
+      "archetype_id": "111",
+      "artist_name": "The Lonely Island",
+      "proposed_artist_id": "the-lonely-island",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "bridge",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Modern comedy-pop bridge, kept edge to avoid genre overpromotion.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Bing Crosby",
+      "proposed_artist_id": "bing-crosby",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "Named holiday/crooner object; holiday meaning exceeds ordinary artist taste.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Merry Christmas"
+      ],
+      "likely_canonical_songs": [
+        "White Christmas"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Nat King Cole",
+      "proposed_artist_id": "nat-king-cole",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Named holiday/crooner object with seasonal and standards overlap.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "The Christmas Song"
+      ],
+      "likely_canonical_songs": [
+        "The Christmas Song"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Mariah Carey",
+      "proposed_artist_id": "mariah-carey",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Named Christmas object; keep seasonal Mariah separate from Family 12 pop appetite.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "Holiday Mariah should not overwrite general Mariah pop membership.",
+      "likely_canonical_albums": [
+        "Merry Christmas"
+      ],
+      "likely_canonical_songs": [
+        "All I Want for Christmas Is You"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Michael Buble",
+      "proposed_artist_id": "michael-buble",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named Christmas/adult-pop seasonal object.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Christmas"
+      ],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Trans-Siberian Orchestra",
+      "proposed_artist_id": "trans-siberian-orchestra",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "album_anchor"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Named holiday instrumental/rock spectacle object.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Christmas Eve and Other Stories"
+      ],
+      "likely_canonical_songs": [
+        "Christmas Eve/Sarajevo 12/24"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Vince Guaraldi",
+      "proposed_artist_id": "vince-guaraldi",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "album_anchor"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named holiday/family-jazz object anchored by Peanuts context.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Mannheim Steamroller",
+      "proposed_artist_id": "mannheim-steamroller",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "album_anchor"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Named holiday instrumental/adult context object.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Mannheim Steamroller Christmas"
+      ],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Brenda Lee",
+      "proposed_artist_id": "brenda-lee",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Named seasonal canon object; keep holiday row distinct from early-pop artist rows.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Rockin' Around the Christmas Tree"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Bobby Helms",
+      "proposed_artist_id": "bobby-helms",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named Christmas song-first object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Jingle Bell Rock"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Jose Feliciano",
+      "proposed_artist_id": "jose-feliciano",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named Christmas song-first object with Latin-pop boundary.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Feliz Navidad"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Wham!",
+      "proposed_artist_id": "wham",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Named Wham Christmas object; seasonal row only.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Last Christmas"
+      ]
+    },
+    {
+      "archetype_id": "112",
+      "artist_name": "Burl Ives",
+      "proposed_artist_id": "burl-ives",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Missing-obvious Christmas/TV-special seasonal object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Journey",
+      "proposed_artist_id": "journey",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named party/karaoke song object; do not infer full arena-rock appetite alone.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Journey Greatest Hits"
+      ],
+      "likely_canonical_songs": [
+        "Don't Stop Believin'"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Bon Jovi",
+      "proposed_artist_id": "bon-jovi",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named bar/karaoke song object with rock-family boundary.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Slippery When Wet"
+      ],
+      "likely_canonical_songs": [
+        "Livin' on a Prayer"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Neil Diamond",
+      "proposed_artist_id": "neil-diamond",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Named singalong object; context recognition exceeds genre signal.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Hot August Night"
+      ],
+      "likely_canonical_songs": [
+        "Sweet Caroline"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "ABBA",
+      "proposed_artist_id": "abba",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Named wedding/party/karaoke object with pop-family boundary.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Gold: Greatest Hits"
+      ],
+      "likely_canonical_songs": [
+        "Dancing Queen"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Shania Twain",
+      "proposed_artist_id": "shania-twain",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Named party/wedding country-pop boundary object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Come On Over"
+      ],
+      "likely_canonical_songs": [
+        "Man! I Feel Like a Woman!"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "The Killers",
+      "proposed_artist_id": "the-killers",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named through Mr. Brightside/Killers; context song-first row.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Direct Hits"
+      ],
+      "likely_canonical_songs": [
+        "Mr. Brightside"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Village People",
+      "proposed_artist_id": "village-people",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Artist needed for named YMCA song object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Y.M.C.A."
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "DJ Casper",
+      "proposed_artist_id": "dj-casper",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Artist needed for named Cha Cha Slide line-dance object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Cha Cha Slide"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Cupid",
+      "proposed_artist_id": "cupid",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Artist needed for named Cupid Shuffle line-dance object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Cupid Shuffle"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Garth Brooks",
+      "proposed_artist_id": "garth-brooks",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Artist needed for named Friends in Low Places country-bar object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Friends in Low Places"
+      ]
+    },
+    {
+      "archetype_id": "113",
+      "artist_name": "Kool & The Gang",
+      "proposed_artist_id": "kool-and-the-gang",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Missing-obvious reception-party song object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Celebration"
+      ]
+    },
+    {
+      "archetype_id": "114",
+      "artist_name": "Kidz Bop",
+      "proposed_artist_id": "kidz-bop",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Named kids/family household context object, not artist taste by default.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Kidz Bop"
+      ],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "114",
+      "artist_name": "Raffi",
+      "proposed_artist_id": "raffi",
+      "existing_seed": true,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Named children/family artist with real household-listening signal.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [
+        "Singable Songs for the Very Young"
+      ],
+      "likely_canonical_songs": [
+        "Down by the Bay",
+        "Baby Beluga",
+        "Bananaphone"
+      ]
+    },
+    {
+      "archetype_id": "114",
+      "artist_name": "Disney",
+      "proposed_artist_id": "disney",
+      "existing_seed": true,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Named Disney family spillover object; keep show/soundtrack ownership separate.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "Specific Disney songs may belong primarily in Family 15.",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": []
+    },
+    {
+      "archetype_id": "114",
+      "artist_name": "Pinkfong",
+      "proposed_artist_id": "pinkfong",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Artist needed for named Baby Shark context object.",
+      "object_specificity_note": "song_level",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Baby Shark"
+      ]
+    },
+    {
+      "archetype_id": "114",
+      "artist_name": "The Wiggles",
+      "proposed_artist_id": "the-wiggles",
+      "existing_seed": false,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Missing-obvious preschool/family context artist.",
+      "object_specificity_note": "mixed",
+      "consolidation_warning": "",
+      "likely_canonical_albums": [],
+      "likely_canonical_songs": [
+        "Hot Potato"
+      ]
+    }
+  ],
+  "albums": [
+    {
+      "archetype_id": "111",
+      "album_title": "Dare to Be Stupid",
+      "artist_name": "Weird Al Yankovic",
+      "proposed_album_id": "weird-al-yankovic-dare-to-be-stupid",
+      "existing_seed": false,
+      "release_year": 1985,
+      "album_object_type": "studio_album",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Comedy-pop album doorway, kept edge.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "album_title": "Bad Hair Day",
+      "artist_name": "Weird Al Yankovic",
+      "proposed_album_id": "weird-al-yankovic-bad-hair-day",
+      "existing_seed": false,
+      "release_year": 1996,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Best Weird Al 90s mass-comedy album prompt.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "album_title": "Ray Stevens' Greatest Hits",
+      "artist_name": "Ray Stevens",
+      "proposed_album_id": "ray-stevens-ray-stevens-greatest-hits",
+      "existing_seed": false,
+      "release_year": 1987,
+      "album_object_type": "compilation",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Practical container for novelty song recognition.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "album_title": "Dr. Demento 20th Anniversary Collection",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "various-artists-dr-demento-20th-anniversary-collection",
+      "existing_seed": false,
+      "release_year": 1991,
+      "album_object_type": "compilation",
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Novelty-comp gateway without treating novelty as ordinary genre appetite.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "Merry Christmas",
+      "artist_name": "Bing Crosby",
+      "proposed_album_id": "bing-crosby-merry-christmas",
+      "existing_seed": false,
+      "release_year": 1945,
+      "album_object_type": "compilation",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "compilation_gateway",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Holiday/crooner gateway object.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "The Christmas Song",
+      "artist_name": "Nat King Cole",
+      "proposed_album_id": "nat-king-cole-the-christmas-song",
+      "existing_seed": false,
+      "release_year": 1960,
+      "album_object_type": "compilation",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "compilation_gateway",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Holiday standards gateway object.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "Merry Christmas",
+      "artist_name": "Mariah Carey",
+      "proposed_album_id": "mariah-carey-merry-christmas",
+      "existing_seed": true,
+      "release_year": 1994,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Named Mariah Carey Christmas object represented as album container.",
+      "consolidation_warning": "Keep seasonal row distinct from Family 12 Mariah."
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "Christmas",
+      "artist_name": "Michael Buble",
+      "proposed_album_id": "michael-buble-christmas",
+      "existing_seed": true,
+      "release_year": 2011,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Named Michael Buble Christmas object represented as album container.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "Christmas Eve and Other Stories",
+      "artist_name": "Trans-Siberian Orchestra",
+      "proposed_album_id": "trans-siberian-orchestra-christmas-eve-and-other-stories",
+      "existing_seed": false,
+      "release_year": 1996,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Holiday rock/instrumental album gateway.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "A Charlie Brown Christmas",
+      "artist_name": "Vince Guaraldi Trio",
+      "proposed_album_id": "vince-guaraldi-trio-a-charlie-brown-christmas",
+      "existing_seed": false,
+      "release_year": 1965,
+      "album_object_type": "soundtrack",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Holiday/family/jazz context album gateway.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "Mannheim Steamroller Christmas",
+      "artist_name": "Mannheim Steamroller",
+      "proposed_album_id": "mannheim-steamroller-mannheim-steamroller-christmas",
+      "existing_seed": false,
+      "release_year": 1984,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Holiday instrumental household-listening album object.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "album_title": "A Christmas Gift for You from Phil Spector",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "various-artists-a-christmas-gift-for-you-from-phil-spector",
+      "existing_seed": false,
+      "release_year": 1963,
+      "album_object_type": "compilation",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "compilation_gateway",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Holiday canon compilation with pop-family overlap.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "album_title": "Journey Greatest Hits",
+      "artist_name": "Journey",
+      "proposed_album_id": "journey-journey-greatest-hits",
+      "existing_seed": false,
+      "release_year": 1988,
+      "album_object_type": "compilation",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "compilation_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Container for karaoke/bar-singalong recognition only.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "album_title": "Slippery When Wet",
+      "artist_name": "Bon Jovi",
+      "proposed_album_id": "bon-jovi-slippery-when-wet",
+      "existing_seed": false,
+      "release_year": 1986,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Album container for bar/karaoke hit, not full rock import here.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "album_title": "Hot August Night",
+      "artist_name": "Neil Diamond",
+      "proposed_album_id": "neil-diamond-hot-august-night",
+      "existing_seed": false,
+      "release_year": 1972,
+      "album_object_type": "live_album",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "live_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Live singalong container for Neil Diamond context rows.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "album_title": "Gold: Greatest Hits",
+      "artist_name": "ABBA",
+      "proposed_album_id": "abba-gold-greatest-hits",
+      "existing_seed": false,
+      "release_year": 1992,
+      "album_object_type": "compilation",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "compilation_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Wedding/party ABBA container.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "album_title": "Come On Over",
+      "artist_name": "Shania Twain",
+      "proposed_album_id": "shania-twain-come-on-over",
+      "existing_seed": false,
+      "release_year": 1997,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Country-pop party/wedding boundary container.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "album_title": "Direct Hits",
+      "artist_name": "The Killers",
+      "proposed_album_id": "the-killers-direct-hits",
+      "existing_seed": false,
+      "release_year": 2013,
+      "album_object_type": "compilation",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Container for Mr. Brightside context use.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "album_title": "Kidz Bop",
+      "artist_name": "Kidz Bop",
+      "proposed_album_id": "kidz-bop-kidz-bop",
+      "existing_seed": true,
+      "release_year": 2001,
+      "album_object_type": "compilation",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Named Kidz Bop family-context object.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "album_title": "Singable Songs for the Very Young",
+      "artist_name": "Raffi",
+      "proposed_album_id": "raffi-singable-songs-for-the-very-young",
+      "existing_seed": false,
+      "release_year": 1976,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Core Raffi household-listening album.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "album_title": "Disney Children's Favorites",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "various-artists-disney-childrens-favorites",
+      "existing_seed": false,
+      "release_year": 1979,
+      "album_object_type": "compilation",
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "compilation_gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Family/household Disney container; specific songs may live in Family 15.",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "album_title": "Frozen",
+      "artist_name": "Various Artists",
+      "proposed_album_id": "various-artists-frozen",
+      "existing_seed": false,
+      "release_year": 2013,
+      "album_object_type": "soundtrack",
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "false_nearby",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Family-context spillover only; primary ownership belongs to soundtrack family.",
+      "consolidation_warning": ""
+    }
+  ],
+  "songs": [
+    {
+      "archetype_id": "111",
+      "song_title": "Eat It",
+      "artist_name": "Weird Al Yankovic",
+      "proposed_song_id": "weird-al-yankovic-eat-it",
+      "existing_seed": false,
+      "release_year": 1984,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Comedy parody survey object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "Amish Paradise",
+      "artist_name": "Weird Al Yankovic",
+      "proposed_song_id": "weird-al-yankovic-amish-paradise",
+      "existing_seed": false,
+      "release_year": 1996,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Most recognizable 90s Weird Al prompt.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "White & Nerdy",
+      "artist_name": "Weird Al Yankovic",
+      "proposed_song_id": "weird-al-yankovic-white-and-nerdy",
+      "existing_seed": false,
+      "release_year": 2006,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Modern Weird Al song-first prompt.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "The Streak",
+      "artist_name": "Ray Stevens",
+      "proposed_song_id": "ray-stevens-the-streak",
+      "existing_seed": false,
+      "release_year": 1974,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Novelty one-hit signal.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "Ahab the Arab",
+      "artist_name": "Ray Stevens",
+      "proposed_song_id": "ray-stevens-ahab-the-arab",
+      "existing_seed": false,
+      "release_year": 1962,
+      "recognition_tier": "medium",
+      "survey_tier": "suppress",
+      "roles": [
+        "song_first",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.42,
+      "inclusion_reason": "Named Ray Stevens novelty depth row, but suppress by default due dated stereotype risk.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Use only for historical/duplicate handling; not a normal recommendation object."
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "Monster Mash",
+      "artist_name": "Bobby Boris Pickett",
+      "proposed_song_id": "bobby-boris-pickett-monster-mash",
+      "existing_seed": false,
+      "release_year": 1962,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Novelty/Halloween crossover context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "The Purple People Eater",
+      "artist_name": "Sheb Wooley",
+      "proposed_song_id": "sheb-wooley-the-purple-people-eater",
+      "existing_seed": false,
+      "release_year": 1958,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "gateway"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Classic novelty one-hit object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "111",
+      "song_title": "They're Coming to Take Me Away, Ha-Haaa!",
+      "artist_name": "Napoleon XIV",
+      "proposed_song_id": "napoleon-xiv-theyre-coming-to-take-me-away-ha-haaa",
+      "existing_seed": false,
+      "release_year": 1966,
+      "recognition_tier": "medium",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.62,
+      "inclusion_reason": "Weird-pop novelty boundary object.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "White Christmas",
+      "artist_name": "Bing Crosby",
+      "proposed_song_id": "bing-crosby-white-christmas",
+      "existing_seed": false,
+      "release_year": 1942,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Holiday canon anchor; seasonal meaning exceeds artist taste.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "The Christmas Song",
+      "artist_name": "Nat King Cole",
+      "proposed_song_id": "nat-king-cole-the-christmas-song",
+      "existing_seed": false,
+      "release_year": 1961,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Holiday standard anchor.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "All I Want for Christmas Is You",
+      "artist_name": "Mariah Carey",
+      "proposed_song_id": "mariah-carey-all-i-want-for-christmas-is-you",
+      "existing_seed": false,
+      "release_year": 1994,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Modern Christmas canon object, seasonal Mariah row.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": "Do not merge with general Mariah Family 12 appetite."
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Rockin' Around the Christmas Tree",
+      "artist_name": "Brenda Lee",
+      "proposed_song_id": "brenda-lee-rockin-around-the-christmas-tree",
+      "existing_seed": false,
+      "release_year": 1958,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Holiday song-first canon.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Jingle Bell Rock",
+      "artist_name": "Bobby Helms",
+      "proposed_song_id": "bobby-helms-jingle-bell-rock",
+      "existing_seed": false,
+      "release_year": 1957,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Holiday song-first canon.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Feliz Navidad",
+      "artist_name": "Jose Feliciano",
+      "proposed_song_id": "jose-feliciano-feliz-navidad",
+      "existing_seed": false,
+      "release_year": 1970,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Holiday song-first canon with Latin-pop boundary.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Last Christmas",
+      "artist_name": "Wham!",
+      "proposed_song_id": "wham-last-christmas",
+      "existing_seed": false,
+      "release_year": 1984,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Named Wham Christmas context represented by the holiday recording.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Christmas Eve/Sarajevo 12/24",
+      "artist_name": "Trans-Siberian Orchestra",
+      "proposed_song_id": "trans-siberian-orchestra-christmas-eve-sarajevo-12-24",
+      "existing_seed": false,
+      "release_year": 1996,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Holiday rock/instrumental spectacle object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Linus and Lucy",
+      "artist_name": "Vince Guaraldi Trio",
+      "proposed_song_id": "vince-guaraldi-trio-linus-and-lucy",
+      "existing_seed": false,
+      "release_year": 1964,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Peanuts/holiday/family context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "112",
+      "song_title": "Have Yourself a Merry Little Christmas",
+      "artist_name": "Judy Garland",
+      "proposed_song_id": "judy-garland-have-yourself-a-merry-little-christmas",
+      "existing_seed": false,
+      "release_year": 1944,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Holiday standard where composition recognition exceeds performer preference.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Mr. Brightside",
+      "artist_name": "The Killers",
+      "proposed_song_id": "the-killers-mr-brightside",
+      "existing_seed": true,
+      "release_year": 2003,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Packet-named bar/karaoke singalong object; do not infer indie-rock appetite alone.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Sweet Caroline",
+      "artist_name": "Neil Diamond",
+      "proposed_song_id": "neil-diamond-sweet-caroline",
+      "existing_seed": true,
+      "release_year": 1969,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Packet-named group singalong object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Don't Stop Believin'",
+      "artist_name": "Journey",
+      "proposed_song_id": "journey-dont-stop-believin",
+      "existing_seed": true,
+      "release_year": 1981,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Packet-named karaoke/bar-singalong object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Livin' on a Prayer",
+      "artist_name": "Bon Jovi",
+      "proposed_song_id": "bon-jovi-livin-on-a-prayer",
+      "existing_seed": true,
+      "release_year": 1986,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Packet-named karaoke/bar-singalong object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Friends in Low Places",
+      "artist_name": "Garth Brooks",
+      "proposed_song_id": "garth-brooks-friends-in-low-places",
+      "existing_seed": true,
+      "release_year": 1990,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Packet-named country-bar singalong object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Y.M.C.A.",
+      "artist_name": "Village People",
+      "proposed_song_id": "village-people-ymca",
+      "existing_seed": true,
+      "release_year": 1978,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "anchor",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Packet-named party/wedding dance object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Cha Cha Slide",
+      "artist_name": "DJ Casper",
+      "proposed_song_id": "dj-casper-cha-cha-slide",
+      "existing_seed": true,
+      "release_year": 2000,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Packet-named line-dance object, mostly context flag.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Cupid Shuffle",
+      "artist_name": "Cupid",
+      "proposed_song_id": "cupid-cupid-shuffle",
+      "existing_seed": true,
+      "release_year": 2007,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Packet-named line-dance object, mostly context flag.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Dancing Queen",
+      "artist_name": "ABBA",
+      "proposed_song_id": "abba-dancing-queen",
+      "existing_seed": false,
+      "release_year": 1976,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Wedding/party ABBA object, not full disco/pop appetite alone.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Man! I Feel Like a Woman!",
+      "artist_name": "Shania Twain",
+      "proposed_song_id": "shania-twain-man-i-feel-like-a-woman",
+      "existing_seed": false,
+      "release_year": 1997,
+      "recognition_tier": "mass",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.76,
+      "inclusion_reason": "Wedding/party country-pop context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "September",
+      "artist_name": "Earth, Wind & Fire",
+      "proposed_song_id": "earth-wind-and-fire-september",
+      "existing_seed": false,
+      "release_year": 1978,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Reception-party staple; keep genre inference weak here.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Celebration",
+      "artist_name": "Kool & The Gang",
+      "proposed_song_id": "kool-and-the-gang-celebration",
+      "existing_seed": false,
+      "release_year": 1980,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.74,
+      "inclusion_reason": "Party/reception context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Bohemian Rhapsody",
+      "artist_name": "Queen",
+      "proposed_song_id": "queen-bohemian-rhapsody",
+      "existing_seed": false,
+      "release_year": 1975,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Karaoke singalong context object; rock family should own main artist appetite.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Love Shack",
+      "artist_name": "The B-52s",
+      "proposed_song_id": "the-b-52s-love-shack",
+      "existing_seed": false,
+      "release_year": 1989,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Party/karaoke context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "113",
+      "song_title": "Macarena",
+      "artist_name": "Los Del Rio",
+      "proposed_song_id": "los-del-rio-macarena",
+      "existing_seed": false,
+      "release_year": 1993,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Dance-craze context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Baby Shark",
+      "artist_name": "Pinkfong",
+      "proposed_song_id": "pinkfong-baby-shark",
+      "existing_seed": true,
+      "release_year": 2015,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "anchor",
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.82,
+      "inclusion_reason": "Packet-named kids/family household object; never infer ordinary pop appetite.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Down by the Bay",
+      "artist_name": "Raffi",
+      "proposed_song_id": "raffi-down-by-the-bay",
+      "existing_seed": false,
+      "release_year": 1976,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.78,
+      "inclusion_reason": "Household/kids singalong object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Baby Beluga",
+      "artist_name": "Raffi",
+      "proposed_song_id": "raffi-baby-beluga",
+      "existing_seed": false,
+      "release_year": 1980,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.8,
+      "inclusion_reason": "Core Raffi family-context song.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Bananaphone",
+      "artist_name": "Raffi",
+      "proposed_song_id": "raffi-bananaphone",
+      "existing_seed": false,
+      "release_year": 1994,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Family-context novelty/kids bridge.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Let It Go",
+      "artist_name": "Idina Menzel",
+      "proposed_song_id": "idina-menzel-let-it-go",
+      "existing_seed": false,
+      "release_year": 2013,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.72,
+      "inclusion_reason": "Disney family spillover; primary ownership belongs to soundtrack family.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "We Don't Talk About Bruno",
+      "artist_name": "Encanto Cast",
+      "proposed_song_id": "encanto-cast-we-dont-talk-about-bruno",
+      "existing_seed": false,
+      "release_year": 2021,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.7,
+      "inclusion_reason": "Disney household spillover; primary ownership belongs to soundtrack family.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Hakuna Matata",
+      "artist_name": "The Lion King Cast",
+      "proposed_song_id": "the-lion-king-cast-hakuna-matata",
+      "existing_seed": false,
+      "release_year": 1994,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.68,
+      "inclusion_reason": "Disney family singalong spillover.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "The Wheels on the Bus",
+      "artist_name": "Traditional",
+      "proposed_song_id": "traditional-the-wheels-on-the-bus",
+      "existing_seed": false,
+      "release_year": 0,
+      "recognition_tier": "mass",
+      "survey_tier": "edge",
+      "roles": [
+        "song_first",
+        "false_nearby"
+      ],
+      "archetype_membership_weight": 0.64,
+      "inclusion_reason": "Household/traditional kids song; composition-level handling required.",
+      "artist_survey_status": "song_survey_only",
+      "consolidation_warning": "Use composition/standard logic rather than artist merge."
+    },
+    {
+      "archetype_id": "114",
+      "song_title": "Hot Potato",
+      "artist_name": "The Wiggles",
+      "proposed_song_id": "the-wiggles-hot-potato",
+      "existing_seed": false,
+      "release_year": 1994,
+      "recognition_tier": "high",
+      "survey_tier": "edge",
+      "roles": [
+        "gateway",
+        "song_first"
+      ],
+      "archetype_membership_weight": 0.66,
+      "inclusion_reason": "Preschool household-context object.",
+      "artist_survey_status": "song_survey_first",
+      "consolidation_warning": ""
+    }
+  ]
+}

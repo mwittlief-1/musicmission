@@ -1,0 +1,242 @@
+[
+  {
+    "relationship_id": "rel-artist-the-staple-singers-same-entity-alias-artist-staple-singers",
+    "entity_a": "artist:the-staple-singers",
+    "entity_b": "artist:staple-singers",
+    "relationship_type": "same_entity_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-song-recording-the-staple-singers-i-ll-take-you-there-same-recording-alias-song-recording-staple-singers-ill-take-you-there",
+    "entity_a": "song_recording:the-staple-singers-i-ll-take-you-there",
+    "entity_b": "song_recording:staple-singers-ill-take-you-there",
+    "relationship_type": "same_recording_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-song-recording-the-b-52s-love-shack-same-recording-alias-song-recording-the-b-52-s-love-shack",
+    "entity_a": "song_recording:the-b-52s-love-shack",
+    "entity_b": "song_recording:the-b-52-s-love-shack",
+    "relationship_type": "same_recording_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-song-recording-f4-026-song-turn-turn-turn-the-byrds-pete-seeger-same-recording-alias-song-recording-the-byrds-turn-turn-turn",
+    "entity_a": "song_recording:f4-026-song-turn-turn-turn-the-byrds-pete-seeger",
+    "entity_b": "song_recording:the-byrds-turn-turn-turn",
+    "relationship_type": "same_recording_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-beyonce-related-but-distinct-artist-destinys-child",
+    "entity_a": "artist:beyonce",
+    "entity_b": "artist:destinys-child",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-michael-jackson-related-but-distinct-artist-jackson-5",
+    "entity_a": "artist:michael-jackson",
+    "entity_b": "artist:jackson-5",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-diana-ross-related-but-distinct-artist-the-supremes",
+    "entity_a": "artist:diana-ross",
+    "entity_b": "artist:the-supremes",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-prince-related-but-distinct-artist-prince-and-the-revolution",
+    "entity_a": "artist:prince",
+    "entity_b": "artist:prince-and-the-revolution",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-smokey-robinson-related-but-distinct-artist-smokey-robinson-and-the-miracles",
+    "entity_a": "artist:smokey-robinson",
+    "entity_b": "artist:smokey-robinson-and-the-miracles",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-public-image-ltd-related-but-distinct-artist-sex-pistols",
+    "entity_a": "artist:public-image-ltd",
+    "entity_b": "artist:sex-pistols",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-love-and-rockets-related-but-distinct-artist-bauhaus",
+    "entity_a": "artist:love-and-rockets",
+    "entity_b": "artist:bauhaus",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-split-enz-related-but-distinct-artist-crowded-house",
+    "entity_a": "artist:split-enz",
+    "entity_b": "artist:crowded-house",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-hillsong-worship-related-but-distinct-artist-hillsong-united",
+    "entity_a": "artist:hillsong-worship",
+    "entity_b": "artist:hillsong-united",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-bethel-music-related-but-distinct-artist-elevation-worship",
+    "entity_a": "artist:bethel-music",
+    "entity_b": "artist:elevation-worship",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-maverick-city-music-related-but-distinct-artist-elevation-worship",
+    "entity_a": "artist:maverick-city-music",
+    "entity_b": "artist:elevation-worship",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-sleep-related-but-distinct-artist-sleep-token",
+    "entity_a": "artist:sleep",
+    "entity_b": "artist:sleep-token",
+    "relationship_type": "related_but_distinct",
+    "collapse_policy": "do_not_merge",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-artist-larry-heard-producer-project-alias-artist-mr-fingers",
+    "entity_a": "artist:larry-heard",
+    "entity_b": "artist:mr-fingers",
+    "relationship_type": "producer_project_alias",
+    "collapse_policy": "linked_not_collapsed",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "needs_human_review"
+  },
+  {
+    "relationship_id": "rel-artist-larry-heard-producer-project-alias-artist-fingers-inc",
+    "entity_a": "artist:larry-heard",
+    "entity_b": "artist:fingers-inc",
+    "relationship_type": "producer_project_alias",
+    "collapse_policy": "linked_not_collapsed",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "needs_human_review"
+  },
+  {
+    "relationship_id": "rel-artist-juan-atkins-producer-project-alias-artist-model-500",
+    "entity_a": "artist:juan-atkins",
+    "entity_b": "artist:model-500",
+    "relationship_type": "producer_project_alias",
+    "collapse_policy": "linked_not_collapsed",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "needs_human_review"
+  },
+  {
+    "relationship_id": "rel-artist-juan-atkins-producer-project-alias-artist-cybotron",
+    "entity_a": "artist:juan-atkins",
+    "entity_b": "artist:cybotron",
+    "relationship_type": "producer_project_alias",
+    "collapse_policy": "linked_not_collapsed",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "needs_human_review"
+  },
+  {
+    "relationship_id": "rel-artist-kevin-saunderson-producer-project-alias-artist-inner-city",
+    "entity_a": "artist:kevin-saunderson",
+    "entity_b": "artist:inner-city",
+    "relationship_type": "producer_project_alias",
+    "collapse_policy": "linked_not_collapsed",
+    "import_action": "preserve_both",
+    "source_note": "Normalization Pass 2",
+    "review_status": "needs_human_review"
+  },
+  {
+    "relationship_id": "rel-song-recording-staple-singers-ill-take-you-there-same-recording-alias-song-recording-the-staple-singers-i-ll-take-you-there",
+    "entity_a": "song_recording:staple-singers-ill-take-you-there",
+    "entity_b": "song_recording:the-staple-singers-i-ll-take-you-there",
+    "relationship_type": "same_recording_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_policy_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-song-recording-the-b-52-s-love-shack-same-recording-alias-song-recording-the-b-52s-love-shack",
+    "entity_a": "song_recording:the-b-52-s-love-shack",
+    "entity_b": "song_recording:the-b-52s-love-shack",
+    "relationship_type": "same_recording_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_policy_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  },
+  {
+    "relationship_id": "rel-song-recording-f4-026-song-turn-turn-turn-the-byrds-pete-seeger-same-recording-alias-song-recording-the-byrds-turn-turn-turn",
+    "entity_a": "song_recording:f4-026-song-turn-turn-turn-the-byrds-pete-seeger",
+    "entity_b": "song_recording:the-byrds-turn-turn-turn",
+    "relationship_type": "same_recording_alias",
+    "collapse_policy": "safe_alias",
+    "import_action": "canonicalize_to_policy_target",
+    "source_note": "Normalization Pass 2",
+    "review_status": "approved"
+  }
+]

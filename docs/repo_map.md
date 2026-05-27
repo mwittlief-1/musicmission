@@ -42,7 +42,7 @@ This map describes the intended repository shape for the Waymark/Cartenza alpha.
 | `data/schemas/` | Product/technical contract | Tracked mission and reaction-session schemas. |
 | `data/product_contracts/` | Product/technical contract | App, graph, survey, Atlas, and mission-generation contracts. Should remain visible for review. |
 | `data/atlas_schema/` | Product/technical contract and generated proofs | Contract roots and examples are source-like. `ingestion_proof/`, smoke outputs, and zip bundles are generated evidence or archive candidates. |
-| `data/canonical_graph/` | Canonical/product source material | Canonical graph families, import runbooks, normalization outputs, and policy hardening. Do not blanket-ignore or delete. Generated dry-run subtrees need owner classification. |
+| `data/canonical_graph/` | Canonical/product source material and promoted fixtures | Track family sources, `current/`, policy hardening, affinity contracts, and promoted `import_dry_run/` plus `normalization_pass_2/` fixtures. Ignore depth-hardening pass trees and zips unless a specific artifact is promoted. |
 | `data/alpha_consumable_layer/` | Product/technical contract and canonical handoff | Alpha graph surfaces, resolver policy, guardrails, and audit refs. Large audit JSON may be generated evidence, but it supports active contracts. |
 | `data/alpha_packets/` | Test/source fixture and generated artifact | Golden integration packet used for app/import review. Keep visible until the accepted golden-packet policy is decided. |
 | `data/mission_generation/` | Generated artifact and product contract | Handoff contracts plus timestamped first-batch generation runs. Raw request/response attempts are archive candidates. |

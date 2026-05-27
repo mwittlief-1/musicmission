@@ -1,0 +1,46 @@
+# Family 17 Song Candidates
+
+| archetype_id | song_title | artist_name | proposed_song_id | existing_seed | release_year | recognition_tier | survey_tier | roles | archetype_membership_weight | inclusion_reason | artist_survey_status | consolidation_warning |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 111 | Eat It | Weird Al Yankovic | weird-al-yankovic-eat-it | false | 1984 | high | edge | gateway; song_first | 0.74 | Comedy parody survey object. | song_survey_first |  |
+| 111 | Amish Paradise | Weird Al Yankovic | weird-al-yankovic-amish-paradise | false | 1996 | high | edge | gateway; song_first | 0.76 | Most recognizable 90s Weird Al prompt. | song_survey_first |  |
+| 111 | White & Nerdy | Weird Al Yankovic | weird-al-yankovic-white-and-nerdy | false | 2006 | high | edge | gateway; song_first | 0.72 | Modern Weird Al song-first prompt. | song_survey_first |  |
+| 111 | The Streak | Ray Stevens | ray-stevens-the-streak | false | 1974 | high | edge | song_first; gateway | 0.72 | Novelty one-hit signal. | song_survey_first |  |
+| 111 | Ahab the Arab | Ray Stevens | ray-stevens-ahab-the-arab | false | 1962 | medium | suppress | song_first; boundary | 0.42 | Named Ray Stevens novelty depth row, but suppress by default due dated stereotype risk. | song_survey_only | Use only for historical/duplicate handling; not a normal recommendation object. |
+| 111 | Monster Mash | Bobby Boris Pickett | bobby-boris-pickett-monster-mash | false | 1962 | mass | standard | gateway; song_first | 0.78 | Novelty/Halloween crossover context object. | song_survey_first |  |
+| 111 | The Purple People Eater | Sheb Wooley | sheb-wooley-the-purple-people-eater | false | 1958 | high | edge | song_first; gateway | 0.66 | Classic novelty one-hit object. | song_survey_only |  |
+| 111 | They're Coming to Take Me Away, Ha-Haaa! | Napoleon XIV | napoleon-xiv-theyre-coming-to-take-me-away-ha-haaa | false | 1966 | medium | edge | song_first; boundary | 0.62 | Weird-pop novelty boundary object. | song_survey_only |  |
+| 112 | White Christmas | Bing Crosby | bing-crosby-white-christmas | false | 1942 | mass | standard | anchor; song_first | 0.90 | Holiday canon anchor; seasonal meaning exceeds artist taste. | song_survey_first |  |
+| 112 | The Christmas Song | Nat King Cole | nat-king-cole-the-christmas-song | false | 1961 | mass | standard | anchor; song_first | 0.88 | Holiday standard anchor. | song_survey_first |  |
+| 112 | All I Want for Christmas Is You | Mariah Carey | mariah-carey-all-i-want-for-christmas-is-you | false | 1994 | mass | standard | anchor; song_first | 0.92 | Modern Christmas canon object, seasonal Mariah row. | song_survey_first | Do not merge with general Mariah Family 12 appetite. |
+| 112 | Rockin' Around the Christmas Tree | Brenda Lee | brenda-lee-rockin-around-the-christmas-tree | false | 1958 | mass | standard | anchor; song_first | 0.90 | Holiday song-first canon. | song_survey_first |  |
+| 112 | Jingle Bell Rock | Bobby Helms | bobby-helms-jingle-bell-rock | false | 1957 | mass | standard | gateway; song_first | 0.86 | Holiday song-first canon. | song_survey_first |  |
+| 112 | Feliz Navidad | Jose Feliciano | jose-feliciano-feliz-navidad | false | 1970 | mass | standard | gateway; song_first | 0.86 | Holiday song-first canon with Latin-pop boundary. | song_survey_first |  |
+| 112 | Last Christmas | Wham! | wham-last-christmas | false | 1984 | mass | standard | gateway; song_first | 0.86 | Named Wham Christmas context represented by the holiday recording. | song_survey_first |  |
+| 112 | Christmas Eve/Sarajevo 12/24 | Trans-Siberian Orchestra | trans-siberian-orchestra-christmas-eve-sarajevo-12-24 | false | 1996 | high | standard | gateway; song_first | 0.78 | Holiday rock/instrumental spectacle object. | song_survey_first |  |
+| 112 | Linus and Lucy | Vince Guaraldi Trio | vince-guaraldi-trio-linus-and-lucy | false | 1964 | mass | standard | gateway; bridge | 0.76 | Peanuts/holiday/family context object. | song_survey_first |  |
+| 112 | Have Yourself a Merry Little Christmas | Judy Garland | judy-garland-have-yourself-a-merry-little-christmas | false | 1944 | mass | standard | gateway; song_first | 0.76 | Holiday standard where composition recognition exceeds performer preference. | song_survey_first |  |
+| 113 | Mr. Brightside | The Killers | the-killers-mr-brightside | true | 2003 | mass | standard | anchor; song_first; false_nearby | 0.88 | Packet-named bar/karaoke singalong object; do not infer indie-rock appetite alone. | song_survey_first |  |
+| 113 | Sweet Caroline | Neil Diamond | neil-diamond-sweet-caroline | true | 1969 | mass | standard | anchor; song_first; false_nearby | 0.90 | Packet-named group singalong object. | song_survey_first |  |
+| 113 | Don't Stop Believin' | Journey | journey-dont-stop-believin | true | 1981 | mass | standard | anchor; song_first; false_nearby | 0.90 | Packet-named karaoke/bar-singalong object. | song_survey_first |  |
+| 113 | Livin' on a Prayer | Bon Jovi | bon-jovi-livin-on-a-prayer | true | 1986 | mass | standard | anchor; song_first; false_nearby | 0.88 | Packet-named karaoke/bar-singalong object. | song_survey_first |  |
+| 113 | Friends in Low Places | Garth Brooks | garth-brooks-friends-in-low-places | true | 1990 | mass | standard | anchor; song_first; false_nearby | 0.86 | Packet-named country-bar singalong object. | song_survey_first |  |
+| 113 | Y.M.C.A. | Village People | village-people-ymca | true | 1978 | mass | standard | anchor; song_first | 0.88 | Packet-named party/wedding dance object. | song_survey_first |  |
+| 113 | Cha Cha Slide | DJ Casper | dj-casper-cha-cha-slide | true | 2000 | mass | edge | gateway; song_first | 0.80 | Packet-named line-dance object, mostly context flag. | song_survey_first |  |
+| 113 | Cupid Shuffle | Cupid | cupid-cupid-shuffle | true | 2007 | high | edge | gateway; song_first | 0.76 | Packet-named line-dance object, mostly context flag. | song_survey_first |  |
+| 113 | Dancing Queen | ABBA | abba-dancing-queen | false | 1976 | mass | standard | gateway; song_first; false_nearby | 0.78 | Wedding/party ABBA object, not full disco/pop appetite alone. | song_survey_first |  |
+| 113 | Man! I Feel Like a Woman! | Shania Twain | shania-twain-man-i-feel-like-a-woman | false | 1997 | mass | standard | gateway; song_first; false_nearby | 0.76 | Wedding/party country-pop context object. | song_survey_first |  |
+| 113 | September | Earth, Wind & Fire | earth-wind-and-fire-september | false | 1978 | mass | edge | gateway; song_first; false_nearby | 0.74 | Reception-party staple; keep genre inference weak here. | song_survey_first |  |
+| 113 | Celebration | Kool & The Gang | kool-and-the-gang-celebration | false | 1980 | mass | edge | gateway; song_first; false_nearby | 0.74 | Party/reception context object. | song_survey_first |  |
+| 113 | Bohemian Rhapsody | Queen | queen-bohemian-rhapsody | false | 1975 | mass | edge | gateway; song_first; false_nearby | 0.72 | Karaoke singalong context object; rock family should own main artist appetite. | song_survey_first |  |
+| 113 | Love Shack | The B-52s | the-b-52s-love-shack | false | 1989 | mass | edge | gateway; song_first; false_nearby | 0.70 | Party/karaoke context object. | song_survey_first |  |
+| 113 | Macarena | Los Del Rio | los-del-rio-macarena | false | 1993 | mass | edge | gateway; song_first | 0.72 | Dance-craze context object. | song_survey_first |  |
+| 114 | Baby Shark | Pinkfong | pinkfong-baby-shark | true | 2015 | mass | edge | anchor; song_first; false_nearby | 0.82 | Packet-named kids/family household object; never infer ordinary pop appetite. | song_survey_only |  |
+| 114 | Down by the Bay | Raffi | raffi-down-by-the-bay | false | 1976 | high | standard | gateway; song_first | 0.78 | Household/kids singalong object. | song_survey_first |  |
+| 114 | Baby Beluga | Raffi | raffi-baby-beluga | false | 1980 | high | standard | gateway; song_first | 0.80 | Core Raffi family-context song. | song_survey_first |  |
+| 114 | Bananaphone | Raffi | raffi-bananaphone | false | 1994 | high | edge | gateway; song_first | 0.68 | Family-context novelty/kids bridge. | song_survey_first |  |
+| 114 | Let It Go | Idina Menzel | idina-menzel-let-it-go | false | 2013 | mass | edge | gateway; false_nearby | 0.72 | Disney family spillover; primary ownership belongs to soundtrack family. | song_survey_first |  |
+| 114 | We Don't Talk About Bruno | Encanto Cast | encanto-cast-we-dont-talk-about-bruno | false | 2021 | mass | edge | gateway; false_nearby | 0.70 | Disney household spillover; primary ownership belongs to soundtrack family. | song_survey_first |  |
+| 114 | Hakuna Matata | The Lion King Cast | the-lion-king-cast-hakuna-matata | false | 1994 | mass | edge | gateway; false_nearby | 0.68 | Disney family singalong spillover. | song_survey_first |  |
+| 114 | The Wheels on the Bus | Traditional | traditional-the-wheels-on-the-bus | false | 0 | mass | edge | song_first; false_nearby | 0.64 | Household/traditional kids song; composition-level handling required. | song_survey_only | Use composition/standard logic rather than artist merge. |
+| 114 | Hot Potato | The Wiggles | the-wiggles-hot-potato | false | 1994 | high | edge | gateway; song_first | 0.66 | Preschool household-context object. | song_survey_first |  |

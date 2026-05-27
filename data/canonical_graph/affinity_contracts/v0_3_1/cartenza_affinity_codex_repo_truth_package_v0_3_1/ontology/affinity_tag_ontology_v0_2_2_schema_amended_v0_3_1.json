@@ -1,0 +1,2709 @@
+{
+  "metadata": {
+    "ontology_name": "Cartenza Affinity Tag Ontology v0.2.2 + Schema Boundary Amendment v0.3.1",
+    "source_pass": "affinity_feature_song_tags_v0_1 + affinity_retag_pass_v0_2 QA proof",
+    "source_graph": "waymark_canonical_graph_full_export_2026-05-26",
+    "runtime_ready": false,
+    "user_specific": false,
+    "canonical_tag_count": 86,
+    "dimension_count": 7,
+    "notes": "Controlled ontology candidate with uplift added and stricter sparse tagging rules. Not graph-wide production metadata.",
+    "status": "ontology and sparse rules approved; output schema conditionally approved for graph-wide tagging after PM acceptance; not approved for runtime ingestion",
+    "example_song_ids_policy": "Example song IDs are illustrative only. If an example appears inconsistent with the tag definition, follow the tag definition, not the example.",
+    "alias_leakage_policy": "Any retagging output using aliases instead of canonical tags fails QA.",
+    "schema_boundary_policy": "Core dimensions attach to canonical song/recording truth; social_context and routing_caution attach primarily to membership_context_overlays.",
+    "graph_wide_tagging_authorized": "conditionally_after_schema_amendment_acceptance_only"
+  },
+  "dimensions": [
+    {
+      "dimension_id": "vocal_performance",
+      "definition": "Voice, delivery, group-vocal identity, vocal stance, vocal persona, or explicit instrumental/no-vocal identity when vocal performance is not the route-bearing feature.",
+      "canonical_tags": [
+        {
+          "tag": "big_voice",
+          "aliases": [
+            "forceful_vocal",
+            "operatic_tenor",
+            "pop_vocal_showpiece",
+            "power_vocal",
+            "romantic_belt",
+            "soul_voice",
+            "theatrical_belt",
+            "vocal_showpiece"
+          ],
+          "analyst_note": "Large foreground vocal; includes soul belt, pop power vocal, theatrical belting, and operatic force when the voice is a primary attraction.",
+          "use_when": "The vocal scale, range, projection, or climactic belt is route-bearing.",
+          "do_not_use_when": "Do not use merely because the singer is famous or technically skilled.",
+          "example_song_ids": [
+            "whitney-houston-i-will-always-love-you",
+            "andrea-bocelli-con-te-partiro",
+            "luciano-pavarotti-nessun-dorma"
+          ]
+        },
+        {
+          "tag": "intimate_voice",
+          "aliases": [
+            "close_vocal",
+            "fragile_voice",
+            "hushed_vocal",
+            "quiet_confession"
+          ],
+          "analyst_note": "Close, private, restrained, or fragile vocal presence.",
+          "use_when": "The route depends on closeness, vulnerability, or small-room vocal affect.",
+          "do_not_use_when": "Do not use for generic ballads with large or polished vocals.",
+          "example_song_ids": [
+            "f4-024-song-american-pie-don-mclean",
+            "f4-024-song-fire-and-rain-james-taylor",
+            "f4-025-song-piano-man-billy-joel",
+            "f4-026-song-this-land-is-your-land-woody-guthrie",
+            "f4-027-song-pancho-and-lefty-townes-van-zandt",
+            "f4-028-song-windfall-son-volt"
+          ]
+        },
+        {
+          "tag": "ragged_voice",
+          "aliases": [
+            "raw_throat",
+            "rough_vocal",
+            "strained_voice"
+          ],
+          "analyst_note": "Audibly rough, torn, frayed, or strained vocal character.",
+          "use_when": "Roughness or strain is part of the expressive identity.",
+          "do_not_use_when": "Do not use for merely energetic or loud vocals unless the surface is actually ragged.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "foo-fighters-everlong",
+            "mazzy-star-fade-into-you",
+            "weezer-buddy-holly",
+            "blink-182-all-the-small-things"
+          ]
+        },
+        {
+          "tag": "plainspoken_voice",
+          "aliases": [
+            "conversational_delivery",
+            "plainspoken_delivery",
+            "spoken_sung"
+          ],
+          "analyst_note": "Conversational, direct, talk-like, understated, or unornamented delivery.",
+          "use_when": "The song’s trust signal comes from directness or speech-like delivery.",
+          "do_not_use_when": "Do not use for rap flow unless the central route is spoken directness rather than rhythmic flow.",
+          "example_song_ids": [
+            "f4-024-song-american-pie-don-mclean",
+            "f4-024-song-fire-and-rain-james-taylor",
+            "f4-025-song-piano-man-billy-joel",
+            "f4-026-song-this-land-is-your-land-woody-guthrie",
+            "f4-027-song-pancho-and-lefty-townes-van-zandt",
+            "f4-028-song-windfall-son-volt"
+          ]
+        },
+        {
+          "tag": "detached_cool",
+          "aliases": [
+            "cool_delivery",
+            "deadpan_delivery",
+            "minimal_vocal"
+          ],
+          "analyst_note": "Emotionally withheld, stylized, deadpan, or coolly controlled delivery.",
+          "use_when": "The vocal stance is detached, icy, blasé, or intentionally non-demonstrative.",
+          "do_not_use_when": "Do not use for weak singing or low affect that is not aesthetically purposeful.",
+          "example_song_ids": [
+            "the-clash-london-calling",
+            "talking-heads-once-in-a-lifetime",
+            "joy-division-love-will-tear-us-apart",
+            "the-police-every-breath-you-take",
+            "depeche-mode-enjoy-the-silence",
+            "gang-of-four-damaged-goods"
+          ]
+        },
+        {
+          "tag": "urgent_delivery",
+          "aliases": [
+            "punk_vocal",
+            "rock_lead",
+            "shouted_vocal",
+            "snotty_vocal"
+          ],
+          "analyst_note": "Pressed, shouted, bratty, rushed, confrontational, or high-urgency delivery.",
+          "use_when": "Vocal urgency is central to energy, rebellion, or pressure.",
+          "do_not_use_when": "Do not use for any fast song by default.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "question-mark-and-the-mysterians-96-tears",
+            "the-kingsmen-louie-louie",
+            "song-stairway-to-heaven-1971",
+            "song-bohemian-rhapsody-1975"
+          ]
+        },
+        {
+          "tag": "raw_confession",
+          "aliases": [
+            "exposed_voice",
+            "self_lacerating_vocal"
+          ],
+          "analyst_note": "Exposed, emotionally naked, shame-bearing, or confessional performance.",
+          "use_when": "The vocal identity carries confession, wound, or self-exposure.",
+          "do_not_use_when": "Do not use for general sadness unless the performance itself feels exposed.",
+          "example_song_ids": [
+            "the-stooges-i-wanna-be-your-dog",
+            "the-velvet-underground-white-light-white-heat",
+            "f4-029-song-mr-jones-counting-crows",
+            "f4-029-song-one-of-us-joan-osborne",
+            "the-dream-syndicate-tell-me-when-it-s-over",
+            "foo-fighters-everlong"
+          ]
+        },
+        {
+          "tag": "close_harmony",
+          "aliases": [
+            "harmony_stack",
+            "vocal_blend"
+          ],
+          "analyst_note": "Tight harmonies, blended group singing, or arranged vocal stacking.",
+          "use_when": "Harmony blend is route-bearing across pop, doo-wop, folk, country, rock, or vocal standards.",
+          "do_not_use_when": "Do not use for background vocals that do not shape the song identity.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "communal_vocal",
+          "aliases": [
+            "call_and_response",
+            "choir_like",
+            "congregational_vocal",
+            "ensemble_vocal",
+            "group_chant",
+            "group_chorus",
+            "group_vocal_identity"
+          ],
+          "analyst_note": "Group, choir, cast, chant, congregation, or crowd identity.",
+          "use_when": "The song works as a shared vocal object or collective vocal surface.",
+          "do_not_use_when": "Do not use for a solo lead with incidental backing vocals.",
+          "example_song_ids": [
+            "ben-e-king-stand-by-me",
+            "ray-charles-whatd-i-say",
+            "sam-cooke-you-send-me",
+            "the-marvelettes-please-mr-postman",
+            "jackie-wilson-lonely-teardrops",
+            "the-beatles-a-hard-days-night"
+          ]
+        },
+        {
+          "tag": "processed_vocal",
+          "aliases": [
+            "autotuned_vocal",
+            "filtered_vocal",
+            "vocoder"
+          ],
+          "analyst_note": "Clearly processed, filtered, vocoded, tuned, or digitally mediated vocal identity.",
+          "use_when": "Processing is central to texture, persona, or genre crossing.",
+          "do_not_use_when": "Do not use when production is polished but the vocal itself is naturalistic.",
+          "example_song_ids": [
+            "rammstein-du-hast",
+            "avicii-wake-me-up",
+            "daft-punk-one-more-time",
+            "m83-midnight-city",
+            "frankie-knuckles-your-love",
+            "massive-attack-teardrop"
+          ]
+        },
+        {
+          "tag": "rhythmic_vocal",
+          "aliases": [
+            "chant_flow",
+            "rap_flow",
+            "spoken_rhythm"
+          ],
+          "analyst_note": "Vocal delivery as rhythmic engine: rap, chant-flow, percussive speech, or flow-forward performance.",
+          "use_when": "The vocal rhythm drives the track.",
+          "do_not_use_when": "Do not use for ordinary melody with a steady beat.",
+          "example_song_ids": [
+            "2pac-feat-dr-dre-california-love",
+            "snoop-dogg-gin-and-juice",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+            "lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+            "lil-wayne-a-milli",
+            "run-dmc-its-like-that"
+          ]
+        },
+        {
+          "tag": "persona_voice",
+          "aliases": [
+            "camp_delivery",
+            "character_voice",
+            "novelty_delivery",
+            "theatrical_character"
+          ],
+          "analyst_note": "Vocal is inseparable from character, persona, parody, camp, or theatrical mask.",
+          "use_when": "The route must understand a constructed persona or character delivery.",
+          "do_not_use_when": "Do not use for any singer with a recognizable style unless persona/character is the point.",
+          "example_song_ids": [
+            "song-virginia-plain-1972",
+            "song-suffragette-city-1972",
+            "motley-crue-dr-feelgood",
+            "def-leppard-pour-some-sugar-on-me",
+            "twisted-sister-we-re-not-gonna-take-it",
+            "madonna-like-a-prayer"
+          ]
+        },
+        {
+          "tag": "instrumental_identity",
+          "aliases": [
+            "instrumental_lead",
+            "no_vocal_identity"
+          ],
+          "analyst_note": "No vocal or vocal is not central; instrumental timbre/motif/performance substitutes for vocal identity.",
+          "use_when": "Instrumental works, scores, jazz features, dance instrumentals, or songs where the lead motif is the “voice.”",
+          "do_not_use_when": "Do not use as a lazy fallback when a vocal actually carries the song.",
+          "example_song_ids": [
+            "the-ventures-walk-dont-run",
+            "jan-and-dean-dead-mans-curve",
+            "frank-sinatra-fly-me-to-the-moon",
+            "andrea-bocelli-con-te-partiro",
+            "billie-holiday-strange-fruit",
+            "dave-brubeck-quartet-take-five"
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "emotion_theme",
+      "definition": "Central emotional or thematic material, independent of whether the song is “liked.”",
+      "canonical_tags": [
+        {
+          "tag": "romantic_longing",
+          "aliases": [
+            "adult_longing",
+            "longing"
+          ],
+          "analyst_note": "Desire for union, yearning, waiting, distance, or unresolved romantic pull.",
+          "use_when": "Romantic wanting is the main emotional engine.",
+          "do_not_use_when": "Do not use for every love song; use more specific tags when grief, bliss, or desire dominates.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "romantic_grief",
+          "aliases": [
+            "bittersweet",
+            "heartbreak",
+            "melancholy",
+            "romantic_damage",
+            "romantic_drama",
+            "wistfulness"
+          ],
+          "analyst_note": "Romantic loss, rejection, breakup ache, betrayal, or devastated attachment.",
+          "use_when": "The song’s romance is defined by hurt or rupture.",
+          "do_not_use_when": "Do not use for light flirtation or generalized longing.",
+          "example_song_ids": [
+            "the-five-satins-in-the-still-of-the-night",
+            "jackie-wilson-lonely-teardrops",
+            "the-beatles-a-hard-days-night",
+            "question-mark-and-the-mysterians-96-tears",
+            "song-back-in-black-1980",
+            "song-bad-moon-rising-1969"
+          ]
+        },
+        {
+          "tag": "desire",
+          "aliases": [
+            "nocturnal_desire",
+            "romantic_desire",
+            "sensuality",
+            "sexual_tension"
+          ],
+          "analyst_note": "Erotic pull, attraction, seduction, bodily desire, or nocturnal sensuality.",
+          "use_when": "Desire or sexual charge is route-bearing.",
+          "do_not_use_when": "Do not use for generic romance without sensual/erotic charge.",
+          "example_song_ids": [
+            "the-shirelles-will-you-love-me-tomorrow",
+            "the-beach-boys-good-vibrations",
+            "tommy-james-and-the-shondells-crimson-and-clover",
+            "waylon-jennings-and-willie-nelson-mammas-don-t-let-your-babies-grow-up-to-be-cowboys",
+            "billy-ray-cyrus-achy-breaky-heart",
+            "the-temptations-my-girl"
+          ]
+        },
+        {
+          "tag": "alienation",
+          "aliases": [
+            "existential_dislocation",
+            "identity_pressure",
+            "isolation",
+            "urban_melancholy"
+          ],
+          "analyst_note": "Estrangement, isolation, dislocation, social unease, or identity pressure.",
+          "use_when": "The emotional route is separation, not just sadness.",
+          "do_not_use_when": "Do not use as a blanket alternative/indie tag.",
+          "example_song_ids": [
+            "the-stooges-i-wanna-be-your-dog",
+            "the-velvet-underground-white-light-white-heat",
+            "f4-029-song-mr-jones-counting-crows",
+            "f4-029-song-one-of-us-joan-osborne",
+            "the-clash-london-calling",
+            "talking-heads-once-in-a-lifetime"
+          ]
+        },
+        {
+          "tag": "rage",
+          "aliases": [
+            "anger",
+            "fury",
+            "self_laceration"
+          ],
+          "analyst_note": "Anger, fury, attack, revenge, or self-directed violence/abrasion.",
+          "use_when": "Anger is a primary emotional driver.",
+          "do_not_use_when": "Do not use merely because guitars are loud.",
+          "example_song_ids": [
+            "question-mark-and-the-mysterians-96-tears",
+            "the-kingsmen-louie-louie",
+            "the-clash-london-calling",
+            "talking-heads-once-in-a-lifetime",
+            "joy-division-love-will-tear-us-apart",
+            "gang-of-four-damaged-goods"
+          ]
+        },
+        {
+          "tag": "rebellion",
+          "aliases": [
+            "defiance",
+            "protest",
+            "social_conscience"
+          ],
+          "analyst_note": "Defiance, protest, anti-authority, political refusal, or social challenge.",
+          "use_when": "The song’s stance is oppositional or resistant.",
+          "do_not_use_when": "Do not use for ordinary youthful energy without a defiant stance.",
+          "example_song_ids": [
+            "the-mamas-and-the-papas-california-dreamin",
+            "buffalo-springfield-for-what-its-worth",
+            "question-mark-and-the-mysterians-96-tears",
+            "the-kingsmen-louie-louie",
+            "f4-026-song-this-land-is-your-land-woody-guthrie",
+            "f4-026-song-blowin-in-the-wind-bob-dylan"
+          ]
+        },
+        {
+          "tag": "celebration",
+          "aliases": [
+            "awe",
+            "dramatic_release",
+            "hopeful_release",
+            "joyful_release",
+            "party",
+            "uplift",
+            "wonder"
+          ],
+          "analyst_note": "Joy, release, triumph, group pleasure, dancing together, or party energy.",
+          "use_when": "The song functions emotionally as release or celebration.",
+          "do_not_use_when": "Do not use for any uptempo track by default.",
+          "example_song_ids": [
+            "chris-montez-lets-dance",
+            "song-stairway-to-heaven-1971",
+            "song-shake-some-action-1976",
+            "turnpike-troubadours-good-lord-lorrie",
+            "marvin-gaye-i-heard-it-through-the-grapevine",
+            "the-temptations-my-girl"
+          ]
+        },
+        {
+          "tag": "nostalgia",
+          "aliases": [
+            "bittersweet_memory",
+            "memory"
+          ],
+          "analyst_note": "Memory, old times, childhood, home, pastness, seasonal recurrence, or sentimental return.",
+          "use_when": "Backward-looking feeling is central.",
+          "do_not_use_when": "Do not use solely because the song is old.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "spiritual_yearning",
+          "aliases": [
+            "devotional_longing",
+            "surrender",
+            "transcendence"
+          ],
+          "analyst_note": "Prayer, longing for God/transcendence, surrender, awe, redemption, or spiritual lift.",
+          "use_when": "Spiritual or transcendent desire is the point.",
+          "do_not_use_when": "Do not use for generic uplift unless it is spiritually framed.",
+          "example_song_ids": [
+            "song-stairway-to-heaven-1971",
+            "turnpike-troubadours-good-lord-lorrie",
+            "the-jesus-lizard-mouth-breather",
+            "madonna-like-a-prayer",
+            "prince-and-the-revolution-purple-rain",
+            "amy-grant-baby-baby"
+          ]
+        },
+        {
+          "tag": "self_mythology",
+          "aliases": [
+            "power_fantasy",
+            "swagger"
+          ],
+          "analyst_note": "Self-construction, swagger, star persona, braggadocio, myth-making, victory pose.",
+          "use_when": "The song builds a persona or triumphal self-image.",
+          "do_not_use_when": "Do not use for ordinary confidence without mythic or performative self-presentation.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "song-stairway-to-heaven-1971",
+            "song-bohemian-rhapsody-1975",
+            "song-dreams-1977",
+            "song-back-in-black-1980"
+          ]
+        },
+        {
+          "tag": "comic_absurdity",
+          "aliases": [
+            "ironic_camp",
+            "novelty_humor"
+          ],
+          "analyst_note": "Comedy, parody, absurdity, knowingly ridiculous premises, or camp humor.",
+          "use_when": "Humor/absurdity is part of how the song should route.",
+          "do_not_use_when": "Do not use for unintentionally silly songs unless the context is camp-sensitive.",
+          "example_song_ids": [
+            "bobby-boris-pickett-monster-mash",
+            "weird-al-yankovic-amish-paradise",
+            "dorian-electra-career-boy",
+            "yeule-dazies"
+          ]
+        },
+        {
+          "tag": "mourning",
+          "aliases": [
+            "death",
+            "grief"
+          ],
+          "analyst_note": "Death, bereavement, lament, elegy, historical trauma, or communal grief.",
+          "use_when": "The emotional center is mourning rather than romance or melancholy.",
+          "do_not_use_when": "Do not use for vague sadness.",
+          "example_song_ids": [
+            "billie-holiday-strange-fruit"
+          ]
+        },
+        {
+          "tag": "dread",
+          "aliases": [
+            "dramatic_tension",
+            "menace",
+            "paranoia"
+          ],
+          "analyst_note": "Threat, fear, menace, paranoia, doom, or ominous tension.",
+          "use_when": "The song creates danger or dread as a key bridge.",
+          "do_not_use_when": "Do not use merely because the song is minor-key.",
+          "example_song_ids": [
+            "the-five-satins-in-the-still-of-the-night",
+            "jackie-wilson-lonely-teardrops",
+            "the-beatles-a-hard-days-night",
+            "song-back-in-black-1980",
+            "song-bad-moon-rising-1969",
+            "joy-division-love-will-tear-us-apart"
+          ]
+        },
+        {
+          "tag": "uplift",
+          "aliases": [
+            "hopeful_release",
+            "hopeful_turn",
+            "cathartic_release",
+            "aspirational_release",
+            "inspirational_lift",
+            "empowerment_release"
+          ],
+          "analyst_note": "Release-oriented, emotionally rising, aspirational, or cathartic positive turn that is not simply celebration, romance, nostalgia, or self-mythology.",
+          "use_when": "Use when the song’s central emotional motion is upward release, resilience, empowerment, or cathartic lift.",
+          "do_not_use_when": "Do not use for every upbeat song; celebration covers party/joy, spiritual_yearning covers devotional reach, and self_mythology covers triumphal persona-making.",
+          "example_song_ids": [
+            "avicii-wake-me-up",
+            "rachel-platten-fight-song",
+            "idina-menzel-let-it-go",
+            "lauren-daigle-you-say"
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "sonic_texture",
+      "definition": "Instrumentation, production feel, surface, density, and sound-world.",
+      "canonical_tags": [
+        {
+          "tag": "guitar_forward",
+          "aliases": [
+            "bright_guitar",
+            "chime_guitar",
+            "jangly_guitar",
+            "raw_guitar",
+            "rock_guitar",
+            "twangy_guitar",
+            "twin_guitar"
+          ],
+          "analyst_note": "Guitar is central to the track’s identity, but not necessarily distorted.",
+          "use_when": "Guitar timbre/riff/strum is a primary route-bearing surface.",
+          "do_not_use_when": "Do not use for incidental guitar in a production-dominant pop song.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "the-beatles-a-hard-days-night",
+            "the-mamas-and-the-papas-california-dreamin",
+            "the-kinks-you-really-got-me",
+            "buffalo-springfield-for-what-its-worth"
+          ]
+        },
+        {
+          "tag": "distorted_guitar",
+          "aliases": [
+            "crunchy_guitar_pop",
+            "fuzz_guitar",
+            "noise_texture"
+          ],
+          "analyst_note": "Distortion, fuzz, crunch, noise, or abrasive guitar surface.",
+          "use_when": "Distorted guitar texture creates pressure, bite, or heaviness.",
+          "do_not_use_when": "Do not use for clean rock guitar.",
+          "example_song_ids": [
+            "question-mark-and-the-mysterians-96-tears",
+            "the-stooges-i-wanna-be-your-dog",
+            "the-kingsmen-louie-louie",
+            "the-velvet-underground-white-light-white-heat",
+            "song-back-in-black-1980",
+            "song-my-sharona-1979"
+          ]
+        },
+        {
+          "tag": "acoustic_intimate",
+          "aliases": [
+            "folk_acoustic",
+            "sparse_acoustic"
+          ],
+          "analyst_note": "Acoustic, small-room, sparse, or close-grained instrumentation.",
+          "use_when": "The acoustic surface creates intimacy or plainspokenness.",
+          "do_not_use_when": "Do not use for all country/folk songs automatically.",
+          "example_song_ids": [
+            "f4-024-song-american-pie-don-mclean",
+            "f4-024-song-fire-and-rain-james-taylor",
+            "f4-025-song-piano-man-billy-joel",
+            "f4-026-song-this-land-is-your-land-woody-guthrie",
+            "f4-027-song-pancho-and-lefty-townes-van-zandt",
+            "f4-028-song-windfall-son-volt"
+          ]
+        },
+        {
+          "tag": "piano_led",
+          "aliases": [
+            "piano_ballad",
+            "piano_loop"
+          ],
+          "analyst_note": "Piano carries harmony, hook, rhythm, or emotional identity.",
+          "use_when": "Piano is the lead structural or emotional instrument.",
+          "do_not_use_when": "Do not use for background piano decoration.",
+          "example_song_ids": [
+            "f4-024-song-american-pie-don-mclean",
+            "f4-024-song-fire-and-rain-james-taylor",
+            "f4-025-song-piano-man-billy-joel",
+            "f4-026-song-this-land-is-your-land-woody-guthrie",
+            "f4-027-song-pancho-and-lefty-townes-van-zandt",
+            "f4-028-song-windfall-son-volt"
+          ]
+        },
+        {
+          "tag": "orchestral_swell",
+          "aliases": [
+            "lush_strings",
+            "orchestral_fanfare",
+            "string_arrangement"
+          ],
+          "analyst_note": "Strings/orchestra/symphonic lift or swelling arrangement.",
+          "use_when": "Orchestral scale or string arrangement materially shapes emotion/form.",
+          "do_not_use_when": "Do not use for tiny string pads without route impact.",
+          "example_song_ids": [
+            "the-shirelles-will-you-love-me-tomorrow",
+            "the-marvelettes-please-mr-postman",
+            "frank-sinatra-fly-me-to-the-moon",
+            "andrea-bocelli-con-te-partiro",
+            "billie-holiday-strange-fruit",
+            "dave-brubeck-quartet-take-five"
+          ]
+        },
+        {
+          "tag": "horn_arrangement",
+          "aliases": [
+            "brass_stabs",
+            "mariachi_horns"
+          ],
+          "analyst_note": "Horns, brass, sax sections, mariachi horns, or punchy horn architecture.",
+          "use_when": "Horn writing is a connective texture across soul, jazz, Latin, pop, or rock.",
+          "do_not_use_when": "Do not use for a single incidental horn unless it defines the hook.",
+          "example_song_ids": [
+            "ben-e-king-stand-by-me",
+            "ray-charles-whatd-i-say",
+            "sam-cooke-you-send-me",
+            "jackie-wilson-lonely-teardrops",
+            "johnny-cash-ring-of-fire",
+            "marvin-gaye-i-heard-it-through-the-grapevine"
+          ]
+        },
+        {
+          "tag": "synthetic_texture",
+          "aliases": [
+            "drum_machine",
+            "electronic_gloss",
+            "electronic_pulse",
+            "programmed_drums",
+            "string_synth_hook",
+            "synth_bass",
+            "synth_forward"
+          ],
+          "analyst_note": "Synths, electronic sheen, programmed timbres, or synthetic lead/bass surfaces.",
+          "use_when": "Synthetic timbre is a core part of the song’s identity.",
+          "do_not_use_when": "Do not use merely because a modern record has digital production.",
+          "example_song_ids": [
+            "f4-029-song-mr-jones-counting-crows",
+            "f4-029-song-one-of-us-joan-osborne",
+            "mary-j-blige-real-love",
+            "the-police-every-breath-you-take",
+            "depeche-mode-enjoy-the-silence",
+            "split-enz-i-got-you"
+          ]
+        },
+        {
+          "tag": "heavy_low_end",
+          "aliases": [
+            "808_low_end",
+            "bass_forward",
+            "low_end_pressure"
+          ],
+          "analyst_note": "Bass, sub-bass, down-tuned weight, or low-end pressure is central.",
+          "use_when": "The body-force or menace comes from low end.",
+          "do_not_use_when": "Do not use for any bassline that is simply present.",
+          "example_song_ids": [
+            "song-back-in-black-1980",
+            "james-brown-get-up-i-feel-like-being-a-sex-machine",
+            "parliament-give-up-the-funk",
+            "2pac-feat-dr-dre-california-love",
+            "snoop-dogg-gin-and-juice",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up"
+          ]
+        },
+        {
+          "tag": "raw_live_band",
+          "aliases": [
+            "band_in_room",
+            "garage_band",
+            "raw_band_energy"
+          ],
+          "analyst_note": "Band-in-room, live, rough, garage, or unvarnished ensemble force.",
+          "use_when": "The sound-world is physical ensemble presence rather than studio polish.",
+          "do_not_use_when": "Do not use for every rock band.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "question-mark-and-the-mysterians-96-tears",
+            "the-kingsmen-louie-louie",
+            "the-clash-london-calling",
+            "talking-heads-once-in-a-lifetime"
+          ]
+        },
+        {
+          "tag": "polished_studio",
+          "aliases": [
+            "familiar_production",
+            "max_martin_pop",
+            "modern_production",
+            "smooth_studio"
+          ],
+          "analyst_note": "Clean, glossy, radio-ready, highly controlled studio surface.",
+          "use_when": "Polish is route-relevant, especially for pop, adult, worship, R&B, or soft-rock objects.",
+          "do_not_use_when": "Do not use as praise or criticism; pair with emotion/form tags.",
+          "example_song_ids": [
+            "song-dreams-1977",
+            "song-your-song-1970",
+            "song-lowdown-1976",
+            "donna-summer-hot-stuff",
+            "sister-sledge-we-are-family",
+            "drake-hotline-bling"
+          ]
+        },
+        {
+          "tag": "studio_architecture",
+          "aliases": [
+            "album_rock_production",
+            "cinematic_production",
+            "studio_expansion"
+          ],
+          "analyst_note": "Production is architected as a world: layers, transitions, spatial design, arrangement drama.",
+          "use_when": "The recording’s built environment is part of the composition.",
+          "do_not_use_when": "Do not use for generic polish.",
+          "example_song_ids": [
+            "the-beatles-a-hard-days-night",
+            "the-mamas-and-the-papas-california-dreamin",
+            "the-kinks-you-really-got-me",
+            "buffalo-springfield-for-what-its-worth",
+            "the-beach-boys-good-vibrations",
+            "question-mark-and-the-mysterians-96-tears"
+          ]
+        },
+        {
+          "tag": "dark_atmosphere",
+          "aliases": [
+            "downtempo_texture",
+            "nocturnal_texture",
+            "psychic_drift"
+          ],
+          "analyst_note": "Shadowy, nocturnal, hazy, narcotic, ominous, or enveloping atmosphere.",
+          "use_when": "Mood/atmosphere is the connective texture.",
+          "do_not_use_when": "Do not use solely because lyrics are sad.",
+          "example_song_ids": [
+            "the-five-satins-in-the-still-of-the-night",
+            "jackie-wilson-lonely-teardrops",
+            "the-beatles-a-hard-days-night",
+            "the-beach-boys-good-vibrations",
+            "donovan-hurdy-gurdy-man",
+            "tommy-james-and-the-shondells-crimson-and-clover"
+          ]
+        },
+        {
+          "tag": "sample_based",
+          "aliases": [
+            "chopped_sample",
+            "loop_based"
+          ],
+          "analyst_note": "Samples, loops, collage, beat-making, or repurposed audio as central texture.",
+          "use_when": "Sample/loop logic materially shapes the song.",
+          "do_not_use_when": "Do not use for ordinary repetition without sample/collage identity.",
+          "example_song_ids": [
+            "2pac-feat-dr-dre-california-love",
+            "snoop-dogg-gin-and-juice",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+            "lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+            "lil-wayne-a-milli",
+            "run-dmc-its-like-that"
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "rhythm_body",
+      "definition": "Movement, pulse, groove, bodily feel, pacing, and energy shape.",
+      "canonical_tags": [
+        {
+          "tag": "backbeat_stomp",
+          "aliases": [
+            "backbeat",
+            "clap_groove",
+            "handclap_groove",
+            "stomp"
+          ],
+          "analyst_note": "Direct backbeat, stomp, claps, or blunt physical pulse.",
+          "use_when": "The song is carried by a simple bodily backbeat/stomp.",
+          "do_not_use_when": "Do not use for every 4/4 track.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "driving_eighths",
+          "aliases": [
+            "breathless_pulse",
+            "motorik",
+            "motorik_pulse",
+            "nervous_pulse",
+            "post_punk_drive",
+            "speed_drive"
+          ],
+          "analyst_note": "Forward-motion eighth-note drive or propulsion.",
+          "use_when": "The route depends on relentless forward motion.",
+          "do_not_use_when": "Do not use for merely medium-tempo rock.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "jan-and-dean-dead-mans-curve",
+            "the-beatles-a-hard-days-night",
+            "the-mamas-and-the-papas-california-dreamin",
+            "the-kinks-you-really-got-me"
+          ]
+        },
+        {
+          "tag": "groove_locked",
+          "aliases": [
+            "groove_band",
+            "head_nod",
+            "laid_back_groove",
+            "slow_groove"
+          ],
+          "analyst_note": "Tight, repeated, body-centered groove that locks in.",
+          "use_when": "Groove continuity is the central bodily feel.",
+          "do_not_use_when": "Do not use for all dance tracks; use dancefloor when public dance function dominates.",
+          "example_song_ids": [
+            "ben-e-king-stand-by-me",
+            "ray-charles-whatd-i-say",
+            "sam-cooke-you-send-me",
+            "the-marvelettes-please-mr-postman",
+            "chris-montez-lets-dance",
+            "jackie-wilson-lonely-teardrops"
+          ]
+        },
+        {
+          "tag": "dancefloor",
+          "aliases": [
+            "club_pulse",
+            "four_on_floor"
+          ],
+          "analyst_note": "Public dance orientation, club motion, disco/house/pop-dance utility, or four-on-floor lift.",
+          "use_when": "The track routes as dance music or danceable pop.",
+          "do_not_use_when": "Do not use for any song that merely has rhythm.",
+          "example_song_ids": [
+            "chris-montez-lets-dance",
+            "song-shake-some-action-1976",
+            "f4-029-song-mr-jones-counting-crows",
+            "f4-029-song-one-of-us-joan-osborne",
+            "marvin-gaye-i-heard-it-through-the-grapevine",
+            "the-temptations-my-girl"
+          ]
+        },
+        {
+          "tag": "syncopated_groove",
+          "aliases": [
+            "fragmented_pulse",
+            "stutter_pulse"
+          ],
+          "analyst_note": "Offbeat, stuttered, syncopated, chopped, or displaced rhythmic motion.",
+          "use_when": "Syncopation or rhythmic interruption is route-bearing.",
+          "do_not_use_when": "Do not use for ordinary backbeat swing.",
+          "example_song_ids": [
+            "james-brown-get-up-i-feel-like-being-a-sex-machine",
+            "parliament-give-up-the-funk",
+            "2pac-feat-dr-dre-california-love",
+            "snoop-dogg-gin-and-juice",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+            "lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low"
+          ]
+        },
+        {
+          "tag": "ballad_pacing",
+          "aliases": [
+            "midtempo_sway",
+            "slow_dance"
+          ],
+          "analyst_note": "Slow, deliberate, ballad-paced, or steady emotional pacing.",
+          "use_when": "Pacing matters more than groove or propulsion.",
+          "do_not_use_when": "Do not use for slow songs that are actually slow-burn builds.",
+          "example_song_ids": [
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "jackie-wilson-lonely-teardrops",
+            "question-mark-and-the-mysterians-96-tears",
+            "song-dreams-1977"
+          ]
+        },
+        {
+          "tag": "slow_burn",
+          "aliases": [
+            "cinematic_build",
+            "hypnotic_pulse",
+            "slow_build"
+          ],
+          "analyst_note": "Gradual accumulation, long arc, trance build, or cinematic growth.",
+          "use_when": "The song’s payoff depends on cumulative build.",
+          "do_not_use_when": "Do not use for any long song without a build arc.",
+          "example_song_ids": [
+            "the-beach-boys-good-vibrations",
+            "donovan-hurdy-gurdy-man",
+            "tommy-james-and-the-shondells-crimson-and-clover",
+            "james-brown-get-up-i-feel-like-being-a-sex-machine",
+            "parliament-give-up-the-funk",
+            "mazzy-star-fade-into-you"
+          ]
+        },
+        {
+          "tag": "anthemic_build",
+          "aliases": [
+            "anthemic_chorus",
+            "chorus_lift"
+          ],
+          "analyst_note": "Build toward shared chorus, lift, chant, or stadium-scale release.",
+          "use_when": "The song is structured toward collective lift.",
+          "do_not_use_when": "Do not use for private/intimate choruses.",
+          "example_song_ids": [
+            "song-stairway-to-heaven-1971",
+            "song-bohemian-rhapsody-1975",
+            "song-dreams-1977",
+            "song-back-in-black-1980",
+            "song-sweet-home-alabama-1974",
+            "song-money-1973"
+          ]
+        },
+        {
+          "tag": "explosive_chorus",
+          "aliases": [
+            "drop_release",
+            "dynamic_shift"
+          ],
+          "analyst_note": "Verse/chorus contrast, loud arrival, drop, or cathartic eruption.",
+          "use_when": "The chorus/drop explosion is the body event.",
+          "do_not_use_when": "Do not use for songs with consistent dynamics.",
+          "example_song_ids": [
+            "the-stooges-i-wanna-be-your-dog",
+            "the-velvet-underground-white-light-white-heat",
+            "song-money-1973",
+            "song-tom-sawyer-1981",
+            "f4-029-song-mr-jones-counting-crows",
+            "f4-029-song-one-of-us-joan-osborne"
+          ]
+        },
+        {
+          "tag": "mosh_energy",
+          "aliases": [
+            "aggression_drive",
+            "slam_energy"
+          ],
+          "analyst_note": "Physical impact energy suited to punk/metal/hardcore/alt-rock impact.",
+          "use_when": "The body feel is collision, slam, or aggressive release.",
+          "do_not_use_when": "Do not use for merely loud classic rock.",
+          "example_song_ids": [
+            "question-mark-and-the-mysterians-96-tears",
+            "the-kingsmen-louie-louie",
+            "song-back-in-black-1980",
+            "the-clash-london-calling",
+            "talking-heads-once-in-a-lifetime",
+            "joy-division-love-will-tear-us-apart"
+          ]
+        },
+        {
+          "tag": "minimal_pulse",
+          "aliases": [
+            "sparse_pulse"
+          ],
+          "analyst_note": "Sparse, reduced, minimal, or barely-there pulse.",
+          "use_when": "The track routes through restraint or minimal motion.",
+          "do_not_use_when": "Do not use for empty arrangements if rhythm is not meaningful.",
+          "example_song_ids": [
+            "depeche-mode-enjoy-the-silence",
+            "avicii-wake-me-up",
+            "daft-punk-one-more-time",
+            "m83-midnight-city",
+            "frankie-knuckles-your-love",
+            "massive-attack-teardrop"
+          ]
+        },
+        {
+          "tag": "swing_shuffle",
+          "aliases": [
+            "boogie",
+            "gentle_lilt",
+            "lilt",
+            "lilt_sway",
+            "shuffle",
+            "sway",
+            "swing",
+            "swinging_pop",
+            "train_beat",
+            "two_step"
+          ],
+          "analyst_note": "Swing, shuffle, two-step, boogie, train beat, or rolling rhythmic feel.",
+          "use_when": "The rhythmic feel is swung/rolling rather than straight.",
+          "do_not_use_when": "Do not use as a country/blues blanket tag.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "form_container",
+      "definition": "Song architecture, object type, performance container, and format. Social use-case belongs in social_context, not here.",
+      "canonical_tags": [
+        {
+          "tag": "single_craft",
+          "aliases": [
+            "adult_pop_single",
+            "country_radio_single",
+            "crossover_single",
+            "primitive_rock_single",
+            "song_factory_single",
+            "verse_hook_single"
+          ],
+          "analyst_note": "Compact song built around hook, verse/chorus craft, radio legibility, or single-object impact.",
+          "use_when": "The object is best understood as a crafted single.",
+          "do_not_use_when": "Do not use alone to build edges; pair with emotion/texture/rhythm tags.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "album_world",
+          "aliases": [
+            "album_experience",
+            "concept_album_object"
+          ],
+          "analyst_note": "Song is best interpreted inside a larger album-world or immersive record environment.",
+          "use_when": "The track’s route value depends on its album/container context.",
+          "do_not_use_when": "Do not use for any album track by default.",
+          "example_song_ids": [
+            "the-stooges-i-wanna-be-your-dog",
+            "the-velvet-underground-white-light-white-heat",
+            "song-stairway-to-heaven-1971",
+            "song-bohemian-rhapsody-1975",
+            "song-dreams-1977",
+            "song-back-in-black-1980"
+          ]
+        },
+        {
+          "tag": "narrative_song",
+          "aliases": [
+            "message_song",
+            "story_song",
+            "street_narrative",
+            "testimony_song"
+          ],
+          "analyst_note": "Song tells a story, testimony, message, scene, or character arc.",
+          "use_when": "Narrative content is central to form.",
+          "do_not_use_when": "Do not use for lyrics that merely contain events.",
+          "example_song_ids": [
+            "the-mamas-and-the-papas-california-dreamin",
+            "buffalo-springfield-for-what-its-worth",
+            "f4-024-song-american-pie-don-mclean",
+            "f4-024-song-fire-and-rain-james-taylor",
+            "f4-025-song-piano-man-billy-joel",
+            "f4-026-song-this-land-is-your-land-woody-guthrie"
+          ]
+        },
+        {
+          "tag": "anthem",
+          "aliases": [
+            "bridge_record",
+            "classic_rock_anchor",
+            "crossover_bridge",
+            "pop_monoculture_object",
+            "scene_anchor"
+          ],
+          "analyst_note": "Song functions as an anthem, scene marker, or large shared cultural anchor.",
+          "use_when": "The form is built for collective recognition or anthem-scale deployment.",
+          "do_not_use_when": "Do not use simply because a song is famous.",
+          "example_song_ids": [
+            "the-beatles-a-hard-days-night",
+            "the-mamas-and-the-papas-california-dreamin",
+            "the-kinks-you-really-got-me",
+            "buffalo-springfield-for-what-its-worth",
+            "the-beach-boys-good-vibrations",
+            "question-mark-and-the-mysterians-96-tears"
+          ]
+        },
+        {
+          "tag": "chorus_machine",
+          "aliases": [
+            "hook_machine"
+          ],
+          "analyst_note": "Song is heavily organized around repeatable, high-impact hook/chorus machinery.",
+          "use_when": "The chorus/hook engine dominates form.",
+          "do_not_use_when": "Do not use for all pop singles.",
+          "example_song_ids": [
+            "song-my-sharona-1979",
+            "song-just-what-i-needed-1978",
+            "song-shake-some-action-1976",
+            "the-police-every-breath-you-take",
+            "split-enz-i-got-you",
+            "foo-fighters-everlong"
+          ]
+        },
+        {
+          "tag": "riff_song",
+          "aliases": [
+            "riff_vehicle"
+          ],
+          "analyst_note": "Song’s architecture is organized around a riff or repeated instrumental hook.",
+          "use_when": "The riff is the formal anchor.",
+          "do_not_use_when": "Do not use for any guitar song.",
+          "example_song_ids": [
+            "song-back-in-black-1980",
+            "motorhead-ace-of-spades",
+            "ozzy-osbourne-crazy-train",
+            "rammstein-du-hast",
+            "metallica-enter-sandman",
+            "motley-crue-dr-feelgood"
+          ]
+        },
+        {
+          "tag": "club_track",
+          "aliases": [
+            "dance_single"
+          ],
+          "analyst_note": "Track is built as a dance/club object rather than simply pop with a beat.",
+          "use_when": "DJ/club/dance structure matters to form.",
+          "do_not_use_when": "Do not use when social context is danceable but form is radio-pop.",
+          "example_song_ids": [
+            "daft-punk-one-more-time",
+            "frankie-knuckles-your-love",
+            "mr-fingers-can-you-feel-it"
+          ]
+        },
+        {
+          "tag": "soundtrack_object",
+          "aliases": [
+            "family_soundtrack",
+            "film_score",
+            "soundtrack_context"
+          ],
+          "analyst_note": "Song/recording is materially tied to film, TV, stage, score, or screen narrative.",
+          "use_when": "Its object identity is soundtrack/score/cinematic.",
+          "do_not_use_when": "Do not use for songs merely used in many movies.",
+          "example_song_ids": [
+            "john-williams-main-title",
+            "vangelis-chariots-of-fire",
+            "john-williams-the-imperial-march",
+            "john-williams-hedwig-s-theme",
+            "hans-zimmer-time"
+          ]
+        },
+        {
+          "tag": "standard_interpretation",
+          "aliases": [
+            "crooner_standard",
+            "jazz_standard",
+            "standard"
+          ],
+          "analyst_note": "Standard, canonical vocal/jazz tune, or interpretation-oriented object.",
+          "use_when": "The route should account for performance tradition and interpretive versions.",
+          "do_not_use_when": "Do not use for every old song.",
+          "example_song_ids": [
+            "frank-sinatra-fly-me-to-the-moon",
+            "andrea-bocelli-con-te-partiro",
+            "billie-holiday-strange-fruit",
+            "dave-brubeck-quartet-take-five",
+            "grover-washington-jr-featuring-bill-withers-just-the-two-of-us",
+            "diana-krall-the-look-of-love"
+          ]
+        },
+        {
+          "tag": "concept_piece",
+          "aliases": [
+            "suite_like",
+            "theater_number"
+          ],
+          "analyst_note": "Suite-like, theatrical, conceptual, dramatic-scene, or multi-section composition.",
+          "use_when": "The song is not just verse/chorus; concept or staged architecture matters.",
+          "do_not_use_when": "Do not use for any song from a concept album.",
+          "example_song_ids": [
+            "song-money-1973",
+            "song-tom-sawyer-1981",
+            "carolina-gaitan-mauro-castillo-adassa-rhenzy-feliz-diane-guerrero-stephanie-beatriz-and-encanto-cast-we-don-t-talk-about-bruno",
+            "idina-menzel-let-it-go",
+            "prince-and-the-revolution-purple-rain",
+            "whitney-houston-i-will-always-love-you"
+          ]
+        },
+        {
+          "tag": "jam_vehicle",
+          "aliases": [
+            "groove_vehicle",
+            "instrumental_showpiece"
+          ],
+          "analyst_note": "Extended performance, soloing, groove exploration, or instrumental feature vehicle.",
+          "use_when": "The song is route-useful as a performance/groove vehicle.",
+          "do_not_use_when": "Do not use for every instrumental.",
+          "example_song_ids": [
+            "jan-and-dean-dead-mans-curve",
+            "song-sweet-home-alabama-1974",
+            "al-green-lets-stay-together",
+            "aretha-franklin-respect",
+            "otis-redding-sittin-on-the-dock-of-the-bay",
+            "james-brown-get-up-i-feel-like-being-a-sex-machine"
+          ]
+        },
+        {
+          "tag": "novelty_object",
+          "aliases": [
+            "camp_object",
+            "novelty_context"
+          ],
+          "analyst_note": "Novelty, camp, parody, children’s, meme, or joke-adjacent object.",
+          "use_when": "The object type itself demands novelty/camp handling.",
+          "do_not_use_when": "Do not use for unusual songs unless novelty/camp is the actual container.",
+          "example_song_ids": [
+            "song-virginia-plain-1972",
+            "song-suffragette-city-1972",
+            "motley-crue-dr-feelgood",
+            "def-leppard-pour-some-sugar-on-me",
+            "twisted-sister-we-re-not-gonna-take-it",
+            "bobby-boris-pickett-monster-mash"
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "social_context",
+      "definition": "Likely social/use setting or contextual container. These are not risk judgments and not preference claims.",
+      "canonical_tags": [
+        {
+          "tag": "party_context",
+          "aliases": [
+            "party"
+          ],
+          "analyst_note": "Social party, bar, house party, reception, or shared fun setting.",
+          "use_when": "The song is strongly associated with party use.",
+          "do_not_use_when": "Do not use for all celebratory songs; use celebration in emotion_theme if no social container is implied.",
+          "example_song_ids": [
+            "chris-montez-lets-dance",
+            "song-shake-some-action-1976",
+            "parliament-give-up-the-funk",
+            "2pac-feat-dr-dre-california-love",
+            "snoop-dogg-gin-and-juice",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up"
+          ]
+        },
+        {
+          "tag": "dance_context",
+          "aliases": [
+            "club_context",
+            "dancefloor_context"
+          ],
+          "analyst_note": "General dance/social dancing context outside strictly club form.",
+          "use_when": "People are expected to move/dance socially to it.",
+          "do_not_use_when": "Do not use when rhythm is danceable but context is private listening.",
+          "example_song_ids": [
+            "cupid-cupid-shuffle",
+            "dj-casper-cha-cha-slide",
+            "los-del-rio-macarena"
+          ]
+        },
+        {
+          "tag": "karaoke_context",
+          "aliases": [
+            "singalong_context"
+          ],
+          "analyst_note": "Karaoke, singalong, bar-room belting, or communal amateur performance.",
+          "use_when": "The song has singalong/karaoke gravity.",
+          "do_not_use_when": "Do not use merely because the chorus is catchy.",
+          "example_song_ids": [
+            "idina-menzel-let-it-go",
+            "bon-jovi-livin-on-a-prayer",
+            "garth-brooks-friends-in-low-places",
+            "bing-crosby-white-christmas",
+            "brenda-lee-rockin-around-the-christmas-tree",
+            "nat-king-cole-the-christmas-song"
+          ]
+        },
+        {
+          "tag": "wedding_context",
+          "aliases": [
+            "first_dance_context",
+            "reception_context"
+          ],
+          "analyst_note": "Wedding, first dance, reception, or romantic ceremony context.",
+          "use_when": "The song is strongly tied to wedding/romance ceremony use.",
+          "do_not_use_when": "Do not use for all love songs.",
+          "example_song_ids": [
+            "whitney-houston-i-will-always-love-you",
+            "elton-john-can-you-feel-the-love-tonight",
+            "peabo-bryson-and-regina-belle-a-whole-new-world"
+          ]
+        },
+        {
+          "tag": "holiday_context",
+          "aliases": [
+            "christmas_context"
+          ],
+          "analyst_note": "Holiday, Christmas, seasonal ritual, or annual recurrence context.",
+          "use_when": "Seasonal use materially shapes routing.",
+          "do_not_use_when": "Do not use only because song mentions a season.",
+          "example_song_ids": [
+            "bing-crosby-white-christmas",
+            "brenda-lee-rockin-around-the-christmas-tree",
+            "nat-king-cole-the-christmas-song"
+          ]
+        },
+        {
+          "tag": "family_shared_context",
+          "aliases": [
+            "family_safe",
+            "family_soundtrack",
+            "kids_context",
+            "shared_listening_object"
+          ],
+          "analyst_note": "Family listening, children’s context, household-safe shared object, or cross-age familiarity.",
+          "use_when": "Family/shared setting is central.",
+          "do_not_use_when": "Do not use as a moral approval tag.",
+          "example_song_ids": [
+            "carolina-gaitan-mauro-castillo-adassa-rhenzy-feliz-diane-guerrero-stephanie-beatriz-and-encanto-cast-we-don-t-talk-about-bruno",
+            "idina-menzel-let-it-go",
+            "elton-john-can-you-feel-the-love-tonight",
+            "peabo-bryson-and-regina-belle-a-whole-new-world",
+            "bon-jovi-livin-on-a-prayer",
+            "garth-brooks-friends-in-low-places"
+          ]
+        },
+        {
+          "tag": "worship_context",
+          "aliases": [
+            "devotional_object",
+            "hymn_object"
+          ],
+          "analyst_note": "Congregational, devotional, church, faith community, or worship setting.",
+          "use_when": "The song is likely used or understood in religious practice/community.",
+          "do_not_use_when": "Do not use for secular songs with spiritual metaphors.",
+          "example_song_ids": [
+            "chris-tomlin-how-great-is-our-god",
+            "hillsong-worship-what-a-beautiful-name",
+            "sinach-way-maker"
+          ]
+        },
+        {
+          "tag": "soundtrack_context",
+          "aliases": [
+            "disney_context",
+            "film_tv_context"
+          ],
+          "analyst_note": "Film, TV, musical, trailer, score, Disney, or screen-associated listening context.",
+          "use_when": "Screen/stage context shapes expectations.",
+          "do_not_use_when": "Do not use when the song is simply cinematic in production.",
+          "example_song_ids": [
+            "carolina-gaitan-mauro-castillo-adassa-rhenzy-feliz-diane-guerrero-stephanie-beatriz-and-encanto-cast-we-don-t-talk-about-bruno",
+            "idina-menzel-let-it-go",
+            "prince-and-the-revolution-purple-rain",
+            "whitney-houston-i-will-always-love-you",
+            "john-williams-main-title",
+            "idina-menzel-and-kristin-chenoweth-defying-gravity"
+          ]
+        },
+        {
+          "tag": "nostalgia_context",
+          "aliases": [
+            "childhood_context",
+            "oldies_context"
+          ],
+          "analyst_note": "Oldies, childhood, throwback, generational memory, or context-first familiarity.",
+          "use_when": "The route must account for memory/context rather than pure affinity.",
+          "do_not_use_when": "Do not use solely due to release age.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "communal_ritual_context",
+          "aliases": [
+            "chant_context",
+            "stadium_context"
+          ],
+          "analyst_note": "Stadium, chant, ritual, march, service, mass participation, or collective repetition context.",
+          "use_when": "The song works as a ritual/shared participation object.",
+          "do_not_use_when": "Do not use for solo listening anthems unless participation is central.",
+          "example_song_ids": []
+        }
+      ]
+    },
+    {
+      "dimension_id": "routing_caution",
+      "definition": "Special handling warnings for mission sequencing, route construction, feedback interpretation, and whiplash control. These are not moral judgments.",
+      "canonical_tags": [
+        {
+          "tag": "safe_gateway",
+          "aliases": [],
+          "analyst_note": "Accessible entry point into a family, archetype, or route.",
+          "use_when": "Use when song can safely introduce a route without over-testing the listener.",
+          "do_not_use_when": "Do not use as a synonym for mass-recognition; the song must also be route-legible.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "the-beatles-a-hard-days-night"
+          ]
+        },
+        {
+          "tag": "overfamiliar_anchor",
+          "aliases": [],
+          "analyst_note": "Massively familiar song whose familiarity may swamp true affinity signal.",
+          "use_when": "Use when recognition/context may distort user feedback.",
+          "do_not_use_when": "Do not use for merely well-known songs; reserve for potentially signal-distorting anchors.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "elvis-presley-all-shook-up",
+            "the-five-satins-in-the-still-of-the-night",
+            "the-flamingos-i-only-have-eyes-for-you",
+            "the-penguins-earth-angel",
+            "ricky-nelson-poor-little-fool"
+          ]
+        },
+        {
+          "tag": "high_whiplash",
+          "aliases": [],
+          "analyst_note": "Abrupt sound/context/emotional jump likely to require sequencing care.",
+          "use_when": "Use for extreme metal, hyperpop, abrasive noise, odd novelty, or sudden cross-context jumps.",
+          "do_not_use_when": "Do not use for ordinary genre difference.",
+          "example_song_ids": [
+            "question-mark-and-the-mysterians-96-tears",
+            "the-kingsmen-louie-louie",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+            "lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+            "lil-wayne-a-milli",
+            "the-clash-london-calling"
+          ]
+        },
+        {
+          "tag": "false_nearby_risk",
+          "aliases": [
+            "boundary_candidate"
+          ],
+          "analyst_note": "Looks adjacent by genre/surface but may fail because the underlying affinity function differs.",
+          "use_when": "Use where graph proximity could misroute users.",
+          "do_not_use_when": "Do not use for all boundary songs; specify the false-nearby concern in notes.",
+          "example_song_ids": [
+            "gene-vincent-be-bop-a-lula",
+            "the-ventures-walk-dont-run",
+            "jan-and-dean-dead-mans-curve",
+            "the-kingsmen-louie-louie",
+            "donovan-hurdy-gurdy-man",
+            "the-velvet-underground-white-light-white-heat"
+          ]
+        },
+        {
+          "tag": "requires_framing",
+          "aliases": [
+            "first_pack_caution"
+          ],
+          "analyst_note": "Needs explanatory setup, mission framing, or surrounding context before presentation.",
+          "use_when": "Use where user response depends heavily on expectation-setting.",
+          "do_not_use_when": "Do not use simply because the song is obscure.",
+          "example_song_ids": [
+            "the-animals-house-of-the-rising-sun",
+            "tommy-james-and-the-shondells-crimson-and-clover",
+            "song-money-1973",
+            "song-tom-sawyer-1981",
+            "fugazi-waiting-room",
+            "black-flag-rise-above"
+          ]
+        },
+        {
+          "tag": "context_dependent",
+          "aliases": [],
+          "analyst_note": "Meaning/use changes strongly by setting: party, worship, holiday, family, movie, nostalgia, meme, etc.",
+          "use_when": "Use when feedback should be interpreted through context before taste inference.",
+          "do_not_use_when": "Do not use as a vague uncertainty label.",
+          "example_song_ids": [
+            "the-animals-house-of-the-rising-sun",
+            "avicii-wake-me-up",
+            "daft-punk-one-more-time",
+            "m83-midnight-city",
+            "frankie-knuckles-your-love",
+            "massive-attack-teardrop"
+          ]
+        },
+        {
+          "tag": "explicit_context",
+          "aliases": [],
+          "analyst_note": "Explicit lyrical/content context may affect routing, family setting, or tester comfort.",
+          "use_when": "Use for explicit sexual/violent/profane material when route planning needs awareness.",
+          "do_not_use_when": "Do not use as value judgment.",
+          "example_song_ids": [
+            "2pac-feat-dr-dre-california-love",
+            "snoop-dogg-gin-and-juice",
+            "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+            "lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+            "lil-wayne-a-milli",
+            "black-flag-rise-above"
+          ]
+        },
+        {
+          "tag": "camp_sensitive",
+          "aliases": [],
+          "analyst_note": "Camp/theater/persona framing can work or fail depending on user tolerance.",
+          "use_when": "Use for glam, Broadway, novelty, hyperpop, theatrical pop, or exaggerated persona objects.",
+          "do_not_use_when": "Do not use for all theatrical songs; use when camp sensitivity is specifically relevant.",
+          "example_song_ids": [
+            "song-virginia-plain-1972",
+            "song-suffragette-city-1972",
+            "motley-crue-dr-feelgood",
+            "def-leppard-pour-some-sugar-on-me",
+            "twisted-sister-we-re-not-gonna-take-it",
+            "queen-bohemian-rhapsody"
+          ]
+        },
+        {
+          "tag": "sentimentality_risk",
+          "aliases": [],
+          "analyst_note": "Potentially cloying, manipulative, maudlin, or soft-prestige emotional surface.",
+          "use_when": "Use where emotional directness may become too sweet or overwrought for some routes.",
+          "do_not_use_when": "Do not use for sincere emotional songs by default.",
+          "example_song_ids": [
+            "song-dreams-1977",
+            "song-your-song-1970",
+            "song-lowdown-1976",
+            "fall-out-boy-sugar-were-goin-down",
+            "jimmy-eat-world-the-middle",
+            "prince-and-the-revolution-purple-rain"
+          ]
+        },
+        {
+          "tag": "genre_costume_risk",
+          "aliases": [],
+          "analyst_note": "May sound like genre cosplay, revival costume, pastiche, or scene appliance.",
+          "use_when": "Use when the surface imitates a style and authenticity/function may be questioned.",
+          "do_not_use_when": "Do not use for genuine genre participation.",
+          "example_song_ids": [
+            "song-lowdown-1976",
+            "joy-division-love-will-tear-us-apart",
+            "gang-of-four-damaged-goods",
+            "motley-crue-dr-feelgood",
+            "def-leppard-pour-some-sugar-on-me",
+            "twisted-sister-we-re-not-gonna-take-it"
+          ]
+        },
+        {
+          "tag": "novelty_risk",
+          "aliases": [],
+          "analyst_note": "Joke/meme/children’s/novelty context may overpower musical affinity.",
+          "use_when": "Use when novelty can distort feedback or route logic.",
+          "do_not_use_when": "Do not use for playful but musically robust songs unless novelty dominates.",
+          "example_song_ids": [
+            "bobby-boris-pickett-monster-mash",
+            "weird-al-yankovic-amish-paradise"
+          ]
+        },
+        {
+          "tag": "one_object_exception_risk",
+          "aliases": [],
+          "analyst_note": "A song/album/artist may work as a singular exception without validating nearby graph territory.",
+          "use_when": "Use for highly specific objects whose success should not generalize broadly.",
+          "do_not_use_when": "Do not use whenever something is simply excellent.",
+          "example_song_ids": []
+        }
+      ]
+    }
+  ],
+  "rejected_tags": [
+    {
+      "tag": "abrasive_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "acoustic_electric_blend",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "adult_nostalgia",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "aggro_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "algorithmic_context",
+      "reason": "analyst_note_only",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "alt_band_production",
+      "reason": "analyst_note_only",
+      "v0_1_count": 21
+    },
+    {
+      "tag": "angular_guitar",
+      "reason": "unclear",
+      "v0_1_count": 20
+    },
+    {
+      "tag": "apocalyptic_warning",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "arena_belt",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "atmosphere_piece",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "awkward_romance",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "baritone_plainspoken",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "barked_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "beat_group_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "belief_context",
+      "reason": "analyst_note_only",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "betrayal",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "big_band_swing",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "boogie_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 8
+    },
+    {
+      "tag": "bounce_riff",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "bratty_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "breathy_pop_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "character_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 4
+    },
+    {
+      "tag": "child_friendly_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "clean_electric_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "clear_lead",
+      "reason": "too_broad",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "club_single",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "cold_synth_guitar",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "commanding_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "communal_longing",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "confession",
+      "reason": "unclear",
+      "v0_1_count": 4
+    },
+    {
+      "tag": "confrontational_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "cool_jazz_quartet",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "country_band",
+      "reason": "genre_metadata",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "country_vocal_twain",
+      "reason": "genre_metadata",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "crooner_swing",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "crooner_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "cumbia_sway",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "cumulative_pulse",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "current_discovery_object",
+      "reason": "analyst_note_only",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "dance_punk_texture",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "dance_rock",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "dance_rock_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "dangerous_desire",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "dark_pop_gloss",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "dark_reverb",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "dembow",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "dembow_production",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "desert_heavy_low_end",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "despair",
+      "reason": "unclear",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "devotional_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "disco_strings",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "distorted_synth",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "dreamy_longing",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "driving_distorted_guitar",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "drop_structure",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "drop_tuned_guitar",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "earnest_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 4
+    },
+    {
+      "tag": "emotive_belt",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "experimental_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "festival_synth",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "funk_band",
+      "reason": "genre_metadata",
+      "v0_1_count": 4
+    },
+    {
+      "tag": "funky_motorik",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "g_funk_synth",
+      "reason": "genre_metadata",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "garage_single",
+      "reason": "analyst_note_only",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "girl_group_lead",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "glam_crunch",
+      "reason": "unclear",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "glitch_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "global_pop_production",
+      "reason": "analyst_note_only",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "glossy_guitar",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "gospel_arrangement",
+      "reason": "genre_metadata",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "gospel_pop_production",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "gospel_soul",
+      "reason": "genre_metadata",
+      "v0_1_count": 19
+    },
+    {
+      "tag": "gospel_voice",
+      "reason": "genre_metadata",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "group_harmony",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "group_hook",
+      "reason": "unclear",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "group_response",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "guitar_haze",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "guitar_piano_backbeat",
+      "reason": "unclear",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "guitar_solo_swell",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "handclap_pop",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "haunted_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "hazy_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 4
+    },
+    {
+      "tag": "heavy_band_sludge",
+      "reason": "analyst_note_only",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "hiccup_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "holiday_arrangement",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "hollow_baritone",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "honky_tonk_piano",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "hook_forward",
+      "reason": "too_broad",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "hook_rap",
+      "reason": "genre_metadata",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "hushed_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "industrial_groove",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "innocent_yearning",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "instrumental_single",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "instrumental_standard",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "interlocking_guitars",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "intimate_soul_voice",
+      "reason": "genre_metadata",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "jazz_harmony",
+      "reason": "genre_metadata",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "jealousy",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "keyboard_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "lead_response",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "lo_fi",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "loneliness",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "longform_guitar_song",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "lurching_pulse",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "machine_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "mechanical_pulse",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "melodic_lead",
+      "reason": "too_broad",
+      "v0_1_count": 18
+    },
+    {
+      "tag": "metal_riff_polish",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "minimal_arrangement",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "minimal_pop_architecture",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "minimal_synth",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "modern_indie_vocal",
+      "reason": "too_broad",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "modular_pulse",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "motown_backbeat",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "multi_part_harmony",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "nerdy_deadpan",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "nightmare",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "nocturnal_melancholy",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "obsessive_love",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "odd_meter_swing",
+      "reason": "too_narrow",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "oldies_ballad",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "orchestral_swing",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "organic_soul_texture",
+      "reason": "genre_metadata",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "outlaw_myth",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "percussion_forward",
+      "reason": "unclear",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "performance_showcase",
+      "reason": "analyst_note_only",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "pitched_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "playfulness",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "pleading_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "polished_worship",
+      "reason": "genre_metadata",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "pop_gospel_belt",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "preacher_deadpan",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "psych_pop_groove",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "psychedelic_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "punk_reggae_shadow",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "quirky_delivery",
+      "reason": "analyst_note_only",
+      "v0_1_count": 6
+    },
+    {
+      "tag": "r&b_pop_production",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "reflection",
+      "reason": "unclear",
+      "v0_1_count": 17
+    },
+    {
+      "tag": "reggaeton_chant",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "regional_identity",
+      "reason": "unclear",
+      "v0_1_count": 8
+    },
+    {
+      "tag": "resignation",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "reverb_haze",
+      "reason": "unclear",
+      "v0_1_count": 4
+    },
+    {
+      "tag": "rhythmic_pop_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "riff_drive",
+      "reason": "unclear",
+      "v0_1_count": 30
+    },
+    {
+      "tag": "riff_driven",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "road_worn_band",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "romantic_bliss",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "romantic_frustration",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "romantic_gloom",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "romantic_jealousy",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "romantic_need",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "romantic_obsession",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "romantic_threat",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "romantic_transcendence",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "romantic_withdrawal",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "rootsy_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 8
+    },
+    {
+      "tag": "sample_haze",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "seasonal_warmth",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "self_assertion",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "self_destruction",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "self_discipline",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "self_liberation",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "sentimentality",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "session_player_precision",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "sexual_energy",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "sexual_obsession",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "sexual_theater",
+      "reason": "genre_metadata",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "slapback_echo",
+      "reason": "too_narrow",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "slow_distortion",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "slow_heavy_grind",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "slow_sway",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "smooth_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "social_horror",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "soft_guitar",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "songwriter_object",
+      "reason": "analyst_note_only",
+      "v0_1_count": 17
+    },
+    {
+      "tag": "soul_suspicion",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "soundtrack_ballad",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "spare_soul_band",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "spiritual_erotic_blend",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "spring_reverb",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "steel_guitar",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "stoner_groove",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "storytelling",
+      "reason": "unclear",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "studio_craft",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "studio_craft_object",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "studio_effects",
+      "reason": "unclear",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "stutter_groove",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "suite_like_single",
+      "reason": "analyst_note_only",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "surf_guitar",
+      "reason": "too_narrow",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "swingbeat",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "synthetic_maximalism",
+      "reason": "unclear",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "talk_sung",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "teen_pop_vocal",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "teenage_drama",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "tejano_pop",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "tense_lilt",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "theatrical_pop_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "threat_display",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "torch_song",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "torch_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "trap_hats",
+      "reason": "genre_metadata",
+      "v0_1_count": 6
+    },
+    {
+      "tag": "trip_song",
+      "reason": "analyst_note_only",
+      "v0_1_count": 5
+    },
+    {
+      "tag": "urgent_confession",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "vintage_studio",
+      "reason": "unclear",
+      "v0_1_count": 15
+    },
+    {
+      "tag": "vocal_group_identity",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "vocal_group_texture",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "wall_of_sound",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "warm_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "weathered_soul_voice",
+      "reason": "genre_metadata",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "weathered_voice",
+      "reason": "analyst_note_only",
+      "v0_1_count": 3
+    },
+    {
+      "tag": "whispered_menace",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "working_class_romance",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "youthful_disgust",
+      "reason": "unclear",
+      "v0_1_count": 1
+    },
+    {
+      "tag": "youthful_frustration",
+      "reason": "unclear",
+      "v0_1_count": 2
+    },
+    {
+      "tag": "youthful_urgency",
+      "reason": "unclear",
+      "v0_1_count": 15
+    }
+  ],
+  "governance_rules": [
+    "Only canonical tags go into runtime payloads; aliases and analyst notes remain tooling-only.",
+    "No family-wide blanket tagging: a song receives a tag only when the song itself carries that feature.",
+    "Genre, scene, era, recognition, and family metadata should not be duplicated as affinity tags unless they change route behavior.",
+    "Every production tag should be paired with at least one emotion, rhythm, form, social_context, or routing_caution tag before it is used to form an edge.",
+    "Routing cautions are operational warnings, not evaluative judgments.",
+    "Aliases are dimension-scoped; the same string may appear as analyst language in multiple places, but retagging output must use only canonical tags.",
+    "Example song IDs are illustrative only. If an example appears inconsistent with the tag definition, follow the tag definition, not the example.",
+    "Any output using aliases instead of canonical tags fails QA.",
+    "Use reason-coded review fields: recording_identity_unclear, tag_definition_ambiguous, missing_tag_candidate, social_context_unclear, routing_caution_unclear, over_tagged, under_tagged.",
+    "Sparse production-simulation default target: 5–8 total canonical tags per song.",
+    "9–10 tags are allowed only when the song is genuinely multi-context, bridge-heavy, or routing-sensitive; those cases should be rare and reviewable.",
+    "Empty dimensions are allowed. Do not tag every dimension just to satisfy output shape.",
+    "Default maximum remains 1–2 primary tags per dimension. Prefer one primary tag in ordinary cases.",
+    "safe_gateway is not a default; use only when the song actively helps sequence into a route.",
+    "context_dependent is not a default caution; use only when social/use-case context materially changes routing."
+  ]
+}

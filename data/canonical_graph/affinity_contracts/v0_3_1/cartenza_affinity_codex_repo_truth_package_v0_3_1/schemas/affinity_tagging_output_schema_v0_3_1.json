@@ -1,0 +1,100 @@
+{
+  "$schema_note": "Human-readable JSON contract, not strict JSON Schema draft.",
+  "schema_name": "Cartenza Affinity Song Tagging Output Schema v0.3.1",
+  "status": "schema-boundary amendment for graph-wide tagging; not runtime ingestion schema",
+  "source_graph": "waymark_canonical_graph_full_export_2026-05-26",
+  "ontology_version": "affinity_tag_ontology_v0_2_2",
+  "top_level_shape": {
+    "metadata": {
+      "pass_name": "string",
+      "ontology_version": "v0.2.2",
+      "schema_version": "v0.3.1",
+      "source_graph": "string",
+      "runtime_ready": false,
+      "user_specific": false,
+      "graph_wide_tagging_authorized_by_pm": "boolean/string status",
+      "notes": "string"
+    },
+    "songs": [
+      {
+        "canonical_song_recording_id": "existing canonical_song_recording_id only",
+        "song_title": "string from graph",
+        "artist_names": [
+          "strings from graph"
+        ],
+        "release_years": [
+          "ints from graph"
+        ],
+        "canonical_song_affinity_tags": {
+          "vocal_performance": {
+            "primary": [],
+            "secondary": []
+          },
+          "emotion_theme": {
+            "primary": [],
+            "secondary": []
+          },
+          "sonic_texture": {
+            "primary": [],
+            "secondary": []
+          },
+          "rhythm_body": {
+            "primary": [],
+            "secondary": []
+          },
+          "form_container": {
+            "primary": [],
+            "secondary": []
+          }
+        },
+        "membership_context_overlays": [
+          {
+            "membership_id": "song_archetype_memberships.membership_id if available",
+            "family_number": "integer",
+            "archetype_id": "string",
+            "membership_roles": [
+              "roles from membership/graph"
+            ],
+            "social_context": {
+              "primary": [],
+              "secondary": []
+            },
+            "routing_caution": {
+              "primary": [],
+              "secondary": []
+            },
+            "overlay_notes": "one sentence max"
+          }
+        ],
+        "duplicate_context_review": {
+          "needed": false,
+          "reason_codes": []
+        },
+        "review": {
+          "identity_review_needed": false,
+          "core_tag_review_needed": false,
+          "overlay_review_needed": false,
+          "selection_bucket_review_needed": false,
+          "review_reason_codes": [],
+          "review_reason": "string"
+        },
+        "tagging_notes": "one sentence max",
+        "source_confidence": "high | medium | low"
+      }
+    ]
+  },
+  "hard_fail_rules": [
+    "Do not emit aliases; canonical tags only.",
+    "Do not emit non-canonical tags.",
+    "Do not place social_context or routing_caution in canonical_song_affinity_tags.",
+    "Do not let family/archetype context rewrite core song features.",
+    "Do not fill dimensions for shape; empty dimensions are allowed.",
+    "If a song appears under multiple canonical IDs or contexts, flag duplicate_context_review rather than creating different core truth."
+  ],
+  "default_density_rules": {
+    "core_tags_default_target_per_song": "3-5 total core tags across five core dimensions",
+    "overlay_tags_default_target_per_membership": "0-3 total overlay tags, only where context/routing behavior is real",
+    "combined_target_per_song": "5-8 total tags only when overlay tags are meaningful; fewer is allowed",
+    "maximum_primary_tags_per_dimension": "1-2, with 1 preferred"
+  }
+}

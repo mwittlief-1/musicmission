@@ -1,0 +1,273 @@
+{
+  "package_name": "cartenza_affinity_codex_repo_truth_package",
+  "version": "v0.3.1",
+  "created_utc": "2026-05-26T23:41:24Z",
+  "purpose": "Codex handoff package for future graph-wide Cartenza affinity mass assignment runs after canonical graph expansion.",
+  "status": {
+    "affinity_ontology_v0_2_2": "approved",
+    "sparse_tagging_rules_v0_3": "approved",
+    "schema_boundary_amendment_v0_3_1": "approved",
+    "graphwide_tagging": "prepared_but_blocked_pending_graph_expansion",
+    "runtime_ingestion": "not_approved"
+  },
+  "core_dimensions": [
+    "vocal_performance",
+    "emotion_theme",
+    "sonic_texture",
+    "rhythm_body",
+    "form_container"
+  ],
+  "overlay_dimensions": [
+    "social_context",
+    "routing_caution"
+  ],
+  "approved_canonical_tag_count": 86,
+  "approved_canonical_tags_by_dimension": {
+    "vocal_performance": [
+      "big_voice",
+      "intimate_voice",
+      "ragged_voice",
+      "plainspoken_voice",
+      "detached_cool",
+      "urgent_delivery",
+      "raw_confession",
+      "close_harmony",
+      "communal_vocal",
+      "processed_vocal",
+      "rhythmic_vocal",
+      "persona_voice",
+      "instrumental_identity"
+    ],
+    "emotion_theme": [
+      "romantic_longing",
+      "romantic_grief",
+      "desire",
+      "alienation",
+      "rage",
+      "rebellion",
+      "celebration",
+      "nostalgia",
+      "spiritual_yearning",
+      "self_mythology",
+      "comic_absurdity",
+      "mourning",
+      "dread",
+      "uplift"
+    ],
+    "sonic_texture": [
+      "guitar_forward",
+      "distorted_guitar",
+      "acoustic_intimate",
+      "piano_led",
+      "orchestral_swell",
+      "horn_arrangement",
+      "synthetic_texture",
+      "heavy_low_end",
+      "raw_live_band",
+      "polished_studio",
+      "studio_architecture",
+      "dark_atmosphere",
+      "sample_based"
+    ],
+    "rhythm_body": [
+      "backbeat_stomp",
+      "driving_eighths",
+      "groove_locked",
+      "dancefloor",
+      "syncopated_groove",
+      "ballad_pacing",
+      "slow_burn",
+      "anthemic_build",
+      "explosive_chorus",
+      "mosh_energy",
+      "minimal_pulse",
+      "swing_shuffle"
+    ],
+    "form_container": [
+      "single_craft",
+      "album_world",
+      "narrative_song",
+      "anthem",
+      "chorus_machine",
+      "riff_song",
+      "club_track",
+      "soundtrack_object",
+      "standard_interpretation",
+      "concept_piece",
+      "jam_vehicle",
+      "novelty_object"
+    ],
+    "social_context": [
+      "party_context",
+      "dance_context",
+      "karaoke_context",
+      "wedding_context",
+      "holiday_context",
+      "family_shared_context",
+      "worship_context",
+      "soundtrack_context",
+      "nostalgia_context",
+      "communal_ritual_context"
+    ],
+    "routing_caution": [
+      "safe_gateway",
+      "overfamiliar_anchor",
+      "high_whiplash",
+      "false_nearby_risk",
+      "requires_framing",
+      "context_dependent",
+      "explicit_context",
+      "camp_sensitive",
+      "sentimentality_risk",
+      "genre_costume_risk",
+      "novelty_risk",
+      "one_object_exception_risk"
+    ]
+  },
+  "hard_rules": [
+    "Use only canonical tags from allowed_tags/allowed_canonical_tags_by_dimension_v0_3_1.json.",
+    "Aliases and analyst notes must not appear as tags.",
+    "canonical_song_affinity_tags may use only core dimensions.",
+    "membership_context_overlays may use only social_context and routing_caution.",
+    "Do not use Matt-specific taste or founder preference evidence.",
+    "Do not ingest generated output without PM approval."
+  ],
+  "file_count": 27,
+  "files": [
+    {
+      "path": "FILE_INDEX.md",
+      "bytes": 1911,
+      "sha256": "d979635c95c55e28bbc6dbd0b841fa43fab591a2d71f30b0f05676d29a58454a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2222,
+      "sha256": "4ac7ced14a491f080592e0ebac8636d0f6913cb5ac36f5542dab95631f2418cc"
+    },
+    {
+      "path": "allowed_tags/APPROVED_CANONICAL_RUNTIME_TAGS_v0_3_1.md",
+      "bytes": 1959,
+      "sha256": "92131e8116a3301705a15f5271e9e06589372668ed56688be41851bd0507f475"
+    },
+    {
+      "path": "allowed_tags/allowed_canonical_tags_by_dimension_v0_3_1.json",
+      "bytes": 4801,
+      "sha256": "5165f688d36c8fd86f0cc9b619f4e3aa12a6e540a8da58b897481900cb6b4390"
+    },
+    {
+      "path": "allowed_tags/source_addendum_canonical_tag_list_v0_3_1.md",
+      "bytes": 3761,
+      "sha256": "01d22a3ca5849ca0543d55150bb0a6f36bcf1939fca1065d82cbf3913ea83802"
+    },
+    {
+      "path": "dispatch/CODEX_DISPATCH_GRAPHWIDE_AFFINITY_TAGGING_v0_3_1.md",
+      "bytes": 3916,
+      "sha256": "2f57b3cf4dd2cbfacc2c87995374f400ff76d89ec577e05e58cfd0139487f20d"
+    },
+    {
+      "path": "duplicate_context/affinity_context_leak_review_flags_v0_3_1.json",
+      "bytes": 4653,
+      "sha256": "851bac821e03593e15aaaab22829061467b2e2022bde47af89c5874081d04629"
+    },
+    {
+      "path": "duplicate_context/affinity_duplicate_context_review_candidates_v0_3_1.json",
+      "bytes": 41736,
+      "sha256": "a18505c77eed24add954e40878d0751d3343e6752d2aad544749a041b68800c8"
+    },
+    {
+      "path": "duplicate_context/affinity_duplicate_context_review_v0_3_1.md",
+      "bytes": 6681,
+      "sha256": "0089acabfcdfb96884f59a045ef2862c96839cf02ef9d746956c355f5588c130"
+    },
+    {
+      "path": "evidence/affinity_sparse_pilot_QA_metrics_v0_3.json",
+      "bytes": 3124,
+      "sha256": "04ae5542f6a4edb9cb7aa1421234be60611f91f632ce6093b156531d4968c30c"
+    },
+    {
+      "path": "evidence/affinity_sparse_pilot_QA_report_v0_3.md",
+      "bytes": 1939,
+      "sha256": "a9d3bf70b29e7928ef6c2f247c343ef6976158094177e74ffd2c2ad89c6bea48"
+    },
+    {
+      "path": "evidence/affinity_sparse_pilot_cluster_findings_v0_3.md",
+      "bytes": 4370,
+      "sha256": "8bc8ff5fae1ea339977478381217d23a1e59541406e60debf8f3f10142c7f3bf"
+    },
+    {
+      "path": "evidence/affinity_sparse_pilot_split_schema_evidence_v0_3_1.json",
+      "bytes": 255258,
+      "sha256": "da29d8758bb055b1ed761f333e0b0008ec657d173980998898a27f1de6208647"
+    },
+    {
+      "path": "evidence/source_affinity_sparse_retagging_instructions_v0_3.md",
+      "bytes": 1689,
+      "sha256": "ceea5209f5d112fc573e9a50c2c333b36435ac27b0808d61027a8ad5e0dab7a5"
+    },
+    {
+      "path": "instructions/affinity_graphwide_tagging_instructions_v0_3_1.md",
+      "bytes": 5175,
+      "sha256": "6ccc8519f01c4c2c20dae67b1bd5f39473a046529e92e26d804f714aedac2c29"
+    },
+    {
+      "path": "metadata/PM_LOCK_STATUS_v0_3_1.md",
+      "bytes": 764,
+      "sha256": "928822deb1a0101e9438ba04b8879547d23a62676b5b094212a0d5c8ff95f342"
+    },
+    {
+      "path": "metadata/affinity_repo_truth_manifest_v0_3_1.json",
+      "bytes": 8522,
+      "sha256": "884159c06e8e10760686fc24265cda91c83f81fdaf4d61eda7bcae8acf58dfed"
+    },
+    {
+      "path": "metadata/source_artifact_map_v0_3_1.json",
+      "bytes": 2459,
+      "sha256": "99fe51c0216fe0c0a4ad061a28a02a5c47328eeb97a05d549f4d78c8644e554e"
+    },
+    {
+      "path": "ontology/affinity_tag_ontology_v0_2_2_schema_amended_v0_3_1.json",
+      "bytes": 90330,
+      "sha256": "60851f58bc83c49316a202200098d050a1143e47d4b2af5f02d209916fe0a8e0"
+    },
+    {
+      "path": "ontology/source_affinity_tag_ontology_v0_2_2_amendments.md",
+      "bytes": 1503,
+      "sha256": "6cc5d56d2a6e5fafbab3aa1db6f4a7ab5871767b01ad5d27bcb5d257f449e89b"
+    },
+    {
+      "path": "schema_boundary/affinity_schema_boundary_amendment_v0_3_1.md",
+      "bytes": 3843,
+      "sha256": "6c2b465269356c5bda3f22c72ddce67365716042047cc8396152d1ebb5e733c7"
+    },
+    {
+      "path": "schemas/affinity_schema_placement_rules_v0_3_1.json",
+      "bytes": 2949,
+      "sha256": "24b81cb55f42339aed4070228d4caafdb9c76bda55c99e2169038f49c8b9ea33"
+    },
+    {
+      "path": "schemas/affinity_song_tags_graphwide_output_fixture_v0_3_1.json",
+      "bytes": 2740,
+      "sha256": "9e1e1bcd0536e7f7a643ccd6d5b619bd760e1f8c481b788de5f41a5f9284b82f"
+    },
+    {
+      "path": "schemas/affinity_tagging_output_schema_v0_3_1.json",
+      "bytes": 3528,
+      "sha256": "880fa422aed5c50e295c1be0fca6415585709ce6f7f97213ec31bc9588e9e7a2"
+    },
+    {
+      "path": "validation/affinity_graphwide_QA_contract_v0_3_1.md",
+      "bytes": 2556,
+      "sha256": "906af0546729a001ec6db04bf0ed51e4bf7e1d16984fa8afcef277fb22c3ce88"
+    },
+    {
+      "path": "validation/source_affinity_schema_amendment_QA_report_v0_3_1.md",
+      "bytes": 2075,
+      "sha256": "1924b6bbecddc25a87a36a6b5d980ebbe981835769daaf624d44908e7fc1b1b0"
+    },
+    {
+      "path": "validation/validate_affinity_graphwide_output_v0_3_1.py",
+      "bytes": 3671,
+      "sha256": "e160302ed1ba0ccb357cfc7575275ac80fbf5d2a8226a90027657dca0793e85e"
+    }
+  ]
+}
