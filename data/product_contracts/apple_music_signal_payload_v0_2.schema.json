@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/contracts/apple_music_signal_payload_v0_2.schema.json",
+  "title": "Waymark Apple Music Signal Payload v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "payload_id",
+    "probe_version",
+    "captured_at",
+    "storefront",
+    "authorization",
+    "primary_signal_sources",
+    "context_sources",
+    "observed_resource_annotations",
+    "catalog_hydration",
+    "excluded_or_diagnostic_sources"
+  ],
+  "properties": {
+    "schema_version": { "const": "apple_music_signal_payload.v0.2" },
+    "payload_id": { "type": "string", "minLength": 1 },
+    "probe_version": { "const": "apple_probe.v0.2" },
+    "captured_at": { "type": "string", "format": "date-time" },
+    "storefront": { "type": ["string", "null"] },
+    "authorization": { "$ref": "#/$defs/authorization" },
+    "primary_signal_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heavy_rotation",
+        "recently_played_tracks",
+        "library_song_play_count",
+        "library_song_last_played",
+        "library_song_library_added",
+        "library_album_library_added",
+        "personal_recommendations"
+      ],
+      "properties": {
+        "heavy_rotation": { "$ref": "#/$defs/source_section" },
+        "recently_played_tracks": { "$ref": "#/$defs/source_section" },
+        "library_song_play_count": { "$ref": "#/$defs/source_section" },
+        "library_song_last_played": { "$ref": "#/$defs/source_section" },
+        "library_song_library_added": { "$ref": "#/$defs/source_section" },
+        "library_album_library_added": { "$ref": "#/$defs/source_section" },
+        "personal_recommendations": { "$ref": "#/$defs/source_section" }
+      }
+    },
+    "context_sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["playlist_contexts", "playlist_track_samples", "replay_summary"],
+      "properties": {
+        "playlist_contexts": { "$ref": "#/$defs/source_section" },
+        "playlist_track_samples": { "$ref": "#/$defs/source_section" },
+        "replay_summary": { "$ref": "#/$defs/source_section" }
+      }
+    },
+    "observed_resource_annotations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["favorite_resources", "rated_resources"],
+      "properties": {
+        "favorite_resources": { "$ref": "#/$defs/source_section" },
+        "rated_resources": { "$ref": "#/$defs/source_section" }
+      }
+    },
+    "catalog_hydration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "resources", "errors"],
+      "properties": {
+        "status": { "$ref": "#/$defs/source_status" },
+        "resources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/signal_resource" }
+        },
+        "errors": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_error" }
+        }
+      }
+    },
+    "excluded_or_diagnostic_sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/excluded_source_section" }
+    }
+  },
+  "$defs": {
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "music_authorization_status",
+        "can_request_authorization",
+        "subscription_status",
+        "token_status",
+        "errors"
+      ],
+      "properties": {
+        "music_authorization_status": { "type": "string" },
+        "can_request_authorization": { "type": "boolean" },
+        "subscription_status": { "type": "string" },
+        "token_status": { "type": "string" },
+        "errors": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_error" }
+        }
+      }
+    },
+    "source_status": {
+      "enum": ["captured", "empty", "unavailable", "error", "not_requested"]
+    },
+    "source_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "status", "cap", "items", "errors"],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "status": { "$ref": "#/$defs/source_status" },
+        "cap": { "type": "integer", "minimum": 0 },
+        "captured_at": { "type": ["string", "null"], "format": "date-time" },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/signal_resource" }
+        },
+        "errors": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source_error" }
+        }
+      }
+    },
+    "excluded_source_section": {
+      "allOf": [
+        { "$ref": "#/$defs/source_section" },
+        {
+          "type": "object",
+          "required": ["excluded_from_survey_evidence", "diagnostic_reason"],
+          "properties": {
+            "excluded_from_survey_evidence": { "const": true },
+            "diagnostic_reason": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "signal_resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_item_id",
+        "resource_type",
+        "display_name",
+        "evidence_basis",
+        "source_confidence",
+        "observed_source_refs"
+      ],
+      "properties": {
+        "source_item_id": { "type": "string", "minLength": 1 },
+        "resource_type": {
+          "enum": ["artist", "album", "song", "playlist", "station", "genre", "unknown"]
+        },
+        "apple_id": { "type": ["string", "null"] },
+        "catalog_id": { "type": ["string", "null"] },
+        "library_id": { "type": ["string", "null"] },
+        "persistent_id": { "type": ["string", "null"] },
+        "display_name": { "type": "string" },
+        "artist_name": { "type": ["string", "null"] },
+        "album_title": { "type": ["string", "null"] },
+        "playlist_name": { "type": ["string", "null"] },
+        "curator_name": { "type": ["string", "null"] },
+        "genre_names": { "type": "array", "items": { "type": "string" } },
+        "play_count": { "type": ["integer", "null"], "minimum": 0 },
+        "last_played_at": { "type": ["string", "null"], "format": "date-time" },
+        "library_added_at": { "type": ["string", "null"], "format": "date-time" },
+        "release_date": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"] },
+        "artwork_url": { "type": ["string", "null"] },
+        "evidence_basis": {
+          "enum": [
+            "heavy_rotation",
+            "recently_played",
+            "library_song_play_count",
+            "library_song_last_played",
+            "library_song_library_added",
+            "library_album_library_added",
+            "personal_recommendation",
+            "playlist_context",
+            "playlist_track_sample",
+            "replay_summary",
+            "favorite_annotation",
+            "rating_annotation",
+            "catalog_identity",
+            "diagnostic_excluded"
+          ]
+        },
+        "source_confidence": {
+          "enum": [
+            "explicit_observed",
+            "ranked_by_apple",
+            "device_reported",
+            "library_sorted",
+            "recommendation_context",
+            "playlist_context",
+            "user_annotation",
+            "catalog_identity",
+            "diagnostic_excluded",
+            "unavailable"
+          ]
+        },
+        "observed_source_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "source_error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "code", "message"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "code": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
