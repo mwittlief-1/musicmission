@@ -3,6 +3,10 @@
 # Xcode
 build/
 DerivedData/
+*.xcarchive/
+*.xcresult/
+*.dSYM/
+*.ipa
 *.xcuserstate
 *.xcworkspace/xcuserdata/
 *.xcodeproj/xcuserdata/
@@ -24,6 +28,11 @@ venv/
 
 # Local secrets
 waymark-ai-tests/.env
+waymark-ai-tests/.env.*
+!waymark-ai-tests/.env.example
+waymark-atlas-tests/.env
+waymark-atlas-tests/.env.*
+!waymark-atlas-tests/.env.example
 supabase/functions/.env
 supabase/functions/.env.*
 !supabase/functions/.env.example
@@ -38,3 +47,19 @@ data/exports/dev/*
 !data/exports/acceptance/
 data/exports/acceptance/*
 !data/exports/acceptance/.gitkeep
+
+# Generated packets and review archives
+data/*.zip
+data/**/*.zip
+review_packets/*.zip
+waymark-ai-tests/review_packets/*.zip
+
+# Generated test harness outputs
+waymark-ai-tests/outputs/*
+!waymark-ai-tests/outputs/.gitkeep
+waymark-ai-tests/reports/*
+!waymark-ai-tests/reports/.gitkeep
+waymark-atlas-tests/outputs/*
+!waymark-atlas-tests/outputs/.gitkeep
+waymark-atlas-tests/reports/*
+!waymark-atlas-tests/reports/.gitkeep

@@ -1,8 +1,14 @@
-# Music Atlas Controller
+# Waymark / Cartenza Alpha
 
-Private SwiftUI/MusicKit spike for running Music Atlas discovery missions.
+Private alpha repo for the Waymark/Cartenza iOS TestFlight app, MusicKit integration, mission generation, Atlas contracts, Supabase alpha backend, and supporting test harnesses.
 
-The controlling product and implementation packet is v0.2:
+Start with the current repo map before moving or adding files:
+
+- `docs/repo_map.md`
+- `docs/repo_cleanup_inventory_2026_05_26.md`
+- `data/README.md`
+
+The original v0.2 app spike packet is still useful historical context:
 
 - `docs/app_dev/kickoff_v0_2/`
 - `docs/app_dev/IMPLEMENTATION_PLAN_v0_2.md`
@@ -26,16 +32,20 @@ The spike does not require resolving all sample items, creating playlists, updat
 ## Repo Layout
 
 ```text
-MusicAtlasController.xcodeproj/  Xcode project for the iOS spike
+MusicAtlasController.xcodeproj/  Xcode project for the iOS alpha
 MusicAtlasController/            SwiftUI app source and bundled resources
-docs/app_dev/kickoff_v0_2/   v0.2 PM packet and implementation brief
-data/missions/               sample mission JSON
-data/schemas/                JSON schemas for missions and reaction sessions
-data/exports/dev/            development/stub exports, ignored except .gitkeep
-data/exports/acceptance/     physical-device acceptance exports, ignored except .gitkeep
-scripts/                     validation helpers
-tests/                       test notes and future automated test space
+MusicAtlasControllerTests/       XCTest sources and app fixtures
+supabase/                       Supabase config, Edge Functions, and migrations
+scripts/                        validation, generation, smoke, and import helpers
+data/                           contracts, canonical material, fixtures, and generated evidence
+docs/                           product/technical contracts, runbooks, reviews, and repo stewardship docs
+waymark-ai-tests/               first-class mission-generation harness; generated outputs ignored
+waymark-atlas-tests/            first-class Atlas ingestion harness; generated outputs ignored
+build/                          local Xcode build output, ignored
+data/exports/                   local app/device exports, ignored except .gitkeep
 ```
+
+For the detailed policy, see `docs/repo_map.md`. For `data/` source-of-truth versus generated/archive decisions, see `data/README.md`.
 
 ## Validate The Sample Mission
 

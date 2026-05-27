@@ -1,0 +1,77 @@
+# Data Directory Policy
+
+Date: 2026-05-26
+
+This directory is not a single bucket. It contains source-of-truth contracts, canonical graph material, deterministic fixtures, generated evidence, and local exports. Treat each subtree by the policy below.
+
+## Source Of Truth
+
+These paths are repo source-of-truth and should be tracked when changed intentionally:
+
+| Path | Policy |
+| --- | --- |
+| `data/schemas/` | Canonical mission and reaction-session JSON schemas. |
+| `data/product_contracts/` | Product and technical contracts for app, survey, Atlas, graph, MusicKit payloads, and mission generation. |
+| `data/atlas_schema/atlas_schema_contract_v0_1.*` | Atlas schema source contract. |
+| `data/atlas_schema/atlas_delta_v0_1.*` | Atlas delta source contract. |
+| `data/atlas_schema/alpha_hardening/` | Active alpha hardening contracts and acceptance material. |
+| `data/alpha_consumable_layer/alpha_v0/*contract*`, `*policy*`, `*guardrail*`, `*manifest*`, `*.schema.json`, and paired `*.md` contract docs | Alpha graph surface contracts, guardrails, resolver policy, and manifests. |
+| `data/canonical_graph/family_*/` | Canonical graph family source material. |
+| `data/canonical_graph/current/` | Active Canonical Graph v1 source-of-truth corpus for mission engine, tagging, linking, Atlas targets, Apple ID resolution, and album sidecar planning. |
+| `data/canonical_graph/canonical_graph_source_of_truth_manifest.json` | Root pointer to the active Canonical Graph source-of-truth corpus. |
+| `data/canonical_graph/CURRENT_CANONICAL_GRAPH.md` | Human-readable current graph source-of-truth pointer and gate summary. |
+| `data/canonical_graph/policy_hardening/` | Canonical graph policy source material. |
+| `data/canonical_graph/canonical_graph_import_runbook.md` | Canonical graph import runbook. |
+
+## First-Class Fixtures
+
+These paths are deterministic fixtures or golden packets. Track them when they are intentionally accepted as part of tests, app import, or contract validation:
+
+| Path | Policy |
+| --- | --- |
+| `data/missions/` | App/test mission fixtures. |
+| `data/alpha_packets/golden_alpha_packet_v0_1/` | Golden mission-generation/app-import packet. |
+| `data/atlas_schema/examples/` | Atlas contract examples. |
+| `data/survey_pilot/` | Survey pilot inputs and fixtures, pending deeper split if generated runs appear. |
+| `data/survey_simulation/schemas/` | Survey simulator schemas. |
+| `data/survey_simulation/fake_profiles/` | Survey simulator source profiles. |
+| `data/survey_simulation/apple_payloads/` | Survey simulator Apple payload fixtures. |
+| `data/survey_simulation/hidden_reaction_corpora/` | Simulator corpora used as controlled test inputs. |
+
+## Generated Or Archive Candidates
+
+These paths are generated evidence or historical review material. Do not treat them as source-of-truth unless a specific file is promoted into a contract, fixture, or docs path:
+
+| Path | Policy |
+| --- | --- |
+| `data/**/*.zip` | Generated packet/review/evidence bundles. Ignored by default; keep external or replace with a manifest. |
+| `data/exports/` | Local app/device exports. Ignored except `.gitkeep` placeholders. |
+| `data/atlas_schema/ingestion_proof/` | Generated ingestion proof evidence. Promote selected fixtures/docs explicitly if needed. |
+| `data/atlas_schema/node_interpretation_smoke/` | Generated smoke evidence. |
+| `data/atlas_schema/wwtsf_substrate_smoke/` | Generated smoke evidence. |
+| `data/canonical_graph/import_dry_run/` | Generated import dry-run output. |
+| `data/canonical_graph/normalization_pass_2/` | Generated normalization output unless promoted as canonical app/resource input. |
+| `data/closed_loop_simulation/` | Generated closed-loop evidence and adaptive-learning review material. |
+| `data/deprecated_mission_fixtures/` | Deprecated duplicate fixtures. Archive/remove only after owner approval. |
+| `data/mission_generation/**/[0-9][0-9][0-9][0-9]*Z*/` and timestamped request/response attempts | Generated run evidence. |
+| `data/mission_generation/alpha_first_batch_route_ready_v0_1/` | Generated first-batch route-ready attempts, except promoted contracts/manifests. |
+| `data/survey_simulation/runs/` | Generated simulator runs. |
+| `data/survey_simulation/reports/` | Generated simulator reports. |
+| `data/survey_simulation/llm_profile_review/` | Generated LLM review evidence and evidence bundles. |
+| `data/waymark_canonical_graph_chatgpt_review_packet_*/` | Extracted generated review packets. Keep only if actively reviewed; otherwise archive externally with a manifest. |
+
+## Promotion Rule
+
+Generated files become first-class only when a maintainer moves or copies a specific artifact into one of these places with a short note explaining why:
+
+- `data/product_contracts/`
+- `data/schemas/`
+- `data/atlas_schema/examples/`
+- `data/alpha_packets/`
+- `data/missions/`
+- a harness `fixtures/` directory
+- `docs/`
+
+Exception: `data/canonical_graph/current/` is a promoted source-of-truth corpus generated from the accepted Canonical Graph Pass D freeze. Regenerate it only through the promotion script and keep the root source-of-truth manifest current.
+
+Do not promote raw LLM request/response logs, zipped packets, local exports, or Xcode build artifacts into source-of-truth paths.
