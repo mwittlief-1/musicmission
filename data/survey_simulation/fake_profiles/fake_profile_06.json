@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_06",
+  "display_label": "Theater / Family Context User",
+  "summary": "A shared-household listener where musicals, Disney, and big emotional anchors matter more than scene membership.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "104",
+      "weight": 0.9,
+      "note": "theater and musical authorship"
+    },
+    {
+      "archetype_id": "114",
+      "weight": 0.8,
+      "note": "family-context shared listening"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "106",
+      "weight": 0.55,
+      "note": "soundtrack and showpiece bridges"
+    },
+    {
+      "archetype_id": "088",
+      "weight": 0.44,
+      "note": "classic pop theatricality"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "living_room_singalong",
+    "display_name": "Living-room singalong",
+    "note": "Music is used for kids, chores, and full-room memory."
+  },
+  "false_nearby_lane": {
+    "lane_id": "soundtrack_means_everything",
+    "display_name": "Soundtrack means everything",
+    "note": "A soundtrack signal does not imply every film-score lane works.",
+    "archetype_id": "106",
+    "family_number": 15
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "062",
+      "weight": 0.72,
+      "note": "thrash and aggression are poor household fits"
+    },
+    {
+      "archetype_id": "119",
+      "weight": 0.56,
+      "note": "hyper-online texture disrupts the shared context"
+    }
+  ],
+  "apple_payload_id": "apple_payload_06",
+  "hidden_reaction_corpus_id": "hidden_corpus_06"
+}

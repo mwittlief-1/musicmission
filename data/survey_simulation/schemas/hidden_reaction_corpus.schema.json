@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/survey_simulation_hidden_reaction_corpus_v0_1.json",
+  "title": "Survey Simulation Hidden Reaction Corpus v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "hidden_reaction_corpus_id",
+    "fake_profile_id",
+    "privacy_boundary",
+    "reactions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "survey_simulation.hidden_reaction_corpus.v0.1"
+    },
+    "hidden_reaction_corpus_id": {
+      "type": "string",
+      "pattern": "^hidden_corpus_\\d{2}$"
+    },
+    "fake_profile_id": {
+      "type": "string",
+      "pattern": "^fake_profile_\\d{2}$"
+    },
+    "privacy_boundary": {
+      "const": "simulator_private"
+    },
+    "reactions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "music_object_ref",
+          "reaction",
+          "familiarity_band",
+          "confidence",
+          "reason_tags"
+        ],
+        "properties": {
+          "music_object_ref": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "object_type",
+              "ref_source",
+              "display_name",
+              "resolution_state"
+            ],
+            "properties": {
+              "object_type": {
+                "type": "string",
+                "enum": [
+                  "artist",
+                  "album",
+                  "song_recording"
+                ]
+              },
+              "ref_source": {
+                "type": "string",
+                "enum": [
+                  "canonical_graph",
+                  "external_catalog",
+                  "simulator_local",
+                  "unresolved_import"
+                ]
+              },
+              "canonical_artist_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "canonical_album_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "canonical_song_recording_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "external_catalog_refs": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "simulator_local_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "display_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "artist_display_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "resolution_state": {
+                "type": "string",
+                "enum": [
+                  "resolved",
+                  "needs_resolution",
+                  "unresolved"
+                ]
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "canonical_graph"
+                    },
+                    "object_type": {
+                      "const": "artist"
+                    }
+                  },
+                  "required": [
+                    "ref_source",
+                    "object_type"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "canonical_artist_id"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "canonical_graph"
+                    },
+                    "object_type": {
+                      "const": "album"
+                    }
+                  },
+                  "required": [
+                    "ref_source",
+                    "object_type"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "canonical_album_id"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "canonical_graph"
+                    },
+                    "object_type": {
+                      "const": "song_recording"
+                    }
+                  },
+                  "required": [
+                    "ref_source",
+                    "object_type"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "canonical_song_recording_id"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "external_catalog"
+                    }
+                  },
+                  "required": [
+                    "ref_source"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "external_catalog_refs"
+                  ]
+                }
+              }
+            ]
+          },
+          "reaction": {
+            "type": "string",
+            "enum": [
+              "love",
+              "like",
+              "ok",
+              "dont_know_enough",
+              "dont_like"
+            ]
+          },
+          "familiarity_band": {
+            "type": "string",
+            "enum": [
+              "known_deep",
+              "known",
+              "heard_of",
+              "unknown"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "reason_tags": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

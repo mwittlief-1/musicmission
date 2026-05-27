@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/survey_simulation_hidden_lookup_coverage_v0_1.json",
+  "title": "Survey Simulation Hidden Lookup Coverage v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "generated_at",
+    "privacy_boundary",
+    "summary",
+    "lookups"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "survey_simulation.hidden_lookup_coverage.v0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^RUN_\\d{3}_[A-Z_]+$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "privacy_boundary": {
+      "const": "simulator_private_evaluation"
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tile_count",
+        "hidden_lookup_hit_count",
+        "missing_default_count"
+      ],
+      "properties": {
+        "tile_count": {
+          "type": "integer",
+          "const": 12
+        },
+        "hidden_lookup_hit_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing_default_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "lookups": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tile_id",
+          "display_name",
+          "object_type",
+          "lookup_status",
+          "recorded_reaction"
+        ],
+        "properties": {
+          "tile_id": {
+            "type": "string",
+            "pattern": "^tile_\\d{2}$"
+          },
+          "display_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "object_type": {
+            "type": "string",
+            "enum": [
+              "artist"
+            ]
+          },
+          "lookup_status": {
+            "type": "string",
+            "enum": [
+              "hidden_corpus_hit",
+              "missing_default"
+            ]
+          },
+          "recorded_reaction": {
+            "type": "string",
+            "enum": [
+              "love",
+              "like",
+              "ok",
+              "dont_know_enough",
+              "dont_like"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

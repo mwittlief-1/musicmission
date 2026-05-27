@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_10",
+  "display_label": "Low-Library Streaming User",
+  "summary": "Sparse library, mostly streaming singles and algorithmic plays, with broad familiarity but shallow commitment.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "090",
+      "weight": 0.54,
+      "note": "radio pop and R&B crossover"
+    },
+    {
+      "archetype_id": "050",
+      "weight": 0.5,
+      "note": "mainstream rap exposure"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "091",
+      "weight": 0.42,
+      "note": "pop familiarity"
+    },
+    {
+      "archetype_id": "113",
+      "weight": 0.32,
+      "note": "nostalgia from shared spaces"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "algorithmic_background",
+    "display_name": "Algorithmic background",
+    "note": "The payload is low-confidence and should not dominate Page 1."
+  },
+  "false_nearby_lane": {
+    "lane_id": "playlist_noise",
+    "display_name": "Playlist noise",
+    "note": "Single accidental plays should stay weak.",
+    "archetype_id": "093",
+    "family_number": 12
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "062",
+      "weight": 0.58,
+      "note": "heavy music causes quick skips"
+    },
+    {
+      "archetype_id": "104",
+      "weight": 0.4,
+      "note": "theater context is not represented"
+    }
+  ],
+  "apple_payload_id": "apple_payload_10",
+  "hidden_reaction_corpus_id": "hidden_corpus_10"
+}

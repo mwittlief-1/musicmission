@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/survey_simulation_apple_payload_v0_1.json",
+  "title": "Survey Simulation Apple Payload v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "apple_payload_id",
+    "generated_at",
+    "source_kind",
+    "library_snapshot_age_days",
+    "signals",
+    "resolution_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "survey_simulation.apple_payload.v0.1"
+    },
+    "apple_payload_id": {
+      "type": "string",
+      "pattern": "^apple_payload_\\d{2}$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_kind": {
+      "const": "simulated_apple_music"
+    },
+    "library_snapshot_age_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "signals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "signal_id",
+          "signal_type",
+          "music_object_ref",
+          "normalized_weight",
+          "recency_days",
+          "play_count_90d"
+        ],
+        "properties": {
+          "signal_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "signal_type": {
+            "type": "string",
+            "enum": [
+              "library_artist",
+              "recent_play",
+              "heavy_rotation",
+              "playlist_save",
+              "external_catalog_hint"
+            ]
+          },
+          "music_object_ref": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "object_type",
+              "ref_source",
+              "display_name",
+              "resolution_state"
+            ],
+            "properties": {
+              "object_type": {
+                "type": "string",
+                "enum": [
+                  "artist",
+                  "album",
+                  "song_recording"
+                ]
+              },
+              "ref_source": {
+                "type": "string",
+                "enum": [
+                  "canonical_graph",
+                  "external_catalog",
+                  "simulator_local",
+                  "unresolved_import"
+                ]
+              },
+              "canonical_artist_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "canonical_album_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "canonical_song_recording_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "external_catalog_refs": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "simulator_local_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "display_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "artist_display_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "resolution_state": {
+                "type": "string",
+                "enum": [
+                  "resolved",
+                  "needs_resolution",
+                  "unresolved"
+                ]
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "canonical_graph"
+                    },
+                    "object_type": {
+                      "const": "artist"
+                    }
+                  },
+                  "required": [
+                    "ref_source",
+                    "object_type"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "canonical_artist_id"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "canonical_graph"
+                    },
+                    "object_type": {
+                      "const": "album"
+                    }
+                  },
+                  "required": [
+                    "ref_source",
+                    "object_type"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "canonical_album_id"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "canonical_graph"
+                    },
+                    "object_type": {
+                      "const": "song_recording"
+                    }
+                  },
+                  "required": [
+                    "ref_source",
+                    "object_type"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "canonical_song_recording_id"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "ref_source": {
+                      "const": "external_catalog"
+                    }
+                  },
+                  "required": [
+                    "ref_source"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "external_catalog_refs"
+                  ]
+                }
+              }
+            ]
+          },
+          "normalized_weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "recency_days": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "play_count_90d": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "last_played_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "library_added_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "playlist_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "playlist_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "playlist_kind": {
+          "type": "string",
+          "enum": [
+            "user_playlist",
+            "editorial",
+            "algorithmic",
+            "family",
+            "workout",
+            "sleep",
+            "holiday",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "track_level_signals": {
+      "type": "array"
+    },
+    "album_level_signals": {
+      "type": "array"
+    },
+    "skip_or_completion_hints": {
+      "type": "array"
+    },
+    "loved_or_favorite_hints": {
+      "type": "array"
+    },
+    "resolution_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resolved_canonical_count",
+        "external_unresolved_count",
+        "candidate_generation_policy"
+      ],
+      "properties": {
+        "resolved_canonical_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "external_unresolved_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "candidate_generation_policy": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

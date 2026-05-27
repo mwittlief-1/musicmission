@@ -1,0 +1,118 @@
+{
+  "schema_version": "survey_simulation.apple_payload.v0.1",
+  "apple_payload_id": "apple_payload_06",
+  "generated_at": "2026-05-20T12:00:00Z",
+  "source_kind": "simulated_apple_music",
+  "library_snapshot_age_days": 2,
+  "signals": [
+    {
+      "signal_id": "apple_06_01",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "lin-manuel-miranda",
+        "display_name": "Lin-Manuel Miranda",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.93,
+      "recency_days": 2,
+      "play_count_90d": 56,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_06_02",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "disney",
+        "display_name": "Disney",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.87,
+      "recency_days": 1,
+      "play_count_90d": 49,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_06_03",
+      "signal_type": "library_artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "andrew-lloyd-webber",
+        "display_name": "Andrew Lloyd Webber",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.59,
+      "recency_days": 35,
+      "play_count_90d": 21,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_06_04",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "artist-queen",
+        "display_name": "Queen",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.52,
+      "recency_days": 12,
+      "play_count_90d": 18,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_06_05",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "taylor-swift",
+        "display_name": "Taylor Swift",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.4,
+      "recency_days": 8,
+      "play_count_90d": 10,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_06_06",
+      "signal_type": "playlist_save",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "bruno-mars",
+        "display_name": "Bruno Mars",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.35,
+      "recency_days": 16,
+      "play_count_90d": 8,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    }
+  ],
+  "playlist_context": {
+    "playlist_name": null,
+    "playlist_kind": "unknown"
+  },
+  "track_level_signals": [],
+  "album_level_signals": [],
+  "skip_or_completion_hints": [],
+  "loved_or_favorite_hints": [],
+  "resolution_summary": {
+    "resolved_canonical_count": 6,
+    "external_unresolved_count": 0,
+    "candidate_generation_policy": "Only resolved canonical artist refs may bias v0.1 Page 1 candidate generation."
+  }
+}

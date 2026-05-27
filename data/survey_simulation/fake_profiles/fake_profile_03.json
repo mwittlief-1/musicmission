@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_03",
+  "display_label": "Alt Formation User",
+  "summary": "Came up through 90s alternative, college rock, and darker guitar-pop; suspicious of polish without friction.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "070",
+      "weight": 0.9,
+      "note": "grunge and 90s alternative"
+    },
+    {
+      "archetype_id": "069",
+      "weight": 0.82,
+      "note": "college-rock and art-alt foundation"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "059",
+      "weight": 0.64,
+      "note": "post-punk lineage"
+    },
+    {
+      "archetype_id": "075",
+      "weight": 0.52,
+      "note": "melodic alt singles"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "older_sibling_cd_stack",
+    "display_name": "Older sibling CD stack",
+    "note": "Taste learned through albums, used CDs, and borrowed identity."
+  },
+  "false_nearby_lane": {
+    "lane_id": "safe_modern_alt_radio",
+    "display_name": "Safe modern alt radio",
+    "note": "Alt branding can hide too much polish.",
+    "archetype_id": "071",
+    "family_number": 10
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "035",
+      "weight": 0.7,
+      "note": "country-pop gloss is a poor fit"
+    },
+    {
+      "archetype_id": "091",
+      "weight": 0.54,
+      "note": "big persona pop can feel overmanaged"
+    }
+  ],
+  "apple_payload_id": "apple_payload_03",
+  "hidden_reaction_corpus_id": "hidden_corpus_03"
+}

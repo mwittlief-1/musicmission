@@ -1,0 +1,5461 @@
+{
+  "schema_version": "waymark.profile_writer_input.v0.1",
+  "purpose": "Blind Profile Writer input",
+  "profile_public_id": "public_profile_01",
+  "apple_payload_id": "apple_payload_01",
+  "run_id": "llm_profile_review_public_profile_01_A2_Al1_S1",
+  "created_at": "2026-05-20T12:00:00Z",
+  "input_fingerprint": "bdd98d8e80c30ce16c9b323d59c235aa424195e8808e21bbcf7922cd21d3df1c",
+  "page_count_config": {
+    "artist_pages": 2,
+    "album_pages": 1,
+    "song_pages": 1,
+    "config_id": "A2_Al1_S1",
+    "tile_count": 48
+  },
+  "blindness_contract": {
+    "hidden_inputs_used_for_generation": false,
+    "public_packet_contains_hidden_truth": false,
+    "forbidden_context_absent": [
+      "hidden_profile_label",
+      "hidden_archetype_tiers",
+      "unshown_hidden_reactions",
+      "hidden_reason_tags",
+      "hidden_lookup_status"
+    ]
+  },
+  "allowed_context": {
+    "canonical_graph_metadata_included": [
+      "family_numbers",
+      "archetype_ids",
+      "roles",
+      "best_recognition_tier",
+      "best_survey_tier"
+    ],
+    "page_metadata_included": [
+      "page_intent",
+      "candidate_basis",
+      "scores",
+      "generator_visible_inputs"
+    ],
+    "survey_responses_included": [
+      "reaction",
+      "atlas_signal_interpretation",
+      "app_ui_candidate",
+      "observed_selected_tags",
+      "shown_unselected_tags"
+    ]
+  },
+  "reaction_scale": {
+    "love": {
+      "numeric_score_for_backtests": 4,
+      "profile_writer_guidance": "strong positive, but scope remains unknown unless reinforced"
+    },
+    "like": {
+      "numeric_score_for_backtests": 3,
+      "profile_writer_guidance": "qualified positive or partial positive"
+    },
+    "ok": {
+      "numeric_score_for_backtests": 2,
+      "profile_writer_guidance": "waypoint, context, or familiarity signal rather than landmark evidence"
+    },
+    "dont_like": {
+      "numeric_score_for_backtests": 1,
+      "profile_writer_guidance": "negative signal with careful scope control"
+    },
+    "dont_know_enough": {
+      "numeric_score_for_backtests": null,
+      "profile_writer_guidance": "familiarity failure, not taste failure"
+    }
+  },
+  "observed_response_counts_by_stage": {
+    "artist": {
+      "love": 5,
+      "like": 4,
+      "ok": 9,
+      "dont_like": 6,
+      "dont_know_enough": 0
+    },
+    "album": {
+      "love": 0,
+      "like": 4,
+      "ok": 4,
+      "dont_like": 2,
+      "dont_know_enough": 2
+    },
+    "song": {
+      "love": 1,
+      "like": 4,
+      "ok": 5,
+      "dont_like": 2,
+      "dont_know_enough": 0
+    }
+  },
+  "apple_payload_summary": {
+    "apple_payload_id": "apple_payload_01",
+    "signal_count": 6,
+    "top_visible_signals": [
+      {
+        "signal_id": "apple_01_01",
+        "signal_type": "heavy_rotation",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-fleetwood-mac",
+          "display_name": "Fleetwood Mac",
+          "resolution_state": "resolved"
+        },
+        "normalized_weight": 0.98,
+        "recency_days": 4,
+        "play_count_90d": 64,
+        "library_added_at": "2024-01-15T10:00:00Z"
+      },
+      {
+        "signal_id": "apple_01_02",
+        "signal_type": "heavy_rotation",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-tom-petty-and-the-heartbreakers",
+          "display_name": "Tom Petty and the Heartbreakers",
+          "resolution_state": "resolved"
+        },
+        "normalized_weight": 0.92,
+        "recency_days": 6,
+        "play_count_90d": 58,
+        "library_added_at": "2024-01-15T10:00:00Z"
+      },
+      {
+        "signal_id": "apple_01_03",
+        "signal_type": "library_artist",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-eagles",
+          "display_name": "Eagles",
+          "resolution_state": "resolved"
+        },
+        "normalized_weight": 0.86,
+        "recency_days": 18,
+        "play_count_90d": 43,
+        "library_added_at": "2024-01-15T10:00:00Z"
+      },
+      {
+        "signal_id": "apple_01_04",
+        "signal_type": "library_artist",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-dire-straits",
+          "display_name": "Dire Straits",
+          "resolution_state": "resolved"
+        },
+        "normalized_weight": 0.72,
+        "recency_days": 34,
+        "play_count_90d": 22,
+        "library_added_at": "2024-01-15T10:00:00Z"
+      },
+      {
+        "signal_id": "apple_01_05",
+        "signal_type": "recent_play",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "foo-fighters",
+          "display_name": "Foo Fighters",
+          "resolution_state": "resolved"
+        },
+        "normalized_weight": 0.42,
+        "recency_days": 9,
+        "play_count_90d": 10,
+        "library_added_at": "2024-01-15T10:00:00Z"
+      },
+      {
+        "signal_id": "apple_01_06",
+        "signal_type": "library_artist",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "journey",
+          "display_name": "Journey",
+          "resolution_state": "resolved"
+        },
+        "normalized_weight": 0.38,
+        "recency_days": 80,
+        "play_count_90d": 8,
+        "library_added_at": "2024-01-15T10:00:00Z"
+      }
+    ],
+    "apple_overrepresented_artists": [
+      {
+        "display_name": "Fleetwood Mac",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-fleetwood-mac",
+          "display_name": "Fleetwood Mac",
+          "resolution_state": "resolved"
+        },
+        "payload_overrepresentation_score": 0.402,
+        "apple_evidence_strength": 1.0,
+        "evidence_ref": "artist_page_001:artist:01:Fleetwood Mac:love"
+      },
+      {
+        "display_name": "Tom Petty and the Heartbreakers",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-tom-petty-and-the-heartbreakers",
+          "display_name": "Tom Petty and the Heartbreakers",
+          "resolution_state": "resolved"
+        },
+        "payload_overrepresentation_score": 0.481,
+        "apple_evidence_strength": 1.0,
+        "evidence_ref": "artist_page_001:artist:02:Tom Petty and the Heartbreakers:love"
+      },
+      {
+        "display_name": "Eagles",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-eagles",
+          "display_name": "Eagles",
+          "resolution_state": "resolved"
+        },
+        "payload_overrepresentation_score": 0.304,
+        "apple_evidence_strength": 1.0,
+        "evidence_ref": "artist_page_001:artist:03:Eagles:love"
+      },
+      {
+        "display_name": "Dire Straits",
+        "music_object_ref": {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "artist-dire-straits",
+          "display_name": "Dire Straits",
+          "resolution_state": "resolved"
+        },
+        "payload_overrepresentation_score": 0.366,
+        "apple_evidence_strength": 1.0,
+        "evidence_ref": "artist_page_001:artist:04:Dire Straits:like"
+      }
+    ],
+    "optional_future_fields": {
+      "playlist_context": {
+        "playlist_name": null,
+        "playlist_kind": "unknown"
+      },
+      "track_level_signals": [],
+      "album_level_signals": [],
+      "skip_or_completion_hints": [],
+      "loved_or_favorite_hints": []
+    }
+  },
+  "deterministic_visible_evidence_summary": {
+    "positive_clusters": [
+      {
+        "label": "archetype:016",
+        "visible_response_count": 10,
+        "evidence_refs": [
+          "artist_page_001:artist:01:Fleetwood Mac:love",
+          "artist_page_001:artist:02:Tom Petty and the Heartbreakers:love",
+          "artist_page_001:artist:03:Eagles:love",
+          "artist_page_001:artist:04:Dire Straits:like",
+          "album_page_001:album:01:Hotel California:like",
+          "album_page_001:album:02:Rumours:like",
+          "album_page_001:album:03:Brothers in Arms:like",
+          "album_page_001:album:04:Their Greatest Hits 1971-1975:like"
+        ]
+      },
+      {
+        "label": "family:3",
+        "visible_response_count": 10,
+        "evidence_refs": [
+          "artist_page_001:artist:01:Fleetwood Mac:love",
+          "artist_page_001:artist:02:Tom Petty and the Heartbreakers:love",
+          "artist_page_001:artist:03:Eagles:love",
+          "artist_page_001:artist:04:Dire Straits:like",
+          "album_page_001:album:01:Hotel California:like",
+          "album_page_001:album:02:Rumours:like",
+          "album_page_001:album:03:Brothers in Arms:like",
+          "album_page_001:album:04:Their Greatest Hits 1971-1975:like"
+        ]
+      },
+      {
+        "label": "archetype:022",
+        "visible_response_count": 4,
+        "evidence_refs": [
+          "artist_page_001:artist:01:Fleetwood Mac:love",
+          "artist_page_001:artist:03:Eagles:love",
+          "album_page_001:album:02:Rumours:like",
+          "album_page_001:album:04:Their Greatest Hits 1971-1975:like"
+        ]
+      },
+      {
+        "label": "archetype:113",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_001:artist:07:Garth Brooks:like",
+          "artist_page_001:artist:10:Bon Jovi:love",
+          "song_page_001:song:08:Livin' on a Prayer:like"
+        ]
+      },
+      {
+        "label": "family:17",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_001:artist:07:Garth Brooks:like",
+          "artist_page_001:artist:10:Bon Jovi:love",
+          "song_page_001:song:08:Livin' on a Prayer:like"
+        ]
+      },
+      {
+        "label": "family:9",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_001:artist:10:Bon Jovi:love",
+          "artist_page_002:artist:01:Nine Inch Nails:like",
+          "song_page_001:song:08:Livin' on a Prayer:like"
+        ]
+      },
+      {
+        "label": "family:10",
+        "visible_response_count": 2,
+        "evidence_refs": [
+          "artist_page_001:artist:06:Stone Temple Pilots:like",
+          "artist_page_002:artist:05:Sonic Youth:love"
+        ]
+      },
+      {
+        "label": "archetype:063",
+        "visible_response_count": 2,
+        "evidence_refs": [
+          "artist_page_001:artist:10:Bon Jovi:love",
+          "song_page_001:song:08:Livin' on a Prayer:like"
+        ]
+      }
+    ],
+    "negative_clusters": [
+      {
+        "label": "family:6",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_002:artist:02:Prince:dont_like",
+          "artist_page_002:artist:06:Sade:dont_like",
+          "album_page_001:album:06:The Miseducation of Lauryn Hill:dont_like"
+        ]
+      },
+      {
+        "label": "family:10",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_002:artist:09:The Killers:dont_like",
+          "artist_page_002:artist:11:Husker Du:dont_like",
+          "song_page_001:song:02:Everlong:dont_like"
+        ]
+      },
+      {
+        "label": "family:12",
+        "visible_response_count": 2,
+        "evidence_refs": [
+          "artist_page_002:artist:02:Prince:dont_like",
+          "album_page_001:album:11:Planet Her:dont_like"
+        ]
+      },
+      {
+        "label": "archetype:050",
+        "visible_response_count": 2,
+        "evidence_refs": [
+          "album_page_001:album:06:The Miseducation of Lauryn Hill:dont_like",
+          "album_page_001:album:11:Planet Her:dont_like"
+        ]
+      },
+      {
+        "label": "family:7",
+        "visible_response_count": 2,
+        "evidence_refs": [
+          "album_page_001:album:06:The Miseducation of Lauryn Hill:dont_like",
+          "album_page_001:album:11:Planet Her:dont_like"
+        ]
+      },
+      {
+        "label": "archetype:001",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "artist_page_001:artist:12:Buddy Holly:dont_like"
+        ]
+      },
+      {
+        "label": "family:1",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "artist_page_001:artist:12:Buddy Holly:dont_like"
+        ]
+      },
+      {
+        "label": "archetype:039",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "artist_page_002:artist:02:Prince:dont_like"
+        ]
+      }
+    ],
+    "ok_waypoint_clusters": [
+      {
+        "label": "family:17",
+        "visible_response_count": 5,
+        "evidence_refs": [
+          "artist_page_001:artist:05:Shania Twain:ok",
+          "artist_page_001:artist:08:Kool & the Gang:ok",
+          "artist_page_001:artist:11:Mariah Carey:ok",
+          "album_page_001:album:10:Slippery When Wet:ok",
+          "song_page_001:song:10:Man! I Feel Like a Woman!:ok"
+        ]
+      },
+      {
+        "label": "family:6",
+        "visible_response_count": 5,
+        "evidence_refs": [
+          "artist_page_001:artist:08:Kool & the Gang:ok",
+          "album_page_001:album:08:Diamond Life:ok",
+          "song_page_001:song:04:Smooth Operator:ok",
+          "song_page_001:song:05:Doo Wop (That Thing):ok",
+          "song_page_001:song:06:Sexual Healing:ok"
+        ]
+      },
+      {
+        "label": "family:9",
+        "visible_response_count": 5,
+        "evidence_refs": [
+          "artist_page_001:artist:09:Alice in Chains:ok",
+          "artist_page_002:artist:04:Deftones:ok",
+          "album_page_001:album:09:Pretty Hate Machine:ok",
+          "album_page_001:album:10:Slippery When Wet:ok",
+          "album_page_001:album:12:White Pony:ok"
+        ]
+      },
+      {
+        "label": "archetype:113",
+        "visible_response_count": 4,
+        "evidence_refs": [
+          "artist_page_001:artist:05:Shania Twain:ok",
+          "artist_page_001:artist:08:Kool & the Gang:ok",
+          "album_page_001:album:10:Slippery When Wet:ok",
+          "song_page_001:song:10:Man! I Feel Like a Woman!:ok"
+        ]
+      },
+      {
+        "label": "archetype:066",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_001:artist:09:Alice in Chains:ok",
+          "artist_page_002:artist:04:Deftones:ok",
+          "album_page_001:album:12:White Pony:ok"
+        ]
+      },
+      {
+        "label": "family:7",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "artist_page_002:artist:03:Doja Cat:ok",
+          "song_page_001:song:05:Doo Wop (That Thing):ok",
+          "song_page_001:song:07:Fight for Your Right:ok"
+        ]
+      },
+      {
+        "label": "archetype:041",
+        "visible_response_count": 3,
+        "evidence_refs": [
+          "album_page_001:album:08:Diamond Life:ok",
+          "song_page_001:song:04:Smooth Operator:ok",
+          "song_page_001:song:06:Sexual Healing:ok"
+        ]
+      },
+      {
+        "label": "archetype:033",
+        "visible_response_count": 2,
+        "evidence_refs": [
+          "artist_page_001:artist:05:Shania Twain:ok",
+          "song_page_001:song:10:Man! I Feel Like a Woman!:ok"
+        ]
+      }
+    ],
+    "unknown_clusters": [
+      {
+        "label": "archetype:041",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "album_page_001:album:05:Let's Get It On:dont_know_enough"
+        ]
+      },
+      {
+        "label": "family:6",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "album_page_001:album:05:Let's Get It On:dont_know_enough"
+        ]
+      },
+      {
+        "label": "archetype:033",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "album_page_001:album:07:Come On Over:dont_know_enough"
+        ]
+      },
+      {
+        "label": "archetype:113",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "album_page_001:album:07:Come On Over:dont_know_enough"
+        ]
+      },
+      {
+        "label": "family:5",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "album_page_001:album:07:Come On Over:dont_know_enough"
+        ]
+      },
+      {
+        "label": "family:17",
+        "visible_response_count": 1,
+        "evidence_refs": [
+          "album_page_001:album:07:Come On Over:dont_know_enough"
+        ]
+      }
+    ],
+    "multi_archetype_junctions_seen": [
+      {
+        "display_name": "Kool & the Gang",
+        "reaction": "ok",
+        "evidence_ref": "artist_page_001:artist:08:Kool & the Gang:ok",
+        "archetype_ids": [
+          "039",
+          "113"
+        ]
+      },
+      {
+        "display_name": "Alice in Chains",
+        "reaction": "ok",
+        "evidence_ref": "artist_page_001:artist:09:Alice in Chains:ok",
+        "archetype_ids": [
+          "066",
+          "070"
+        ]
+      },
+      {
+        "display_name": "Sonic Youth",
+        "reaction": "love",
+        "evidence_ref": "artist_page_002:artist:05:Sonic Youth:love",
+        "archetype_ids": [
+          "059",
+          "069"
+        ]
+      },
+      {
+        "display_name": "Sade",
+        "reaction": "dont_like",
+        "evidence_ref": "artist_page_002:artist:06:Sade:dont_like",
+        "archetype_ids": [
+          "041",
+          "102"
+        ]
+      },
+      {
+        "display_name": "Sister Rosetta Tharpe",
+        "reaction": "ok",
+        "evidence_ref": "artist_page_002:artist:07:Sister Rosetta Tharpe:ok",
+        "archetype_ids": [
+          "001",
+          "108"
+        ]
+      }
+    ],
+    "false_nearby_tests_seen": [
+      {
+        "display_name": "Bon Jovi",
+        "reaction": "love",
+        "evidence_ref": "artist_page_001:artist:10:Bon Jovi:love",
+        "page_intent": "false_nearby_or_boundary_check"
+      },
+      {
+        "display_name": "Come On Over",
+        "reaction": "dont_know_enough",
+        "evidence_ref": "album_page_001:album:07:Come On Over:dont_know_enough",
+        "page_intent": "test_false_nearby_album"
+      },
+      {
+        "display_name": "Diamond Life",
+        "reaction": "ok",
+        "evidence_ref": "album_page_001:album:08:Diamond Life:ok",
+        "page_intent": "test_false_nearby_album"
+      },
+      {
+        "display_name": "Pretty Hate Machine",
+        "reaction": "ok",
+        "evidence_ref": "album_page_001:album:09:Pretty Hate Machine:ok",
+        "page_intent": "test_false_nearby_album"
+      },
+      {
+        "display_name": "Slippery When Wet",
+        "reaction": "ok",
+        "evidence_ref": "album_page_001:album:10:Slippery When Wet:ok",
+        "page_intent": "test_false_nearby_album"
+      },
+      {
+        "display_name": "Planet Her",
+        "reaction": "dont_like",
+        "evidence_ref": "album_page_001:album:11:Planet Her:dont_like",
+        "page_intent": "test_false_nearby_album"
+      },
+      {
+        "display_name": "White Pony",
+        "reaction": "ok",
+        "evidence_ref": "album_page_001:album:12:White Pony:ok",
+        "page_intent": "test_false_nearby_album"
+      }
+    ]
+  },
+  "canonical_graph_dictionary": {
+    "dictionary_available": false,
+    "families": [],
+    "archetypes": [],
+    "instruction": "Do not invent human-readable meanings for family numbers or archetype IDs."
+  },
+  "pages": [
+    {
+      "page_id": "artist_page_001",
+      "stage": "artist",
+      "page_number": 1,
+      "page_mode": "apple_biased_seed",
+      "tile_count": 12,
+      "generator_visible_inputs": {
+        "canonical_graph_manifest_status": "dry_run_ready_with_warnings",
+        "apple_payload_applied": true,
+        "prior_visible_response_count": 0,
+        "hidden_inputs_consumed": false
+      },
+      "adaptive_context": null,
+      "tiles": [
+        {
+          "evidence_ref": "artist_page_001:artist:01:Fleetwood Mac:love",
+          "position": 1,
+          "tile_id": "tile_01",
+          "response_id": "artist_page_001_resp_01",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "artist-fleetwood-mac",
+            "display_name": "Fleetwood Mac",
+            "resolution_state": "resolved"
+          },
+          "reaction": "love",
+          "atlas_signal_interpretation": "strong_positive",
+          "app_ui_candidate": "favorite",
+          "page_intent": "payload_signature_artist",
+          "candidate_basis": [
+            "active_survey_selection",
+            "payload_signature_artist_bucket",
+            "payload_overrepresentation",
+            "apple_exact_match"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016",
+              "022"
+            ],
+            "roles": [
+              "album_anchor",
+              "anchor",
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.98,
+            "exposure_score": 0.98,
+            "recency_score": 0.956,
+            "repetition_score": 1.0,
+            "library_commitment_score": 0.896,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.18,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.959,
+            "probable_affinity_score": 0.872,
+            "signal_ids": [
+              "apple_01_01"
+            ]
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.402,
+            "apple_evidence_strength": 1.0,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.951,
+            "multi_archetype_junction_value": 0.679,
+            "canonical_anchor_value": 1.0,
+            "false_nearby_value": 0.0,
+            "coverage_value": 1.0,
+            "penalties": 0.0,
+            "final": 0.773
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:02:Tom Petty and the Heartbreakers:love",
+          "position": 2,
+          "tile_id": "tile_02",
+          "response_id": "artist_page_001_resp_02",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "artist-tom-petty-and-the-heartbreakers",
+            "display_name": "Tom Petty and the Heartbreakers",
+            "resolution_state": "resolved"
+          },
+          "reaction": "love",
+          "atlas_signal_interpretation": "strong_positive",
+          "app_ui_candidate": "favorite",
+          "page_intent": "payload_signature_artist",
+          "candidate_basis": [
+            "active_survey_selection",
+            "payload_signature_artist_bucket",
+            "payload_overrepresentation",
+            "apple_exact_match"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016"
+            ],
+            "roles": [
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.92,
+            "exposure_score": 0.92,
+            "recency_score": 0.933,
+            "repetition_score": 0.967,
+            "library_commitment_score": 0.886,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.18,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.925,
+            "probable_affinity_score": 0.84,
+            "signal_ids": [
+              "apple_01_02"
+            ]
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.481,
+            "apple_evidence_strength": 1.0,
+            "expected_familiarity": 0.898,
+            "archetype_hypothesis_value": 0.936,
+            "multi_archetype_junction_value": 0.556,
+            "canonical_anchor_value": 0.75,
+            "false_nearby_value": 0.0,
+            "coverage_value": 0.5,
+            "penalties": 0.0,
+            "final": 0.712
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:03:Eagles:love",
+          "position": 3,
+          "tile_id": "tile_03",
+          "response_id": "artist_page_001_resp_03",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "artist-eagles",
+            "display_name": "Eagles",
+            "resolution_state": "resolved"
+          },
+          "reaction": "love",
+          "atlas_signal_interpretation": "strong_positive",
+          "app_ui_candidate": "favorite",
+          "page_intent": "payload_signature_artist",
+          "candidate_basis": [
+            "active_survey_selection",
+            "payload_signature_artist_bucket",
+            "payload_overrepresentation",
+            "apple_exact_match"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016",
+              "022"
+            ],
+            "roles": [
+              "anchor",
+              "bridge",
+              "compilation_gateway",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.86,
+            "exposure_score": 0.86,
+            "recency_score": 0.8,
+            "repetition_score": 0.717,
+            "library_commitment_score": 1.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.1,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.856,
+            "probable_affinity_score": 0.769,
+            "signal_ids": [
+              "apple_01_03"
+            ]
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.304,
+            "apple_evidence_strength": 1.0,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.951,
+            "multi_archetype_junction_value": 0.706,
+            "canonical_anchor_value": 1.0,
+            "false_nearby_value": 0.0,
+            "coverage_value": 0.38,
+            "penalties": 0.0,
+            "final": 0.724
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:04:Dire Straits:like",
+          "position": 4,
+          "tile_id": "tile_04",
+          "response_id": "artist_page_001_resp_04",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "artist-dire-straits",
+            "display_name": "Dire Straits",
+            "resolution_state": "resolved"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "payload_signature_artist",
+          "candidate_basis": [
+            "active_survey_selection",
+            "payload_signature_artist_bucket",
+            "payload_overrepresentation",
+            "apple_exact_match"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016"
+            ],
+            "roles": [
+              "album_anchor",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "high",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.72,
+            "exposure_score": 0.72,
+            "recency_score": 0.622,
+            "repetition_score": 0.367,
+            "library_commitment_score": 1.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.1,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.688,
+            "probable_affinity_score": 0.621,
+            "signal_ids": [
+              "apple_01_04"
+            ]
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.366,
+            "apple_evidence_strength": 1.0,
+            "expected_familiarity": 0.744,
+            "archetype_hypothesis_value": 0.93,
+            "multi_archetype_junction_value": 0.556,
+            "canonical_anchor_value": 0.664,
+            "false_nearby_value": 0.0,
+            "coverage_value": 0.25,
+            "penalties": 0.0,
+            "final": 0.642
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:05:Shania Twain:ok",
+          "position": 5,
+          "tile_id": "tile_05",
+          "response_id": "artist_page_001_resp_05",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "shania-twain",
+            "display_name": "Shania Twain",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "archetype_confirmation_anchor",
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "apple_archetype_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              5,
+              17
+            ],
+            "archetype_ids": [
+              "033",
+              "113"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "false_nearby",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.06,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.159,
+            "multi_archetype_junction_value": 0.557,
+            "canonical_anchor_value": 0.931,
+            "false_nearby_value": 0.5,
+            "coverage_value": 1.0,
+            "penalties": 0.0,
+            "final": 0.409
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:06:Stone Temple Pilots:like",
+          "position": 6,
+          "tile_id": "tile_06",
+          "response_id": "artist_page_001_resp_06",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "stone-temple-pilots",
+            "display_name": "Stone Temple Pilots",
+            "resolution_state": "resolved"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "archetype_confirmation_anchor",
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "apple_archetype_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              10
+            ],
+            "archetype_ids": [
+              "071"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.062,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.168,
+            "multi_archetype_junction_value": 0.421,
+            "canonical_anchor_value": 1.0,
+            "false_nearby_value": 0.0,
+            "coverage_value": 1.0,
+            "penalties": 0.0,
+            "final": 0.375
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:07:Garth Brooks:like",
+          "position": 7,
+          "tile_id": "tile_07",
+          "response_id": "artist_page_001_resp_07",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "garth-brooks",
+            "display_name": "Garth Brooks",
+            "resolution_state": "resolved"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "archetype_confirmation_anchor",
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "apple_archetype_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              5,
+              17
+            ],
+            "archetype_ids": [
+              "034",
+              "113"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "false_nearby",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.06,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.156,
+            "multi_archetype_junction_value": 0.557,
+            "canonical_anchor_value": 0.879,
+            "false_nearby_value": 0.5,
+            "coverage_value": 0.64,
+            "penalties": 0.0,
+            "final": 0.387
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:08:Kool & the Gang:ok",
+          "position": 8,
+          "tile_id": "tile_08",
+          "response_id": "artist_page_001_resp_08",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "kool-and-the-gang",
+            "display_name": "Kool & the Gang",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "multi_archetype_junction",
+          "candidate_basis": [
+            "active_survey_selection",
+            "multi_archetype_junction_bucket",
+            "apple_archetype_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6,
+              17
+            ],
+            "archetype_ids": [
+              "039",
+              "113"
+            ],
+            "roles": [
+              "bridge",
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.06,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.159,
+            "multi_archetype_junction_value": 0.741,
+            "canonical_anchor_value": 0.931,
+            "false_nearby_value": 0.5,
+            "coverage_value": 1.0,
+            "penalties": 0.07,
+            "final": 0.361
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:09:Alice in Chains:ok",
+          "position": 9,
+          "tile_id": "tile_09",
+          "response_id": "artist_page_001_resp_09",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "alice-in-chains",
+            "display_name": "Alice in Chains",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "multi_archetype_junction",
+          "candidate_basis": [
+            "active_survey_selection",
+            "multi_archetype_junction_bucket",
+            "apple_family_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              10
+            ],
+            "archetype_ids": [
+              "066",
+              "070"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "false_nearby"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.011,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.079,
+            "multi_archetype_junction_value": 0.656,
+            "canonical_anchor_value": 0.966,
+            "false_nearby_value": 0.84,
+            "coverage_value": 1.0,
+            "penalties": 0.07,
+            "final": 0.351
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:10:Bon Jovi:love",
+          "position": 10,
+          "tile_id": "tile_10",
+          "response_id": "artist_page_001_resp_10",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "bon-jovi",
+            "display_name": "Bon Jovi",
+            "resolution_state": "resolved"
+          },
+          "reaction": "love",
+          "atlas_signal_interpretation": "strong_positive",
+          "app_ui_candidate": "favorite",
+          "page_intent": "false_nearby_or_boundary_check",
+          "candidate_basis": [
+            "active_survey_selection",
+            "false_nearby_or_boundary_check_bucket",
+            "apple_archetype_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              17
+            ],
+            "archetype_ids": [
+              "063",
+              "113"
+            ],
+            "roles": [
+              "boundary",
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.06,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.157,
+            "multi_archetype_junction_value": 0.624,
+            "canonical_anchor_value": 0.897,
+            "false_nearby_value": 0.84,
+            "coverage_value": 0.64,
+            "penalties": 0.07,
+            "final": 0.343
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:11:Mariah Carey:ok",
+          "position": 11,
+          "tile_id": "tile_11",
+          "response_id": "artist_page_001_resp_11",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "mariah-carey",
+            "display_name": "Mariah Carey",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "mass_popular_control",
+          "candidate_basis": [
+            "active_survey_selection",
+            "mass_popular_control_bucket",
+            "apple_family_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              12,
+              17
+            ],
+            "archetype_ids": [
+              "089",
+              "112"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "false_nearby",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.011,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.076,
+            "multi_archetype_junction_value": 0.557,
+            "canonical_anchor_value": 0.931,
+            "false_nearby_value": 0.5,
+            "coverage_value": 1.0,
+            "penalties": 0.0,
+            "final": 0.389
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_001:artist:12:Buddy Holly:dont_like",
+          "position": 12,
+          "tile_id": "tile_12",
+          "response_id": "artist_page_001_resp_12",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "buddy-holly",
+            "display_name": "Buddy Holly",
+            "resolution_state": "resolved"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "coverage_repair_broad_sentinel",
+          "candidate_basis": [
+            "active_survey_selection",
+            "coverage_repair_broad_sentinel_bucket",
+            "graph_exploration"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              1
+            ],
+            "archetype_ids": [
+              "001"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "payload_overrepresentation_score": 0.0,
+            "apple_evidence_strength": 0.0,
+            "expected_familiarity": 1.0,
+            "archetype_hypothesis_value": 0.06,
+            "multi_archetype_junction_value": 0.556,
+            "canonical_anchor_value": 1.0,
+            "false_nearby_value": 0.0,
+            "coverage_value": 1.0,
+            "penalties": 0.0,
+            "final": 0.365
+          },
+          "response_evidence_refs": [],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        }
+      ]
+    },
+    {
+      "page_id": "artist_page_002",
+      "stage": "artist",
+      "page_number": 2,
+      "page_mode": "apple_biased_seed",
+      "tile_count": 12,
+      "generator_visible_inputs": {
+        "apple_payload_applied": true,
+        "prior_visible_response_count": 12,
+        "hidden_inputs_consumed": false
+      },
+      "adaptive_context": {
+        "target_mix_name": "many_positives",
+        "target_mix": {
+          "confirm_or_repeat_signal": 4,
+          "multi_archetype_junction": 3,
+          "disambiguate_response": 2,
+          "test_bridge": 1,
+          "payload_adjacent_lesser_known": 1,
+          "controlled_frontier": 1
+        },
+        "response_summary": {
+          "total_response_count": 12,
+          "reaction_counts": {
+            "love": 4,
+            "like": 3,
+            "ok": 4,
+            "dont_know_enough": 0,
+            "dont_like": 1
+          },
+          "positive_count": 7,
+          "negative_count": 1,
+          "unknown_count": 0,
+          "known_count": 12,
+          "unknown_rate": 0.0,
+          "positive_rate": 0.583,
+          "negative_rate": 0.083
+        }
+      },
+      "tiles": [
+        {
+          "evidence_ref": "artist_page_002:artist:01:Nine Inch Nails:like",
+          "position": 1,
+          "tile_id": "tile_01",
+          "response_id": "artist_page_002_resp_01",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "nine-inch-nails",
+            "display_name": "Nine Inch Nails",
+            "resolution_state": "resolved"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "confirm_or_repeat_signal",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "confirm_or_repeat_signal_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              11
+            ],
+            "archetype_ids": [
+              "065",
+              "087"
+            ],
+            "roles": [
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "contrast",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.708,
+            "response_disambiguation_value": 0.799,
+            "graph_bridge_value": 0.66,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.62,
+            "expected_familiarity": 1.0,
+            "apple_evidence": 0.0,
+            "novelty": 0.22,
+            "penalties": 0.0,
+            "final": 0.782
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_family",
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:02:Prince:dont_like",
+          "position": 2,
+          "tile_id": "tile_02",
+          "response_id": "artist_page_002_resp_02",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "prince",
+            "display_name": "Prince",
+            "resolution_state": "resolved"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "confirm_or_repeat_signal",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "confirm_or_repeat_signal_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6,
+              12,
+              15
+            ],
+            "archetype_ids": [
+              "039",
+              "088",
+              "106"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.66,
+            "response_disambiguation_value": 0.8,
+            "graph_bridge_value": 0.67,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.34,
+            "expected_familiarity": 1.0,
+            "apple_evidence": 0.0,
+            "novelty": 0.22,
+            "penalties": 0.0,
+            "final": 0.758
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:03:Doja Cat:ok",
+          "position": 3,
+          "tile_id": "tile_03",
+          "response_id": "artist_page_002_resp_03",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "doja-cat",
+            "display_name": "Doja Cat",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "confirm_or_repeat_signal",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "confirm_or_repeat_signal_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              7,
+              12
+            ],
+            "archetype_ids": [
+              "050",
+              "093"
+            ],
+            "roles": [
+              "boundary",
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.657,
+            "response_disambiguation_value": 0.799,
+            "graph_bridge_value": 0.66,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.34,
+            "expected_familiarity": 1.0,
+            "apple_evidence": 0.0,
+            "novelty": 0.22,
+            "penalties": 0.0,
+            "final": 0.756
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:04:Deftones:ok",
+          "position": 4,
+          "tile_id": "tile_04",
+          "response_id": "artist_page_002_resp_04",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "deftones",
+            "display_name": "Deftones",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "confirm_or_repeat_signal",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "confirm_or_repeat_signal_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              18
+            ],
+            "archetype_ids": [
+              "066",
+              "118"
+            ],
+            "roles": [
+              "album_anchor",
+              "anchor",
+              "artist_anchor",
+              "bridge",
+              "false_nearby"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.656,
+            "response_disambiguation_value": 0.786,
+            "graph_bridge_value": 0.553,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.5,
+            "expected_familiarity": 1.0,
+            "apple_evidence": 0.0,
+            "novelty": 0.22,
+            "penalties": 0.0,
+            "final": 0.751
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_family",
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:05:Sonic Youth:love",
+          "position": 5,
+          "tile_id": "tile_05",
+          "response_id": "artist_page_002_resp_05",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "sonic-youth",
+            "display_name": "Sonic Youth",
+            "resolution_state": "resolved"
+          },
+          "reaction": "love",
+          "atlas_signal_interpretation": "strong_positive",
+          "app_ui_candidate": "favorite",
+          "page_intent": "multi_archetype_junction",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "multi_archetype_junction_bucket",
+            "visible_response_evidence",
+            "apple_family_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              8,
+              10
+            ],
+            "archetype_ids": [
+              "059",
+              "069"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "deepening"
+            ],
+            "best_recognition_tier": "high",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.631,
+            "response_disambiguation_value": 0.679,
+            "graph_bridge_value": 0.538,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.34,
+            "expected_familiarity": 0.864,
+            "apple_evidence": 0.011,
+            "novelty": 0.64,
+            "penalties": 0.0,
+            "final": 0.714
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:06:Sade:dont_like",
+          "position": 6,
+          "tile_id": "tile_06",
+          "response_id": "artist_page_002_resp_06",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "sade",
+            "display_name": "Sade",
+            "resolution_state": "resolved"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "multi_archetype_junction",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "multi_archetype_junction_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6,
+              14
+            ],
+            "archetype_ids": [
+              "041",
+              "102"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "boundary",
+              "bridge"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.589,
+            "response_disambiguation_value": 0.679,
+            "graph_bridge_value": 0.538,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.34,
+            "expected_familiarity": 1.0,
+            "apple_evidence": 0.0,
+            "novelty": 0.22,
+            "penalties": 0.0,
+            "final": 0.713
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:07:Sister Rosetta Tharpe:ok",
+          "position": 7,
+          "tile_id": "tile_07",
+          "response_id": "artist_page_002_resp_07",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "sister-rosetta-tharpe",
+            "display_name": "Sister Rosetta Tharpe",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "multi_archetype_junction",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "multi_archetype_junction_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              1,
+              16
+            ],
+            "archetype_ids": [
+              "001",
+              "108"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "bridge",
+              "deepening",
+              "gateway"
+            ],
+            "best_recognition_tier": "high",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.616,
+            "response_disambiguation_value": 0.731,
+            "graph_bridge_value": 0.66,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.0,
+            "expected_familiarity": 0.864,
+            "apple_evidence": 0.0,
+            "novelty": 0.64,
+            "penalties": 0.0,
+            "final": 0.713
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:08:Queens of the Stone Age:dont_like",
+          "position": 8,
+          "tile_id": "tile_08",
+          "response_id": "artist_page_002_resp_08",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "queens-of-the-stone-age",
+            "display_name": "Queens of the Stone Age",
+            "resolution_state": "resolved"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "disambiguate_response",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "disambiguate_response_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9
+            ],
+            "archetype_ids": [
+              "064"
+            ],
+            "roles": [
+              "boundary",
+              "bridge",
+              "false_nearby",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.581,
+            "response_disambiguation_value": 0.525,
+            "graph_bridge_value": 0.66,
+            "coverage_repair_value": 0.424,
+            "false_nearby_value": 0.84,
+            "expected_familiarity": 0.88,
+            "apple_evidence": 0.0,
+            "novelty": 0.36,
+            "penalties": 0.0,
+            "final": 0.676
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_family",
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:09:The Killers:dont_like",
+          "position": 9,
+          "tile_id": "tile_09",
+          "response_id": "artist_page_002_resp_09",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "the-killers",
+            "display_name": "The Killers",
+            "resolution_state": "resolved"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "disambiguate_response",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "disambiguate_response_bucket",
+            "visible_response_evidence",
+            "apple_archetype_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              10,
+              17
+            ],
+            "archetype_ids": [
+              "080",
+              "113"
+            ],
+            "roles": [
+              "boundary",
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.57,
+            "response_disambiguation_value": 0.546,
+            "graph_bridge_value": 0.512,
+            "coverage_repair_value": 0.46,
+            "false_nearby_value": 0.84,
+            "expected_familiarity": 0.88,
+            "apple_evidence": 0.071,
+            "novelty": 0.48,
+            "penalties": 0.0,
+            "final": 0.669
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_archetype",
+                "shared_family",
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:10:The Beach Boys:ok",
+          "position": 10,
+          "tile_id": "tile_10",
+          "response_id": "artist_page_002_resp_10",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "the-beach-boys",
+            "display_name": "The Beach Boys",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_bridge",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "test_bridge_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              1,
+              2
+            ],
+            "archetype_ids": [
+              "007",
+              "013"
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.525,
+            "response_disambiguation_value": 0.578,
+            "graph_bridge_value": 0.66,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.0,
+            "expected_familiarity": 1.0,
+            "apple_evidence": 0.0,
+            "novelty": 0.22,
+            "penalties": 0.0,
+            "final": 0.681
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:11:Husker Du:dont_like",
+          "position": 11,
+          "tile_id": "tile_11",
+          "response_id": "artist_page_002_resp_11",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "husker-du",
+            "display_name": "Husker Du",
+            "resolution_state": "resolved"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "payload_adjacent_lesser_known",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "payload_adjacent_lesser_known_bucket",
+            "visible_response_evidence",
+            "apple_family_neighbor"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              8,
+              10
+            ],
+            "archetype_ids": [
+              "055",
+              "069"
+            ],
+            "roles": [
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "deepening"
+            ],
+            "best_recognition_tier": "high",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.637,
+            "response_disambiguation_value": 0.832,
+            "graph_bridge_value": 0.538,
+            "coverage_repair_value": 0.64,
+            "false_nearby_value": 0.34,
+            "expected_familiarity": 0.744,
+            "apple_evidence": 0.011,
+            "novelty": 0.78,
+            "penalties": 0.0,
+            "final": 0.695
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "artist_page_002:artist:12:Arlo Guthrie:ok",
+          "position": 12,
+          "tile_id": "tile_12",
+          "response_id": "artist_page_002_resp_12",
+          "music_object_ref": {
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "canonical_artist_id": "f4-026-artist-arlo-guthrie",
+            "display_name": "Arlo Guthrie",
+            "resolution_state": "resolved"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "controlled_frontier",
+          "candidate_basis": [
+            "active_survey_adaptation",
+            "controlled_frontier_bucket",
+            "visible_response_evidence",
+            "canonical_graph_adaptive_candidate"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              4
+            ],
+            "archetype_ids": [
+              "026"
+            ],
+            "roles": [
+              "artist_anchor",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "high",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "posterior_relevance": 1.0,
+            "information_gain": 0.541,
+            "response_disambiguation_value": 0.508,
+            "graph_bridge_value": 0.66,
+            "coverage_repair_value": 1.0,
+            "false_nearby_value": 0.0,
+            "expected_familiarity": 0.744,
+            "apple_evidence": 0.0,
+            "novelty": 0.6,
+            "penalties": 0.0,
+            "final": 0.65
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "interpretation": "strong_positive_scope_unknown",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "interpretation": "qualified_positive",
+              "related_by": [
+                "shared_graph_role"
+              ]
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        }
+      ]
+    },
+    {
+      "page_id": "album_page_001",
+      "stage": "album",
+      "page_number": 1,
+      "page_mode": "apple_biased_seed",
+      "tile_count": 12,
+      "generator_visible_inputs": {
+        "apple_payload_applied": true,
+        "prior_visible_response_count": 48,
+        "hidden_inputs_consumed": false
+      },
+      "adaptive_context": null,
+      "tiles": [
+        {
+          "evidence_ref": "album_page_001:album:01:Hotel California:like",
+          "position": 1,
+          "tile_id": "tile_01",
+          "response_id": "album_page_001_resp_01",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "album-hotel-california-1976",
+            "display_name": "Hotel California",
+            "resolution_state": "resolved",
+            "artist_display_name": "Eagles"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_canonical_album_anchor",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016"
+            ],
+            "roles": [
+              "album_anchor",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 1.0,
+            "information_gain": 0.761,
+            "related_response_value": 1.0,
+            "role_value": 0.42,
+            "apple_artist_context": 1.0,
+            "final": 0.875
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_10",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_10",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "overlaps 022"
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:02:Rumours:like",
+          "position": 2,
+          "tile_id": "tile_02",
+          "response_id": "album_page_001_resp_02",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "album-rumours-1977",
+            "display_name": "Rumours",
+            "resolution_state": "resolved",
+            "artist_display_name": "Fleetwood Mac"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_canonical_album_anchor",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016",
+              "022"
+            ],
+            "roles": [
+              "album_anchor",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 1.0,
+            "information_gain": 0.761,
+            "related_response_value": 1.0,
+            "role_value": 0.42,
+            "apple_artist_context": 1.0,
+            "final": 0.875
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_10",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_10",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "overlaps 016",
+            "overlaps 022"
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:03:Brothers in Arms:like",
+          "position": 3,
+          "tile_id": "tile_03",
+          "response_id": "album_page_001_resp_03",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "album-brothers-in-arms-1985",
+            "display_name": "Brothers in Arms",
+            "resolution_state": "resolved",
+            "artist_display_name": "Dire Straits"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_canonical_album_anchor",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016"
+            ],
+            "roles": [
+              "album_anchor",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "edge"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.856,
+            "information_gain": 0.794,
+            "related_response_value": 1.0,
+            "role_value": 0.56,
+            "apple_artist_context": 1.0,
+            "final": 0.838
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_10",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_10",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "eighties boundary case"
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:04:Their Greatest Hits 1971-1975:like",
+          "position": 4,
+          "tile_id": "tile_04",
+          "response_id": "album_page_001_resp_04",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "album-their-greatest-hits-1971-1975-1976",
+            "display_name": "Their Greatest Hits 1971-1975",
+            "resolution_state": "resolved",
+            "artist_display_name": "Eagles"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "confirm_album_world",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016",
+              "022"
+            ],
+            "roles": [
+              "compilation_gateway",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 1.0,
+            "information_gain": 0.703,
+            "related_response_value": 1.0,
+            "role_value": 0.18,
+            "apple_artist_context": 1.0,
+            "final": 0.835
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_04",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_10",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_10",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "compilation vs studio split",
+            "overlaps 016"
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:05:Let's Get It On:dont_know_enough",
+          "position": 5,
+          "tile_id": "tile_05",
+          "response_id": "album_page_001_resp_05",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "marvin-gaye-lets-get-it-on",
+            "display_name": "Let's Get It On",
+            "resolution_state": "resolved",
+            "artist_display_name": "Marvin Gaye"
+          },
+          "reaction": "dont_know_enough",
+          "atlas_signal_interpretation": "unknown_or_insufficient_familiarity",
+          "app_ui_candidate": "dontKnow",
+          "page_intent": "test_canonical_album_anchor",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6
+            ],
+            "archetype_ids": [
+              "041"
+            ],
+            "roles": [
+              "album_anchor",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.654,
+            "related_response_value": 1.0,
+            "role_value": 0.56,
+            "apple_artist_context": 0.0,
+            "final": 0.809
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_004_resp_05",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_002_resp_06",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_08",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_02",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_02",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_003_resp_05",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_05",
+              "reaction": "love",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Same title as song row."
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:06:The Miseducation of Lauryn Hill:dont_like",
+          "position": 6,
+          "tile_id": "tile_06",
+          "response_id": "album_page_001_resp_06",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "lauryn-hill-the-miseducation-of-lauryn-hill",
+            "display_name": "The Miseducation of Lauryn Hill",
+            "resolution_state": "resolved",
+            "artist_display_name": "Lauryn Hill"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "test_canonical_album_anchor",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6,
+              7
+            ],
+            "archetype_ids": [
+              "043",
+              "050"
+            ],
+            "roles": [
+              "album_anchor",
+              "anchor",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.654,
+            "related_response_value": 1.0,
+            "role_value": 0.56,
+            "apple_artist_context": 0.0,
+            "final": 0.809
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_003_resp_05",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_05",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_002_resp_03",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_03",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_08",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_02",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_02",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_06",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "R&B/soul ownership is strong but rap rows are justified by Packet guidance."
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:07:Come On Over:dont_know_enough",
+          "position": 7,
+          "tile_id": "tile_07",
+          "response_id": "album_page_001_resp_07",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "shania-twain-come-on-over",
+            "display_name": "Come On Over",
+            "resolution_state": "resolved",
+            "artist_display_name": "Shania Twain"
+          },
+          "reaction": "dont_know_enough",
+          "atlas_signal_interpretation": "unknown_or_insufficient_familiarity",
+          "app_ui_candidate": "dontKnow",
+          "page_intent": "test_false_nearby_album",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              5,
+              17
+            ],
+            "archetype_ids": [
+              "033",
+              "113"
+            ],
+            "roles": [
+              "album_anchor",
+              "anchor",
+              "false_nearby",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.645,
+            "related_response_value": 1.0,
+            "role_value": 0.52,
+            "apple_artist_context": 0.0,
+            "final": 0.802
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_05",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_07",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_07",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_08",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_002_resp_09",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_09",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "album_page_001:album:08:Diamond Life:ok",
+          "position": 8,
+          "tile_id": "tile_08",
+          "response_id": "album_page_001_resp_08",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "sade-diamond-life",
+            "display_name": "Diamond Life",
+            "resolution_state": "resolved",
+            "artist_display_name": "Sade"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_false_nearby_album",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6
+            ],
+            "archetype_ids": [
+              "041"
+            ],
+            "roles": [
+              "album_anchor",
+              "boundary",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.645,
+            "related_response_value": 1.0,
+            "role_value": 0.52,
+            "apple_artist_context": 0.0,
+            "final": 0.802
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_002_resp_06",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_004_resp_05",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_08",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_02",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_02",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_003_resp_05",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_05",
+              "reaction": "love",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Band/project identity should be confirmed."
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:09:Pretty Hate Machine:ok",
+          "position": 9,
+          "tile_id": "tile_09",
+          "response_id": "album_page_001_resp_09",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "nine-inch-nails-pretty-hate-machine",
+            "display_name": "Pretty Hate Machine",
+            "resolution_state": "resolved",
+            "artist_display_name": "Nine Inch Nails"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_false_nearby_album",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9
+            ],
+            "archetype_ids": [
+              "065"
+            ],
+            "roles": [
+              "album_anchor",
+              "boundary",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.645,
+            "related_response_value": 1.0,
+            "role_value": 0.52,
+            "apple_artist_context": 0.0,
+            "final": 0.802
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_002_resp_01",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_01",
+              "reaction": "like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_09",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_09",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_04",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_04",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_08",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_08",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "album_page_001:album:10:Slippery When Wet:ok",
+          "position": 10,
+          "tile_id": "tile_10",
+          "response_id": "album_page_001_resp_10",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "bon-jovi-slippery-when-wet",
+            "display_name": "Slippery When Wet",
+            "resolution_state": "resolved",
+            "artist_display_name": "Bon Jovi"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_false_nearby_album",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              17
+            ],
+            "archetype_ids": [
+              "063",
+              "113"
+            ],
+            "roles": [
+              "album_anchor",
+              "false_nearby",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.645,
+            "related_response_value": 1.0,
+            "role_value": 0.52,
+            "apple_artist_context": 0.0,
+            "final": 0.802
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_05",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_07",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_07",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_08",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_002_resp_09",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_09",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Boundary, not true-metal proof."
+          ]
+        },
+        {
+          "evidence_ref": "album_page_001:album:11:Planet Her:dont_like",
+          "position": 11,
+          "tile_id": "tile_11",
+          "response_id": "album_page_001_resp_11",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "doja-cat-planet-her",
+            "display_name": "Planet Her",
+            "resolution_state": "resolved",
+            "artist_display_name": "Doja Cat"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "test_false_nearby_album",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              7,
+              12
+            ],
+            "archetype_ids": [
+              "050",
+              "093"
+            ],
+            "roles": [
+              "album_anchor",
+              "boundary",
+              "bridge",
+              "gateway"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.812,
+            "information_gain": 0.678,
+            "related_response_value": 1.0,
+            "role_value": 0.66,
+            "apple_artist_context": 0.0,
+            "final": 0.797
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_002_resp_03",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_03",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_003_resp_02",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_02",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_05",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_05",
+              "reaction": "love",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_002_resp_02",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_02",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_003_resp_01",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_01",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "album_page_001:album:12:White Pony:ok",
+          "position": 12,
+          "tile_id": "tile_12",
+          "response_id": "album_page_001_resp_12",
+          "music_object_ref": {
+            "object_type": "album",
+            "ref_source": "canonical_graph",
+            "canonical_album_id": "deftones-white-pony",
+            "display_name": "White Pony",
+            "resolution_state": "resolved",
+            "artist_display_name": "Deftones"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_false_nearby_album",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              18
+            ],
+            "archetype_ids": [
+              "066",
+              "118"
+            ],
+            "roles": [
+              "album_anchor",
+              "anchor",
+              "bridge",
+              "false_nearby"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.635,
+            "related_response_value": 1.0,
+            "role_value": 0.48,
+            "apple_artist_context": 0.0,
+            "final": 0.795
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_002_resp_04",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_04",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_09",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_09",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_004_resp_09",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_09",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_12",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_12",
+              "reaction": "like",
+              "relatedness": 0.64
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Legacy row included as modern-platform false nearby."
+          ]
+        }
+      ]
+    },
+    {
+      "page_id": "song_page_001",
+      "stage": "song",
+      "page_number": 1,
+      "page_mode": "apple_biased_seed",
+      "tile_count": 12,
+      "generator_visible_inputs": {
+        "apple_payload_applied": true,
+        "prior_visible_response_count": 72,
+        "hidden_inputs_consumed": false
+      },
+      "adaptive_context": null,
+      "tiles": [
+        {
+          "evidence_ref": "song_page_001:song:01:Dreams:dont_like",
+          "position": 1,
+          "tile_id": "tile_01",
+          "response_id": "song_page_001_resp_01",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "song-dreams-1977",
+            "display_name": "Dreams",
+            "resolution_state": "resolved",
+            "artist_display_name": "Fleetwood Mac"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016",
+              "022"
+            ],
+            "roles": [
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 1.0,
+            "information_gain": 0.756,
+            "related_response_value": 1.0,
+            "role_value": 0.4,
+            "apple_artist_context": 1.0,
+            "final": 0.872
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_02",
+              "page_id": "album_page_001",
+              "tile_id": "tile_02",
+              "reaction": "like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_01",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_01",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_01",
+              "page_id": "album_page_001",
+              "tile_id": "tile_01",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_03",
+              "page_id": "album_page_001",
+              "tile_id": "tile_03",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_04",
+              "page_id": "album_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "overlaps 016",
+            "overlaps 022"
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:02:Everlong:dont_like",
+          "position": 2,
+          "tile_id": "tile_02",
+          "response_id": "song_page_001_resp_02",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "foo-fighters-everlong",
+            "display_name": "Everlong",
+            "resolution_state": "resolved",
+            "artist_display_name": "Foo Fighters"
+          },
+          "reaction": "dont_like",
+          "atlas_signal_interpretation": "negative_scope_carefully",
+          "app_ui_candidate": "notForMe",
+          "page_intent": "confirm_song_first_signal",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              10
+            ],
+            "archetype_ids": [
+              "071"
+            ],
+            "roles": [
+              "anchor",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 1.0,
+            "information_gain": 0.756,
+            "related_response_value": 1.0,
+            "role_value": 0.4,
+            "apple_artist_context": 1.0,
+            "final": 0.872
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_002_resp_07",
+              "page_id": "album_page_002",
+              "tile_id": "tile_07",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_002_resp_02",
+              "page_id": "album_page_002",
+              "tile_id": "tile_02",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_06",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_06",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_09",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_09",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_05",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_05",
+              "reaction": "love",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "song_page_001:song:03:Hotel California:like",
+          "position": 3,
+          "tile_id": "tile_03",
+          "response_id": "song_page_001_resp_03",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "song-hotel-california-1977",
+            "display_name": "Hotel California",
+            "resolution_state": "resolved",
+            "artist_display_name": "Eagles"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016"
+            ],
+            "roles": [
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 1.0,
+            "information_gain": 0.756,
+            "related_response_value": 1.0,
+            "role_value": 0.4,
+            "apple_artist_context": 1.0,
+            "final": 0.872
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_01",
+              "page_id": "album_page_001",
+              "tile_id": "tile_01",
+              "reaction": "like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_04",
+              "page_id": "album_page_001",
+              "tile_id": "tile_04",
+              "reaction": "like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_03",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_03",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_02",
+              "page_id": "album_page_001",
+              "tile_id": "tile_02",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_03",
+              "page_id": "album_page_001",
+              "tile_id": "tile_03",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "overlaps 022"
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:04:Smooth Operator:ok",
+          "position": 4,
+          "tile_id": "tile_04",
+          "response_id": "song_page_001_resp_04",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "sade-smooth-operator",
+            "display_name": "Smooth Operator",
+            "resolution_state": "resolved",
+            "artist_display_name": "Sade"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6,
+              14
+            ],
+            "archetype_ids": [
+              "041",
+              "102"
+            ],
+            "roles": [
+              "boundary",
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.674,
+            "related_response_value": 1.0,
+            "role_value": 0.64,
+            "apple_artist_context": 0.0,
+            "final": 0.822
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_08",
+              "page_id": "album_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_002_resp_06",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_05",
+              "page_id": "album_page_001",
+              "tile_id": "tile_05",
+              "reaction": "dont_know_enough",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_004_resp_05",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_06",
+              "page_id": "album_page_001",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Band/project identity."
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:05:Doo Wop (That Thing):ok",
+          "position": 5,
+          "tile_id": "tile_05",
+          "response_id": "song_page_001_resp_05",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "lauryn-hill-doo-wop-that-thing",
+            "display_name": "Doo Wop (That Thing)",
+            "resolution_state": "resolved",
+            "artist_display_name": "Lauryn Hill"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "confirm_song_first_signal",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6,
+              7
+            ],
+            "archetype_ids": [
+              "043",
+              "050"
+            ],
+            "roles": [
+              "anchor",
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.65,
+            "related_response_value": 1.0,
+            "role_value": 0.54,
+            "apple_artist_context": 0.0,
+            "final": 0.805
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_06",
+              "page_id": "album_page_001",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_003_resp_05",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_05",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_11",
+              "page_id": "album_page_001",
+              "tile_id": "tile_11",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_002_resp_03",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_03",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_05",
+              "page_id": "album_page_001",
+              "tile_id": "tile_05",
+              "reaction": "dont_know_enough",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "song_page_001:song:06:Sexual Healing:ok",
+          "position": 6,
+          "tile_id": "tile_06",
+          "response_id": "song_page_001_resp_06",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "marvin-gaye-sexual-healing",
+            "display_name": "Sexual Healing",
+            "resolution_state": "resolved",
+            "artist_display_name": "Marvin Gaye"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              6
+            ],
+            "archetype_ids": [
+              "041"
+            ],
+            "roles": [
+              "bridge",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.65,
+            "related_response_value": 1.0,
+            "role_value": 0.54,
+            "apple_artist_context": 0.0,
+            "final": 0.805
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_05",
+              "page_id": "album_page_001",
+              "tile_id": "tile_05",
+              "reaction": "dont_know_enough",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_004_resp_05",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_08",
+              "page_id": "album_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_002_resp_06",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_06",
+              "page_id": "album_page_001",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Late-career production differs from Motown-era rows."
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:07:Fight for Your Right:ok",
+          "position": 7,
+          "tile_id": "tile_07",
+          "response_id": "song_page_001_resp_07",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "beastie-boys-fight-for-your-right",
+            "display_name": "Fight for Your Right",
+            "resolution_state": "resolved",
+            "artist_display_name": "Beastie Boys"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              7
+            ],
+            "archetype_ids": [
+              "045"
+            ],
+            "roles": [
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.64,
+            "related_response_value": 1.0,
+            "role_value": 0.5,
+            "apple_artist_context": 0.0,
+            "final": 0.799
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_002_resp_06",
+              "page_id": "album_page_002",
+              "tile_id": "tile_06",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_004_resp_10",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_10",
+              "reaction": "dont_like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_06",
+              "page_id": "album_page_001",
+              "tile_id": "tile_06",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "album_page_001_resp_11",
+              "page_id": "album_page_001",
+              "tile_id": "tile_11",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_03",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_03",
+              "reaction": "ok",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Can over-signal frat/rock taste; keep as boundary-aware."
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:08:Livin' on a Prayer:like",
+          "position": 8,
+          "tile_id": "tile_08",
+          "response_id": "song_page_001_resp_08",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "bon-jovi-livin-on-a-prayer",
+            "display_name": "Livin' on a Prayer",
+            "resolution_state": "resolved",
+            "artist_display_name": "Bon Jovi"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              9,
+              17
+            ],
+            "archetype_ids": [
+              "063",
+              "113"
+            ],
+            "roles": [
+              "anchor",
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.64,
+            "related_response_value": 1.0,
+            "role_value": 0.5,
+            "apple_artist_context": 0.0,
+            "final": 0.799
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_10",
+              "page_id": "album_page_001",
+              "tile_id": "tile_10",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_10",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_10",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_07",
+              "page_id": "album_page_001",
+              "tile_id": "tile_07",
+              "reaction": "dont_know_enough",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_05",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_07",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_07",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Boundary song."
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:09:Louie Louie:like",
+          "position": 9,
+          "tile_id": "tile_09",
+          "response_id": "song_page_001_resp_09",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "the-kingsmen-louie-louie",
+            "display_name": "Louie Louie",
+            "resolution_state": "resolved",
+            "artist_display_name": "The Kingsmen"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              1,
+              2
+            ],
+            "archetype_ids": [
+              "002",
+              "011"
+            ],
+            "roles": [
+              "anchor",
+              "boundary",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.64,
+            "related_response_value": 1.0,
+            "role_value": 0.5,
+            "apple_artist_context": 0.0,
+            "final": 0.799
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_004_resp_06",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_06",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_004_resp_07",
+              "page_id": "artist_page_004",
+              "tile_id": "tile_07",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_12",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_12",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_07",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_07",
+              "reaction": "ok",
+              "relatedness": 0.34
+            },
+            {
+              "response_id": "artist_page_002_resp_10",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_10",
+              "reaction": "ok",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Artist-worthy",
+            "Song outranks artist."
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:10:Man! I Feel Like a Woman!:ok",
+          "position": 10,
+          "tile_id": "tile_10",
+          "response_id": "song_page_001_resp_10",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "shania-twain-man-i-feel-like-a-woman",
+            "display_name": "Man! I Feel Like a Woman!",
+            "resolution_state": "resolved",
+            "artist_display_name": "Shania Twain"
+          },
+          "reaction": "ok",
+          "atlas_signal_interpretation": "weak_positive_or_familiarity",
+          "app_ui_candidate": "fine",
+          "page_intent": "confirm_song_first_signal",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              5,
+              17
+            ],
+            "archetype_ids": [
+              "033",
+              "113"
+            ],
+            "roles": [
+              "anchor",
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.64,
+            "related_response_value": 1.0,
+            "role_value": 0.5,
+            "apple_artist_context": 0.0,
+            "final": 0.799
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_001_resp_07",
+              "page_id": "album_page_001",
+              "tile_id": "tile_07",
+              "reaction": "dont_know_enough",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_05",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_05",
+              "reaction": "ok",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_10",
+              "page_id": "album_page_001",
+              "tile_id": "tile_10",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_07",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_07",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_001_resp_08",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_08",
+              "reaction": "ok",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": []
+        },
+        {
+          "evidence_ref": "song_page_001:song:11:My Heart Will Go On:love",
+          "position": 11,
+          "tile_id": "tile_11",
+          "response_id": "song_page_001_resp_11",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "celine-dion-my-heart-will-go-on",
+            "display_name": "My Heart Will Go On",
+            "resolution_state": "resolved",
+            "artist_display_name": "Celine Dion"
+          },
+          "reaction": "love",
+          "atlas_signal_interpretation": "strong_positive",
+          "app_ui_candidate": "favorite",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              12,
+              15
+            ],
+            "archetype_ids": [
+              "089",
+              "106"
+            ],
+            "roles": [
+              "boundary",
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.88,
+            "information_gain": 0.64,
+            "related_response_value": 1.0,
+            "role_value": 0.5,
+            "apple_artist_context": 0.0,
+            "final": 0.799
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "artist_page_003_resp_01",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_01",
+              "reaction": "dont_like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_11",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_11",
+              "reaction": "ok",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_002_resp_02",
+              "page_id": "artist_page_002",
+              "tile_id": "tile_02",
+              "reaction": "dont_like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "artist_page_003_resp_06",
+              "page_id": "artist_page_003",
+              "tile_id": "tile_06",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_11",
+              "page_id": "album_page_001",
+              "tile_id": "tile_11",
+              "reaction": "dont_like",
+              "relatedness": 0.34
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "Boundary with soundtrack family."
+          ]
+        },
+        {
+          "evidence_ref": "song_page_001:song:12:American Girl:like",
+          "position": 12,
+          "tile_id": "tile_12",
+          "response_id": "song_page_001_resp_12",
+          "music_object_ref": {
+            "object_type": "song_recording",
+            "ref_source": "canonical_graph",
+            "canonical_song_recording_id": "song-american-girl-1976",
+            "display_name": "American Girl",
+            "resolution_state": "resolved",
+            "artist_display_name": "Tom Petty and the Heartbreakers"
+          },
+          "reaction": "like",
+          "atlas_signal_interpretation": "positive",
+          "app_ui_candidate": "like",
+          "page_intent": "test_version_specificity",
+          "candidate_basis": [
+            "page_count_backtest_constant_seed",
+            "visible_response_evidence",
+            "canonical_graph_object"
+          ],
+          "graph_context": {
+            "family_numbers": [
+              3
+            ],
+            "archetype_ids": [
+              "016"
+            ],
+            "roles": [
+              "gateway",
+              "song_first"
+            ],
+            "best_recognition_tier": "high",
+            "best_survey_tier": "standard"
+          },
+          "apple_evidence_summary": {
+            "exact_signal_weight": 0.0,
+            "exposure_score": 0.0,
+            "recency_score": 0.0,
+            "repetition_score": 0.0,
+            "library_commitment_score": 0.0,
+            "favorite_or_rating_score": 0.0,
+            "playlist_context_score": 0.0,
+            "album_completion_hint": 0.0,
+            "artist_depth_hint": 0.0,
+            "probable_affinity_score": 0.0,
+            "signal_ids": []
+          },
+          "scores": {
+            "expected_familiarity": 0.817,
+            "information_gain": 0.72,
+            "related_response_value": 1.0,
+            "role_value": 0.4,
+            "apple_artist_context": 1.0,
+            "final": 0.785
+          },
+          "response_evidence_refs": [
+            {
+              "response_id": "album_page_002_resp_01",
+              "page_id": "album_page_002",
+              "tile_id": "tile_01",
+              "reaction": "like",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "artist_page_001_resp_02",
+              "page_id": "artist_page_001",
+              "tile_id": "tile_02",
+              "reaction": "love",
+              "relatedness": 1.0
+            },
+            {
+              "response_id": "album_page_001_resp_01",
+              "page_id": "album_page_001",
+              "tile_id": "tile_01",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_02",
+              "page_id": "album_page_001",
+              "tile_id": "tile_02",
+              "reaction": "like",
+              "relatedness": 0.76
+            },
+            {
+              "response_id": "album_page_001_resp_03",
+              "page_id": "album_page_001",
+              "tile_id": "tile_03",
+              "reaction": "like",
+              "relatedness": 0.76
+            }
+          ],
+          "shown_unselected_tags": [],
+          "observed_selected_tags": [],
+          "suppression_warnings": [
+            "classic-rock/new-wave adjacency"
+          ]
+        }
+      ]
+    }
+  ]
+}

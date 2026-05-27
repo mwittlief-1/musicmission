@@ -1,0 +1,118 @@
+{
+  "schema_version": "survey_simulation.apple_payload.v0.1",
+  "apple_payload_id": "apple_payload_04",
+  "generated_at": "2026-05-20T12:00:00Z",
+  "source_kind": "simulated_apple_music",
+  "library_snapshot_age_days": 2,
+  "signals": [
+    {
+      "signal_id": "apple_04_01",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "shania-twain",
+        "display_name": "Shania Twain",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.9,
+      "recency_days": 4,
+      "play_count_90d": 44,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_04_02",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "kacey-musgraves",
+        "display_name": "Kacey Musgraves",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.78,
+      "recency_days": 9,
+      "play_count_90d": 31,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_04_03",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "luke-combs",
+        "display_name": "Luke Combs",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.72,
+      "recency_days": 6,
+      "play_count_90d": 28,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_04_04",
+      "signal_type": "library_artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "carrie-underwood",
+        "display_name": "Carrie Underwood",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.59,
+      "recency_days": 25,
+      "play_count_90d": 18,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_04_05",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "taylor-swift",
+        "display_name": "Taylor Swift",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.47,
+      "recency_days": 15,
+      "play_count_90d": 13,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_04_06",
+      "signal_type": "playlist_save",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "zach-bryan",
+        "display_name": "Zach Bryan",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.34,
+      "recency_days": 18,
+      "play_count_90d": 7,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    }
+  ],
+  "playlist_context": {
+    "playlist_name": null,
+    "playlist_kind": "unknown"
+  },
+  "track_level_signals": [],
+  "album_level_signals": [],
+  "skip_or_completion_hints": [],
+  "loved_or_favorite_hints": [],
+  "resolution_summary": {
+    "resolved_canonical_count": 6,
+    "external_unresolved_count": 0,
+    "candidate_generation_policy": "Only resolved canonical artist refs may bias v0.1 Page 1 candidate generation."
+  }
+}

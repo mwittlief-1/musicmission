@@ -1,0 +1,118 @@
+{
+  "schema_version": "survey_simulation.apple_payload.v0.1",
+  "apple_payload_id": "apple_payload_09",
+  "generated_at": "2026-05-20T12:00:00Z",
+  "source_kind": "simulated_apple_music",
+  "library_snapshot_age_days": 2,
+  "signals": [
+    {
+      "signal_id": "apple_09_01",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "olivia-rodrigo",
+        "display_name": "Olivia Rodrigo",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.96,
+      "recency_days": 1,
+      "play_count_90d": 62,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_09_02",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "billie-eilish",
+        "display_name": "Billie Eilish",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.87,
+      "recency_days": 3,
+      "play_count_90d": 44,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_09_03",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "doja-cat",
+        "display_name": "Doja Cat",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.77,
+      "recency_days": 2,
+      "play_count_90d": 38,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_09_04",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "chappell-roan",
+        "display_name": "Chappell Roan",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.68,
+      "recency_days": 5,
+      "play_count_90d": 29,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_09_05",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "sabrina-carpenter",
+        "display_name": "Sabrina Carpenter",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.59,
+      "recency_days": 4,
+      "play_count_90d": 20,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_09_06",
+      "signal_type": "playlist_save",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "taylor-swift",
+        "display_name": "Taylor Swift",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.46,
+      "recency_days": 16,
+      "play_count_90d": 12,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    }
+  ],
+  "playlist_context": {
+    "playlist_name": null,
+    "playlist_kind": "unknown"
+  },
+  "track_level_signals": [],
+  "album_level_signals": [],
+  "skip_or_completion_hints": [],
+  "loved_or_favorite_hints": [],
+  "resolution_summary": {
+    "resolved_canonical_count": 6,
+    "external_unresolved_count": 0,
+    "candidate_generation_policy": "Only resolved canonical artist refs may bias v0.1 Page 1 candidate generation."
+  }
+}

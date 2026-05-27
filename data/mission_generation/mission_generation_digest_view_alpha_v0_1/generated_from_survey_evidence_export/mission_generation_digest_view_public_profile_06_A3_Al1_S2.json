@@ -1,0 +1,1227 @@
+{
+  "anti_overfitting_rules": [
+    {
+      "evidence_refs": [],
+      "id": "anti_overfitting:public_profile_06_a3_al1_s2:01",
+      "severity": "warning",
+      "text": "Do not treat Survey-created roles as promoted Atlas truth."
+    },
+    {
+      "evidence_refs": [],
+      "id": "anti_overfitting:public_profile_06_a3_al1_s2:02",
+      "severity": "warning",
+      "text": "Do not broaden negative responses into genre-level dislikes without scoped recurrence."
+    },
+    {
+      "evidence_refs": [],
+      "id": "anti_overfitting:public_profile_06_a3_al1_s2:03",
+      "severity": "warning",
+      "text": "Treat dont_know_enough/familiarity_uncertainty as familiarity uncertainty, not negative evidence."
+    },
+    {
+      "evidence_refs": [],
+      "id": "anti_overfitting:public_profile_06_a3_al1_s2:04",
+      "severity": "warning",
+      "text": "Apple Music evidence is exposure/import/familiarity context, not taste truth."
+    },
+    {
+      "evidence_refs": [],
+      "id": "anti_overfitting:public_profile_06_a3_al1_s2:05",
+      "severity": "warning",
+      "text": "Do not infer family or archetype names when graph meanings are unavailable."
+    },
+    {
+      "evidence_refs": [],
+      "id": "anti_overfitting:public_profile_06_a3_al1_s2:06",
+      "severity": "warning",
+      "text": "Road and lineage are not Atlas roles."
+    }
+  ],
+  "candidate_roles": [
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:lin_manuel_miranda",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_01:landmark",
+      "candidate_pool_behavior": "anchor",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_01_landmark",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.7,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Lin-Manuel Miranda",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:01:Lin-Manuel Miranda:love"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [
+          "artist_page_001:artist:01:Lin-Manuel Miranda:love"
+        ],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_01"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.97,
+      "mission_use": "anchor",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "lin-manuel-miranda",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Lin-Manuel Miranda",
+        "display_name": "Lin-Manuel Miranda",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "landmark",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Strong positive evidence is supported by local positive density and cross-scope recurrence. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:disney",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_02:frontier",
+      "candidate_pool_behavior": "probe",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_02_frontier",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.7,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Disney",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:02:Disney:love"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [
+          "artist_page_001:artist:02:Disney:love"
+        ],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_02"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.78,
+      "mission_use": "probe",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "disney",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Disney",
+        "display_name": "Disney",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "frontier",
+      "review_state": "unreviewed",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Strong positive evidence is relatively isolated and should become a high-value Frontier opportunity. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:artist_queen",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_03:frontier",
+      "candidate_pool_behavior": "probe",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_03_frontier",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.58,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Queen",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:03:Queen:like"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [
+          "artist_page_001:artist:03:Queen:like"
+        ],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_03"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.76,
+      "mission_use": "probe",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist-queen",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Queen",
+        "display_name": "Queen",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "frontier",
+      "review_state": "unreviewed",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Medium positive evidence is thin and should be probed as Frontier material. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:prince",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_08:frontier",
+      "candidate_pool_behavior": "probe",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_08_frontier",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.58,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Prince",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:08:Prince:like"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [
+          "artist_page_001:artist:08:Prince:like"
+        ],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_08"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.76,
+      "mission_use": "probe",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "prince",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Prince",
+        "display_name": "Prince",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "frontier",
+      "review_state": "unreviewed",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Medium positive evidence is thin and should be probed as Frontier material. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:ariana_grande",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_06:dead_end",
+      "candidate_pool_behavior": "trap",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_06_dead_end",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.55,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Ariana Grande",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:06:Ariana Grande:dont_like"
+        ],
+        "negative_evidence_refs": [
+          "artist_page_001:artist:06:Ariana Grande:dont_like"
+        ],
+        "positive_evidence_refs": [],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_06"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.41,
+      "mission_use": "trap_check",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "ariana-grande",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Ariana Grande",
+        "display_name": "Ariana Grande",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "dead_end",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Negative evidence can seed a scoped Dead End hypothesis only. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:beastie_boys",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_12:dead_end",
+      "candidate_pool_behavior": "trap",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_12_dead_end",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.55,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Beastie Boys",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:12:Beastie Boys:dont_like"
+        ],
+        "negative_evidence_refs": [
+          "artist_page_001:artist:12:Beastie Boys:dont_like"
+        ],
+        "positive_evidence_refs": [],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_12"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.41,
+      "mission_use": "trap_check",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "beastie-boys",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Beastie Boys",
+        "display_name": "Beastie Boys",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "dead_end",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Negative evidence can seed a scoped Dead End hypothesis only. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:nine_inch_nails",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_002_resp_01:dead_end",
+      "candidate_pool_behavior": "trap",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_002_resp_01_dead_end",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.55,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Nine Inch Nails",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_002:artist:01:Nine Inch Nails:dont_like"
+        ],
+        "negative_evidence_refs": [
+          "artist_page_002:artist:01:Nine Inch Nails:dont_like"
+        ],
+        "positive_evidence_refs": [],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_002_resp_01"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.41,
+      "mission_use": "trap_check",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "nine-inch-nails",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Nine Inch Nails",
+        "display_name": "Nine Inch Nails",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "dead_end",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Negative evidence can seed a scoped Dead End hypothesis only. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:andrew_lloyd_webber",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_04:waypoint",
+      "candidate_pool_behavior": "bridge",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_04_waypoint",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.58,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Andrew Lloyd Webber",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:04:Andrew Lloyd Webber:like"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [
+          "artist_page_001:artist:04:Andrew Lloyd Webber:like"
+        ],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_04"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.8,
+      "mission_use": "bridge",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "andrew-lloyd-webber",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Andrew Lloyd Webber",
+        "display_name": "Andrew Lloyd Webber",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "waypoint",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Medium positive evidence has contextual support but is not enough for a Landmark. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:shania_twain",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_05:waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_05_waypoint",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.5,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Shania Twain",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:05:Shania Twain:ok"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_05"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.58,
+      "mission_use": "waypoint_context",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "shania-twain",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Shania Twain",
+        "display_name": "Shania Twain",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "waypoint",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Contextual response supports route calibration without Landmark promotion. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:artist_david_bowie",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_001_resp_07:waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_001_resp_07_waypoint",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.5,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "David Bowie",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_001:artist:07:David Bowie:ok"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_001_resp_07"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.58,
+      "mission_use": "waypoint_context",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist-david-bowie",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "David Bowie",
+        "display_name": "David Bowie",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "waypoint",
+      "review_state": "needs_review",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Contextual response supports route calibration without Landmark promotion. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:nat_king_cole",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_002_resp_11:unknown",
+      "candidate_pool_behavior": "risky_probe",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_002_resp_11_unknown",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.55,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "Nat King Cole",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_002:artist:11:Nat King Cole:dont_like"
+        ],
+        "negative_evidence_refs": [
+          "artist_page_002:artist:11:Nat King Cole:dont_like"
+        ],
+        "positive_evidence_refs": [],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_002_resp_11"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.57,
+      "mission_use": "risky_probe",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "nat-king-cole",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "Nat King Cole",
+        "display_name": "Nat King Cole",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "unknown",
+      "review_state": "unreviewed",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Negative evidence conflicts with nearby positives; create scoped review rather than a blanket dead end. Provisional Survey-created role only."
+    },
+    {
+      "atlas_node_id": "atlas_node:survey_export:public_profile_06:artist:the_beach_boys",
+      "atlas_role_assignment_id": "role:survey_export:public_profile_06:artist_page_002_resp_05:frontier",
+      "candidate_pool_behavior": "probe",
+      "candidate_role_id": "candidate_role:role_survey_export_public_profile_06_artist_page_002_resp_05_frontier",
+      "confidence": {
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_score": 0.58,
+        "confidence_summary": "Survey-created role assignment is provisional and cannot be promoted by Survey alone."
+      },
+      "display_name": "The Beach Boys",
+      "evidence": {
+        "evidence_refs": [
+          "artist_page_002:artist:05:The Beach Boys:like"
+        ],
+        "negative_evidence_refs": [],
+        "positive_evidence_refs": [
+          "artist_page_002:artist:05:The Beach Boys:like"
+        ],
+        "signal_ids": [
+          "signal:survey_export:public_profile_06:artist_page_002_resp_05"
+        ],
+        "uncertainty_evidence_refs": []
+      },
+      "mission_generation_priority": 0.76,
+      "mission_use": "probe",
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "the-beach-boys",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credited_artist_name": "The Beach Boys",
+        "display_name": "The Beach Boys",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "object_scope": "artist",
+      "promotion_state": "candidate",
+      "recommended_role": "frontier",
+      "review_state": "unreviewed",
+      "role_truth_source": "atlas_role_assignment",
+      "scope_limit": "artist_level_only",
+      "status": "provisional",
+      "summary": "Medium positive evidence is thin and should be probed as Frontier material. Provisional Survey-created role only."
+    }
+  ],
+  "compactness_policy": {
+    "hard_review_threshold_bytes": 80000,
+    "max_candidate_roles": 12,
+    "max_evidence_refs_per_item": 8,
+    "max_recent_signals": 12,
+    "raw_payload_required": false,
+    "target_max_bytes": 50000
+  },
+  "consumer_contract": {
+    "atlas_promotion_allowed": false,
+    "canonical_graph_mutation_allowed": false,
+    "final_wwtsf_copy_allowed": false,
+    "intended_consumer": "mission_generation",
+    "mission_objects_created_here": false,
+    "profile_writer_mode_allowed": false,
+    "raw_survey_payload_required": false
+  },
+  "contradictions": [],
+  "created_at": "2026-05-23T12:00:00Z",
+  "digest_id": "mgdv:alpha:survey_completion:public_profile_06_a3_al1_s2",
+  "evidence_ref_index": [
+    {
+      "evidence_ref": "artist_page_001:artist:01:Lin-Manuel Miranda:love",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_01",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_01",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_01",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:02:Disney:love",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_02",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_02",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_02",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:03:Queen:like",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_03",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_03",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_03",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:04:Andrew Lloyd Webber:like",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_04",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_04",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_04",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:05:Shania Twain:ok",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_05",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_05",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_05",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:06:Ariana Grande:dont_like",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_06",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_06",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_06",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:07:David Bowie:ok",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_07",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_07",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_07",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:08:Prince:like",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_08",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_08",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_08",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_001:artist:12:Beastie Boys:dont_like",
+      "page_id": "artist_page_001",
+      "page_number": 1,
+      "response_id": "artist_page_001_resp_12",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_12",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_001_resp_12",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_002:artist:01:Nine Inch Nails:dont_like",
+      "page_id": "artist_page_002",
+      "page_number": 2,
+      "response_id": "artist_page_002_resp_01",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_01",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_002_resp_01",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_002:artist:03:Deftones:dont_know_enough",
+      "page_id": "artist_page_002",
+      "page_number": 2,
+      "response_id": "artist_page_002_resp_03",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_03",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_002_resp_03",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_002:artist:05:The Beach Boys:like",
+      "page_id": "artist_page_002",
+      "page_number": 2,
+      "response_id": "artist_page_002_resp_05",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_05",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_002_resp_05",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_002:artist:11:Nat King Cole:dont_like",
+      "page_id": "artist_page_002",
+      "page_number": 2,
+      "response_id": "artist_page_002_resp_11",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_11",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_002_resp_11",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "artist_page_003:artist:12:The Animals:dont_know_enough",
+      "page_id": "artist_page_003",
+      "page_number": 3,
+      "response_id": "artist_page_003_resp_12",
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_003_resp_12",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "artist",
+      "survey_item_id": "artist_page_003_resp_12",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "album_page_001:album:01:Let's Get It On:dont_know_enough",
+      "page_id": "album_page_001",
+      "page_number": 1,
+      "response_id": "album_page_001_resp_01",
+      "signal_id": "signal:survey_export:public_profile_06:album_page_001_resp_01",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "album",
+      "survey_item_id": "album_page_001_resp_01",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    },
+    {
+      "evidence_ref": "album_page_001:album:11:Hotel California:dont_know_enough",
+      "page_id": "album_page_001",
+      "page_number": 1,
+      "response_id": "album_page_001_resp_11",
+      "signal_id": "signal:survey_export:public_profile_06:album_page_001_resp_11",
+      "source_payload_ref": "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json",
+      "stage": "album",
+      "survey_item_id": "album_page_001_resp_11",
+      "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+      "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+    }
+  ],
+  "evidence_separation_policy": {
+    "apple_exposure_as_taste_truth_allowed": false,
+    "atlas_node_role_truth_allowed": false,
+    "canonical_graph_mutation_allowed": false,
+    "dont_know_as_negative_allowed": false,
+    "promoted_roles_allowed": false,
+    "role_truth_source": "atlas_role_assignment",
+    "signal_strength_and_confidence_separate": true,
+    "survey_role_promotion_allowed": false
+  },
+  "fixture_profile_id": "fixture_public_profile_06",
+  "mission_relevant_constraints": [
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:01",
+      "severity": "info",
+      "text": "Consume MissionGenerationDigestView with route-ready Candidate Pool objects, not raw Survey payload."
+    },
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:02",
+      "severity": "info",
+      "text": "Mission Generation may return generated missions and PossibleAtlasUpdateCandidate hypotheses only."
+    },
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:03",
+      "severity": "info",
+      "text": "Atlas digest packets do not create playable mission objects or promoted Atlas truth."
+    },
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:04",
+      "severity": "info",
+      "text": "Consume AtlasDigestView and AtlasRoleAssignment, not raw Survey payload."
+    },
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:05",
+      "severity": "info",
+      "text": "Mission Generation may return PossibleAtlasUpdateCandidate hypotheses only."
+    },
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:06",
+      "severity": "info",
+      "text": "No canonical graph mutation path is available from this digest."
+    },
+    {
+      "evidence_refs": [],
+      "id": "mission_constraint:public_profile_06_a3_al1_s2:07",
+      "severity": "info",
+      "text": "Mission hints are hypotheses and must not become mission objects in this ingestion step."
+    }
+  ],
+  "no_hidden_data_checks": {
+    "all_evidence_refs_resolve_to_visible_survey_evidence": true,
+    "canonical_graph_mutation_instructions_included": false,
+    "generator_visible_inputs_included": false,
+    "hidden_corpus_reactions_included": false,
+    "hidden_simulator_truth_included": false,
+    "page_layout_mechanics_included": false,
+    "profile_writer_output_included": false,
+    "randomization_seed_included": false,
+    "raw_ranking_scores_included": false,
+    "raw_survey_payload_included": false,
+    "simulator_private_lookup_status_included": false,
+    "survey_construction_internals_included": false
+  },
+  "recent_signals": [
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [
+          "apple_06_01"
+        ],
+        "present": true,
+        "summary": "Apple Music context present as exposure/familiarity only; not taste truth.",
+        "taste_truth": false
+      },
+      "display_name": "Lin-Manuel Miranda",
+      "evidence_ref": "artist_page_001:artist:01:Lin-Manuel Miranda:love",
+      "interpretation_confidence": 0.7,
+      "normalized_signal": "positive_high",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "love",
+      "response_id": "artist_page_001_resp_01",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_01",
+      "signal_strength": 0.86,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [
+          "apple_06_02"
+        ],
+        "present": true,
+        "summary": "Apple Music context present as exposure/familiarity only; not taste truth.",
+        "taste_truth": false
+      },
+      "display_name": "Disney",
+      "evidence_ref": "artist_page_001:artist:02:Disney:love",
+      "interpretation_confidence": 0.7,
+      "normalized_signal": "positive_high",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "love",
+      "response_id": "artist_page_001_resp_02",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_02",
+      "signal_strength": 0.86,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [
+          "apple_06_04"
+        ],
+        "present": true,
+        "summary": "Apple Music context present as exposure/familiarity only; not taste truth.",
+        "taste_truth": false
+      },
+      "display_name": "Queen",
+      "evidence_ref": "artist_page_001:artist:03:Queen:like",
+      "interpretation_confidence": 0.58,
+      "normalized_signal": "positive_medium",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "like",
+      "response_id": "artist_page_001_resp_03",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_03",
+      "signal_strength": 0.68,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "Prince",
+      "evidence_ref": "artist_page_001:artist:08:Prince:like",
+      "interpretation_confidence": 0.58,
+      "normalized_signal": "positive_medium",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "like",
+      "response_id": "artist_page_001_resp_08",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_08",
+      "signal_strength": 0.68,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "Ariana Grande",
+      "evidence_ref": "artist_page_001:artist:06:Ariana Grande:dont_like",
+      "interpretation_confidence": 0.55,
+      "normalized_signal": "negative_scope_carefully",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "dont_like",
+      "response_id": "artist_page_001_resp_06",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_06",
+      "signal_strength": 0.62,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "Beastie Boys",
+      "evidence_ref": "artist_page_001:artist:12:Beastie Boys:dont_like",
+      "interpretation_confidence": 0.55,
+      "normalized_signal": "negative_scope_carefully",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "dont_like",
+      "response_id": "artist_page_001_resp_12",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_12",
+      "signal_strength": 0.62,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "Nine Inch Nails",
+      "evidence_ref": "artist_page_002:artist:01:Nine Inch Nails:dont_like",
+      "interpretation_confidence": 0.55,
+      "normalized_signal": "negative_scope_carefully",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "dont_like",
+      "response_id": "artist_page_002_resp_01",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_01",
+      "signal_strength": 0.62,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [
+          "apple_06_03"
+        ],
+        "present": true,
+        "summary": "Apple Music context present as exposure/familiarity only; not taste truth.",
+        "taste_truth": false
+      },
+      "display_name": "Andrew Lloyd Webber",
+      "evidence_ref": "artist_page_001:artist:04:Andrew Lloyd Webber:like",
+      "interpretation_confidence": 0.58,
+      "normalized_signal": "positive_medium",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "like",
+      "response_id": "artist_page_001_resp_04",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_04",
+      "signal_strength": 0.68,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "Shania Twain",
+      "evidence_ref": "artist_page_001:artist:05:Shania Twain:ok",
+      "interpretation_confidence": 0.5,
+      "normalized_signal": "contextual_waypoint",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "ok",
+      "response_id": "artist_page_001_resp_05",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_05",
+      "signal_strength": 0.42,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "David Bowie",
+      "evidence_ref": "artist_page_001:artist:07:David Bowie:ok",
+      "interpretation_confidence": 0.5,
+      "normalized_signal": "contextual_waypoint",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "ok",
+      "response_id": "artist_page_001_resp_07",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_001_resp_07",
+      "signal_strength": 0.42,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "Nat King Cole",
+      "evidence_ref": "artist_page_002:artist:11:Nat King Cole:dont_like",
+      "interpretation_confidence": 0.55,
+      "normalized_signal": "negative_scope_carefully",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "dont_like",
+      "response_id": "artist_page_002_resp_11",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_11",
+      "signal_strength": 0.62,
+      "source": "survey"
+    },
+    {
+      "apple_exposure_context": {
+        "evidence_refs": [],
+        "present": false,
+        "summary": "No Apple Music exposure context supplied for this item.",
+        "taste_truth": false
+      },
+      "display_name": "The Beach Boys",
+      "evidence_ref": "artist_page_002:artist:05:The Beach Boys:like",
+      "interpretation_confidence": 0.58,
+      "normalized_signal": "positive_medium",
+      "note_excerpt": null,
+      "object_type": "artist",
+      "raw_reaction": "like",
+      "response_id": "artist_page_002_resp_05",
+      "selected_tags": [],
+      "shown_unselected_tags": [],
+      "signal_id": "signal:survey_export:public_profile_06:artist_page_002_resp_05",
+      "signal_strength": 0.68,
+      "source": "survey"
+    }
+  ],
+  "record_type": "mission_generation_digest_view",
+  "schema_version": "alpha_v0_1",
+  "source_context": {
+    "atlas_digest_ref": "atlas_digest_view:survey_export:public_profile_06:a3_al1_s2",
+    "generated_from": [
+      "survey_evidence_export",
+      "signal_ledger",
+      "atlas_role_assignments",
+      "possible_atlas_update_candidates"
+    ],
+    "input_fingerprint": "d48ba106b8fe31b8b6109f08f94ebb2026f38e7a48b00177d8616f06501f1ea7",
+    "source_event_id": "survey_completion:public_profile_06_a3_al1_s2",
+    "source_event_type": "survey_completion",
+    "source_payload_ref": "survey_evidence_export:public_profile_06:A3_Al1_S2",
+    "source_payload_version": "survey_evidence_export_v0_1",
+    "survey_session_id": "llm_profile_review_public_profile_06_A3_Al1_S2",
+    "visible_packet_id": "llm_profile_review_public_profile_06_A3_Al1_S2"
+  },
+  "taste_feature_summaries": [],
+  "unresolved_questions": [
+    {
+      "evidence_refs": [
+        "artist_page_002:artist:03:Deftones:dont_know_enough",
+        "artist_page_003:artist:12:The Animals:dont_know_enough",
+        "album_page_001:album:01:Let's Get It On:dont_know_enough",
+        "album_page_001:album:11:Hotel California:dont_know_enough"
+      ],
+      "mission_hint": "Use recognition or low-risk exposure checks before interpreting taste.",
+      "question": "4 familiarity-uncertainty responses need exposure or recognition checks, not negative interpretation.",
+      "question_id": "unresolved_question:public_profile_06_a3_al1_s2:01",
+      "question_type": "familiarity",
+      "review_required": true
+    },
+    {
+      "evidence_refs": [],
+      "mission_hint": "Use a narrow mission probe and preserve scope limits.",
+      "question": "Family/archetype IDs are refs only unless a dictionary is available.",
+      "question_id": "unresolved_question:public_profile_06_a3_al1_s2:02",
+      "question_type": "scope",
+      "review_required": true
+    }
+  ],
+  "user_id": null,
+  "user_vocabulary_terms": []
+}

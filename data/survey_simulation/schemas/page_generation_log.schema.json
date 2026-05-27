@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/survey_simulation_page_generation_log_v0_1.json",
+  "title": "Survey Simulation Page Generation Log v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "generated_at",
+    "page_mode",
+    "source_tables_read",
+    "builder_visible_input_summary",
+    "candidate_selection"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "survey_simulation.page_generation_log.v0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^RUN_\\d{3}_[A-Z_]+$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "page_mode": {
+      "type": "string",
+      "enum": [
+        "generic_graph_seed",
+        "apple_biased_seed"
+      ]
+    },
+    "source_tables_read": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "builder_visible_input_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_graph",
+        "apple_payload",
+        "prior_visible_response_count",
+        "hidden_inputs_consumed"
+      ],
+      "properties": {
+        "canonical_graph": {
+          "type": "string",
+          "minLength": 1
+        },
+        "apple_payload": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prior_visible_response_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hidden_inputs_consumed": {
+          "const": false
+        }
+      }
+    },
+    "candidate_selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tile_count",
+        "direct_apple_match_count",
+        "graph_exploration_count",
+        "duplicate_display_names_suppressed",
+        "intent_counts",
+        "tiles"
+      ],
+      "properties": {
+        "tile_count": {
+          "type": "integer",
+          "const": 12
+        },
+        "direct_apple_match_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "graph_exploration_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "duplicate_display_names_suppressed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "intent_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "tiles": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "position",
+              "canonical_artist_id",
+              "display_name",
+              "page_intent",
+              "candidate_basis",
+              "scores"
+            ],
+            "properties": {
+              "position": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "canonical_artist_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "display_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "page_intent": {
+                "type": "string",
+                "minLength": 1
+              },
+              "candidate_basis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "scores": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

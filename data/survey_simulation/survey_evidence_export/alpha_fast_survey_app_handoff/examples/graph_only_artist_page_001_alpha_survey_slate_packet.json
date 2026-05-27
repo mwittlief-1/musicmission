@@ -1,0 +1,1182 @@
+{
+  "blocking_dependencies": [
+    "Atlas ingestion semantics",
+    "App decision on whether Survey appears in this TestFlight build",
+    "Final Canonical family/label policy"
+  ],
+  "created_at": "2026-05-21T22:37:27Z",
+  "evidence_export_compatibility": {
+    "apple_exports_as_exposure_prior": true,
+    "apple_taste_truth_required_value": false,
+    "construction_only_excluded_outside_atlas_ingestion": true,
+    "one_atom_per_visible_response": true,
+    "target_atlas_flow": [
+      "Survey Evidence Export",
+      "Signal",
+      "AtlasNode",
+      "provisional AtlasRoleAssignment",
+      "PossibleAtlasUpdateCandidate",
+      "AtlasDigestView"
+    ],
+    "target_schema_version": "waymark.survey_evidence_export.v0.1"
+  },
+  "packet_id": "alpha_survey_slate_packet:graph_only:run_001_graph_seed:page_01",
+  "page_count_recommendation": {
+    "album_pages": 0,
+    "alpha_status": "render_example_not_onboarding_recommendation",
+    "artist_pages": 1,
+    "config_id": "graph_only_artist_page_001_render_example",
+    "qualification": "single-page render fixture only; not an onboarding-length recommendation",
+    "song_pages": 0,
+    "tile_count": 12
+  },
+  "pages": [
+    {
+      "page_id": "page_01",
+      "page_number": 1,
+      "rendering": {
+        "columns": "app_defined",
+        "layout": "grid",
+        "requires_ordered_tiles": true
+      },
+      "stage": "artist",
+      "tile_count": 12,
+      "tiles": [
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f9-artist-guns-n-roses-063",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-9-artist-063-guns-n-roses",
+            "survey_intent": "boundary_test",
+            "survey_page_role": "page2_adaptive"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "graph_core_seed"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Guns N' Roses",
+            "secondary_text": null
+          },
+          "display_order": 1,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_01",
+            "evidence_ref": "page_01:artist:01:guns-n-roses:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_01",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:01:guns-n-roses:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "063"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              9
+            ],
+            "roles": [
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "gateway"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "guns-n-roses",
+            "display_name": "Guns N' Roses",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "archetype_confirmation_anchor",
+          "render_tile_id": "page_01_tile_01",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_01"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f12-artist-mariah-carey-089",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-12-artist-089-mariah-carey",
+            "survey_intent": "song_first_memory",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "graph_core_seed"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Mariah Carey",
+            "secondary_text": null
+          },
+          "display_order": 2,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_02",
+            "evidence_ref": "page_01:artist:02:mariah-carey:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_02",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:02:mariah-carey:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "089",
+              "112"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              12,
+              17
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "false_nearby",
+              "song_first"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "mariah-carey",
+            "display_name": "Mariah Carey",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "archetype_confirmation_anchor",
+          "render_tile_id": "page_01_tile_02",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_02"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f5-artist-shania-twain-033",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-5-artist-033-shania-twain",
+            "survey_intent": "artist_affinity_probe",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "graph_core_seed"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Shania Twain",
+            "secondary_text": null
+          },
+          "display_order": 3,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_03",
+            "evidence_ref": "page_01:artist:03:shania-twain:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_03",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:03:shania-twain:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "033",
+              "113"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              5,
+              17
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "false_nearby",
+              "song_first"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "shania-twain",
+            "display_name": "Shania Twain",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "archetype_confirmation_anchor",
+          "render_tile_id": "page_01_tile_03",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_03"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f3-artist-artist-lynyrd-skynyrd-019",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-3-artist-019-artist-lynyrd-skynyrd",
+            "survey_intent": "boundary_test",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "archetype_confirmation_anchor_bucket",
+            "graph_core_seed"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Lynyrd Skynyrd",
+            "secondary_text": null
+          },
+          "display_order": 4,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_04",
+            "evidence_ref": "page_01:artist:04:lynyrd-skynyrd:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_04",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:04:lynyrd-skynyrd:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "019"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              3
+            ],
+            "roles": [
+              "anchor",
+              "boundary",
+              "gateway",
+              "song_first"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "artist-lynyrd-skynyrd",
+            "display_name": "Lynyrd Skynyrd",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "archetype_confirmation_anchor",
+          "render_tile_id": "page_01_tile_04",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_04"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f9-artist-nine-inch-nails-065",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-9-artist-065-nine-inch-nails",
+            "survey_intent": "boundary_test",
+            "survey_page_role": "page2_adaptive"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "multi_archetype_junction_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Nine Inch Nails",
+            "secondary_text": null
+          },
+          "display_order": 5,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_05",
+            "evidence_ref": "page_01:artist:05:nine-inch-nails:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_05",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:05:nine-inch-nails:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "065",
+              "087"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              9,
+              11
+            ],
+            "roles": [
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "contrast",
+              "gateway"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "nine-inch-nails",
+            "display_name": "Nine Inch Nails",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "multi_archetype_junction",
+          "render_tile_id": "page_01_tile_05",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_05"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f6-artist-kool-and-the-gang-039",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-6-artist-039-kool-and-the-gang",
+            "survey_intent": "song_first_memory",
+            "survey_page_role": "page2_adaptive"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "multi_archetype_junction_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Kool & the Gang",
+            "secondary_text": null
+          },
+          "display_order": 6,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_06",
+            "evidence_ref": "page_01:artist:06:kool-the-gang:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_06",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:06:kool-the-gang:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "039",
+              "113"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              6,
+              17
+            ],
+            "roles": [
+              "bridge",
+              "false_nearby",
+              "gateway",
+              "song_first"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "kool-and-the-gang",
+            "display_name": "Kool & the Gang",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "multi_archetype_junction",
+          "render_tile_id": "page_01_tile_06",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_06"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f6-artist-prince-039",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-6-artist-039-prince",
+            "survey_intent": "boundary_test",
+            "survey_page_role": "page3_deep"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "multi_archetype_junction_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Prince",
+            "secondary_text": null
+          },
+          "display_order": 7,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_07",
+            "evidence_ref": "page_01:artist:07:prince:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_07",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:07:prince:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "039",
+              "088",
+              "106"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              6,
+              12,
+              15
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "boundary",
+              "bridge",
+              "gateway"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "prince",
+            "display_name": "Prince",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "multi_archetype_junction",
+          "render_tile_id": "page_01_tile_07",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_07"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {},
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f1-artist-ben-e-king-006",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-1-artist-006-ben-e-king",
+            "survey_intent": "song_first_memory",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "approved_canonical_graph_surface",
+            "page1_core",
+            "replacement_for_unapproved_render_example_tile"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Ben E. King",
+            "secondary_text": null
+          },
+          "display_order": 8,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_08",
+            "evidence_ref": "page_01:artist:08:ben-e-king:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_08",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:08:ben-e-king:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "006"
+            ],
+            "best_recognition_tier": "unknown",
+            "best_survey_tier": "unknown",
+            "family_numbers": [
+              1
+            ],
+            "roles": []
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "ben-e-king",
+            "display_name": "Ben E. King",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "song_first_memory",
+          "render_tile_id": "page_01_tile_08",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_08"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f7-artist-beastie-boys-045",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-7-artist-045-beastie-boys",
+            "survey_intent": "bridge_test",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "mass_popular_control_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Beastie Boys",
+            "secondary_text": null
+          },
+          "display_order": 9,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_09",
+            "evidence_ref": "page_01:artist:09:beastie-boys:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_09",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:09:beastie-boys:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "045"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              7
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "bridge",
+              "gateway"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "beastie-boys",
+            "display_name": "Beastie Boys",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "mass_popular_control",
+          "render_tile_id": "page_01_tile_09",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_09"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f8-artist-blondie-054",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-8-artist-054-blondie",
+            "survey_intent": "bridge_test",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "mass_popular_control_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Blondie",
+            "secondary_text": null
+          },
+          "display_order": 10,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_10",
+            "evidence_ref": "page_01:artist:10:blondie:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_10",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:10:blondie:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "054"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              8
+            ],
+            "roles": [
+              "artist_anchor",
+              "bridge",
+              "gateway"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "blondie",
+            "display_name": "Blondie",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "mass_popular_control",
+          "render_tile_id": "page_01_tile_10",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_10"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f10-artist-the-offspring-076",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-10-artist-076-the-offspring",
+            "survey_intent": "song_first_memory",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "coverage_repair_broad_sentinel_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "The Offspring",
+            "secondary_text": null
+          },
+          "display_order": 11,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_11",
+            "evidence_ref": "page_01:artist:11:the-offspring:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_11",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:11:the-offspring:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "076"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              10
+            ],
+            "roles": [
+              "artist_anchor",
+              "gateway",
+              "song_first"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "the-offspring",
+            "display_name": "The Offspring",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "coverage_repair_broad_sentinel",
+          "render_tile_id": "page_01_tile_11",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_11"
+        },
+        {
+          "apple_exposure_prior": {
+            "dimensions": {
+              "album_completion_hint": 0.0,
+              "artist_depth_hint": 0.0,
+              "exact_signal_weight": 0.0,
+              "exposure_score": 0.0,
+              "favorite_or_rating_score": 0.0,
+              "library_commitment_score": 0.0,
+              "playlist_context_score": 0.0,
+              "recency_score": 0.0,
+              "repetition_score": 0.0
+            },
+            "interpretation": "exposure_prior",
+            "is_present": false,
+            "signal_ids": [],
+            "source": "apple_music",
+            "taste_truth": false
+          },
+          "approved_graph_surface_ref": {
+            "candidate_id": "survey-f2-artist-bob-dylan-010",
+            "review_status": "approved",
+            "source": "canonical_graph_survey_surface_v0_2",
+            "source_membership_id": "family-2-artist-010-bob-dylan",
+            "survey_intent": "bridge_test",
+            "survey_page_role": "page1_core"
+          },
+          "candidate_basis": [
+            "active_survey_selection",
+            "coverage_repair_broad_sentinel_bucket",
+            "graph_core_seed",
+            "graph_exploration"
+          ],
+          "display": {
+            "object_type": "artist",
+            "primary_text": "Bob Dylan",
+            "secondary_text": null
+          },
+          "display_order": 12,
+          "evidence_export_linkage": {
+            "evidence_atom_id": "survey_response:run_001_graph_seed:page_01:resp_12",
+            "evidence_ref": "page_01:artist:12:bob-dylan:unanswered",
+            "response_id": "run_001_graph_seed:page_01:resp_12",
+            "supporting_visible_response_refs": []
+          },
+          "evidence_ref": "page_01:artist:12:bob-dylan:unanswered",
+          "graph_refs": {
+            "archetype_ids": [
+              "010"
+            ],
+            "best_recognition_tier": "mass",
+            "best_survey_tier": "core",
+            "family_numbers": [
+              2
+            ],
+            "roles": [
+              "anchor",
+              "artist_anchor",
+              "bridge"
+            ]
+          },
+          "music_object_ref": {
+            "canonical_artist_id": "bob-dylan",
+            "display_name": "Bob Dylan",
+            "object_type": "artist",
+            "ref_source": "canonical_graph",
+            "resolution_state": "resolved"
+          },
+          "page_intent": "coverage_repair_broad_sentinel",
+          "render_tile_id": "page_01_tile_12",
+          "response_capture": {
+            "allowed_states": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ],
+            "captured_state": null,
+            "normalized_operation": null,
+            "note": null,
+            "selected_tags": [],
+            "selected_tags_semantics": "visible_signal_evidence",
+            "shown_unselected_tags": [],
+            "shown_unselected_tags_semantics": "weak_non_selected_context"
+          },
+          "response_id": "run_001_graph_seed:page_01:resp_12"
+        }
+      ]
+    }
+  ],
+  "private_data_boundary": {
+    "generation_prompts_excluded": true,
+    "hidden_corpus_reactions_excluded": true,
+    "hidden_reason_tags_excluded": true,
+    "lookup_state_excluded": true,
+    "private_simulator_truth_excluded": true,
+    "profile_writer_prose_excluded": true,
+    "raw_candidate_scores_excluded": true
+  },
+  "response_state_contract": [
+    {
+      "app_label": "Love",
+      "atlas_signal": "strong_positive",
+      "normalized_operation": "positive_high",
+      "state": "love",
+      "taste_polarity": "positive"
+    },
+    {
+      "app_label": "Like",
+      "atlas_signal": "positive",
+      "normalized_operation": "positive_medium",
+      "state": "like",
+      "taste_polarity": "positive"
+    },
+    {
+      "app_label": "OK",
+      "atlas_signal": "weak_positive_or_familiarity",
+      "normalized_operation": "waypoint_context",
+      "state": "ok",
+      "taste_polarity": "contextual"
+    },
+    {
+      "app_label": "Not for me",
+      "atlas_signal": "negative_scope_carefully",
+      "normalized_operation": "negative_scope_carefully",
+      "state": "dont_like",
+      "taste_polarity": "negative"
+    },
+    {
+      "app_label": "Don't know enough",
+      "atlas_signal": "familiarity_uncertainty",
+      "normalized_operation": "familiarity_uncertainty",
+      "state": "dont_know_enough",
+      "taste_polarity": "none"
+    }
+  ],
+  "schema_version": "waymark.alpha_survey_page_packet.v0.1",
+  "source": {
+    "apple_payload_id": "none",
+    "profile_public_id": "render_example_graph_only",
+    "source_input_fingerprint": "run_001_graph_seed",
+    "source_packet_path": "data/survey_simulation/runs/run_001_graph_seed/survey_run.json",
+    "source_packet_schema_version": "survey_simulation.run.v0.1",
+    "source_public_packet_sha256": "73a0ca6e88c6fb08f539e836c50ff79dce4a8b02c9cee19f968f1b6d799e3f2d",
+    "survey_run_id": "RUN_001_GRAPH_SEED"
+  },
+  "tag_and_note_contract": {
+    "note": {
+      "empty_allowed": true,
+      "required": true,
+      "type": "string_or_null"
+    },
+    "selected_tags": {
+      "empty_allowed": true,
+      "required": true,
+      "signal_semantics": "visible_signal_evidence",
+      "type": "array"
+    },
+    "shown_unselected_tags": {
+      "empty_allowed": true,
+      "required": true,
+      "signal_semantics": "weak_non_selected_context",
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": "survey_simulation.apple_payload.v0.1",
+  "apple_payload_id": "apple_payload_08",
+  "generated_at": "2026-05-20T12:00:00Z",
+  "source_kind": "simulated_apple_music",
+  "library_snapshot_age_days": 2,
+  "signals": [
+    {
+      "signal_id": "apple_08_01",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "metallica",
+        "display_name": "Metallica",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.97,
+      "recency_days": 2,
+      "play_count_90d": 68,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_08_02",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "slayer",
+        "display_name": "Slayer",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.88,
+      "recency_days": 5,
+      "play_count_90d": 42,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_08_03",
+      "signal_type": "library_artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "black-sabbath",
+        "display_name": "Black Sabbath",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.82,
+      "recency_days": 16,
+      "play_count_90d": 37,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_08_04",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "tool",
+        "display_name": "Tool",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.74,
+      "recency_days": 7,
+      "play_count_90d": 29,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_08_05",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "deftones",
+        "display_name": "Deftones",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.66,
+      "recency_days": 9,
+      "play_count_90d": 25,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_08_06",
+      "signal_type": "library_artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "iron-maiden",
+        "display_name": "Iron Maiden",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.5,
+      "recency_days": 41,
+      "play_count_90d": 15,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    }
+  ],
+  "playlist_context": {
+    "playlist_name": null,
+    "playlist_kind": "unknown"
+  },
+  "track_level_signals": [],
+  "album_level_signals": [],
+  "skip_or_completion_hints": [],
+  "loved_or_favorite_hints": [],
+  "resolution_summary": {
+    "resolved_canonical_count": 6,
+    "external_unresolved_count": 0,
+    "candidate_generation_policy": "Only resolved canonical artist refs may bias v0.1 Page 1 candidate generation."
+  }
+}

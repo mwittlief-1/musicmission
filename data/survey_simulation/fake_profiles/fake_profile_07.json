@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_07",
+  "display_label": "Indie / Prestige Listener",
+  "summary": "Favors critic-world indie, intimate writing, and artful production; big pop can work when it has authorship.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "116",
+      "weight": 0.88,
+      "note": "current indie prestige"
+    },
+    {
+      "archetype_id": "078",
+      "weight": 0.76,
+      "note": "indie album canon"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "030",
+      "weight": 0.62,
+      "note": "indie folk singer-songwriter"
+    },
+    {
+      "archetype_id": "085",
+      "weight": 0.48,
+      "note": "dance-rock and art-pop"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "year_end_listening_notes",
+    "display_name": "Year-end listening notes",
+    "note": "Albums, recommendations, and subtle progression matter."
+  },
+  "false_nearby_lane": {
+    "lane_id": "festival_indie_as_default",
+    "display_name": "Festival indie as default",
+    "note": "Big indie visibility is less important than texture and authorship.",
+    "archetype_id": "078",
+    "family_number": 10
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "035",
+      "weight": 0.5,
+      "note": "country-radio polish feels too broad"
+    },
+    {
+      "archetype_id": "020",
+      "weight": 0.44,
+      "note": "arena theatricality can overwhelm"
+    }
+  ],
+  "apple_payload_id": "apple_payload_07",
+  "hidden_reaction_corpus_id": "hidden_corpus_07"
+}

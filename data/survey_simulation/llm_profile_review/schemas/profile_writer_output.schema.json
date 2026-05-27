@@ -1,0 +1,857 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "waymark.profile_writer_output.v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_public_id",
+    "input_packet",
+    "assessment_status",
+    "evidence_audit",
+    "profile_summary",
+    "atlas_seed",
+    "evidence_ledger",
+    "contradictions_and_tensions",
+    "recommended_next_tests",
+    "user_facing_copy"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "waymark.profile_writer_output.v0.1"
+      ]
+    },
+    "profile_public_id": {
+      "type": "string"
+    },
+    "input_packet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "apple_payload_id",
+        "page_count_config_id",
+        "input_fingerprint",
+        "hidden_inputs_declared_absent"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string"
+        },
+        "apple_payload_id": {
+          "type": "string"
+        },
+        "page_count_config_id": {
+          "type": "string"
+        },
+        "input_fingerprint": {
+          "type": "string"
+        },
+        "hidden_inputs_declared_absent": {
+          "type": "boolean",
+          "enum": [
+            true
+          ]
+        }
+      }
+    },
+    "assessment_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reason",
+        "confidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "cannot_assess"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      }
+    },
+    "evidence_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_visible_items",
+        "counts_by_stage",
+        "visible_strengths",
+        "visible_limits",
+        "forbidden_context_check"
+      ],
+      "properties": {
+        "total_visible_items": {
+          "type": "integer"
+        },
+        "counts_by_stage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "artist",
+            "album",
+            "song"
+          ],
+          "properties": {
+            "artist": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "love",
+                "like",
+                "ok",
+                "dont_like",
+                "dont_know_enough"
+              ],
+              "properties": {
+                "love": {
+                  "type": "integer"
+                },
+                "like": {
+                  "type": "integer"
+                },
+                "ok": {
+                  "type": "integer"
+                },
+                "dont_like": {
+                  "type": "integer"
+                },
+                "dont_know_enough": {
+                  "type": "integer"
+                }
+              }
+            },
+            "album": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "love",
+                "like",
+                "ok",
+                "dont_like",
+                "dont_know_enough"
+              ],
+              "properties": {
+                "love": {
+                  "type": "integer"
+                },
+                "like": {
+                  "type": "integer"
+                },
+                "ok": {
+                  "type": "integer"
+                },
+                "dont_like": {
+                  "type": "integer"
+                },
+                "dont_know_enough": {
+                  "type": "integer"
+                }
+              }
+            },
+            "song": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "love",
+                "like",
+                "ok",
+                "dont_like",
+                "dont_know_enough"
+              ],
+              "properties": {
+                "love": {
+                  "type": "integer"
+                },
+                "like": {
+                  "type": "integer"
+                },
+                "ok": {
+                  "type": "integer"
+                },
+                "dont_like": {
+                  "type": "integer"
+                },
+                "dont_know_enough": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "visible_strengths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "visible_limits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_context_check": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "used_hidden_truth",
+            "used_hidden_archetype_tiers",
+            "used_unshown_reactions",
+            "notes"
+          ],
+          "properties": {
+            "used_hidden_truth": {
+              "type": "boolean",
+              "enum": [
+                false
+              ]
+            },
+            "used_hidden_archetype_tiers": {
+              "type": "boolean",
+              "enum": [
+                false
+              ]
+            },
+            "used_unshown_reactions": {
+              "type": "boolean",
+              "enum": [
+                false
+              ]
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "profile_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headline",
+        "short_read",
+        "waymark_voice_summary",
+        "most_likely_center_of_gravity",
+        "biggest_uncertainties",
+        "what_not_to_overinfer"
+      ],
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "short_read": {
+          "type": "string"
+        },
+        "waymark_voice_summary": {
+          "type": "string"
+        },
+        "most_likely_center_of_gravity": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "biggest_uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "what_not_to_overinfer": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "atlas_seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "landmarks",
+        "regions",
+        "frontiers",
+        "dead_end_hypotheses",
+        "waypoints"
+      ],
+      "properties": {
+        "landmarks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "scope",
+              "object_refs",
+              "confidence",
+              "evidence_strength",
+              "why_it_may_be_a_landmark",
+              "scope_limit",
+              "supporting_evidence_refs",
+              "counterevidence_refs"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "scope": {
+                "enum": [
+                  "song",
+                  "album",
+                  "artist",
+                  "region",
+                  "archetype",
+                  "use_case"
+                ]
+              },
+              "object_refs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "object_type",
+                    "display_name",
+                    "canonical_id"
+                  ],
+                  "properties": {
+                    "object_type": {
+                      "enum": [
+                        "artist",
+                        "album",
+                        "song_recording",
+                        "region",
+                        "archetype"
+                      ]
+                    },
+                    "display_name": {
+                      "type": "string"
+                    },
+                    "canonical_id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "evidence_strength": {
+                "type": "number"
+              },
+              "why_it_may_be_a_landmark": {
+                "type": "string"
+              },
+              "scope_limit": {
+                "type": "string"
+              },
+              "supporting_evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "counterevidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "confidence",
+              "region_type",
+              "description",
+              "supporting_objects",
+              "supporting_evidence_refs",
+              "counterevidence_refs",
+              "overclaim_risk",
+              "next_test_needed"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "region_type": {
+                "enum": [
+                  "confirmed",
+                  "tentative",
+                  "inferred"
+                ]
+              },
+              "description": {
+                "type": "string"
+              },
+              "supporting_objects": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "supporting_evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "counterevidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "overclaim_risk": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "next_test_needed": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "frontiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "why_promising",
+              "confidence",
+              "best_next_probe_type",
+              "supporting_evidence_refs",
+              "risk_note"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "why_promising": {
+                "type": "string"
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "best_next_probe_type": {
+                "enum": [
+                  "song_probe",
+                  "album_probe",
+                  "artist_probe",
+                  "route_probe",
+                  "survey_followup"
+                ]
+              },
+              "supporting_evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "risk_note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "dead_end_hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "status",
+              "scope",
+              "why_it_looks_nearby",
+              "why_it_may_fail",
+              "supporting_negative_evidence_refs",
+              "positive_or_mixed_evidence_refs",
+              "do_not_overgeneralize_beyond"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "weak_hypothesis",
+                  "moderate_hypothesis",
+                  "strong_hypothesis"
+                ]
+              },
+              "scope": {
+                "enum": [
+                  "song",
+                  "album",
+                  "artist",
+                  "region",
+                  "archetype",
+                  "use_case"
+                ]
+              },
+              "why_it_looks_nearby": {
+                "type": "string"
+              },
+              "why_it_may_fail": {
+                "type": "string"
+              },
+              "supporting_negative_evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "positive_or_mixed_evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "do_not_overgeneralize_beyond": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "waypoints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "scope",
+              "why_keep_it",
+              "use_case",
+              "confidence",
+              "supporting_evidence_refs"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "scope": {
+                "enum": [
+                  "song",
+                  "album",
+                  "artist",
+                  "use_case"
+                ]
+              },
+              "why_keep_it": {
+                "type": "string"
+              },
+              "use_case": {
+                "enum": [
+                  "playlist",
+                  "context",
+                  "cultural_furniture",
+                  "bridge",
+                  "family_safe",
+                  "background",
+                  "unknown"
+                ]
+              },
+              "confidence": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "supporting_evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "evidence_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evidence_ref",
+          "page_id",
+          "stage",
+          "page_number",
+          "position",
+          "page_intent",
+          "object_type",
+          "display_name",
+          "artist_display_name",
+          "canonical_id",
+          "reaction",
+          "atlas_signal_interpretation",
+          "graph_context",
+          "interpretation",
+          "inference_scope",
+          "confidence"
+        ],
+        "properties": {
+          "evidence_ref": {
+            "type": "string"
+          },
+          "page_id": {
+            "type": "string"
+          },
+          "stage": {
+            "enum": [
+              "artist",
+              "album",
+              "song"
+            ]
+          },
+          "page_number": {
+            "type": "integer"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "page_intent": {
+            "type": "string"
+          },
+          "object_type": {
+            "enum": [
+              "artist",
+              "album",
+              "song_recording"
+            ]
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "artist_display_name": {
+            "type": "string"
+          },
+          "canonical_id": {
+            "type": "string"
+          },
+          "reaction": {
+            "enum": [
+              "love",
+              "like",
+              "ok",
+              "dont_like",
+              "dont_know_enough"
+            ]
+          },
+          "atlas_signal_interpretation": {
+            "type": "string"
+          },
+          "graph_context": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "family_numbers",
+              "archetype_ids",
+              "roles",
+              "best_recognition_tier",
+              "best_survey_tier"
+            ],
+            "properties": {
+              "family_numbers": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "archetype_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "best_recognition_tier": {
+                "type": "string"
+              },
+              "best_survey_tier": {
+                "type": "string"
+              }
+            }
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "inference_scope": {
+            "enum": [
+              "song",
+              "album",
+              "artist",
+              "region",
+              "archetype",
+              "use_case"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      }
+    },
+    "contradictions_and_tensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "description",
+          "evidence_refs",
+          "recommended_resolution"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recommended_resolution": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recommended_next_tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "test_type",
+          "why_now",
+          "hypothesis",
+          "suggested_route_shape",
+          "success_criteria",
+          "failure_criteria",
+          "evidence_refs"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "test_type": {
+            "enum": [
+              "survey_followup",
+              "short_mission",
+              "album_mission",
+              "dead_end_check",
+              "frontier_route",
+              "landmark_confirmation"
+            ]
+          },
+          "why_now": {
+            "type": "string"
+          },
+          "hypothesis": {
+            "type": "string"
+          },
+          "suggested_route_shape": {
+            "type": "string"
+          },
+          "success_criteria": {
+            "type": "string"
+          },
+          "failure_criteria": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "user_facing_copy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "what_we_think_so_far",
+        "careful_caveat",
+        "first_mission_pitch"
+      ],
+      "properties": {
+        "what_we_think_so_far": {
+          "type": "string"
+        },
+        "careful_caveat": {
+          "type": "string"
+        },
+        "first_mission_pitch": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

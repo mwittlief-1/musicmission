@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_08",
+  "display_label": "Metal / Heavy User",
+  "summary": "Values riff authority, heaviness, and scene fluency; tolerates melody when the center of gravity stays heavy.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "062",
+      "weight": 0.92,
+      "note": "thrash and heavy canon"
+    },
+    {
+      "archetype_id": "066",
+      "weight": 0.84,
+      "note": "modern heavy and alt-metal"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "061",
+      "weight": 0.7,
+      "note": "classic metal foundation"
+    },
+    {
+      "archetype_id": "064",
+      "weight": 0.48,
+      "note": "doom and heavy rock lineage"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "workout_and_deep_catalog",
+    "display_name": "Workout and deep catalog",
+    "note": "Intensity and technical identity are positive signals."
+  },
+  "false_nearby_lane": {
+    "lane_id": "hard_rock_as_metal",
+    "display_name": "Hard rock as metal",
+    "note": "Classic hard-rock adjacency should not replace true heaviness.",
+    "archetype_id": "017",
+    "family_number": 3
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "091",
+      "weight": 0.77,
+      "note": "polished persona pop is not the lane"
+    },
+    {
+      "archetype_id": "033",
+      "weight": 0.7,
+      "note": "country-pop crossover is a strong negative"
+    }
+  ],
+  "apple_payload_id": "apple_payload_08",
+  "hidden_reaction_corpus_id": "hidden_corpus_08"
+}

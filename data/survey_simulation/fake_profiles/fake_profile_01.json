@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_01",
+  "display_label": "Classic Suburban Dad",
+  "summary": "Album-rock comfort, heartland hooks, and family-car classics, with limited patience for abrasive modern edges.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "016",
+      "weight": 0.91,
+      "note": "classic album-rock anchors"
+    },
+    {
+      "archetype_id": "022",
+      "weight": 0.78,
+      "note": "soft-rock shared-memory lane"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "071",
+      "weight": 0.58,
+      "note": "modern radio rock handoff"
+    },
+    {
+      "archetype_id": "113",
+      "weight": 0.46,
+      "note": "family and nostalgia repeats"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "family_car_cd_binder",
+    "display_name": "Family car CD binder",
+    "note": "Road-trip repetition and household singalongs matter."
+  },
+  "false_nearby_lane": {
+    "lane_id": "arena_sheen_without_songcraft",
+    "display_name": "Arena sheen without songcraft",
+    "note": "Big production alone should not be read as affinity.",
+    "archetype_id": "020",
+    "family_number": 3
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "119",
+      "weight": 0.72,
+      "note": "hyperpop texture is too brittle"
+    },
+    {
+      "archetype_id": "062",
+      "weight": 0.64,
+      "note": "thrash intensity is usually a skip"
+    }
+  ],
+  "apple_payload_id": "apple_payload_01",
+  "hidden_reaction_corpus_id": "hidden_corpus_01"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_05",
+  "display_label": "R&B / Hip-Hop Listener",
+  "summary": "Responds to lyrical density, groove, and modern R&B atmosphere; pop can work when rhythm and voice carry it.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "052",
+      "weight": 0.86,
+      "note": "modern rap authorship"
+    },
+    {
+      "archetype_id": "044",
+      "weight": 0.82,
+      "note": "modern alternative R&B"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "050",
+      "weight": 0.68,
+      "note": "mainstream rap crossover"
+    },
+    {
+      "archetype_id": "043",
+      "weight": 0.53,
+      "note": "soulful hip-hop lineage"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "late_night_headphones",
+    "display_name": "Late-night headphones",
+    "note": "Private listening and lyrical replay are high-value contexts."
+  },
+  "false_nearby_lane": {
+    "lane_id": "party_rap_as_total_profile",
+    "display_name": "Party rap as total profile",
+    "note": "Club familiarity should not flatten the profile.",
+    "archetype_id": "050",
+    "family_number": 7
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "016",
+      "weight": 0.47,
+      "note": "classic rock is familiar but rarely chosen"
+    },
+    {
+      "archetype_id": "061",
+      "weight": 0.69,
+      "note": "traditional metal is usually outside the lane"
+    }
+  ],
+  "apple_payload_id": "apple_payload_05",
+  "hidden_reaction_corpus_id": "hidden_corpus_05"
+}

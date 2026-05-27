@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_09",
+  "display_label": "Modern Pop + TikTok User",
+  "summary": "Current-pop and short-form discovery listener with taste led by personality, hooks, and internet circulation.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "093",
+      "weight": 0.9,
+      "note": "current internet-native pop"
+    },
+    {
+      "archetype_id": "091",
+      "weight": 0.76,
+      "note": "modern persona pop"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "119",
+      "weight": 0.52,
+      "note": "hyperpop adjacency"
+    },
+    {
+      "archetype_id": "050",
+      "weight": 0.46,
+      "note": "rap-pop circulation"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "short_form_discovery",
+    "display_name": "Short-form discovery",
+    "note": "Taste updates quickly through clips, edits, and repeatable hooks."
+  },
+  "false_nearby_lane": {
+    "lane_id": "viral_equals_core",
+    "display_name": "Viral equals core",
+    "note": "A viral sound is observable but not automatically deep affinity.",
+    "archetype_id": "119",
+    "family_number": 18
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "061",
+      "weight": 0.72,
+      "note": "traditional metal is a strong mismatch"
+    },
+    {
+      "archetype_id": "014",
+      "weight": 0.5,
+      "note": "60s psych is not a default fit"
+    }
+  ],
+  "apple_payload_id": "apple_payload_09",
+  "hidden_reaction_corpus_id": "hidden_corpus_09"
+}

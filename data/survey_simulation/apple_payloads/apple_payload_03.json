@@ -1,0 +1,118 @@
+{
+  "schema_version": "survey_simulation.apple_payload.v0.1",
+  "apple_payload_id": "apple_payload_03",
+  "generated_at": "2026-05-20T12:00:00Z",
+  "source_kind": "simulated_apple_music",
+  "library_snapshot_age_days": 2,
+  "signals": [
+    {
+      "signal_id": "apple_03_01",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "nirvana",
+        "display_name": "Nirvana",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.94,
+      "recency_days": 5,
+      "play_count_90d": 52,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_03_02",
+      "signal_type": "library_artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "rem",
+        "display_name": "R.E.M.",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.82,
+      "recency_days": 15,
+      "play_count_90d": 37,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_03_03",
+      "signal_type": "heavy_rotation",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "pixies",
+        "display_name": "Pixies",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.76,
+      "recency_days": 6,
+      "play_count_90d": 34,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_03_04",
+      "signal_type": "library_artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "the-cure",
+        "display_name": "The Cure",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.66,
+      "recency_days": 28,
+      "play_count_90d": 27,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_03_05",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "smashing-pumpkins",
+        "display_name": "Smashing Pumpkins",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.61,
+      "recency_days": 19,
+      "play_count_90d": 24,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "signal_id": "apple_03_06",
+      "signal_type": "recent_play",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "foo-fighters",
+        "display_name": "Foo Fighters",
+        "resolution_state": "resolved"
+      },
+      "normalized_weight": 0.31,
+      "recency_days": 11,
+      "play_count_90d": 7,
+      "last_played_at": "2026-05-18T10:00:00Z",
+      "library_added_at": "2024-01-15T10:00:00Z"
+    }
+  ],
+  "playlist_context": {
+    "playlist_name": null,
+    "playlist_kind": "unknown"
+  },
+  "track_level_signals": [],
+  "album_level_signals": [],
+  "skip_or_completion_hints": [],
+  "loved_or_favorite_hints": [],
+  "resolution_summary": {
+    "resolved_canonical_count": 6,
+    "external_unresolved_count": 0,
+    "candidate_generation_policy": "Only resolved canonical artist refs may bias v0.1 Page 1 candidate generation."
+  }
+}

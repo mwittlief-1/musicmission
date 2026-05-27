@@ -1,0 +1,504 @@
+{
+  "record_type": "mission_generation_digest_view",
+  "schema_version": "alpha_v0_1",
+  "digest_id": "mgdv:alpha:survey_completion:fixture_alpha_01:001",
+  "created_at": "2026-05-21T20:15:00Z",
+  "user_id": null,
+  "fixture_profile_id": "fixture_alpha_01",
+  "source_context": {
+    "source_event_type": "survey_completion",
+    "source_event_id": "survey_completion:fixture_alpha_01:001",
+    "survey_session_id": "survey_session:fixture_alpha_01:a3",
+    "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001",
+    "source_payload_version": "survey_evidence_export_v0_1",
+    "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+    "input_fingerprint": "sha256:example_fingerprint_not_production",
+    "atlas_digest_ref": "atlas_digest_view:fixture_alpha_01:a3:001",
+    "generated_from": [
+      "survey_evidence_export",
+      "signal_ledger",
+      "atlas_role_assignments",
+      "possible_atlas_update_candidates"
+    ]
+  },
+  "compactness_policy": {
+    "target_max_bytes": 50000,
+    "hard_review_threshold_bytes": 80000,
+    "max_candidate_roles": 24,
+    "max_recent_signals": 36,
+    "max_evidence_refs_per_item": 8,
+    "raw_payload_required": false
+  },
+  "evidence_separation_policy": {
+    "atlas_node_role_truth_allowed": false,
+    "role_truth_source": "atlas_role_assignment",
+    "survey_role_promotion_allowed": false,
+    "promoted_roles_allowed": false,
+    "canonical_graph_mutation_allowed": false,
+    "apple_exposure_as_taste_truth_allowed": false,
+    "dont_know_as_negative_allowed": false,
+    "signal_strength_and_confidence_separate": true
+  },
+  "no_hidden_data_checks": {
+    "raw_survey_payload_included": false,
+    "survey_construction_internals_included": false,
+    "page_layout_mechanics_included": false,
+    "randomization_seed_included": false,
+    "generator_visible_inputs_included": false,
+    "raw_ranking_scores_included": false,
+    "profile_writer_output_included": false,
+    "hidden_simulator_truth_included": false,
+    "hidden_corpus_reactions_included": false,
+    "simulator_private_lookup_status_included": false,
+    "canonical_graph_mutation_instructions_included": false,
+    "all_evidence_refs_resolve_to_visible_survey_evidence": true
+  },
+  "evidence_ref_index": [
+    {
+      "evidence_ref": "artist_page_001:artist:01:Fleetwood Mac:love",
+      "signal_id": "signal:survey:fixture_alpha_01:artist_page_001_resp_01",
+      "response_id": "artist_page_001_resp_01",
+      "survey_item_id": "artist_page_001_item_01",
+      "survey_session_id": "survey_session:fixture_alpha_01:a3",
+      "page_id": "artist_page_001",
+      "stage": "artist",
+      "page_number": 1,
+      "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+      "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001"
+    },
+    {
+      "evidence_ref": "album_page_001:album:01:Rumours:love",
+      "signal_id": "signal:survey:fixture_alpha_01:album_page_001_resp_01",
+      "response_id": "album_page_001_resp_01",
+      "survey_item_id": "album_page_001_item_01",
+      "survey_session_id": "survey_session:fixture_alpha_01:a3",
+      "page_id": "album_page_001",
+      "stage": "album",
+      "page_number": 4,
+      "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+      "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001"
+    },
+    {
+      "evidence_ref": "song_page_001:song:01:Dreams:like",
+      "signal_id": "signal:survey:fixture_alpha_01:song_page_001_resp_01",
+      "response_id": "song_page_001_resp_01",
+      "survey_item_id": "song_page_001_item_01",
+      "survey_session_id": "survey_session:fixture_alpha_01:a3",
+      "page_id": "song_page_001",
+      "stage": "song",
+      "page_number": 5,
+      "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+      "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001"
+    },
+    {
+      "evidence_ref": "artist_page_002:artist:04:Bon Jovi:love",
+      "signal_id": "signal:survey:fixture_alpha_01:artist_page_002_resp_04",
+      "response_id": "artist_page_002_resp_04",
+      "survey_item_id": "artist_page_002_item_04",
+      "survey_session_id": "survey_session:fixture_alpha_01:a3",
+      "page_id": "artist_page_002",
+      "stage": "artist",
+      "page_number": 2,
+      "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+      "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001"
+    },
+    {
+      "evidence_ref": "artist_page_003:artist:02:Buddy Holly:dont_like",
+      "signal_id": "signal:survey:fixture_alpha_01:artist_page_003_resp_02",
+      "response_id": "artist_page_003_resp_02",
+      "survey_item_id": "artist_page_003_item_02",
+      "survey_session_id": "survey_session:fixture_alpha_01:a3",
+      "page_id": "artist_page_003",
+      "stage": "artist",
+      "page_number": 3,
+      "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+      "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001"
+    },
+    {
+      "evidence_ref": "song_page_002:song:03:Everyday:dont_know_enough",
+      "signal_id": "signal:survey:fixture_alpha_01:song_page_002_resp_03",
+      "response_id": "song_page_002_resp_03",
+      "survey_item_id": "song_page_002_item_03",
+      "survey_session_id": "survey_session:fixture_alpha_01:a3",
+      "page_id": "song_page_002",
+      "stage": "song",
+      "page_number": 6,
+      "visible_packet_id": "visible_packet:fixture_alpha_01:a3",
+      "source_payload_ref": "survey_evidence_export:fixture_alpha_01:a3:001"
+    }
+  ],
+  "candidate_roles": [
+    {
+      "candidate_role_id": "candidate_role:fleetwood_mac:landmark",
+      "atlas_node_id": "atlas_node:artist:fleetwood_mac",
+      "atlas_role_assignment_id": "role:artist:fleetwood_mac:landmark_candidate",
+      "role_truth_source": "atlas_role_assignment",
+      "display_name": "Fleetwood Mac",
+      "object_scope": "artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "display_name": "Fleetwood Mac",
+        "credited_artist_name": "Fleetwood Mac",
+        "canonical_artist_id": "artist-fleetwood-mac",
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable"
+      },
+      "recommended_role": "landmark",
+      "candidate_pool_behavior": "anchor",
+      "status": "provisional",
+      "review_state": "needs_review",
+      "promotion_state": "candidate",
+      "confidence": {
+        "confidence_score": 0.72,
+        "confidence_band": "medium",
+        "confidence_basis": "survey_pattern",
+        "confidence_summary": "Artist, album, and song evidence are all positive, but Survey alone cannot promote."
+      },
+      "evidence": {
+        "signal_ids": [
+          "signal:survey:fixture_alpha_01:artist_page_001_resp_01",
+          "signal:survey:fixture_alpha_01:album_page_001_resp_01",
+          "signal:survey:fixture_alpha_01:song_page_001_resp_01"
+        ],
+        "evidence_refs": [
+          "artist_page_001:artist:01:Fleetwood Mac:love",
+          "album_page_001:album:01:Rumours:love",
+          "song_page_001:song:01:Dreams:like"
+        ],
+        "positive_evidence_refs": [
+          "artist_page_001:artist:01:Fleetwood Mac:love",
+          "album_page_001:album:01:Rumours:love",
+          "song_page_001:song:01:Dreams:like"
+        ],
+        "negative_evidence_refs": [],
+        "uncertainty_evidence_refs": []
+      },
+      "scope_limit": "artist_level_only",
+      "mission_use": "anchor",
+      "mission_generation_priority": 0.92,
+      "summary": "Dense positive survey evidence makes this a candidate anchor, not promoted truth."
+    },
+    {
+      "candidate_role_id": "candidate_role:bon_jovi:frontier",
+      "atlas_node_id": "atlas_node:artist:bon_jovi",
+      "atlas_role_assignment_id": "role:artist:bon_jovi:frontier_candidate",
+      "role_truth_source": "atlas_role_assignment",
+      "display_name": "Bon Jovi",
+      "object_scope": "artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "display_name": "Bon Jovi",
+        "credited_artist_name": "Bon Jovi",
+        "canonical_artist_id": "bon-jovi",
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable"
+      },
+      "recommended_role": "frontier",
+      "candidate_pool_behavior": "probe",
+      "status": "provisional",
+      "review_state": "unreviewed",
+      "promotion_state": "candidate",
+      "confidence": {
+        "confidence_score": 0.56,
+        "confidence_band": "medium",
+        "confidence_basis": "direct_user_reaction",
+        "confidence_summary": "One strong positive is isolated, so treat as a high-value frontier opportunity."
+      },
+      "evidence": {
+        "signal_ids": [
+          "signal:survey:fixture_alpha_01:artist_page_002_resp_04"
+        ],
+        "evidence_refs": [
+          "artist_page_002:artist:04:Bon Jovi:love"
+        ],
+        "positive_evidence_refs": [
+          "artist_page_002:artist:04:Bon Jovi:love"
+        ],
+        "negative_evidence_refs": [],
+        "uncertainty_evidence_refs": []
+      },
+      "scope_limit": "artist_level_only",
+      "mission_use": "probe",
+      "mission_generation_priority": 0.74,
+      "summary": "Loved but sparse; use a careful probe instead of one-click Landmark promotion."
+    },
+    {
+      "candidate_role_id": "candidate_role:buddy_holly:dead_end",
+      "atlas_node_id": "atlas_node:artist:buddy_holly",
+      "atlas_role_assignment_id": "role:artist:buddy_holly:dead_end_candidate",
+      "role_truth_source": "atlas_role_assignment",
+      "display_name": "Buddy Holly",
+      "object_scope": "artist",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "display_name": "Buddy Holly",
+        "credited_artist_name": "Buddy Holly",
+        "canonical_artist_id": "buddy-holly",
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable"
+      },
+      "recommended_role": "dead_end",
+      "candidate_pool_behavior": "trap",
+      "status": "provisional",
+      "review_state": "needs_review",
+      "promotion_state": "candidate",
+      "confidence": {
+        "confidence_score": 0.48,
+        "confidence_band": "low",
+        "confidence_basis": "direct_user_reaction",
+        "confidence_summary": "One negative response can seed only a scoped dead-end hypothesis."
+      },
+      "evidence": {
+        "signal_ids": [
+          "signal:survey:fixture_alpha_01:artist_page_003_resp_02",
+          "signal:survey:fixture_alpha_01:song_page_002_resp_03"
+        ],
+        "evidence_refs": [
+          "artist_page_003:artist:02:Buddy Holly:dont_like",
+          "song_page_002:song:03:Everyday:dont_know_enough"
+        ],
+        "positive_evidence_refs": [],
+        "negative_evidence_refs": [
+          "artist_page_003:artist:02:Buddy Holly:dont_like"
+        ],
+        "uncertainty_evidence_refs": [
+          "song_page_002:song:03:Everyday:dont_know_enough"
+        ]
+      },
+      "scope_limit": "artist_level_only",
+      "mission_use": "trap_check",
+      "mission_generation_priority": 0.41,
+      "summary": "A narrow dead-end check is allowed; do not broaden into early rock rejection."
+    }
+  ],
+  "recent_signals": [
+    {
+      "signal_id": "signal:survey:fixture_alpha_01:artist_page_001_resp_01",
+      "source": "survey",
+      "evidence_ref": "artist_page_001:artist:01:Fleetwood Mac:love",
+      "response_id": "artist_page_001_resp_01",
+      "display_name": "Fleetwood Mac",
+      "object_type": "artist",
+      "raw_reaction": "love",
+      "normalized_signal": "positive_high",
+      "signal_strength": 0.9,
+      "interpretation_confidence": 0.66,
+      "selected_tags": [
+        "warm_harmony",
+        "road_trip"
+      ],
+      "shown_unselected_tags": [
+        "too_polished",
+        "guitar_forward"
+      ],
+      "note_excerpt": "Feels familiar but still alive.",
+      "apple_exposure_context": {
+        "present": true,
+        "taste_truth": false,
+        "summary": "Prior Apple exposure exists; treat as familiarity context only.",
+        "evidence_refs": [
+          "apple:library:fleetwood_mac"
+        ]
+      }
+    },
+    {
+      "signal_id": "signal:survey:fixture_alpha_01:artist_page_002_resp_04",
+      "source": "survey",
+      "evidence_ref": "artist_page_002:artist:04:Bon Jovi:love",
+      "response_id": "artist_page_002_resp_04",
+      "display_name": "Bon Jovi",
+      "object_type": "artist",
+      "raw_reaction": "love",
+      "normalized_signal": "positive_high",
+      "signal_strength": 0.88,
+      "interpretation_confidence": 0.48,
+      "selected_tags": [
+        "big_chorus"
+      ],
+      "shown_unselected_tags": [
+        "guitar_forward",
+        "too_polished"
+      ],
+      "note_excerpt": null,
+      "apple_exposure_context": {
+        "present": false,
+        "taste_truth": false,
+        "summary": null,
+        "evidence_refs": []
+      }
+    },
+    {
+      "signal_id": "signal:survey:fixture_alpha_01:artist_page_003_resp_02",
+      "source": "survey",
+      "evidence_ref": "artist_page_003:artist:02:Buddy Holly:dont_like",
+      "response_id": "artist_page_003_resp_02",
+      "display_name": "Buddy Holly",
+      "object_type": "artist",
+      "raw_reaction": "dont_like",
+      "normalized_signal": "negative_scope_carefully",
+      "signal_strength": 0.62,
+      "interpretation_confidence": 0.44,
+      "selected_tags": [
+        "too_thin"
+      ],
+      "shown_unselected_tags": [
+        "nostalgic",
+        "simple_hook"
+      ],
+      "note_excerpt": "Probably not where I want to spend time.",
+      "apple_exposure_context": {
+        "present": false,
+        "taste_truth": false,
+        "summary": null,
+        "evidence_refs": []
+      }
+    },
+    {
+      "signal_id": "signal:survey:fixture_alpha_01:song_page_002_resp_03",
+      "source": "survey",
+      "evidence_ref": "song_page_002:song:03:Everyday:dont_know_enough",
+      "response_id": "song_page_002_resp_03",
+      "display_name": "Everyday",
+      "object_type": "song_recording",
+      "raw_reaction": "dont_know_enough",
+      "normalized_signal": "familiarity_uncertainty",
+      "signal_strength": 0.2,
+      "interpretation_confidence": 0.3,
+      "selected_tags": [],
+      "shown_unselected_tags": [
+        "nostalgic",
+        "simple_hook"
+      ],
+      "note_excerpt": null,
+      "apple_exposure_context": {
+        "present": false,
+        "taste_truth": false,
+        "summary": null,
+        "evidence_refs": []
+      }
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contradiction:buddy_holly_scope",
+      "label": "Buddy Holly negative plus song unfamiliarity",
+      "scope_warning": "Do not turn one artist dislike and one unfamiliar song into a broad early-rock rejection.",
+      "positive_evidence_refs": [],
+      "negative_evidence_refs": [
+        "artist_page_003:artist:02:Buddy Holly:dont_like"
+      ],
+      "uncertainty_evidence_refs": [
+        "song_page_002:song:03:Everyday:dont_know_enough"
+      ],
+      "recommended_test": "Use a small trap check only if a mission needs this boundary.",
+      "review_required": true
+    }
+  ],
+  "unresolved_questions": [
+    {
+      "question_id": "question:bon_jovi_density",
+      "question_type": "recurrence",
+      "question": "Is the Bon Jovi love a real corridor or one isolated big-chorus hit?",
+      "evidence_refs": [
+        "artist_page_002:artist:04:Bon Jovi:love"
+      ],
+      "mission_hint": "Probe with one familiar anchor and two adjacent but not identical big-chorus tracks.",
+      "review_required": true
+    }
+  ],
+  "taste_feature_summaries": [
+    {
+      "taste_feature_id": "taste_feature:big_chorus",
+      "label": "big chorus",
+      "state": "candidate_affinity",
+      "confidence": {
+        "confidence_score": 0.52,
+        "confidence_band": "medium",
+        "confidence_basis": "explicit_user_note",
+        "confidence_summary": "Selected tag appears on a sparse but strong positive signal."
+      },
+      "evidence_refs": [
+        "artist_page_002:artist:04:Bon Jovi:love"
+      ],
+      "mission_use": "Use as a hypothesis for one probe, not a broad pop-rock claim."
+    }
+  ],
+  "user_vocabulary_terms": [
+    {
+      "term_id": "vocab:road_trip",
+      "term": "road trip",
+      "source": "selected_tag",
+      "evidence_refs": [
+        "artist_page_001:artist:01:Fleetwood Mac:love"
+      ],
+      "use_in_mission_copy": true
+    }
+  ],
+  "anti_overfitting_rules": [
+    {
+      "id": "rule:no_survey_promotion",
+      "text": "Survey evidence may seed roles and candidates, but Mission Generation must not treat them as promoted Atlas truth.",
+      "severity": "blocker",
+      "evidence_refs": []
+    },
+    {
+      "id": "rule:no_broad_negative",
+      "text": "Scope Buddy Holly negative evidence narrowly; do not broaden to a genre or era without recurrence.",
+      "severity": "warning",
+      "evidence_refs": [
+        "artist_page_003:artist:02:Buddy Holly:dont_like"
+      ]
+    },
+    {
+      "id": "rule:apple_exposure_context_only",
+      "text": "Apple exposure can inform familiarity but cannot prove taste.",
+      "severity": "blocker",
+      "evidence_refs": [
+        "artist_page_001:artist:01:Fleetwood Mac:love"
+      ]
+    }
+  ],
+  "mission_relevant_constraints": [
+    {
+      "id": "constraint:concrete_or_search_slot",
+      "text": "Generated route items must be concrete playable candidates or explicit unresolved candidate-search slots.",
+      "severity": "blocker",
+      "evidence_refs": []
+    },
+    {
+      "id": "constraint:frontier_probe_not_landmark",
+      "text": "The isolated Bon Jovi love should produce a probe or risky_probe, not a Landmark confirmation mission.",
+      "severity": "warning",
+      "evidence_refs": [
+        "artist_page_002:artist:04:Bon Jovi:love"
+      ]
+    }
+  ],
+  "consumer_contract": {
+    "intended_consumer": "mission_generation",
+    "raw_survey_payload_required": false,
+    "mission_objects_created_here": false,
+    "atlas_promotion_allowed": false,
+    "canonical_graph_mutation_allowed": false,
+    "profile_writer_mode_allowed": false,
+    "final_wwtsf_copy_allowed": false
+  }
+}

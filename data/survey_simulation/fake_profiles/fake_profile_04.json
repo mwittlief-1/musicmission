@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_04",
+  "display_label": "Country-Pop Listener",
+  "summary": "Leans toward country storytelling and crossover polish; open to pop songwriting when it still feels emotionally plainspoken.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "033",
+      "weight": 0.86,
+      "note": "country-pop crossover"
+    },
+    {
+      "archetype_id": "035",
+      "weight": 0.8,
+      "note": "modern mainstream country"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "036",
+      "weight": 0.57,
+      "note": "rootsy modern country"
+    },
+    {
+      "archetype_id": "091",
+      "weight": 0.45,
+      "note": "pop songwriting crossover"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "wedding_and_tailgate_rotation",
+    "display_name": "Wedding and tailgate rotation",
+    "note": "Social singalongs and real-life utility weigh heavily."
+  },
+  "false_nearby_lane": {
+    "lane_id": "bro_country_overlap",
+    "display_name": "Bro-country overlap",
+    "note": "A few party songs should not swallow the whole profile.",
+    "archetype_id": "035",
+    "family_number": 5
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "059",
+      "weight": 0.58,
+      "note": "post-punk distance does not land"
+    },
+    {
+      "archetype_id": "119",
+      "weight": 0.66,
+      "note": "hyperpop texture is not useful"
+    }
+  ],
+  "apple_payload_id": "apple_payload_04",
+  "hidden_reaction_corpus_id": "hidden_corpus_04"
+}

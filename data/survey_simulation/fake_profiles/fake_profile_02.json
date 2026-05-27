@@ -1,0 +1,56 @@
+{
+  "schema_version": "survey_simulation.fake_profile.v0.1",
+  "fake_profile_id": "fake_profile_02",
+  "display_label": "Pop / Radio Generalist",
+  "summary": "Recognizes the center of pop radio, follows big singles, and likes clean hooks more than scene boundaries.",
+  "primary_archetype_affinities": [
+    {
+      "archetype_id": "091",
+      "weight": 0.86,
+      "note": "mainstream persona pop"
+    },
+    {
+      "archetype_id": "090",
+      "weight": 0.78,
+      "note": "radio R&B/pop crossover"
+    }
+  ],
+  "secondary_archetype_affinities": [
+    {
+      "archetype_id": "093",
+      "weight": 0.66,
+      "note": "current bright pop"
+    },
+    {
+      "archetype_id": "088",
+      "weight": 0.44,
+      "note": "legacy pop showmanship"
+    }
+  ],
+  "context_lane": {
+    "lane_id": "gym_and_commute_radio",
+    "display_name": "Gym and commute radio",
+    "note": "The strongest signals are repeated singles and playlists."
+  },
+  "false_nearby_lane": {
+    "lane_id": "internet_edge_pop",
+    "display_name": "Internet edge pop",
+    "note": "Very online pop adjacency may be overread from a few playlist plays.",
+    "archetype_id": "119",
+    "family_number": 18
+  },
+  "hidden_anti_affinities": [
+    {
+      "archetype_id": "062",
+      "weight": 0.77,
+      "note": "metal reads as too aggressive"
+    },
+    {
+      "archetype_id": "059",
+      "weight": 0.55,
+      "note": "post-punk distance is not a default fit"
+    }
+  ],
+  "apple_payload_id": "apple_payload_02",
+  "hidden_reaction_corpus_id": "hidden_corpus_02"
+}

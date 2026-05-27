@@ -1,0 +1,114 @@
+{
+  "schema_version": "waymark.alpha_first_batch_route_readiness_report.v0.1",
+  "generated_at": "2026-05-23",
+  "status": "route_ready_candidate_pool_live_generation_passed",
+  "input_candidate_pool": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+  "canonical_resolution_report": "data/alpha_consumable_layer/alpha_v0/route_ready_candidate_pool_report_alpha_v0.json",
+  "core_import_target": "MusicAtlasController/Services/MissionLoader.swift",
+  "summary": {
+    "total_candidates_reviewed": 72,
+    "object_type_counts": {
+      "artist": 0,
+      "album": 22,
+      "track": 50,
+      "song_recording": 0
+    },
+    "pool_counts": {
+      "anchors": 12,
+      "bridges": 12,
+      "probes": 12,
+      "boundary_probes": 12,
+      "dead_end_checks": 12,
+      "waypoints": 12
+    },
+    "route_ready_track_or_album_candidates": 72
+  },
+  "checks": [
+    {
+      "check_id": "candidate_pool_loads",
+      "status": "pass",
+      "note": "Candidate pool JSON loads and has expected pool groups."
+    },
+    {
+      "check_id": "candidate_records_reviewed_and_eligible",
+      "status": "pass",
+      "note": "Sample records carry review_status=approved, eligible_for_supabase=true, and eligible_for_openai=true."
+    },
+    {
+      "check_id": "hidden_taste_truth_excluded",
+      "status": "pass",
+      "note": "Pool declares graph_metadata_taste_truth=false and atlas_promotion_created=false."
+    },
+    {
+      "check_id": "route_item_object_types_present",
+      "status": "pass",
+      "expected": [
+        "track",
+        "album"
+      ],
+      "observed": [
+        "track",
+        "album"
+      ],
+      "note": "Canonical/Candidate Pool replaced artist-level route candidates with concrete track/album candidates."
+    },
+    {
+      "check_id": "waypoint_candidates_available",
+      "status": "pass",
+      "note": "The waypoints pool contains 12 album candidates."
+    },
+    {
+      "check_id": "dead_end_check_candidates_available",
+      "status": "pass",
+      "note": "The dead_end_checks pool contains 12 candidates."
+    },
+    {
+      "check_id": "core_app_import_gate_candidate_pool_boundary",
+      "status": "pass",
+      "note": "Pool now has concrete route items, and Mission Generation produced an app_import_candidate that validates against rich mission schema and Core mission.v0.2."
+    }
+  ],
+  "live_generation_rerun": {
+    "path": "data/mission_generation/alpha_first_batch_route_ready_v0_1/public_profile_01_A3_Al1_S2/20260523T225550Z/",
+    "model": "gpt-5.4-mini",
+    "product_status": "app_import_candidate",
+    "rich_mission_schema_valid": true,
+    "automated_score": 1.0,
+    "score_pass_count": 24,
+    "score_partial_count": 0,
+    "score_fail_count": 0,
+    "core_mission_v0_2_valid": true,
+    "estimated_total_cost_usd": 0.178239,
+    "latency_seconds": 37.821,
+    "mission_title": "Start Here: Familiar Anchors, Nearby Roads",
+    "selected_route_items": [
+      "Led Zeppelin - Stairway to Heaven",
+      "Pink Floyd - Money",
+      "Dolly Parton - Jolene",
+      "Al Green - Let's Stay Together",
+      "Kraftwerk - Autobahn"
+    ]
+  },
+  "resolved_issue": {
+    "issue_id": "MGN-I004",
+    "owner_lane": "Canonical Music Graph / Candidate Pool",
+    "status": "closed_by_app_import_candidate_generation",
+    "evidence": [
+      "data/alpha_consumable_layer/alpha_v0/route_ready_candidate_pool_report_alpha_v0.json",
+      "node scripts/validate_alpha_consumable_layer_alpha_v0.mjs",
+      "data/mission_generation/alpha_first_batch_route_ready_v0_1/public_profile_01_A3_Al1_S2/20260523T225550Z/"
+    ]
+  },
+  "next_owner": "Core / Infrastructure",
+  "next_action": "Invoke the live generation/import path from the app session after Survey completion, using the same status-preserving app_import_candidate gate.",
+  "remaining_boundaries": {
+    "music_kit_catalog_resolution": "still required before playback",
+    "atlas_promotion": "not created by graph candidate pool or mission generation",
+    "survey_digest_source": "A3 fixture digest exists; real Alpha 1 fixed A4_Al2_S4 Survey Evidence Export remains pending from Survey lane for true new-user proof"
+  },
+  "existing_import_fixture": {
+    "path": "data/alpha_packets/golden_alpha_packet_v0_1/",
+    "status": "valid_import_pipeline_fixture",
+    "limitation": "Uses older concrete candidate pool and manual app-import review override; useful for integration only."
+  }
+}

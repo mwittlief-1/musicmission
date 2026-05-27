@@ -1,0 +1,1271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/mission_generation_digest_view_alpha_v0_1.schema.json",
+  "title": "MissionGenerationDigestView Alpha v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_type",
+    "schema_version",
+    "digest_id",
+    "created_at",
+    "source_context",
+    "compactness_policy",
+    "evidence_separation_policy",
+    "no_hidden_data_checks",
+    "evidence_ref_index",
+    "candidate_roles",
+    "recent_signals",
+    "contradictions",
+    "unresolved_questions",
+    "taste_feature_summaries",
+    "user_vocabulary_terms",
+    "anti_overfitting_rules",
+    "mission_relevant_constraints",
+    "consumer_contract"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "user_id"
+      ],
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    },
+    {
+      "required": [
+        "fixture_profile_id"
+      ],
+      "properties": {
+        "fixture_profile_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    }
+  ],
+  "properties": {
+    "record_type": {
+      "const": "mission_generation_digest_view"
+    },
+    "schema_version": {
+      "const": "alpha_v0_1"
+    },
+    "digest_id": {
+      "$ref": "#/$defs/id"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 160
+    },
+    "fixture_profile_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 160
+    },
+    "source_context": {
+      "$ref": "#/$defs/sourceContext"
+    },
+    "compactness_policy": {
+      "$ref": "#/$defs/compactnessPolicy"
+    },
+    "evidence_separation_policy": {
+      "$ref": "#/$defs/evidenceSeparationPolicy"
+    },
+    "no_hidden_data_checks": {
+      "$ref": "#/$defs/noHiddenDataChecks"
+    },
+    "evidence_ref_index": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 120,
+      "items": {
+        "$ref": "#/$defs/evidenceRefIndexItem"
+      }
+    },
+    "candidate_roles": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/candidateRoleSummary"
+      }
+    },
+    "recent_signals": {
+      "type": "array",
+      "maxItems": 36,
+      "items": {
+        "$ref": "#/$defs/recentSignalSummary"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/contradictionSummary"
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/unresolvedQuestion"
+      }
+    },
+    "taste_feature_summaries": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/tasteFeatureSummary"
+      }
+    },
+    "user_vocabulary_terms": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/vocabularyTerm"
+      }
+    },
+    "anti_overfitting_rules": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/ruleOrConstraint"
+      }
+    },
+    "mission_relevant_constraints": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/ruleOrConstraint"
+      }
+    },
+    "consumer_contract": {
+      "$ref": "#/$defs/consumerContract"
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 180,
+      "pattern": "^[A-Za-z0-9_:\\-.]+$"
+    },
+    "shortText": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 320
+    },
+    "evidenceRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 220
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confidence_score",
+        "confidence_band",
+        "confidence_basis",
+        "confidence_summary"
+      ],
+      "properties": {
+        "confidence_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence_band": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "confidence_basis": {
+          "enum": [
+            "direct_user_reaction",
+            "repeated_user_behavior",
+            "explicit_user_note",
+            "survey_pattern",
+            "mission_review",
+            "import_context",
+            "editorial_seed",
+            "generated_hypothesis",
+            "mixed"
+          ]
+        },
+        "confidence_summary": {
+          "$ref": "#/$defs/shortText"
+        }
+      }
+    },
+    "musicObjectRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_type",
+        "ref_source",
+        "display_name",
+        "credited_artist_name",
+        "canonical_artist_id",
+        "canonical_album_id",
+        "canonical_song_recording_id",
+        "composition_placeholder_id",
+        "user_music_object_id",
+        "external_catalog_refs",
+        "resolution_state",
+        "composition_policy_status"
+      ],
+      "properties": {
+        "object_type": {
+          "enum": [
+            "artist",
+            "album",
+            "song_recording",
+            "composition_placeholder"
+          ]
+        },
+        "ref_source": {
+          "enum": [
+            "canonical_graph",
+            "user_local",
+            "external_catalog",
+            "unresolved"
+          ]
+        },
+        "display_name": {
+          "$ref": "#/$defs/shortText"
+        },
+        "credited_artist_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 220
+        },
+        "canonical_artist_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "canonical_album_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "canonical_song_recording_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "composition_placeholder_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "user_music_object_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "external_catalog_refs": {
+          "type": "object",
+          "maxProperties": 6,
+          "additionalProperties": {
+            "type": "string",
+            "maxLength": 220
+          }
+        },
+        "resolution_state": {
+          "enum": [
+            "resolved",
+            "needs_resolution",
+            "intentionally_user_local"
+          ]
+        },
+        "composition_policy_status": {
+          "enum": [
+            "resolved",
+            "needs_review",
+            "not_applicable",
+            "no_review_needed",
+            "composition_first_required",
+            "split_confirmed"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ref_source": {
+                "const": "canonical_graph"
+              },
+              "object_type": {
+                "const": "artist"
+              }
+            },
+            "required": [
+              "ref_source",
+              "object_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "canonical_artist_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ref_source": {
+                "const": "canonical_graph"
+              },
+              "object_type": {
+                "const": "album"
+              }
+            },
+            "required": [
+              "ref_source",
+              "object_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "canonical_album_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ref_source": {
+                "const": "canonical_graph"
+              },
+              "object_type": {
+                "const": "song_recording"
+              }
+            },
+            "required": [
+              "ref_source",
+              "object_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "canonical_song_recording_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "object_type": {
+                "const": "composition_placeholder"
+              }
+            },
+            "required": [
+              "object_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "composition_placeholder_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ref_source": {
+                "const": "user_local"
+              }
+            },
+            "required": [
+              "ref_source"
+            ]
+          },
+          "then": {
+            "properties": {
+              "user_music_object_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ref_source": {
+                "const": "external_catalog"
+              }
+            },
+            "required": [
+              "ref_source"
+            ]
+          },
+          "then": {
+            "properties": {
+              "external_catalog_refs": {
+                "minProperties": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "ref_source": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "ref_source"
+            ]
+          },
+          "then": {
+            "properties": {
+              "resolution_state": {
+                "const": "needs_resolution"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "sourceContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_event_type",
+        "source_event_id",
+        "survey_session_id",
+        "source_payload_ref",
+        "source_payload_version",
+        "visible_packet_id",
+        "input_fingerprint",
+        "atlas_digest_ref",
+        "generated_from"
+      ],
+      "properties": {
+        "source_event_type": {
+          "const": "survey_completion"
+        },
+        "source_event_id": {
+          "$ref": "#/$defs/id"
+        },
+        "survey_session_id": {
+          "$ref": "#/$defs/id"
+        },
+        "source_payload_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 260
+        },
+        "source_payload_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "visible_packet_id": {
+          "$ref": "#/$defs/id"
+        },
+        "input_fingerprint": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "atlas_digest_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 220
+        },
+        "generated_from": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "enum": [
+              "survey_evidence_export",
+              "signal_ledger",
+              "atlas_role_assignments",
+              "possible_atlas_update_candidates"
+            ]
+          }
+        }
+      }
+    },
+    "compactnessPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_max_bytes",
+        "hard_review_threshold_bytes",
+        "max_candidate_roles",
+        "max_recent_signals",
+        "max_evidence_refs_per_item",
+        "raw_payload_required"
+      ],
+      "properties": {
+        "target_max_bytes": {
+          "type": "integer",
+          "minimum": 10000,
+          "maximum": 80000
+        },
+        "hard_review_threshold_bytes": {
+          "type": "integer",
+          "minimum": 10000,
+          "maximum": 120000
+        },
+        "max_candidate_roles": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 24
+        },
+        "max_recent_signals": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 36
+        },
+        "max_evidence_refs_per_item": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "raw_payload_required": {
+          "const": false
+        }
+      }
+    },
+    "evidenceSeparationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "atlas_node_role_truth_allowed",
+        "role_truth_source",
+        "survey_role_promotion_allowed",
+        "promoted_roles_allowed",
+        "canonical_graph_mutation_allowed",
+        "apple_exposure_as_taste_truth_allowed",
+        "dont_know_as_negative_allowed",
+        "signal_strength_and_confidence_separate"
+      ],
+      "properties": {
+        "atlas_node_role_truth_allowed": {
+          "const": false
+        },
+        "role_truth_source": {
+          "const": "atlas_role_assignment"
+        },
+        "survey_role_promotion_allowed": {
+          "const": false
+        },
+        "promoted_roles_allowed": {
+          "const": false
+        },
+        "canonical_graph_mutation_allowed": {
+          "const": false
+        },
+        "apple_exposure_as_taste_truth_allowed": {
+          "const": false
+        },
+        "dont_know_as_negative_allowed": {
+          "const": false
+        },
+        "signal_strength_and_confidence_separate": {
+          "const": true
+        }
+      }
+    },
+    "noHiddenDataChecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_survey_payload_included",
+        "survey_construction_internals_included",
+        "page_layout_mechanics_included",
+        "randomization_seed_included",
+        "generator_visible_inputs_included",
+        "raw_ranking_scores_included",
+        "profile_writer_output_included",
+        "hidden_simulator_truth_included",
+        "hidden_corpus_reactions_included",
+        "simulator_private_lookup_status_included",
+        "canonical_graph_mutation_instructions_included",
+        "all_evidence_refs_resolve_to_visible_survey_evidence"
+      ],
+      "properties": {
+        "raw_survey_payload_included": {
+          "const": false
+        },
+        "survey_construction_internals_included": {
+          "const": false
+        },
+        "page_layout_mechanics_included": {
+          "const": false
+        },
+        "randomization_seed_included": {
+          "const": false
+        },
+        "generator_visible_inputs_included": {
+          "const": false
+        },
+        "raw_ranking_scores_included": {
+          "const": false
+        },
+        "profile_writer_output_included": {
+          "const": false
+        },
+        "hidden_simulator_truth_included": {
+          "const": false
+        },
+        "hidden_corpus_reactions_included": {
+          "const": false
+        },
+        "simulator_private_lookup_status_included": {
+          "const": false
+        },
+        "canonical_graph_mutation_instructions_included": {
+          "const": false
+        },
+        "all_evidence_refs_resolve_to_visible_survey_evidence": {
+          "const": true
+        }
+      }
+    },
+    "evidenceRefIndexItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_ref",
+        "signal_id",
+        "response_id",
+        "survey_item_id",
+        "survey_session_id",
+        "page_id",
+        "stage",
+        "page_number",
+        "visible_packet_id",
+        "source_payload_ref"
+      ],
+      "properties": {
+        "evidence_ref": {
+          "$ref": "#/$defs/evidenceRef"
+        },
+        "signal_id": {
+          "$ref": "#/$defs/id"
+        },
+        "response_id": {
+          "$ref": "#/$defs/id"
+        },
+        "survey_item_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "survey_session_id": {
+          "$ref": "#/$defs/id"
+        },
+        "page_id": {
+          "$ref": "#/$defs/id"
+        },
+        "stage": {
+          "enum": [
+            "artist",
+            "album",
+            "song",
+            "survey",
+            "mission",
+            "review"
+          ]
+        },
+        "page_number": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "visible_packet_id": {
+          "$ref": "#/$defs/id"
+        },
+        "source_payload_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 260
+        }
+      }
+    },
+    "candidateRoleSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_role_id",
+        "atlas_node_id",
+        "atlas_role_assignment_id",
+        "role_truth_source",
+        "display_name",
+        "object_scope",
+        "music_object_ref",
+        "recommended_role",
+        "candidate_pool_behavior",
+        "status",
+        "review_state",
+        "promotion_state",
+        "confidence",
+        "evidence",
+        "scope_limit",
+        "mission_use",
+        "mission_generation_priority",
+        "summary"
+      ],
+      "properties": {
+        "candidate_role_id": {
+          "$ref": "#/$defs/id"
+        },
+        "atlas_node_id": {
+          "$ref": "#/$defs/id"
+        },
+        "atlas_role_assignment_id": {
+          "$ref": "#/$defs/id"
+        },
+        "role_truth_source": {
+          "const": "atlas_role_assignment"
+        },
+        "display_name": {
+          "$ref": "#/$defs/shortText"
+        },
+        "object_scope": {
+          "enum": [
+            "artist",
+            "album",
+            "song_recording",
+            "composition_placeholder",
+            "scene",
+            "era",
+            "genre_lane",
+            "taste_feature",
+            "cluster"
+          ]
+        },
+        "music_object_ref": {
+          "$ref": "#/$defs/musicObjectRef"
+        },
+        "recommended_role": {
+          "enum": [
+            "landmark",
+            "region",
+            "frontier",
+            "dead_end",
+            "waypoint",
+            "unknown",
+            "signal_only"
+          ]
+        },
+        "candidate_pool_behavior": {
+          "enum": [
+            "anchor",
+            "bridge",
+            "probe",
+            "risky_probe",
+            "waypoint",
+            "trap",
+            "exclude",
+            "unknown"
+          ]
+        },
+        "status": {
+          "enum": [
+            "active",
+            "provisional"
+          ]
+        },
+        "review_state": {
+          "enum": [
+            "unreviewed",
+            "needs_review",
+            "reviewed",
+            "rejected"
+          ]
+        },
+        "promotion_state": {
+          "enum": [
+            "proposed",
+            "candidate",
+            "blocked"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidenceSet"
+        },
+        "scope_limit": {
+          "enum": [
+            "artist_level_only",
+            "album_level_only",
+            "recording_level_only",
+            "cluster_level",
+            "taste_feature_level",
+            "needs_resolution",
+            "unknown"
+          ]
+        },
+        "mission_use": {
+          "enum": [
+            "anchor",
+            "bridge",
+            "probe",
+            "risky_probe",
+            "trap_check",
+            "waypoint_context",
+            "avoid_for_now",
+            "resolve_first"
+          ]
+        },
+        "mission_generation_priority": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "summary": {
+          "$ref": "#/$defs/shortText"
+        }
+      }
+    },
+    "evidenceSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_ids",
+        "evidence_refs",
+        "positive_evidence_refs",
+        "negative_evidence_refs",
+        "uncertainty_evidence_refs"
+      ],
+      "properties": {
+        "signal_ids": {
+          "$ref": "#/$defs/idArray"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "positive_evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "negative_evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "uncertainty_evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        }
+      }
+    },
+    "recentSignalSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_id",
+        "source",
+        "evidence_ref",
+        "response_id",
+        "display_name",
+        "object_type",
+        "raw_reaction",
+        "normalized_signal",
+        "signal_strength",
+        "interpretation_confidence",
+        "selected_tags",
+        "shown_unselected_tags",
+        "note_excerpt",
+        "apple_exposure_context"
+      ],
+      "properties": {
+        "signal_id": {
+          "$ref": "#/$defs/id"
+        },
+        "source": {
+          "const": "survey"
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/evidenceRef"
+        },
+        "response_id": {
+          "$ref": "#/$defs/id"
+        },
+        "display_name": {
+          "$ref": "#/$defs/shortText"
+        },
+        "object_type": {
+          "enum": [
+            "artist",
+            "album",
+            "song_recording",
+            "composition_placeholder"
+          ]
+        },
+        "raw_reaction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "normalized_signal": {
+          "enum": [
+            "positive_high",
+            "positive_medium",
+            "contextual_waypoint",
+            "negative_scope_carefully",
+            "familiarity_uncertainty",
+            "skip_or_no_signal"
+          ]
+        },
+        "signal_strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "interpretation_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "selected_tags": {
+          "$ref": "#/$defs/tagArray"
+        },
+        "shown_unselected_tags": {
+          "$ref": "#/$defs/tagArray"
+        },
+        "note_excerpt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 240
+        },
+        "apple_exposure_context": {
+          "$ref": "#/$defs/appleExposureContext"
+        }
+      }
+    },
+    "appleExposureContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "present",
+        "taste_truth",
+        "summary",
+        "evidence_refs"
+      ],
+      "properties": {
+        "present": {
+          "type": "boolean"
+        },
+        "taste_truth": {
+          "const": false
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 220
+        },
+        "evidence_refs": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "maxLength": 160
+          }
+        }
+      }
+    },
+    "contradictionSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contradiction_id",
+        "label",
+        "scope_warning",
+        "positive_evidence_refs",
+        "negative_evidence_refs",
+        "uncertainty_evidence_refs",
+        "recommended_test",
+        "review_required"
+      ],
+      "properties": {
+        "contradiction_id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "$ref": "#/$defs/shortText"
+        },
+        "scope_warning": {
+          "$ref": "#/$defs/shortText"
+        },
+        "positive_evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "negative_evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "uncertainty_evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "recommended_test": {
+          "$ref": "#/$defs/shortText"
+        },
+        "review_required": {
+          "const": true
+        }
+      }
+    },
+    "unresolvedQuestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question_id",
+        "question_type",
+        "question",
+        "evidence_refs",
+        "mission_hint",
+        "review_required"
+      ],
+      "properties": {
+        "question_id": {
+          "$ref": "#/$defs/id"
+        },
+        "question_type": {
+          "enum": [
+            "scope",
+            "recurrence",
+            "familiarity",
+            "contradiction",
+            "resolution",
+            "tag_gap"
+          ]
+        },
+        "question": {
+          "$ref": "#/$defs/shortText"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "mission_hint": {
+          "$ref": "#/$defs/shortText"
+        },
+        "review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tasteFeatureSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "taste_feature_id",
+        "label",
+        "state",
+        "confidence",
+        "evidence_refs",
+        "mission_use"
+      ],
+      "properties": {
+        "taste_feature_id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "$ref": "#/$defs/shortText"
+        },
+        "state": {
+          "enum": [
+            "candidate_affinity",
+            "candidate_aversion",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "mission_use": {
+          "$ref": "#/$defs/shortText"
+        }
+      }
+    },
+    "vocabularyTerm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "term_id",
+        "term",
+        "source",
+        "evidence_refs",
+        "use_in_mission_copy"
+      ],
+      "properties": {
+        "term_id": {
+          "$ref": "#/$defs/id"
+        },
+        "term": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "source": {
+          "enum": [
+            "selected_tag",
+            "user_note",
+            "mission_review",
+            "survey_label"
+          ]
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        },
+        "use_in_mission_copy": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ruleOrConstraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text",
+        "severity",
+        "evidence_refs"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "text": {
+          "$ref": "#/$defs/shortText"
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warning",
+            "blocker"
+          ]
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/evidenceRefArray"
+        }
+      }
+    },
+    "consumerContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intended_consumer",
+        "raw_survey_payload_required",
+        "mission_objects_created_here",
+        "atlas_promotion_allowed",
+        "canonical_graph_mutation_allowed",
+        "profile_writer_mode_allowed",
+        "final_wwtsf_copy_allowed"
+      ],
+      "properties": {
+        "intended_consumer": {
+          "const": "mission_generation"
+        },
+        "raw_survey_payload_required": {
+          "const": false
+        },
+        "mission_objects_created_here": {
+          "const": false
+        },
+        "atlas_promotion_allowed": {
+          "const": false
+        },
+        "canonical_graph_mutation_allowed": {
+          "const": false
+        },
+        "profile_writer_mode_allowed": {
+          "const": false
+        },
+        "final_wwtsf_copy_allowed": {
+          "const": false
+        }
+      }
+    },
+    "idArray": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "evidenceRefArray": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/evidenceRef"
+      }
+    },
+    "tagArray": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    }
+  }
+}

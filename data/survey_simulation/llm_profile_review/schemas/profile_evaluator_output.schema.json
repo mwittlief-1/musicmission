@@ -1,0 +1,347 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "waymark.profile_evaluator_output.v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evaluation_mode",
+    "profile_public_id",
+    "profile_writer_output_schema_version",
+    "overall_decision",
+    "overall_score_100",
+    "score_breakdown",
+    "red_flags",
+    "best_output_features",
+    "prompt_revision_recommendations",
+    "schema_revision_recommendations",
+    "pilot_readiness"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "waymark.profile_evaluator_output.v0.1"
+      ]
+    },
+    "evaluation_mode": {
+      "enum": [
+        "evidence_only",
+        "truth_scored_simulation"
+      ]
+    },
+    "profile_public_id": {
+      "type": "string"
+    },
+    "profile_writer_output_schema_version": {
+      "type": "string"
+    },
+    "overall_decision": {
+      "enum": [
+        "approve_for_pilot",
+        "approve_with_minor_revisions",
+        "revise_prompt",
+        "revise_schema",
+        "reject_output"
+      ]
+    },
+    "overall_score_100": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "score_breakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_compliance",
+        "blindness_and_forbidden_context",
+        "evidence_fidelity",
+        "object_specificity_and_scope_control",
+        "uncertainty_and_contradiction_handling",
+        "waymark_voice_and_atlas_fit",
+        "next_test_actionability",
+        "simulation_truth_alignment"
+      ],
+      "properties": {
+        "schema_compliance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_10",
+            "notes"
+          ],
+          "properties": {
+            "score_0_to_10": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "blindness_and_forbidden_context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_15",
+            "notes",
+            "suspected_leakage",
+            "leakage_examples"
+          ],
+          "properties": {
+            "score_0_to_15": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "notes": {
+              "type": "string"
+            },
+            "suspected_leakage": {
+              "type": "boolean"
+            },
+            "leakage_examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "evidence_fidelity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_20",
+            "notes",
+            "unsupported_claims"
+          ],
+          "properties": {
+            "score_0_to_20": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 20
+            },
+            "notes": {
+              "type": "string"
+            },
+            "unsupported_claims": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "object_specificity_and_scope_control": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_15",
+            "notes",
+            "overbroad_claims"
+          ],
+          "properties": {
+            "score_0_to_15": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 15
+            },
+            "notes": {
+              "type": "string"
+            },
+            "overbroad_claims": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "uncertainty_and_contradiction_handling": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_10",
+            "notes"
+          ],
+          "properties": {
+            "score_0_to_10": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "waymark_voice_and_atlas_fit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_10",
+            "notes"
+          ],
+          "properties": {
+            "score_0_to_10": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "next_test_actionability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_10",
+            "notes"
+          ],
+          "properties": {
+            "score_0_to_10": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "simulation_truth_alignment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score_0_to_10_or_null",
+            "notes",
+            "accurate_inferences",
+            "missed_truth_signals",
+            "false_positive_inferences"
+          ],
+          "properties": {
+            "score_0_to_10_or_null": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10
+            },
+            "notes": {
+              "type": "string"
+            },
+            "accurate_inferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "missed_truth_signals": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "false_positive_inferences": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "red_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "severity",
+          "category",
+          "description",
+          "evidence_or_output_ref",
+          "recommended_fix"
+        ],
+        "properties": {
+          "severity": {
+            "enum": [
+              "minor",
+              "major",
+              "blocking"
+            ]
+          },
+          "category": {
+            "enum": [
+              "schema",
+              "hidden_context",
+              "overclaim",
+              "unsupported_claim",
+              "poor_voice",
+              "weak_actionability",
+              "truth_miss"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "evidence_or_output_ref": {
+            "type": "string"
+          },
+          "recommended_fix": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "best_output_features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prompt_revision_recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schema_revision_recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pilot_readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ready_for_single_packet_pilot",
+        "ready_for_batch_pilot",
+        "required_before_batch"
+      ],
+      "properties": {
+        "ready_for_single_packet_pilot": {
+          "type": "boolean"
+        },
+        "ready_for_batch_pilot": {
+          "type": "boolean"
+        },
+        "required_before_batch": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
