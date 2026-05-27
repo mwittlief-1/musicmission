@@ -15,6 +15,9 @@ These paths are repo source-of-truth and should be tracked when changed intentio
 | `data/atlas_schema/atlas_schema_contract_v0_1.*` | Atlas schema source contract. |
 | `data/atlas_schema/atlas_delta_v0_1.*` | Atlas delta source contract. |
 | `data/atlas_schema/alpha_hardening/` | Active alpha hardening contracts and acceptance material. |
+| `data/atlas_explainer/atlas_explainer_render_pack_runtime_schema_v0_1_1.*` | Runtime schema contract for app-facing Atlas explainer render packs. |
+| `data/atlas_explainer/source_recovery_research_notes/` | Curated source-recovery provenance used by the Atlas explainer builder chain. |
+| `data/atlas_explainer/AtlasExplainerPack_v0_2_3_RenderHardened/` | Latest alpha render-hardened Atlas explainer candidate handoff. Track as first-class product data while PM approval is pending. |
 | `data/alpha_consumable_layer/alpha_v0/*contract*`, `*policy*`, `*guardrail*`, `*manifest*`, `*.schema.json`, and paired `*.md` contract docs | Alpha graph surface contracts, guardrails, resolver policy, and manifests. |
 | `data/canonical_graph/family_*/` | Canonical graph family source material. |
 | `data/canonical_graph/current/` | Active Canonical Graph v1 source-of-truth corpus for mission engine, tagging, linking, Atlas targets, Apple ID resolution, and album sidecar planning. |
@@ -33,6 +36,7 @@ These paths are deterministic fixtures or golden packets. Track them when they a
 | `data/missions/` | App/test mission fixtures. |
 | `data/alpha_packets/golden_alpha_packet_v0_1/` | Golden mission-generation/app-import packet. |
 | `data/atlas_schema/examples/` | Atlas contract examples. |
+| `data/atlas_explainer/render_pack_v0_1_hardened/` | Hardened Atlas explainer loader fixture used by validation tooling and loader tech review. |
 | `data/canonical_graph/import_dry_run/` | Generated dry-run output promoted as a read-only fixture for legacy survey simulation and review tooling. |
 | `data/canonical_graph/normalization_pass_2/` | Generated normalization output promoted as active alpha survey/app-resource input. |
 | `data/closed_loop_simulation/*/closed_loop_manifest.json`, `*schema*.json`, and `closed_loop_acceptance_report.md` | Promoted closed-loop simulation contracts and acceptance summaries. Raw profile outputs remain generated evidence. |
@@ -58,6 +62,8 @@ These paths are generated evidence or historical review material. Do not treat t
 | `data/canonical_graph/depth_hardening_v0_2/` | Historical generated hardening pass that produced `current/`. Ignored by default to avoid tracking redundant pass C/pass D bulk. |
 | `data/closed_loop_simulation/**/profile_*/` | Raw per-profile generated closed-loop API outputs, hidden evaluator traces, requests, responses, and qualitative profile reviews. Ignored by default; promote only selected fixtures. |
 | `data/atlas_explainer/**/*.zip` and Finder duplicate `* 2*` paths | Generated packet archives and local duplicate expansions. Ignored by default. |
+| `data/atlas_explainer/AtlasExplainerPack_v0_2_Checkpoint/`, `AtlasExplainerPack_v0_2_All_Archetypes/`, `AtlasExplainerPack_v0_2_1_SourceDeepened/`, and `AtlasExplainerPack_v0_2_2_SourceRecovery/` | Rebuildable intermediate Atlas explainer packages. Ignored by default; promote only if an older package becomes an active handoff or required fixture. |
+| `data/atlas_explainer/**/indexes/schema_validation_report_*.md` | Generated local validation logs that embed absolute machine paths. Re-run validation locally when needed. |
 | `data/mission_generation/**/[0-9][0-9][0-9][0-9]*Z*/` and timestamped request/response attempts | Generated run evidence. |
 | `data/mission_generation/alpha_first_batch_route_ready_v0_1/` | Generated first-batch route-ready attempts, except promoted contracts/manifests. |
 | `data/survey_simulation/runs/` | Generated simulator runs. |

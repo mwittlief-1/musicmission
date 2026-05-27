@@ -1,0 +1,1602 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_06_archetype_044_modern-r-and-b-alt-r-and-b-bedroom-r-and-b_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_6/normalized_family_6.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 6,
+    "family_slug": "soul-funk-disco-r-and-b-foundations",
+    "family_name": "Soul, Funk, Disco, R&B Foundations",
+    "archetype_id": "044",
+    "archetype_slug": "modern-r-and-b-alt-r-and-b-bedroom-r-and-b",
+    "canonical_graph_ref": "family_06/archetype_044",
+    "existing_graph_label_name": "Modern R&B / Alt-R&B / Bedroom R&B",
+    "editorial_display_title": "Modern R&B / Alt-R&B / Bedroom R&B",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:frank-ocean",
+        "object_id": "frank-ocean",
+        "display_label": "Frank Ocean",
+        "source_membership_id": "family-6-artist-044-frank-ocean",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central modern/alternative R&B album and songwriting anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sza",
+        "object_id": "sza",
+        "display_label": "SZA",
+        "source_membership_id": "family-6-artist-044-sza",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Diaristic modern R&B anchor with mass streaming-era recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-weeknd",
+        "object_id": "the-weeknd",
+        "display_label": "The Weeknd",
+        "source_membership_id": "family-6-artist-044-the-weeknd",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dark alt-R&B origin point that scales into global pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:solange",
+        "object_id": "solange",
+        "display_label": "Solange",
+        "source_membership_id": "family-6-artist-044-solange",
+        "roles": [
+          "anchor",
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Modern art-R&B, Black interiority, and album-world bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:miguel",
+        "object_id": "miguel",
+        "display_label": "Miguel",
+        "source_membership_id": "family-6-artist-044-miguel",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Guitar, psychedelic, and sensual modern R&B crossover gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:beyonce",
+        "object_id": "beyonce",
+        "display_label": "Beyonce",
+        "source_membership_id": "family-6-artist-044-beyonce",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Modern R&B album-era expansion and pop-superstar bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:h-e-r",
+        "object_id": "h-e-r",
+        "display_label": "H.E.R.",
+        "source_membership_id": "family-6-artist-044-h-e-r",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Contemporary guitar-forward R&B and awards-era survey bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:usher",
+        "object_id": "usher",
+        "display_label": "Usher",
+        "source_membership_id": "family-6-artist-044-usher",
+        "roles": [
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Continuity bridge from 1990s/2000s R&B pop into modern R&B listening.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:summer-walker",
+        "object_id": "summer-walker",
+        "display_label": "Summer Walker",
+        "source_membership_id": "family-6-artist-044-summer-walker",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming-era relationship R&B anchor for modern survey coverage.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:brent-faiyaz",
+        "object_id": "brent-faiyaz",
+        "display_label": "Brent Faiyaz",
+        "source_membership_id": "family-6-artist-044-brent-faiyaz",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Bedroom/alt-R&B male-vocal lane with high current relevance.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:tinashe",
+        "object_id": "tinashe",
+        "display_label": "Tinashe",
+        "source_membership_id": "family-6-artist-044-tinashe",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Independent-leaning R&B-pop bridge with alt-R&B credibility and hit recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bryson-tiller",
+        "object_id": "bryson-tiller",
+        "display_label": "Bryson Tiller",
+        "source_membership_id": "family-6-artist-044-bryson-tiller",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Trap-soul gateway with strong song-first recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:frank-ocean-channel-orange",
+        "object_id": "frank-ocean-channel-orange",
+        "display_label": "Channel Orange - Frank Ocean",
+        "source_membership_id": "family-6-album-044-frank-ocean-channel-orange",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Alt-R&B's major album-era breakthrough.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:frank-ocean-blonde",
+        "object_id": "frank-ocean-blonde",
+        "display_label": "Blonde - Frank Ocean",
+        "source_membership_id": "family-6-album-044-frank-ocean-blonde",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "deepening"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Minimal, genre-resistant modern R&B album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sza-ctrl",
+        "object_id": "sza-ctrl",
+        "display_label": "Ctrl - SZA",
+        "source_membership_id": "family-6-album-044-sza-ctrl",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Diaristic modern R&B album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-weeknd-house-of-balloons",
+        "object_id": "the-weeknd-house-of-balloons",
+        "display_label": "House of Balloons - The Weeknd",
+        "source_membership_id": "family-6-album-044-the-weeknd-house-of-balloons",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Mixtape-era dark alt-R&B origin object; normalized to ep because importer lacks mixtape type.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:solange-a-seat-at-the-table",
+        "object_id": "solange-a-seat-at-the-table",
+        "display_label": "A Seat at the Table - Solange",
+        "source_membership_id": "family-6-album-044-solange-a-seat-at-the-table",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Modern art-R&B album-world anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sza-sos",
+        "object_id": "sza-sos",
+        "display_label": "SOS - SZA",
+        "source_membership_id": "family-6-album-044-sza-sos",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming-era modern R&B/pop-rap boundary album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:miguel-kaleidoscope-dream",
+        "object_id": "miguel-kaleidoscope-dream",
+        "display_label": "Kaleidoscope Dream - Miguel",
+        "source_membership_id": "family-6-album-044-miguel-kaleidoscope-dream",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Miguel's strongest modern R&B/psych-soul gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-weeknd-trilogy",
+        "object_id": "the-weeknd-trilogy",
+        "display_label": "Trilogy - The Weeknd",
+        "source_membership_id": "family-6-album-044-the-weeknd-trilogy",
+        "roles": [
+          "compilation_gateway",
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Practical compilation gateway for early Weeknd mixtape material.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:summer-walker-over-it",
+        "object_id": "summer-walker-over-it",
+        "display_label": "Over It - Summer Walker",
+        "source_membership_id": "family-6-album-044-summer-walker-over-it",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming-era relationship R&B album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:brent-faiyaz-fuck-the-world",
+        "object_id": "brent-faiyaz-fuck-the-world",
+        "display_label": "Fuck the World - Brent Faiyaz",
+        "source_membership_id": "family-6-album-044-brent-faiyaz-fuck-the-world",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Bedroom/alt-R&B EP gateway for Brent Faiyaz.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:frank-ocean-thinkin-bout-you",
+        "object_id": "frank-ocean-thinkin-bout-you",
+        "display_label": "Thinkin Bout You - Frank Ocean",
+        "source_membership_id": "family-6-song-044-frank-ocean-thinkin-bout-you",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Frank Ocean mass-recognition modern R&B gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:frank-ocean-novacane",
+        "object_id": "frank-ocean-novacane",
+        "display_label": "Novacane - Frank Ocean",
+        "source_membership_id": "family-6-song-044-frank-ocean-novacane",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Story-first alt-R&B early Frank Ocean gateway; supported by F7 salvage context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-weeknd-wicked-games",
+        "object_id": "the-weeknd-wicked-games",
+        "display_label": "Wicked Games - The Weeknd",
+        "source_membership_id": "family-6-song-044-the-weeknd-wicked-games",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dark alt-R&B early Weeknd gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sza-the-weekend",
+        "object_id": "sza-the-weekend",
+        "display_label": "The Weekend - SZA",
+        "source_membership_id": "family-6-song-044-sza-the-weekend",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Diaristic modern R&B song-first anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:miguel-adorn",
+        "object_id": "miguel-adorn",
+        "display_label": "Adorn - Miguel",
+        "source_membership_id": "family-6-song-044-miguel-adorn",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Miguel's modern R&B signature gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:solange-cranes-in-the-sky",
+        "object_id": "solange-cranes-in-the-sky",
+        "display_label": "Cranes in the Sky - Solange",
+        "source_membership_id": "family-6-song-044-solange-cranes-in-the-sky",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Art-R&B and healing/interiority anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-weeknd-the-hills",
+        "object_id": "the-weeknd-the-hills",
+        "display_label": "The Hills - The Weeknd",
+        "source_membership_id": "family-6-song-044-the-weeknd-the-hills",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dark R&B scaled into pop monoculture.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sza-kill-bill",
+        "object_id": "sza-kill-bill",
+        "display_label": "Kill Bill - SZA",
+        "source_membership_id": "family-6-song-044-sza-kill-bill",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass streaming-era SZA object and pop/R&B boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:frank-ocean-pyramids",
+        "object_id": "frank-ocean-pyramids",
+        "display_label": "Pyramids - Frank Ocean",
+        "source_membership_id": "family-6-song-044-frank-ocean-pyramids",
+        "roles": [
+          "song_first",
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Suite-like alt-R&B album-world test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sza-feat-travis-scott-love-galore",
+        "object_id": "sza-feat-travis-scott-love-galore",
+        "display_label": "Love Galore - SZA feat. Travis Scott",
+        "source_membership_id": "family-6-song-044-sza-feat-travis-scott-love-galore",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Modern R&B/rap-adjacent SZA gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sza-good-days",
+        "object_id": "sza-good-days",
+        "display_label": "Good Days - SZA",
+        "source_membership_id": "family-6-song-044-sza-good-days",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dreamy modern R&B streaming-era gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-weeknd-earned-it",
+        "object_id": "the-weeknd-earned-it",
+        "display_label": "Earned It - The Weeknd",
+        "source_membership_id": "family-6-song-044-the-weeknd-earned-it",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Soundtrack-adult R&B bridge for The Weeknd.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:frank-ocean-pink-and-white",
+        "object_id": "frank-ocean-pink-and-white",
+        "display_label": "Pink + White - Frank Ocean",
+        "source_membership_id": "family-6-song-044-frank-ocean-pink-and-white",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blonde-era minimal/nostalgic R&B gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:solange-losing-you",
+        "object_id": "solange-losing-you",
+        "display_label": "Losing You - Solange",
+        "source_membership_id": "family-6-song-044-solange-losing-you",
+        "roles": [
+          "song_first",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Indie-dance/R&B bridge for Solange.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f6-artist-frank-ocean-044",
+        "candidate_id": "survey-f6-artist-frank-ocean-044",
+        "object_type": "artist",
+        "display_label": "Frank Ocean",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-miguel-044",
+        "candidate_id": "survey-f6-artist-miguel-044",
+        "object_type": "artist",
+        "display_label": "Miguel",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-sza-044",
+        "candidate_id": "survey-f6-artist-sza-044",
+        "object_type": "artist",
+        "display_label": "SZA",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-solange-044",
+        "candidate_id": "survey-f6-artist-solange-044",
+        "object_type": "artist",
+        "display_label": "Solange",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-the-weeknd-044",
+        "candidate_id": "survey-f6-artist-the-weeknd-044",
+        "object_type": "artist",
+        "display_label": "The Weeknd",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-h-e-r-044",
+        "candidate_id": "survey-f6-artist-h-e-r-044",
+        "object_type": "artist",
+        "display_label": "H.E.R.",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-summer-walker-044",
+        "candidate_id": "survey-f6-artist-summer-walker-044",
+        "object_type": "artist",
+        "display_label": "Summer Walker",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-brent-faiyaz-044",
+        "candidate_id": "survey-f6-artist-brent-faiyaz-044",
+        "object_type": "artist",
+        "display_label": "Brent Faiyaz",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-bryson-tiller-044",
+        "candidate_id": "survey-f6-artist-bryson-tiller-044",
+        "object_type": "artist",
+        "display_label": "Bryson Tiller",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-daniel-caesar-044",
+        "candidate_id": "survey-f6-artist-daniel-caesar-044",
+        "object_type": "artist",
+        "display_label": "Daniel Caesar",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-tinashe-044",
+        "candidate_id": "survey-f6-artist-tinashe-044",
+        "object_type": "artist",
+        "display_label": "Tinashe",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-6lack-044",
+        "candidate_id": "survey-f6-artist-6lack-044",
+        "object_type": "artist",
+        "display_label": "6LACK",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-kelela-044",
+        "candidate_id": "survey-f6-artist-kelela-044",
+        "object_type": "artist",
+        "display_label": "Kelela",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-fka-twigs-044",
+        "candidate_id": "survey-f6-artist-fka-twigs-044",
+        "object_type": "artist",
+        "display_label": "FKA twigs",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-partynextdoor-044",
+        "candidate_id": "survey-f6-artist-partynextdoor-044",
+        "object_type": "artist",
+        "display_label": "PARTYNEXTDOOR",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-solange-a-seat-at-the-table-044",
+        "candidate_id": "survey-f6-album-solange-a-seat-at-the-table-044",
+        "object_type": "album",
+        "display_label": "A Seat at the Table",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-frank-ocean-blonde-044",
+        "candidate_id": "survey-f6-album-frank-ocean-blonde-044",
+        "object_type": "album",
+        "display_label": "Blonde",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-frank-ocean-channel-orange-044",
+        "candidate_id": "survey-f6-album-frank-ocean-channel-orange-044",
+        "object_type": "album",
+        "display_label": "Channel Orange",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-sza-ctrl-044",
+        "candidate_id": "survey-f6-album-sza-ctrl-044",
+        "object_type": "album",
+        "display_label": "Ctrl",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-the-weeknd-house-of-balloons-044",
+        "candidate_id": "survey-f6-album-the-weeknd-house-of-balloons-044",
+        "object_type": "album",
+        "display_label": "House of Balloons",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f6-artist-fka-twigs-044",
+        "question_id": "boundary-survey-f6-artist-fka-twigs-044",
+        "display_label": "FKA twigs",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f6-album-the-weeknd-house-of-balloons-044",
+        "question_id": "boundary-survey-f6-album-the-weeknd-house-of-balloons-044",
+        "display_label": "House of Balloons",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f6-album-kelela-take-me-apart-044",
+        "question_id": "boundary-survey-f6-album-kelela-take-me-apart-044",
+        "display_label": "Take Me Apart",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f6-song_recording-the-weeknd-house-of-balloons-glass-table-girls-044",
+        "question_id": "boundary-survey-f6-song_recording-the-weeknd-house-of-balloons-glass-table-girls-044",
+        "display_label": "House of Balloons / Glass Table Girls",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f6-song_recording-fka-twigs-two-weeks-044",
+        "question_id": "boundary-survey-f6-song_recording-fka-twigs-two-weeks-044",
+        "display_label": "Two Weeks",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f6-artist-fka-twigs-044",
+        "probe_id": "probe-survey-f6-artist-fka-twigs-044",
+        "entity_type": "artist",
+        "display_label": "FKA twigs",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f6-album-the-weeknd-house-of-balloons-044",
+        "probe_id": "probe-survey-f6-album-the-weeknd-house-of-balloons-044",
+        "entity_type": "album",
+        "display_label": "House of Balloons",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f6-album-kelela-take-me-apart-044",
+        "probe_id": "probe-survey-f6-album-kelela-take-me-apart-044",
+        "entity_type": "album",
+        "display_label": "Take Me Apart",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f6-song_recording-the-weeknd-house-of-balloons-glass-table-girls-044",
+        "probe_id": "probe-survey-f6-song_recording-the-weeknd-house-of-balloons-glass-table-girls-044",
+        "entity_type": "song_recording",
+        "display_label": "House of Balloons / Glass Table Girls",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f6-song_recording-fka-twigs-two-weeks-044",
+        "probe_id": "probe-survey-f6-song_recording-fka-twigs-two-weeks-044",
+        "entity_type": "song_recording",
+        "display_label": "Two Weeks",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_06/archetype_043"
+    ],
+    "before_archetype_refs": [
+      "family_06/archetype_043"
+    ],
+    "after_archetype_refs": []
+  },
+  "source_references": {
+    "canonical_graph_family_6": {
+      "title": "Normalized canonical graph export, Family 6",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_6/normalized_family_6.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "044_allmusic_alternative_rb": {
+      "title": "Alternative R&B",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/alternative-r-b-ma0000013375",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for alternative R&B's experimental, atmospheric post-2000s sound.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for alternative R&B's experimental, atmospheric post-2000s sound."
+    },
+    "044_grammy_frank_ocean": {
+      "title": "Frank Ocean",
+      "publisher": "The Recording Academy",
+      "url": "https://www.grammy.com/artists/frank-ocean/15735",
+      "source_type": "artist_reference",
+      "audit_use": "Supports Ocean as a central modern/alt-R&B auteur.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Ocean as a central modern/alt-R&B auteur."
+    },
+    "044_grammy_sza": {
+      "title": "SZA",
+      "publisher": "The Recording Academy",
+      "url": "https://www.grammy.com/artists/sza/188626",
+      "source_type": "artist_reference",
+      "audit_use": "Supports SZA as a major contemporary R&B and alt-R&B voice.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports SZA as a major contemporary R&B and alt-R&B voice."
+    },
+    "britannica_rhythm_and_blues": {
+      "title": "Rhythm and blues",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rhythm-and-blues",
+      "source_type": "reference",
+      "audit_use": "R&B labels, crossover, and transitional figures.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "R&B labels, crossover, and transitional figures."
+    },
+    "rockhall_prince": {
+      "title": "Prince",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/prince/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop, funk, rock, R&B, authorship, and persona innovation.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Pop, funk, rock, R&B, authorship, and persona innovation."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "npr_tiny_desk_discovery": {
+      "title": "Tiny Desk",
+      "publisher": "NPR Music",
+      "url": "https://www.npr.org/series/tiny-desk-concerts/",
+      "source_type": "public_media_archive",
+      "audit_use": "Public-media performance archive for contemporary discovery and cross-genre visibility.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "044-c01",
+      "claim_text": "Modern alt-R&B loosens traditional R&B forms with atmospheric production, diaristic writing, indie/electronic textures, and blurred rap-pop boundaries.",
+      "source_ref_ids": [
+        "044_allmusic_alternative_rb",
+        "044_grammy_frank_ocean",
+        "044_grammy_sza"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_06/archetype_044",
+        "artist:frank-ocean",
+        "artist:sza",
+        "artist:the-weeknd"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "044-c02",
+      "claim_text": "Frank Ocean anchors the auteur side of the lane, where narrative fragments, vocal intimacy, and genre-fluid album structure carry the emotional center.",
+      "source_ref_ids": [
+        "044_grammy_frank_ocean",
+        "044_allmusic_alternative_rb"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:frank-ocean",
+        "album:frank-ocean-channel-orange",
+        "album:frank-ocean-blonde",
+        "song_recording:frank-ocean-thinkin-bout-you"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "044-c03",
+      "claim_text": "SZA represents the contemporary confessional side, with conversational melody, unstable relationships, and R&B phrasing placed in modern production space.",
+      "source_ref_ids": [
+        "044_grammy_sza",
+        "044_allmusic_alternative_rb"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "artist:sza",
+        "family_06/archetype_044"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "044-c04",
+      "claim_text": "The Weeknd and Solange show the lane's range from nocturnal electronic pop-R&B to artful, politically aware soul minimalism.",
+      "source_ref_ids": [
+        "044_allmusic_alternative_rb",
+        "044_grammy_sza"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "artist:the-weeknd",
+        "artist:solange",
+        "song_recording:frank-ocean-novacane"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "044-modern_r_and_b_alt_r_and_b_bedroom_r_and_b-boundary",
+      "claim_text": "Modern R&B / Alt-R&B / Bedroom R&B's boundary is clearest when hazy synths and diaristic lyrics appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "044_allmusic_alternative_rb",
+        "044_grammy_frank_ocean"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_06/archetype_044",
+        "artist:frank-ocean",
+        "artist:sza"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "044-modern_r_and_b_alt_r_and_b_bedroom_r_and_b-examples",
+      "claim_text": "Frank Ocean, SZA, Channel Orange - Frank Ocean gives Modern R&B / Alt-R&B / Bedroom R&B concrete anchors because the examples expose elastic vocal phrasing inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "044_grammy_frank_ocean",
+        "044_grammy_sza"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_06/archetype_044",
+        "artist:frank-ocean",
+        "artist:sza"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "044-modern_r_and_b_alt_r_and_b_bedroom_r_and_b-distinct",
+      "claim_text": "The key musical distinction in Modern R&B / Alt-R&B / Bedroom R&B is The track may feel sparse, fractured, or suspended, but the vocal emotion remains R&B-rooted, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "044_allmusic_alternative_rb",
+        "044_grammy_sza"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_06/archetype_044",
+        "artist:frank-ocean",
+        "artist:sza"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Post-2010 R&B that sounds intimate, atmospheric, genre-fluid, and internet-era personal.",
+    "history_capsule": "Alt-R&B grew as artists pulled R&B into indie, electronic, hip-hop, and bedroom-production spaces, making mood and self-narration central.",
+    "why_it_mattered": "It reset R&B prestige for the streaming era and influenced pop's sound of vulnerability and atmosphere.",
+    "what_made_it_distinct": "The track may feel sparse, fractured, or suspended, but the vocal emotion remains R&B-rooted.",
+    "what_to_listen_for": [
+      "hazy synths",
+      "diaristic lyrics",
+      "elastic vocal phrasing",
+      "minimal drums",
+      "genre-blurred structure"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:frank-ocean",
+        "example_type": "artist",
+        "display_label": "Frank Ocean",
+        "why_this_example_matters": "Frank Ocean anchors Modern R&B / Alt-R&B / Bedroom R&B by making gospel-shaped vocal force and bass-and-drum groove easier to hear.",
+        "what_to_listen_for": [
+          "hazy synths",
+          "diaristic lyrics"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:sza",
+        "example_type": "artist",
+        "display_label": "SZA",
+        "why_this_example_matters": "SZA anchors Modern R&B / Alt-R&B / Bedroom R&B by making bass-and-drum groove and horns or strings around the vocal easier to hear.",
+        "what_to_listen_for": [
+          "diaristic lyrics",
+          "elastic vocal phrasing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:frank-ocean-channel-orange",
+        "example_type": "album",
+        "display_label": "Channel Orange - Frank Ocean",
+        "why_this_example_matters": "Channel Orange - Frank Ocean anchors Modern R&B / Alt-R&B / Bedroom R&B by making horns or strings around the vocal and syncopated rhythm easier to hear.",
+        "what_to_listen_for": [
+          "elastic vocal phrasing",
+          "minimal drums"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:frank-ocean-blonde",
+        "example_type": "album",
+        "display_label": "Blonde - Frank Ocean",
+        "why_this_example_matters": "Blonde - Frank Ocean anchors Modern R&B / Alt-R&B / Bedroom R&B by making syncopated rhythm and dancefloor or late-night mood control easier to hear.",
+        "what_to_listen_for": [
+          "minimal drums",
+          "genre-blurred structure"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:frank-ocean-thinkin-bout-you",
+        "example_type": "song_recording",
+        "display_label": "Thinkin Bout You - Frank Ocean",
+        "why_this_example_matters": "Thinkin Bout You - Frank Ocean anchors Modern R&B / Alt-R&B / Bedroom R&B by making dancefloor or late-night mood control and gospel-shaped vocal force easier to hear.",
+        "what_to_listen_for": [
+          "genre-blurred structure"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:frank-ocean-novacane",
+        "example_type": "song_recording",
+        "display_label": "Novacane - Frank Ocean",
+        "why_this_example_matters": "Novacane - Frank Ocean anchors Modern R&B / Alt-R&B / Bedroom R&B by making gospel-shaped vocal force and bass-and-drum groove easier to hear.",
+        "what_to_listen_for": [
+          "hazy synths",
+          "diaristic lyrics"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_06/archetype_043"
+      ],
+      "after": [],
+      "related": [
+        "family_06/archetype_043"
+      ],
+      "copy": "Use Modern R&B / Alt-R&B / Bedroom R&B as a contextual road inside Soul, Funk, Disco, R&B Foundations; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "044-dyk-1",
+        "copy": "Alt-R&B often treats silence and atmosphere as part of the hook.",
+        "source_ref_ids": [
+          "044_allmusic_alternative_rb",
+          "044_grammy_frank_ocean",
+          "044_grammy_sza"
+        ]
+      },
+      {
+        "card_id": "044-dyk-2",
+        "copy": "Many anchors cross between R&B, indie, electronic, and rap audiences.",
+        "source_ref_ids": [
+          "044_grammy_frank_ocean",
+          "044_allmusic_alternative_rb"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether modern r&b / alt-r&b / bedroom r&b is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Post-2010 R&B that sounds intimate, atmospheric, genre-fluid, and internet-era personal.",
+      "It reset R&B prestige for the streaming era and influenced pop's sound of vulnerability and atmosphere.",
+      "The track may feel sparse, fractured, or suspended, but the vocal emotion remains R&B-rooted."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use modern release date alone; the alt-R&B signal is in texture, authorship, and genre blur.",
+    "personalization_hooks": [
+      {
+        "hook_id": "044-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[044]",
+          "atlas_state.family_affinity[6]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[044] >= 0.65 || atlas_state.family_affinity[6] >= 0.65",
+        "copy_variant": "Your Atlas signals make Modern R&B / Alt-R&B / Bedroom R&B useful as a contextual landmark.",
+        "fallback_copy": "Use Modern R&B / Alt-R&B / Bedroom R&B as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "044-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_06/archetype_044 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_06/archetype_044",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Modern R&B / Alt-R&B / Bedroom R&B before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "044-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_06/archetype_044 || atlas_state.boundary_question_results has boundary_negative for family_06/archetype_044",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Modern R&B / Alt-R&B / Bedroom R&B.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "044-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_06/archetype_044 || atlas_state.related_mission_ids references family_06/archetype_044",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "044-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_06/archetype_044 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_06/archetype_044 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_06/archetype_044",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Modern R&B / Alt-R&B / Bedroom R&B.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_6": {
+        "title": "Normalized canonical graph export, Family 6",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_6/normalized_family_6.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "044_allmusic_alternative_rb": {
+        "title": "Alternative R&B",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/alternative-r-b-ma0000013375",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for alternative R&B's experimental, atmospheric post-2000s sound.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for alternative R&B's experimental, atmospheric post-2000s sound."
+      },
+      "044_grammy_frank_ocean": {
+        "title": "Frank Ocean",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/frank-ocean/15735",
+        "source_type": "artist_reference",
+        "audit_use": "Supports Ocean as a central modern/alt-R&B auteur.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ocean as a central modern/alt-R&B auteur."
+      },
+      "044_grammy_sza": {
+        "title": "SZA",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/sza/188626",
+        "source_type": "artist_reference",
+        "audit_use": "Supports SZA as a major contemporary R&B and alt-R&B voice.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports SZA as a major contemporary R&B and alt-R&B voice."
+      },
+      "britannica_rhythm_and_blues": {
+        "title": "Rhythm and blues",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rhythm-and-blues",
+        "source_type": "reference",
+        "audit_use": "R&B labels, crossover, and transitional figures.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "R&B labels, crossover, and transitional figures."
+      },
+      "rockhall_prince": {
+        "title": "Prince",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/prince/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop, funk, rock, R&B, authorship, and persona innovation.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop, funk, rock, R&B, authorship, and persona innovation."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "npr_tiny_desk_discovery": {
+        "title": "Tiny Desk",
+        "publisher": "NPR Music",
+        "url": "https://www.npr.org/series/tiny-desk-concerts/",
+        "source_type": "public_media_archive",
+        "audit_use": "Public-media performance archive for contemporary discovery and cross-genre visibility.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "044-c01",
+        "claim_text": "Modern alt-R&B loosens traditional R&B forms with atmospheric production, diaristic writing, indie/electronic textures, and blurred rap-pop boundaries.",
+        "source_ref_ids": [
+          "044_allmusic_alternative_rb",
+          "044_grammy_frank_ocean",
+          "044_grammy_sza"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_06/archetype_044",
+          "artist:frank-ocean",
+          "artist:sza",
+          "artist:the-weeknd"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044-c02",
+        "claim_text": "Frank Ocean anchors the auteur side of the lane, where narrative fragments, vocal intimacy, and genre-fluid album structure carry the emotional center.",
+        "source_ref_ids": [
+          "044_grammy_frank_ocean",
+          "044_allmusic_alternative_rb"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:frank-ocean",
+          "album:frank-ocean-channel-orange",
+          "album:frank-ocean-blonde",
+          "song_recording:frank-ocean-thinkin-bout-you"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044-c03",
+        "claim_text": "SZA represents the contemporary confessional side, with conversational melody, unstable relationships, and R&B phrasing placed in modern production space.",
+        "source_ref_ids": [
+          "044_grammy_sza",
+          "044_allmusic_alternative_rb"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "artist:sza",
+          "family_06/archetype_044"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044-c04",
+        "claim_text": "The Weeknd and Solange show the lane's range from nocturnal electronic pop-R&B to artful, politically aware soul minimalism.",
+        "source_ref_ids": [
+          "044_allmusic_alternative_rb",
+          "044_grammy_sza"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "artist:the-weeknd",
+          "artist:solange",
+          "song_recording:frank-ocean-novacane"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044-modern_r_and_b_alt_r_and_b_bedroom_r_and_b-boundary",
+        "claim_text": "Modern R&B / Alt-R&B / Bedroom R&B's boundary is clearest when hazy synths and diaristic lyrics appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "044_allmusic_alternative_rb",
+          "044_grammy_frank_ocean"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_06/archetype_044",
+          "artist:frank-ocean",
+          "artist:sza"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "044-modern_r_and_b_alt_r_and_b_bedroom_r_and_b-examples",
+        "claim_text": "Frank Ocean, SZA, Channel Orange - Frank Ocean gives Modern R&B / Alt-R&B / Bedroom R&B concrete anchors because the examples expose elastic vocal phrasing inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "044_grammy_frank_ocean",
+          "044_grammy_sza"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_06/archetype_044",
+          "artist:frank-ocean",
+          "artist:sza"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "044-modern_r_and_b_alt_r_and_b_bedroom_r_and_b-distinct",
+        "claim_text": "The key musical distinction in Modern R&B / Alt-R&B / Bedroom R&B is The track may feel sparse, fractured, or suspended, but the vocal emotion remains R&B-rooted, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "044_allmusic_alternative_rb",
+          "044_grammy_sza"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_06/archetype_044",
+          "artist:frank-ocean",
+          "artist:sza"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Modern R&B, alt-R&B, and bedroom R&B: Frank Ocean, SZA, The Weeknd, Solange, atmospheric post-2010 R&B.",
+    "selected_sources": [
+      {
+        "source_ref_id": "044_allmusic_alternative_rb",
+        "title": "Alternative R&B",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/alternative-r-b-ma0000013375",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for alternative R&B's experimental, atmospheric post-2000s sound."
+      },
+      {
+        "source_ref_id": "044_grammy_frank_ocean",
+        "title": "Frank Ocean",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/frank-ocean/15735",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ocean as a central modern/alt-R&B auteur."
+      },
+      {
+        "source_ref_id": "044_grammy_sza",
+        "title": "SZA",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/sza/188626",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports SZA as a major contemporary R&B and alt-R&B voice."
+      },
+      {
+        "source_ref_id": "britannica_rhythm_and_blues",
+        "title": "Rhythm and blues",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rhythm-and-blues",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "R&B labels, crossover, and transitional figures."
+      },
+      {
+        "source_ref_id": "rockhall_prince",
+        "title": "Prince",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/prince/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop, funk, rock, R&B, authorship, and persona innovation."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "npr_tiny_desk_discovery",
+        "title": "Tiny Desk",
+        "publisher": "NPR Music",
+        "url": "https://www.npr.org/series/tiny-desk-concerts/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "044_reject_quiet_storm",
+        "title": "Quiet Storm",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/quiet-storm-ma0000011960",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "A useful ancestor for intimacy, but too smooth-radio-specific for alt-R&B's fractured production and internet-era authorship."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources directly support the alt-R&B style and two core contemporary artist examples."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  }
+}

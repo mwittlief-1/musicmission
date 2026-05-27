@@ -1,0 +1,2641 @@
+{
+  "family_04/archetype_024": {
+    "archetype_query": "Classic singer-songwriter: Carole King, Joni Mitchell, James Taylor, Paul Simon, Cat Stevens, Leonard Cohen, early 1970s album-era personal songwriting.",
+    "selected_sources": [
+      {
+        "source_ref_id": "024_rockhall_carole_king",
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports King's move from professional songwriter to performer, central to the singer-songwriter archetype."
+      },
+      {
+        "source_ref_id": "024_rockhall_joni_mitchell",
+        "title": "Joni Mitchell",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/joni-mitchell/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents Mitchell's authored voice, folk roots, and expanded harmonic language as a core example."
+      },
+      {
+        "source_ref_id": "024_britannica_bob_dylan",
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_type": "reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Gives historical context for the folk revival songwriter as a popular-music author figure."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "024_reject_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Useful for nearby roots boundaries, but too country-specific for classic singer-songwriter."
+      }
+    ],
+    "why_selected_sources_fit": "The source set triangulates the archetype through songwriter-performer identity, canonical album-era examples, and the folk-to-pop authorship lineage.",
+    "claims": [
+      {
+        "claim_id": "024_c01",
+        "claim_text": "Classic singer-songwriter foregrounds the performer as an identifiable author, where lyric perspective and vocal intimacy matter as much as band sound.",
+        "source_ref_ids": ["024_rockhall_carole_king", "024_rockhall_joni_mitchell", "024_britannica_bob_dylan"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_04/archetype_024", "artist:f4-024-artist-carole-king", "artist:f4-024-artist-joni-mitchell", "artist:f4-024-artist-bob-dylan"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "024_c02",
+        "claim_text": "Carole King's Tapestry made the professional songwriter-at-the-piano feel like a mass-audience performer voice, not just a behind-the-scenes craft role.",
+        "source_ref_ids": ["024_rockhall_carole_king"],
+        "confidence": "high",
+        "module_usage": ["history_capsule", "canonical_examples_block"],
+        "graph_refs": ["artist:f4-024-artist-carole-king", "album:f4-024-album-tapestry-carole-king"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "024_c03",
+        "claim_text": "Joni Mitchell anchors the more literary and harmonically adventurous side of the archetype, especially where folk songcraft shades into jazz-colored album writing.",
+        "source_ref_ids": ["024_rockhall_joni_mitchell"],
+        "confidence": "high",
+        "module_usage": ["what_made_it_distinct", "canonical_examples_block"],
+        "graph_refs": ["artist:f4-024-artist-joni-mitchell", "album:f4-024-album-blue-joni-mitchell"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "024_c04",
+        "claim_text": "Dylan's folk-revival roots help explain why the archetype values words, point of view, and cultural commentary even when the production is soft or radio-friendly.",
+        "source_ref_ids": ["024_britannica_bob_dylan"],
+        "confidence": "medium_high",
+        "module_usage": ["why_it_mattered", "related_roads_lineage_module"],
+        "graph_refs": ["artist:f4-024-artist-bob-dylan", "family_04/archetype_026"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Writer-forward 1960s and 1970s songcraft where the singer's point of view is the main instrument.",
+      "history_capsule": "This road grows out of folk revival authorship, Brill Building craft, and album-era adult pop. It turns the songwriter from a hidden professional into the face and voice of the record.",
+      "why_it_mattered": "It made personal lyric writing a mainstream popular-music language and gave later adult pop, indie folk, and Americana a durable model.",
+      "what_made_it_distinct": "The songs ask to be heard as statements from a person, not just performances by a band.",
+      "what_to_listen_for": ["plainspoken lead vocal", "acoustic or piano center", "confessional or observational lyric", "unhurried album pacing"],
+      "did_you_know": ["Several anchors were already successful writers before they became canonical performers.", "The same road can sound intimate, literary, or radio-polished depending on the artist."],
+      "caution": "Do not collapse all acoustic 1970s music into this lane; use authorship, voice, and lyric stance as the deciding clues."
+    }
+  },
+  "family_04/archetype_025": {
+    "archetype_query": "Piano pop and adult songcraft: Billy Joel, Elton John, Carole King, Randy Newman, piano-led adult pop storytelling.",
+    "selected_sources": [
+      {
+        "source_ref_id": "025_rockhall_billy_joel",
+        "title": "Billy Joel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/billy-joel/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Joel as a piano-centered storyteller whose songs bridge rock, pop, and adult radio."
+      },
+      {
+        "source_ref_id": "025_rockhall_elton_john",
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the piano-driven pop-rock showmanship and durable songbook that define the lane."
+      },
+      {
+        "source_ref_id": "025_rockhall_carole_king",
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Provides a songwriter-performer model for piano-led adult songcraft."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "025_reject_folk_music",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "It explains nearby acoustic roots but does not capture piano-pop arrangement or adult radio polish."
+      }
+    ],
+    "why_selected_sources_fit": "The three artist-specific references cover piano as instrument, songwriting platform, and adult-pop identity.",
+    "claims": [
+      {
+        "claim_id": "025_c01",
+        "claim_text": "Piano pop and adult songcraft centers keyboard harmony, clean melodic hooks, and literate verses more than guitar-band riff identity.",
+        "source_ref_ids": ["025_rockhall_billy_joel", "025_rockhall_elton_john", "025_rockhall_carole_king"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_04/archetype_025", "artist:f4-025-artist-billy-joel", "artist:f4-025-artist-elton-john"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "025_c02",
+        "claim_text": "Billy Joel's canonical role in this lane is the urban piano storyteller, turning barroom, street, and character sketches into adult pop standards.",
+        "source_ref_ids": ["025_rockhall_billy_joel"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "history_capsule"],
+        "graph_refs": ["artist:f4-025-artist-billy-joel", "song_recording:f4-025-song-piano-man-billy-joel", "album:f4-025-album-the-stranger-billy-joel"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "025_c03",
+        "claim_text": "Elton John's version of the archetype makes the piano theatrical and stadium-sized while keeping Tin Pan Alley-style melody at the center.",
+        "source_ref_ids": ["025_rockhall_elton_john"],
+        "confidence": "high",
+        "module_usage": ["what_made_it_distinct", "canonical_examples_block"],
+        "graph_refs": ["artist:f4-025-artist-elton-john"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "025_c04",
+        "claim_text": "Carole King shows the quieter side of the same lane: domestic-scale piano writing that still lands as mainstream pop.",
+        "source_ref_ids": ["025_rockhall_carole_king"],
+        "confidence": "high",
+        "module_usage": ["related_roads_lineage_module", "history_capsule"],
+        "graph_refs": ["artist:f4-025-artist-carole-king", "song_recording:f4-025-song-it-s-too-late-carole-king"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Piano-led adult pop where melody, harmony, and storyteller craft do the heavy lifting.",
+      "history_capsule": "This lane carries singer-songwriter values into polished pop and rock settings, from intimate keyboard confession to arena-scale piano showmanship.",
+      "why_it_mattered": "It made piano-based authorship a mass radio language and kept adult pop tied to songcraft rather than only production trends.",
+      "what_made_it_distinct": "The piano is not decoration; it structures the harmony, rhythm, and dramatic center of the song.",
+      "what_to_listen_for": ["rolling piano figures", "character-based lyrics", "clean chorus lift", "adult radio polish"],
+      "did_you_know": ["The same piano-pop lane can hold both barroom realism and theatrical pop spectacle.", "Many anchors work as both performers and old-school songbook craftsmen."],
+      "caution": "Separate this from general soft rock by checking whether the keyboard and compositional craft are the main identity."
+    }
+  },
+  "family_04/archetype_026": {
+    "archetype_query": "Folk revival and protest folk: Woody Guthrie, Pete Seeger, Joan Baez, Odetta, Bob Dylan, civil-rights and topical song traditions.",
+    "selected_sources": [
+      {
+        "source_ref_id": "026_britannica_folk_music",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides historical context for oral tradition, revival, and socially situated song."
+      },
+      {
+        "source_ref_id": "026_smithsonian_folkways",
+        "title": "Smithsonian Folkways",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/",
+        "source_type": "institutional_archive",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Primary institutional archive for Guthrie, Seeger, civil-rights, and folk revival recordings."
+      },
+      {
+        "source_ref_id": "026_britannica_bob_dylan",
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_type": "reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Dylan's early folk-revival and protest-song role."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "026_reject_no_depression",
+        "title": "No Depression",
+        "publisher": "No Depression",
+        "url": "https://www.nodepression.com/",
+        "source_type": "music_journalism_archive",
+        "source_relevance": "weak_context",
+        "why_rejected": "Relevant to later Americana and alt-country, but not direct enough for mid-century protest folk."
+      }
+    ],
+    "why_selected_sources_fit": "The sources combine a general folk-history reference, an institutional archive of the revival canon, and a key object-specific Dylan source.",
+    "claims": [
+      {
+        "claim_id": "026_c01",
+        "claim_text": "Folk revival and protest folk uses familiar acoustic forms to carry topical, labor, civil-rights, and antiwar messages into public singing spaces.",
+        "source_ref_ids": ["026_britannica_folk_music", "026_smithsonian_folkways"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_04/archetype_026", "artist:f4-026-artist-woody-guthrie", "artist:f4-026-artist-pete-seeger"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "026_c02",
+        "claim_text": "Woody Guthrie and Pete Seeger anchor the archetype's communal songbook side, where simple melodies are built to travel through groups rather than spotlight virtuosity.",
+        "source_ref_ids": ["026_smithsonian_folkways", "026_britannica_folk_music"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:f4-026-artist-woody-guthrie", "artist:f4-026-artist-pete-seeger", "song_recording:f4-026-song-this-land-is-your-land-woody-guthrie"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "026_c03",
+        "claim_text": "Joan Baez and Odetta represent the revival's concert-stage vocal authority, linking traditional material to civil-rights era public conscience.",
+        "source_ref_ids": ["026_smithsonian_folkways", "026_britannica_folk_music"],
+        "confidence": "medium_high",
+        "module_usage": ["history_capsule", "canonical_examples_block"],
+        "graph_refs": ["artist:f4-026-artist-joan-baez", "artist:f4-026-artist-odetta"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "026_c04",
+        "claim_text": "Dylan marks the bridge from movement song to self-consciously authored modern songwriting, which is why this road feeds directly into classic singer-songwriter.",
+        "source_ref_ids": ["026_britannica_bob_dylan"],
+        "confidence": "high",
+        "module_usage": ["related_roads_lineage_module", "why_it_mattered"],
+        "graph_refs": ["artist:f4-026-artist-bob-dylan", "album:f4-026-album-the-freewheelin-bob-dylan-bob-dylan", "family_04/archetype_024"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Acoustic song as public argument, community memory, and movement language.",
+      "history_capsule": "The folk revival drew from older ballads, labor songs, blues, gospel, and topical writing, then placed them in coffeehouses, festivals, campuses, and civil-rights contexts.",
+      "why_it_mattered": "It made the songwriter a public witness and gave later rock, country-folk, and singer-songwriter music a moral vocabulary.",
+      "what_made_it_distinct": "The performance often sounds deliberately plain so the words and group participation stay central.",
+      "what_to_listen_for": ["acoustic guitar or banjo", "topical lyrics", "communal chorus", "unadorned vocal delivery"],
+      "did_you_know": ["Many protest-folk standards circulated through many singers rather than belonging to one definitive record.", "This lane is as much about transmission as authorship."],
+      "caution": "Avoid treating every acoustic folk record as protest folk; the topical or communal function is the key signal."
+    }
+  },
+  "family_04/archetype_027": {
+    "archetype_query": "Country-folk and Americana roots: John Prine, Emmylou Harris, Lucinda Williams, Gillian Welch, Townes Van Zandt, roots songwriting.",
+    "selected_sources": [
+      {
+        "source_ref_id": "027_americana_music_association",
+        "title": "About Americana Music",
+        "publisher": "Americana Music Association",
+        "url": "https://americanamusic.org/",
+        "source_type": "industry_organization",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines Americana as a roots blend crossing country, folk, blues, and rock lineages."
+      },
+      {
+        "source_ref_id": "027_country_hall_emmylou_harris",
+        "title": "Emmylou Harris",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/emmylou-harris",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Harris as a country, folk, and roots bridge artist."
+      },
+      {
+        "source_ref_id": "027_britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides country lineage context needed to separate country-folk from pop singer-songwriter."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "027_reject_rockhall_elton_john",
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_type": "museum_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Piano-pop relevance does not support country-folk or Americana roots claims."
+      }
+    ],
+    "why_selected_sources_fit": "The set ties Americana's cross-genre definition to an object-specific roots-country example and broader country lineage.",
+    "claims": [
+      {
+        "claim_id": "027_c01",
+        "claim_text": "Country-folk and Americana roots is defined by the overlap of country storytelling, folk intimacy, blues memory, and rock-era singer-songwriter framing.",
+        "source_ref_ids": ["027_americana_music_association", "027_britannica_country_music"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_04/archetype_027", "artist:f4-027-artist-john-prine", "artist:f4-027-artist-lucinda-williams"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "027_c02",
+        "claim_text": "Emmylou Harris is a key bridge because her work connects country tradition, folk repertoire, harmony singing, and later Americana taste.",
+        "source_ref_ids": ["027_country_hall_emmylou_harris", "027_americana_music_association"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "related_roads_lineage_module"],
+        "graph_refs": ["artist:f4-027-artist-emmylou-harris", "album:f4-027-album-pieces-of-the-sky-emmylou-harris"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "027_c03",
+        "claim_text": "The archetype values plainspoken narrative compression, which is why John Prine and Townes Van Zandt function as songwriter anchors rather than only country performers.",
+        "source_ref_ids": ["027_americana_music_association", "027_britannica_country_music"],
+        "confidence": "medium_high",
+        "module_usage": ["what_made_it_distinct", "canonical_examples_block"],
+        "graph_refs": ["artist:f4-027-artist-john-prine", "song_recording:f4-027-song-pancho-and-lefty-townes-van-zandt", "song_recording:f4-027-song-angel-from-montgomery-john-prine"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "027_c04",
+        "claim_text": "Compared with mainstream Nashville country, this road usually signals roots credibility through acoustic texture, weathered vocals, and literary understatement.",
+        "source_ref_ids": ["027_americana_music_association", "027_britannica_country_music"],
+        "confidence": "medium_high",
+        "module_usage": ["dead_end_false_nearby_caution_module", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_04/archetype_027", "family_05/archetype_031", "family_05/archetype_033"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Roots songwriting where country, folk, blues, and rock memory share the same porch.",
+      "history_capsule": "Americana and country-folk grew around artists who used older roots materials without fitting neatly into commercial country or pure folk revival categories.",
+      "why_it_mattered": "It preserved songwriter depth and roots continuity as country and rock radio became more segmented.",
+      "what_made_it_distinct": "The center is the song and voice, with twang used as a storytelling texture rather than a commercial format marker.",
+      "what_to_listen_for": ["acoustic twang", "plainspoken narrative", "harmony vocals", "worn-in roots production"],
+      "did_you_know": ["Americana is partly a genre and partly a coalition of roots traditions.", "Some of its strongest anchors were more influential than chart-dominant."],
+      "caution": "Do not use pedal steel alone as proof; check for roots-songwriting posture and cross-genre lineage."
+    }
+  },
+  "family_04/archetype_028": {
+    "archetype_query": "Alt-country and No Depression: Uncle Tupelo, Son Volt, Whiskeytown, Old 97's, 1990s roots rock reacting to Nashville polish.",
+    "selected_sources": [
+      {
+        "source_ref_id": "028_allmusic_alt_country",
+        "title": "Alternative Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/alternative-country-ma0000002427",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct genre overview for alt-country's roots-rock and punk-informed country blend."
+      },
+      {
+        "source_ref_id": "028_no_depression",
+        "title": "No Depression",
+        "publisher": "No Depression",
+        "url": "https://www.nodepression.com/",
+        "source_type": "music_journalism_archive",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The publication and title are inseparable from the scene vocabulary around Uncle Tupelo and alt-country."
+      },
+      {
+        "source_ref_id": "028_americana_music_association",
+        "title": "About Americana Music",
+        "publisher": "Americana Music Association",
+        "url": "https://americanamusic.org/",
+        "source_type": "industry_organization",
+        "source_relevance": "family_context_only",
+        "why_fit": "Contextualizes how alt-country fed the broader Americana institution."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "028_reject_grand_ole_opry",
+        "title": "Opry History",
+        "publisher": "Grand Ole Opry",
+        "url": "https://www.opry.com/history",
+        "source_type": "venue_history",
+        "source_relevance": "weak_context",
+        "why_rejected": "Helpful for Nashville foundations but not specific to 1990s alt-country or No Depression."
+      }
+    ],
+    "why_selected_sources_fit": "The sources directly identify the genre, its scene vocabulary, and its later Americana landing place.",
+    "claims": [
+      {
+        "claim_id": "028_c01",
+        "claim_text": "Alt-country and No Depression reframed country roots through indie-rock and punk-era skepticism toward mainstream Nashville polish.",
+        "source_ref_ids": ["028_allmusic_alt_country", "028_no_depression"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_04/archetype_028", "artist:f4-028-artist-uncle-tupelo", "artist:f4-028-artist-son-volt"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "028_c02",
+        "claim_text": "Uncle Tupelo's No Depression is a naming anchor for the lane, turning an older country-blues reference into a 1990s roots-rock scene marker.",
+        "source_ref_ids": ["028_no_depression", "028_allmusic_alt_country"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "did_you_know_card"],
+        "graph_refs": ["artist:f4-028-artist-uncle-tupelo", "song_recording:f4-028-song-no-depression-uncle-tupelo"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "028_c03",
+        "claim_text": "Son Volt, Whiskeytown, and Old 97's show the archetype's range from dusty folk-rock to bar-band country-rock energy.",
+        "source_ref_ids": ["028_allmusic_alt_country", "028_no_depression"],
+        "confidence": "medium_high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:f4-028-artist-son-volt", "artist:f4-028-artist-whiskeytown", "artist:f4-028-artist-old-97-s"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "028_c04",
+        "claim_text": "The lane matters because it gave later Americana a rock-club infrastructure and a taste language for roots credibility outside the country industry mainstream.",
+        "source_ref_ids": ["028_americana_music_association", "028_no_depression"],
+        "confidence": "medium_high",
+        "module_usage": ["why_it_mattered", "related_roads_lineage_module"],
+        "graph_refs": ["family_04/archetype_028", "family_04/archetype_027", "family_05/archetype_036"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "1990s roots rock that keeps country twang but distrusts country-radio gloss.",
+      "history_capsule": "Alt-country emerged from bands and writers who loved country and folk traditions but carried indie-rock habits, rougher guitars, and anti-commercial posture.",
+      "why_it_mattered": "It helped build the modern Americana conversation and gave roots music a college-rock and club-scene pathway.",
+      "what_made_it_distinct": "The twang sounds deliberately scuffed, with rock-band edges and songwriter melancholy in the foreground.",
+      "what_to_listen_for": ["ragged electric guitars", "country-rock rhythm", "weary vocals", "anti-gloss production"],
+      "did_you_know": ["No Depression is both a song title and a shorthand for a whole roots-rock scene.", "Alt-country often sounds traditional and oppositional at the same time."],
+      "caution": "Do not confuse this with classic Nashville; the indie-rock stance is part of the identity."
+    }
+  },
+  "family_04/archetype_029": {
+    "archetype_query": "Adult alternative and coffeehouse songcraft: Tracy Chapman, Sheryl Crow, Sarah McLachlan, Indigo Girls, 1990s acoustic adult alternative.",
+    "selected_sources": [
+      {
+        "source_ref_id": "029_allmusic_adult_alternative",
+        "title": "Adult Alternative Pop/Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/adult-alternative-pop-rock-ma0000011892",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style overview for adult alternative's acoustic, singer-songwriter, and rock-radio overlap."
+      },
+      {
+        "source_ref_id": "029_grammy_tracy_chapman",
+        "title": "Tracy Chapman",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/tracy-chapman/11110",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Chapman's Grammy-recognized singer-songwriter role and centrality to the lane."
+      },
+      {
+        "source_ref_id": "029_rockhall_sheryl_crow",
+        "title": "Sheryl Crow",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/sheryl-crow/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Crow as a polished 1990s adult-alternative crossover anchor."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "029_reject_motown",
+        "title": "The Motown Story",
+        "publisher": "Motown Museum",
+        "url": "https://www.motownmuseum.org/story/motown/",
+        "source_type": "museum_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Motown soul-pop context does not support adult alternative coffeehouse songcraft."
+      }
+    ],
+    "why_selected_sources_fit": "The sources combine a direct style frame with two artist-specific examples from the archetype's acoustic and pop-rock poles.",
+    "claims": [
+      {
+        "claim_id": "029_c01",
+        "claim_text": "Adult alternative and coffeehouse songcraft keeps singer-songwriter intimacy but places it in 1990s adult radio, acoustic-rock, and cafe-performance contexts.",
+        "source_ref_ids": ["029_allmusic_adult_alternative"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_04/archetype_029", "artist:f4-029-artist-tracy-chapman", "artist:f4-029-artist-indigo-girls"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "029_c02",
+        "claim_text": "Tracy Chapman anchors the socially observant, sparely arranged side of the lane, where a direct vocal and guitar pattern can carry a full narrative world.",
+        "source_ref_ids": ["029_grammy_tracy_chapman", "029_allmusic_adult_alternative"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:f4-029-artist-tracy-chapman", "song_recording:f4-029-song-fast-car-tracy-chapman", "song_recording:f4-029-song-give-me-one-reason-tracy-chapman"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "029_c03",
+        "claim_text": "Sheryl Crow represents the brighter crossover edge, where rootsy guitar textures and pop-rock choruses make adult alternative radio-friendly.",
+        "source_ref_ids": ["029_rockhall_sheryl_crow", "029_allmusic_adult_alternative"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:f4-029-artist-sheryl-crow", "album:f4-029-album-tuesday-night-music-club-sheryl-crow"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "029_c04",
+        "claim_text": "The archetype sits between classic singer-songwriter and 1990s alternative: softer than grunge, less country-coded than Americana, and more adult-radio oriented than indie folk.",
+        "source_ref_ids": ["029_allmusic_adult_alternative"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "dead_end_false_nearby_caution_module"],
+        "graph_refs": ["family_04/archetype_029", "family_04/archetype_024", "family_10/archetype_070"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "1990s adult-facing acoustic pop-rock with songwriter focus and coffeehouse intimacy.",
+      "history_capsule": "This road gathered folk-based writing, acoustic guitar, adult radio, and alternative-era sincerity into a more polished public language.",
+      "why_it_mattered": "It made introspective songwriting visible in mainstream 1990s listening without requiring a hard-rock or country identity.",
+      "what_made_it_distinct": "The sound is earnest and melodic, often close-miked and guitar-led, but built for adult crossover rather than folk purism.",
+      "what_to_listen_for": ["clear acoustic rhythm", "direct social or personal lyric", "adult radio chorus", "warm midtempo production"],
+      "did_you_know": ["Coffeehouse songcraft often shares listeners with both folk revival and alternative rock.", "A single guitar figure can be the whole emotional engine."],
+      "caution": "Do not label every 1990s female singer-songwriter as this lane; check the adult alternative production and radio context."
+    }
+  },
+  "family_04/archetype_030": {
+    "archetype_query": "Modern indie folk and folk-pop: Mumford & Sons, The Lumineers, Bon Iver, Fleet Foxes, 2000s-2010s indie acoustic revival.",
+    "selected_sources": [
+      {
+        "source_ref_id": "030_allmusic_indie_folk",
+        "title": "Indie Folk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-folk-ma0000012141",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style overview for indie folk's modern acoustic and indie-rock hybrid."
+      },
+      {
+        "source_ref_id": "030_grammy_bon_iver",
+        "title": "Bon Iver",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/bon-iver/1264",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Bon Iver as an award-recognized modern indie folk anchor."
+      },
+      {
+        "source_ref_id": "030_britannica_mumford",
+        "title": "Mumford & Sons",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Mumford-and-Sons",
+        "source_type": "reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the folk-pop arena side of the archetype."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "030_reject_outlaw_country",
+        "title": "Outlaw Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/outlaw-country-ma0000011924",
+        "source_type": "genre_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Country rebellion context does not support modern indie folk production or folk-pop crossover."
+      }
+    ],
+    "why_selected_sources_fit": "The chosen sources cover both poles of the archetype: intimate indie folk and anthemic folk-pop breakthrough.",
+    "claims": [
+      {
+        "claim_id": "030_c01",
+        "claim_text": "Modern indie folk and folk-pop renew acoustic instruments through indie production values, festival dynamics, and post-2000s alternative audiences.",
+        "source_ref_ids": ["030_allmusic_indie_folk", "030_britannica_mumford"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_04/archetype_030", "artist:f4-030-artist-mumford-and-sons", "artist:f4-030-artist-the-lumineers"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "030_c02",
+        "claim_text": "Bon Iver anchors the private, textured side of the lane, where fragile vocals and atmospheric recording become folk signals.",
+        "source_ref_ids": ["030_grammy_bon_iver", "030_allmusic_indie_folk"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:f4-030-artist-bon-iver", "album:f4-030-album-for-emma-forever-ago-bon-iver"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "030_c03",
+        "claim_text": "Mumford & Sons represent the stomp-clap, banjo-forward folk-pop side, turning acoustic textures into arena-sized hooks.",
+        "source_ref_ids": ["030_britannica_mumford", "030_allmusic_indie_folk"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:f4-030-artist-mumford-and-sons", "album:f4-030-album-sigh-no-more-mumford-and-sons", "song_recording:f4-030-song-little-lion-man-mumford-and-sons"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "030_c04",
+        "claim_text": "The archetype differs from folk revival because its historical memory is filtered through indie-rock taste, streaming-era discovery, and festival singalong scale.",
+        "source_ref_ids": ["030_allmusic_indie_folk", "030_britannica_mumford"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "dead_end_false_nearby_caution_module"],
+        "graph_refs": ["family_04/archetype_030", "family_04/archetype_026"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Post-2000 acoustic indie music ranging from hushed cabin intimacy to festival folk-pop hooks.",
+      "history_capsule": "Modern indie folk grew as alternative audiences rediscovered banjos, harmonies, acoustic guitars, and rustic imagery through indie labels, blogs, festivals, and streaming.",
+      "why_it_mattered": "It made folk textures newly mainstream for millennial listeners and created a bridge between indie rock and adult acoustic pop.",
+      "what_made_it_distinct": "Old instruments are framed with modern indie dynamics: roomy recordings, gang vocals, stomps, and emotional restraint or release.",
+      "what_to_listen_for": ["banjo or acoustic strum", "stacked harmonies", "stomp-clap pulse", "fragile falsetto or group chorus"],
+      "did_you_know": ["The same lane can sound tiny and bedroom-made or huge and festival-ready.", "Indie folk often uses rustic sound as a modern production choice."],
+      "caution": "Do not confuse modern folk-pop with historical folk revival; listen for indie-era production and audience context."
+    }
+  },
+  "family_05/archetype_031": {
+    "archetype_query": "Classic country, honky-tonk, and Nashville foundations: Hank Williams, Johnny Cash, Patsy Cline, George Jones, Grand Ole Opry, Nashville songcraft.",
+    "selected_sources": [
+      {
+        "source_ref_id": "031_loc_country_music",
+        "title": "Country Music",
+        "publisher": "Library of Congress Songs of America",
+        "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+        "source_type": "institutional_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides historical background on country music's roots and development."
+      },
+      {
+        "source_ref_id": "031_country_hall_hank_williams",
+        "title": "Hank Williams",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/hank-williams",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Williams as a foundational honky-tonk and country songwriting anchor."
+      },
+      {
+        "source_ref_id": "031_opry_history",
+        "title": "Opry History",
+        "publisher": "Grand Ole Opry",
+        "url": "https://www.opry.com/history",
+        "source_type": "venue_history",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Documents the broadcast and Nashville institution central to classic country canon formation."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "031_reject_indie_folk",
+        "title": "Indie Folk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-folk-ma0000012141",
+        "source_type": "genre_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Modern indie acoustic context is not direct evidence for honky-tonk or Nashville foundations."
+      }
+    ],
+    "why_selected_sources_fit": "The sources cover country lineage, a canonical honky-tonk songwriter, and the Opry/Nashville broadcast infrastructure.",
+    "claims": [
+      {
+        "claim_id": "031_c01",
+        "claim_text": "Classic country foundations blend rural string-band, blues, gospel, cowboy, and commercial radio traditions into a song-centered popular form.",
+        "source_ref_ids": ["031_loc_country_music", "031_opry_history"],
+        "confidence": "high",
+        "module_usage": ["history_capsule", "short_definition"],
+        "graph_refs": ["family_05/archetype_031", "artist:hank-williams", "artist:johnny-cash"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031_c02",
+        "claim_text": "Hank Williams anchors the honky-tonk side: compact heartbreak writing, nasal vocal edge, and songs that became country standards.",
+        "source_ref_ids": ["031_country_hall_hank_williams", "031_loc_country_music"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:hank-williams", "album:hank-williams-40-greatest-hits"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031_c03",
+        "claim_text": "The Grand Ole Opry matters because radio and stage institutions helped turn regional country styles into a national canon.",
+        "source_ref_ids": ["031_opry_history", "031_loc_country_music"],
+        "confidence": "high",
+        "module_usage": ["why_it_mattered", "history_capsule"],
+        "graph_refs": ["family_05/archetype_031"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031_c04",
+        "claim_text": "Johnny Cash, Patsy Cline, and George Jones show the lane's range from boom-chicka austerity to countrypolitan drama and hard-country vocal anguish.",
+        "source_ref_ids": ["031_loc_country_music", "031_opry_history"],
+        "confidence": "medium_high",
+        "module_usage": ["what_made_it_distinct", "canonical_examples_block"],
+        "graph_refs": ["artist:johnny-cash", "artist:patsy-cline", "artist:george-jones", "song_recording:johnny-cash-ring-of-fire", "song_recording:patsy-cline-crazy"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The core country songbook: honky-tonk heartbreak, Nashville broadcast polish, and plainspoken vocal authority.",
+      "history_capsule": "Classic country crystallized through radio, touring, the Opry, and Nashville songcraft, carrying rural and working-class stories into national popular culture.",
+      "why_it_mattered": "It built the reference vocabulary that later outlaw, country-pop, red dirt, and Americana lanes either inherit or react against.",
+      "what_made_it_distinct": "The songs are concise, emotionally direct, and built around voice, lyric, fiddle, steel, and rhythm-guitar feel.",
+      "what_to_listen_for": ["steel guitar", "fiddle or tic-tac rhythm", "plainspoken heartbreak", "close vocal presence"],
+      "did_you_know": ["The Opry helped country become a national broadcast language.", "Many classic country songs became standards through repeated interpretation."],
+      "caution": "Do not treat all older country as the same; honky-tonk, countrypolitan, and Cash-style minimalism point to different internal signals."
+    }
+  },
+  "family_05/archetype_032": {
+    "archetype_query": "Outlaw country and cosmic country: Willie Nelson, Waylon Jennings, Merle Haggard, Emmylou Harris, 1970s anti-Nashville autonomy.",
+    "selected_sources": [
+      {
+        "source_ref_id": "032_allmusic_outlaw_country",
+        "title": "Outlaw Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/outlaw-country-ma0000011924",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct genre overview for outlaw country's reaction against Nashville control and polish."
+      },
+      {
+        "source_ref_id": "032_country_hall_willie_nelson",
+        "title": "Willie Nelson",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/willie-nelson",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Nelson as a central outlaw-country and Austin-linked anchor."
+      },
+      {
+        "source_ref_id": "032_country_hall_waylon_jennings",
+        "title": "Waylon Jennings",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/waylon-jennings",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Jennings as a key outlaw country performer and image."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "032_reject_country_pop",
+        "title": "Country-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002532",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Country-pop is a useful contrast but points toward crossover polish, not outlaw autonomy."
+      }
+    ],
+    "why_selected_sources_fit": "The direct style overview and two object-specific Country Hall references cover both the genre frame and its main canonical examples.",
+    "claims": [
+      {
+        "claim_id": "032_c01",
+        "claim_text": "Outlaw country is defined by artist autonomy, rougher production, and resistance to the tightly controlled Nashville Sound of the era.",
+        "source_ref_ids": ["032_allmusic_outlaw_country", "032_country_hall_willie_nelson", "032_country_hall_waylon_jennings"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_05/archetype_032", "artist:willie-nelson", "artist:waylon-jennings"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "032_c02",
+        "claim_text": "Willie Nelson's Red Headed Stranger shows how sparse arrangements and narrative album structure could become a commercial country strength.",
+        "source_ref_ids": ["032_country_hall_willie_nelson", "032_allmusic_outlaw_country"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:willie-nelson", "album:willie-nelson-red-headed-stranger", "song_recording:willie-nelson-blue-eyes-crying-in-the-rain"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "032_c03",
+        "claim_text": "Waylon Jennings anchors the harder-edged outlaw persona: deep groove, baritone authority, and an anti-establishment country image.",
+        "source_ref_ids": ["032_country_hall_waylon_jennings", "032_allmusic_outlaw_country"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:waylon-jennings"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "032_c04",
+        "claim_text": "Cosmic-country edges enter when country writing mixes with hippie, folk-rock, and Austin counterculture sensibility rather than mainstream Nashville polish.",
+        "source_ref_ids": ["032_allmusic_outlaw_country", "032_country_hall_willie_nelson"],
+        "confidence": "medium_high",
+        "module_usage": ["what_made_it_distinct", "related_roads_lineage_module"],
+        "graph_refs": ["family_05/archetype_032", "artist:emmylou-harris", "family_04/archetype_027"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Country rebellion with rougher edges, author control, and a road-worn 1970s sensibility.",
+      "history_capsule": "Outlaw country grew as major artists pushed against Nashville's production control, finding power in sparer arrangements, longhair counterculture, and tougher personas.",
+      "why_it_mattered": "It proved that commercial country could sound independent, adult, and anti-establishment without abandoning the songbook.",
+      "what_made_it_distinct": "The polish drops away; groove, persona, and narrative space get louder.",
+      "what_to_listen_for": ["dry drums", "baritone vocal authority", "sparse arrangements", "anti-Nashville attitude"],
+      "did_you_know": ["Outlaw country was not just lyrical rebellion; it was also about control over records and image.", "Austin and Nashville both matter to the lane's map."],
+      "caution": "Do not equate any country song about trouble with outlaw country; listen for production stance and artist autonomy."
+    }
+  },
+  "family_05/archetype_033": {
+    "archetype_query": "Country-pop and crossover country: Dolly Parton, Shania Twain, Kenny Rogers, Taylor Swift, country songs designed for pop-scale audiences.",
+    "selected_sources": [
+      {
+        "source_ref_id": "033_britannica_dolly_parton",
+        "title": "Dolly Parton",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dolly-Parton",
+        "source_type": "reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Parton's role as a country artist with broad pop-cultural reach."
+      },
+      {
+        "source_ref_id": "033_grammy_shania_twain",
+        "title": "Shania Twain",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/shania-twain/7642",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Twain as a central country-pop crossover figure."
+      },
+      {
+        "source_ref_id": "033_allmusic_country_pop",
+        "title": "Country-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002532",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for country-pop's crossover sound."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "033_reject_stax",
+        "title": "Stax History",
+        "publisher": "Stax Museum of American Soul Music",
+        "url": "https://staxmuseum.com/stax-history/",
+        "source_type": "museum_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Southern soul context is unrelated to country-pop crossover claims."
+      }
+    ],
+    "why_selected_sources_fit": "The sources pair the direct country-pop style frame with object-specific examples from the classic and 1990s crossover sides.",
+    "claims": [
+      {
+        "claim_id": "033_c01",
+        "claim_text": "Country-pop crossover keeps country signifiers but smooths arrangement, chorus, and image for broader pop and adult-radio audiences.",
+        "source_ref_ids": ["033_allmusic_country_pop", "033_grammy_shania_twain", "033_britannica_dolly_parton"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_05/archetype_033", "artist:shania-twain", "artist:dolly-parton"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033_c02",
+        "claim_text": "Dolly Parton anchors the songwriter-celebrity side of crossover country, where country authorship travels through pop, television, and film visibility.",
+        "source_ref_ids": ["033_britannica_dolly_parton"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:dolly-parton", "song_recording:dolly-parton-jolene"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033_c03",
+        "claim_text": "Shania Twain represents the 1990s pop-production breakthrough of country crossover, with arena hooks and polished sound expanding the format's audience.",
+        "source_ref_ids": ["033_grammy_shania_twain", "033_allmusic_country_pop"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:shania-twain", "album:shania-twain-come-on-over"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033_c04",
+        "claim_text": "The lane is distinct from classic country because the production often treats country elements as pop color rather than as a strict honky-tonk or Nashville foundation.",
+        "source_ref_ids": ["033_allmusic_country_pop"],
+        "confidence": "medium_high",
+        "module_usage": ["dead_end_false_nearby_caution_module", "related_roads_lineage_module"],
+        "graph_refs": ["family_05/archetype_033", "family_05/archetype_031"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Country music built to cross the fence into pop radio and mass entertainment.",
+      "history_capsule": "Country-pop has appeared in waves, from smooth crossover singers to 1990s blockbuster albums and younger artists moving between country and pop markets.",
+      "why_it_mattered": "It expanded country audiences and showed how country songwriting could live inside pop-scale production.",
+      "what_made_it_distinct": "The hook is polished and immediate, while twang, narrative, or country imagery remains legible.",
+      "what_to_listen_for": ["big pop chorus", "smoothed twang", "clean studio drums", "country lyric frame with pop lift"],
+      "did_you_know": ["Country-pop is often controversial because crossover success can blur genre identity.", "Dolly Parton and Shania Twain represent very different routes to pop reach."],
+      "caution": "Do not use chart size alone as proof; listen for the country-pop blend in arrangement and image."
+    }
+  },
+  "family_05/archetype_034": {
+    "archetype_query": "90s country radio, hat acts, and new traditionalists: Garth Brooks, Alan Jackson, George Strait, Randy Travis, arena-era country radio.",
+    "selected_sources": [
+      {
+        "source_ref_id": "034_britannica_garth_brooks",
+        "title": "Garth Brooks",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Garth-Brooks",
+        "source_type": "reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Brooks as a defining commercial force in 1990s country."
+      },
+      {
+        "source_ref_id": "034_country_hall_alan_jackson",
+        "title": "Alan Jackson",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/alan-jackson",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Jackson as a traditionalist radio-country anchor."
+      },
+      {
+        "source_ref_id": "034_allmusic_new_traditionalist",
+        "title": "New Traditionalist Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/new-traditionalist-country-ma0000011933",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for the traditionalist revival strand within late 1980s and 1990s country."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "034_reject_alt_country",
+        "title": "Alternative Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/alternative-country-ma0000002427",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Useful contrast, but this archetype is centered on mainstream radio country rather than alt-country opposition."
+      }
+    ],
+    "why_selected_sources_fit": "The set captures the 1990s mainstream boom and its traditionalist counterweight inside the same radio ecosystem.",
+    "claims": [
+      {
+        "claim_id": "034_c01",
+        "claim_text": "90s country radio joined new-traditionalist musical signals with arena-scale marketing and a more national country-radio monoculture.",
+        "source_ref_ids": ["034_britannica_garth_brooks", "034_allmusic_new_traditionalist"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_05/archetype_034", "artist:garth-brooks", "artist:george-strait", "artist:randy-travis"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "034_c02",
+        "claim_text": "Garth Brooks anchors the arena side of the archetype, bringing rock-concert scale and blockbuster album culture into country radio.",
+        "source_ref_ids": ["034_britannica_garth_brooks"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:garth-brooks", "album:garth-brooks-no-fences", "song_recording:garth-brooks-friends-in-low-places"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "034_c03",
+        "claim_text": "Alan Jackson and Randy Travis preserve the new-traditionalist side, keeping fiddle, steel, and honky-tonk songwriting visible within the radio boom.",
+        "source_ref_ids": ["034_country_hall_alan_jackson", "034_allmusic_new_traditionalist"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:alan-jackson", "artist:randy-travis", "song_recording:alan-jackson-chattahoochee"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "034_c04",
+        "claim_text": "The lane differs from country-pop because its crossover scale often still wears explicit country signifiers: hats, fiddles, steel, boot-scoot rhythm, and Nashville radio identity.",
+        "source_ref_ids": ["034_allmusic_new_traditionalist", "034_britannica_garth_brooks"],
+        "confidence": "medium_high",
+        "module_usage": ["what_made_it_distinct", "dead_end_false_nearby_caution_module"],
+        "graph_refs": ["family_05/archetype_034", "family_05/archetype_033"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Mainstream 1990s country radio: huge choruses, visible country identity, and new-traditionalist roots under arena lights.",
+      "history_capsule": "The 1990s country boom turned Nashville stars into stadium and CD-era giants while keeping traditional country markers audible for mass audiences.",
+      "why_it_mattered": "It created a modern country mainstream that shaped radio expectations for decades.",
+      "what_made_it_distinct": "It can sound polished and enormous while still advertising country identity through vocal, fiddle, steel, and image.",
+      "what_to_listen_for": ["hat-act image", "fiddle and steel flashes", "arena chorus", "line-dance or barroom rhythm"],
+      "did_you_know": ["The era made country albums sell at pop-superstar scale.", "New traditionalism and spectacle often shared the same radio lane."],
+      "caution": "Do not flatten it into country-pop; 1990s radio country often insists on country codes even at blockbuster scale."
+    }
+  },
+  "family_05/archetype_035": {
+    "archetype_query": "Modern country radio, bro-country, and arena country: Florida Georgia Line, Luke Bryan, Luke Combs, Morgan Wallen, contemporary Nashville streaming and radio.",
+    "selected_sources": [
+      {
+        "source_ref_id": "035_allmusic_bro_country",
+        "title": "Bro-Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/bro-country-ma0000013319",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for bro-country's party themes, pop production, and radio moment."
+      },
+      {
+        "source_ref_id": "035_grammy_luke_combs",
+        "title": "Luke Combs",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/luke-combs/243287",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Luke Combs as a contemporary arena-country and radio anchor."
+      },
+      {
+        "source_ref_id": "035_britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "source_relevance": "family_context_only",
+        "why_fit": "Supplies broader country context for identifying modern Nashville continuity and departures."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "035_reject_folk_revival",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Folk revival context does not support claims about contemporary country radio production."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly support bro-country and arena country while preserving country-family context.",
+    "claims": [
+      {
+        "claim_id": "035_c01",
+        "claim_text": "Modern country radio blends Nashville songwriting with pop, rock, hip-hop-adjacent rhythm, and arena production aimed at contemporary radio and streaming audiences.",
+        "source_ref_ids": ["035_allmusic_bro_country", "035_britannica_country_music"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_05/archetype_035", "artist:florida-georgia-line", "artist:luke-bryan", "artist:morgan-wallen"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035_c02",
+        "claim_text": "Florida Georgia Line's Cruise is a central bro-country signal because it foregrounds party imagery, bright hooks, and country-pop production hybrids.",
+        "source_ref_ids": ["035_allmusic_bro_country"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:florida-georgia-line", "song_recording:florida-georgia-line-cruise"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035_c03",
+        "claim_text": "Luke Combs represents a sturdier arena-country branch, keeping a blue-collar vocal identity while using modern radio scale.",
+        "source_ref_ids": ["035_grammy_luke_combs", "035_britannica_country_music"],
+        "confidence": "medium_high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:luke-combs", "album:luke-combs-this-one-s-for-you", "song_recording:luke-combs-beer-never-broke-my-heart"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035_c04",
+        "claim_text": "This road differs from 1990s hat-act country because drum programming, pop-rock loudness, and streaming-era celebrity are often part of the core sound.",
+        "source_ref_ids": ["035_allmusic_bro_country"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "dead_end_false_nearby_caution_module"],
+        "graph_refs": ["family_05/archetype_035", "family_05/archetype_034"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Contemporary country radio built from arena hooks, party imagery, and pop-rock production power.",
+      "history_capsule": "After the 1990s country boom, Nashville radio kept scaling up, absorbing pop, rock, and hip-hop production habits while preserving enough country codes for format identity.",
+      "why_it_mattered": "It defined country's 2010s and streaming-era mainstream and reset debates about what sounds country enough.",
+      "what_made_it_distinct": "The songs are loud, bright, hook-heavy, and often built for trucks, tailgates, arenas, and playlists.",
+      "what_to_listen_for": ["big compressed drums", "party or small-town imagery", "arena chorus", "pop-country guitar sheen"],
+      "did_you_know": ["Bro-country is a narrower moment inside the larger modern country radio lane.", "Luke Combs and Florida Georgia Line show different branches of the same contemporary ecosystem."],
+      "caution": "Do not treat all recent country as bro-country; separate party-pop codes from broader arena-country radio."
+    }
+  },
+  "family_05/archetype_036": {
+    "archetype_query": "Red Dirt, Americana country, and Texas country: Jason Isbell, Cody Johnson, Tyler Childers, Cody Jinks, Steve Earle, independent roots-country scenes.",
+    "selected_sources": [
+      {
+        "source_ref_id": "036_americana_music_association",
+        "title": "About Americana Music",
+        "publisher": "Americana Music Association",
+        "url": "https://americanamusic.org/",
+        "source_type": "industry_organization",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines the roots blend that underpins Americana-country framing."
+      },
+      {
+        "source_ref_id": "036_tsha_country_music",
+        "title": "Country Music",
+        "publisher": "Texas State Historical Association",
+        "url": "https://www.tshaonline.org/handbook/entries/country-music",
+        "source_type": "regional_history",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides Texas country history context for the regional side of the archetype."
+      },
+      {
+        "source_ref_id": "036_grammy_jason_isbell",
+        "title": "Jason Isbell",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/jason-isbell/187287",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Isbell as a contemporary Americana-country songwriter anchor."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "036_reject_disco",
+        "title": "Disco",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/disco",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Dancefloor history has no useful support for Red Dirt or Americana country claims."
+      }
+    ],
+    "why_selected_sources_fit": "The sources connect Americana's roots definition, Texas regional country background, and a current songwriter example.",
+    "claims": [
+      {
+        "claim_id": "036_c01",
+        "claim_text": "Red Dirt, Americana country, and Texas country foreground regional scenes, independent touring, and roots songwriting more than national Nashville radio polish.",
+        "source_ref_ids": ["036_americana_music_association", "036_tsha_country_music"],
+        "confidence": "medium_high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_05/archetype_036", "artist:cody-johnson", "artist:cody-jinks", "artist:tyler-childers"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "036_c02",
+        "claim_text": "Jason Isbell anchors the literary Americana side, where recovery, memory, and adult narrative craft matter as much as country instrumentation.",
+        "source_ref_ids": ["036_grammy_jason_isbell", "036_americana_music_association"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:jason-isbell", "album:jason-isbell-southeastern"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "036_c03",
+        "claim_text": "Texas country signals a regional live circuit and songwriting identity that can overlap with mainstream country without depending on Nashville pop production.",
+        "source_ref_ids": ["036_tsha_country_music", "036_americana_music_association"],
+        "confidence": "medium_high",
+        "module_usage": ["region_scene_page", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:cody-johnson", "artist:cody-jinks", "family_05/archetype_036"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "036_c04",
+        "claim_text": "Tyler Childers and Steve Earle show how Appalachian, outlaw, folk, and rock memories can all feed the same Americana-country survey lane.",
+        "source_ref_ids": ["036_americana_music_association", "036_grammy_jason_isbell"],
+        "confidence": "medium",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:tyler-childers", "song_recording:steve-earle-copperhead-road", "album:tyler-childers-purgatory"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Regional roots-country and Americana songwriting with Texas, Red Dirt, Appalachian, and independent-scene gravity.",
+      "history_capsule": "This road gathers country artists whose credibility often comes from regional circuits, roots depth, and songwriter seriousness rather than mainstream radio format alone.",
+      "why_it_mattered": "It gave modern country listeners a durable alternative to Nashville gloss while still feeling connected to country tradition.",
+      "what_made_it_distinct": "The songs often sound live-tested, lyric-driven, and regionally grounded.",
+      "what_to_listen_for": ["road-band feel", "regional references", "unvarnished vocal", "roots-rock or fiddle color"],
+      "did_you_know": ["Americana country can overlap with alt-country, outlaw country, and modern country radio without becoming identical to any one of them.", "Regional touring scenes are part of the sound's identity."],
+      "caution": "Do not use independence alone as proof; the sound still needs country or roots-country musical grounding."
+    }
+  },
+  "family_06/archetype_037": {
+    "archetype_query": "Motown and Detroit soul pop: Stevie Wonder, Marvin Gaye, The Supremes, The Temptations, Hitsville USA, Detroit assembly-line pop-soul craft.",
+    "selected_sources": [
+      {
+        "source_ref_id": "037_motown_museum_story",
+        "title": "The Motown Story",
+        "publisher": "Motown Museum",
+        "url": "https://www.motownmuseum.org/story/motown/",
+        "source_type": "museum_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct institutional history of Motown's Detroit studio, artists, and hit-making model."
+      },
+      {
+        "source_ref_id": "037_carnegie_soul",
+        "title": "Soul",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/soul",
+        "source_type": "genre_timeline",
+        "source_relevance": "family_context_only",
+        "why_fit": "Places Motown within broader soul music development."
+      },
+      {
+        "source_ref_id": "037_rockhall_stevie_wonder",
+        "title": "Stevie Wonder",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/stevie-wonder/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Wonder as a Motown artist who expanded soul-pop into album-era authorship."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "037_reject_stax_history",
+        "title": "Stax History",
+        "publisher": "Stax Museum of American Soul Music",
+        "url": "https://staxmuseum.com/stax-history/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Stax is essential southern soul context but not the right source for Detroit Motown-specific claims."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources cover Motown's own institutional story, the soul-family context, and a major canonical artist example.",
+    "claims": [
+      {
+        "claim_id": "037_c01",
+        "claim_text": "Motown and Detroit soul pop is built on disciplined studio craft, memorable hooks, choreographed presentation, and a crossover pop strategy rooted in Black soul performance.",
+        "source_ref_ids": ["037_motown_museum_story", "037_carnegie_soul"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_06/archetype_037", "artist:the-supremes", "artist:the-temptations"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "037_c02",
+        "claim_text": "Hitsville USA matters as a production model: songwriting, arranging, musicianship, artist development, and quality control all shaped the recognizable Motown sound.",
+        "source_ref_ids": ["037_motown_museum_story"],
+        "confidence": "high",
+        "module_usage": ["why_it_mattered", "region_scene_page"],
+        "graph_refs": ["family_06/archetype_037"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "037_c03",
+        "claim_text": "Stevie Wonder and Marvin Gaye show the lane's evolution from single-centered Motown pop into more personal, album-era soul statements.",
+        "source_ref_ids": ["037_rockhall_stevie_wonder", "037_carnegie_soul", "037_motown_museum_story"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "related_roads_lineage_module"],
+        "graph_refs": ["artist:stevie-wonder", "artist:marvin-gaye", "album:marvin-gaye-whats-going-on", "album:stevie-wonder-songs-in-the-key-of-life"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "037_c04",
+        "claim_text": "The Supremes and The Temptations anchor Motown's group-pop precision: lead vocal identity, tight background parts, and songs engineered for immediate recognition.",
+        "source_ref_ids": ["037_motown_museum_story", "037_carnegie_soul"],
+        "confidence": "high",
+        "module_usage": ["what_to_listen_for_prompt", "canonical_examples_block"],
+        "graph_refs": ["artist:the-supremes", "artist:the-temptations", "song_recording:the-temptations-my-girl"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Detroit soul-pop precision: Black vocal brilliance, studio discipline, and hooks built for crossover impact.",
+      "history_capsule": "Motown turned a Detroit house studio into a national hit factory, pairing songwriters, arrangers, house musicians, and artist development into a repeatable pop-soul machine.",
+      "why_it_mattered": "It changed the sound of American pop and created a model for Black music crossing radio boundaries without losing identity.",
+      "what_made_it_distinct": "The groove is tight, the chorus is instant, and every part sounds arranged for lift.",
+      "what_to_listen_for": ["tambourine pulse", "call-and-response vocals", "clean bass movement", "polished group harmonies"],
+      "did_you_know": ["Motown's house-band and quality-control systems were as important as its stars.", "Several Motown artists later pushed far beyond the label's early single formula."],
+      "caution": "Do not confuse Motown with all soul; Detroit polish differs from Stax grit and Muscle Shoals earthiness."
+    }
+  },
+  "family_06/archetype_038": {
+    "archetype_query": "Southern soul, Stax, and Muscle Shoals: Aretha Franklin, Otis Redding, Al Green, Sam & Dave, Memphis and Alabama soul studios.",
+    "selected_sources": [
+      {
+        "source_ref_id": "038_stax_history",
+        "title": "Stax History",
+        "publisher": "Stax Museum of American Soul Music",
+        "url": "https://staxmuseum.com/stax-history/",
+        "source_type": "museum_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct institutional history for the Memphis Stax side of southern soul."
+      },
+      {
+        "source_ref_id": "038_muscle_shoals_history",
+        "title": "History",
+        "publisher": "Muscle Shoals Sound Studio",
+        "url": "https://muscleshoalssoundstudio.org/history/",
+        "source_type": "studio_history",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct studio-history support for the Muscle Shoals recording tradition."
+      },
+      {
+        "source_ref_id": "038_rockhall_aretha",
+        "title": "Aretha Franklin",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/aretha-franklin/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Franklin as a canonical southern soul and Atlantic-era vocal anchor."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "038_reject_motown_story",
+        "title": "The Motown Story",
+        "publisher": "Motown Museum",
+        "url": "https://www.motownmuseum.org/story/motown/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Motown is a necessary contrast, but it does not directly support Stax or Muscle Shoals claims."
+      }
+    ],
+    "why_selected_sources_fit": "The sources directly cover both core southern studios plus a canonical vocalist whose records embody the lane.",
+    "claims": [
+      {
+        "claim_id": "038_c01",
+        "claim_text": "Southern soul is marked by gospel intensity, horn-driven arrangements, earthy rhythm sections, and studio scenes in Memphis and Muscle Shoals.",
+        "source_ref_ids": ["038_stax_history", "038_muscle_shoals_history", "038_rockhall_aretha"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_06/archetype_038", "artist:aretha-franklin", "artist:otis-redding", "artist:sam-and-dave"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "038_c02",
+        "claim_text": "Stax anchors the Memphis side of the lane, where integrated studio bands, punchy horns, and raw vocal performances created a grittier soul identity than Motown.",
+        "source_ref_ids": ["038_stax_history"],
+        "confidence": "high",
+        "module_usage": ["region_scene_page", "what_made_it_distinct"],
+        "graph_refs": ["artist:otis-redding", "artist:sam-and-dave", "family_06/archetype_038"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "038_c03",
+        "claim_text": "Muscle Shoals matters because its Alabama studio ecosystem gave soul and R&B records a deep, unvarnished rhythmic feel.",
+        "source_ref_ids": ["038_muscle_shoals_history"],
+        "confidence": "high",
+        "module_usage": ["history_capsule", "region_scene_page"],
+        "graph_refs": ["family_06/archetype_038", "artist:aretha-franklin"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "038_c04",
+        "claim_text": "Aretha Franklin's Atlantic-era recordings define the lane's vocal standard: church-rooted command, secular urgency, and rhythm-section heat.",
+        "source_ref_ids": ["038_rockhall_aretha", "038_muscle_shoals_history"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:aretha-franklin", "album:aretha-franklin-i-never-loved-a-man-the-way-i-love-you", "song_recording:aretha-franklin-respect"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Gospel-fired southern R&B with grit, horns, and studio-band heat.",
+      "history_capsule": "Southern soul took shape through Memphis and Muscle Shoals studios where church-trained voices met hard-working rhythm sections and horn arrangements.",
+      "why_it_mattered": "It gave soul music a rawer counterweight to Motown polish and shaped rock, funk, and modern R&B vocal ideals.",
+      "what_made_it_distinct": "The records feel live, sweaty, and vocally urgent even when the writing is tightly crafted.",
+      "what_to_listen_for": ["gospel vocal attack", "punchy horns", "deep pocket rhythm section", "call-and-response energy"],
+      "did_you_know": ["Stax and Muscle Shoals are different studio worlds, but both define southern soul's feel.", "Many southern soul records are as much about the band pocket as the lead singer."],
+      "caution": "Do not use soul as a blanket label; distinguish southern grit from Detroit polish."
+    }
+  },
+  "family_06/archetype_039": {
+    "archetype_query": "Funk, psychedelic soul, and groove canon: James Brown, Sly and the Family Stone, Parliament-Funkadelic, Earth Wind & Fire, groove-first Black pop innovation.",
+    "selected_sources": [
+      {
+        "source_ref_id": "039_britannica_funk",
+        "title": "Funk",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/funk",
+        "source_type": "reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct funk history and style context."
+      },
+      {
+        "source_ref_id": "039_carnegie_funk",
+        "title": "History of Funk",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/funk",
+        "source_type": "genre_timeline",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Connects funk to Black music history, rhythm, dance, and social context."
+      },
+      {
+        "source_ref_id": "039_smithsonian_james_brown",
+        "title": "James Brown: Godfather of Soul",
+        "publisher": "Smithsonian Institution",
+        "url": "https://www.si.edu/spotlight/james-brown",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Brown as the rhythmic and performance anchor for funk."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "039_reject_black_sabbath",
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_type": "museum_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Heavy metal context does not support funk, psychedelic soul, or groove canon claims."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources give direct genre history and a primary canonical example for groove-first funk.",
+    "claims": [
+      {
+        "claim_id": "039_c01",
+        "claim_text": "Funk makes rhythm the lead idea: bass, drums, guitar, horns, and vocals interlock around the one more than around verse-chorus storytelling.",
+        "source_ref_ids": ["039_britannica_funk", "039_carnegie_funk", "039_smithsonian_james_brown"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_06/archetype_039", "artist:james-brown"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "039_c02",
+        "claim_text": "James Brown anchors the groove canon by turning band hits, vamps, and rhythmic commands into the primary structure of the record.",
+        "source_ref_ids": ["039_smithsonian_james_brown", "039_britannica_funk"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "history_capsule"],
+        "graph_refs": ["artist:james-brown", "album:james-brown-live-at-the-apollo", "song_recording:james-brown-i-got-you-i-feel-good"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "039_c03",
+        "claim_text": "Sly and the Family Stone connect funk to psychedelic soul, multiracial rock-era band identity, and social-utopian pop hooks.",
+        "source_ref_ids": ["039_carnegie_funk", "039_britannica_funk"],
+        "confidence": "medium_high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:sly-and-the-family-stone", "album:sly-and-the-family-stone-stand", "song_recording:sly-and-the-family-stone-everyday-people"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "039_c04",
+        "claim_text": "Parliament-Funkadelic expands the lane into Afrofuturist mythology, heavy psychedelic guitar, and long-form funk world-building.",
+        "source_ref_ids": ["039_britannica_funk", "039_carnegie_funk"],
+        "confidence": "medium_high",
+        "module_usage": ["why_it_mattered", "did_you_know_card"],
+        "graph_refs": ["artist:parliament-funkadelic", "family_06/archetype_039"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Groove-first soul music where rhythm, bass, and band hits become the main event.",
+      "history_capsule": "Funk grew from soul and R&B by pushing syncopation, bass, drums, and collective groove to the front, then expanded through psychedelic soul and cosmic stagecraft.",
+      "why_it_mattered": "It became a foundation for disco, hip-hop sampling, dance music, and modern R&B rhythm.",
+      "what_made_it_distinct": "The groove does not support the song; the groove is the song.",
+      "what_to_listen_for": ["emphasis on the one", "syncopated bass", "chicken-scratch guitar", "horn stabs", "vocal commands"],
+      "did_you_know": ["Funk's repeated vamps later became a deep source for hip-hop sampling.", "Psychedelic soul widened funk's colors and politics."],
+      "caution": "Do not confuse any danceable soul with funk; listen for rhythm-section architecture and groove dominance."
+    }
+  },
+  "family_06/archetype_040": {
+    "archetype_query": "Disco and 1970s dancefloor: Donna Summer, Chic, Gloria Gaynor, Sister Sledge, Saturday Night Fever, club culture, four-on-the-floor pop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "040_britannica_disco",
+        "title": "Disco",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/disco",
+        "source_type": "reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct history and style context for disco."
+      },
+      {
+        "source_ref_id": "040_carnegie_disco",
+        "title": "Disco",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/disco",
+        "source_type": "genre_timeline",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Places disco within Black, Latin, queer, and dance-club histories."
+      },
+      {
+        "source_ref_id": "040_rockhall_donna_summer",
+        "title": "Donna Summer",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/donna-summer/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Summer as a central disco and electronic dance-pop figure."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "040_reject_grandmaster_flash",
+        "title": "Grandmaster Flash and the Furious Five",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/grandmaster-flash-and-the-furious-five/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Hip-hop emerges from overlapping party cultures, but this source is not direct disco evidence."
+      }
+    ],
+    "why_selected_sources_fit": "The sources directly support disco as genre, social dancefloor culture, and Donna Summer's canonical role.",
+    "claims": [
+      {
+        "claim_id": "040_c01",
+        "claim_text": "Disco organizes soul, funk, Latin, and pop materials around the dancefloor, especially steady pulse, extended grooves, and DJ-friendly structure.",
+        "source_ref_ids": ["040_britannica_disco", "040_carnegie_disco"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_06/archetype_040", "artist:chic", "artist:gloria-gaynor", "artist:sister-sledge"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "040_c02",
+        "claim_text": "Donna Summer anchors disco's pop and electronic future, especially where sensual vocal performance meets sequenced production and club scale.",
+        "source_ref_ids": ["040_rockhall_donna_summer", "040_britannica_disco"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "related_roads_lineage_module"],
+        "graph_refs": ["artist:donna-summer", "song_recording:donna-summer-i-feel-love", "song_recording:donna-summer-last-dance", "album:donna-summer-bad-girls"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "040_c03",
+        "claim_text": "Chic represents disco's precision-engineered groove: clipped guitar, elegant bass movement, and arrangements that sound luxurious without losing rhythmic force.",
+        "source_ref_ids": ["040_britannica_disco", "040_carnegie_disco"],
+        "confidence": "medium_high",
+        "module_usage": ["what_to_listen_for_prompt", "canonical_examples_block"],
+        "graph_refs": ["artist:chic", "family_06/archetype_040"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "040_c04",
+        "claim_text": "The Saturday Night Fever-era mainstreaming of disco matters because dancefloor music briefly became the center of mass pop culture.",
+        "source_ref_ids": ["040_britannica_disco", "040_carnegie_disco"],
+        "confidence": "high",
+        "module_usage": ["why_it_mattered", "history_capsule"],
+        "graph_refs": ["album:various-artists-saturday-night-fever", "family_06/archetype_040"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "1970s dancefloor pop built from groove, glamour, clubs, and extended rhythmic release.",
+      "history_capsule": "Disco rose from club cultures where DJs, dancers, producers, and vocalists turned soul and funk materials into continuous dancefloor experiences.",
+      "why_it_mattered": "It changed pop production, club culture, remix logic, and the future of electronic dance music.",
+      "what_made_it_distinct": "The arrangement is designed for bodies in motion: pulse first, song second.",
+      "what_to_listen_for": ["four-on-the-floor kick", "orchestral strings or synths", "clipped rhythm guitar", "extended dance break"],
+      "did_you_know": ["Disco's social history includes Black, Latin, gay, and urban club communities.", "Disco backlash did not stop its production ideas from shaping later pop."],
+      "caution": "Do not reduce disco to novelty; use dancefloor structure, club context, and production craft as the identifiers."
+    }
+  },
+  "family_06/archetype_041": {
+    "archetype_query": "Quiet storm, smooth R&B, and adult soul: Smokey Robinson, Luther Vandross, Anita Baker, Sade, Teddy Pendergrass, late-night adult R&B.",
+    "selected_sources": [
+      {
+        "source_ref_id": "041_allmusic_quiet_storm",
+        "title": "Quiet Storm",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/quiet-storm-ma0000011960",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for quiet storm's smooth adult R&B sound."
+      },
+      {
+        "source_ref_id": "041_rockhall_smokey_robinson",
+        "title": "Smokey Robinson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/smokey-robinson/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Robinson, whose A Quiet Storm gives the format a key name and mood."
+      },
+      {
+        "source_ref_id": "041_grammy_anita_baker",
+        "title": "Anita Baker",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/anita-baker/1073",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Baker as a central smooth adult soul vocalist."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "041_reject_funk",
+        "title": "Funk",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/funk",
+        "source_type": "reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Funk helps with rhythm-family background, but quiet storm is defined by smooth adult intimacy rather than groove dominance."
+      }
+    ],
+    "why_selected_sources_fit": "The set includes direct style support, the naming lineage, and a canonical smooth-R&B vocalist.",
+    "claims": [
+      {
+        "claim_id": "041_c01",
+        "claim_text": "Quiet storm and smooth R&B prioritize late-night intimacy, controlled vocals, plush harmony, and adult romantic pacing.",
+        "source_ref_ids": ["041_allmusic_quiet_storm", "041_rockhall_smokey_robinson", "041_grammy_anita_baker"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_06/archetype_041", "artist:luther-vandross", "artist:anita-baker", "artist:sade"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "041_c02",
+        "claim_text": "Smokey Robinson's A Quiet Storm is a naming and mood anchor for the lane, linking Motown elegance to adult R&B radio atmosphere.",
+        "source_ref_ids": ["041_rockhall_smokey_robinson", "041_allmusic_quiet_storm"],
+        "confidence": "high",
+        "module_usage": ["history_capsule", "did_you_know_card"],
+        "graph_refs": ["album:smokey-robinson-a-quiet-storm", "family_06/archetype_041"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "041_c03",
+        "claim_text": "Anita Baker anchors the jazz-inflected adult soul side, where phrasing, restraint, and warmth matter more than dancefloor propulsion.",
+        "source_ref_ids": ["041_grammy_anita_baker", "041_allmusic_quiet_storm"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:anita-baker", "album:anita-baker-rapture"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "041_c04",
+        "claim_text": "Luther Vandross and Sade show the lane's range from gospel-trained R&B control to cosmopolitan, minimal, jazz-pop smoothness.",
+        "source_ref_ids": ["041_allmusic_quiet_storm", "041_grammy_anita_baker"],
+        "confidence": "medium_high",
+        "module_usage": ["canonical_examples_block", "related_roads_lineage_module"],
+        "graph_refs": ["artist:luther-vandross", "artist:sade", "song_recording:luther-vandross-never-too-much"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Adult R&B for the late-night room: smooth, romantic, controlled, and deeply vocal.",
+      "history_capsule": "Quiet storm emerged from soul and R&B radio traditions that favored mood, intimacy, and adult romance over funk intensity or disco release.",
+      "why_it_mattered": "It created a durable adult R&B language that shaped radio, slow jams, and later smooth soul production.",
+      "what_made_it_distinct": "Everything is softened and focused: tempo, texture, vocal phrasing, and emotional temperature.",
+      "what_to_listen_for": ["silky vocal control", "slow or midtempo groove", "lush chords", "late-night radio mood"],
+      "did_you_know": ["The phrase quiet storm traces to Smokey Robinson's work and radio programming culture.", "Smooth does not mean slight; the vocal craft is often demanding."],
+      "caution": "Do not confuse quiet storm with all ballads; the adult R&B radio mood is the key marker."
+    }
+  },
+  "family_06/archetype_042": {
+    "archetype_query": "New jack swing and 80s-90s R&B pop: Janet Jackson, Teddy Riley, Boyz II Men, TLC, Mary J. Blige, R&B with hip-hop drum programming.",
+    "selected_sources": [
+      {
+        "source_ref_id": "042_allmusic_new_jack_swing",
+        "title": "New Jack Swing",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/new-jack-swing-ma0000002754",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for new jack swing's R&B and hip-hop production fusion."
+      },
+      {
+        "source_ref_id": "042_rockhall_janet_jackson",
+        "title": "Janet Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/janet-jackson/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Jackson as an R&B-pop and dance-pop innovator within the era."
+      },
+      {
+        "source_ref_id": "042_grammy_teddy_riley",
+        "title": "Teddy Riley",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/teddy-riley/11811",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Riley's central producer role in new jack swing."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "042_reject_disco",
+        "title": "Disco",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/disco",
+        "source_type": "reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Dance-pop background is too broad and misses the hip-hop/R&B production fusion."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly identify the style, its producer vocabulary, and a canonical pop-R&B artist example.",
+    "claims": [
+      {
+        "claim_id": "042_c01",
+        "claim_text": "New jack swing fuses R&B vocals with hip-hop-influenced drum programming, clipped swing rhythms, and pop-ready choruses.",
+        "source_ref_ids": ["042_allmusic_new_jack_swing", "042_grammy_teddy_riley"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_06/archetype_042", "artist:janet-jackson", "artist:boyz-ii-men", "artist:tlc"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042_c02",
+        "claim_text": "Teddy Riley is a production anchor because his work codified the hard, syncopated R&B/hip-hop hybrid that named the style.",
+        "source_ref_ids": ["042_grammy_teddy_riley", "042_allmusic_new_jack_swing"],
+        "confidence": "high",
+        "module_usage": ["history_capsule", "did_you_know_card"],
+        "graph_refs": ["family_06/archetype_042"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042_c03",
+        "claim_text": "Janet Jackson's Control and Rhythm Nation-era work shows how new jack swing and R&B-pop could support choreography, social messaging, and superstar persona.",
+        "source_ref_ids": ["042_rockhall_janet_jackson", "042_allmusic_new_jack_swing"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:janet-jackson", "album:janet-jackson-control", "album:janet-jackson-rhythm-nation-1814", "song_recording:janet-jackson-rhythm-nation"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042_c04",
+        "claim_text": "Boyz II Men, TLC, and Mary J. Blige show the lane's spread from vocal-group balladry to hip-hop soul attitude and radio pop crossover.",
+        "source_ref_ids": ["042_allmusic_new_jack_swing", "042_rockhall_janet_jackson"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:boyz-ii-men", "artist:tlc", "artist:mary-j-blige"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Late-80s and 90s R&B pop with hip-hop drums, swing rhythm, and choreographed polish.",
+      "history_capsule": "New jack swing arrived when R&B absorbed hip-hop production energy without giving up vocal hooks, dance performance, or pop ambition.",
+      "why_it_mattered": "It built the bridge from classic R&B bands and quiet storm into hip-hop soul, 90s R&B groups, and modern pop production.",
+      "what_made_it_distinct": "The beat snaps harder than smooth R&B, but the song still depends on melody and vocal arrangement.",
+      "what_to_listen_for": ["swinging programmed drums", "staccato keyboard hits", "R&B vocal stacks", "dance-pop structure"],
+      "did_you_know": ["Producer identity is unusually important in this lane.", "New jack swing helped make hip-hop rhythm part of mainstream R&B grammar."],
+      "caution": "Do not tag every 1990s R&B record as new jack swing; the rhythmic production pattern must be audible."
+    }
+  },
+  "family_06/archetype_043": {
+    "archetype_query": "Neo-soul and conscious R&B: Lauryn Hill, D'Angelo, Erykah Badu, Maxwell, Alicia Keys, late-90s organic soul revival.",
+    "selected_sources": [
+      {
+        "source_ref_id": "043_allmusic_neo_soul",
+        "title": "Neo-Soul",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/neo-soul-ma0000002869",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for neo-soul's organic, retro, hip-hop-aware R&B."
+      },
+      {
+        "source_ref_id": "043_grammy_lauryn_hill",
+        "title": "Lauryn Hill",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/lauryn-hill/10149",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Hill as a central conscious R&B/hip-hop-soul anchor."
+      },
+      {
+        "source_ref_id": "043_britannica_erykah_badu",
+        "title": "Erykah Badu",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Erykah-Badu",
+        "source_type": "reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Badu as a defining neo-soul artist."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "043_reject_motown_story",
+        "title": "The Motown Story",
+        "publisher": "Motown Museum",
+        "url": "https://www.motownmuseum.org/story/motown/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Motown is a historical ancestor but not direct enough for neo-soul's late-1990s aesthetic."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources support the genre frame and two canonical examples from the conscious and bohemian poles.",
+    "claims": [
+      {
+        "claim_id": "043_c01",
+        "claim_text": "Neo-soul revives 1970s soul warmth through hip-hop-era production, live-instrument texture, jazz harmony, and self-consciously Black artistic identity.",
+        "source_ref_ids": ["043_allmusic_neo_soul", "043_grammy_lauryn_hill", "043_britannica_erykah_badu"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_06/archetype_043", "artist:lauryn-hill", "artist:d-angelo", "artist:erykah-badu"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "043_c02",
+        "claim_text": "Lauryn Hill anchors the conscious side by merging rap, singing, social critique, spirituality, and personal confession into one R&B album statement.",
+        "source_ref_ids": ["043_grammy_lauryn_hill", "043_allmusic_neo_soul"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:lauryn-hill", "album:lauryn-hill-the-miseducation-of-lauryn-hill", "song_recording:lauryn-hill-doo-wop-that-thing"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "043_c03",
+        "claim_text": "Erykah Badu anchors neo-soul's bohemian and jazz-inflected identity, where phrasing and persona are as important as hooks.",
+        "source_ref_ids": ["043_britannica_erykah_badu", "043_allmusic_neo_soul"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:erykah-badu", "family_06/archetype_043"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "043_c04",
+        "claim_text": "D'Angelo, Maxwell, and Alicia Keys show the lane's range from analog funk sensuality to piano-centered R&B songcraft.",
+        "source_ref_ids": ["043_allmusic_neo_soul", "043_grammy_lauryn_hill"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:d-angelo", "artist:maxwell", "song_recording:alicia-keys-fallin", "album:d-angelo-brown-sugar"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Hip-hop-era soul revival with organic texture, Black consciousness, and adult R&B depth.",
+      "history_capsule": "Neo-soul emerged in the 1990s as artists reconnected R&B to 1970s soul, jazz, funk, and hip-hop while asserting album-scale identity.",
+      "why_it_mattered": "It gave R&B a prestige album lane and influenced later alternative R&B, conscious rap, and adult soul.",
+      "what_made_it_distinct": "The sound is warm and intentional, often resisting glossy R&B formulas in favor of musicianship and interiority.",
+      "what_to_listen_for": ["live bass or Rhodes", "hip-hop drum feel", "jazz-colored chords", "social or spiritual introspection"],
+      "did_you_know": ["Neo-soul is as much an aesthetic stance as a production style.", "Many anchors move fluidly between rap, soul, jazz, and singer-songwriter roles."],
+      "caution": "Do not label every late-90s R&B song neo-soul; look for organic texture and conscious aesthetic."
+    }
+  },
+  "family_06/archetype_044": {
+    "archetype_query": "Modern R&B, alt-R&B, and bedroom R&B: Frank Ocean, SZA, The Weeknd, Solange, atmospheric post-2010 R&B.",
+    "selected_sources": [
+      {
+        "source_ref_id": "044_allmusic_alternative_rb",
+        "title": "Alternative R&B",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/alternative-r-b-ma0000013375",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for alternative R&B's experimental, atmospheric post-2000s sound."
+      },
+      {
+        "source_ref_id": "044_grammy_frank_ocean",
+        "title": "Frank Ocean",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/frank-ocean/15735",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ocean as a central modern/alt-R&B auteur."
+      },
+      {
+        "source_ref_id": "044_grammy_sza",
+        "title": "SZA",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/sza/188626",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports SZA as a major contemporary R&B and alt-R&B voice."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "044_reject_quiet_storm",
+        "title": "Quiet Storm",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/quiet-storm-ma0000011960",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "A useful ancestor for intimacy, but too smooth-radio-specific for alt-R&B's fractured production and internet-era authorship."
+      }
+    ],
+    "why_selected_sources_fit": "The sources directly support the alt-R&B style and two core contemporary artist examples.",
+    "claims": [
+      {
+        "claim_id": "044_c01",
+        "claim_text": "Modern alt-R&B loosens traditional R&B forms with atmospheric production, diaristic writing, indie/electronic textures, and blurred rap-pop boundaries.",
+        "source_ref_ids": ["044_allmusic_alternative_rb", "044_grammy_frank_ocean", "044_grammy_sza"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_06/archetype_044", "artist:frank-ocean", "artist:sza", "artist:the-weeknd"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044_c02",
+        "claim_text": "Frank Ocean anchors the auteur side of the lane, where narrative fragments, vocal intimacy, and genre-fluid album structure carry the emotional center.",
+        "source_ref_ids": ["044_grammy_frank_ocean", "044_allmusic_alternative_rb"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:frank-ocean", "album:frank-ocean-channel-orange", "album:frank-ocean-blonde", "song_recording:frank-ocean-thinkin-bout-you"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044_c03",
+        "claim_text": "SZA represents the contemporary confessional side, with conversational melody, unstable relationships, and R&B phrasing placed in modern production space.",
+        "source_ref_ids": ["044_grammy_sza", "044_allmusic_alternative_rb"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:sza", "family_06/archetype_044"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "044_c04",
+        "claim_text": "The Weeknd and Solange show the lane's range from nocturnal electronic pop-R&B to artful, politically aware soul minimalism.",
+        "source_ref_ids": ["044_allmusic_alternative_rb", "044_grammy_sza"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:the-weeknd", "artist:solange", "song_recording:frank-ocean-novacane"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Post-2010 R&B that sounds intimate, atmospheric, genre-fluid, and internet-era personal.",
+      "history_capsule": "Alt-R&B grew as artists pulled R&B into indie, electronic, hip-hop, and bedroom-production spaces, making mood and self-narration central.",
+      "why_it_mattered": "It reset R&B prestige for the streaming era and influenced pop's sound of vulnerability and atmosphere.",
+      "what_made_it_distinct": "The track may feel sparse, fractured, or suspended, but the vocal emotion remains R&B-rooted.",
+      "what_to_listen_for": ["hazy synths", "diaristic lyrics", "elastic vocal phrasing", "minimal drums", "genre-blurred structure"],
+      "did_you_know": ["Alt-R&B often treats silence and atmosphere as part of the hook.", "Many anchors cross between R&B, indie, electronic, and rap audiences."],
+      "caution": "Do not use modern release date alone; the alt-R&B signal is in texture, authorship, and genre blur."
+    }
+  },
+  "family_07/archetype_045": {
+    "archetype_query": "Old-school hip-hop and electro-rap foundations: Grandmaster Flash, Sugarhill Gang, Run-DMC, LL Cool J, Beastie Boys, Bronx DJ/MC/block-party origins.",
+    "selected_sources": [
+      {
+        "source_ref_id": "045_cornell_hiphop_collection",
+        "title": "Cornell Hip Hop Collection",
+        "publisher": "Cornell University Library",
+        "url": "https://rmc.library.cornell.edu/hiphop/",
+        "source_type": "institutional_archive",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Institutional archive focused on early hip-hop culture and primary materials."
+      },
+      {
+        "source_ref_id": "045_smithsonian_hiphop_block_party",
+        "title": "Hip-Hop Block Party",
+        "publisher": "National Museum of African American History and Culture",
+        "url": "https://nmaahc.si.edu/explore/stories/hip-hop-block-party",
+        "source_type": "museum_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports block-party culture and hip-hop's social origins."
+      },
+      {
+        "source_ref_id": "045_rockhall_grandmaster_flash",
+        "title": "Grandmaster Flash and the Furious Five",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/grandmaster-flash-and-the-furious-five/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports a canonical old-school group and The Message as a foundational record."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "045_reject_trap_music",
+        "title": "Trap music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trap-music",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Trap is a later southern/modern development, not direct support for old-school foundations."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources cover early hip-hop culture, block-party context, and a canonical old-school example.",
+    "claims": [
+      {
+        "claim_id": "045_c01",
+        "claim_text": "Old-school hip-hop begins as a DJ, MC, dancer, and party culture before it becomes a fully album-centered recording genre.",
+        "source_ref_ids": ["045_cornell_hiphop_collection", "045_smithsonian_hiphop_block_party"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_07/archetype_045", "artist:grandmaster-flash-and-the-furious-five", "artist:run-dmc"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "045_c02",
+        "claim_text": "Grandmaster Flash and the Furious Five anchor the shift from party rhymes to socially observant rap storytelling through The Message.",
+        "source_ref_ids": ["045_rockhall_grandmaster_flash", "045_cornell_hiphop_collection"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:grandmaster-flash-and-the-furious-five", "song_recording:grandmaster-flash-and-the-furious-five-the-message"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "045_c03",
+        "claim_text": "Rapper's Delight marks the recorded-pop breakthrough of rap, but the archetype's roots are broader than that single commercial moment.",
+        "source_ref_ids": ["045_cornell_hiphop_collection", "045_smithsonian_hiphop_block_party"],
+        "confidence": "high",
+        "module_usage": ["history_capsule", "did_you_know_card"],
+        "graph_refs": ["song_recording:the-sugarhill-gang-rappers-delight", "family_07/archetype_045"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "045_c04",
+        "claim_text": "Run-DMC and LL Cool J show the lane hardening into stripped-down drum-machine rap, streetwear image, and rock-era crossover power.",
+        "source_ref_ids": ["045_cornell_hiphop_collection", "045_rockhall_grandmaster_flash"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:run-dmc", "artist:ll-cool-j", "album:run-dmc-raising-hell"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Hip-hop's first recorded era: DJ breaks, MC routines, electro beats, party culture, and early social rap.",
+      "history_capsule": "Old-school hip-hop grew from Bronx block parties and DJ practices into records that introduced rap to national and global audiences.",
+      "why_it_mattered": "It established the core grammar of MC, DJ, breakbeat, crew identity, and street reportage that later rap styles build on.",
+      "what_made_it_distinct": "The energy is direct, rhythmic, and functional: move the party, display skill, and make the beat speak.",
+      "what_to_listen_for": ["breakbeats", "call-and-response MCing", "scratches", "drum machines", "electro synths"],
+      "did_you_know": ["Early hip-hop was a culture before it was a record-bin category.", "The Message expanded rap's subject matter in a lasting way."],
+      "caution": "Do not judge old-school hip-hop by later album-era standards; party function and DJ practice are central."
+    }
+  },
+  "family_07/archetype_046": {
+    "archetype_query": "Golden Age hip-hop, conscious rap, and Native Tongues: Public Enemy, Eric B. & Rakim, A Tribe Called Quest, De La Soul, late-80s/early-90s lyrical and sample innovation.",
+    "selected_sources": [
+      {
+        "source_ref_id": "046_rockhall_public_enemy",
+        "title": "Public Enemy",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/public-enemy/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Public Enemy as a central political and sonic force in golden-age hip-hop."
+      },
+      {
+        "source_ref_id": "046_rockhall_tribe",
+        "title": "A Tribe Called Quest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/a-tribe-called-quest/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Native Tongues/jazz-rap side of the archetype."
+      },
+      {
+        "source_ref_id": "046_britannica_hiphop",
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_type": "reference",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides broader hip-hop cultural context for the golden-age period."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "046_reject_gfunk",
+        "title": "G-Funk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/g-funk-ma0000002627",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "G-funk is a nearby 1990s rap context but not direct support for Native Tongues or golden-age conscious rap."
+      }
+    ],
+    "why_selected_sources_fit": "The sources capture the political/noise-rap pole, the Native Tongues/jazz-rap pole, and the broader hip-hop frame.",
+    "claims": [
+      {
+        "claim_id": "046_c01",
+        "claim_text": "Golden-age hip-hop is marked by dense sampling, rapid stylistic innovation, crew identities, and rising expectations for MC technique.",
+        "source_ref_ids": ["046_rockhall_public_enemy", "046_rockhall_tribe", "046_britannica_hiphop"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_07/archetype_046", "artist:public-enemy", "artist:eric-b-and-rakim", "artist:a-tribe-called-quest"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "046_c02",
+        "claim_text": "Public Enemy anchors the conscious and confrontational side, using militant rhetoric, media critique, and dense production as a political sound.",
+        "source_ref_ids": ["046_rockhall_public_enemy"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:public-enemy", "album:public-enemy-it-takes-a-nation-of-millions-to-hold-us-back", "song_recording:public-enemy-fight-the-power"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "046_c03",
+        "claim_text": "A Tribe Called Quest anchors the Native Tongues side, where jazz samples, conversational flow, Afrocentric style, and playful intelligence reshape rap's mood.",
+        "source_ref_ids": ["046_rockhall_tribe", "046_britannica_hiphop"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:a-tribe-called-quest", "artist:de-la-soul"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "046_c04",
+        "claim_text": "Eric B. & Rakim's Paid in Full represents the archetype's technical MC breakthrough, making internal rhythm and cool authority central listening clues.",
+        "source_ref_ids": ["046_britannica_hiphop", "046_rockhall_public_enemy"],
+        "confidence": "medium_high",
+        "module_usage": ["what_to_listen_for_prompt", "canonical_examples_block"],
+        "graph_refs": ["artist:eric-b-and-rakim", "album:eric-b-and-rakim-paid-in-full"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Late-80s and early-90s rap at a creative peak: samples, lyric technique, politics, humor, and crew identity.",
+      "history_capsule": "Golden-age hip-hop expanded the possibilities of rap records, from Public Enemy's sonic pressure to Native Tongues' jazz-colored playfulness.",
+      "why_it_mattered": "It set durable standards for MC craft, production density, and album-era hip-hop seriousness.",
+      "what_made_it_distinct": "The records sound exploratory and highly authored, as if rap's vocabulary is growing in real time.",
+      "what_to_listen_for": ["dense samples", "lyrical agility", "political or Afrocentric language", "jazz loops", "crew chemistry"],
+      "did_you_know": ["Golden age is a historical shorthand, not one single sound.", "Native Tongues and Public Enemy are different but equally central ways this era expanded rap."],
+      "caution": "Do not reduce golden age to conscious rap only; party, technical, political, and playful strands all matter."
+    }
+  },
+  "family_07/archetype_047": {
+    "archetype_query": "Gangsta rap, West Coast rap, and G-funk: N.W.A, Dr. Dre, Snoop Dogg, 2Pac, Ice Cube, The Chronic, Los Angeles street rap and funk samples.",
+    "selected_sources": [
+      {
+        "source_ref_id": "047_rockhall_nwa",
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports N.W.A as a central gangsta-rap and West Coast rap anchor."
+      },
+      {
+        "source_ref_id": "047_allmusic_gfunk",
+        "title": "G-Funk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/g-funk-ma0000002627",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for the funk-sampled West Coast sound associated with Dr. Dre and Snoop Dogg."
+      },
+      {
+        "source_ref_id": "047_britannica_rap",
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_type": "reference",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides broader rap history context for gangsta rap's place in the genre."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "047_reject_native_tongues",
+        "title": "A Tribe Called Quest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/a-tribe-called-quest/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "A useful golden-age contrast, but not direct support for gangsta rap or G-funk."
+      }
+    ],
+    "why_selected_sources_fit": "The sources identify West Coast gangsta rap, G-funk production, and the larger rap frame without using East Coast or conscious-rap proxies.",
+    "claims": [
+      {
+        "claim_id": "047_c01",
+        "claim_text": "Gangsta rap foregrounds street reportage, confrontation, and moral panic, while West Coast G-funk adds slow-rolling funk samples and melodic synth lines.",
+        "source_ref_ids": ["047_rockhall_nwa", "047_allmusic_gfunk", "047_britannica_rap"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_07/archetype_047", "artist:nwa", "artist:dr-dre", "artist:snoop-dogg"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047_c02",
+        "claim_text": "N.W.A anchors the political controversy and street-documentary side of the lane, making Los Angeles policing and neighborhood reality central to rap's national story.",
+        "source_ref_ids": ["047_rockhall_nwa", "047_britannica_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:nwa", "family_07/archetype_047"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047_c03",
+        "claim_text": "Dr. Dre's The Chronic and Snoop Dogg's Doggystyle define G-funk's smoother branch, where menace and party cool ride the same laid-back groove.",
+        "source_ref_ids": ["047_allmusic_gfunk"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:dr-dre", "artist:snoop-dogg", "album:dr-dre-the-chronic", "album:snoop-dogg-doggystyle", "song_recording:dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047_c04",
+        "claim_text": "2Pac and Ice Cube broaden the archetype from gangsta persona into actorly charisma, social argument, and narrative self-mythology.",
+        "source_ref_ids": ["047_britannica_rap", "047_rockhall_nwa"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:2pac", "artist:ice-cube", "song_recording:ice-cube-it-was-a-good-day"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "West Coast street rap and G-funk: confrontational stories, slow funk grooves, and cinematic rap personas.",
+      "history_capsule": "The lane rises from late-1980s Los Angeles rap into early-1990s G-funk, turning local street narratives and funk sampling into national hip-hop language.",
+      "why_it_mattered": "It changed rap's commercial center, controversy level, production vocabulary, and image of West Coast hip-hop.",
+      "what_made_it_distinct": "The mood is dangerous and relaxed at once: hard stories over smooth, rubbery funk.",
+      "what_to_listen_for": ["whining synth lead", "slow funk bass", "street narrative", "laid-back flow", "cinematic persona"],
+      "did_you_know": ["G-funk softened the groove without softening the subject matter.", "West Coast gangsta rap became one of the biggest pop-culture flashpoints of the 1990s."],
+      "caution": "Do not treat all West Coast rap as gangsta rap; G-funk sound and street-reportage stance are separate but overlapping signals."
+    }
+  },
+  "family_07/archetype_048": {
+    "archetype_query": "East Coast 90s, boom bap, and street canon: Nas, The Notorious B.I.G., Jay-Z, DMX, Wu-Tang, hard drums and New York lyricism.",
+    "selected_sources": [
+      {
+        "source_ref_id": "048_allmusic_east_coast_rap",
+        "title": "East Coast Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/east-coast-rap-ma0000002556",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for East Coast rap lineage and sound."
+      },
+      {
+        "source_ref_id": "048_rockhall_biggie",
+        "title": "The Notorious B.I.G.",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-notorious-big/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Biggie as a canonical East Coast 1990s rap anchor."
+      },
+      {
+        "source_ref_id": "048_grammy_nas",
+        "title": "Nas",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/nas/15675",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Nas as a lyrical and album-canon anchor."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "048_reject_gfunk",
+        "title": "G-Funk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/g-funk-ma0000002627",
+        "source_type": "genre_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "West Coast G-funk is a useful contrast, but not evidence for New York boom-bap and street canon."
+      }
+    ],
+    "why_selected_sources_fit": "The sources cover the East Coast style frame and two canonical artist examples from the lyrical and commercial peaks.",
+    "claims": [
+      {
+        "claim_id": "048_c01",
+        "claim_text": "East Coast 90s boom bap is defined by hard drums, loop-based sample production, dense lyricism, and New York street narrative authority.",
+        "source_ref_ids": ["048_allmusic_east_coast_rap", "048_rockhall_biggie", "048_grammy_nas"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_07/archetype_048", "artist:nas", "artist:the-notorious-big", "artist:jay-z"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "048_c02",
+        "claim_text": "Nas anchors the literary street-observer side, where internal rhyme, detail, and album architecture turn neighborhood reportage into rap canon.",
+        "source_ref_ids": ["048_grammy_nas", "048_allmusic_east_coast_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:nas", "family_07/archetype_048"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "048_c03",
+        "claim_text": "The Notorious B.I.G. anchors the charismatic commercial street-rap side, pairing vivid storytelling with pop-aware hooks and flow control.",
+        "source_ref_ids": ["048_rockhall_biggie", "048_allmusic_east_coast_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:the-notorious-big", "album:the-notorious-big-ready-to-die", "song_recording:the-notorious-big-juicy"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "048_c04",
+        "claim_text": "Jay-Z and DMX show two late-1990s extensions: entrepreneurial slickness and raw Ruff Ryders aggression inside the same East Coast radio universe.",
+        "source_ref_ids": ["048_allmusic_east_coast_rap", "048_rockhall_biggie"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:jay-z", "artist:dmx", "album:dmx-its-dark-and-hell-is-hot", "song_recording:dmx-ruff-ryders-anthem"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "1990s New York rap canon: hard sample drums, street detail, lyrical authority, and myth-sized MC personas.",
+      "history_capsule": "After hip-hop's early and golden-age breakthroughs, East Coast 90s rap sharpened boom-bap production and street storytelling into a dominant album-era language.",
+      "why_it_mattered": "It set high standards for rap lyricism, street narrative, producer-MC chemistry, and album canon debates.",
+      "what_made_it_distinct": "The drums hit square and dry while the MC carries detail, threat, humor, and autobiography.",
+      "what_to_listen_for": ["boom-bap drums", "looped samples", "dense internal rhyme", "street-corner imagery", "DJ scratches"],
+      "did_you_know": ["Boom bap is a sound cue and a historical shorthand.", "East Coast street canon includes both underground credibility and huge mainstream records."],
+      "caution": "Do not mistake any 1990s rap for boom bap; the drum feel and New York lyrical stance matter."
+    }
+  },
+  "family_07/archetype_049": {
+    "archetype_query": "Southern hip-hop, crunk, and trap foundations: OutKast, Lil Wayne, T.I., Ludacris, Juvenile, Atlanta, New Orleans, Memphis, Houston, southern rap emergence.",
+    "selected_sources": [
+      {
+        "source_ref_id": "049_allmusic_southern_rap",
+        "title": "Southern Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/southern-rap-ma0000002769",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for southern rap's regional development."
+      },
+      {
+        "source_ref_id": "049_rockhall_outkast",
+        "title": "OutKast",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/outkast/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports OutKast as a defining southern hip-hop anchor."
+      },
+      {
+        "source_ref_id": "049_britannica_trap_music",
+        "title": "Trap music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trap-music",
+        "source_type": "reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports the trap-foundations branch of the archetype."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "049_reject_east_coast_rap",
+        "title": "East Coast Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/east-coast-rap-ma0000002556",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Useful contrast, but not direct support for southern regional rap claims."
+      }
+    ],
+    "why_selected_sources_fit": "The source set covers southern rap broadly, OutKast's canonical regional breakthrough, and trap's later southern sub-branch.",
+    "claims": [
+      {
+        "claim_id": "049_c01",
+        "claim_text": "Southern hip-hop is not one sound; it links Atlanta, New Orleans, Houston, Memphis, and other scenes through regional flows, bass weight, club function, and local identity.",
+        "source_ref_ids": ["049_allmusic_southern_rap", "049_rockhall_outkast", "049_britannica_trap_music"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_07/archetype_049", "artist:outkast", "artist:lil-wayne", "artist:ti", "artist:ludacris"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049_c02",
+        "claim_text": "OutKast anchors the Atlanta art-rap and funk-soul branch, proving southern rap could be regionally specific, experimental, and commercially major.",
+        "source_ref_ids": ["049_rockhall_outkast", "049_allmusic_southern_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:outkast", "album:outkast-southernplayalisticadillacmuzik"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049_c03",
+        "claim_text": "Trap foundations connect southern street narratives to hi-hat patterns, 808 low end, and Atlanta-centered production language.",
+        "source_ref_ids": ["049_britannica_trap_music", "049_allmusic_southern_rap"],
+        "confidence": "high",
+        "module_usage": ["related_roads_lineage_module", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:ti", "family_07/archetype_049", "family_07/archetype_052"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049_c04",
+        "claim_text": "Lil Wayne, Juvenile, and Ludacris show the lane's mix of punchline charisma, bounce and club rhythm, and southern mainstream takeover.",
+        "source_ref_ids": ["049_allmusic_southern_rap"],
+        "confidence": "medium_high",
+        "module_usage": ["canonical_examples_block", "history_capsule"],
+        "graph_refs": ["artist:lil-wayne", "artist:ludacris", "song_recording:juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up", "song_recording:lil-wayne-a-milli"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Regional southern rap power: bass, drawl, club function, eccentricity, and trap's early blueprint.",
+      "history_capsule": "Southern hip-hop grew from multiple city scenes that were often under-recognized by coastal rap media before becoming central to mainstream rap.",
+      "why_it_mattered": "It shifted hip-hop's geographic center and laid foundations for crunk, trap, and streaming-era rap.",
+      "what_made_it_distinct": "The rhythm often feels lower, looser, more bass-driven, and more regionally coded than East Coast boom bap.",
+      "what_to_listen_for": ["808 bass", "southern drawl", "club chant", "double-time flow", "regional slang"],
+      "did_you_know": ["Southern rap's rise was a multi-city story, not only Atlanta.", "Trap begins as a specific southern street-rap context before becoming a global pop rhythm."],
+      "caution": "Do not merge all southern rap into trap; crunk, bounce, Houston, Atlanta, and New Orleans signals differ."
+    }
+  },
+  "family_07/archetype_050": {
+    "archetype_query": "Pop-rap and mainstream hip-hop crossover: Eminem, Kanye West, Nicki Minaj, Drake, Missy Elliott, 50 Cent, rap as pop monoculture.",
+    "selected_sources": [
+      {
+        "source_ref_id": "050_allmusic_pop_rap",
+        "title": "Pop-Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/pop-rap-ma0000005012",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for rap's pop-crossover branch."
+      },
+      {
+        "source_ref_id": "050_rockhall_eminem",
+        "title": "Eminem",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/eminem/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Eminem as a massive mainstream rap crossover figure."
+      },
+      {
+        "source_ref_id": "050_rockhall_missy_elliott",
+        "title": "Missy Elliott",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/missy-elliott/",
+        "source_type": "museum_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Missy Elliott as a pop-rap, video-era, and production-innovation anchor."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "050_reject_folk_music",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Folk history is unrelated to mainstream hip-hop crossover support."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly support pop-rap as a style and two canonical mainstream innovators.",
+    "claims": [
+      {
+        "claim_id": "050_c01",
+        "claim_text": "Pop-rap turns MC identity, hooks, producer branding, and mass-media charisma into mainstream pop architecture.",
+        "source_ref_ids": ["050_allmusic_pop_rap", "050_rockhall_eminem", "050_rockhall_missy_elliott"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_07/archetype_050", "artist:eminem", "artist:kanye-west", "artist:nicki-minaj", "artist:drake"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050_c02",
+        "claim_text": "Eminem anchors the early-2000s crossover explosion: technical rap, shock persona, MTV visibility, and huge album sales in one package.",
+        "source_ref_ids": ["050_rockhall_eminem", "050_allmusic_pop_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:eminem", "album:eminem-the-marshall-mathers-lp"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050_c03",
+        "claim_text": "Missy Elliott represents pop-rap as audiovisual invention, where futuristic production, hooks, dance, and personality are inseparable.",
+        "source_ref_ids": ["050_rockhall_missy_elliott", "050_allmusic_pop_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["song_recording:missy-elliott-get-ur-freak-on", "song_recording:missy-elliott-work-it"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050_c04",
+        "claim_text": "Kanye West, Nicki Minaj, and Drake show later crossover forms: producer-auteur albums, maximalist rap-pop persona, and melodic streaming-era dominance.",
+        "source_ref_ids": ["050_allmusic_pop_rap", "050_rockhall_eminem", "050_rockhall_missy_elliott"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:kanye-west", "artist:nicki-minaj", "artist:drake", "album:50-cent-get-rich-or-die-tryin"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Rap built for pop-scale reach: hooks, persona, video, production spectacle, and mainstream dominance.",
+      "history_capsule": "As hip-hop became central to popular music, pop-rap gathered artists who could turn rap skill and personality into chart-scale events.",
+      "why_it_mattered": "It made hip-hop one of pop's main languages and changed what a mainstream superstar could sound like.",
+      "what_made_it_distinct": "The rap performance stays central, but the record is engineered for broad recognition and repeat hooks.",
+      "what_to_listen_for": ["big chorus", "producer tag or signature beat", "high-persona delivery", "radio edit energy", "video-ready hook"],
+      "did_you_know": ["Pop-rap can be technically intense as well as commercially accessible.", "Some of the lane's biggest records are driven by visual imagination as much as audio."],
+      "caution": "Do not use popularity alone as proof; the sound must actively merge rap identity with pop architecture."
+    }
+  },
+  "family_07/archetype_051": {
+    "archetype_query": "Alternative, experimental, and indie rap: MF DOOM, Tyler the Creator, Mos Def/Yasiin Bey, The Roots, Madvillain, underground and left-field hip-hop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "051_allmusic_alternative_rap",
+        "title": "Alternative Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/alternative-rap-ma0000012203",
+        "source_type": "genre_reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for alternative rap's left-field and underground approach."
+      },
+      {
+        "source_ref_id": "051_smithsonian_hiphop_block_party",
+        "title": "Hip-Hop Block Party",
+        "publisher": "National Museum of African American History and Culture",
+        "url": "https://nmaahc.si.edu/explore/stories/hip-hop-block-party",
+        "source_type": "museum_reference",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides broader hip-hop cultural grounding without forcing a mainstream frame."
+      },
+      {
+        "source_ref_id": "051_grammy_tyler",
+        "title": "Tyler, The Creator",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/tyler-creator/15240",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Tyler as a contemporary alternative rap auteur example."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "051_reject_country_pop",
+        "title": "Country-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002532",
+        "source_type": "genre_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Country crossover context has no bearing on alternative or experimental rap."
+      }
+    ],
+    "why_selected_sources_fit": "The sources establish alternative rap as a style, keep hip-hop cultural context present, and support a current canonical example.",
+    "claims": [
+      {
+        "claim_id": "051_c01",
+        "claim_text": "Alternative and experimental rap defines itself by refusing a single mainstream rap template, favoring odd samples, unusual personas, live bands, indie scenes, or conceptual albums.",
+        "source_ref_ids": ["051_allmusic_alternative_rap", "051_smithsonian_hiphop_block_party"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "history_capsule"],
+        "graph_refs": ["family_07/archetype_051", "artist:mf-doom", "artist:tyler-the-creator", "artist:the-roots"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "051_c02",
+        "claim_text": "MF DOOM and Madvillainy anchor the crate-digging, masked-persona, fragmented-rhyme side of the lane.",
+        "source_ref_ids": ["051_allmusic_alternative_rap"],
+        "confidence": "medium_high",
+        "module_usage": ["canonical_examples_block", "what_to_listen_for_prompt"],
+        "graph_refs": ["artist:mf-doom", "album:madvillain-madvillainy"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "051_c03",
+        "claim_text": "Tyler, The Creator represents the modern auteur branch, where production, design, character, and melodic rap all become part of the same self-built world.",
+        "source_ref_ids": ["051_grammy_tyler", "051_allmusic_alternative_rap"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "what_made_it_distinct"],
+        "graph_refs": ["artist:tyler-the-creator", "album:tyler-the-creator-flower-boy", "song_recording:tyler-the-creator-earfquake"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "051_c04",
+        "claim_text": "The Roots and Mos Def/Yasiin Bey keep the lane tied to musicianship, Black thought, and live-performance credibility as much as eccentric production.",
+        "source_ref_ids": ["051_allmusic_alternative_rap", "051_smithsonian_hiphop_block_party"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:the-roots", "artist:mos-def-yasiin-bey", "song_recording:kid-cudi-day-n-nite"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "Left-field hip-hop where persona, production, live musicianship, and concept matter as much as mainstream rap function.",
+      "history_capsule": "Alternative rap grew through artists who kept hip-hop's core practices while bending its sounds toward jazz, indie, underground, absurdist, or art-school worlds.",
+      "why_it_mattered": "It widened rap's creative permission and built bridges to indie audiences without abandoning MC culture.",
+      "what_made_it_distinct": "The record often sounds like a self-contained world rather than a format-ready single.",
+      "what_to_listen_for": ["unusual samples", "crooked rhyme patterns", "conceptual persona", "live-band or indie texture", "left-field hooks"],
+      "did_you_know": ["Alternative rap can be playful, political, abstract, or deeply personal.", "Some of its most influential records were not immediate pop blockbusters."],
+      "caution": "Do not use underground status alone; the musical or conceptual departure from mainstream rap is the signal."
+    }
+  },
+  "family_07/archetype_052": {
+    "archetype_query": "Modern trap and streaming-era rap: Kendrick Lamar, Future, Travis Scott, J. Cole, trap production, playlist-era rap albums, 2010s mainstream hip-hop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "052_britannica_trap_music",
+        "title": "Trap music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trap-music",
+        "source_type": "reference",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct reference for trap music's origins, production traits, and mainstream spread."
+      },
+      {
+        "source_ref_id": "052_grammy_kendrick_lamar",
+        "title": "Kendrick Lamar",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/kendrick-lamar/17949",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Kendrick as a central modern rap album and cultural-canon anchor."
+      },
+      {
+        "source_ref_id": "052_grammy_future",
+        "title": "Future",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/future/19052",
+        "source_type": "artist_reference",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Future as a major modern trap and melodic rap figure."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "052_reject_old_school",
+        "title": "Grandmaster Flash and the Furious Five",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/grandmaster-flash-and-the-furious-five/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Foundational hip-hop context is too early to support modern trap or streaming-era claims directly."
+      }
+    ],
+    "why_selected_sources_fit": "The sources cover the trap production base plus two central modern-rap examples from album-canon and melodic-trap branches.",
+    "claims": [
+      {
+        "claim_id": "052_c01",
+        "claim_text": "Modern trap and streaming-era rap centers 808 bass, fast hi-hats, sparse minor-key loops, melodic flows, and playlist-scale repetition.",
+        "source_ref_ids": ["052_britannica_trap_music", "052_grammy_future"],
+        "confidence": "high",
+        "module_usage": ["short_definition", "what_to_listen_for_prompt"],
+        "graph_refs": ["family_07/archetype_052", "artist:future", "artist:travis-scott"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "052_c02",
+        "claim_text": "Future anchors the melodic trap branch, where Auto-Tuned emotional texture and trap rhythm shape a new mainstream rap vocal language.",
+        "source_ref_ids": ["052_grammy_future", "052_britannica_trap_music"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "history_capsule"],
+        "graph_refs": ["artist:future", "family_07/archetype_052"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "052_c03",
+        "claim_text": "Kendrick Lamar represents the prestige album-canon side of modern rap, where concept, narrative, jazz/funk memory, and political language coexist with contemporary hip-hop dominance.",
+        "source_ref_ids": ["052_grammy_kendrick_lamar"],
+        "confidence": "high",
+        "module_usage": ["canonical_examples_block", "why_it_mattered"],
+        "graph_refs": ["artist:kendrick-lamar", "album:kendrick-lamar-good-kid-maad-city", "album:kendrick-lamar-to-pimp-a-butterfly", "song_recording:kendrick-lamar-alright"],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "052_c04",
+        "claim_text": "Travis Scott and J. Cole show two other streaming-era branches: atmospheric spectacle and earnest rapper-producer self-narration.",
+        "source_ref_ids": ["052_britannica_trap_music", "052_grammy_kendrick_lamar", "052_grammy_future"],
+        "confidence": "medium_high",
+        "module_usage": ["related_roads_lineage_module", "canonical_examples_block"],
+        "graph_refs": ["artist:travis-scott", "artist:j-cole", "song_recording:kendrick-lamar-humble"],
+        "audit_status": "supported_by_selected_sources"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "2010s and streaming-era rap, from trap's 808 grammar to prestige rap albums and melodic playlist dominance.",
+      "history_capsule": "Modern rap absorbed southern trap production into the mainstream while streaming changed song length, release cadence, and the speed of influence.",
+      "why_it_mattered": "It made hip-hop the central sound of contemporary pop culture and spread trap rhythm across global pop.",
+      "what_made_it_distinct": "The low end, hi-hat motion, vocal processing, and playlist repeatability are often as important as traditional verse craft.",
+      "what_to_listen_for": ["808 bass drops", "rapid hi-hat rolls", "Auto-Tuned melody", "minor-key loops", "short hook cycles"],
+      "did_you_know": ["Trap began as a regional southern form before becoming pop's dominant rhythmic vocabulary.", "Modern rap also contains album-canon artists who use trap-era context without being only trap artists."],
+      "caution": "Do not call every post-2010 rap track trap; separate production grammar from broader streaming-era rap."
+    }
+  }
+}

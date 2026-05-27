@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/atlas_explainer_render_pack_schema_v0_1.json",
+  "title": "AtlasExplainerRenderPack v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pack_id",
+    "runtime_contract",
+    "rights_policy",
+    "non_mutation_policy",
+    "alpha_v0_mission_boundary",
+    "state_field_contract",
+    "render_surfaces",
+    "entries",
+    "audit"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "pack_id": {
+      "type": "string"
+    },
+    "runtime_contract": {
+      "type": "object"
+    },
+    "rights_policy": {
+      "type": "object"
+    },
+    "non_mutation_policy": {
+      "type": "object"
+    },
+    "alpha_v0_mission_boundary": {
+      "type": "object"
+    },
+    "state_field_contract": {
+      "type": "object"
+    },
+    "render_surfaces": {
+      "type": "array"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "source_references": {
+      "type": "object"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source_research_pack_ids": {
+      "type": "array"
+    },
+    "audit": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

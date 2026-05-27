@@ -1,0 +1,1422 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_13_archetype_099_global-folk-world-fusion-diaspora-roots_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_13/normalized_family_13.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 13,
+    "family_slug": "latin-caribbean-global-pop",
+    "family_name": "Latin, Caribbean, Global Pop",
+    "archetype_id": "099",
+    "archetype_slug": "global-folk-world-fusion-diaspora-roots",
+    "canonical_graph_ref": "family_13/archetype_099",
+    "existing_graph_label_name": "Global Folk / World Fusion / Diaspora Roots",
+    "editorial_display_title": "Global Folk / World Fusion / Diaspora Roots",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:buena-vista-social-club",
+        "object_id": "buena-vista-social-club",
+        "display_label": "Buena Vista Social Club",
+        "source_membership_id": "family-13-artist-099-buena-vista-social-club",
+        "roles": [
+          "anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Buena Vista Social Club provides a recognizable survey branch for 099 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bob-marley-and-the-wailers",
+        "object_id": "bob-marley-and-the-wailers",
+        "display_label": "Bob Marley & The Wailers",
+        "source_membership_id": "family-13-artist-099-bob-marley-and-the-wailers",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Bob Marley & The Wailers provides a recognizable survey branch for 099 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:gipsy-kings",
+        "object_id": "gipsy-kings",
+        "display_label": "Gipsy Kings",
+        "source_membership_id": "family-13-artist-099-gipsy-kings",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Gipsy Kings fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ali-farka-toure",
+        "object_id": "ali-farka-toure",
+        "display_label": "Ali Farka Toure",
+        "source_membership_id": "family-13-artist-099-ali-farka-toure",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ali Farka Toure fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nusrat-fateh-ali-khan",
+        "object_id": "nusrat-fateh-ali-khan",
+        "display_label": "Nusrat Fateh Ali Khan",
+        "source_membership_id": "family-13-artist-099-nusrat-fateh-ali-khan",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Nusrat Fateh Ali Khan fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:miriam-makeba",
+        "object_id": "miriam-makeba",
+        "display_label": "Miriam Makeba",
+        "source_membership_id": "family-13-artist-099-miriam-makeba",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Miriam Makeba fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:youssou-n-dour",
+        "object_id": "youssou-n-dour",
+        "display_label": "Youssou N'Dour",
+        "source_membership_id": "family-13-artist-099-youssou-n-dour",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Youssou N'Dour fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:amadou-and-mariam",
+        "object_id": "amadou-and-mariam",
+        "display_label": "Amadou & Mariam",
+        "source_membership_id": "family-13-artist-099-amadou-and-mariam",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Amadou & Mariam fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:cesaria-evora",
+        "object_id": "cesaria-evora",
+        "display_label": "Cesaria Evora",
+        "source_membership_id": "family-13-artist-099-cesaria-evora",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Cesaria Evora provides a recognizable survey branch for 099 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:manu-chao",
+        "object_id": "manu-chao",
+        "display_label": "Manu Chao",
+        "source_membership_id": "family-13-artist-099-manu-chao",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Manu Chao provides a recognizable survey branch for 099 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ofra-haza",
+        "object_id": "ofra-haza",
+        "display_label": "Ofra Haza",
+        "source_membership_id": "family-13-artist-099-ofra-haza",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ofra Haza fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:deep-forest",
+        "object_id": "deep-forest",
+        "display_label": "Deep Forest",
+        "source_membership_id": "family-13-artist-099-deep-forest",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Deep Forest fills a missing survey branch for 099, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:buena-vista-social-club-buena-vista-social-club",
+        "object_id": "buena-vista-social-club-buena-vista-social-club",
+        "display_label": "Buena Vista Social Club - Buena Vista Social Club",
+        "source_membership_id": "family-13-album-099-buena-vista-social-club-buena-vista-social-club",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Buena Vista Social Club is a useful album-level gateway for 099.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bob-marley-and-the-wailers-legend",
+        "object_id": "bob-marley-and-the-wailers-legend",
+        "display_label": "Legend - Bob Marley & The Wailers",
+        "source_membership_id": "family-13-album-099-bob-marley-and-the-wailers-legend",
+        "roles": [
+          "compilation_gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Legend is a useful album-level gateway for 099.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:gipsy-kings-gipsy-kings",
+        "object_id": "gipsy-kings-gipsy-kings",
+        "display_label": "Gipsy Kings - Gipsy Kings",
+        "source_membership_id": "family-13-album-099-gipsy-kings-gipsy-kings",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Gipsy Kings gives 099 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ali-farka-toure-and-ry-cooder-talking-timbuktu",
+        "object_id": "ali-farka-toure-and-ry-cooder-talking-timbuktu",
+        "display_label": "Talking Timbuktu - Ali Farka Toure and Ry Cooder",
+        "source_membership_id": "family-13-album-099-ali-farka-toure-and-ry-cooder-talking-timbuktu",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Talking Timbuktu gives 099 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nusrat-fateh-ali-khan-mustt-mustt",
+        "object_id": "nusrat-fateh-ali-khan-mustt-mustt",
+        "display_label": "Mustt Mustt - Nusrat Fateh Ali Khan",
+        "source_membership_id": "family-13-album-099-nusrat-fateh-ali-khan-mustt-mustt",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Mustt Mustt gives 099 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:miriam-makeba-pata-pata",
+        "object_id": "miriam-makeba-pata-pata",
+        "display_label": "Pata Pata - Miriam Makeba",
+        "source_membership_id": "family-13-album-099-miriam-makeba-pata-pata",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Pata Pata gives 099 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:amadou-and-mariam-dimanche-a-bamako",
+        "object_id": "amadou-and-mariam-dimanche-a-bamako",
+        "display_label": "Dimanche a Bamako - Amadou & Mariam",
+        "source_membership_id": "family-13-album-099-amadou-and-mariam-dimanche-a-bamako",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Dimanche a Bamako gives 099 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:manu-chao-clandestino",
+        "object_id": "manu-chao-clandestino",
+        "display_label": "Clandestino - Manu Chao",
+        "source_membership_id": "family-13-album-099-manu-chao-clandestino",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Clandestino is a useful album-level gateway for 099.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:cesaria-evora-miss-perfumado",
+        "object_id": "cesaria-evora-miss-perfumado",
+        "display_label": "Miss Perfumado - Cesaria Evora",
+        "source_membership_id": "family-13-album-099-cesaria-evora-miss-perfumado",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Miss Perfumado is a useful album-level gateway for 099.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:buena-vista-social-club-chan-chan",
+        "object_id": "buena-vista-social-club-chan-chan",
+        "display_label": "Chan Chan - Buena Vista Social Club",
+        "source_membership_id": "family-13-song-099-buena-vista-social-club-chan-chan",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Chan Chan gives 099 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bob-marley-and-the-wailers-one-love-people-get-ready",
+        "object_id": "bob-marley-and-the-wailers-one-love-people-get-ready",
+        "display_label": "One Love / People Get Ready - Bob Marley & The Wailers",
+        "source_membership_id": "family-13-song-099-bob-marley-and-the-wailers-one-love-people-get-ready",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "One Love / People Get Ready gives 099 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:gipsy-kings-bamboleo",
+        "object_id": "gipsy-kings-bamboleo",
+        "display_label": "Bamboleo - Gipsy Kings",
+        "source_membership_id": "family-13-song-099-gipsy-kings-bamboleo",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Bamboleo is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nusrat-fateh-ali-khan-mustt-mustt",
+        "object_id": "nusrat-fateh-ali-khan-mustt-mustt",
+        "display_label": "Mustt Mustt - Nusrat Fateh Ali Khan",
+        "source_membership_id": "family-13-song-099-nusrat-fateh-ali-khan-mustt-mustt",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Mustt Mustt is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:youssou-n-dour-and-neneh-cherry-7-seconds",
+        "object_id": "youssou-n-dour-and-neneh-cherry-7-seconds",
+        "display_label": "7 Seconds - Youssou N'Dour and Neneh Cherry",
+        "source_membership_id": "family-13-song-099-youssou-n-dour-and-neneh-cherry-7-seconds",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "7 Seconds is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:manu-chao-me-gustas-tu",
+        "object_id": "manu-chao-me-gustas-tu",
+        "display_label": "Me Gustas Tu - Manu Chao",
+        "source_membership_id": "family-13-song-099-manu-chao-me-gustas-tu",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Me Gustas Tu gives 099 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:miriam-makeba-pata-pata",
+        "object_id": "miriam-makeba-pata-pata",
+        "display_label": "Pata Pata - Miriam Makeba",
+        "source_membership_id": "family-13-song-099-miriam-makeba-pata-pata",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Pata Pata is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ali-farka-toure-and-ry-cooder-ai-du",
+        "object_id": "ali-farka-toure-and-ry-cooder-ai-du",
+        "display_label": "Ai Du - Ali Farka Toure and Ry Cooder",
+        "source_membership_id": "family-13-song-099-ali-farka-toure-and-ry-cooder-ai-du",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ai Du is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:amadou-and-mariam-sabali",
+        "object_id": "amadou-and-mariam-sabali",
+        "display_label": "Sabali - Amadou & Mariam",
+        "source_membership_id": "family-13-song-099-amadou-and-mariam-sabali",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Sabali is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:deep-forest-sweet-lullaby",
+        "object_id": "deep-forest-sweet-lullaby",
+        "display_label": "Sweet Lullaby - Deep Forest",
+        "source_membership_id": "family-13-song-099-deep-forest-sweet-lullaby",
+        "roles": [
+          "boundary",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Sweet Lullaby is a missing song-level survey object for 099, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:cesaria-evora-sodade",
+        "object_id": "cesaria-evora-sodade",
+        "display_label": "Sodade - Cesaria Evora",
+        "source_membership_id": "family-13-song-099-cesaria-evora-sodade",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Sodade gives 099 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ravi-shankar-dhun",
+        "object_id": "ravi-shankar-dhun",
+        "display_label": "Dhun - Ravi Shankar",
+        "source_membership_id": "family-13-song-099-ravi-shankar-dhun",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Dhun gives 099 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:tinariwen-cler-achel",
+        "object_id": "tinariwen-cler-achel",
+        "display_label": "Cler Achel - Tinariwen",
+        "source_membership_id": "family-13-song-099-tinariwen-cler-achel",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Cler Achel gives 099 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f13-artist-bob-marley-and-the-wailers-099",
+        "candidate_id": "survey-f13-artist-bob-marley-and-the-wailers-099",
+        "object_type": "artist",
+        "display_label": "Bob Marley & The Wailers",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-buena-vista-social-club-099",
+        "candidate_id": "survey-f13-artist-buena-vista-social-club-099",
+        "object_type": "artist",
+        "display_label": "Buena Vista Social Club",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-miriam-makeba-099",
+        "candidate_id": "survey-f13-artist-miriam-makeba-099",
+        "object_type": "artist",
+        "display_label": "Miriam Makeba",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-gipsy-kings-099",
+        "candidate_id": "survey-f13-artist-gipsy-kings-099",
+        "object_type": "artist",
+        "display_label": "Gipsy Kings",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-youssou-n-dour-099",
+        "candidate_id": "survey-f13-artist-youssou-n-dour-099",
+        "object_type": "artist",
+        "display_label": "Youssou N'Dour",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-manu-chao-099",
+        "candidate_id": "survey-f13-artist-manu-chao-099",
+        "object_type": "artist",
+        "display_label": "Manu Chao",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-ali-farka-toure-099",
+        "candidate_id": "survey-f13-artist-ali-farka-toure-099",
+        "object_type": "artist",
+        "display_label": "Ali Farka Toure",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-nusrat-fateh-ali-khan-099",
+        "candidate_id": "survey-f13-artist-nusrat-fateh-ali-khan-099",
+        "object_type": "artist",
+        "display_label": "Nusrat Fateh Ali Khan",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-amadou-and-mariam-099",
+        "candidate_id": "survey-f13-artist-amadou-and-mariam-099",
+        "object_type": "artist",
+        "display_label": "Amadou & Mariam",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-ofra-haza-099",
+        "candidate_id": "survey-f13-artist-ofra-haza-099",
+        "object_type": "artist",
+        "display_label": "Ofra Haza",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-cesaria-evora-099",
+        "candidate_id": "survey-f13-artist-cesaria-evora-099",
+        "object_type": "artist",
+        "display_label": "Cesaria Evora",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-ravi-shankar-099",
+        "candidate_id": "survey-f13-artist-ravi-shankar-099",
+        "object_type": "artist",
+        "display_label": "Ravi Shankar",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-deep-forest-099",
+        "candidate_id": "survey-f13-artist-deep-forest-099",
+        "object_type": "artist",
+        "display_label": "Deep Forest",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-tinariwen-099",
+        "candidate_id": "survey-f13-artist-tinariwen-099",
+        "object_type": "artist",
+        "display_label": "Tinariwen",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-buena-vista-social-club-buena-vista-social-club-099",
+        "candidate_id": "survey-f13-album-buena-vista-social-club-buena-vista-social-club-099",
+        "object_type": "album",
+        "display_label": "Buena Vista Social Club",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-gipsy-kings-gipsy-kings-099",
+        "candidate_id": "survey-f13-album-gipsy-kings-gipsy-kings-099",
+        "object_type": "album",
+        "display_label": "Gipsy Kings",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-bob-marley-and-the-wailers-legend-099",
+        "candidate_id": "survey-f13-album-bob-marley-and-the-wailers-legend-099",
+        "object_type": "album",
+        "display_label": "Legend",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-miriam-makeba-pata-pata-099",
+        "candidate_id": "survey-f13-album-miriam-makeba-pata-pata-099",
+        "object_type": "album",
+        "display_label": "Pata Pata",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-nusrat-fateh-ali-khan-mustt-mustt-099",
+        "candidate_id": "survey-f13-album-nusrat-fateh-ali-khan-mustt-mustt-099",
+        "object_type": "album",
+        "display_label": "Mustt Mustt",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-ali-farka-toure-and-ry-cooder-talking-timbuktu-099",
+        "candidate_id": "survey-f13-album-ali-farka-toure-and-ry-cooder-talking-timbuktu-099",
+        "object_type": "album",
+        "display_label": "Talking Timbuktu",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f13-artist-deep-forest-099",
+        "question_id": "boundary-survey-f13-artist-deep-forest-099",
+        "display_label": "Deep Forest",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f13-song_recording-deep-forest-sweet-lullaby-099",
+        "question_id": "boundary-survey-f13-song_recording-deep-forest-sweet-lullaby-099",
+        "display_label": "Sweet Lullaby",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f13-artist-deep-forest-099",
+        "probe_id": "probe-survey-f13-artist-deep-forest-099",
+        "entity_type": "artist",
+        "display_label": "Deep Forest",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f13-song_recording-deep-forest-sweet-lullaby-099",
+        "probe_id": "probe-survey-f13-song_recording-deep-forest-sweet-lullaby-099",
+        "entity_type": "song_recording",
+        "display_label": "Sweet Lullaby",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_13/archetype_098"
+    ],
+    "before_archetype_refs": [
+      "family_13/archetype_098"
+    ],
+    "after_archetype_refs": []
+  },
+  "source_references": {
+    "canonical_graph_family_13": {
+      "title": "Normalized canonical graph export, Family 13",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_13/normalized_family_13.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "smithsonian_world_music": {
+      "title": "World Music",
+      "publisher": "Smithsonian Folkways",
+      "url": "https://folkways.si.edu/world/music",
+      "source_type": "reference",
+      "audit_use": "Provides archival and educational context for global folk/world-music circulation.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Provides archival and educational context for global folk/world-music circulation."
+    },
+    "britannica_folk_music": {
+      "title": "Folk music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/folk-music",
+      "source_type": "reference",
+      "audit_use": "Supports oral, regional, and community-rooted musical traditions behind the route.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supports oral, regional, and community-rooted musical traditions behind the route."
+    },
+    "britannica_bob_marley": {
+      "title": "Bob Marley",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Bob-Marley",
+      "source_type": "reference",
+      "audit_use": "Supports Bob Marley and the Wailers as reggae/diaspora-rooted global gateway examples.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Bob Marley and the Wailers as reggae/diaspora-rooted global gateway examples."
+    },
+    "world_circuit_buena_vista": {
+      "title": "Buena Vista Social Club",
+      "publisher": "World Circuit Records",
+      "url": "https://worldcircuit.co.uk/artists/buena-vista-social-club/",
+      "source_type": "reference",
+      "audit_use": "Supports Buena Vista Social Club as an album/project gateway for Cuban roots music.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Buena Vista Social Club as an album/project gateway for Cuban roots music."
+    },
+    "smithsonian_folkways_world": {
+      "title": "World Music",
+      "publisher": "Smithsonian Folkways",
+      "url": "https://folkways.si.edu/world/music",
+      "source_type": "archive_label",
+      "audit_use": "Global folk, diaspora roots, and archival context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Global folk, diaspora roots, and archival context."
+    },
+    "smithsonian_folkways": {
+      "title": "Smithsonian Folkways",
+      "publisher": "Smithsonian Folkways",
+      "url": "https://folkways.si.edu/",
+      "source_type": "archive_label",
+      "audit_use": "Folk, protest, roots, children's, and global archival recording context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Folk, protest, roots, children's, and global archival recording context."
+    },
+    "loc_latin_music": {
+      "title": "Hispanic and Latino Americans in Music",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/collections/hispanic-and-latino-americans-in-music/",
+      "source_type": "archive_reference",
+      "audit_use": "Library of Congress collection context for Latino music history.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Library of Congress collection context for Latino music history."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "099-d-01",
+      "claim_text": "This archetype gathers global roots, folk, reggae, Cuban son, and diaspora fusion examples that travel through heritage, place, and cross-cultural discovery.",
+      "source_ref_ids": [
+        "smithsonian_world_music",
+        "britannica_folk_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_13/archetype_099"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "099-d-02",
+      "claim_text": "Buena Vista Social Club anchors the archival-revival side: older Cuban styles became newly legible to global listeners through a named recording project.",
+      "source_ref_ids": [
+        "world_circuit_buena_vista",
+        "smithsonian_world_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:buena-vista-social-club",
+        "album:buena-vista-social-club-buena-vista-social-club",
+        "song_recording:buena-vista-social-club-chan-chan"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "099-d-03",
+      "claim_text": "Bob Marley and the Wailers make the diaspora roots side audible because reggae carries spiritual, political, and pop-gateway force at the same time.",
+      "source_ref_ids": [
+        "britannica_bob_marley",
+        "smithsonian_world_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "did_you_know"
+      ],
+      "graph_refs": [
+        "artist:bob-marley-and-the-wailers",
+        "song_recording:bob-marley-and-the-wailers-one-love-people-get-ready"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "099-d-04",
+      "claim_text": "Listen for acoustic or regional timbres, ensemble groove, non-US pop centers, and songs that feel tied to place even when they circulate globally.",
+      "source_ref_ids": [
+        "britannica_folk_music",
+        "smithsonian_world_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_13/archetype_099"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "099-global_folk_world_fusion_diaspora_roots-boundary",
+      "claim_text": "Global Folk / World Fusion / Diaspora Roots's boundary is clearest when regional instrumentation and diaspora vocal identity appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "smithsonian_world_music",
+        "britannica_folk_music"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_13/archetype_099",
+        "artist:buena-vista-social-club",
+        "artist:bob-marley-and-the-wailers"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "099-global_folk_world_fusion_diaspora_roots-examples",
+      "claim_text": "Buena Vista Social Club, Bob Marley & The Wailers, Buena Vista Social Club - Buena Vista Social Club gives Global Folk / World Fusion / Diaspora Roots concrete anchors because the examples expose ensemble groove inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "britannica_folk_music",
+        "britannica_bob_marley"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_13/archetype_099",
+        "artist:buena-vista-social-club",
+        "artist:bob-marley-and-the-wailers"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Global roots and diaspora music where place, tradition, and cross-cultural discovery carry the signal.",
+    "history_capsule": "Buena Vista Social Club, Bob Marley and the Wailers, Miriam Makeba, Youssou N Dour, Ravi Shankar, and others make the route a map of roots forms entering global listening.",
+    "why_it_mattered": "It gives Atlas a way to recognize listeners whose taste is organized by musical place, heritage, and transnational memory.",
+    "what_made_it_distinct": "The route values rooted sound and cultural pathway more than a single style or pop market.",
+    "what_to_listen_for": [
+      "regional instrumentation",
+      "diaspora vocal identity",
+      "ensemble groove",
+      "language/place markers",
+      "roots-to-global production"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:buena-vista-social-club",
+        "example_type": "artist",
+        "display_label": "Buena Vista Social Club",
+        "why_this_example_matters": "Buena Vista Social Club anchors Global Folk / World Fusion / Diaspora Roots by making lyric-centered phrasing and acoustic or piano-led space easier to hear.",
+        "what_to_listen_for": [
+          "regional instrumentation",
+          "diaspora vocal identity"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:bob-marley-and-the-wailers",
+        "example_type": "artist",
+        "display_label": "Bob Marley & The Wailers",
+        "why_this_example_matters": "Bob Marley & The Wailers anchors Global Folk / World Fusion / Diaspora Roots by making acoustic or piano-led space and intimate vocal presence easier to hear.",
+        "what_to_listen_for": [
+          "diaspora vocal identity",
+          "ensemble groove"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:buena-vista-social-club-buena-vista-social-club",
+        "example_type": "album",
+        "display_label": "Buena Vista Social Club - Buena Vista Social Club",
+        "why_this_example_matters": "Buena Vista Social Club - Buena Vista Social Club anchors Global Folk / World Fusion / Diaspora Roots by making intimate vocal presence and narrative detail easier to hear.",
+        "what_to_listen_for": [
+          "ensemble groove",
+          "language/place markers"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:bob-marley-and-the-wailers-legend",
+        "example_type": "album",
+        "display_label": "Legend - Bob Marley & The Wailers",
+        "why_this_example_matters": "Legend - Bob Marley & The Wailers anchors Global Folk / World Fusion / Diaspora Roots by making narrative detail and roots sources carried by personal authorship easier to hear.",
+        "what_to_listen_for": [
+          "language/place markers",
+          "roots-to-global production"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:buena-vista-social-club-chan-chan",
+        "example_type": "song_recording",
+        "display_label": "Chan Chan - Buena Vista Social Club",
+        "why_this_example_matters": "Chan Chan - Buena Vista Social Club anchors Global Folk / World Fusion / Diaspora Roots by making roots sources carried by personal authorship and lyric-centered phrasing easier to hear.",
+        "what_to_listen_for": [
+          "roots-to-global production"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:bob-marley-and-the-wailers-one-love-people-get-ready",
+        "example_type": "song_recording",
+        "display_label": "One Love / People Get Ready - Bob Marley & The Wailers",
+        "why_this_example_matters": "One Love / People Get Ready - Bob Marley & The Wailers anchors Global Folk / World Fusion / Diaspora Roots by making lyric-centered phrasing and acoustic or piano-led space easier to hear.",
+        "what_to_listen_for": [
+          "regional instrumentation",
+          "diaspora vocal identity"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_13/archetype_098"
+      ],
+      "after": [],
+      "related": [
+        "family_13/archetype_098"
+      ],
+      "copy": "Use Global Folk / World Fusion / Diaspora Roots as a contextual road inside Latin, Caribbean, Global Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "099-dyk-1",
+        "copy": "Buena Vista Social Club is a project and an archetype gateway, not a genre by itself.",
+        "source_ref_ids": [
+          "smithsonian_world_music",
+          "britannica_folk_music"
+        ]
+      },
+      {
+        "card_id": "099-dyk-2",
+        "copy": "Bob Marley can route reggae discovery without collapsing all global roots into reggae.",
+        "source_ref_ids": [
+          "world_circuit_buena_vista",
+          "smithsonian_world_music"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether global folk / world fusion / diaspora roots is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Global roots and diaspora music where place, tradition, and cross-cultural discovery carry the signal.",
+      "It gives Atlas a way to recognize listeners whose taste is organized by musical place, heritage, and transnational memory.",
+      "The route values rooted sound and cultural pathway more than a single style or pop market."
+    ],
+    "dead_end_false_nearby_caution_language": "Use culturally specific examples; a generic world-music source alone is too broad.",
+    "personalization_hooks": [
+      {
+        "hook_id": "099-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[099]",
+          "atlas_state.family_affinity[13]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[099] >= 0.65 || atlas_state.family_affinity[13] >= 0.65",
+        "copy_variant": "Your Atlas signals make Global Folk / World Fusion / Diaspora Roots useful as a contextual landmark.",
+        "fallback_copy": "Use Global Folk / World Fusion / Diaspora Roots as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "099-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_13/archetype_099 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_13/archetype_099",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Global Folk / World Fusion / Diaspora Roots before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "099-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_13/archetype_099 || atlas_state.boundary_question_results has boundary_negative for family_13/archetype_099",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Global Folk / World Fusion / Diaspora Roots.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "099-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_13/archetype_099 || atlas_state.related_mission_ids references family_13/archetype_099",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "099-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_13/archetype_099 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_13/archetype_099 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_13/archetype_099",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Global Folk / World Fusion / Diaspora Roots.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_13": {
+        "title": "Normalized canonical graph export, Family 13",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_13/normalized_family_13.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "smithsonian_world_music": {
+        "title": "World Music",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/world/music",
+        "source_type": "reference",
+        "audit_use": "Provides archival and educational context for global folk/world-music circulation.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides archival and educational context for global folk/world-music circulation."
+      },
+      "britannica_folk_music": {
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "audit_use": "Supports oral, regional, and community-rooted musical traditions behind the route.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports oral, regional, and community-rooted musical traditions behind the route."
+      },
+      "britannica_bob_marley": {
+        "title": "Bob Marley",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Marley",
+        "source_type": "reference",
+        "audit_use": "Supports Bob Marley and the Wailers as reggae/diaspora-rooted global gateway examples.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Bob Marley and the Wailers as reggae/diaspora-rooted global gateway examples."
+      },
+      "world_circuit_buena_vista": {
+        "title": "Buena Vista Social Club",
+        "publisher": "World Circuit Records",
+        "url": "https://worldcircuit.co.uk/artists/buena-vista-social-club/",
+        "source_type": "reference",
+        "audit_use": "Supports Buena Vista Social Club as an album/project gateway for Cuban roots music.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Buena Vista Social Club as an album/project gateway for Cuban roots music."
+      },
+      "smithsonian_folkways_world": {
+        "title": "World Music",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/world/music",
+        "source_type": "archive_label",
+        "audit_use": "Global folk, diaspora roots, and archival context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Global folk, diaspora roots, and archival context."
+      },
+      "smithsonian_folkways": {
+        "title": "Smithsonian Folkways",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/",
+        "source_type": "archive_label",
+        "audit_use": "Folk, protest, roots, children's, and global archival recording context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Folk, protest, roots, children's, and global archival recording context."
+      },
+      "loc_latin_music": {
+        "title": "Hispanic and Latino Americans in Music",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/hispanic-and-latino-americans-in-music/",
+        "source_type": "archive_reference",
+        "audit_use": "Library of Congress collection context for Latino music history.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Library of Congress collection context for Latino music history."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "099-d-01",
+        "claim_text": "This archetype gathers global roots, folk, reggae, Cuban son, and diaspora fusion examples that travel through heritage, place, and cross-cultural discovery.",
+        "source_ref_ids": [
+          "smithsonian_world_music",
+          "britannica_folk_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_13/archetype_099"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "099-d-02",
+        "claim_text": "Buena Vista Social Club anchors the archival-revival side: older Cuban styles became newly legible to global listeners through a named recording project.",
+        "source_ref_ids": [
+          "world_circuit_buena_vista",
+          "smithsonian_world_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:buena-vista-social-club",
+          "album:buena-vista-social-club-buena-vista-social-club",
+          "song_recording:buena-vista-social-club-chan-chan"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "099-d-03",
+        "claim_text": "Bob Marley and the Wailers make the diaspora roots side audible because reggae carries spiritual, political, and pop-gateway force at the same time.",
+        "source_ref_ids": [
+          "britannica_bob_marley",
+          "smithsonian_world_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "did_you_know"
+        ],
+        "graph_refs": [
+          "artist:bob-marley-and-the-wailers",
+          "song_recording:bob-marley-and-the-wailers-one-love-people-get-ready"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "099-d-04",
+        "claim_text": "Listen for acoustic or regional timbres, ensemble groove, non-US pop centers, and songs that feel tied to place even when they circulate globally.",
+        "source_ref_ids": [
+          "britannica_folk_music",
+          "smithsonian_world_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_13/archetype_099"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "099-global_folk_world_fusion_diaspora_roots-boundary",
+        "claim_text": "Global Folk / World Fusion / Diaspora Roots's boundary is clearest when regional instrumentation and diaspora vocal identity appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "smithsonian_world_music",
+          "britannica_folk_music"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_13/archetype_099",
+          "artist:buena-vista-social-club",
+          "artist:bob-marley-and-the-wailers"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "099-global_folk_world_fusion_diaspora_roots-examples",
+        "claim_text": "Buena Vista Social Club, Bob Marley & The Wailers, Buena Vista Social Club - Buena Vista Social Club gives Global Folk / World Fusion / Diaspora Roots concrete anchors because the examples expose ensemble groove inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "britannica_folk_music",
+          "britannica_bob_marley"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_13/archetype_099",
+          "artist:buena-vista-social-club",
+          "artist:bob-marley-and-the-wailers"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "Global folk world fusion diaspora roots Buena Vista Social Club Bob Marley Miriam Makeba Youssou N Dour",
+    "selected_sources": [
+      {
+        "source_ref_id": "smithsonian_world_music",
+        "title": "World Music",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/world/music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides archival and educational context for global folk/world-music circulation."
+      },
+      {
+        "source_ref_id": "britannica_folk_music",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports oral, regional, and community-rooted musical traditions behind the route."
+      },
+      {
+        "source_ref_id": "britannica_bob_marley",
+        "title": "Bob Marley",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Marley",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Bob Marley and the Wailers as reggae/diaspora-rooted global gateway examples."
+      },
+      {
+        "source_ref_id": "world_circuit_buena_vista",
+        "title": "Buena Vista Social Club",
+        "publisher": "World Circuit Records",
+        "url": "https://worldcircuit.co.uk/artists/buena-vista-social-club/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Buena Vista Social Club as an album/project gateway for Cuban roots music."
+      },
+      {
+        "source_ref_id": "smithsonian_folkways_world",
+        "title": "World Music",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/world/music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Global folk, diaspora roots, and archival context."
+      },
+      {
+        "source_ref_id": "smithsonian_folkways",
+        "title": "Smithsonian Folkways",
+        "publisher": "Smithsonian Folkways",
+        "url": "https://folkways.si.edu/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Folk, protest, roots, children's, and global archival recording context."
+      },
+      {
+        "source_ref_id": "loc_latin_music",
+        "title": "Hispanic and Latino Americans in Music",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/hispanic-and-latino-americans-in-music/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Library of Congress collection context for Latino music history."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_edm",
+        "title": "Electronic dance music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-dance-music",
+        "source_relevance": "wrong_context",
+        "why_rejected": "EDM club/festival history is outside this archetype and would blur the route boundary."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Global folk, diaspora roots, and archival context. Folk, protest, roots, children's, and global archival recording context. Folk tradition, revival, topical song, and acoustic songcraft context. Library of Congress collection context for Latino music history."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  }
+}

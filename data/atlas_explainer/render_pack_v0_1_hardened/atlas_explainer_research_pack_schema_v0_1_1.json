@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/atlas_explainer_research_pack_schema_v0_1_1.json",
+  "title": "AtlasExplainerResearchPack v0.1.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pack_id",
+    "graph_alignment",
+    "content_modules",
+    "source_references",
+    "claim_bank",
+    "rights_policy",
+    "non_mutation_policy",
+    "alpha_v0_mission_boundary",
+    "graph_ref_integrity_audit",
+    "audit"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.1"
+    },
+    "pack_id": {
+      "type": "string"
+    },
+    "graph_alignment": {
+      "type": "object"
+    },
+    "content_modules": {
+      "type": "object"
+    },
+    "source_references": {
+      "type": "object"
+    },
+    "claim_bank": {
+      "type": "array"
+    },
+    "rights_policy": {
+      "type": "object"
+    },
+    "non_mutation_policy": {
+      "type": "object"
+    },
+    "alpha_v0_mission_boundary": {
+      "type": "object"
+    },
+    "atlas_state_field_contract": {
+      "type": "object"
+    },
+    "module_audit_refs": {
+      "type": "object"
+    },
+    "graph_ref_integrity_audit": {
+      "type": "array"
+    },
+    "audit": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

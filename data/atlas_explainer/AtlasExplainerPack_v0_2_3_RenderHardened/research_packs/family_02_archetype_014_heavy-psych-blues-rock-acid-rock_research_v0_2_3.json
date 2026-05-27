@@ -1,0 +1,1344 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_02_archetype_014_heavy-psych-blues-rock-acid-rock_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_2/normalized_family_2.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 2,
+    "family_slug": "beatles-british-invasion-60s-pop-rock",
+    "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+    "archetype_id": "014",
+    "archetype_slug": "heavy-psych-blues-rock-acid-rock",
+    "canonical_graph_ref": "family_02/archetype_014",
+    "existing_graph_label_name": "Heavy Psych / Blues-Rock / Acid Rock",
+    "editorial_display_title": "Heavy Psych / Blues-Rock / Acid Rock",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:the-jimi-hendrix-experience",
+        "object_id": "the-jimi-hendrix-experience",
+        "display_label": "The Jimi Hendrix Experience",
+        "source_membership_id": "family-2-artist-014-the-jimi-hendrix-experience",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing artist-level anchor despite seeded Hendrix album rows.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-doors",
+        "object_id": "the-doors",
+        "display_label": "The Doors",
+        "source_membership_id": "family-2-artist-014-the-doors",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing artist-level dark psych/album-rock anchor despite seeded album rows.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:cream",
+        "object_id": "cream",
+        "display_label": "Cream",
+        "source_membership_id": "family-2-artist-014-cream",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing artist-level heavy psych and blues-rock power trio anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:iron-butterfly",
+        "object_id": "iron-butterfly",
+        "display_label": "Iron Butterfly",
+        "source_membership_id": "family-2-artist-014-iron-butterfly",
+        "roles": [
+          "song_first",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Singular acid-rock mass object required by second pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:steppenwolf",
+        "object_id": "steppenwolf",
+        "display_label": "Steppenwolf",
+        "source_membership_id": "family-2-artist-014-steppenwolf",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Born to Be Wild is an obvious proto-hard-rock/acid-rock survey object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:big-brother-and-the-holding-company",
+        "object_id": "big-brother-and-the-holding-company",
+        "display_label": "Big Brother and the Holding Company",
+        "source_membership_id": "family-2-artist-014-big-brother-and-the-holding-company",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Janis-led acid-blues album and song gateway belongs in heavy-psych edge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:grateful-dead",
+        "object_id": "grateful-dead",
+        "display_label": "Grateful Dead",
+        "source_membership_id": "family-2-artist-014-grateful-dead",
+        "roles": [
+          "bridge",
+          "live_gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Live/acid-jam document matters as a Family 2 bridge without importing whole jam family.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:the-jimi-hendrix-experience-are-you-experienced",
+        "object_id": "the-jimi-hendrix-experience-are-you-experienced",
+        "display_label": "Are You Experienced - The Jimi Hendrix Experience",
+        "source_membership_id": "family-2-album-014-the-jimi-hendrix-experience-are-you-experienced",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Primary Hendrix heavy-psych and guitar vocabulary album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:cream-disraeli-gears",
+        "object_id": "cream-disraeli-gears",
+        "display_label": "Disraeli Gears - Cream",
+        "source_membership_id": "family-2-album-014-cream-disraeli-gears",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Clear heavy-psych album and hard-rock bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-doors-the-doors",
+        "object_id": "the-doors-the-doors",
+        "display_label": "The Doors - The Doors",
+        "source_membership_id": "family-2-album-014-the-doors-the-doors",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass dark-psych album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-jimi-hendrix-experience-electric-ladyland",
+        "object_id": "the-jimi-hendrix-experience-electric-ladyland",
+        "display_label": "Electric Ladyland - The Jimi Hendrix Experience",
+        "source_membership_id": "family-2-album-014-the-jimi-hendrix-experience-electric-ladyland",
+        "roles": [
+          "album_anchor",
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Sprawling studio acid-rock and album-era Hendrix object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:cream-wheels-of-fire",
+        "object_id": "cream-wheels-of-fire",
+        "display_label": "Wheels of Fire - Cream",
+        "source_membership_id": "family-2-album-014-cream-wheels-of-fire",
+        "roles": [
+          "album_anchor",
+          "live_gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Scales heavy psych and live/jam improvisation.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-doors-strange-days",
+        "object_id": "the-doors-strange-days",
+        "display_label": "Strange Days - The Doors",
+        "source_membership_id": "family-2-album-014-the-doors-strange-days",
+        "roles": [
+          "album_anchor",
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Deeper Doors psych album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:13th-floor-elevators-the-psychedelic-sounds-of-the-13th-floor-elevators",
+        "object_id": "13th-floor-elevators-the-psychedelic-sounds-of-the-13th-floor-elevators",
+        "display_label": "The Psychedelic Sounds of the 13th Floor Elevators - 13th Floor Elevators",
+        "source_membership_id": "family-2-album-014-13th-floor-elevators-the-psychedelic-sounds-of-the-13th-floor-elevators",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Acid-rock source album connecting garage, psych, and art-damaged paths.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:blue-cheer-vincebus-eruptum",
+        "object_id": "blue-cheer-vincebus-eruptum",
+        "display_label": "Vincebus Eruptum - Blue Cheer",
+        "source_membership_id": "family-2-album-014-blue-cheer-vincebus-eruptum",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Proto-metal and maximal heavy-psych graph object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:iron-butterfly-in-a-gadda-da-vida",
+        "object_id": "iron-butterfly-in-a-gadda-da-vida",
+        "display_label": "In-A-Gadda-Da-Vida - Iron Butterfly",
+        "source_membership_id": "family-2-album-014-iron-butterfly-in-a-gadda-da-vida",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Singular heavy-psych song/album mass object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:big-brother-and-the-holding-company-cheap-thrills",
+        "object_id": "big-brother-and-the-holding-company-cheap-thrills",
+        "display_label": "Cheap Thrills - Big Brother and the Holding Company",
+        "source_membership_id": "family-2-album-014-big-brother-and-the-holding-company-cheap-thrills",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Janis-led acid-blues album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:the-jimi-hendrix-experience-purple-haze",
+        "object_id": "the-jimi-hendrix-experience-purple-haze",
+        "display_label": "Purple Haze - The Jimi Hendrix Experience",
+        "source_membership_id": "family-2-song-014-the-jimi-hendrix-experience-purple-haze",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Hendrix mass single anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:cream-sunshine-of-your-love",
+        "object_id": "cream-sunshine-of-your-love",
+        "display_label": "Sunshine of Your Love - Cream",
+        "source_membership_id": "family-2-song-014-cream-sunshine-of-your-love",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Cream heavy-psych riff single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-doors-light-my-fire",
+        "object_id": "the-doors-light-my-fire",
+        "display_label": "Light My Fire - The Doors",
+        "source_membership_id": "family-2-song-014-the-doors-light-my-fire",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Doors mass psych single anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-rolling-stones-paint-it-black",
+        "object_id": "the-rolling-stones-paint-it-black",
+        "display_label": "Paint It, Black - The Rolling Stones",
+        "source_membership_id": "family-2-song-014-the-rolling-stones-paint-it-black",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Stones psych-tinged mass single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:steppenwolf-born-to-be-wild",
+        "object_id": "steppenwolf-born-to-be-wild",
+        "display_label": "Born to Be Wild - Steppenwolf",
+        "source_membership_id": "family-2-song-014-steppenwolf-born-to-be-wild",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Biker/proto-hard-rock shorthand.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:iron-butterfly-in-a-gadda-da-vida",
+        "object_id": "iron-butterfly-in-a-gadda-da-vida",
+        "display_label": "In-A-Gadda-Da-Vida - Iron Butterfly",
+        "source_membership_id": "family-2-song-014-iron-butterfly-in-a-gadda-da-vida",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Singular acid-rock mass object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:big-brother-and-the-holding-company-piece-of-my-heart",
+        "object_id": "big-brother-and-the-holding-company-piece-of-my-heart",
+        "display_label": "Piece of My Heart - Big Brother and the Holding Company",
+        "source_membership_id": "family-2-song-014-big-brother-and-the-holding-company-piece-of-my-heart",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Janis-led acid-blues breakthrough.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:13th-floor-elevators-youre-gonna-miss-me",
+        "object_id": "13th-floor-elevators-youre-gonna-miss-me",
+        "display_label": "You're Gonna Miss Me - 13th Floor Elevators",
+        "source_membership_id": "family-2-song-014-13th-floor-elevators-youre-gonna-miss-me",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Intersection of garage, acid-rock, and outsider psych.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-doors-014",
+        "candidate_id": "survey-f2-artist-the-doors-014",
+        "object_type": "artist",
+        "display_label": "The Doors",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-jimi-hendrix-experience-014",
+        "candidate_id": "survey-f2-artist-the-jimi-hendrix-experience-014",
+        "object_type": "artist",
+        "display_label": "The Jimi Hendrix Experience",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-cream-014",
+        "candidate_id": "survey-f2-artist-cream-014",
+        "object_type": "artist",
+        "display_label": "Cream",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-iron-butterfly-014",
+        "candidate_id": "survey-f2-artist-iron-butterfly-014",
+        "object_type": "artist",
+        "display_label": "Iron Butterfly",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-big-brother-and-the-holding-company-014",
+        "candidate_id": "survey-f2-artist-big-brother-and-the-holding-company-014",
+        "object_type": "artist",
+        "display_label": "Big Brother and the Holding Company",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-steppenwolf-014",
+        "candidate_id": "survey-f2-artist-steppenwolf-014",
+        "object_type": "artist",
+        "display_label": "Steppenwolf",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-grateful-dead-014",
+        "candidate_id": "survey-f2-artist-grateful-dead-014",
+        "object_type": "artist",
+        "display_label": "Grateful Dead",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-jimi-hendrix-experience-are-you-experienced-014",
+        "candidate_id": "survey-f2-album-the-jimi-hendrix-experience-are-you-experienced-014",
+        "object_type": "album",
+        "display_label": "Are You Experienced",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-cream-disraeli-gears-014",
+        "candidate_id": "survey-f2-album-cream-disraeli-gears-014",
+        "object_type": "album",
+        "display_label": "Disraeli Gears",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-jimi-hendrix-experience-electric-ladyland-014",
+        "candidate_id": "survey-f2-album-the-jimi-hendrix-experience-electric-ladyland-014",
+        "object_type": "album",
+        "display_label": "Electric Ladyland",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-doors-the-doors-014",
+        "candidate_id": "survey-f2-album-the-doors-the-doors-014",
+        "object_type": "album",
+        "display_label": "The Doors",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-iron-butterfly-in-a-gadda-da-vida-014",
+        "candidate_id": "survey-f2-album-iron-butterfly-in-a-gadda-da-vida-014",
+        "object_type": "album",
+        "display_label": "In-A-Gadda-Da-Vida",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-13th-floor-elevators-the-psychedelic-sounds-of-the-13th-floor-elevators-014",
+        "candidate_id": "survey-f2-album-13th-floor-elevators-the-psychedelic-sounds-of-the-13th-floor-elevators-014",
+        "object_type": "album",
+        "display_label": "The Psychedelic Sounds of the 13th Floor Elevators",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-doors-strange-days-014",
+        "candidate_id": "survey-f2-album-the-doors-strange-days-014",
+        "object_type": "album",
+        "display_label": "Strange Days",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-cream-wheels-of-fire-014",
+        "candidate_id": "survey-f2-album-cream-wheels-of-fire-014",
+        "object_type": "album",
+        "display_label": "Wheels of Fire",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-blue-cheer-vincebus-eruptum-014",
+        "candidate_id": "survey-f2-album-blue-cheer-vincebus-eruptum-014",
+        "object_type": "album",
+        "display_label": "Vincebus Eruptum",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-big-brother-and-the-holding-company-cheap-thrills-014",
+        "candidate_id": "survey-f2-album-big-brother-and-the-holding-company-cheap-thrills-014",
+        "object_type": "album",
+        "display_label": "Cheap Thrills",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-grateful-dead-live-dead-014",
+        "candidate_id": "survey-f2-album-grateful-dead-live-dead-014",
+        "object_type": "album",
+        "display_label": "Live/Dead",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-doors-light-my-fire-014",
+        "candidate_id": "survey-f2-song_recording-the-doors-light-my-fire-014",
+        "object_type": "song_recording",
+        "display_label": "Light My Fire",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-jimi-hendrix-experience-purple-haze-014",
+        "candidate_id": "survey-f2-song_recording-the-jimi-hendrix-experience-purple-haze-014",
+        "object_type": "song_recording",
+        "display_label": "Purple Haze",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_02/archetype_013",
+      "family_02/archetype_015"
+    ],
+    "before_archetype_refs": [
+      "family_02/archetype_013"
+    ],
+    "after_archetype_refs": [
+      "family_02/archetype_015"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_2": {
+      "title": "Normalized canonical graph export, Family 2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_2/normalized_family_2.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "014_britannica_psychedelic_rock": {
+      "title": "Psychedelic rock",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/psychedelic-rock",
+      "source_type": "reference",
+      "audit_use": "Covers the psychedelic-rock context from which heavy psych and acid rock emerge.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Covers the psychedelic-rock context from which heavy psych and acid rock emerge."
+    },
+    "014_britannica_heavy_metal": {
+      "title": "Heavy metal",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/heavy-metal-music",
+      "source_type": "reference",
+      "audit_use": "Useful for the boundary where heavy blues-rock and acid rock feed later metal vocabulary.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Useful for the boundary where heavy blues-rock and acid rock feed later metal vocabulary."
+    },
+    "014_rockhall_hendrix": {
+      "title": "The Jimi Hendrix Experience",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/jimi-hendrix-experience/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Hendrix as a central example of feedback, distortion, virtuosity, and psychedelic blues-rock expansion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Hendrix as a central example of feedback, distortion, virtuosity, and psychedelic blues-rock expansion."
+    },
+    "014_rockhall_cream": {
+      "title": "Cream",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/cream/",
+      "source_type": "museum_reference",
+      "audit_use": "Documents the power-trio and blues-improvisation side of the archetype.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Documents the power-trio and blues-improvisation side of the archetype."
+    },
+    "britannica_psychedelic_rock": {
+      "title": "Psychedelic rock",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/psychedelic-rock",
+      "source_type": "reference",
+      "audit_use": "Psychedelic rock style, late-1960s counterculture, studio and sonic expansion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Psychedelic rock style, late-1960s counterculture, studio and sonic expansion."
+    },
+    "rockhall_doors": {
+      "title": "The Doors",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-doors/",
+      "source_type": "museum_reference",
+      "audit_use": "The Doors as psychedelic, theatrical, and blues-rock counterculture anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "The Doors as psychedelic, theatrical, and blues-rock counterculture anchor."
+    },
+    "rockhall_led_zeppelin": {
+      "title": "Led Zeppelin",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/led-zeppelin/",
+      "source_type": "museum_reference",
+      "audit_use": "Album rock, hard rock, blues-rock, and heavy-riff canon context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Album rock, hard rock, blues-rock, and heavy-riff canon context."
+    },
+    "rockhall_black_sabbath": {
+      "title": "Black Sabbath",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/black-sabbath/",
+      "source_type": "museum_reference",
+      "audit_use": "Heavy-riff, metal, doom, and hard-rock lineage context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Heavy-riff, metal, doom, and hard-rock lineage context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "014-claim-01-heavy-blues-psych",
+      "claim_text": "Heavy psych turns blues-rock into a louder, longer, more distorted language shaped by psychedelic counterculture and amplified solos.",
+      "source_ref_ids": [
+        "014_britannica_psychedelic_rock",
+        "014_rockhall_cream"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_02/archetype_014"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "014-claim-02-hendrix-guitar-world",
+      "claim_text": "Hendrix makes the guitar sound like a complete environment through feedback, wah, distortion, studio effects, and blues-derived phrasing.",
+      "source_ref_ids": [
+        "014_rockhall_hendrix",
+        "014_britannica_psychedelic_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_02/archetype_014",
+        "artist:the-jimi-hendrix-experience",
+        "song_recording:the-jimi-hendrix-experience-purple-haze"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "014-claim-03-power-trio-improv",
+      "claim_text": "Cream shows the power-trio version: blues vocabulary stretched into volume, instrumental competition, and improvisational rock spectacle.",
+      "source_ref_ids": [
+        "014_rockhall_cream"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_02/archetype_014",
+        "artist:cream",
+        "song_recording:cream-sunshine-of-your-love"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "014-claim-04-metal-boundary",
+      "claim_text": "This road is a pre-metal hinge: riffs and heaviness intensify, but the music usually remains tied to blues-rock swing and psychedelic atmosphere.",
+      "source_ref_ids": [
+        "014_britannica_heavy_metal",
+        "014_britannica_psychedelic_rock"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_02/archetype_014",
+        "family_03/archetype_017",
+        "song_recording:steppenwolf-born-to-be-wild"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "014-heavy_psych_blues_rock_acid_rock-boundary",
+      "claim_text": "Heavy Psych / Blues-Rock / Acid Rock's boundary is clearest when Distorted guitar as atmosphere and Extended blues-based soloing appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "014_britannica_psychedelic_rock",
+        "014_rockhall_hendrix"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_014",
+        "artist:the-jimi-hendrix-experience",
+        "artist:the-doors"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "014-heavy_psych_blues_rock_acid_rock-examples",
+      "claim_text": "The Jimi Hendrix Experience, The Doors, Are You Experienced - The Jimi Hendrix Experience gives Heavy Psych / Blues-Rock / Acid Rock concrete anchors because the examples expose Power-trio push and volume inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "014_rockhall_hendrix",
+        "014_rockhall_cream"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_014",
+        "artist:the-jimi-hendrix-experience",
+        "artist:the-doors"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "The late-1960s heavy guitar road where blues-rock, psychedelia, distortion, and extended soloing push toward hard rock and metal.",
+    "history_capsule": "Hendrix, Cream, The Doors, Steppenwolf, and related bands took the blues-rock base of the British Invasion and made it louder, darker, and more exploratory. The sound can be riff-heavy, organ-haunted, feedback-soaked, or jam-driven, but it usually keeps a blues pulse under the psychedelic surface.",
+    "why_it_mattered": "It is one of the clearest bridges from 1960s pop-rock into 1970s hard rock, heavy metal, and arena guitar identity.",
+    "what_made_it_distinct": "Compared with psychedelic pop, it is less cute and less compact. Compared with hard rock, it is more exploratory and acid-colored.",
+    "what_to_listen_for": [
+      "Distorted guitar as atmosphere",
+      "Extended blues-based soloing",
+      "Power-trio push and volume",
+      "Organ or studio effects adding darkness",
+      "Riffs that feel heavier than the song form around them"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:the-jimi-hendrix-experience",
+        "example_type": "artist",
+        "display_label": "The Jimi Hendrix Experience",
+        "why_this_example_matters": "The Jimi Hendrix Experience is a graph-validated anchor for Heavy Psych / Blues-Rock / Acid Rock; use it to hear Distorted guitar as atmosphere.",
+        "what_to_listen_for": [
+          "Distorted guitar as atmosphere",
+          "Extended blues-based soloing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:the-doors",
+        "example_type": "artist",
+        "display_label": "The Doors",
+        "why_this_example_matters": "The Doors is a graph-validated anchor for Heavy Psych / Blues-Rock / Acid Rock; use it to hear Extended blues-based soloing.",
+        "what_to_listen_for": [
+          "Extended blues-based soloing",
+          "Power-trio push and volume"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-jimi-hendrix-experience-are-you-experienced",
+        "example_type": "album",
+        "display_label": "Are You Experienced - The Jimi Hendrix Experience",
+        "why_this_example_matters": "Are You Experienced - The Jimi Hendrix Experience is a graph-validated anchor for Heavy Psych / Blues-Rock / Acid Rock; use it to hear Power-trio push and volume.",
+        "what_to_listen_for": [
+          "Power-trio push and volume",
+          "Organ or studio effects adding darkness"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:cream-disraeli-gears",
+        "example_type": "album",
+        "display_label": "Disraeli Gears - Cream",
+        "why_this_example_matters": "Disraeli Gears - Cream is a graph-validated anchor for Heavy Psych / Blues-Rock / Acid Rock; use it to hear Organ or studio effects adding darkness.",
+        "what_to_listen_for": [
+          "Organ or studio effects adding darkness",
+          "Riffs that feel heavier than the song form around them"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-jimi-hendrix-experience-purple-haze",
+        "example_type": "song_recording",
+        "display_label": "Purple Haze - The Jimi Hendrix Experience",
+        "why_this_example_matters": "Purple Haze - The Jimi Hendrix Experience is a graph-validated anchor for Heavy Psych / Blues-Rock / Acid Rock; use it to hear Riffs that feel heavier than the song form around them.",
+        "what_to_listen_for": [
+          "Riffs that feel heavier than the song form around them"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:cream-sunshine-of-your-love",
+        "example_type": "song_recording",
+        "display_label": "Sunshine of Your Love - Cream",
+        "why_this_example_matters": "Sunshine of Your Love - Cream is a graph-validated anchor for Heavy Psych / Blues-Rock / Acid Rock; use it to hear Distorted guitar as atmosphere.",
+        "what_to_listen_for": [
+          "Distorted guitar as atmosphere",
+          "Extended blues-based soloing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_02/archetype_013"
+      ],
+      "after": [
+        "family_02/archetype_015"
+      ],
+      "related": [
+        "family_02/archetype_013",
+        "family_02/archetype_015"
+      ],
+      "copy": "Use Heavy Psych / Blues-Rock / Acid Rock as a contextual road inside Beatles, British Invasion, 60s Pop-Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "014-dyk-1",
+        "copy": "Some of this lane's heaviest records still swing because the blues base has not disappeared.",
+        "source_ref_ids": [
+          "014_britannica_psychedelic_rock",
+          "014_rockhall_cream"
+        ]
+      },
+      {
+        "card_id": "014-dyk-2",
+        "copy": "The Doors can fit here through mood and organ-driven psych-blues weight, even without a typical lead-guitar hero.",
+        "source_ref_ids": [
+          "014_rockhall_hendrix",
+          "014_britannica_psychedelic_rock"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether heavy psych / blues-rock / acid rock is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "The late-1960s heavy guitar road where blues-rock, psychedelia, distortion, and extended soloing push toward hard rock and metal.",
+      "It is one of the clearest bridges from 1960s pop-rock into 1970s hard rock, heavy metal, and arena guitar identity.",
+      "Compared with psychedelic pop, it is less cute and less compact. Compared with hard rock, it is more exploratory and acid-colored."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not move every loud 1960s record to hard rock; this lane keeps psychedelic space and blues looseness in the foreground.",
+    "personalization_hooks": [
+      {
+        "hook_id": "014-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[014]",
+          "atlas_state.family_affinity[2]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[014] >= 0.65 || atlas_state.family_affinity[2] >= 0.65",
+        "copy_variant": "Your Atlas signals make Heavy Psych / Blues-Rock / Acid Rock useful as a contextual landmark.",
+        "fallback_copy": "Use Heavy Psych / Blues-Rock / Acid Rock as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "014-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_02/archetype_014 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_02/archetype_014",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Heavy Psych / Blues-Rock / Acid Rock before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "014-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_02/archetype_014 || atlas_state.boundary_question_results has boundary_negative for family_02/archetype_014",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Heavy Psych / Blues-Rock / Acid Rock.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "014-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_02/archetype_014 || atlas_state.related_mission_ids references family_02/archetype_014",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "014-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_02/archetype_014 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_02/archetype_014 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_02/archetype_014",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Heavy Psych / Blues-Rock / Acid Rock.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_2": {
+        "title": "Normalized canonical graph export, Family 2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_2/normalized_family_2.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "014_britannica_psychedelic_rock": {
+        "title": "Psychedelic rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/psychedelic-rock",
+        "source_type": "reference",
+        "audit_use": "Covers the psychedelic-rock context from which heavy psych and acid rock emerge.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Covers the psychedelic-rock context from which heavy psych and acid rock emerge."
+      },
+      "014_britannica_heavy_metal": {
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_type": "reference",
+        "audit_use": "Useful for the boundary where heavy blues-rock and acid rock feed later metal vocabulary.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for the boundary where heavy blues-rock and acid rock feed later metal vocabulary."
+      },
+      "014_rockhall_hendrix": {
+        "title": "The Jimi Hendrix Experience",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/jimi-hendrix-experience/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Hendrix as a central example of feedback, distortion, virtuosity, and psychedelic blues-rock expansion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Hendrix as a central example of feedback, distortion, virtuosity, and psychedelic blues-rock expansion."
+      },
+      "014_rockhall_cream": {
+        "title": "Cream",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/cream/",
+        "source_type": "museum_reference",
+        "audit_use": "Documents the power-trio and blues-improvisation side of the archetype.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the power-trio and blues-improvisation side of the archetype."
+      },
+      "britannica_psychedelic_rock": {
+        "title": "Psychedelic rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/psychedelic-rock",
+        "source_type": "reference",
+        "audit_use": "Psychedelic rock style, late-1960s counterculture, studio and sonic expansion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Psychedelic rock style, late-1960s counterculture, studio and sonic expansion."
+      },
+      "rockhall_doors": {
+        "title": "The Doors",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-doors/",
+        "source_type": "museum_reference",
+        "audit_use": "The Doors as psychedelic, theatrical, and blues-rock counterculture anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The Doors as psychedelic, theatrical, and blues-rock counterculture anchor."
+      },
+      "rockhall_led_zeppelin": {
+        "title": "Led Zeppelin",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/led-zeppelin/",
+        "source_type": "museum_reference",
+        "audit_use": "Album rock, hard rock, blues-rock, and heavy-riff canon context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Album rock, hard rock, blues-rock, and heavy-riff canon context."
+      },
+      "rockhall_black_sabbath": {
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_type": "museum_reference",
+        "audit_use": "Heavy-riff, metal, doom, and hard-rock lineage context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Heavy-riff, metal, doom, and hard-rock lineage context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "014-claim-01-heavy-blues-psych",
+        "claim_text": "Heavy psych turns blues-rock into a louder, longer, more distorted language shaped by psychedelic counterculture and amplified solos.",
+        "source_ref_ids": [
+          "014_britannica_psychedelic_rock",
+          "014_rockhall_cream"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014-claim-02-hendrix-guitar-world",
+        "claim_text": "Hendrix makes the guitar sound like a complete environment through feedback, wah, distortion, studio effects, and blues-derived phrasing.",
+        "source_ref_ids": [
+          "014_rockhall_hendrix",
+          "014_britannica_psychedelic_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "artist:the-jimi-hendrix-experience",
+          "song_recording:the-jimi-hendrix-experience-purple-haze"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014-claim-03-power-trio-improv",
+        "claim_text": "Cream shows the power-trio version: blues vocabulary stretched into volume, instrumental competition, and improvisational rock spectacle.",
+        "source_ref_ids": [
+          "014_rockhall_cream"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "artist:cream",
+          "song_recording:cream-sunshine-of-your-love"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014-claim-04-metal-boundary",
+        "claim_text": "This road is a pre-metal hinge: riffs and heaviness intensify, but the music usually remains tied to blues-rock swing and psychedelic atmosphere.",
+        "source_ref_ids": [
+          "014_britannica_heavy_metal",
+          "014_britannica_psychedelic_rock"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "family_03/archetype_017",
+          "song_recording:steppenwolf-born-to-be-wild"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014-heavy_psych_blues_rock_acid_rock-boundary",
+        "claim_text": "Heavy Psych / Blues-Rock / Acid Rock's boundary is clearest when Distorted guitar as atmosphere and Extended blues-based soloing appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "014_britannica_psychedelic_rock",
+          "014_rockhall_hendrix"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "artist:the-jimi-hendrix-experience",
+          "artist:the-doors"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014-heavy_psych_blues_rock_acid_rock-examples",
+        "claim_text": "The Jimi Hendrix Experience, The Doors, Are You Experienced - The Jimi Hendrix Experience gives Heavy Psych / Blues-Rock / Acid Rock concrete anchors because the examples expose Power-trio push and volume inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "014_rockhall_hendrix",
+          "014_rockhall_cream"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "artist:the-jimi-hendrix-experience",
+          "artist:the-doors"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Heavy Psych / Blues-Rock / Acid Rock: Jimi Hendrix Experience, Cream, Doors, Steppenwolf, loud blues, distortion, long solos, acid-rock heaviness.",
+    "selected_sources": [
+      {
+        "source_ref_id": "014_britannica_psychedelic_rock",
+        "title": "Psychedelic rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/psychedelic-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Covers the psychedelic-rock context from which heavy psych and acid rock emerge."
+      },
+      {
+        "source_ref_id": "014_britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for the boundary where heavy blues-rock and acid rock feed later metal vocabulary."
+      },
+      {
+        "source_ref_id": "014_rockhall_hendrix",
+        "title": "The Jimi Hendrix Experience",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/jimi-hendrix-experience/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Hendrix as a central example of feedback, distortion, virtuosity, and psychedelic blues-rock expansion."
+      },
+      {
+        "source_ref_id": "014_rockhall_cream",
+        "title": "Cream",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/cream/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the power-trio and blues-improvisation side of the archetype."
+      },
+      {
+        "source_ref_id": "britannica_psychedelic_rock",
+        "title": "Psychedelic rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/psychedelic-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Psychedelic rock style, late-1960s counterculture, studio and sonic expansion."
+      },
+      {
+        "source_ref_id": "rockhall_doors",
+        "title": "The Doors",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-doors/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The Doors as psychedelic, theatrical, and blues-rock counterculture anchor."
+      },
+      {
+        "source_ref_id": "rockhall_led_zeppelin",
+        "title": "Led Zeppelin",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/led-zeppelin/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Album rock, hard rock, blues-rock, and heavy-riff canon context."
+      },
+      {
+        "source_ref_id": "rockhall_black_sabbath",
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Heavy-riff, metal, doom, and hard-rock lineage context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "014_reject_sunshine_pop",
+        "title": "Sunshine Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/sunshine-pop-ma0000012018",
+        "why_rejected": "It belongs near psychedelic pop but lacks the volume, blues improvisation, and heavy-guitar emphasis here.",
+        "source_type": "music_reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 014_britannica_psychedelic_rock anchors the named archetype rather than only its family. Example support: 014_rockhall_hendrix, 014_rockhall_cream ties claims to canonical artists, songs, albums, or scene objects. Context support: 014_britannica_heavy_metal is used only for boundary or lineage framing."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  }
+}

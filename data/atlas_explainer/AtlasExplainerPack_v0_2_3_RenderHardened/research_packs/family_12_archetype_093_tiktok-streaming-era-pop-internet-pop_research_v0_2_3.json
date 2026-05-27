@@ -1,0 +1,1472 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_12_archetype_093_tiktok-streaming-era-pop-internet-pop_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_12/normalized_family_12.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 12,
+    "family_slug": "pop-monoculture-and-persona-pop",
+    "family_name": "Pop Monoculture and Persona Pop",
+    "archetype_id": "093",
+    "archetype_slug": "tiktok-streaming-era-pop-internet-pop",
+    "canonical_graph_ref": "family_12/archetype_093",
+    "existing_graph_label_name": "TikTok / Streaming-Era Pop / Internet Pop",
+    "editorial_display_title": "TikTok / Streaming-Era Pop / Internet Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:olivia-rodrigo",
+        "object_id": "olivia-rodrigo",
+        "display_label": "Olivia Rodrigo",
+        "source_membership_id": "family-12-artist-093-olivia-rodrigo",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming-era teen/persona-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:dua-lipa",
+        "object_id": "dua-lipa",
+        "display_label": "Dua Lipa",
+        "source_membership_id": "family-12-artist-093-dua-lipa",
+        "roles": [
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming-era disco-pop and dance-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:charli-xcx",
+        "object_id": "charli-xcx",
+        "display_label": "Charli XCX",
+        "source_membership_id": "family-12-artist-093-charli-xcx",
+        "roles": [
+          "boundary",
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Internet-era pop architecture and hyperpop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sabrina-carpenter",
+        "object_id": "sabrina-carpenter",
+        "display_label": "Sabrina Carpenter",
+        "source_membership_id": "family-12-artist-093-sabrina-carpenter",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming-era pop monoculture seed with song-first spikes.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:chappell-roan",
+        "object_id": "chappell-roan",
+        "display_label": "Chappell Roan",
+        "source_membership_id": "family-12-artist-093-chappell-roan",
+        "roles": [
+          "gateway",
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Current persona-pop object with fast-rising recognition but lock cautiously.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:doja-cat",
+        "object_id": "doja-cat",
+        "display_label": "Doja Cat",
+        "source_membership_id": "family-12-artist-093-doja-cat",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming/TikTok pop-rap boundary object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:camila-cabello",
+        "object_id": "camila-cabello",
+        "display_label": "Camila Cabello",
+        "source_membership_id": "family-12-artist-093-camila-cabello",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious streaming-era solo-pop bridge from group pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:shawn-mendes",
+        "object_id": "shawn-mendes",
+        "display_label": "Shawn Mendes",
+        "source_membership_id": "family-12-artist-093-shawn-mendes",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious streaming-era adult/teen-pop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ice-spice",
+        "object_id": "ice-spice",
+        "display_label": "Ice Spice",
+        "source_membership_id": "family-12-artist-093-ice-spice",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Internet-pop/rap boundary row; keep survey use song-first.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:tate-mcrae",
+        "object_id": "tate-mcrae",
+        "display_label": "Tate McRae",
+        "source_membership_id": "family-12-artist-093-tate-mcrae",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Streaming-era dance-pop song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:pinkpantheress",
+        "object_id": "pinkpantheress",
+        "display_label": "PinkPantheress",
+        "source_membership_id": "family-12-artist-093-pinkpantheress",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Internet-native pop/UK dance boundary object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:olivia-rodrigo-sour",
+        "object_id": "olivia-rodrigo-sour",
+        "display_label": "Sour - Olivia Rodrigo",
+        "source_membership_id": "family-12-album-093-olivia-rodrigo-sour",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming-era teen/persona-pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:dua-lipa-future-nostalgia",
+        "object_id": "dua-lipa-future-nostalgia",
+        "display_label": "Future Nostalgia - Dua Lipa",
+        "source_membership_id": "family-12-album-093-dua-lipa-future-nostalgia",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Modern disco-pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:charli-xcx-brat",
+        "object_id": "charli-xcx-brat",
+        "display_label": "Brat - Charli XCX",
+        "source_membership_id": "family-12-album-093-charli-xcx-brat",
+        "roles": [
+          "boundary",
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Internet-era pop architecture object; may bridge to Family 18.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sabrina-carpenter-short-n-sweet",
+        "object_id": "sabrina-carpenter-short-n-sweet",
+        "display_label": "Short n Sweet - Sabrina Carpenter",
+        "source_membership_id": "family-12-album-093-sabrina-carpenter-short-n-sweet",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming-era song-first pop album container.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:chappell-roan-the-rise-and-fall-of-a-midwest-princess",
+        "object_id": "chappell-roan-the-rise-and-fall-of-a-midwest-princess",
+        "display_label": "The Rise and Fall of a Midwest Princess - Chappell Roan",
+        "source_membership_id": "family-12-album-093-chappell-roan-the-rise-and-fall-of-a-midwest-princess",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Current persona-pop album-world candidate.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:doja-cat-planet-her",
+        "object_id": "doja-cat-planet-her",
+        "display_label": "Planet Her - Doja Cat",
+        "source_membership_id": "family-12-album-093-doja-cat-planet-her",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Pop-rap streaming album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:olivia-rodrigo-drivers-license",
+        "object_id": "olivia-rodrigo-drivers-license",
+        "display_label": "Drivers License - Olivia Rodrigo",
+        "source_membership_id": "family-12-song-093-olivia-rodrigo-drivers-license",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming-era teen/persona-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:olivia-rodrigo-good-4-u",
+        "object_id": "olivia-rodrigo-good-4-u",
+        "display_label": "Good 4 U - Olivia Rodrigo",
+        "source_membership_id": "family-12-song-093-olivia-rodrigo-good-4-u",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-punk-adjacent streaming pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dua-lipa-levitating",
+        "object_id": "dua-lipa-levitating",
+        "display_label": "Levitating - Dua Lipa",
+        "source_membership_id": "family-12-song-093-dua-lipa-levitating",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming-era disco-pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sabrina-carpenter-espresso",
+        "object_id": "sabrina-carpenter-espresso",
+        "display_label": "Espresso - Sabrina Carpenter",
+        "source_membership_id": "family-12-song-093-sabrina-carpenter-espresso",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Current streaming pop monoculture song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:chappell-roan-good-luck-babe",
+        "object_id": "chappell-roan-good-luck-babe",
+        "display_label": "Good Luck, Babe! - Chappell Roan",
+        "source_membership_id": "family-12-song-093-chappell-roan-good-luck-babe",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Current persona-pop breakthrough; keep lock cautious.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:doja-cat-say-so",
+        "object_id": "doja-cat-say-so",
+        "display_label": "Say So - Doja Cat",
+        "source_membership_id": "family-12-song-093-doja-cat-say-so",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "TikTok/streaming pop-rap crossover object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:charli-xcx-360",
+        "object_id": "charli-xcx-360",
+        "display_label": "360 - Charli XCX",
+        "source_membership_id": "family-12-song-093-charli-xcx-360",
+        "roles": [
+          "boundary",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Internet-era pop architecture marker.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:pinkpantheress-boys-a-liar-pt-2",
+        "object_id": "pinkpantheress-boys-a-liar-pt-2",
+        "display_label": "Boy's a Liar Pt. 2 - PinkPantheress",
+        "source_membership_id": "family-12-song-093-pinkpantheress-boys-a-liar-pt-2",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Internet-native pop/rap collaboration signal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:tate-mcrae-greedy",
+        "object_id": "tate-mcrae-greedy",
+        "display_label": "Greedy - Tate McRae",
+        "source_membership_id": "family-12-song-093-tate-mcrae-greedy",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Streaming-era dance-pop song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ice-spice-princess-diana",
+        "object_id": "ice-spice-princess-diana",
+        "display_label": "Princess Diana - Ice Spice",
+        "source_membership_id": "family-12-song-093-ice-spice-princess-diana",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Internet-pop/rap boundary prompt.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f12-artist-dua-lipa-093",
+        "candidate_id": "survey-f12-artist-dua-lipa-093",
+        "object_type": "artist",
+        "display_label": "Dua Lipa",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-olivia-rodrigo-093",
+        "candidate_id": "survey-f12-artist-olivia-rodrigo-093",
+        "object_type": "artist",
+        "display_label": "Olivia Rodrigo",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-sabrina-carpenter-093",
+        "candidate_id": "survey-f12-artist-sabrina-carpenter-093",
+        "object_type": "artist",
+        "display_label": "Sabrina Carpenter",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-charli-xcx-093",
+        "candidate_id": "survey-f12-artist-charli-xcx-093",
+        "object_type": "artist",
+        "display_label": "Charli XCX",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-doja-cat-093",
+        "candidate_id": "survey-f12-artist-doja-cat-093",
+        "object_type": "artist",
+        "display_label": "Doja Cat",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-camila-cabello-093",
+        "candidate_id": "survey-f12-artist-camila-cabello-093",
+        "object_type": "artist",
+        "display_label": "Camila Cabello",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-shawn-mendes-093",
+        "candidate_id": "survey-f12-artist-shawn-mendes-093",
+        "object_type": "artist",
+        "display_label": "Shawn Mendes",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-chappell-roan-093",
+        "candidate_id": "survey-f12-artist-chappell-roan-093",
+        "object_type": "artist",
+        "display_label": "Chappell Roan",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-tate-mcrae-093",
+        "candidate_id": "survey-f12-artist-tate-mcrae-093",
+        "object_type": "artist",
+        "display_label": "Tate McRae",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-ice-spice-093",
+        "candidate_id": "survey-f12-artist-ice-spice-093",
+        "object_type": "artist",
+        "display_label": "Ice Spice",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-pinkpantheress-093",
+        "candidate_id": "survey-f12-artist-pinkpantheress-093",
+        "object_type": "artist",
+        "display_label": "PinkPantheress",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-charli-xcx-brat-093",
+        "candidate_id": "survey-f12-album-charli-xcx-brat-093",
+        "object_type": "album",
+        "display_label": "Brat",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-dua-lipa-future-nostalgia-093",
+        "candidate_id": "survey-f12-album-dua-lipa-future-nostalgia-093",
+        "object_type": "album",
+        "display_label": "Future Nostalgia",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-sabrina-carpenter-short-n-sweet-093",
+        "candidate_id": "survey-f12-album-sabrina-carpenter-short-n-sweet-093",
+        "object_type": "album",
+        "display_label": "Short n Sweet",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-olivia-rodrigo-sour-093",
+        "candidate_id": "survey-f12-album-olivia-rodrigo-sour-093",
+        "object_type": "album",
+        "display_label": "Sour",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-doja-cat-planet-her-093",
+        "candidate_id": "survey-f12-album-doja-cat-planet-her-093",
+        "object_type": "album",
+        "display_label": "Planet Her",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-chappell-roan-the-rise-and-fall-of-a-midwest-princess-093",
+        "candidate_id": "survey-f12-album-chappell-roan-the-rise-and-fall-of-a-midwest-princess-093",
+        "object_type": "album",
+        "display_label": "The Rise and Fall of a Midwest Princess",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-olivia-rodrigo-drivers-license-093",
+        "candidate_id": "survey-f12-song_recording-olivia-rodrigo-drivers-license-093",
+        "object_type": "song_recording",
+        "display_label": "Drivers License",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-sabrina-carpenter-espresso-093",
+        "candidate_id": "survey-f12-song_recording-sabrina-carpenter-espresso-093",
+        "object_type": "song_recording",
+        "display_label": "Espresso",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-olivia-rodrigo-good-4-u-093",
+        "candidate_id": "survey-f12-song_recording-olivia-rodrigo-good-4-u-093",
+        "object_type": "song_recording",
+        "display_label": "Good 4 U",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-charli-xcx-093",
+        "question_id": "boundary-survey-f12-artist-charli-xcx-093",
+        "display_label": "Charli XCX",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-chappell-roan-093",
+        "question_id": "boundary-survey-f12-artist-chappell-roan-093",
+        "display_label": "Chappell Roan",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-ice-spice-093",
+        "question_id": "boundary-survey-f12-artist-ice-spice-093",
+        "display_label": "Ice Spice",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-pinkpantheress-093",
+        "question_id": "boundary-survey-f12-artist-pinkpantheress-093",
+        "display_label": "PinkPantheress",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-album-charli-xcx-brat-093",
+        "question_id": "boundary-survey-f12-album-charli-xcx-brat-093",
+        "display_label": "Brat",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-album-chappell-roan-the-rise-and-fall-of-a-midwest-princess-093",
+        "question_id": "boundary-survey-f12-album-chappell-roan-the-rise-and-fall-of-a-midwest-princess-093",
+        "display_label": "The Rise and Fall of a Midwest Princess",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-charli-xcx-360-093",
+        "question_id": "boundary-survey-f12-song_recording-charli-xcx-360-093",
+        "display_label": "360",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-pinkpantheress-boys-a-liar-pt-2-093",
+        "question_id": "boundary-survey-f12-song_recording-pinkpantheress-boys-a-liar-pt-2-093",
+        "display_label": "Boy's a Liar Pt. 2",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-ice-spice-princess-diana-093",
+        "question_id": "boundary-survey-f12-song_recording-ice-spice-princess-diana-093",
+        "display_label": "Princess Diana",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-charli-xcx-093",
+        "probe_id": "probe-survey-f12-artist-charli-xcx-093",
+        "entity_type": "artist",
+        "display_label": "Charli XCX",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-chappell-roan-093",
+        "probe_id": "probe-survey-f12-artist-chappell-roan-093",
+        "entity_type": "artist",
+        "display_label": "Chappell Roan",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-ice-spice-093",
+        "probe_id": "probe-survey-f12-artist-ice-spice-093",
+        "entity_type": "artist",
+        "display_label": "Ice Spice",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-pinkpantheress-093",
+        "probe_id": "probe-survey-f12-artist-pinkpantheress-093",
+        "entity_type": "artist",
+        "display_label": "PinkPantheress",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-album-charli-xcx-brat-093",
+        "probe_id": "probe-survey-f12-album-charli-xcx-brat-093",
+        "entity_type": "album",
+        "display_label": "Brat",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-album-chappell-roan-the-rise-and-fall-of-a-midwest-princess-093",
+        "probe_id": "probe-survey-f12-album-chappell-roan-the-rise-and-fall-of-a-midwest-princess-093",
+        "entity_type": "album",
+        "display_label": "The Rise and Fall of a Midwest Princess",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-charli-xcx-360-093",
+        "probe_id": "probe-survey-f12-song_recording-charli-xcx-360-093",
+        "entity_type": "song_recording",
+        "display_label": "360",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-pinkpantheress-boys-a-liar-pt-2-093",
+        "probe_id": "probe-survey-f12-song_recording-pinkpantheress-boys-a-liar-pt-2-093",
+        "entity_type": "song_recording",
+        "display_label": "Boy's a Liar Pt. 2",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-ice-spice-princess-diana-093",
+        "probe_id": "probe-survey-f12-song_recording-ice-spice-princess-diana-093",
+        "entity_type": "song_recording",
+        "display_label": "Princess Diana",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_12/archetype_092"
+    ],
+    "before_archetype_refs": [
+      "family_12/archetype_092"
+    ],
+    "after_archetype_refs": []
+  },
+  "source_references": {
+    "canonical_graph_family_12": {
+      "title": "Normalized canonical graph export, Family 12",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_12/normalized_family_12.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "grammy_olivia_rodrigo": {
+      "title": "Olivia Rodrigo",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/artists/olivia-rodrigo/251882",
+      "source_type": "reference",
+      "audit_use": "Supports Olivia Rodrigo as a streaming-era pop breakthrough and SOUR-era anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Olivia Rodrigo as a streaming-era pop breakthrough and SOUR-era anchor."
+    },
+    "britannica_dua_lipa": {
+      "title": "Dua Lipa",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Dua-Lipa",
+      "source_type": "reference",
+      "audit_use": "Supports Dua Lipa as a modern dance-pop and streaming-era pop example.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Dua Lipa as a modern dance-pop and streaming-era pop example."
+    },
+    "tiktok_music_impact": {
+      "title": "TikTok Music Impact Report",
+      "publisher": "TikTok Newsroom",
+      "url": "https://newsroom.tiktok.com/en-us/tiktoks-impact-on-music",
+      "source_type": "reference",
+      "audit_use": "Provides platform context for viral discovery and song-fragment circulation.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Provides platform context for viral discovery and song-fragment circulation."
+    },
+    "grammy_charli_brat": {
+      "title": "How Charli XCX Turned BRAT Into A Global Phenomenon",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/news/charli-xcx-brat-album-2025-grammys-interview",
+      "source_type": "reference",
+      "audit_use": "Supports the internet-native pop discourse and platform-aware release culture around Charli XCX.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the internet-native pop discourse and platform-aware release culture around Charli XCX."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "britannica_taylor_swift": {
+      "title": "Taylor Swift",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Taylor-Swift",
+      "source_type": "reference",
+      "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+    },
+    "grammy_hyperpop": {
+      "title": "Hyperpop",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/",
+      "source_type": "industry_reference",
+      "audit_use": "Supplemental industry and scene reporting for hyperpop and internet-native pop.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supplemental industry and scene reporting for hyperpop and internet-native pop."
+    },
+    "npr_tiny_desk_discovery": {
+      "title": "Tiny Desk",
+      "publisher": "NPR Music",
+      "url": "https://www.npr.org/series/tiny-desk-concerts/",
+      "source_type": "public_media_archive",
+      "audit_use": "Public-media performance archive for contemporary discovery and cross-genre visibility.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "093-d-01",
+      "claim_text": "The route captures pop shaped by streaming metrics, short-form-video circulation, memeable hooks, and fan discourse as much as by radio programming.",
+      "source_ref_ids": [
+        "tiktok_music_impact",
+        "grammy_olivia_rodrigo",
+        "grammy_charli_brat"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_12/archetype_093",
+        "artist:olivia-rodrigo",
+        "artist:charli-xcx"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "093-d-02",
+      "claim_text": "Olivia Rodrigo anchors the confessional pop-rock edge because drivers license and SOUR show how a personal narrative can become a platform-scale event.",
+      "source_ref_ids": [
+        "grammy_olivia_rodrigo",
+        "tiktok_music_impact"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:olivia-rodrigo",
+        "album:olivia-rodrigo-sour",
+        "song_recording:olivia-rodrigo-drivers-license"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "093-d-03",
+      "claim_text": "Dua Lipa keeps the lane connected to polished dance-pop, proving that internet-era pop can still be sleek, radio-friendly, and historically referential.",
+      "source_ref_ids": [
+        "britannica_dua_lipa",
+        "tiktok_music_impact"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "did_you_know"
+      ],
+      "graph_refs": [
+        "artist:dua-lipa",
+        "album:dua-lipa-future-nostalgia"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "093-d-04",
+      "claim_text": "Listen for instantly excerptable hooks, personality-forward vocals, and production details that survive as clips, captions, and repeatable fan gestures.",
+      "source_ref_ids": [
+        "tiktok_music_impact",
+        "grammy_charli_brat"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_12/archetype_093"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "093-tiktok_streaming_era_pop_internet_pop-boundary",
+      "claim_text": "TikTok / Streaming-Era Pop / Internet Pop's boundary is clearest when clip-ready hook fragments and confessional immediacy appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "grammy_olivia_rodrigo",
+        "britannica_dua_lipa"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_093",
+        "artist:olivia-rodrigo",
+        "artist:dua-lipa"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "093-tiktok_streaming_era_pop_internet_pop-examples",
+      "claim_text": "Olivia Rodrigo, Dua Lipa, Sour - Olivia Rodrigo gives TikTok / Streaming-Era Pop / Internet Pop concrete anchors because the examples expose internet-aware persona inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "britannica_dua_lipa",
+        "tiktok_music_impact"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_093",
+        "artist:olivia-rodrigo",
+        "artist:dua-lipa"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Streaming-era pop whose hooks, personas, and release cycles are amplified by platforms and internet fandom.",
+    "history_capsule": "Olivia Rodrigo, Dua Lipa, Charli XCX, Doja Cat, Sabrina Carpenter, and related artists show how pop circulation changed when clips and discourse became part of discovery.",
+    "why_it_mattered": "It explains why a short bridge, lyric caption, or personality meme can become the way listeners first meet a song.",
+    "what_made_it_distinct": "The song still has to work, but its smallest repeatable parts matter more than in earlier radio monocultures.",
+    "what_to_listen_for": [
+      "clip-ready hook fragments",
+      "confessional immediacy",
+      "internet-aware persona",
+      "genre-fluid polish",
+      "fan-discourse afterlife"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:olivia-rodrigo",
+        "example_type": "artist",
+        "display_label": "Olivia Rodrigo",
+        "why_this_example_matters": "Olivia Rodrigo anchors TikTok / Streaming-Era Pop / Internet Pop by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "clip-ready hook fragments",
+          "confessional immediacy"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:dua-lipa",
+        "example_type": "artist",
+        "display_label": "Dua Lipa",
+        "why_this_example_matters": "Dua Lipa anchors TikTok / Streaming-Era Pop / Internet Pop by making vocal persona and high-definition production easier to hear.",
+        "what_to_listen_for": [
+          "confessional immediacy",
+          "internet-aware persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:olivia-rodrigo-sour",
+        "example_type": "album",
+        "display_label": "Sour - Olivia Rodrigo",
+        "why_this_example_matters": "Sour - Olivia Rodrigo anchors TikTok / Streaming-Era Pop / Internet Pop by making high-definition production and dance or video-ready structure easier to hear.",
+        "what_to_listen_for": [
+          "internet-aware persona",
+          "genre-fluid polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:dua-lipa-future-nostalgia",
+        "example_type": "album",
+        "display_label": "Future Nostalgia - Dua Lipa",
+        "why_this_example_matters": "Future Nostalgia - Dua Lipa anchors TikTok / Streaming-Era Pop / Internet Pop by making dance or video-ready structure and direct emotional address easier to hear.",
+        "what_to_listen_for": [
+          "genre-fluid polish",
+          "fan-discourse afterlife"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:olivia-rodrigo-drivers-license",
+        "example_type": "song_recording",
+        "display_label": "Drivers License - Olivia Rodrigo",
+        "why_this_example_matters": "Drivers License - Olivia Rodrigo anchors TikTok / Streaming-Era Pop / Internet Pop by making direct emotional address and instant chorus recognition easier to hear.",
+        "what_to_listen_for": [
+          "fan-discourse afterlife"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:olivia-rodrigo-good-4-u",
+        "example_type": "song_recording",
+        "display_label": "Good 4 U - Olivia Rodrigo",
+        "why_this_example_matters": "Good 4 U - Olivia Rodrigo anchors TikTok / Streaming-Era Pop / Internet Pop by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "clip-ready hook fragments",
+          "confessional immediacy"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_12/archetype_092"
+      ],
+      "after": [],
+      "related": [
+        "family_12/archetype_092"
+      ],
+      "copy": "Use TikTok / Streaming-Era Pop / Internet Pop as a contextual road inside Pop Monoculture and Persona Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "093-dyk-1",
+        "copy": "This route can include dance-pop, pop-rock, rap-pop, and hyperpop-adjacent songs when platform circulation is central.",
+        "source_ref_ids": [
+          "tiktok_music_impact",
+          "grammy_olivia_rodrigo",
+          "grammy_charli_brat"
+        ]
+      },
+      {
+        "card_id": "093-dyk-2",
+        "copy": "Charli XCX can sit here or in hyperpop depending on whether the question is mainstream circulation or synthetic edge.",
+        "source_ref_ids": [
+          "grammy_olivia_rodrigo",
+          "tiktok_music_impact"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether tiktok / streaming-era pop / internet pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Streaming-era pop whose hooks, personas, and release cycles are amplified by platforms and internet fandom.",
+      "It explains why a short bridge, lyric caption, or personality meme can become the way listeners first meet a song.",
+      "The song still has to work, but its smallest repeatable parts matter more than in earlier radio monocultures."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat TikTok as the only source; use artist and recording evidence to avoid platform-only claims.",
+    "personalization_hooks": [
+      {
+        "hook_id": "093-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[093]",
+          "atlas_state.family_affinity[12]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[093] >= 0.65 || atlas_state.family_affinity[12] >= 0.65",
+        "copy_variant": "Your Atlas signals make TikTok / Streaming-Era Pop / Internet Pop useful as a contextual landmark.",
+        "fallback_copy": "Use TikTok / Streaming-Era Pop / Internet Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "093-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_12/archetype_093 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_12/archetype_093",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient TikTok / Streaming-Era Pop / Internet Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "093-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_12/archetype_093 || atlas_state.boundary_question_results has boundary_negative for family_12/archetype_093",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for TikTok / Streaming-Era Pop / Internet Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "093-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_12/archetype_093 || atlas_state.related_mission_ids references family_12/archetype_093",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "093-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_12/archetype_093 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_12/archetype_093 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_12/archetype_093",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for TikTok / Streaming-Era Pop / Internet Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_12": {
+        "title": "Normalized canonical graph export, Family 12",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_12/normalized_family_12.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "grammy_olivia_rodrigo": {
+        "title": "Olivia Rodrigo",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/artists/olivia-rodrigo/251882",
+        "source_type": "reference",
+        "audit_use": "Supports Olivia Rodrigo as a streaming-era pop breakthrough and SOUR-era anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Olivia Rodrigo as a streaming-era pop breakthrough and SOUR-era anchor."
+      },
+      "britannica_dua_lipa": {
+        "title": "Dua Lipa",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dua-Lipa",
+        "source_type": "reference",
+        "audit_use": "Supports Dua Lipa as a modern dance-pop and streaming-era pop example.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Dua Lipa as a modern dance-pop and streaming-era pop example."
+      },
+      "tiktok_music_impact": {
+        "title": "TikTok Music Impact Report",
+        "publisher": "TikTok Newsroom",
+        "url": "https://newsroom.tiktok.com/en-us/tiktoks-impact-on-music",
+        "source_type": "reference",
+        "audit_use": "Provides platform context for viral discovery and song-fragment circulation.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides platform context for viral discovery and song-fragment circulation."
+      },
+      "grammy_charli_brat": {
+        "title": "How Charli XCX Turned BRAT Into A Global Phenomenon",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/charli-xcx-brat-album-2025-grammys-interview",
+        "source_type": "reference",
+        "audit_use": "Supports the internet-native pop discourse and platform-aware release culture around Charli XCX.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the internet-native pop discourse and platform-aware release culture around Charli XCX."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "britannica_taylor_swift": {
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_type": "reference",
+        "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      },
+      "grammy_hyperpop": {
+        "title": "Hyperpop",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/",
+        "source_type": "industry_reference",
+        "audit_use": "Supplemental industry and scene reporting for hyperpop and internet-native pop.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental industry and scene reporting for hyperpop and internet-native pop."
+      },
+      "npr_tiny_desk_discovery": {
+        "title": "Tiny Desk",
+        "publisher": "NPR Music",
+        "url": "https://www.npr.org/series/tiny-desk-concerts/",
+        "source_type": "public_media_archive",
+        "audit_use": "Public-media performance archive for contemporary discovery and cross-genre visibility.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "093-d-01",
+        "claim_text": "The route captures pop shaped by streaming metrics, short-form-video circulation, memeable hooks, and fan discourse as much as by radio programming.",
+        "source_ref_ids": [
+          "tiktok_music_impact",
+          "grammy_olivia_rodrigo",
+          "grammy_charli_brat"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_12/archetype_093",
+          "artist:olivia-rodrigo",
+          "artist:charli-xcx"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "093-d-02",
+        "claim_text": "Olivia Rodrigo anchors the confessional pop-rock edge because drivers license and SOUR show how a personal narrative can become a platform-scale event.",
+        "source_ref_ids": [
+          "grammy_olivia_rodrigo",
+          "tiktok_music_impact"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:olivia-rodrigo",
+          "album:olivia-rodrigo-sour",
+          "song_recording:olivia-rodrigo-drivers-license"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "093-d-03",
+        "claim_text": "Dua Lipa keeps the lane connected to polished dance-pop, proving that internet-era pop can still be sleek, radio-friendly, and historically referential.",
+        "source_ref_ids": [
+          "britannica_dua_lipa",
+          "tiktok_music_impact"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "did_you_know"
+        ],
+        "graph_refs": [
+          "artist:dua-lipa",
+          "album:dua-lipa-future-nostalgia"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "093-d-04",
+        "claim_text": "Listen for instantly excerptable hooks, personality-forward vocals, and production details that survive as clips, captions, and repeatable fan gestures.",
+        "source_ref_ids": [
+          "tiktok_music_impact",
+          "grammy_charli_brat"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_12/archetype_093"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "093-tiktok_streaming_era_pop_internet_pop-boundary",
+        "claim_text": "TikTok / Streaming-Era Pop / Internet Pop's boundary is clearest when clip-ready hook fragments and confessional immediacy appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "grammy_olivia_rodrigo",
+          "britannica_dua_lipa"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_093",
+          "artist:olivia-rodrigo",
+          "artist:dua-lipa"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "093-tiktok_streaming_era_pop_internet_pop-examples",
+        "claim_text": "Olivia Rodrigo, Dua Lipa, Sour - Olivia Rodrigo gives TikTok / Streaming-Era Pop / Internet Pop concrete anchors because the examples expose internet-aware persona inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "britannica_dua_lipa",
+          "tiktok_music_impact"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_093",
+          "artist:olivia-rodrigo",
+          "artist:dua-lipa"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "TikTok streaming-era pop internet pop Olivia Rodrigo Dua Lipa Sabrina Carpenter Doja Cat Charli XCX",
+    "selected_sources": [
+      {
+        "source_ref_id": "grammy_olivia_rodrigo",
+        "title": "Olivia Rodrigo",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/artists/olivia-rodrigo/251882",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Olivia Rodrigo as a streaming-era pop breakthrough and SOUR-era anchor."
+      },
+      {
+        "source_ref_id": "britannica_dua_lipa",
+        "title": "Dua Lipa",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dua-Lipa",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Dua Lipa as a modern dance-pop and streaming-era pop example."
+      },
+      {
+        "source_ref_id": "tiktok_music_impact",
+        "title": "TikTok Music Impact Report",
+        "publisher": "TikTok Newsroom",
+        "url": "https://newsroom.tiktok.com/en-us/tiktoks-impact-on-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides platform context for viral discovery and song-fragment circulation."
+      },
+      {
+        "source_ref_id": "grammy_charli_brat",
+        "title": "How Charli XCX Turned BRAT Into A Global Phenomenon",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/charli-xcx-brat-album-2025-grammys-interview",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the internet-native pop discourse and platform-aware release culture around Charli XCX."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "britannica_taylor_swift",
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      },
+      {
+        "source_ref_id": "grammy_hyperpop",
+        "title": "Hyperpop",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental industry and scene reporting for hyperpop and internet-native pop."
+      },
+      {
+        "source_ref_id": "npr_tiny_desk_discovery",
+        "title": "Tiny Desk",
+        "publisher": "NPR Music",
+        "url": "https://www.npr.org/series/tiny-desk-concerts/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_jazz",
+        "title": "Jazz",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/jazz",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Jazz context alone would under-specify this non-jazz route."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Broad popular-music industry, audience, and stylistic context. Modern pop authorship, country-pop crossover, and streaming-era scale. Supplemental industry and scene reporting for hyperpop and internet-native pop. Public-media performance archive for contemporary discovery and cross-genre visibility."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  }
+}

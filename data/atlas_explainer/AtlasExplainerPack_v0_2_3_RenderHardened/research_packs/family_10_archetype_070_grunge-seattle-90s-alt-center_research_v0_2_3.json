@@ -1,0 +1,1349 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_10_archetype_070_grunge-seattle-90s-alt-center_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_10/normalized_family_10.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 10,
+    "family_slug": "alternative-indie-grunge-emo",
+    "family_name": "Alternative, Indie, Grunge, Emo",
+    "archetype_id": "070",
+    "archetype_slug": "grunge-seattle-90s-alt-center",
+    "canonical_graph_ref": "family_10/archetype_070",
+    "existing_graph_label_name": "Grunge / Seattle / 90s Alt Center",
+    "editorial_display_title": "Grunge / Seattle / 90s Alt Center",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:nirvana",
+        "object_id": "nirvana",
+        "display_label": "Nirvana",
+        "source_membership_id": "family-10-artist-070-nirvana",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central grunge and 90s alternative mainstream-break anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:pearl-jam",
+        "object_id": "pearl-jam",
+        "display_label": "Pearl Jam",
+        "source_membership_id": "family-10-artist-070-pearl-jam",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition Seattle/90s alt center with unusually durable artist-level identity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:smashing-pumpkins",
+        "object_id": "smashing-pumpkins",
+        "display_label": "Smashing Pumpkins",
+        "source_membership_id": "family-10-artist-070-smashing-pumpkins",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing-obvious 90s alt center adjacent to grunge but defined by arena-scale art-rock and guitar density.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:soundgarden",
+        "object_id": "soundgarden",
+        "display_label": "Soundgarden",
+        "source_membership_id": "family-10-artist-070-soundgarden",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Heavy Seattle grunge anchor bridging alt-rock, hard rock, and metal audiences.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:alice-in-chains",
+        "object_id": "alice-in-chains",
+        "display_label": "Alice in Chains",
+        "source_membership_id": "family-10-artist-070-alice-in-chains",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dark, heavy grunge/alt-metal center with both album and song survey strength.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:mudhoney",
+        "object_id": "mudhoney",
+        "display_label": "Mudhoney",
+        "source_membership_id": "family-10-artist-070-mudhoney",
+        "roles": [
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Seattle scene source-code and Sub Pop signal with influence above mainstream recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:nirvana-nevermind",
+        "object_id": "nirvana-nevermind",
+        "display_label": "Nevermind - Nirvana",
+        "source_membership_id": "family-10-album-070-nirvana-nevermind",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Primary grunge and 90s alternative mainstream-break album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:pearl-jam-ten",
+        "object_id": "pearl-jam-ten",
+        "display_label": "Ten - Pearl Jam",
+        "source_membership_id": "family-10-album-070-pearl-jam-ten",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pearl Jam's mass grunge/alt album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:soundgarden-superunknown",
+        "object_id": "soundgarden-superunknown",
+        "display_label": "Superunknown - Soundgarden",
+        "source_membership_id": "family-10-album-070-soundgarden-superunknown",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Heavy grunge album with broad song gateways.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:smashing-pumpkins-siamese-dream",
+        "object_id": "smashing-pumpkins-siamese-dream",
+        "display_label": "Siamese Dream - Smashing Pumpkins",
+        "source_membership_id": "family-10-album-070-smashing-pumpkins-siamese-dream",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "90s alternative center album adjacent to grunge but not Seattle-scene grunge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:alice-in-chains-dirt",
+        "object_id": "alice-in-chains-dirt",
+        "display_label": "Dirt - Alice in Chains",
+        "source_membership_id": "family-10-album-070-alice-in-chains-dirt",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dark heavy grunge/alt-metal album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nirvana-in-utero",
+        "object_id": "nirvana-in-utero",
+        "display_label": "In Utero - Nirvana",
+        "source_membership_id": "family-10-album-070-nirvana-in-utero",
+        "roles": [
+          "album_anchor",
+          "deepening",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Nirvana's abrasive anti-mainstream follow-up and grunge canon deepening object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:mudhoney-superfuzz-bigmuff",
+        "object_id": "mudhoney-superfuzz-bigmuff",
+        "display_label": "Superfuzz Bigmuff - Mudhoney",
+        "source_membership_id": "family-10-album-070-mudhoney-superfuzz-bigmuff",
+        "roles": [
+          "album_anchor",
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Sub Pop scene source object; EP type is intentional.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:nirvana-smells-like-teen-spirit",
+        "object_id": "nirvana-smells-like-teen-spirit",
+        "display_label": "Smells Like Teen Spirit - Nirvana",
+        "source_membership_id": "family-10-song-070-nirvana-smells-like-teen-spirit",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive grunge and 90s alternative breakthrough song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:pearl-jam-alive",
+        "object_id": "pearl-jam-alive",
+        "display_label": "Alive - Pearl Jam",
+        "source_membership_id": "family-10-song-070-pearl-jam-alive",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pearl Jam origin anthem and grunge radio anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:soundgarden-black-hole-sun",
+        "object_id": "soundgarden-black-hole-sun",
+        "display_label": "Black Hole Sun - Soundgarden",
+        "source_membership_id": "family-10-song-070-soundgarden-black-hole-sun",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass Soundgarden song gateway and dark grunge anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:alice-in-chains-man-in-the-box",
+        "object_id": "alice-in-chains-man-in-the-box",
+        "display_label": "Man in the Box - Alice in Chains",
+        "source_membership_id": "family-10-song-070-alice-in-chains-man-in-the-box",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Alice in Chains heavy grunge gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nirvana-come-as-you-are",
+        "object_id": "nirvana-come-as-you-are",
+        "display_label": "Come As You Are - Nirvana",
+        "source_membership_id": "family-10-song-070-nirvana-come-as-you-are",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass Nirvana gateway with strong normal-user recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nirvana-heart-shaped-box",
+        "object_id": "nirvana-heart-shaped-box",
+        "display_label": "Heart-Shaped Box - Nirvana",
+        "source_membership_id": "family-10-song-070-nirvana-heart-shaped-box",
+        "roles": [
+          "song_first",
+          "deepening",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Darker Nirvana mass object beyond the breakthrough single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:pearl-jam-jeremy",
+        "object_id": "pearl-jam-jeremy",
+        "display_label": "Jeremy - Pearl Jam",
+        "source_membership_id": "family-10-song-070-pearl-jam-jeremy",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass Pearl Jam video-era grunge object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:alice-in-chains-would",
+        "object_id": "alice-in-chains-would",
+        "display_label": "Would? - Alice in Chains",
+        "source_membership_id": "family-10-song-070-alice-in-chains-would",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dark grunge/Singles-era object with alt-metal bridge value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:pearl-jam-black",
+        "object_id": "pearl-jam-black",
+        "display_label": "Black - Pearl Jam",
+        "source_membership_id": "family-10-song-070-pearl-jam-black",
+        "roles": [
+          "song_first",
+          "deepening"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Durable Pearl Jam ballad recognized beyond grunge core.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:soundgarden-spoonman",
+        "object_id": "soundgarden-spoonman",
+        "display_label": "Spoonman - Soundgarden",
+        "source_membership_id": "family-10-song-070-soundgarden-spoonman",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Heavy grunge radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f10-artist-nirvana-070",
+        "candidate_id": "survey-f10-artist-nirvana-070",
+        "object_type": "artist",
+        "display_label": "Nirvana",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-pearl-jam-070",
+        "candidate_id": "survey-f10-artist-pearl-jam-070",
+        "object_type": "artist",
+        "display_label": "Pearl Jam",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-smashing-pumpkins-070",
+        "candidate_id": "survey-f10-artist-smashing-pumpkins-070",
+        "object_type": "artist",
+        "display_label": "Smashing Pumpkins",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-soundgarden-070",
+        "candidate_id": "survey-f10-artist-soundgarden-070",
+        "object_type": "artist",
+        "display_label": "Soundgarden",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-alice-in-chains-070",
+        "candidate_id": "survey-f10-artist-alice-in-chains-070",
+        "object_type": "artist",
+        "display_label": "Alice in Chains",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-mudhoney-070",
+        "candidate_id": "survey-f10-artist-mudhoney-070",
+        "object_type": "artist",
+        "display_label": "Mudhoney",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-alice-in-chains-dirt-070",
+        "candidate_id": "survey-f10-album-alice-in-chains-dirt-070",
+        "object_type": "album",
+        "display_label": "Dirt",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-nirvana-in-utero-070",
+        "candidate_id": "survey-f10-album-nirvana-in-utero-070",
+        "object_type": "album",
+        "display_label": "In Utero",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-nirvana-nevermind-070",
+        "candidate_id": "survey-f10-album-nirvana-nevermind-070",
+        "object_type": "album",
+        "display_label": "Nevermind",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-smashing-pumpkins-siamese-dream-070",
+        "candidate_id": "survey-f10-album-smashing-pumpkins-siamese-dream-070",
+        "object_type": "album",
+        "display_label": "Siamese Dream",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-soundgarden-superunknown-070",
+        "candidate_id": "survey-f10-album-soundgarden-superunknown-070",
+        "object_type": "album",
+        "display_label": "Superunknown",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-pearl-jam-ten-070",
+        "candidate_id": "survey-f10-album-pearl-jam-ten-070",
+        "object_type": "album",
+        "display_label": "Ten",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-mudhoney-superfuzz-bigmuff-070",
+        "candidate_id": "survey-f10-album-mudhoney-superfuzz-bigmuff-070",
+        "object_type": "album",
+        "display_label": "Superfuzz Bigmuff",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-pearl-jam-alive-070",
+        "candidate_id": "survey-f10-song_recording-pearl-jam-alive-070",
+        "object_type": "song_recording",
+        "display_label": "Alive",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-soundgarden-black-hole-sun-070",
+        "candidate_id": "survey-f10-song_recording-soundgarden-black-hole-sun-070",
+        "object_type": "song_recording",
+        "display_label": "Black Hole Sun",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-alice-in-chains-man-in-the-box-070",
+        "candidate_id": "survey-f10-song_recording-alice-in-chains-man-in-the-box-070",
+        "object_type": "song_recording",
+        "display_label": "Man in the Box",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-nirvana-smells-like-teen-spirit-070",
+        "candidate_id": "survey-f10-song_recording-nirvana-smells-like-teen-spirit-070",
+        "object_type": "song_recording",
+        "display_label": "Smells Like Teen Spirit",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-nirvana-come-as-you-are-070",
+        "candidate_id": "survey-f10-song_recording-nirvana-come-as-you-are-070",
+        "object_type": "song_recording",
+        "display_label": "Come As You Are",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-pearl-jam-jeremy-070",
+        "candidate_id": "survey-f10-song_recording-pearl-jam-jeremy-070",
+        "object_type": "song_recording",
+        "display_label": "Jeremy",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-nirvana-heart-shaped-box-070",
+        "candidate_id": "survey-f10-song_recording-nirvana-heart-shaped-box-070",
+        "object_type": "song_recording",
+        "display_label": "Heart-Shaped Box",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f10-album-nirvana-in-utero-070",
+        "question_id": "boundary-survey-f10-album-nirvana-in-utero-070",
+        "display_label": "In Utero",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f10-song_recording-nirvana-heart-shaped-box-070",
+        "question_id": "boundary-survey-f10-song_recording-nirvana-heart-shaped-box-070",
+        "display_label": "Heart-Shaped Box",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f10-album-nirvana-in-utero-070",
+        "probe_id": "probe-survey-f10-album-nirvana-in-utero-070",
+        "entity_type": "album",
+        "display_label": "In Utero",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f10-song_recording-nirvana-heart-shaped-box-070",
+        "probe_id": "probe-survey-f10-song_recording-nirvana-heart-shaped-box-070",
+        "entity_type": "song_recording",
+        "display_label": "Heart-Shaped Box",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_10/archetype_069",
+      "family_10/archetype_071"
+    ],
+    "before_archetype_refs": [
+      "family_10/archetype_069"
+    ],
+    "after_archetype_refs": [
+      "family_10/archetype_071"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_10": {
+      "title": "Normalized canonical graph export, Family 10",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_10/normalized_family_10.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "070_britannica_grunge": {
+      "title": "Grunge",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/grunge-music",
+      "source_type": "reference",
+      "audit_use": "Direct reference support for Seattle grunge, Nirvana, Pearl Jam, and the alternative mainstream break.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct reference support for Seattle grunge, Nirvana, Pearl Jam, and the alternative mainstream break."
+    },
+    "070_rockhall_nirvana": {
+      "title": "Nirvana",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nirvana/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Nirvana and Nevermind as the mass-recognized grunge/alternative center.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Nirvana and Nevermind as the mass-recognized grunge/alternative center."
+    },
+    "070_mopop_grunge": {
+      "title": "Nirvana: Taking Punk to the Masses",
+      "publisher": "Museum of Pop Culture",
+      "url": "https://www.mopop.org/exhibitions/nirvana-taking-punk-to-the-masses/",
+      "source_type": "museum_reference",
+      "audit_use": "Seattle museum context for grunge's punk roots and mainstream breakthrough.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Seattle museum context for grunge's punk roots and mainstream breakthrough."
+    },
+    "070_pearljam_official": {
+      "title": "Pearl Jam",
+      "publisher": "Pearl Jam",
+      "url": "https://pearljam.com/",
+      "source_type": "official_artist",
+      "audit_use": "Object support for Pearl Jam as the classic-rock/anthemic grunge pole.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Object support for Pearl Jam as the classic-rock/anthemic grunge pole."
+    },
+    "britannica_nirvana": {
+      "title": "Nirvana",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Nirvana-American-rock-group",
+      "source_type": "reference",
+      "audit_use": "Nirvana and grunge's early-1990s alternative breakthrough.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Nirvana and grunge's early-1990s alternative breakthrough."
+    },
+    "rockhall_nirvana": {
+      "title": "Nirvana",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nirvana/",
+      "source_type": "museum_reference",
+      "audit_use": "Grunge, Seattle, punk/metal/pop tension, and alternative mainstream shift.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Grunge, Seattle, punk/metal/pop tension, and alternative mainstream shift."
+    },
+    "subpop_history": {
+      "title": "Sub Pop History",
+      "publisher": "Sub Pop",
+      "url": "https://www.subpop.com/about/history",
+      "source_type": "official_label",
+      "audit_use": "Seattle independent-label context for grunge and alternative rock.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Seattle independent-label context for grunge and alternative rock."
+    },
+    "britannica_pearl_jam": {
+      "title": "Pearl Jam",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Pearl-Jam",
+      "source_type": "reference",
+      "audit_use": "Pearl Jam, Seattle rock, and 1990s alternative culture.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Pearl Jam, Seattle rock, and 1990s alternative culture."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "070-claim-01",
+      "claim_text": "Grunge made Seattle a mainstream alternative center by joining punk rawness, metal weight, and classic-rock song force.",
+      "source_ref_ids": [
+        "070_britannica_grunge",
+        "070_mopop_grunge"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_10/archetype_070"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "070-claim-02",
+      "claim_text": "Nirvana's Nevermind anchors the archetype because it turned abrasive dynamics and alienated hooks into a mass pop event.",
+      "source_ref_ids": [
+        "070_rockhall_nirvana",
+        "070_britannica_grunge"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_10/archetype_070",
+        "artist:nirvana",
+        "album:nirvana-nevermind"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "070-claim-03",
+      "claim_text": "Pearl Jam represents the road's more classic-rock and arena-humanist side, where grunge intensity becomes communal anthem rather than punk rupture.",
+      "source_ref_ids": [
+        "070_pearljam_official",
+        "070_britannica_grunge"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_10/archetype_070",
+        "artist:pearl-jam",
+        "album:pearl-jam-ten"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "070-claim-04",
+      "claim_text": "Alice in Chains and Soundgarden show the heavier side of Seattle grunge, where metal harmony and darker vocal color separate the road from college rock.",
+      "source_ref_ids": [
+        "070_britannica_grunge",
+        "070_mopop_grunge"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for_prompt",
+        "region_scene_page"
+      ],
+      "graph_refs": [
+        "family_10/archetype_070",
+        "artist:alice-in-chains",
+        "artist:soundgarden"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "070-grunge_seattle_90s_alt_center-boundary",
+      "claim_text": "Grunge / Seattle / 90s Alt Center's boundary is clearest when loud-quiet dynamics and sludgy guitar appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "070_britannica_grunge",
+        "070_rockhall_nirvana"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_070",
+        "artist:nirvana",
+        "artist:pearl-jam"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "070-grunge_seattle_90s_alt_center-examples",
+      "claim_text": "Nirvana, Pearl Jam, Nevermind - Nirvana gives Grunge / Seattle / 90s Alt Center concrete anchors because the examples expose rasped or wounded vocals inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "070_rockhall_nirvana",
+        "070_mopop_grunge"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_070",
+        "artist:nirvana",
+        "artist:pearl-jam"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Seattle alternative at the 1990s center: punk damage, metal weight, and hooks big enough for everyone.",
+    "history_capsule": "Grunge carried underground values into mainstream rock through Seattle bands whose songs felt raw, heavy, melodic, and emotionally direct.",
+    "why_it_mattered": "It reset rock radio and youth culture in the early 1990s.",
+    "what_made_it_distinct": "The center is the collision: punk dynamics, heavy guitar, flannel-era anti-glam stance, and memorable choruses.",
+    "what_to_listen_for": [
+      "loud-quiet dynamics",
+      "sludgy guitar",
+      "rasped or wounded vocals",
+      "anthemic melancholy",
+      "unpolished heaviness"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:nirvana",
+        "example_type": "artist",
+        "display_label": "Nirvana",
+        "why_this_example_matters": "Nirvana is a graph-validated anchor for Grunge / Seattle / 90s Alt Center; use it to hear loud-quiet dynamics.",
+        "what_to_listen_for": [
+          "loud-quiet dynamics",
+          "sludgy guitar"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:pearl-jam",
+        "example_type": "artist",
+        "display_label": "Pearl Jam",
+        "why_this_example_matters": "Pearl Jam is a graph-validated anchor for Grunge / Seattle / 90s Alt Center; use it to hear sludgy guitar.",
+        "what_to_listen_for": [
+          "sludgy guitar",
+          "rasped or wounded vocals"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:nirvana-nevermind",
+        "example_type": "album",
+        "display_label": "Nevermind - Nirvana",
+        "why_this_example_matters": "Nevermind - Nirvana is a graph-validated anchor for Grunge / Seattle / 90s Alt Center; use it to hear rasped or wounded vocals.",
+        "what_to_listen_for": [
+          "rasped or wounded vocals",
+          "anthemic melancholy"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:pearl-jam-ten",
+        "example_type": "album",
+        "display_label": "Ten - Pearl Jam",
+        "why_this_example_matters": "Ten - Pearl Jam is a graph-validated anchor for Grunge / Seattle / 90s Alt Center; use it to hear anthemic melancholy.",
+        "what_to_listen_for": [
+          "anthemic melancholy",
+          "unpolished heaviness"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:nirvana-smells-like-teen-spirit",
+        "example_type": "song_recording",
+        "display_label": "Smells Like Teen Spirit - Nirvana",
+        "why_this_example_matters": "Smells Like Teen Spirit - Nirvana is a graph-validated anchor for Grunge / Seattle / 90s Alt Center; use it to hear unpolished heaviness.",
+        "what_to_listen_for": [
+          "unpolished heaviness"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:pearl-jam-alive",
+        "example_type": "song_recording",
+        "display_label": "Alive - Pearl Jam",
+        "why_this_example_matters": "Alive - Pearl Jam is a graph-validated anchor for Grunge / Seattle / 90s Alt Center; use it to hear loud-quiet dynamics.",
+        "what_to_listen_for": [
+          "loud-quiet dynamics",
+          "sludgy guitar"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_10/archetype_069"
+      ],
+      "after": [
+        "family_10/archetype_071"
+      ],
+      "related": [
+        "family_10/archetype_069",
+        "family_10/archetype_071"
+      ],
+      "copy": "Use Grunge / Seattle / 90s Alt Center as a contextual road inside Alternative, Indie, Grunge, Emo; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "070-dyk-1",
+        "copy": "Grunge is not only Nirvana; Pearl Jam, Soundgarden, and Alice in Chains pull the road into different shapes.",
+        "source_ref_ids": [
+          "070_britannica_grunge",
+          "070_mopop_grunge"
+        ]
+      },
+      {
+        "card_id": "070-dyk-2",
+        "copy": "Seattle matters as a scene, but grunge became a global radio language.",
+        "source_ref_ids": [
+          "070_rockhall_nirvana",
+          "070_britannica_grunge"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether grunge / seattle / 90s alt center is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Seattle alternative at the 1990s center: punk damage, metal weight, and hooks big enough for everyone.",
+      "It reset rock radio and youth culture in the early 1990s.",
+      "The center is the collision: punk dynamics, heavy guitar, flannel-era anti-glam stance, and memorable choruses."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not mistake post-grunge radio polish for the original Seattle-centered grunge break.",
+    "personalization_hooks": [
+      {
+        "hook_id": "070-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[070]",
+          "atlas_state.family_affinity[10]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[070] >= 0.65 || atlas_state.family_affinity[10] >= 0.65",
+        "copy_variant": "Your Atlas signals make Grunge / Seattle / 90s Alt Center useful as a contextual landmark.",
+        "fallback_copy": "Use Grunge / Seattle / 90s Alt Center as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "070-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_10/archetype_070 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_10/archetype_070",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Grunge / Seattle / 90s Alt Center before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "070-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_10/archetype_070 || atlas_state.boundary_question_results has boundary_negative for family_10/archetype_070",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Grunge / Seattle / 90s Alt Center.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "070-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_10/archetype_070 || atlas_state.related_mission_ids references family_10/archetype_070",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "070-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_10/archetype_070 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_10/archetype_070 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_10/archetype_070",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Grunge / Seattle / 90s Alt Center.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_10": {
+        "title": "Normalized canonical graph export, Family 10",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_10/normalized_family_10.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "070_britannica_grunge": {
+        "title": "Grunge",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/grunge-music",
+        "source_type": "reference",
+        "audit_use": "Direct reference support for Seattle grunge, Nirvana, Pearl Jam, and the alternative mainstream break.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct reference support for Seattle grunge, Nirvana, Pearl Jam, and the alternative mainstream break."
+      },
+      "070_rockhall_nirvana": {
+        "title": "Nirvana",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nirvana/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Nirvana and Nevermind as the mass-recognized grunge/alternative center.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Nirvana and Nevermind as the mass-recognized grunge/alternative center."
+      },
+      "070_mopop_grunge": {
+        "title": "Nirvana: Taking Punk to the Masses",
+        "publisher": "Museum of Pop Culture",
+        "url": "https://www.mopop.org/exhibitions/nirvana-taking-punk-to-the-masses/",
+        "source_type": "museum_reference",
+        "audit_use": "Seattle museum context for grunge's punk roots and mainstream breakthrough.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Seattle museum context for grunge's punk roots and mainstream breakthrough."
+      },
+      "070_pearljam_official": {
+        "title": "Pearl Jam",
+        "publisher": "Pearl Jam",
+        "url": "https://pearljam.com/",
+        "source_type": "official_artist",
+        "audit_use": "Object support for Pearl Jam as the classic-rock/anthemic grunge pole.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for Pearl Jam as the classic-rock/anthemic grunge pole."
+      },
+      "britannica_nirvana": {
+        "title": "Nirvana",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Nirvana-American-rock-group",
+        "source_type": "reference",
+        "audit_use": "Nirvana and grunge's early-1990s alternative breakthrough.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Nirvana and grunge's early-1990s alternative breakthrough."
+      },
+      "rockhall_nirvana": {
+        "title": "Nirvana",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nirvana/",
+        "source_type": "museum_reference",
+        "audit_use": "Grunge, Seattle, punk/metal/pop tension, and alternative mainstream shift.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Grunge, Seattle, punk/metal/pop tension, and alternative mainstream shift."
+      },
+      "subpop_history": {
+        "title": "Sub Pop History",
+        "publisher": "Sub Pop",
+        "url": "https://www.subpop.com/about/history",
+        "source_type": "official_label",
+        "audit_use": "Seattle independent-label context for grunge and alternative rock.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Seattle independent-label context for grunge and alternative rock."
+      },
+      "britannica_pearl_jam": {
+        "title": "Pearl Jam",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Pearl-Jam",
+        "source_type": "reference",
+        "audit_use": "Pearl Jam, Seattle rock, and 1990s alternative culture.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Pearl Jam, Seattle rock, and 1990s alternative culture."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "070-claim-01",
+        "claim_text": "Grunge made Seattle a mainstream alternative center by joining punk rawness, metal weight, and classic-rock song force.",
+        "source_ref_ids": [
+          "070_britannica_grunge",
+          "070_mopop_grunge"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_10/archetype_070"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "070-claim-02",
+        "claim_text": "Nirvana's Nevermind anchors the archetype because it turned abrasive dynamics and alienated hooks into a mass pop event.",
+        "source_ref_ids": [
+          "070_rockhall_nirvana",
+          "070_britannica_grunge"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_10/archetype_070",
+          "artist:nirvana",
+          "album:nirvana-nevermind"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "070-claim-03",
+        "claim_text": "Pearl Jam represents the road's more classic-rock and arena-humanist side, where grunge intensity becomes communal anthem rather than punk rupture.",
+        "source_ref_ids": [
+          "070_pearljam_official",
+          "070_britannica_grunge"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_10/archetype_070",
+          "artist:pearl-jam",
+          "album:pearl-jam-ten"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "070-claim-04",
+        "claim_text": "Alice in Chains and Soundgarden show the heavier side of Seattle grunge, where metal harmony and darker vocal color separate the road from college rock.",
+        "source_ref_ids": [
+          "070_britannica_grunge",
+          "070_mopop_grunge"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for_prompt",
+          "region_scene_page"
+        ],
+        "graph_refs": [
+          "family_10/archetype_070",
+          "artist:alice-in-chains",
+          "artist:soundgarden"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "070-grunge_seattle_90s_alt_center-boundary",
+        "claim_text": "Grunge / Seattle / 90s Alt Center's boundary is clearest when loud-quiet dynamics and sludgy guitar appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "070_britannica_grunge",
+          "070_rockhall_nirvana"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_070",
+          "artist:nirvana",
+          "artist:pearl-jam"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "070-grunge_seattle_90s_alt_center-examples",
+        "claim_text": "Nirvana, Pearl Jam, Nevermind - Nirvana gives Grunge / Seattle / 90s Alt Center concrete anchors because the examples expose rasped or wounded vocals inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "070_rockhall_nirvana",
+          "070_mopop_grunge"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_070",
+          "artist:nirvana",
+          "artist:pearl-jam"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Grunge / Seattle / 90s Alt Center: Nirvana, Pearl Jam, Soundgarden, Alice in Chains, Sub Pop, Seattle, punk-metal classic-rock collision, mainstream 1991-1994 break.",
+    "selected_sources": [
+      {
+        "source_ref_id": "070_britannica_grunge",
+        "title": "Grunge",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/grunge-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct reference support for Seattle grunge, Nirvana, Pearl Jam, and the alternative mainstream break."
+      },
+      {
+        "source_ref_id": "070_rockhall_nirvana",
+        "title": "Nirvana",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nirvana/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Nirvana and Nevermind as the mass-recognized grunge/alternative center."
+      },
+      {
+        "source_ref_id": "070_mopop_grunge",
+        "title": "Nirvana: Taking Punk to the Masses",
+        "publisher": "Museum of Pop Culture",
+        "url": "https://www.mopop.org/exhibitions/nirvana-taking-punk-to-the-masses/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Seattle museum context for grunge's punk roots and mainstream breakthrough."
+      },
+      {
+        "source_ref_id": "070_pearljam_official",
+        "title": "Pearl Jam",
+        "publisher": "Pearl Jam",
+        "url": "https://pearljam.com/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for Pearl Jam as the classic-rock/anthemic grunge pole."
+      },
+      {
+        "source_ref_id": "britannica_nirvana",
+        "title": "Nirvana",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Nirvana-American-rock-group",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Nirvana and grunge's early-1990s alternative breakthrough."
+      },
+      {
+        "source_ref_id": "rockhall_nirvana",
+        "title": "Nirvana",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nirvana/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Grunge, Seattle, punk/metal/pop tension, and alternative mainstream shift."
+      },
+      {
+        "source_ref_id": "subpop_history",
+        "title": "Sub Pop History",
+        "publisher": "Sub Pop",
+        "url": "https://www.subpop.com/about/history",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Seattle independent-label context for grunge and alternative rock."
+      },
+      {
+        "source_ref_id": "britannica_pearl_jam",
+        "title": "Pearl Jam",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Pearl-Jam",
+        "source_relevance": "example_object_support",
+        "why_fit": "Pearl Jam, Seattle rock, and 1990s alternative culture."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "070_reject_postgrunge",
+        "title": "Post-Grunge",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/post-grunge",
+        "source_type": "genre_overview",
+        "source_relevance": "weak_context",
+        "why_rejected": "Post-grunge is downstream radio adaptation, not the Seattle-centered original break."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources tie grunge to Seattle, Nirvana's punk-to-masses role, and Pearl Jam's broader rock anchor without drifting into post-grunge."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  }
+}

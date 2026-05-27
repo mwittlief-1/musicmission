@@ -1,0 +1,1436 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_13_archetype_098_k-pop-j-pop-asian-pop-crossover_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_13/normalized_family_13.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 13,
+    "family_slug": "latin-caribbean-global-pop",
+    "family_name": "Latin, Caribbean, Global Pop",
+    "archetype_id": "098",
+    "archetype_slug": "k-pop-j-pop-asian-pop-crossover",
+    "canonical_graph_ref": "family_13/archetype_098",
+    "existing_graph_label_name": "K-Pop / J-Pop / Asian Pop Crossover",
+    "editorial_display_title": "K-Pop / J-Pop / Asian Pop Crossover",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:blackpink",
+        "object_id": "blackpink",
+        "display_label": "BLACKPINK",
+        "source_membership_id": "family-13-artist-098-blackpink",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "BLACKPINK provides a recognizable survey branch for 098 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bts",
+        "object_id": "bts",
+        "display_label": "BTS",
+        "source_membership_id": "family-13-artist-098-bts",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "BTS provides a recognizable survey branch for 098 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:newjeans",
+        "object_id": "newjeans",
+        "display_label": "NewJeans",
+        "source_membership_id": "family-13-artist-098-newjeans",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "NewJeans provides a recognizable survey branch for 098 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:psy",
+        "object_id": "psy",
+        "display_label": "PSY",
+        "source_membership_id": "family-13-artist-098-psy",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "PSY provides a recognizable survey branch for 098 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:girls-generation",
+        "object_id": "girls-generation",
+        "display_label": "Girls' Generation",
+        "source_membership_id": "family-13-artist-098-girls-generation",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Girls' Generation fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:seventeen",
+        "object_id": "seventeen",
+        "display_label": "SEVENTEEN",
+        "source_membership_id": "family-13-artist-098-seventeen",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "SEVENTEEN fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:stray-kids",
+        "object_id": "stray-kids",
+        "display_label": "Stray Kids",
+        "source_membership_id": "family-13-artist-098-stray-kids",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Stray Kids fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:exo",
+        "object_id": "exo",
+        "display_label": "EXO",
+        "source_membership_id": "family-13-artist-098-exo",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "EXO fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:aespa",
+        "object_id": "aespa",
+        "display_label": "aespa",
+        "source_membership_id": "family-13-artist-098-aespa",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "aespa fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:babymetal",
+        "object_id": "babymetal",
+        "display_label": "BABYMETAL",
+        "source_membership_id": "family-13-artist-098-babymetal",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "BABYMETAL fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:fifty-fifty",
+        "object_id": "fifty-fifty",
+        "display_label": "FIFTY FIFTY",
+        "source_membership_id": "family-13-artist-098-fifty-fifty",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "FIFTY FIFTY fills a missing survey branch for 098, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:twice",
+        "object_id": "twice",
+        "display_label": "TWICE",
+        "source_membership_id": "family-13-artist-098-twice",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "TWICE provides a recognizable survey branch for 098 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:blackpink-the-album",
+        "object_id": "blackpink-the-album",
+        "display_label": "The Album - BLACKPINK",
+        "source_membership_id": "family-13-album-098-blackpink-the-album",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "The Album is a useful album-level gateway for 098.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bts-map-of-the-soul-7",
+        "object_id": "bts-map-of-the-soul-7",
+        "display_label": "Map of the Soul: 7 - BTS",
+        "source_membership_id": "family-13-album-098-bts-map-of-the-soul-7",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Map of the Soul: 7 is a useful album-level gateway for 098.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:seventeen-face-the-sun",
+        "object_id": "seventeen-face-the-sun",
+        "display_label": "Face the Sun - SEVENTEEN",
+        "source_membership_id": "family-13-album-098-seventeen-face-the-sun",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Face the Sun gives 098 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:babymetal-metal-resistance",
+        "object_id": "babymetal-metal-resistance",
+        "display_label": "Metal Resistance - BABYMETAL",
+        "source_membership_id": "family-13-album-098-babymetal-metal-resistance",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Metal Resistance gives 098 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:exo-the-war",
+        "object_id": "exo-the-war",
+        "display_label": "The War - EXO",
+        "source_membership_id": "family-13-album-098-exo-the-war",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "The War gives 098 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:newjeans-get-up",
+        "object_id": "newjeans-get-up",
+        "display_label": "Get Up - NewJeans",
+        "source_membership_id": "family-13-album-098-newjeans-get-up",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Get Up is a useful album-level gateway for 098.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:twice-formula-of-love",
+        "object_id": "twice-formula-of-love",
+        "display_label": "Formula of Love - TWICE",
+        "source_membership_id": "family-13-album-098-twice-formula-of-love",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Formula of Love gives 098 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:yoasobi-the-book",
+        "object_id": "yoasobi-the-book",
+        "display_label": "The Book - YOASOBI",
+        "source_membership_id": "family-13-album-098-yoasobi-the-book",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Book gives 098 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:hikaru-utada-first-love",
+        "object_id": "hikaru-utada-first-love",
+        "display_label": "First Love - Hikaru Utada",
+        "source_membership_id": "family-13-album-098-hikaru-utada-first-love",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "First Love is a useful album-level gateway for 098.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:blackpink-ddu-du-ddu-du",
+        "object_id": "blackpink-ddu-du-ddu-du",
+        "display_label": "DDU-DU DDU-DU - BLACKPINK",
+        "source_membership_id": "family-13-song-098-blackpink-ddu-du-ddu-du",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "DDU-DU DDU-DU gives 098 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bts-dynamite",
+        "object_id": "bts-dynamite",
+        "display_label": "Dynamite - BTS",
+        "source_membership_id": "family-13-song-098-bts-dynamite",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dynamite gives 098 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bts-butter",
+        "object_id": "bts-butter",
+        "display_label": "Butter - BTS",
+        "source_membership_id": "family-13-song-098-bts-butter",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Butter gives 098 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:fifty-fifty-cupid",
+        "object_id": "fifty-fifty-cupid",
+        "display_label": "Cupid - FIFTY FIFTY",
+        "source_membership_id": "family-13-song-098-fifty-fifty-cupid",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Cupid is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:newjeans-super-shy",
+        "object_id": "newjeans-super-shy",
+        "display_label": "Super Shy - NewJeans",
+        "source_membership_id": "family-13-song-098-newjeans-super-shy",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Super Shy gives 098 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:psy-gangnam-style",
+        "object_id": "psy-gangnam-style",
+        "display_label": "Gangnam Style - PSY",
+        "source_membership_id": "family-13-song-098-psy-gangnam-style",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Gangnam Style gives 098 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:girls-generation-gee",
+        "object_id": "girls-generation-gee",
+        "display_label": "Gee - Girls' Generation",
+        "source_membership_id": "family-13-song-098-girls-generation-gee",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Gee is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:babymetal-gimme-chocolate",
+        "object_id": "babymetal-gimme-chocolate",
+        "display_label": "Gimme Chocolate!! - BABYMETAL",
+        "source_membership_id": "family-13-song-098-babymetal-gimme-chocolate",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Gimme Chocolate!! is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:stray-kids-god-s-menu",
+        "object_id": "stray-kids-god-s-menu",
+        "display_label": "God's Menu - Stray Kids",
+        "source_membership_id": "family-13-song-098-stray-kids-god-s-menu",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "God's Menu is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:twice-the-feels",
+        "object_id": "twice-the-feels",
+        "display_label": "The Feels - TWICE",
+        "source_membership_id": "family-13-song-098-twice-the-feels",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Feels is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bigbang-fantastic-baby",
+        "object_id": "bigbang-fantastic-baby",
+        "display_label": "Fantastic Baby - BIGBANG",
+        "source_membership_id": "family-13-song-098-bigbang-fantastic-baby",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Fantastic Baby is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:yoasobi-idol",
+        "object_id": "yoasobi-idol",
+        "display_label": "Idol - YOASOBI",
+        "source_membership_id": "family-13-song-098-yoasobi-idol",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Idol is a missing song-level survey object for 098, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:hikaru-utada-first-love",
+        "object_id": "hikaru-utada-first-love",
+        "display_label": "First Love - Hikaru Utada",
+        "source_membership_id": "family-13-song-098-hikaru-utada-first-love",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "First Love gives 098 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f13-artist-blackpink-098",
+        "candidate_id": "survey-f13-artist-blackpink-098",
+        "object_type": "artist",
+        "display_label": "BLACKPINK",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-bts-098",
+        "candidate_id": "survey-f13-artist-bts-098",
+        "object_type": "artist",
+        "display_label": "BTS",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-newjeans-098",
+        "candidate_id": "survey-f13-artist-newjeans-098",
+        "object_type": "artist",
+        "display_label": "NewJeans",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-seventeen-098",
+        "candidate_id": "survey-f13-artist-seventeen-098",
+        "object_type": "artist",
+        "display_label": "SEVENTEEN",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-stray-kids-098",
+        "candidate_id": "survey-f13-artist-stray-kids-098",
+        "object_type": "artist",
+        "display_label": "Stray Kids",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-psy-098",
+        "candidate_id": "survey-f13-artist-psy-098",
+        "object_type": "artist",
+        "display_label": "PSY",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-exo-098",
+        "candidate_id": "survey-f13-artist-exo-098",
+        "object_type": "artist",
+        "display_label": "EXO",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-girls-generation-098",
+        "candidate_id": "survey-f13-artist-girls-generation-098",
+        "object_type": "artist",
+        "display_label": "Girls' Generation",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-twice-098",
+        "candidate_id": "survey-f13-artist-twice-098",
+        "object_type": "artist",
+        "display_label": "TWICE",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-aespa-098",
+        "candidate_id": "survey-f13-artist-aespa-098",
+        "object_type": "artist",
+        "display_label": "aespa",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-yoasobi-098",
+        "candidate_id": "survey-f13-artist-yoasobi-098",
+        "object_type": "artist",
+        "display_label": "YOASOBI",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-hikaru-utada-098",
+        "candidate_id": "survey-f13-artist-hikaru-utada-098",
+        "object_type": "artist",
+        "display_label": "Hikaru Utada",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-babymetal-098",
+        "candidate_id": "survey-f13-artist-babymetal-098",
+        "object_type": "artist",
+        "display_label": "BABYMETAL",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-artist-fifty-fifty-098",
+        "candidate_id": "survey-f13-artist-fifty-fifty-098",
+        "object_type": "artist",
+        "display_label": "FIFTY FIFTY",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-bts-map-of-the-soul-7-098",
+        "candidate_id": "survey-f13-album-bts-map-of-the-soul-7-098",
+        "object_type": "album",
+        "display_label": "Map of the Soul: 7",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-blackpink-the-album-098",
+        "candidate_id": "survey-f13-album-blackpink-the-album-098",
+        "object_type": "album",
+        "display_label": "The Album",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-seventeen-face-the-sun-098",
+        "candidate_id": "survey-f13-album-seventeen-face-the-sun-098",
+        "object_type": "album",
+        "display_label": "Face the Sun",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-newjeans-get-up-098",
+        "candidate_id": "survey-f13-album-newjeans-get-up-098",
+        "object_type": "album",
+        "display_label": "Get Up",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-twice-formula-of-love-098",
+        "candidate_id": "survey-f13-album-twice-formula-of-love-098",
+        "object_type": "album",
+        "display_label": "Formula of Love",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f13-album-exo-the-war-098",
+        "candidate_id": "survey-f13-album-exo-the-war-098",
+        "object_type": "album",
+        "display_label": "The War",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f13-artist-babymetal-098",
+        "question_id": "boundary-survey-f13-artist-babymetal-098",
+        "display_label": "BABYMETAL",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f13-artist-fifty-fifty-098",
+        "question_id": "boundary-survey-f13-artist-fifty-fifty-098",
+        "display_label": "FIFTY FIFTY",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f13-album-babymetal-metal-resistance-098",
+        "question_id": "boundary-survey-f13-album-babymetal-metal-resistance-098",
+        "display_label": "Metal Resistance",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f13-song_recording-fifty-fifty-cupid-098",
+        "question_id": "boundary-survey-f13-song_recording-fifty-fifty-cupid-098",
+        "display_label": "Cupid",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f13-artist-babymetal-098",
+        "probe_id": "probe-survey-f13-artist-babymetal-098",
+        "entity_type": "artist",
+        "display_label": "BABYMETAL",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f13-artist-fifty-fifty-098",
+        "probe_id": "probe-survey-f13-artist-fifty-fifty-098",
+        "entity_type": "artist",
+        "display_label": "FIFTY FIFTY",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f13-album-babymetal-metal-resistance-098",
+        "probe_id": "probe-survey-f13-album-babymetal-metal-resistance-098",
+        "entity_type": "album",
+        "display_label": "Metal Resistance",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f13-song_recording-fifty-fifty-cupid-098",
+        "probe_id": "probe-survey-f13-song_recording-fifty-fifty-cupid-098",
+        "entity_type": "song_recording",
+        "display_label": "Cupid",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_13/archetype_097",
+      "family_13/archetype_099"
+    ],
+    "before_archetype_refs": [
+      "family_13/archetype_097"
+    ],
+    "after_archetype_refs": [
+      "family_13/archetype_099"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_13": {
+      "title": "Normalized canonical graph export, Family 13",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_13/normalized_family_13.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "britannica_kpop": {
+      "title": "K-pop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/K-pop",
+      "source_type": "reference",
+      "audit_use": "Defines K-pop industry, idol training, choreography, and global fandom context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Defines K-pop industry, idol training, choreography, and global fandom context."
+    },
+    "grammy_bts_dynamite": {
+      "title": "BTS: Dynamite And Global Pop Breakthrough",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/news/bts-dynamite-first-grammy-nomination-k-pop",
+      "source_type": "reference",
+      "audit_use": "Supports BTS and Dynamite as a global crossover example.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports BTS and Dynamite as a global crossover example."
+    },
+    "grammy_blackpink": {
+      "title": "BLACKPINK: The Album And Global K-pop Reach",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/news/blackpink-the-album-k-pop-ice-cream-selena-gomez-lovesick-girls",
+      "source_type": "reference",
+      "audit_use": "Supports BLACKPINK as a crossover group and album example.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports BLACKPINK as a crossover group and album example."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Frames global popular music circulation while K-pop sources define the route.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Frames global popular music circulation while K-pop sources define the route."
+    },
+    "grammy_latin_music": {
+      "title": "Latin Music",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/",
+      "source_type": "industry_reference",
+      "audit_use": "Supplemental Latin-pop and awards-context source for crossover scenes.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supplemental Latin-pop and awards-context source for crossover scenes."
+    },
+    "npr_tiny_desk_discovery": {
+      "title": "Tiny Desk",
+      "publisher": "NPR Music",
+      "url": "https://www.npr.org/series/tiny-desk-concerts/",
+      "source_type": "public_media_archive",
+      "audit_use": "Public-media performance archive for contemporary discovery and cross-genre visibility.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "098-d-01",
+      "claim_text": "The lane is built around Asian pop crossover, with K-pop idol systems providing the clearest global template for choreography, fandom, visuals, and multilingual hooks.",
+      "source_ref_ids": [
+        "britannica_kpop",
+        "britannica_popular_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_13/archetype_098",
+        "artist:bts",
+        "artist:blackpink"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "098-d-02",
+      "claim_text": "BTS and Dynamite make the crossover logic concrete: English-language hook design and global fan mobilization carried K-pop into mainstream pop visibility.",
+      "source_ref_ids": [
+        "grammy_bts_dynamite",
+        "britannica_kpop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:bts",
+        "song_recording:bts-dynamite"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "098-d-03",
+      "claim_text": "BLACKPINK anchors the high-impact visual and rap/pop side of the route, where fashion, choreography, and international collaboration are part of the record signal.",
+      "source_ref_ids": [
+        "grammy_blackpink",
+        "britannica_kpop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "did_you_know"
+      ],
+      "graph_refs": [
+        "artist:blackpink",
+        "album:blackpink-the-album",
+        "song_recording:blackpink-ddu-du-ddu-du"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "098-d-04",
+      "claim_text": "Listen for precision choreography implied by the arrangement, sharp section switches, chantable group hooks, and production that toggles between pop, rap, EDM, and R&B.",
+      "source_ref_ids": [
+        "britannica_kpop",
+        "grammy_blackpink",
+        "grammy_bts_dynamite"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_13/archetype_098"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "098-k_pop_j_pop_asian_pop_crossover-boundary",
+      "claim_text": "K-Pop / J-Pop / Asian Pop Crossover's boundary is clearest when group hook chants and section-switch production appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "britannica_kpop",
+        "grammy_bts_dynamite"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_13/archetype_098",
+        "artist:blackpink",
+        "artist:bts"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "098-k_pop_j_pop_asian_pop_crossover-examples",
+      "claim_text": "BLACKPINK, BTS, The Album - BLACKPINK gives K-Pop / J-Pop / Asian Pop Crossover concrete anchors because the examples expose dance-break architecture inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "grammy_bts_dynamite",
+        "grammy_blackpink"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_13/archetype_098",
+        "artist:blackpink",
+        "artist:bts"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Asian pop crossover where idol systems, choreography, visuals, and global fandom become part of the musical surface.",
+    "history_capsule": "BTS and BLACKPINK anchor the route, with NewJeans, SEVENTEEN, Stray Kids, PSY, and J-pop examples widening the map.",
+    "why_it_mattered": "It shows how non-US pop industries can set the agenda for global pop form, fandom, and release strategy.",
+    "what_made_it_distinct": "The sound changes quickly inside a track, but the performance system keeps the parts coherent.",
+    "what_to_listen_for": [
+      "group hook chants",
+      "section-switch production",
+      "dance-break architecture",
+      "multilingual pop phrasing",
+      "fandom-ready visual identity"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:blackpink",
+        "example_type": "artist",
+        "display_label": "BLACKPINK",
+        "why_this_example_matters": "BLACKPINK anchors K-Pop / J-Pop / Asian Pop Crossover by making regional rhythm as identity and language-switching or chant hooks easier to hear.",
+        "what_to_listen_for": [
+          "group hook chants",
+          "section-switch production"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:bts",
+        "example_type": "artist",
+        "display_label": "BTS",
+        "why_this_example_matters": "BTS anchors K-Pop / J-Pop / Asian Pop Crossover by making language-switching or chant hooks and percussion and bass dialogue easier to hear.",
+        "what_to_listen_for": [
+          "section-switch production",
+          "dance-break architecture"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:blackpink-the-album",
+        "example_type": "album",
+        "display_label": "The Album - BLACKPINK",
+        "why_this_example_matters": "The Album - BLACKPINK anchors K-Pop / J-Pop / Asian Pop Crossover by making percussion and bass dialogue and dance movement built into form easier to hear.",
+        "what_to_listen_for": [
+          "dance-break architecture",
+          "multilingual pop phrasing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:bts-map-of-the-soul-7",
+        "example_type": "album",
+        "display_label": "Map of the Soul: 7 - BTS",
+        "why_this_example_matters": "Map of the Soul: 7 - BTS anchors K-Pop / J-Pop / Asian Pop Crossover by making dance movement built into form and global pop polish around local idioms easier to hear.",
+        "what_to_listen_for": [
+          "multilingual pop phrasing",
+          "fandom-ready visual identity"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:blackpink-ddu-du-ddu-du",
+        "example_type": "song_recording",
+        "display_label": "DDU-DU DDU-DU - BLACKPINK",
+        "why_this_example_matters": "DDU-DU DDU-DU - BLACKPINK anchors K-Pop / J-Pop / Asian Pop Crossover by making global pop polish around local idioms and regional rhythm as identity easier to hear.",
+        "what_to_listen_for": [
+          "fandom-ready visual identity"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:bts-dynamite",
+        "example_type": "song_recording",
+        "display_label": "Dynamite - BTS",
+        "why_this_example_matters": "Dynamite - BTS anchors K-Pop / J-Pop / Asian Pop Crossover by making regional rhythm as identity and language-switching or chant hooks easier to hear.",
+        "what_to_listen_for": [
+          "group hook chants",
+          "section-switch production"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_13/archetype_097"
+      ],
+      "after": [
+        "family_13/archetype_099"
+      ],
+      "related": [
+        "family_13/archetype_097",
+        "family_13/archetype_099"
+      ],
+      "copy": "Use K-Pop / J-Pop / Asian Pop Crossover as a contextual road inside Latin, Caribbean, Global Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "098-dyk-1",
+        "copy": "K-pop sources help define the route, but J-pop and broader Asian pop examples should not be erased.",
+        "source_ref_ids": [
+          "britannica_kpop",
+          "britannica_popular_music"
+        ]
+      },
+      {
+        "card_id": "098-dyk-2",
+        "copy": "Dynamite is useful because it separates global crossover evidence from domestic Korean chart context.",
+        "source_ref_ids": [
+          "grammy_bts_dynamite",
+          "britannica_kpop"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether k-pop / j-pop / asian pop crossover is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Asian pop crossover where idol systems, choreography, visuals, and global fandom become part of the musical surface.",
+      "It shows how non-US pop industries can set the agenda for global pop form, fandom, and release strategy.",
+      "The sound changes quickly inside a track, but the performance system keeps the parts coherent."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use generic world-music framing; this route is about modern pop industry and fandom systems.",
+    "personalization_hooks": [
+      {
+        "hook_id": "098-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[098]",
+          "atlas_state.family_affinity[13]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[098] >= 0.65 || atlas_state.family_affinity[13] >= 0.65",
+        "copy_variant": "Your Atlas signals make K-Pop / J-Pop / Asian Pop Crossover useful as a contextual landmark.",
+        "fallback_copy": "Use K-Pop / J-Pop / Asian Pop Crossover as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "098-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_13/archetype_098 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_13/archetype_098",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient K-Pop / J-Pop / Asian Pop Crossover before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "098-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_13/archetype_098 || atlas_state.boundary_question_results has boundary_negative for family_13/archetype_098",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for K-Pop / J-Pop / Asian Pop Crossover.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "098-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_13/archetype_098 || atlas_state.related_mission_ids references family_13/archetype_098",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "098-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_13/archetype_098 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_13/archetype_098 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_13/archetype_098",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for K-Pop / J-Pop / Asian Pop Crossover.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_13": {
+        "title": "Normalized canonical graph export, Family 13",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_13/normalized_family_13.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "britannica_kpop": {
+        "title": "K-pop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/K-pop",
+        "source_type": "reference",
+        "audit_use": "Defines K-pop industry, idol training, choreography, and global fandom context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines K-pop industry, idol training, choreography, and global fandom context."
+      },
+      "grammy_bts_dynamite": {
+        "title": "BTS: Dynamite And Global Pop Breakthrough",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/bts-dynamite-first-grammy-nomination-k-pop",
+        "source_type": "reference",
+        "audit_use": "Supports BTS and Dynamite as a global crossover example.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports BTS and Dynamite as a global crossover example."
+      },
+      "grammy_blackpink": {
+        "title": "BLACKPINK: The Album And Global K-pop Reach",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/blackpink-the-album-k-pop-ice-cream-selena-gomez-lovesick-girls",
+        "source_type": "reference",
+        "audit_use": "Supports BLACKPINK as a crossover group and album example.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports BLACKPINK as a crossover group and album example."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Frames global popular music circulation while K-pop sources define the route.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames global popular music circulation while K-pop sources define the route."
+      },
+      "grammy_latin_music": {
+        "title": "Latin Music",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/",
+        "source_type": "industry_reference",
+        "audit_use": "Supplemental Latin-pop and awards-context source for crossover scenes.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental Latin-pop and awards-context source for crossover scenes."
+      },
+      "npr_tiny_desk_discovery": {
+        "title": "Tiny Desk",
+        "publisher": "NPR Music",
+        "url": "https://www.npr.org/series/tiny-desk-concerts/",
+        "source_type": "public_media_archive",
+        "audit_use": "Public-media performance archive for contemporary discovery and cross-genre visibility.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "098-d-01",
+        "claim_text": "The lane is built around Asian pop crossover, with K-pop idol systems providing the clearest global template for choreography, fandom, visuals, and multilingual hooks.",
+        "source_ref_ids": [
+          "britannica_kpop",
+          "britannica_popular_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_13/archetype_098",
+          "artist:bts",
+          "artist:blackpink"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "098-d-02",
+        "claim_text": "BTS and Dynamite make the crossover logic concrete: English-language hook design and global fan mobilization carried K-pop into mainstream pop visibility.",
+        "source_ref_ids": [
+          "grammy_bts_dynamite",
+          "britannica_kpop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:bts",
+          "song_recording:bts-dynamite"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "098-d-03",
+        "claim_text": "BLACKPINK anchors the high-impact visual and rap/pop side of the route, where fashion, choreography, and international collaboration are part of the record signal.",
+        "source_ref_ids": [
+          "grammy_blackpink",
+          "britannica_kpop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "did_you_know"
+        ],
+        "graph_refs": [
+          "artist:blackpink",
+          "album:blackpink-the-album",
+          "song_recording:blackpink-ddu-du-ddu-du"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "098-d-04",
+        "claim_text": "Listen for precision choreography implied by the arrangement, sharp section switches, chantable group hooks, and production that toggles between pop, rap, EDM, and R&B.",
+        "source_ref_ids": [
+          "britannica_kpop",
+          "grammy_blackpink",
+          "grammy_bts_dynamite"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_13/archetype_098"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "098-k_pop_j_pop_asian_pop_crossover-boundary",
+        "claim_text": "K-Pop / J-Pop / Asian Pop Crossover's boundary is clearest when group hook chants and section-switch production appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "britannica_kpop",
+          "grammy_bts_dynamite"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_13/archetype_098",
+          "artist:blackpink",
+          "artist:bts"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "098-k_pop_j_pop_asian_pop_crossover-examples",
+        "claim_text": "BLACKPINK, BTS, The Album - BLACKPINK gives K-Pop / J-Pop / Asian Pop Crossover concrete anchors because the examples expose dance-break architecture inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "grammy_bts_dynamite",
+          "grammy_blackpink"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_13/archetype_098",
+          "artist:blackpink",
+          "artist:bts"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "K-pop J-pop Asian pop crossover BTS BLACKPINK Dynamite DDU-DU DDU-DU NewJeans Utada",
+    "selected_sources": [
+      {
+        "source_ref_id": "britannica_kpop",
+        "title": "K-pop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/K-pop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines K-pop industry, idol training, choreography, and global fandom context."
+      },
+      {
+        "source_ref_id": "grammy_bts_dynamite",
+        "title": "BTS: Dynamite And Global Pop Breakthrough",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/bts-dynamite-first-grammy-nomination-k-pop",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports BTS and Dynamite as a global crossover example."
+      },
+      {
+        "source_ref_id": "grammy_blackpink",
+        "title": "BLACKPINK: The Album And Global K-pop Reach",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/blackpink-the-album-k-pop-ice-cream-selena-gomez-lovesick-girls",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports BLACKPINK as a crossover group and album example."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames global popular music circulation while K-pop sources define the route."
+      },
+      {
+        "source_ref_id": "grammy_latin_music",
+        "title": "Latin Music",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental Latin-pop and awards-context source for crossover scenes."
+      },
+      {
+        "source_ref_id": "npr_tiny_desk_discovery",
+        "title": "Tiny Desk",
+        "publisher": "NPR Music",
+        "url": "https://www.npr.org/series/tiny-desk-concerts/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Public-media performance archive for contemporary discovery and cross-genre visibility."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_gospel_music",
+        "title": "Gospel music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/gospel-music",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Gospel history is valuable for family 16, but it does not support this secular/context route."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "K-pop industry, idol system, choreography, and global crossover. Broad popular-music industry, audience, and stylistic context. Supplemental Latin-pop and awards-context source for crossover scenes. Public-media performance archive for contemporary discovery and cross-genre visibility."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 5,
+    "wrong_context_source_count": 0
+  }
+}

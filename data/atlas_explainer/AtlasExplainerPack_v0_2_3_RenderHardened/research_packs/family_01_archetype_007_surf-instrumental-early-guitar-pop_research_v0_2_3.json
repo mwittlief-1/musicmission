@@ -1,0 +1,1524 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_01_archetype_007_surf-instrumental-early-guitar-pop_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_1/normalized_family_1.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 1,
+    "family_slug": "early-rock-oldies-doo-wop-pre-beatles-pop",
+    "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+    "archetype_id": "007",
+    "archetype_slug": "surf-instrumental-early-guitar-pop",
+    "canonical_graph_ref": "family_01/archetype_007",
+    "existing_graph_label_name": "Surf / Instrumental / Early Guitar Pop",
+    "editorial_display_title": "Surf, Instrumental, and Early Guitar Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:dick-dale-and-his-del-tones",
+        "object_id": "dick-dale-and-his-del-tones",
+        "display_label": "Dick Dale and His Del-Tones",
+        "source_membership_id": "family-1-artist-007-dick-dale-and-his-del-tones",
+        "roles": [
+          "anchor",
+          "deepening",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "He is the essential instrumental surf pioneer.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:jan-and-dean",
+        "object_id": "jan-and-dean",
+        "display_label": "Jan and Dean",
+        "source_membership_id": "family-1-artist-007-jan-and-dean",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "They provide the vocal surf / hot-rod radio lane.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-beach-boys",
+        "object_id": "the-beach-boys",
+        "display_label": "The Beach Boys",
+        "source_membership_id": "family-1-artist-007-the-beach-boys",
+        "roles": [
+          "anchor",
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "They are the mass-recognition center of this archetype.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-ventures",
+        "object_id": "the-ventures",
+        "display_label": "The Ventures",
+        "source_membership_id": "family-1-artist-007-the-ventures",
+        "roles": [
+          "anchor",
+          "bridge",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "They anchor the instrumental guitar-pop side.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-chantays",
+        "object_id": "the-chantays",
+        "display_label": "The Chantays",
+        "source_membership_id": "family-1-artist-007-the-chantays",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "\"Pipeline\" is one of the lane's most efficient objects.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-surfaris",
+        "object_id": "the-surfaris",
+        "display_label": "The Surfaris",
+        "source_membership_id": "family-1-artist-007-the-surfaris",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "\"Wipe Out\" is a universal instrumental signal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:santo-and-johnny",
+        "object_id": "santo-and-johnny",
+        "display_label": "Santo & Johnny",
+        "source_membership_id": "family-1-artist-007-santo-and-johnny",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "\"Sleep Walk\" is an obvious instrumental oldies omission.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-tornados",
+        "object_id": "the-tornados",
+        "display_label": "The Tornados",
+        "source_membership_id": "family-1-artist-007-the-tornados",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "\"Telstar\" is a mass-known space-age instrumental gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-trashmen",
+        "object_id": "the-trashmen",
+        "display_label": "The Trashmen",
+        "source_membership_id": "family-1-artist-007-the-trashmen",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "They help test whether the user likes the wild frat/surf edge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:annette-funicello",
+        "object_id": "annette-funicello",
+        "display_label": "Annette Funicello",
+        "source_membership_id": "family-1-artist-007-annette-funicello",
+        "roles": [
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Beach-movie youth-culture overlap matters.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:duane-eddy",
+        "object_id": "duane-eddy",
+        "display_label": "Duane Eddy",
+        "source_membership_id": "family-1-artist-007-duane-eddy",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Twang instrumentals often route users into surf.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:link-wray",
+        "object_id": "link-wray",
+        "display_label": "Link Wray",
+        "source_membership_id": "family-1-artist-007-link-wray",
+        "roles": [
+          "bridge",
+          "deepening",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Useful as a dirtier edge boundary against polished surf.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:dick-dale-and-his-del-tones-king-of-the-surf-guitar",
+        "object_id": "dick-dale-and-his-del-tones-king-of-the-surf-guitar",
+        "display_label": "King of the Surf Guitar - Dick Dale and His Del-Tones",
+        "source_membership_id": "family-1-album-007-dick-dale-and-his-del-tones-king-of-the-surf-guitar",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core instrumental-surf LP object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-beach-boys-surfin-safari",
+        "object_id": "the-beach-boys-surfin-safari",
+        "display_label": "Surfin' Safari - The Beach Boys",
+        "source_membership_id": "family-1-album-007-the-beach-boys-surfin-safari",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential early vocal-surf LP.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-beach-boys-surfin-usa",
+        "object_id": "the-beach-boys-surfin-usa",
+        "display_label": "Surfin' U.S.A. - The Beach Boys",
+        "source_membership_id": "family-1-album-007-the-beach-boys-surfin-usa",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Strongest broad-entry Beach Boys surf LP.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-beach-boys-all-summer-long",
+        "object_id": "the-beach-boys-all-summer-long",
+        "display_label": "All Summer Long - The Beach Boys",
+        "source_membership_id": "family-1-album-007-the-beach-boys-all-summer-long",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Strong best-of-era-style LP for this lane.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:jan-and-dean-dead-mans-curve-the-new-girl-in-school",
+        "object_id": "jan-and-dean-dead-mans-curve-the-new-girl-in-school",
+        "display_label": "Dead Man's Curve / The New Girl in School - Jan and Dean",
+        "source_membership_id": "family-1-album-007-jan-and-dean-dead-mans-curve-the-new-girl-in-school",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Best Jan and Dean LP object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-beach-boys-little-deuce-coupe",
+        "object_id": "the-beach-boys-little-deuce-coupe",
+        "display_label": "Little Deuce Coupe - The Beach Boys",
+        "source_membership_id": "family-1-album-007-the-beach-boys-little-deuce-coupe",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Hot-rod branch object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-beach-boys-surfer-girl",
+        "object_id": "the-beach-boys-surfer-girl",
+        "display_label": "Surfer Girl - The Beach Boys",
+        "source_membership_id": "family-1-album-007-the-beach-boys-surfer-girl",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Good for softer California-vocal-surf response.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-ventures-walk-dont-run",
+        "object_id": "the-ventures-walk-dont-run",
+        "display_label": "Walk, Don't Run - The Ventures",
+        "source_membership_id": "family-1-album-007-the-ventures-walk-dont-run",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Early instrumental-guitar anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:santo-and-johnny-santo-and-johnny",
+        "object_id": "santo-and-johnny-santo-and-johnny",
+        "display_label": "Santo & Johnny - Santo & Johnny",
+        "source_membership_id": "family-1-album-007-santo-and-johnny-santo-and-johnny",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "\"Sleep Walk\" album-world for instrumental oldies.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:dick-dale-and-his-del-tones-checkered-flag",
+        "object_id": "dick-dale-and-his-del-tones-checkered-flag",
+        "display_label": "Checkered Flag - Dick Dale and His Del-Tones",
+        "source_membership_id": "family-1-album-007-dick-dale-and-his-del-tones-checkered-flag",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Hot-rod instrumental extension.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:the-chantays-pipeline",
+        "object_id": "the-chantays-pipeline",
+        "display_label": "Pipeline - The Chantays",
+        "source_membership_id": "family-1-song-007-the-chantays-pipeline",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Elite instrumental surf gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-surfin-safari",
+        "object_id": "the-beach-boys-surfin-safari",
+        "display_label": "Surfin' Safari - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-surfin-safari",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core vocal-surf starter.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-surfin-usa",
+        "object_id": "the-beach-boys-surfin-usa",
+        "display_label": "Surfin' U.S.A. - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-surfin-usa",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "One of the biggest entry songs in the family.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-surfaris-wipe-out",
+        "object_id": "the-surfaris-wipe-out",
+        "display_label": "Wipe Out - The Surfaris",
+        "source_membership_id": "family-1-song-007-the-surfaris-wipe-out",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Universal instrumental-recognition test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-california-girls",
+        "object_id": "the-beach-boys-california-girls",
+        "display_label": "California Girls - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-california-girls",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Slightly later but too central to omit.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jan-and-dean-dead-mans-curve",
+        "object_id": "jan-and-dean-dead-mans-curve",
+        "display_label": "Dead Man's Curve - Jan and Dean",
+        "source_membership_id": "family-1-song-007-jan-and-dean-dead-mans-curve",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Strong hot-rod/drama branch marker.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-dont-worry-baby",
+        "object_id": "the-beach-boys-dont-worry-baby",
+        "display_label": "Don't Worry Baby - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-dont-worry-baby",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Very strong emotional follow-up.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-fun-fun-fun",
+        "object_id": "the-beach-boys-fun-fun-fun",
+        "display_label": "Fun, Fun, Fun - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-fun-fun-fun",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition California pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ronny-and-the-daytonas-gto",
+        "object_id": "ronny-and-the-daytonas-gto",
+        "display_label": "G.T.O. - Ronny and the Daytonas",
+        "source_membership_id": "family-1-song-007-ronny-and-the-daytonas-gto",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Hot-rod survey staple.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-rip-chords-hey-little-cobra",
+        "object_id": "the-rip-chords-hey-little-cobra",
+        "display_label": "Hey Little Cobra - The Rip Chords",
+        "source_membership_id": "family-1-song-007-the-rip-chords-hey-little-cobra",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Strong car-song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-i-get-around",
+        "object_id": "the-beach-boys-i-get-around",
+        "display_label": "I Get Around - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-i-get-around",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Big-energy vocal-surf pivot.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-little-deuce-coupe",
+        "object_id": "the-beach-boys-little-deuce-coupe",
+        "display_label": "Little Deuce Coupe - The Beach Boys",
+        "source_membership_id": "family-1-song-007-the-beach-boys-little-deuce-coupe",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core car-song prompt.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dick-dale-and-his-del-tones-misirlou",
+        "object_id": "dick-dale-and-his-del-tones-misirlou",
+        "display_label": "Misirlou - Dick Dale and His Del-Tones",
+        "source_membership_id": "family-1-song-007-dick-dale-and-his-del-tones-misirlou",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Song-recognition far exceeds genre awareness.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jan-and-dean-surf-city",
+        "object_id": "jan-and-dean-surf-city",
+        "display_label": "Surf City - Jan and Dean",
+        "source_membership_id": "family-1-song-007-jan-and-dean-surf-city",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Major vocal-surf anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f1-artist-dick-dale-and-his-del-tones-007",
+        "candidate_id": "survey-f1-artist-dick-dale-and-his-del-tones-007",
+        "object_type": "artist",
+        "display_label": "Dick Dale and His Del-Tones",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-jan-and-dean-007",
+        "candidate_id": "survey-f1-artist-jan-and-dean-007",
+        "object_type": "artist",
+        "display_label": "Jan and Dean",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-beach-boys-007",
+        "candidate_id": "survey-f1-artist-the-beach-boys-007",
+        "object_type": "artist",
+        "display_label": "The Beach Boys",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-ventures-007",
+        "candidate_id": "survey-f1-artist-the-ventures-007",
+        "object_type": "artist",
+        "display_label": "The Ventures",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-chantays-007",
+        "candidate_id": "survey-f1-artist-the-chantays-007",
+        "object_type": "artist",
+        "display_label": "The Chantays",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-surfaris-007",
+        "candidate_id": "survey-f1-artist-the-surfaris-007",
+        "object_type": "artist",
+        "display_label": "The Surfaris",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-trashmen-007",
+        "candidate_id": "survey-f1-artist-the-trashmen-007",
+        "object_type": "artist",
+        "display_label": "The Trashmen",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-santo-and-johnny-007",
+        "candidate_id": "survey-f1-artist-santo-and-johnny-007",
+        "object_type": "artist",
+        "display_label": "Santo & Johnny",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-tornados-007",
+        "candidate_id": "survey-f1-artist-the-tornados-007",
+        "object_type": "artist",
+        "display_label": "The Tornados",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-rip-chords-007",
+        "candidate_id": "survey-f1-artist-the-rip-chords-007",
+        "object_type": "artist",
+        "display_label": "The Rip Chords",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-ronny-and-the-daytonas-007",
+        "candidate_id": "survey-f1-artist-ronny-and-the-daytonas-007",
+        "object_type": "artist",
+        "display_label": "Ronny and the Daytonas",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-hondells-007",
+        "candidate_id": "survey-f1-artist-the-hondells-007",
+        "object_type": "artist",
+        "display_label": "The Hondells",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-fireballs-007",
+        "candidate_id": "survey-f1-artist-the-fireballs-007",
+        "object_type": "artist",
+        "display_label": "The Fireballs",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-marketts-007",
+        "candidate_id": "survey-f1-artist-the-marketts-007",
+        "object_type": "artist",
+        "display_label": "The Marketts",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-pyramids-007",
+        "candidate_id": "survey-f1-artist-the-pyramids-007",
+        "object_type": "artist",
+        "display_label": "The Pyramids",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-sunrays-007",
+        "candidate_id": "survey-f1-artist-the-sunrays-007",
+        "object_type": "artist",
+        "display_label": "The Sunrays",
+        "survey_page_role": "suppressed",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-johnny-and-the-hurricanes-007",
+        "candidate_id": "survey-f1-artist-johnny-and-the-hurricanes-007",
+        "object_type": "artist",
+        "display_label": "Johnny and the Hurricanes",
+        "survey_page_role": "suppressed",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-rivieras-007",
+        "candidate_id": "survey-f1-artist-the-rivieras-007",
+        "object_type": "artist",
+        "display_label": "The Rivieras",
+        "survey_page_role": "suppressed",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-routers-007",
+        "candidate_id": "survey-f1-artist-the-routers-007",
+        "object_type": "artist",
+        "display_label": "The Routers",
+        "survey_page_role": "suppressed",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-the-astronauts-007",
+        "candidate_id": "survey-f1-artist-the-astronauts-007",
+        "object_type": "artist",
+        "display_label": "The Astronauts",
+        "survey_page_role": "suppressed",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-jan-and-dean-dead-mans-curve-007",
+        "question_id": "boundary-survey-f1-song_recording-jan-and-dean-dead-mans-curve-007",
+        "display_label": "Dead Man's Curve",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-the-revels-comanche-007",
+        "question_id": "boundary-survey-f1-song_recording-the-revels-comanche-007",
+        "display_label": "Comanche",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-the-viscounts-harlem-nocturne-007",
+        "question_id": "boundary-survey-f1-song_recording-the-viscounts-harlem-nocturne-007",
+        "display_label": "Harlem Nocturne",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-the-gamblers-moon-dawg-007",
+        "question_id": "boundary-survey-f1-song_recording-the-gamblers-moon-dawg-007",
+        "display_label": "Moon Dawg!",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-jan-and-dean-dead-mans-curve-007",
+        "probe_id": "probe-survey-f1-song_recording-jan-and-dean-dead-mans-curve-007",
+        "entity_type": "song_recording",
+        "display_label": "Dead Man's Curve",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-the-revels-comanche-007",
+        "probe_id": "probe-survey-f1-song_recording-the-revels-comanche-007",
+        "entity_type": "song_recording",
+        "display_label": "Comanche",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-the-viscounts-harlem-nocturne-007",
+        "probe_id": "probe-survey-f1-song_recording-the-viscounts-harlem-nocturne-007",
+        "entity_type": "song_recording",
+        "display_label": "Harlem Nocturne",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-the-gamblers-moon-dawg-007",
+        "probe_id": "probe-survey-f1-song_recording-the-gamblers-moon-dawg-007",
+        "entity_type": "song_recording",
+        "display_label": "Moon Dawg!",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_01/archetype_006"
+    ],
+    "before_archetype_refs": [
+      "family_01/archetype_006"
+    ],
+    "after_archetype_refs": []
+  },
+  "source_references": {
+    "canonical_graph_family_1": {
+      "title": "Normalized canonical graph export, Family 1",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_1/normalized_family_1.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "007_britannica_surf_music": {
+      "title": "Surf music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/surf-music",
+      "source_type": "reference",
+      "audit_use": "Directly covers Dick Dale, instrumental surf, Beach Boys vocal surf, and West Coast guitar/harmony context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly covers Dick Dale, instrumental surf, Beach Boys vocal surf, and West Coast guitar/harmony context."
+    },
+    "007_britannica_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beach-Boys",
+      "source_type": "reference",
+      "audit_use": "Supports the vocal-harmony surf-pop side and Brian Wilson's early studio craft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the vocal-harmony surf-pop side and Brian Wilson's early studio craft."
+    },
+    "007_rockhall_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/beach-boys/",
+      "source_type": "museum_reference",
+      "audit_use": "Museum framing for Beach Boys as essential surf, harmony, and pop-rock anchors.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Museum framing for Beach Boys as essential surf, harmony, and pop-rock anchors."
+    },
+    "007_britannica_dick_dale": {
+      "title": "Dick Dale",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Dick-Dale",
+      "source_type": "reference",
+      "audit_use": "Gives direct support for the instrumental guitar side and Dale's surf-guitar identity.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Gives direct support for the instrumental guitar side and Dale's surf-guitar identity."
+    },
+    "britannica_surf_music": {
+      "title": "Surf music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/surf-music",
+      "source_type": "reference",
+      "audit_use": "Dick Dale, instrumental surf, Beach Boys, West Coast guitar and harmony contexts.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Dick Dale, instrumental surf, Beach Boys, West Coast guitar and harmony contexts."
+    },
+    "britannica_dick_dale": {
+      "title": "Dick Dale",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Dick-Dale",
+      "source_type": "reference",
+      "audit_use": "Dick Dale's surf-guitar role, percussive playing, and reverb-amplifier context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Dick Dale's surf-guitar role, percussive playing, and reverb-amplifier context."
+    },
+    "rockhall_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/beach-boys/",
+      "source_type": "museum_reference",
+      "audit_use": "Beach Boys as surf-rock and harmony-pop gateway.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+    },
+    "britannica_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beach-Boys",
+      "source_type": "reference",
+      "audit_use": "Beach Boys formation, harmonies, surf image, and Brian Wilson studio role.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Beach Boys formation, harmonies, surf image, and Brian Wilson studio role."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "007-claim-01-two-surf-lanes",
+      "claim_text": "Surf music has two useful Atlas faces: instrumental reverb-guitar records and vocal harmony pop built around beach and car imagery.",
+      "source_ref_ids": [
+        "007_britannica_surf_music",
+        "007_britannica_beach_boys"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_01/archetype_007"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "007-claim-02-dick-dale-attack",
+      "claim_text": "Dick Dale's rapid picking, Middle Eastern-inflected lines, and loud Fender reverb make the instrumental side feel kinetic rather than merely scenic.",
+      "source_ref_ids": [
+        "007_britannica_dick_dale",
+        "007_britannica_surf_music"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_01/archetype_007",
+        "artist:dick-dale-and-his-del-tones"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "007-claim-03-beach-boys-harmony",
+      "claim_text": "The Beach Boys translate surf and hot-rod imagery into stacked harmony, bright melodies, and increasingly sophisticated studio pop.",
+      "source_ref_ids": [
+        "007_britannica_beach_boys",
+        "007_rockhall_beach_boys"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_01/archetype_007",
+        "artist:the-beach-boys",
+        "song_recording:the-beach-boys-surfin-usa"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "007-claim-04-guitar-pop-bridge",
+      "claim_text": "The archetype's guitar tone and wordless hooks make it a bridge from early rock instrumentals to later garage, psych, and soundtrack guitar memory.",
+      "source_ref_ids": [
+        "007_britannica_surf_music",
+        "007_britannica_dick_dale"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_01/archetype_007",
+        "song_recording:the-chantays-pipeline",
+        "song_recording:the-surfaris-wipe-out"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "007-surf_instrumental_early_guitar_pop-boundary",
+      "claim_text": "Surf, Instrumental, and Early Guitar Pop's boundary is clearest when Spring reverb around the lead guitar and Fast alternate picking appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "007_britannica_surf_music",
+        "007_britannica_beach_boys"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_01/archetype_007",
+        "artist:dick-dale-and-his-del-tones",
+        "artist:jan-and-dean"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "007-surf_instrumental_early_guitar_pop-examples",
+      "claim_text": "Dick Dale and His Del-Tones, Jan and Dean, King of the Surf Guitar - Dick Dale and His Del-Tones gives Surf, Instrumental, and Early Guitar Pop concrete anchors because the examples expose Toms and snare patterns that mimic waves or motion inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "007_britannica_beach_boys",
+        "007_rockhall_beach_boys"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_01/archetype_007",
+        "artist:dick-dale-and-his-del-tones",
+        "artist:jan-and-dean"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A California-coded early guitar-pop lane split between reverb-soaked instrumentals and harmony-rich beach-radio songs.",
+    "history_capsule": "Surf music turns place into sound: ocean motion, hot rods, Southern California youth imagery, and electric-guitar technology. Dick Dale and The Chantays show the instrumental attack; The Beach Boys and Jan and Dean show how surf culture became vocal pop mythology.",
+    "why_it_mattered": "It made guitar tone an environment. Its reverb, tremolo, fast picking, and wordless hooks echo through garage rock, film music, punk revival, and guitar instrumental culture.",
+    "what_made_it_distinct": "The record often feels horizontal and kinetic, like motion across a surface: rolling drums, wet guitar, bright harmonies, and a scene you can picture immediately.",
+    "what_to_listen_for": [
+      "Spring reverb around the lead guitar",
+      "Fast alternate picking",
+      "Toms and snare patterns that mimic waves or motion",
+      "Falsetto and stacked vocal harmony",
+      "Surf, car, beach, and summer imagery"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:dick-dale-and-his-del-tones",
+        "example_type": "artist",
+        "display_label": "Dick Dale and His Del-Tones",
+        "why_this_example_matters": "Dick Dale and His Del-Tones is a graph-validated anchor for Surf, Instrumental, and Early Guitar Pop; use it to hear Spring reverb around the lead guitar.",
+        "what_to_listen_for": [
+          "Spring reverb around the lead guitar",
+          "Fast alternate picking"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:jan-and-dean",
+        "example_type": "artist",
+        "display_label": "Jan and Dean",
+        "why_this_example_matters": "Jan and Dean is a graph-validated anchor for Surf, Instrumental, and Early Guitar Pop; use it to hear Fast alternate picking.",
+        "what_to_listen_for": [
+          "Fast alternate picking",
+          "Toms and snare patterns that mimic waves or motion"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:dick-dale-and-his-del-tones-king-of-the-surf-guitar",
+        "example_type": "album",
+        "display_label": "King of the Surf Guitar - Dick Dale and His Del-Tones",
+        "why_this_example_matters": "King of the Surf Guitar - Dick Dale and His Del-Tones is a graph-validated anchor for Surf, Instrumental, and Early Guitar Pop; use it to hear Toms and snare patterns that mimic waves or motion.",
+        "what_to_listen_for": [
+          "Toms and snare patterns that mimic waves or motion",
+          "Falsetto and stacked vocal harmony"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-beach-boys-surfin-safari",
+        "example_type": "album",
+        "display_label": "Surfin' Safari - The Beach Boys",
+        "why_this_example_matters": "Surfin' Safari - The Beach Boys is a graph-validated anchor for Surf, Instrumental, and Early Guitar Pop; use it to hear Falsetto and stacked vocal harmony.",
+        "what_to_listen_for": [
+          "Falsetto and stacked vocal harmony",
+          "Surf, car, beach, and summer imagery"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-chantays-pipeline",
+        "example_type": "song_recording",
+        "display_label": "Pipeline - The Chantays",
+        "why_this_example_matters": "Pipeline - The Chantays is a graph-validated anchor for Surf, Instrumental, and Early Guitar Pop; use it to hear Surf, car, beach, and summer imagery.",
+        "what_to_listen_for": [
+          "Surf, car, beach, and summer imagery"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-beach-boys-surfin-safari",
+        "example_type": "song_recording",
+        "display_label": "Surfin' Safari - The Beach Boys",
+        "why_this_example_matters": "Surfin' Safari - The Beach Boys is a graph-validated anchor for Surf, Instrumental, and Early Guitar Pop; use it to hear Spring reverb around the lead guitar.",
+        "what_to_listen_for": [
+          "Spring reverb around the lead guitar",
+          "Fast alternate picking"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_01/archetype_006"
+      ],
+      "after": [],
+      "related": [
+        "family_01/archetype_006"
+      ],
+      "copy": "Use Surf, Instrumental, and Early Guitar Pop as a contextual road inside Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "007-dyk-1",
+        "copy": "Instrumental surf can be much harder-edged than the sunny vocal hits suggest.",
+        "source_ref_ids": [
+          "007_britannica_surf_music",
+          "007_britannica_beach_boys"
+        ]
+      },
+      {
+        "card_id": "007-dyk-2",
+        "copy": "The Beach Boys belong here early, but their later studio work also points into baroque and psychedelic pop roads.",
+        "source_ref_ids": [
+          "007_britannica_dick_dale",
+          "007_britannica_surf_music"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether surf, instrumental, and early guitar pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A California-coded early guitar-pop lane split between reverb-soaked instrumentals and harmony-rich beach-radio songs.",
+      "It made guitar tone an environment. Its reverb, tremolo, fast picking, and wordless hooks echo through garage rock, film music, punk revival, and guitar instrumental culture.",
+      "The record often feels horizontal and kinetic, like motion across a surface: rolling drums, wet guitar, bright harmonies, and a scene you can picture immediately."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use any Beach Boys song as automatic surf evidence; listen for whether the record is beach/guitar pop or later studio art-pop.",
+    "personalization_hooks": [
+      {
+        "hook_id": "007-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[007]",
+          "atlas_state.family_affinity[1]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[007] >= 0.65 || atlas_state.family_affinity[1] >= 0.65",
+        "copy_variant": "Your Atlas signals make Surf, Instrumental, and Early Guitar Pop useful as a contextual landmark.",
+        "fallback_copy": "Use Surf, Instrumental, and Early Guitar Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "007-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_01/archetype_007 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_01/archetype_007",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Surf, Instrumental, and Early Guitar Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "007-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_01/archetype_007 || atlas_state.boundary_question_results has boundary_negative for family_01/archetype_007",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Surf, Instrumental, and Early Guitar Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "007-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_01/archetype_007 || atlas_state.related_mission_ids references family_01/archetype_007",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "007-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_01/archetype_007 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_01/archetype_007 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_01/archetype_007",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Surf, Instrumental, and Early Guitar Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_1": {
+        "title": "Normalized canonical graph export, Family 1",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_1/normalized_family_1.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "007_britannica_surf_music": {
+        "title": "Surf music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/surf-music",
+        "source_type": "reference",
+        "audit_use": "Directly covers Dick Dale, instrumental surf, Beach Boys vocal surf, and West Coast guitar/harmony context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly covers Dick Dale, instrumental surf, Beach Boys vocal surf, and West Coast guitar/harmony context."
+      },
+      "007_britannica_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_type": "reference",
+        "audit_use": "Supports the vocal-harmony surf-pop side and Brian Wilson's early studio craft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-harmony surf-pop side and Brian Wilson's early studio craft."
+      },
+      "007_rockhall_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_type": "museum_reference",
+        "audit_use": "Museum framing for Beach Boys as essential surf, harmony, and pop-rock anchors.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Museum framing for Beach Boys as essential surf, harmony, and pop-rock anchors."
+      },
+      "007_britannica_dick_dale": {
+        "title": "Dick Dale",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dick-Dale",
+        "source_type": "reference",
+        "audit_use": "Gives direct support for the instrumental guitar side and Dale's surf-guitar identity.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives direct support for the instrumental guitar side and Dale's surf-guitar identity."
+      },
+      "britannica_surf_music": {
+        "title": "Surf music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/surf-music",
+        "source_type": "reference",
+        "audit_use": "Dick Dale, instrumental surf, Beach Boys, West Coast guitar and harmony contexts.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dick Dale, instrumental surf, Beach Boys, West Coast guitar and harmony contexts."
+      },
+      "britannica_dick_dale": {
+        "title": "Dick Dale",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dick-Dale",
+        "source_type": "reference",
+        "audit_use": "Dick Dale's surf-guitar role, percussive playing, and reverb-amplifier context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dick Dale's surf-guitar role, percussive playing, and reverb-amplifier context."
+      },
+      "rockhall_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_type": "museum_reference",
+        "audit_use": "Beach Boys as surf-rock and harmony-pop gateway.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+      },
+      "britannica_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_type": "reference",
+        "audit_use": "Beach Boys formation, harmonies, surf image, and Brian Wilson studio role.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Beach Boys formation, harmonies, surf image, and Brian Wilson studio role."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "007-claim-01-two-surf-lanes",
+        "claim_text": "Surf music has two useful Atlas faces: instrumental reverb-guitar records and vocal harmony pop built around beach and car imagery.",
+        "source_ref_ids": [
+          "007_britannica_surf_music",
+          "007_britannica_beach_boys"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007-claim-02-dick-dale-attack",
+        "claim_text": "Dick Dale's rapid picking, Middle Eastern-inflected lines, and loud Fender reverb make the instrumental side feel kinetic rather than merely scenic.",
+        "source_ref_ids": [
+          "007_britannica_dick_dale",
+          "007_britannica_surf_music"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "artist:dick-dale-and-his-del-tones"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007-claim-03-beach-boys-harmony",
+        "claim_text": "The Beach Boys translate surf and hot-rod imagery into stacked harmony, bright melodies, and increasingly sophisticated studio pop.",
+        "source_ref_ids": [
+          "007_britannica_beach_boys",
+          "007_rockhall_beach_boys"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "artist:the-beach-boys",
+          "song_recording:the-beach-boys-surfin-usa"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007-claim-04-guitar-pop-bridge",
+        "claim_text": "The archetype's guitar tone and wordless hooks make it a bridge from early rock instrumentals to later garage, psych, and soundtrack guitar memory.",
+        "source_ref_ids": [
+          "007_britannica_surf_music",
+          "007_britannica_dick_dale"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "song_recording:the-chantays-pipeline",
+          "song_recording:the-surfaris-wipe-out"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007-surf_instrumental_early_guitar_pop-boundary",
+        "claim_text": "Surf, Instrumental, and Early Guitar Pop's boundary is clearest when Spring reverb around the lead guitar and Fast alternate picking appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "007_britannica_surf_music",
+          "007_britannica_beach_boys"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "artist:dick-dale-and-his-del-tones",
+          "artist:jan-and-dean"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007-surf_instrumental_early_guitar_pop-examples",
+        "claim_text": "Dick Dale and His Del-Tones, Jan and Dean, King of the Surf Guitar - Dick Dale and His Del-Tones gives Surf, Instrumental, and Early Guitar Pop concrete anchors because the examples expose Toms and snare patterns that mimic waves or motion inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "007_britannica_beach_boys",
+          "007_rockhall_beach_boys"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "artist:dick-dale-and-his-del-tones",
+          "artist:jan-and-dean"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Surf / Instrumental / Early Guitar Pop: Dick Dale, Beach Boys, Jan and Dean, reverb guitar, California surf image, instrumental surf, hot-rod pop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "007_britannica_surf_music",
+        "title": "Surf music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/surf-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly covers Dick Dale, instrumental surf, Beach Boys vocal surf, and West Coast guitar/harmony context."
+      },
+      {
+        "source_ref_id": "007_britannica_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-harmony surf-pop side and Brian Wilson's early studio craft."
+      },
+      {
+        "source_ref_id": "007_rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Museum framing for Beach Boys as essential surf, harmony, and pop-rock anchors."
+      },
+      {
+        "source_ref_id": "007_britannica_dick_dale",
+        "title": "Dick Dale",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dick-Dale",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives direct support for the instrumental guitar side and Dale's surf-guitar identity."
+      },
+      {
+        "source_ref_id": "britannica_surf_music",
+        "title": "Surf music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/surf-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dick Dale, instrumental surf, Beach Boys, West Coast guitar and harmony contexts."
+      },
+      {
+        "source_ref_id": "britannica_dick_dale",
+        "title": "Dick Dale",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dick-Dale",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dick Dale's surf-guitar role, percussive playing, and reverb-amplifier context."
+      },
+      {
+        "source_ref_id": "rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+      },
+      {
+        "source_ref_id": "britannica_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_relevance": "example_object_support",
+        "why_fit": "Beach Boys formation, harmonies, surf image, and Brian Wilson studio role."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "007_reject_surfing_sport",
+        "title": "Surfing",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/sports/surfing",
+        "why_rejected": "The sport explains imagery, but it does not document the musical language of reverb guitar and harmony pop.",
+        "source_type": "reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 007_britannica_surf_music anchors the named archetype rather than only its family. Example support: 007_britannica_beach_boys, 007_rockhall_beach_boys, 007_britannica_dick_dale ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  }
+}

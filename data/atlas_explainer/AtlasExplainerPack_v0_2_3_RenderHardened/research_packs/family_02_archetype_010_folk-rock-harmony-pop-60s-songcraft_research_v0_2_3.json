@@ -1,0 +1,1201 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_02_archetype_010_folk-rock-harmony-pop-60s-songcraft_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_2/normalized_family_2.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 2,
+    "family_slug": "beatles-british-invasion-60s-pop-rock",
+    "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+    "archetype_id": "010",
+    "archetype_slug": "folk-rock-harmony-pop-60s-songcraft",
+    "canonical_graph_ref": "family_02/archetype_010",
+    "existing_graph_label_name": "Folk-Rock / Harmony Pop / 60s Songcraft",
+    "editorial_display_title": "Folk-Rock / Harmony Pop / 60s Songcraft",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:bob-dylan",
+        "object_id": "bob-dylan",
+        "display_label": "Bob Dylan",
+        "source_membership_id": "family-2-artist-010-bob-dylan",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Foundational folk-rock crossover artist and bridge to singer-songwriter canons.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:simon-and-garfunkel",
+        "object_id": "simon-and-garfunkel",
+        "display_label": "Simon & Garfunkel",
+        "source_membership_id": "family-2-artist-010-simon-and-garfunkel",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Major harmony-folk/pop artist omitted as artist despite seeded album coverage.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:buffalo-springfield",
+        "object_id": "buffalo-springfield",
+        "display_label": "Buffalo Springfield",
+        "source_membership_id": "family-2-artist-010-buffalo-springfield",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Short-lived but historically dense folk-rock bridge toward country-rock and 70s songwriter lineages.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-lovin-spoonful",
+        "object_id": "the-lovin-spoonful",
+        "display_label": "The Lovin' Spoonful",
+        "source_membership_id": "family-2-artist-010-the-lovin-spoonful",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Good-time folk-rock/pop bridge that broadens the archetype beyond protest seriousness.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-mamas-and-the-papas",
+        "object_id": "the-mamas-and-the-papas",
+        "display_label": "The Mamas & the Papas",
+        "source_membership_id": "family-2-artist-010-the-mamas-and-the-papas",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing artist-level harmony/folk-pop anchor behind `California Dreamin'`.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:donovan",
+        "object_id": "donovan",
+        "display_label": "Donovan",
+        "source_membership_id": "family-2-artist-010-donovan",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Folk-pop to psych-pop hinge missing as artist object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:the-beatles-rubber-soul",
+        "object_id": "the-beatles-rubber-soul",
+        "display_label": "Rubber Soul - The Beatles",
+        "source_membership_id": "family-2-album-010-the-beatles-rubber-soul",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing bridge from beat-pop into folk-rock and album-era songwriting.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-byrds-mr-tambourine-man",
+        "object_id": "the-byrds-mr-tambourine-man",
+        "display_label": "Mr. Tambourine Man - The Byrds",
+        "source_membership_id": "family-2-album-010-the-byrds-mr-tambourine-man",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Core American folk-rock/jangle album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:simon-and-garfunkel-sounds-of-silence",
+        "object_id": "simon-and-garfunkel-sounds-of-silence",
+        "display_label": "Sounds of Silence - Simon & Garfunkel",
+        "source_membership_id": "family-2-album-010-simon-and-garfunkel-sounds-of-silence",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Strong harmony-folk album object backing Simon & Garfunkel coverage.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:buffalo-springfield-buffalo-springfield-again",
+        "object_id": "buffalo-springfield-buffalo-springfield-again",
+        "display_label": "Buffalo Springfield Again - Buffalo Springfield",
+        "source_membership_id": "family-2-album-010-buffalo-springfield-buffalo-springfield-again",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing folk-rock/psych/country-rock bridge album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:simon-and-garfunkel-bookends",
+        "object_id": "simon-and-garfunkel-bookends",
+        "display_label": "Bookends - Simon & Garfunkel",
+        "source_membership_id": "family-2-album-010-simon-and-garfunkel-bookends",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing late-60s folk-pop album object tied to `Mrs. Robinson`.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:buffalo-springfield-for-what-its-worth",
+        "object_id": "buffalo-springfield-for-what-its-worth",
+        "display_label": "For What It's Worth - Buffalo Springfield",
+        "source_membership_id": "family-2-song-010-buffalo-springfield-for-what-its-worth",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Protest-era folk-rock single with broad recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-mamas-and-the-papas-california-dreamin",
+        "object_id": "the-mamas-and-the-papas-california-dreamin",
+        "display_label": "California Dreamin' - The Mamas & the Papas",
+        "source_membership_id": "family-2-song-010-the-mamas-and-the-papas-california-dreamin",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Major folk-pop/sunshine gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beatles-yesterday",
+        "object_id": "the-beatles-yesterday",
+        "display_label": "Yesterday - The Beatles",
+        "source_membership_id": "family-2-song-010-the-beatles-yesterday",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing mass Beatles song object bridging pop-rock and chamber pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:simon-and-garfunkel-mrs-robinson",
+        "object_id": "simon-and-garfunkel-mrs-robinson",
+        "display_label": "Mrs. Robinson - Simon & Garfunkel",
+        "source_membership_id": "family-2-song-010-simon-and-garfunkel-mrs-robinson",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing mass folk-pop song object for late-60s mainstream crossover.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-byrds-turn-turn-turn",
+        "object_id": "the-byrds-turn-turn-turn",
+        "display_label": "Turn! Turn! Turn! - The Byrds",
+        "source_membership_id": "family-2-song-010-the-byrds-turn-turn-turn",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing second Byrds folk-rock mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-lovin-spoonful-do-you-believe-in-magic",
+        "object_id": "the-lovin-spoonful-do-you-believe-in-magic",
+        "display_label": "Do You Believe in Magic - The Lovin' Spoonful",
+        "source_membership_id": "family-2-song-010-the-lovin-spoonful-do-you-believe-in-magic",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lighter Greenwich Village folk-rock/pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f2-artist-bob-dylan-010",
+        "candidate_id": "survey-f2-artist-bob-dylan-010",
+        "object_type": "artist",
+        "display_label": "Bob Dylan",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-simon-and-garfunkel-010",
+        "candidate_id": "survey-f2-artist-simon-and-garfunkel-010",
+        "object_type": "artist",
+        "display_label": "Simon & Garfunkel",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-buffalo-springfield-010",
+        "candidate_id": "survey-f2-artist-buffalo-springfield-010",
+        "object_type": "artist",
+        "display_label": "Buffalo Springfield",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-mamas-and-the-papas-010",
+        "candidate_id": "survey-f2-artist-the-mamas-and-the-papas-010",
+        "object_type": "artist",
+        "display_label": "The Mamas & the Papas",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-lovin-spoonful-010",
+        "candidate_id": "survey-f2-artist-the-lovin-spoonful-010",
+        "object_type": "artist",
+        "display_label": "The Lovin' Spoonful",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-donovan-010",
+        "candidate_id": "survey-f2-artist-donovan-010",
+        "object_type": "artist",
+        "display_label": "Donovan",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-beatles-rubber-soul-010",
+        "candidate_id": "survey-f2-album-the-beatles-rubber-soul-010",
+        "object_type": "album",
+        "display_label": "Rubber Soul",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-byrds-mr-tambourine-man-010",
+        "candidate_id": "survey-f2-album-the-byrds-mr-tambourine-man-010",
+        "object_type": "album",
+        "display_label": "Mr. Tambourine Man",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-simon-and-garfunkel-sounds-of-silence-010",
+        "candidate_id": "survey-f2-album-simon-and-garfunkel-sounds-of-silence-010",
+        "object_type": "album",
+        "display_label": "Sounds of Silence",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-buffalo-springfield-buffalo-springfield-again-010",
+        "candidate_id": "survey-f2-album-buffalo-springfield-buffalo-springfield-again-010",
+        "object_type": "album",
+        "display_label": "Buffalo Springfield Again",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-simon-and-garfunkel-bookends-010",
+        "candidate_id": "survey-f2-album-simon-and-garfunkel-bookends-010",
+        "object_type": "album",
+        "display_label": "Bookends",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-mamas-and-the-papas-california-dreamin-010",
+        "candidate_id": "survey-f2-song_recording-the-mamas-and-the-papas-california-dreamin-010",
+        "object_type": "song_recording",
+        "display_label": "California Dreamin'",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-buffalo-springfield-for-what-its-worth-010",
+        "candidate_id": "survey-f2-song_recording-buffalo-springfield-for-what-its-worth-010",
+        "object_type": "song_recording",
+        "display_label": "For What It's Worth",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-simon-and-garfunkel-mrs-robinson-010",
+        "candidate_id": "survey-f2-song_recording-simon-and-garfunkel-mrs-robinson-010",
+        "object_type": "song_recording",
+        "display_label": "Mrs. Robinson",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-beatles-yesterday-010",
+        "candidate_id": "survey-f2-song_recording-the-beatles-yesterday-010",
+        "object_type": "song_recording",
+        "display_label": "Yesterday",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-byrds-turn-turn-turn-010",
+        "candidate_id": "survey-f2-song_recording-the-byrds-turn-turn-turn-010",
+        "object_type": "song_recording",
+        "display_label": "Turn! Turn! Turn!",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-lovin-spoonful-do-you-believe-in-magic-010",
+        "candidate_id": "survey-f2-song_recording-the-lovin-spoonful-do-you-believe-in-magic-010",
+        "object_type": "song_recording",
+        "display_label": "Do You Believe in Magic",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_02/archetype_009",
+      "family_02/archetype_011"
+    ],
+    "before_archetype_refs": [
+      "family_02/archetype_009"
+    ],
+    "after_archetype_refs": [
+      "family_02/archetype_011"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_2": {
+      "title": "Normalized canonical graph export, Family 2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_2/normalized_family_2.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "010_britannica_folk_rock": {
+      "title": "Folk rock",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/folk-rock",
+      "source_type": "reference",
+      "audit_use": "Directly defines the fusion of folk songwriting and rock instrumentation that structures the archetype.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly defines the fusion of folk songwriting and rock instrumentation that structures the archetype."
+    },
+    "010_britannica_bob_dylan": {
+      "title": "Bob Dylan",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+      "source_type": "reference",
+      "audit_use": "Supports Dylan's central role in moving folk lyric ambition into electric rock culture.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Dylan's central role in moving folk lyric ambition into electric rock culture."
+    },
+    "010_rockhall_byrds": {
+      "title": "The Byrds",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-byrds/",
+      "source_type": "museum_reference",
+      "audit_use": "Documents the electric-band conversion of folk material and the harmony/jangle side of the lane.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Documents the electric-band conversion of folk material and the harmony/jangle side of the lane."
+    },
+    "010_rockhall_simon_garfunkel": {
+      "title": "Simon & Garfunkel",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/simon-and-garfunkel/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the close-harmony and literate songcraft side of 1960s folk-pop crossover.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the close-harmony and literate songcraft side of 1960s folk-pop crossover."
+    },
+    "rockhall_byrds": {
+      "title": "The Byrds",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-byrds/",
+      "source_type": "museum_reference",
+      "audit_use": "Jangle, folk-rock, and electric Dylan-era influence.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Jangle, folk-rock, and electric Dylan-era influence."
+    },
+    "britannica_bob_dylan": {
+      "title": "Bob Dylan",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+      "source_type": "reference",
+      "audit_use": "Dylan biography, folk revival, electric folk-rock, and songwriter influence.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Dylan biography, folk revival, electric folk-rock, and songwriter influence."
+    },
+    "rockhall_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/beach-boys/",
+      "source_type": "museum_reference",
+      "audit_use": "Beach Boys as surf-rock and harmony-pop gateway.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+    },
+    "britannica_rock_1960s": {
+      "title": "Rock in the 1960s",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+      "source_type": "reference",
+      "audit_use": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "010-claim-01-folk-plus-rock",
+      "claim_text": "Folk-rock joins acoustic folk's lyric seriousness to rock rhythm, electric guitars, and pop single structure.",
+      "source_ref_ids": [
+        "010_britannica_folk_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_02/archetype_010"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "010-claim-02-dylan-electric-pressure",
+      "claim_text": "Dylan's move into electric contexts made the idea of a rock song carrying dense literary or protest language newly central.",
+      "source_ref_ids": [
+        "010_britannica_bob_dylan",
+        "010_britannica_folk_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "why_it_mattered",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_02/archetype_010",
+        "artist:bob-dylan"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "010-claim-03-harmony-pop-west-coast",
+      "claim_text": "The Mamas & the Papas, Simon & Garfunkel, and Buffalo Springfield show the lane's harmony-pop side: group blend, topical feeling, and polished 1960s arrangements.",
+      "source_ref_ids": [
+        "010_rockhall_simon_garfunkel",
+        "010_britannica_folk_rock"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_02/archetype_010",
+        "artist:simon-and-garfunkel",
+        "artist:buffalo-springfield",
+        "song_recording:the-mamas-and-the-papas-california-dreamin"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "010-claim-04-byrds-translator",
+      "claim_text": "The Byrds translate folk material into a bright electric band language, making them a bridge between jangle precursor and full folk-rock songcraft.",
+      "source_ref_ids": [
+        "010_rockhall_byrds",
+        "010_britannica_folk_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_02/archetype_010",
+        "family_02/archetype_009",
+        "artist:the-byrds",
+        "song_recording:the-byrds-turn-turn-turn"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "010-folk_rock_harmony_pop_60s_songcraft-boundary",
+      "claim_text": "Folk-Rock / Harmony Pop / 60s Songcraft's boundary is clearest when Acoustic strum under electric accents and Close harmonies that soften heavy lyrics appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "010_britannica_folk_rock",
+        "010_britannica_bob_dylan"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_010",
+        "artist:bob-dylan",
+        "artist:simon-and-garfunkel"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "010-folk_rock_harmony_pop_60s_songcraft-examples",
+      "claim_text": "Bob Dylan, Simon & Garfunkel, Rubber Soul - The Beatles gives Folk-Rock / Harmony Pop / 60s Songcraft concrete anchors because the examples expose Topical or poetic language inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "010_britannica_bob_dylan",
+        "010_rockhall_byrds"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_010",
+        "artist:bob-dylan",
+        "artist:simon-and-garfunkel"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A 1960s songcraft lane where folk lyric weight, electric band sound, and vocal harmony become pop-rock language.",
+    "history_capsule": "Folk-rock begins when folk songs and topical writing meet drums, electric guitars, and pop radio. Dylan, The Byrds, Simon & Garfunkel, Buffalo Springfield, and The Mamas & the Papas each balance seriousness and accessibility differently.",
+    "why_it_mattered": "It expands what a pop-rock song can talk about. Protest, poetry, personal reflection, and generational unease can now sit beside hooks and harmonies.",
+    "what_made_it_distinct": "This lane is more lyric-centered than jangle pop alone and less studio-fantastical than psychedelic pop. The words and vocal blend carry as much weight as the guitars.",
+    "what_to_listen_for": [
+      "Acoustic strum under electric accents",
+      "Close harmonies that soften heavy lyrics",
+      "Topical or poetic language",
+      "A rock backbeat under folk phrasing",
+      "Group blend as emotional argument"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:bob-dylan",
+        "example_type": "artist",
+        "display_label": "Bob Dylan",
+        "why_this_example_matters": "Bob Dylan anchors Folk-Rock / Harmony Pop / 60s Songcraft by making lyric-centered phrasing and acoustic or piano-led space easier to hear.",
+        "what_to_listen_for": [
+          "Acoustic strum under electric accents",
+          "Close harmonies that soften heavy lyrics"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:simon-and-garfunkel",
+        "example_type": "artist",
+        "display_label": "Simon & Garfunkel",
+        "why_this_example_matters": "Simon & Garfunkel anchors Folk-Rock / Harmony Pop / 60s Songcraft by making acoustic or piano-led space and intimate vocal presence easier to hear.",
+        "what_to_listen_for": [
+          "Close harmonies that soften heavy lyrics",
+          "Topical or poetic language"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-beatles-rubber-soul",
+        "example_type": "album",
+        "display_label": "Rubber Soul - The Beatles",
+        "why_this_example_matters": "Rubber Soul - The Beatles anchors Folk-Rock / Harmony Pop / 60s Songcraft by making intimate vocal presence and narrative detail easier to hear.",
+        "what_to_listen_for": [
+          "Topical or poetic language",
+          "A rock backbeat under folk phrasing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-byrds-mr-tambourine-man",
+        "example_type": "album",
+        "display_label": "Mr. Tambourine Man - The Byrds",
+        "why_this_example_matters": "Mr. Tambourine Man - The Byrds anchors Folk-Rock / Harmony Pop / 60s Songcraft by making narrative detail and roots sources carried by personal authorship easier to hear.",
+        "what_to_listen_for": [
+          "A rock backbeat under folk phrasing",
+          "Group blend as emotional argument"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:buffalo-springfield-for-what-its-worth",
+        "example_type": "song_recording",
+        "display_label": "For What It's Worth - Buffalo Springfield",
+        "why_this_example_matters": "For What It's Worth - Buffalo Springfield anchors Folk-Rock / Harmony Pop / 60s Songcraft by making roots sources carried by personal authorship and lyric-centered phrasing easier to hear.",
+        "what_to_listen_for": [
+          "Group blend as emotional argument"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-mamas-and-the-papas-california-dreamin",
+        "example_type": "song_recording",
+        "display_label": "California Dreamin' - The Mamas & the Papas",
+        "why_this_example_matters": "California Dreamin' - The Mamas & the Papas anchors Folk-Rock / Harmony Pop / 60s Songcraft by making lyric-centered phrasing and acoustic or piano-led space easier to hear.",
+        "what_to_listen_for": [
+          "Acoustic strum under electric accents",
+          "Close harmonies that soften heavy lyrics"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_02/archetype_009"
+      ],
+      "after": [
+        "family_02/archetype_011"
+      ],
+      "related": [
+        "family_02/archetype_009",
+        "family_02/archetype_011"
+      ],
+      "copy": "Use Folk-Rock / Harmony Pop / 60s Songcraft as a contextual road inside Beatles, British Invasion, 60s Pop-Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "010-dyk-1",
+        "copy": "The same Dylan song can point to different roads depending on whether the signal is folk text, electric jangle, or later singer-songwriter gravity.",
+        "source_ref_ids": [
+          "010_britannica_folk_rock"
+        ]
+      },
+      {
+        "card_id": "010-dyk-2",
+        "copy": "Harmony pop made counterculture sound intimate enough for mainstream radio.",
+        "source_ref_ids": [
+          "010_britannica_bob_dylan",
+          "010_britannica_folk_rock"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether folk-rock / harmony pop / 60s songcraft is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A 1960s songcraft lane where folk lyric weight, electric band sound, and vocal harmony become pop-rock language.",
+      "It expands what a pop-rock song can talk about. Protest, poetry, personal reflection, and generational unease can now sit beside hooks and harmonies.",
+      "This lane is more lyric-centered than jangle pop alone and less studio-fantastical than psychedelic pop. The words and vocal blend carry as much weight as the guitars."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat every acoustic 1960s record as this lane; the rock or pop crossover element has to be audible.",
+    "personalization_hooks": [
+      {
+        "hook_id": "010-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[010]",
+          "atlas_state.family_affinity[2]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[010] >= 0.65 || atlas_state.family_affinity[2] >= 0.65",
+        "copy_variant": "Your Atlas signals make Folk-Rock / Harmony Pop / 60s Songcraft useful as a contextual landmark.",
+        "fallback_copy": "Use Folk-Rock / Harmony Pop / 60s Songcraft as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "010-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_02/archetype_010 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_02/archetype_010",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Folk-Rock / Harmony Pop / 60s Songcraft before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "010-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_02/archetype_010 || atlas_state.boundary_question_results has boundary_negative for family_02/archetype_010",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Folk-Rock / Harmony Pop / 60s Songcraft.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "010-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_02/archetype_010 || atlas_state.related_mission_ids references family_02/archetype_010",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "010-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_02/archetype_010 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_02/archetype_010 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_02/archetype_010",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Folk-Rock / Harmony Pop / 60s Songcraft.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_2": {
+        "title": "Normalized canonical graph export, Family 2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_2/normalized_family_2.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "010_britannica_folk_rock": {
+        "title": "Folk rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-rock",
+        "source_type": "reference",
+        "audit_use": "Directly defines the fusion of folk songwriting and rock instrumentation that structures the archetype.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines the fusion of folk songwriting and rock instrumentation that structures the archetype."
+      },
+      "010_britannica_bob_dylan": {
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_type": "reference",
+        "audit_use": "Supports Dylan's central role in moving folk lyric ambition into electric rock culture.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Dylan's central role in moving folk lyric ambition into electric rock culture."
+      },
+      "010_rockhall_byrds": {
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_type": "museum_reference",
+        "audit_use": "Documents the electric-band conversion of folk material and the harmony/jangle side of the lane.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the electric-band conversion of folk material and the harmony/jangle side of the lane."
+      },
+      "010_rockhall_simon_garfunkel": {
+        "title": "Simon & Garfunkel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/simon-and-garfunkel/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the close-harmony and literate songcraft side of 1960s folk-pop crossover.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the close-harmony and literate songcraft side of 1960s folk-pop crossover."
+      },
+      "rockhall_byrds": {
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_type": "museum_reference",
+        "audit_use": "Jangle, folk-rock, and electric Dylan-era influence.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jangle, folk-rock, and electric Dylan-era influence."
+      },
+      "britannica_bob_dylan": {
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_type": "reference",
+        "audit_use": "Dylan biography, folk revival, electric folk-rock, and songwriter influence.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dylan biography, folk revival, electric folk-rock, and songwriter influence."
+      },
+      "rockhall_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_type": "museum_reference",
+        "audit_use": "Beach Boys as surf-rock and harmony-pop gateway.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+      },
+      "britannica_rock_1960s": {
+        "title": "Rock in the 1960s",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+        "source_type": "reference",
+        "audit_use": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "010-claim-01-folk-plus-rock",
+        "claim_text": "Folk-rock joins acoustic folk's lyric seriousness to rock rhythm, electric guitars, and pop single structure.",
+        "source_ref_ids": [
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010-claim-02-dylan-electric-pressure",
+        "claim_text": "Dylan's move into electric contexts made the idea of a rock song carrying dense literary or protest language newly central.",
+        "source_ref_ids": [
+          "010_britannica_bob_dylan",
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "why_it_mattered",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "artist:bob-dylan"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010-claim-03-harmony-pop-west-coast",
+        "claim_text": "The Mamas & the Papas, Simon & Garfunkel, and Buffalo Springfield show the lane's harmony-pop side: group blend, topical feeling, and polished 1960s arrangements.",
+        "source_ref_ids": [
+          "010_rockhall_simon_garfunkel",
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "artist:simon-and-garfunkel",
+          "artist:buffalo-springfield",
+          "song_recording:the-mamas-and-the-papas-california-dreamin"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010-claim-04-byrds-translator",
+        "claim_text": "The Byrds translate folk material into a bright electric band language, making them a bridge between jangle precursor and full folk-rock songcraft.",
+        "source_ref_ids": [
+          "010_rockhall_byrds",
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "family_02/archetype_009",
+          "artist:the-byrds",
+          "song_recording:the-byrds-turn-turn-turn"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010-folk_rock_harmony_pop_60s_songcraft-boundary",
+        "claim_text": "Folk-Rock / Harmony Pop / 60s Songcraft's boundary is clearest when Acoustic strum under electric accents and Close harmonies that soften heavy lyrics appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "010_britannica_folk_rock",
+          "010_britannica_bob_dylan"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "artist:bob-dylan",
+          "artist:simon-and-garfunkel"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010-folk_rock_harmony_pop_60s_songcraft-examples",
+        "claim_text": "Bob Dylan, Simon & Garfunkel, Rubber Soul - The Beatles gives Folk-Rock / Harmony Pop / 60s Songcraft concrete anchors because the examples expose Topical or poetic language inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "010_britannica_bob_dylan",
+          "010_rockhall_byrds"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "artist:bob-dylan",
+          "artist:simon-and-garfunkel"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Folk-Rock / Harmony Pop / 60s Songcraft: Bob Dylan, Byrds, Simon & Garfunkel, Mamas & Papas, Buffalo Springfield, protest and harmony pop songwriting.",
+    "selected_sources": [
+      {
+        "source_ref_id": "010_britannica_folk_rock",
+        "title": "Folk rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines the fusion of folk songwriting and rock instrumentation that structures the archetype."
+      },
+      {
+        "source_ref_id": "010_britannica_bob_dylan",
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Dylan's central role in moving folk lyric ambition into electric rock culture."
+      },
+      {
+        "source_ref_id": "010_rockhall_byrds",
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the electric-band conversion of folk material and the harmony/jangle side of the lane."
+      },
+      {
+        "source_ref_id": "010_rockhall_simon_garfunkel",
+        "title": "Simon & Garfunkel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/simon-and-garfunkel/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the close-harmony and literate songcraft side of 1960s folk-pop crossover."
+      },
+      {
+        "source_ref_id": "rockhall_byrds",
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jangle, folk-rock, and electric Dylan-era influence."
+      },
+      {
+        "source_ref_id": "britannica_bob_dylan",
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dylan biography, folk revival, electric folk-rock, and songwriter influence."
+      },
+      {
+        "source_ref_id": "rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+      },
+      {
+        "source_ref_id": "britannica_rock_1960s",
+        "title": "Rock in the 1960s",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+        "source_relevance": "example_object_support",
+        "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "010_reject_urban_folk_revival_only",
+        "title": "Folk music revival",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/folklife-and-fieldwork/articles-and-essays/folk-music-revival/",
+        "why_rejected": "Helpful background, but too pre-rock for the electric, harmony-pop, and 1960s band-songcraft focus.",
+        "source_type": "archive_reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 010_britannica_folk_rock anchors the named archetype rather than only its family. Example support: 010_britannica_bob_dylan, 010_rockhall_byrds, 010_rockhall_simon_garfunkel ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  }
+}

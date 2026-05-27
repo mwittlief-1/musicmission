@@ -1,0 +1,1255 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_12_archetype_088_70s-80s-pop-sovereigns_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_12/normalized_family_12.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 12,
+    "family_slug": "pop-monoculture-and-persona-pop",
+    "family_name": "Pop Monoculture and Persona Pop",
+    "archetype_id": "088",
+    "archetype_slug": "70s-80s-pop-sovereigns",
+    "canonical_graph_ref": "family_12/archetype_088",
+    "existing_graph_label_name": "70s-80s Pop Sovereigns",
+    "editorial_display_title": "70s-80s Pop Sovereigns",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:michael-jackson",
+        "object_id": "michael-jackson",
+        "display_label": "Michael Jackson",
+        "source_membership_id": "family-12-artist-088-michael-jackson",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central pop-sovereign artist seed with artist, album, and song survey value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:prince",
+        "object_id": "prince",
+        "display_label": "Prince",
+        "source_membership_id": "family-12-artist-088-prince",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop sovereignty with funk, rock, and album-world boundary value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:madonna",
+        "object_id": "madonna",
+        "display_label": "Madonna",
+        "source_membership_id": "family-12-artist-088-madonna",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive 80s persona-pop and dance-pop sovereignty seed.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:whitney-houston",
+        "object_id": "whitney-houston",
+        "display_label": "Whitney Houston",
+        "source_membership_id": "family-12-artist-088-whitney-houston",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Vocal-pop and adult-pop crossover anchor without reducing her to ballads.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:janet-jackson",
+        "object_id": "janet-jackson",
+        "display_label": "Janet Jackson",
+        "source_membership_id": "family-12-artist-088-janet-jackson",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dance-pop/R&B-pop architecture anchor for late-80s and early-90s pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:george-michael",
+        "object_id": "george-michael",
+        "display_label": "George Michael",
+        "source_membership_id": "family-12-artist-088-george-michael",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Solo and Wham-era recognition bridge from 80s pop into adult pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:cyndi-lauper",
+        "object_id": "cyndi-lauper",
+        "display_label": "Cyndi Lauper",
+        "source_membership_id": "family-12-artist-088-cyndi-lauper",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "High-recognition persona-pop and karaoke-friendly 80s pop seed.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:michael-jackson-thriller",
+        "object_id": "michael-jackson-thriller",
+        "display_label": "Thriller - Michael Jackson",
+        "source_membership_id": "family-12-album-088-michael-jackson-thriller",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core album-world object for 80s pop sovereignty.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:prince-purple-rain",
+        "object_id": "prince-purple-rain",
+        "display_label": "Purple Rain - Prince",
+        "source_membership_id": "family-12-album-088-prince-purple-rain",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition Prince album/soundtrack bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:madonna-like-a-virgin",
+        "object_id": "madonna-like-a-virgin",
+        "display_label": "Like a Virgin - Madonna",
+        "source_membership_id": "family-12-album-088-madonna-like-a-virgin",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Clear Madonna monoculture album entry.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:whitney-houston-whitney-houston",
+        "object_id": "whitney-houston-whitney-houston",
+        "display_label": "Whitney Houston - Whitney Houston",
+        "source_membership_id": "family-12-album-088-whitney-houston-whitney-houston",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Best LP doorway for Whitney pop-ballad sovereignty.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:madonna-like-a-prayer",
+        "object_id": "madonna-like-a-prayer",
+        "display_label": "Like a Prayer - Madonna",
+        "source_membership_id": "family-12-album-088-madonna-like-a-prayer",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult persona-pop follow-on for Madonna positives.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:janet-jackson-control",
+        "object_id": "janet-jackson-control",
+        "display_label": "Control - Janet Jackson",
+        "source_membership_id": "family-12-album-088-janet-jackson-control",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dance-pop/R&B-pop architecture anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:michael-jackson-billie-jean",
+        "object_id": "michael-jackson-billie-jean",
+        "display_label": "Billie Jean - Michael Jackson",
+        "source_membership_id": "family-12-song-088-michael-jackson-billie-jean",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential 80s pop sovereignty song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:michael-jackson-thriller",
+        "object_id": "michael-jackson-thriller",
+        "display_label": "Thriller - Michael Jackson",
+        "source_membership_id": "family-12-song-088-michael-jackson-thriller",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass seasonal/video-era pop memory without moving it to holiday context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:madonna-like-a-prayer",
+        "object_id": "madonna-like-a-prayer",
+        "display_label": "Like a Prayer - Madonna",
+        "source_membership_id": "family-12-song-088-madonna-like-a-prayer",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Persona-pop and adult-pop Madonna anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:whitney-houston-i-wanna-dance-with-somebody",
+        "object_id": "whitney-houston-i-wanna-dance-with-somebody",
+        "display_label": "I Wanna Dance with Somebody - Whitney Houston",
+        "source_membership_id": "family-12-song-088-whitney-houston-i-wanna-dance-with-somebody",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Uptempo Whitney pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:prince-when-doves-cry",
+        "object_id": "prince-when-doves-cry",
+        "display_label": "When Doves Cry - Prince",
+        "source_membership_id": "family-12-song-088-prince-when-doves-cry",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Prince pop-sovereign anchor with funk/rock boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:madonna-vogue",
+        "object_id": "madonna-vogue",
+        "display_label": "Vogue - Madonna",
+        "source_membership_id": "family-12-song-088-madonna-vogue",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dance-pop and club-pop bridge from 80s sovereignty.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:george-michael-careless-whisper",
+        "object_id": "george-michael-careless-whisper",
+        "display_label": "Careless Whisper - George Michael",
+        "source_membership_id": "family-12-song-088-george-michael-careless-whisper",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop and 80s pop ballad bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:cyndi-lauper-girls-just-want-to-have-fun",
+        "object_id": "cyndi-lauper-girls-just-want-to-have-fun",
+        "display_label": "Girls Just Want to Have Fun - Cyndi Lauper",
+        "source_membership_id": "family-12-song-088-cyndi-lauper-girls-just-want-to-have-fun",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "High-recognition persona-pop song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f12-artist-madonna-088",
+        "candidate_id": "survey-f12-artist-madonna-088",
+        "object_type": "artist",
+        "display_label": "Madonna",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-michael-jackson-088",
+        "candidate_id": "survey-f12-artist-michael-jackson-088",
+        "object_type": "artist",
+        "display_label": "Michael Jackson",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-prince-088",
+        "candidate_id": "survey-f12-artist-prince-088",
+        "object_type": "artist",
+        "display_label": "Prince",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-whitney-houston-088",
+        "candidate_id": "survey-f12-artist-whitney-houston-088",
+        "object_type": "artist",
+        "display_label": "Whitney Houston",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-george-michael-088",
+        "candidate_id": "survey-f12-artist-george-michael-088",
+        "object_type": "artist",
+        "display_label": "George Michael",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-janet-jackson-088",
+        "candidate_id": "survey-f12-artist-janet-jackson-088",
+        "object_type": "artist",
+        "display_label": "Janet Jackson",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-cyndi-lauper-088",
+        "candidate_id": "survey-f12-artist-cyndi-lauper-088",
+        "object_type": "artist",
+        "display_label": "Cyndi Lauper",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-madonna-like-a-prayer-088",
+        "candidate_id": "survey-f12-album-madonna-like-a-prayer-088",
+        "object_type": "album",
+        "display_label": "Like a Prayer",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-prince-purple-rain-088",
+        "candidate_id": "survey-f12-album-prince-purple-rain-088",
+        "object_type": "album",
+        "display_label": "Purple Rain",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-michael-jackson-thriller-088",
+        "candidate_id": "survey-f12-album-michael-jackson-thriller-088",
+        "object_type": "album",
+        "display_label": "Thriller",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-whitney-houston-whitney-houston-088",
+        "candidate_id": "survey-f12-album-whitney-houston-whitney-houston-088",
+        "object_type": "album",
+        "display_label": "Whitney Houston",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-janet-jackson-control-088",
+        "candidate_id": "survey-f12-album-janet-jackson-control-088",
+        "object_type": "album",
+        "display_label": "Control",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-madonna-like-a-virgin-088",
+        "candidate_id": "survey-f12-album-madonna-like-a-virgin-088",
+        "object_type": "album",
+        "display_label": "Like a Virgin",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-michael-jackson-billie-jean-088",
+        "candidate_id": "survey-f12-song_recording-michael-jackson-billie-jean-088",
+        "object_type": "song_recording",
+        "display_label": "Billie Jean",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-whitney-houston-i-wanna-dance-with-somebody-088",
+        "candidate_id": "survey-f12-song_recording-whitney-houston-i-wanna-dance-with-somebody-088",
+        "object_type": "song_recording",
+        "display_label": "I Wanna Dance with Somebody",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-madonna-like-a-prayer-088",
+        "candidate_id": "survey-f12-song_recording-madonna-like-a-prayer-088",
+        "object_type": "song_recording",
+        "display_label": "Like a Prayer",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-michael-jackson-thriller-088",
+        "candidate_id": "survey-f12-song_recording-michael-jackson-thriller-088",
+        "object_type": "song_recording",
+        "display_label": "Thriller",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-george-michael-careless-whisper-088",
+        "candidate_id": "survey-f12-song_recording-george-michael-careless-whisper-088",
+        "object_type": "song_recording",
+        "display_label": "Careless Whisper",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-cyndi-lauper-girls-just-want-to-have-fun-088",
+        "candidate_id": "survey-f12-song_recording-cyndi-lauper-girls-just-want-to-have-fun-088",
+        "object_type": "song_recording",
+        "display_label": "Girls Just Want to Have Fun",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-madonna-vogue-088",
+        "candidate_id": "survey-f12-song_recording-madonna-vogue-088",
+        "object_type": "song_recording",
+        "display_label": "Vogue",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-prince-when-doves-cry-088",
+        "question_id": "boundary-survey-f12-song_recording-prince-when-doves-cry-088",
+        "display_label": "When Doves Cry",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-prince-when-doves-cry-088",
+        "probe_id": "probe-survey-f12-song_recording-prince-when-doves-cry-088",
+        "entity_type": "song_recording",
+        "display_label": "When Doves Cry",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_12/archetype_089"
+    ],
+    "before_archetype_refs": [],
+    "after_archetype_refs": [
+      "family_12/archetype_089"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_12": {
+      "title": "Normalized canonical graph export, Family 12",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_12/normalized_family_12.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "rockhall_michael_jackson": {
+      "title": "Michael Jackson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/michael-jackson/",
+      "source_type": "reference",
+      "audit_use": "Supports Michael Jackson as a central pop-era example with dance, video, vocal, and global-star signals.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Michael Jackson as a central pop-era example with dance, video, vocal, and global-star signals."
+    },
+    "rockhall_prince": {
+      "title": "Prince",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/prince/",
+      "source_type": "reference",
+      "audit_use": "Supports Prince as a boundary-crossing pop sovereign whose work joins funk, rock, R&B, and auteur pop.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Prince as a boundary-crossing pop sovereign whose work joins funk, rock, R&B, and auteur pop."
+    },
+    "rockhall_madonna": {
+      "title": "Madonna",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/madonna/",
+      "source_type": "reference",
+      "audit_use": "Supports the persona, reinvention, dance-pop, and image authorship side of the archetype.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the persona, reinvention, dance-pop, and image authorship side of the archetype."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Frames mass-audience popular music as an industry and shared public form without replacing the archetype-specific examples.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Frames mass-audience popular music as an industry and shared public form without replacing the archetype-specific examples."
+    },
+    "rockhall_abba": {
+      "title": "ABBA",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/abba/",
+      "source_type": "museum_reference",
+      "audit_use": "Global pop hooks, studio craft, and disco-adjacent pop context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Global pop hooks, studio craft, and disco-adjacent pop context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "088-d-01",
+      "claim_text": "The archetype is centered on late-1970s and 1980s artists whose songs, videos, albums, and public image made pop feel like a shared mass-media language.",
+      "source_ref_ids": [
+        "rockhall_michael_jackson",
+        "rockhall_prince",
+        "rockhall_madonna"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_12/archetype_088",
+        "artist:michael-jackson",
+        "artist:prince",
+        "artist:madonna"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "088-d-02",
+      "claim_text": "Michael Jackson and Prince both make the route more than radio pop: choreography, studio detail, instrumental personality, and album-scale spectacle are part of the signal.",
+      "source_ref_ids": [
+        "rockhall_michael_jackson",
+        "rockhall_prince"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:michael-jackson",
+        "artist:prince",
+        "album:michael-jackson-thriller",
+        "album:prince-purple-rain"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "088-d-03",
+      "claim_text": "Madonna anchors the persona-pop side of the lane because reinvention, dancefloor address, and visual authorship are as diagnostic as the hooks.",
+      "source_ref_ids": [
+        "rockhall_madonna",
+        "britannica_popular_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "artist:madonna",
+        "song_recording:madonna-like-a-prayer"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "088-d-04",
+      "claim_text": "Listen for an immediately legible chorus plus a performer identity that is inseparable from the record; that combination separates this lane from general adult pop or R&B crossover.",
+      "source_ref_ids": [
+        "rockhall_michael_jackson",
+        "rockhall_madonna",
+        "britannica_popular_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_12/archetype_088"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "088-70s_80s_pop_sovereigns-boundary",
+      "claim_text": "70s-80s Pop Sovereigns's boundary is clearest when instant chorus recognition and vocal or instrumental persona appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "rockhall_michael_jackson",
+        "rockhall_prince"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_088",
+        "artist:michael-jackson",
+        "artist:prince"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "088-70s_80s_pop_sovereigns-examples",
+      "claim_text": "Michael Jackson, Prince, Thriller - Michael Jackson gives 70s-80s Pop Sovereigns concrete anchors because the examples expose video-ready structure inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "rockhall_prince",
+        "rockhall_madonna"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_088",
+        "artist:michael-jackson",
+        "artist:prince"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "088-70s_80s_pop_sovereigns-distinct",
+      "claim_text": "The key musical distinction in 70s-80s Pop Sovereigns is The records feel engineered for public recognition, but the strongest examples still carry a very specific performer signature, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "rockhall_michael_jackson",
+        "rockhall_madonna"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_088",
+        "artist:michael-jackson",
+        "artist:prince"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Mass-media pop sovereignty built from huge hooks, star persona, video-era image, and album events.",
+    "history_capsule": "This route follows the moment when Michael Jackson, Prince, Madonna, Whitney Houston, and peers turned pop into a global audiovisual language.",
+    "why_it_mattered": "It explains why a familiar chorus can carry memory of television, dance, fashion, and celebrity identity at the same time.",
+    "what_made_it_distinct": "The records feel engineered for public recognition, but the strongest examples still carry a very specific performer signature.",
+    "what_to_listen_for": [
+      "instant chorus recognition",
+      "vocal or instrumental persona",
+      "video-ready structure",
+      "glossy 1980s production",
+      "dancefloor-to-radio crossover"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:michael-jackson",
+        "example_type": "artist",
+        "display_label": "Michael Jackson",
+        "why_this_example_matters": "Michael Jackson anchors 70s-80s Pop Sovereigns by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "instant chorus recognition",
+          "vocal or instrumental persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:prince",
+        "example_type": "artist",
+        "display_label": "Prince",
+        "why_this_example_matters": "Prince anchors 70s-80s Pop Sovereigns by making vocal persona and high-definition production easier to hear.",
+        "what_to_listen_for": [
+          "vocal or instrumental persona",
+          "video-ready structure"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:michael-jackson-thriller",
+        "example_type": "album",
+        "display_label": "Thriller - Michael Jackson",
+        "why_this_example_matters": "Thriller - Michael Jackson anchors 70s-80s Pop Sovereigns by making high-definition production and dance or video-ready structure easier to hear.",
+        "what_to_listen_for": [
+          "video-ready structure",
+          "glossy 1980s production"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:prince-purple-rain",
+        "example_type": "album",
+        "display_label": "Purple Rain - Prince",
+        "why_this_example_matters": "Purple Rain - Prince anchors 70s-80s Pop Sovereigns by making dance or video-ready structure and direct emotional address easier to hear.",
+        "what_to_listen_for": [
+          "glossy 1980s production",
+          "dancefloor-to-radio crossover"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:michael-jackson-billie-jean",
+        "example_type": "song_recording",
+        "display_label": "Billie Jean - Michael Jackson",
+        "why_this_example_matters": "Billie Jean - Michael Jackson anchors 70s-80s Pop Sovereigns by making direct emotional address and instant chorus recognition easier to hear.",
+        "what_to_listen_for": [
+          "dancefloor-to-radio crossover"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:michael-jackson-thriller",
+        "example_type": "song_recording",
+        "display_label": "Thriller - Michael Jackson",
+        "why_this_example_matters": "Thriller - Michael Jackson anchors 70s-80s Pop Sovereigns by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "instant chorus recognition",
+          "vocal or instrumental persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [],
+      "after": [
+        "family_12/archetype_089"
+      ],
+      "related": [
+        "family_12/archetype_089"
+      ],
+      "copy": "Use 70s-80s Pop Sovereigns as a contextual road inside Pop Monoculture and Persona Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "088-dyk-1",
+        "copy": "This lane is not just hit pop; it asks whether the artist identity is part of the song signal.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_prince",
+          "rockhall_madonna"
+        ]
+      },
+      {
+        "card_id": "088-dyk-2",
+        "copy": "Prince is useful here as a bridge because the pop surface often carries funk and rock architecture underneath.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_prince"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether 70s-80s pop sovereigns is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Mass-media pop sovereignty built from huge hooks, star persona, video-era image, and album events.",
+      "It explains why a familiar chorus can carry memory of television, dance, fashion, and celebrity identity at the same time.",
+      "The records feel engineered for public recognition, but the strongest examples still carry a very specific performer signature."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use a generic popular-music source alone; this archetype needs star/persona and example-object support.",
+    "personalization_hooks": [
+      {
+        "hook_id": "088-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[088]",
+          "atlas_state.family_affinity[12]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[088] >= 0.65 || atlas_state.family_affinity[12] >= 0.65",
+        "copy_variant": "Your Atlas signals make 70s-80s Pop Sovereigns useful as a contextual landmark.",
+        "fallback_copy": "Use 70s-80s Pop Sovereigns as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "088-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_12/archetype_088 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_12/archetype_088",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient 70s-80s Pop Sovereigns before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "088-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_12/archetype_088 || atlas_state.boundary_question_results has boundary_negative for family_12/archetype_088",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for 70s-80s Pop Sovereigns.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "088-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_12/archetype_088 || atlas_state.related_mission_ids references family_12/archetype_088",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "088-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_12/archetype_088 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_12/archetype_088 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_12/archetype_088",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for 70s-80s Pop Sovereigns.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_12": {
+        "title": "Normalized canonical graph export, Family 12",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_12/normalized_family_12.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "rockhall_michael_jackson": {
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_type": "reference",
+        "audit_use": "Supports Michael Jackson as a central pop-era example with dance, video, vocal, and global-star signals.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Michael Jackson as a central pop-era example with dance, video, vocal, and global-star signals."
+      },
+      "rockhall_prince": {
+        "title": "Prince",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/prince/",
+        "source_type": "reference",
+        "audit_use": "Supports Prince as a boundary-crossing pop sovereign whose work joins funk, rock, R&B, and auteur pop.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Prince as a boundary-crossing pop sovereign whose work joins funk, rock, R&B, and auteur pop."
+      },
+      "rockhall_madonna": {
+        "title": "Madonna",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/madonna/",
+        "source_type": "reference",
+        "audit_use": "Supports the persona, reinvention, dance-pop, and image authorship side of the archetype.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the persona, reinvention, dance-pop, and image authorship side of the archetype."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Frames mass-audience popular music as an industry and shared public form without replacing the archetype-specific examples.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames mass-audience popular music as an industry and shared public form without replacing the archetype-specific examples."
+      },
+      "rockhall_abba": {
+        "title": "ABBA",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/abba/",
+        "source_type": "museum_reference",
+        "audit_use": "Global pop hooks, studio craft, and disco-adjacent pop context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Global pop hooks, studio craft, and disco-adjacent pop context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "088-d-01",
+        "claim_text": "The archetype is centered on late-1970s and 1980s artists whose songs, videos, albums, and public image made pop feel like a shared mass-media language.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_prince",
+          "rockhall_madonna"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_12/archetype_088",
+          "artist:michael-jackson",
+          "artist:prince",
+          "artist:madonna"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "088-d-02",
+        "claim_text": "Michael Jackson and Prince both make the route more than radio pop: choreography, studio detail, instrumental personality, and album-scale spectacle are part of the signal.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_prince"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:michael-jackson",
+          "artist:prince",
+          "album:michael-jackson-thriller",
+          "album:prince-purple-rain"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "088-d-03",
+        "claim_text": "Madonna anchors the persona-pop side of the lane because reinvention, dancefloor address, and visual authorship are as diagnostic as the hooks.",
+        "source_ref_ids": [
+          "rockhall_madonna",
+          "britannica_popular_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "artist:madonna",
+          "song_recording:madonna-like-a-prayer"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "088-d-04",
+        "claim_text": "Listen for an immediately legible chorus plus a performer identity that is inseparable from the record; that combination separates this lane from general adult pop or R&B crossover.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_madonna",
+          "britannica_popular_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_12/archetype_088"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "088-70s_80s_pop_sovereigns-boundary",
+        "claim_text": "70s-80s Pop Sovereigns's boundary is clearest when instant chorus recognition and vocal or instrumental persona appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_prince"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_088",
+          "artist:michael-jackson",
+          "artist:prince"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "088-70s_80s_pop_sovereigns-examples",
+        "claim_text": "Michael Jackson, Prince, Thriller - Michael Jackson gives 70s-80s Pop Sovereigns concrete anchors because the examples expose video-ready structure inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "rockhall_prince",
+          "rockhall_madonna"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_088",
+          "artist:michael-jackson",
+          "artist:prince"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "088-70s_80s_pop_sovereigns-distinct",
+        "claim_text": "The key musical distinction in 70s-80s Pop Sovereigns is The records feel engineered for public recognition, but the strongest examples still carry a very specific performer signature, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "rockhall_michael_jackson",
+          "rockhall_madonna"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_088",
+          "artist:michael-jackson",
+          "artist:prince"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "70s-80s Pop Sovereigns Michael Jackson Prince Madonna Whitney Houston MTV era pop monoculture",
+    "selected_sources": [
+      {
+        "source_ref_id": "rockhall_michael_jackson",
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Michael Jackson as a central pop-era example with dance, video, vocal, and global-star signals."
+      },
+      {
+        "source_ref_id": "rockhall_prince",
+        "title": "Prince",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/prince/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Prince as a boundary-crossing pop sovereign whose work joins funk, rock, R&B, and auteur pop."
+      },
+      {
+        "source_ref_id": "rockhall_madonna",
+        "title": "Madonna",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/madonna/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the persona, reinvention, dance-pop, and image authorship side of the archetype."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames mass-audience popular music as an industry and shared public form without replacing the archetype-specific examples."
+      },
+      {
+        "source_ref_id": "rockhall_abba",
+        "title": "ABBA",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/abba/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Global pop hooks, studio craft, and disco-adjacent pop context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_kpop",
+        "title": "K-pop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/K-pop",
+        "source_relevance": "wrong_context",
+        "why_rejected": "K-pop context is a separate family-13 route and does not support this archetype."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Pop sovereignty, dance, video, and global star image. Persona pop, dance-pop, visual reinvention, and MTV-era authorship. Pop, funk, rock, R&B, authorship, and persona innovation. Global pop hooks, studio craft, and disco-adjacent pop context."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 4,
+    "wrong_context_source_count": 0
+  }
+}

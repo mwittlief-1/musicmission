@@ -4,7 +4,7 @@ Scope: initial repo stewardship pass for `/Users/matt_wittlief_home/Documents/Gi
 
 Initial inventory pass: no files were deleted, moved, reverted, or reformatted. The first codebase changes were `.gitignore` additions and repo stewardship docs.
 
-Follow-up classification-to-action pass: root canonical-graph review Markdown moved into `docs/reviews/canonical_graph/`; `README.md`, `docs/repo_map.md`, this inventory, and `data/README.md` were updated with the accepted structure decisions. Runtime/app/Supabase source remained untouched.
+Follow-up classification-to-action pass: root canonical-graph review Markdown moved into `docs/reviews/canonical_graph/`; `README.md`, `docs/repo_map.md`, this inventory, and `data/README.md` were updated with the accepted structure decisions. Later data slices promoted first-class graph, survey, mission-generation, closed-loop, and Atlas explainer surfaces while leaving generated archives ignored. Runtime/app/Supabase source remained untouched.
 
 ## Method
 
@@ -134,6 +134,7 @@ Added in this pass:
 | `docs/app_dev/kickoff_v0_2/*.json` | Tracked schema examples; also technical-contract adjacent. |
 | `data/alpha_packets/golden_alpha_packet_v0_1/` | Golden packet and app-import fixture material. |
 | `data/atlas_schema/examples/` | Atlas schema examples. |
+| `data/atlas_explainer/render_pack_v0_1_hardened/` | Hardened Atlas explainer loader fixture referenced by validation tooling and loader review docs. |
 | `data/survey_simulation/schemas/`, `fake_profiles/`, `apple_payloads/`, `hidden_reaction_corpora/` | Simulator fixtures or fixture-like inputs; do not blanket-ignore. |
 | `waymark-ai-tests/src/` | First-class mission-generation harness code. |
 | `waymark-ai-tests/fixtures/` | First-class harness fixtures. Some generated digest snapshots function as integration fixtures. |
@@ -148,6 +149,9 @@ Added in this pass:
 | `data/schemas/` | Tracked JSON schemas. |
 | `data/product_contracts/` | Untracked contracts and PM alpha briefs. |
 | `data/atlas_schema/` roots | Atlas contract, schema docs, delta schema, acceptance report, alpha hardening contracts. |
+| `data/atlas_explainer/atlas_explainer_render_pack_runtime_schema_v0_1_1.*` | Runtime schema contract for app-facing Atlas explainer render packs. |
+| `data/atlas_explainer/source_recovery_research_notes/` | Curated source-recovery provenance for the Atlas explainer builder chain. |
+| `data/atlas_explainer/AtlasExplainerPack_v0_2_3_RenderHardened/` | Latest render-hardened Atlas explainer candidate handoff; tracked as first-class alpha product data while PM approval is pending. |
 | `data/alpha_consumable_layer/` | Alpha graph surfaces, resolver policy, guardrails, and route/candidate contracts. |
 | `docs/app_dev/` | App specs, TestFlight reports, audit notes, brand transition docs, mockups. Mixed tracked/untracked. |
 | `docs/app_dev/kickoff_v0_2/` | Tracked v0.2 controlling product and implementation packet. |
@@ -166,6 +170,8 @@ Added in this pass:
 | `data/closed_loop_simulation/` | Generated closed-loop simulation evidence and adaptive contract outputs. |
 | `data/atlas_schema/ingestion_proof/` | Generated proof bundles and validation evidence, plus some docs worth preserving. |
 | `data/atlas_schema/node_interpretation_smoke/` and `wwtsf_substrate_smoke/` | Generated smoke outputs. |
+| `data/atlas_explainer/AtlasExplainerPack_v0_2_Checkpoint/`, `AtlasExplainerPack_v0_2_All_Archetypes/`, `AtlasExplainerPack_v0_2_1_SourceDeepened/`, and `AtlasExplainerPack_v0_2_2_SourceRecovery/` | Rebuildable intermediate Atlas explainer packages. Ignored by default unless an older package is promoted. |
+| `data/atlas_explainer/**/*.zip`, Finder duplicate `* 2*` paths, and `**/indexes/schema_validation_report_*.md` | Generated Atlas explainer archives, duplicate expansions, and local validation logs. Ignored by default. |
 | `review_packets/*.zip` | Generated review packets, now ignored for future accidental adds. |
 | `waymark-ai-tests/outputs/` | 153 timestamped generated run directories, now ignored except `.gitkeep`. |
 | `waymark-ai-tests/reports/` | Generated harness reports, now ignored except `.gitkeep`. |

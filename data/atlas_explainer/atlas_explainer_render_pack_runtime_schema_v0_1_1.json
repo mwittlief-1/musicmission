@@ -1,0 +1,803 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/atlas_explainer_render_pack_runtime_schema_v0_1_1.json",
+  "title": "AtlasExplainerRenderPack Runtime Schema v0.1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pack_id",
+    "generated_at",
+    "runtime_contract",
+    "rights_policy",
+    "non_mutation_policy",
+    "alpha_v0_mission_boundary",
+    "state_field_contract",
+    "render_surfaces",
+    "entries",
+    "source_references",
+    "source_research_pack_ids",
+    "audit"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.1"
+    },
+    "pack_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_contract": {
+      "$ref": "#/$defs/runtime_contract"
+    },
+    "rights_policy": {
+      "$ref": "#/$defs/rights_policy"
+    },
+    "non_mutation_policy": {
+      "$ref": "#/$defs/non_mutation_policy"
+    },
+    "alpha_v0_mission_boundary": {
+      "$ref": "#/$defs/alpha_v0_mission_boundary"
+    },
+    "state_field_contract": {
+      "$ref": "#/$defs/state_field_contract"
+    },
+    "render_surfaces": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "atlas_home_region_card",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "did_you_know_card",
+          "what_to_listen_for_prompt",
+          "personalized_overlay",
+          "canonical_examples",
+          "related_roads_lineage_module"
+        ]
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "atlas_home_region_card"
+          }
+        },
+        {
+          "contains": {
+            "const": "region_scene_page"
+          }
+        },
+        {
+          "contains": {
+            "const": "mission_detail_history_module"
+          }
+        },
+        {
+          "contains": {
+            "const": "did_you_know_card"
+          }
+        },
+        {
+          "contains": {
+            "const": "what_to_listen_for_prompt"
+          }
+        },
+        {
+          "contains": {
+            "const": "personalized_overlay"
+          }
+        },
+        {
+          "contains": {
+            "const": "canonical_examples"
+          }
+        },
+        {
+          "contains": {
+            "const": "related_roads_lineage_module"
+          }
+        }
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "source_references": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "source_research_pack_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "all_entries_keyed_to_existing_graph_refs",
+        "copy_variants_present",
+        "personalization_hooks_bound_to_state_fields",
+        "alpha_v0_mission_boundary_present",
+        "rights_policy_present",
+        "non_mutation_policy_present",
+        "production_status"
+      ],
+      "properties": {
+        "all_entries_keyed_to_existing_graph_refs": {
+          "const": true
+        },
+        "copy_variants_present": {
+          "type": "array",
+          "contains": {
+            "const": "compact"
+          }
+        },
+        "personalization_hooks_bound_to_state_fields": {
+          "const": true
+        },
+        "alpha_v0_mission_boundary_present": {
+          "const": true
+        },
+        "rights_policy_present": {
+          "const": true
+        },
+        "non_mutation_policy_present": {
+          "const": true
+        },
+        "production_status": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "runtime_contract": {
+      "type": "object",
+      "required": [
+        "deterministic_render_required",
+        "history_generation_from_scratch_allowed",
+        "small_model_allowed_actions",
+        "small_model_disallowed_actions"
+      ],
+      "properties": {
+        "deterministic_render_required": {
+          "const": true
+        },
+        "history_generation_from_scratch_allowed": {
+          "const": false
+        },
+        "small_model_allowed_actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "small_model_disallowed_actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "rights_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "no_lyrics",
+        "no_long_quotes",
+        "max_verbatim_quote_words_per_source",
+        "album_art_dependency",
+        "allowed_visuals",
+        "disallowed_visuals",
+        "runtime_instruction"
+      ],
+      "properties": {
+        "policy_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "no_lyrics": {
+          "const": true
+        },
+        "no_long_quotes": {
+          "const": true
+        },
+        "max_verbatim_quote_words_per_source": {
+          "const": 0
+        },
+        "album_art_dependency": {
+          "const": "none"
+        },
+        "allowed_visuals": {
+          "type": "array"
+        },
+        "disallowed_visuals": {
+          "type": "array"
+        },
+        "runtime_instruction": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "non_mutation_policy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "canonical_graph_mutation_allowed",
+        "renamed_archetypes_allowed",
+        "new_taxonomy_allowed",
+        "new_graph_identity_allowed",
+        "scope",
+        "runtime_guardrail"
+      ],
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        },
+        "canonical_graph_mutation_allowed": {
+          "const": false
+        },
+        "renamed_archetypes_allowed": {
+          "const": false
+        },
+        "new_taxonomy_allowed": {
+          "const": false
+        },
+        "new_graph_identity_allowed": {
+          "const": false
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime_guardrail": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "alpha_v0_mission_boundary": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "mode",
+        "mission_creation_from_atlas_allowed",
+        "dynamic_route_generation_allowed",
+        "render_allowed",
+        "render_disallowed",
+        "state_fields",
+        "fallback_copy"
+      ],
+      "properties": {
+        "policy_id": {
+          "type": "string"
+        },
+        "mode": {
+          "const": "pre_generated_mission_batch_only"
+        },
+        "mission_creation_from_atlas_allowed": {
+          "const": false
+        },
+        "dynamic_route_generation_allowed": {
+          "const": false
+        },
+        "render_allowed": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "related_mission",
+              "included_in_first_batch",
+              "what_this_route_tests",
+              "why_this_region_explains_the_batch",
+              "not_in_alpha_batch_yet"
+            ]
+          }
+        },
+        "render_disallowed": {
+          "type": "array",
+          "minItems": 1
+        },
+        "state_fields": {
+          "type": "object",
+          "required": [
+            "atlas.alpha_v0.current_batch_id",
+            "atlas.alpha_v0.mission_inclusion[archetype_ref].status",
+            "atlas.alpha_v0.mission_inclusion[archetype_ref].mission_refs",
+            "atlas.alpha_v0.mission_inclusion[archetype_ref].route_test_summary"
+          ],
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "fallback_copy": {
+          "type": "object",
+          "required": [
+            "unknown",
+            "not_included"
+          ],
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "state_field_contract": {
+      "type": "object",
+      "required": [
+        "contract_id",
+        "fields",
+        "note"
+      ],
+      "properties": {
+        "contract_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fields": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "render_pack_id",
+        "graph_alignment",
+        "editorial_status",
+        "source_claim_refs",
+        "home_region_card",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "did_you_know_card",
+        "what_to_listen_for_prompt",
+        "personalized_overlay",
+        "canonical_examples",
+        "related_roads_lineage_module"
+      ],
+      "properties": {
+        "render_pack_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "graph_alignment": {
+          "$ref": "#/$defs/graph_alignment"
+        },
+        "editorial_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_claim_refs": {
+          "$ref": "#/$defs/non_empty_string_array"
+        },
+        "home_region_card": {
+          "type": "object",
+          "required": [
+            "title",
+            "subtitle_variants",
+            "status_badges"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "subtitle_variants": {
+              "$ref": "#/$defs/variant_set"
+            },
+            "status_badges": {
+              "$ref": "#/$defs/non_empty_string_array"
+            }
+          },
+          "additionalProperties": false
+        },
+        "region_scene_page": {
+          "type": "object",
+          "required": [
+            "hero_title",
+            "subtitle_variants",
+            "definition_variants",
+            "history_variants"
+          ],
+          "properties": {
+            "hero_title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "subtitle_variants": {
+              "$ref": "#/$defs/variant_set"
+            },
+            "definition_variants": {
+              "$ref": "#/$defs/variant_set"
+            },
+            "history_variants": {
+              "$ref": "#/$defs/variant_set"
+            }
+          },
+          "additionalProperties": false
+        },
+        "mission_detail_history_module": {
+          "type": "object",
+          "required": [
+            "copy_variants",
+            "mission_boundary_copy"
+          ],
+          "properties": {
+            "copy_variants": {
+              "$ref": "#/$defs/variant_set"
+            },
+            "mission_boundary_copy": {
+              "type": "object",
+              "required": [
+                "included",
+                "related",
+                "not_included",
+                "state_field"
+              ],
+              "properties": {
+                "included": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "related": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "not_included": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "state_field": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "did_you_know_card": {
+          "type": "object",
+          "required": [
+            "card_variants"
+          ],
+          "properties": {
+            "card_variants": {
+              "$ref": "#/$defs/variant_set"
+            }
+          },
+          "additionalProperties": false
+        },
+        "what_to_listen_for_prompt": {
+          "type": "object",
+          "required": [
+            "prompt_variants"
+          ],
+          "properties": {
+            "prompt_variants": {
+              "$ref": "#/$defs/variant_set"
+            }
+          },
+          "additionalProperties": false
+        },
+        "personalized_overlay": {
+          "type": "object",
+          "required": [
+            "runtime_hooks",
+            "fallback_overlay"
+          ],
+          "properties": {
+            "runtime_hooks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/personalization_hook"
+              }
+            },
+            "fallback_overlay": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "canonical_examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/canonical_example"
+          }
+        },
+        "related_roads_lineage_module": {
+          "type": "object",
+          "required": [
+            "copy_variants",
+            "roads"
+          ],
+          "properties": {
+            "copy_variants": {
+              "$ref": "#/$defs/variant_set"
+            },
+            "roads": {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/road_ref"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "graph_alignment": {
+      "type": "object",
+      "required": [
+        "family_id",
+        "family_ref",
+        "family_name",
+        "archetype_id",
+        "archetype_ref",
+        "archetype_name",
+        "non_mutation_policy",
+        "staging_status_note"
+      ],
+      "properties": {
+        "family_id": {
+          "type": "integer"
+        },
+        "family_ref": {
+          "type": "string"
+        },
+        "family_name": {
+          "type": "string"
+        },
+        "archetype_id": {
+          "type": "string"
+        },
+        "archetype_ref": {
+          "type": "string"
+        },
+        "archetype_name": {
+          "type": "string"
+        },
+        "non_mutation_policy": {
+          "type": "string"
+        },
+        "staging_status_note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "variant_set": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "compact",
+        "standard",
+        "deep"
+      ],
+      "properties": {
+        "compact": {
+          "$ref": "#/$defs/copy_variant"
+        },
+        "standard": {
+          "$ref": "#/$defs/copy_variant"
+        },
+        "deep": {
+          "$ref": "#/$defs/copy_variant"
+        }
+      }
+    },
+    "copy_variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "claim_refs",
+        "source_refs",
+        "max_chars"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_refs": {
+          "$ref": "#/$defs/non_empty_string_array"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/non_empty_string_array"
+        },
+        "max_chars": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      }
+    },
+    "personalization_hook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hook_id",
+        "state_field_bindings",
+        "condition_logic",
+        "copy_variants",
+        "guardrail"
+      ],
+      "properties": {
+        "hook_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state_field_bindings": {
+          "$ref": "#/$defs/non_empty_string_array"
+        },
+        "condition_logic": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "copy_variants": {
+          "$ref": "#/$defs/variant_set"
+        },
+        "guardrail": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "canonical_example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "display_label",
+        "object_type",
+        "graph_ref",
+        "reason_compact",
+        "listening_angle",
+        "claim_refs",
+        "graph_audit_ref"
+      ],
+      "properties": {
+        "display_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object_type": {
+          "enum": [
+            "artist",
+            "album",
+            "song_recording"
+          ]
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "reason_compact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "listening_angle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_refs": {
+          "$ref": "#/$defs/non_empty_string_array"
+        },
+        "graph_audit_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "graph_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family_id",
+        "archetype_id",
+        "archetype_ref",
+        "object_type",
+        "entity_id",
+        "candidate_id_matches"
+      ],
+      "properties": {
+        "family_id": {
+          "type": "integer"
+        },
+        "archetype_id": {
+          "type": "string"
+        },
+        "archetype_ref": {
+          "type": "string"
+        },
+        "object_type": {
+          "enum": [
+            "artist",
+            "album",
+            "song_recording"
+          ]
+        },
+        "entity_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_id_matches": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "road_ref": {
+      "type": "object",
+      "required": [
+        "archetype_ref",
+        "archetype_name",
+        "relationship"
+      ],
+      "properties": {
+        "archetype_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "archetype_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relationship": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "non_empty_string_array": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

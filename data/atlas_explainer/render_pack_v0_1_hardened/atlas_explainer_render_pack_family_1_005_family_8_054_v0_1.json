@@ -1,0 +1,2039 @@
+{
+  "schema_version": "0.1",
+  "pack_id": "atlas-explainer-render-pack-v0-1-proof-packs-001",
+  "generated_at": "2026-05-26",
+  "source_research_pack_ids": [
+    "explainer-family-1-archetype-005-brill-building-girl-group-pop-v0-1",
+    "explainer-family-8-archetype-054-cbgb-art-punk-downtown-ny-v0-1"
+  ],
+  "runtime_contract": {
+    "deterministic_render_required": true,
+    "history_generation_from_scratch_allowed": false,
+    "small_model_allowed_actions": [
+      "select compact|standard|deep variant based on surface and space",
+      "select a personalization hook based on explicit Atlas state fields",
+      "fill mission title from mission_registry when mission_ref is present",
+      "trim copy within provided variant text without adding new factual claims"
+    ],
+    "small_model_disallowed_actions": [
+      "invent new historical claims",
+      "invent graph refs or candidate refs",
+      "rename archetypes",
+      "create missions dynamically",
+      "use lyrics or unlicensed album art as required content"
+    ]
+  },
+  "rights_policy": {
+    "policy_id": "atlas-explainer-rights-policy-v0-1",
+    "no_lyrics": true,
+    "no_long_quotes": true,
+    "max_verbatim_quote_words_per_source": 0,
+    "album_art_dependency": "none",
+    "allowed_visuals": [
+      "abstract Atlas-generated scene/region graphics",
+      "licensed or user-provided artwork only when rights are cleared",
+      "non-infringing iconography, typography, maps, timelines, neutral color fields, and graph motifs"
+    ],
+    "disallowed_visuals": [
+      "unlicensed album covers as required UI assets",
+      "artist publicity photos unless separately licensed",
+      "copied publication images",
+      "lyric excerpts beyond title references"
+    ],
+    "runtime_instruction": "Production renders approved copy deterministically. Small-model adaptation may select variants or fill state-bound overlays only; it must not generate new music-history claims from scratch."
+  },
+  "non_mutation_policy": {
+    "policy_id": "atlas-explainer-non-mutation-policy-v0-1",
+    "canonical_graph_mutation_allowed": false,
+    "renamed_archetypes_allowed": false,
+    "new_taxonomy_allowed": false,
+    "new_graph_identity_allowed": false,
+    "scope": "Explainer packs are human-facing sidecars keyed to graph refs. They may explain, summarize, and route existing refs, but they do not alter canonical IDs, family/archetype names, memberships, candidate status, survey candidates, dead-end probes, or boundary questions.",
+    "runtime_guardrail": "Do not let region-page copy write back into canonical graph objects. Any correction discovered during editorial review must be routed as a graph RFI/change request, not silently encoded in Explainer copy."
+  },
+  "alpha_v0_mission_boundary": {
+    "policy_id": "atlas-alpha-v0-mission-boundary-v0-1",
+    "mode": "pre_generated_mission_batch_only",
+    "mission_creation_from_atlas_allowed": false,
+    "dynamic_route_generation_allowed": false,
+    "render_allowed": [
+      "related_mission",
+      "included_in_first_batch",
+      "what_this_route_tests",
+      "why_this_region_explains_the_batch",
+      "not_in_alpha_batch_yet"
+    ],
+    "render_disallowed": [
+      "Generate mission from this node",
+      "Launch arbitrary mission from this region",
+      "Create route dynamically",
+      "Imply every related road is selectable in Alpha v0"
+    ],
+    "state_fields": {
+      "atlas.alpha_v0.current_batch_id": "string",
+      "atlas.alpha_v0.mission_inclusion[archetype_ref].status": "enum: included | related | not_included | unknown",
+      "atlas.alpha_v0.mission_inclusion[archetype_ref].mission_refs": "array<string>",
+      "atlas.alpha_v0.mission_inclusion[archetype_ref].route_test_summary": "string",
+      "atlas.mission_registry[mission_ref].title": "string",
+      "atlas.mission_registry[mission_ref].included_graph_refs": "array<string>"
+    },
+    "fallback_copy": {
+      "unknown": "This region explains a road in the Atlas, but Alpha v0 only shows pre-generated missions. If no related mission is present in the first batch, do not offer mission creation from this page.",
+      "not_included": "This region is not part of the first Alpha mission batch yet. Keep it as Atlas context, not as a launch surface."
+    }
+  },
+  "state_field_contract": {
+    "contract_id": "atlas-explainer-state-fields-v0-1",
+    "fields": {
+      "atlas.evidence.archetype_fit[archetype_ref].status": "enum: unknown | candidate | frontier | mixed | confirmed | dead_end | false_nearby",
+      "atlas.evidence.archetype_fit[archetype_ref].confidence": "enum: low | medium | high",
+      "atlas.evidence.archetype_fit[archetype_ref].polarity": "enum: positive | negative | mixed | unknown",
+      "atlas.evidence.object_signal[entity_id].reaction": "enum: unknown | liked | partial | neutral | disliked | slop | skipped",
+      "atlas.evidence.object_signal[entity_id].confidence": "enum: low | medium | high",
+      "atlas.evidence.feature_tag[tag_id].polarity": "enum: positive | negative | mixed | unknown",
+      "atlas.evidence.feature_tag[tag_id].confidence": "enum: low | medium | high",
+      "atlas.region_state[archetype_ref].user_facing_status": "enum: landmark | region | frontier | dead_end | unexplored | mixed",
+      "atlas.alpha_v0.current_batch_id": "string",
+      "atlas.alpha_v0.mission_inclusion[archetype_ref].status": "enum: included | related | not_included | unknown",
+      "atlas.alpha_v0.mission_inclusion[archetype_ref].mission_refs": "array<string>",
+      "atlas.alpha_v0.mission_inclusion[archetype_ref].route_test_summary": "string"
+    },
+    "note": "Personalization hooks must reference these field paths. No free-text conditions should ship to runtime without a state-field binding."
+  },
+  "render_surfaces": [
+    "atlas_home_region_card",
+    "region_scene_page",
+    "mission_detail_history_module",
+    "did_you_know_card",
+    "what_to_listen_for_prompt",
+    "personalized_overlay",
+    "related_roads_lineage_module"
+  ],
+  "entries": [
+    {
+      "render_pack_id": "render-family-1-archetype-005-brill-building-girl-group-pop-v0-1",
+      "graph_alignment": {
+        "family_id": 1,
+        "family_ref": "family_01",
+        "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+        "archetype_id": "005",
+        "archetype_ref": "family_01/archetype_005",
+        "archetype_name": "Brill Building / Girl Group / Early 60s Pop Craft",
+        "non_mutation_policy": "This pack explains existing graph refs only. It does not create, rename, merge, quarantine, or promote canonical graph objects.",
+        "staging_status_note": "Built from the 2026-05-26 canonical graph export. Treat as graph-aligned staging copy, not final-lock graph truth."
+      },
+      "editorial_status": "alpha_render_candidate_not_production_copy_approved",
+      "source_claim_refs": [
+        "brill-claim-001-ecosystem-not-one-sound",
+        "brill-claim-002-writer-producer-teams",
+        "brill-claim-003-girl-group-voice",
+        "brill-claim-004-carole-king-bridge",
+        "brill-claim-005-spector-scale",
+        "brill-claim-006-downstream-pop-architecture"
+      ],
+      "home_region_card": {
+        "title": "Brill Building / Girl Group Pop",
+        "subtitle_variants": {
+          "compact": {
+            "text": "Teen drama built like pop architecture.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "Professional early-60s songcraft turns teen emotion into compact, cinematic singles.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "A New York songwriter-producer ecosystem where girl-group drama, teen feeling, and radio precision become a map of modern pop architecture.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          }
+        },
+        "status_badges": [
+          "graph-aligned",
+          "draft-copy",
+          "alpha-render-candidate"
+        ]
+      },
+      "region_scene_page": {
+        "hero_title": "Brill Building / Girl Group / Early 60s Pop Craft",
+        "subtitle_variants": {
+          "compact": {
+            "text": "A pop factory that learned how to make teenage feeling enormous.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "A professional New York pop-craft ecosystem where writers, producers, publishers, labels, musicians, and young voices made small singles feel like complete emotional worlds.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "This Atlas region is not one sound. It is an ecosystem: Brill/Times Square songwriting rooms, producer worlds, girl-group records, teen-idol radio, pop-soul crossover, and the craft logic that later reappears in singer-songwriter albums, power pop, and modern songwriter-producer systems.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          }
+        },
+        "definition_variants": {
+          "compact": {
+            "text": "Early-60s pop craft where professional teams compressed teen emotion into short, highly engineered records.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "A compact early-1960s pop-craft ecosystem where professional writers, producers, publishers, studio musicians, labels, and young vocal groups turned teen emotion into highly engineered two-and-a-half-minute records.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "A compact early-1960s pop-craft ecosystem where professional writers, producers, publishers, studio musicians, labels, and young vocal groups turned teen emotion into highly engineered two-and-a-half-minute records. The region matters because it keeps craft and feeling together: professional construction does not automatically mean emotional emptiness.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era"
+            ],
+            "max_chars": null
+          }
+        },
+        "history_variants": {
+          "compact": {
+            "text": "The Brill label points to New York’s early-60s writer/producer/publisher ecosystem, especially where girl groups and teen-pop singers turned hooks into tiny dramas.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-002-writer-producer-teams",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "The Brill Building label points to a New York songwriting-and-publishing system more than to one literal room or one fixed sound. Around the late 1950s and early 1960s, writers and teams around the Broadway/Times Square publishing world—Goffin/King, Greenwich/Barry, Mann/Weil, Bacharach/David, and others—worked with producers, A&R people, labels, and performers to create records for girl groups, teen idols, pop-soul singers, and dance-craze acts. The girl-group side sharpened the formula: big hooks, direct teenage feeling, cinematic mini-dramas, handclaps, call-and-response, dramatic intros, and production that could make a small song feel huge.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-002-writer-producer-teams",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "The Brill Building label points to a New York songwriting-and-publishing system more than to one literal room or one fixed sound. Around the late 1950s and early 1960s, writers and teams around the Broadway/Times Square publishing world—Goffin/King, Greenwich/Barry, Mann/Weil, Bacharach/David, and others—worked with producers, A&R people, labels, and performers to create records for girl groups, teen idols, pop-soul singers, and dance-craze acts. The girl-group side sharpened the formula: big hooks, direct teenage feeling, cinematic mini-dramas, handclaps, call-and-response, dramatic intros, and production that could make a small song feel huge. For Atlas, the important point is functional: this region tests whether a user hears craft as alive—dramatic, compressed, emotionally legible—or as manufactured distance.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-002-writer-producer-teams",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          }
+        }
+      },
+      "mission_detail_history_module": {
+        "copy_variants": {
+          "compact": {
+            "text": "This route tests professional pop craft: big feeling, tight structure, and girl-group drama in miniature.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice",
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "This route tests whether Brill/Girl Group pop works for the user when the single is built as a miniature drama: immediate premise, hook pressure, vocal-group response, and studio scale.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice",
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "Use this mission when Atlas needs to distinguish “manufactured slop” from “crafted pop with blood.” The route should let users hear how a professional songwriting-production ecosystem can still create ache, bite, motion, and durable pop architecture.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice",
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          }
+        },
+        "mission_boundary_copy": {
+          "included": "Included in the first Alpha batch: this route tests compact pop architecture, girl-group drama, and whether professional craft reads as alive or merely manufactured.",
+          "related": "Related to the first Alpha batch: this region explains why some included songs may point backward to early-60s pop craft, even if no Brill-only mission is active.",
+          "not_included": "Not in the first Alpha batch yet. Render as Atlas context only; do not offer dynamic mission creation from this region.",
+          "state_field": "atlas.alpha_v0.mission_inclusion[family_01/archetype_005].status"
+        }
+      },
+      "did_you_know_card": {
+        "card_variants": {
+          "compact": {
+            "text": "Brill is a system, not just a sound: writers, producers, publishers, labels, musicians, and singers all shaped the single.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "“Brill Building” is shorthand for a professional pop ecosystem. That is why the same region can explain girl groups, Dionne Warwick, dance-pop novelty, and songwriter craft without pretending they all sound identical.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "The useful Atlas idea is not “old pop was manufactured.” It is that professional construction can carry feeling when the hook, vocal, arrangement, and singer persona are all pointed at the same tiny emotional scene.",
+            "claim_refs": [
+              "brill-claim-001-ecosystem-not-one-sound",
+              "brill-claim-003-girl-group-voice"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "teachrock_brill_girl_group_era"
+            ],
+            "max_chars": null
+          }
+        }
+      },
+      "what_to_listen_for_prompt": {
+        "prompt_variants": {
+          "compact": {
+            "text": "Listen for how fast the record creates a scene: intro, title hook, backing vocals, and emotional stakes.",
+            "claim_refs": [
+              "brill-claim-003-girl-group-voice",
+              "brill-claim-005-spector-scale"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "In the first 20 seconds, ask: what is the emotional premise, where does the title hook land, and how do the backing vocals or production make the small story feel larger?",
+            "claim_refs": [
+              "brill-claim-003-girl-group-voice",
+              "brill-claim-005-spector-scale"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "Track the architecture: immediate premise, repeated title phrase, backing-vocal response, bridge escalation, and final chorus payoff. Then ask whether the construction feels like real feeling or just pop machinery.",
+            "claim_refs": [
+              "brill-claim-003-girl-group-voice",
+              "brill-claim-005-spector-scale"
+            ],
+            "source_refs": [
+              "teachrock_brill_girl_group_era",
+              "britannica_brill_assembly_line_pop"
+            ],
+            "max_chars": null
+          }
+        }
+      },
+      "personalized_overlay": {
+        "runtime_hooks": [
+          {
+            "hook_id": "brill-runtime-hook-compact-pop-architecture-positive",
+            "state_field_bindings": [
+              "atlas.evidence.feature_tag[compact_pop_architecture].polarity",
+              "atlas.evidence.feature_tag[compact_pop_architecture].confidence",
+              "atlas.evidence.archetype_fit[family_01/archetype_005].status"
+            ],
+            "condition_logic": {
+              "all": [
+                {
+                  "field": "atlas.evidence.feature_tag[compact_pop_architecture].polarity",
+                  "equals": "positive"
+                },
+                {
+                  "field": "atlas.evidence.feature_tag[compact_pop_architecture].confidence",
+                  "in": [
+                    "medium",
+                    "high"
+                  ]
+                }
+              ]
+            },
+            "copy_variants": {
+              "compact": {
+                "text": "Your map already shows evidence for compact pop architecture, so this region may explain why short, engineered singles can still feel emotionally big.",
+                "claim_refs": [
+                  "brill-claim-001-ecosystem-not-one-sound",
+                  "brill-claim-003-girl-group-voice"
+                ],
+                "source_refs": [
+                  "teachrock_brill_girl_group_era",
+                  "britannica_brill_assembly_line_pop"
+                ],
+                "max_chars": null
+              },
+              "standard": {
+                "text": "Atlas sees positive evidence for compact pop architecture. Brill/Girl Group pop is a clean route for testing whether tightly written, professionally built singles work because they create real drama rather than disposable polish.",
+                "claim_refs": [
+                  "brill-claim-001-ecosystem-not-one-sound",
+                  "brill-claim-003-girl-group-voice"
+                ],
+                "source_refs": [
+                  "teachrock_brill_girl_group_era",
+                  "britannica_brill_assembly_line_pop"
+                ],
+                "max_chars": null
+              },
+              "deep": {
+                "text": "This is a good Atlas road when the user responds to architecture more than genre labels: short intros, quick emotional premise, title-hook recurrence, backing-vocal counterlines, and production that turns a small teen scene into a complete pop object. Treat it as a fit hypothesis, not a completed verdict.",
+                "claim_refs": [
+                  "brill-claim-001-ecosystem-not-one-sound",
+                  "brill-claim-003-girl-group-voice"
+                ],
+                "source_refs": [
+                  "teachrock_brill_girl_group_era",
+                  "britannica_brill_assembly_line_pop"
+                ],
+                "max_chars": null
+              }
+            },
+            "guardrail": "Do not infer generic oldies, soft pop, or modern adult-pop fit from this hook alone."
+          },
+          {
+            "hook_id": "brill-runtime-hook-doowop-soul-bridge",
+            "state_field_bindings": [
+              "atlas.evidence.archetype_fit[family_01/archetype_003].polarity",
+              "atlas.evidence.archetype_fit[family_01/archetype_006].polarity",
+              "atlas.evidence.archetype_fit[family_06/archetype_037].polarity"
+            ],
+            "condition_logic": {
+              "any": [
+                {
+                  "field": "atlas.evidence.archetype_fit[family_01/archetype_003].polarity",
+                  "equals": "positive"
+                },
+                {
+                  "field": "atlas.evidence.archetype_fit[family_01/archetype_006].polarity",
+                  "equals": "positive"
+                },
+                {
+                  "field": "atlas.evidence.archetype_fit[family_06/archetype_037].polarity",
+                  "equals": "positive"
+                }
+              ]
+            },
+            "copy_variants": {
+              "compact": {
+                "text": "This region may bridge earlier vocal-group ache, early soul-pop, and Motown-style hit craft.",
+                "claim_refs": [
+                  "brill-claim-006-downstream-pop-architecture"
+                ],
+                "source_refs": [
+                  "britannica_brill_assembly_line_pop",
+                  "teachrock_brill_girl_group_era"
+                ],
+                "max_chars": null
+              },
+              "standard": {
+                "text": "Brill/Girl Group pop can sit between doo-wop tenderness, early soul-pop motion, and Motown-like professional hitmaking. The mission should test whether those bridges feel alive or merely historically connected.",
+                "claim_refs": [
+                  "brill-claim-006-downstream-pop-architecture"
+                ],
+                "source_refs": [
+                  "britannica_brill_assembly_line_pop",
+                  "teachrock_brill_girl_group_era"
+                ],
+                "max_chars": null
+              },
+              "deep": {
+                "text": "This route is useful when a user has adjacent evidence in vocal-group oldies, early R&B crossover, or Motown/Detroit soul-pop. The Brill region can explain shared craft habits—group vocals, hook compression, teen feeling, and writer/producer systems—without collapsing those neighboring archetypes into one taxonomy.",
+                "claim_refs": [
+                  "brill-claim-006-downstream-pop-architecture"
+                ],
+                "source_refs": [
+                  "britannica_brill_assembly_line_pop",
+                  "teachrock_brill_girl_group_era"
+                ],
+                "max_chars": null
+              }
+            },
+            "guardrail": "Render as a bridge hypothesis; preserve each neighboring archetype identity."
+          }
+        ],
+        "fallback_overlay": "This is an unexplored Atlas region. Treat the mission as a test of compact pop architecture and teen-drama craft, not as proof of broad oldies or pop appetite."
+      },
+      "canonical_examples": [
+        {
+          "display_label": "The Ronettes — Be My Baby",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "the-ronettes-be-my-baby",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-the-ronettes-be-my-baby-005",
+                "canonical_entity_id": "the-ronettes-be-my-baby",
+                "display_label": "Be My Baby",
+                "object_type": "song_recording",
+                "survey_page_role": "page1_core",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-1-song-005-the-ronettes-be-my-baby",
+                "priority_score": 100,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Artist-worthy",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as an absolute anchor and the archetype’s cleanest Spector/girl-group gateway.",
+          "listening_angle": "Listen for the drum entrance, echo, huge backing-vocal lift, and how the record turns romantic desire into architecture.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-the-ronettes-be-my-baby"
+        },
+        {
+          "display_label": "The Shirelles — Will You Love Me Tomorrow",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "the-shirelles-will-you-love-me-tomorrow",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-the-shirelles-will-you-love-me-tomorrow-005",
+                "canonical_entity_id": "the-shirelles-will-you-love-me-tomorrow",
+                "display_label": "Will You Love Me Tomorrow",
+                "object_type": "song_recording",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-1-song-005-the-shirelles-will-you-love-me-tomorrow",
+                "priority_score": 100,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Artist-worthy",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as an absolute archetype anchor. It is the cleanest bridge from vocal-group oldies into intimate girl-group drama.",
+          "listening_angle": "Listen for the question at the center: a pop hook that is also a social/emotional dilemma.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-the-shirelles-will-you-love-me-tomorrow"
+        },
+        {
+          "display_label": "The Crystals — Then He Kissed Me",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "the-crystals-then-he-kissed-me",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-the-crystals-then-he-kissed-me-005",
+                "canonical_entity_id": "the-crystals-then-he-kissed-me",
+                "display_label": "Then He Kissed Me",
+                "object_type": "song_recording",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-1-song-005-the-crystals-then-he-kissed-me",
+                "priority_score": 92.9,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Artist-worthy",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph calls it one of the lane’s clearest story songs.",
+          "listening_angle": "Listen to how the lyric moves like a short film: approach, action, emotional confirmation, chorus.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-the-crystals-then-he-kissed-me"
+        },
+        {
+          "display_label": "The Chiffons — One Fine Day",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "the-chiffons-one-fine-day",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-the-chiffons-one-fine-day-005",
+                "canonical_entity_id": "the-chiffons-one-fine-day",
+                "display_label": "One Fine Day",
+                "object_type": "song_recording",
+                "survey_page_role": "page3_deep",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-1-song-005-the-chiffons-one-fine-day",
+                "priority_score": 92.26,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Artist-worthy",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph treats it as a safe high-recognition entry point; it also links directly to Brill writerly craft.",
+          "listening_angle": "Listen for melodic optimism, piano bounce, and a hook that feels inevitable rather than merely catchy.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-the-chiffons-one-fine-day"
+        },
+        {
+          "display_label": "The Shangri-Las — Leader of the Pack",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "the-shangri-las-leader-of-the-pack",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-the-shangri-las-leader-of-the-pack-005",
+                "canonical_entity_id": "the-shangri-las-leader-of-the-pack",
+                "display_label": "Leader of the Pack",
+                "object_type": "song_recording",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-1-song-005-the-shangri-las-leader-of-the-pack",
+                "priority_score": 92.9,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Artist-worthy",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph identifies this as a dramatic teen-theater cornerstone.",
+          "listening_angle": "Listen for spoken setup, sound effects, fatalism, and how pop becomes melodrama without becoming long-form rock.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-the-shangri-las-leader-of-the-pack"
+        },
+        {
+          "display_label": "Little Eva — The Loco-Motion",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "little-eva-the-loco-motion",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-little-eva-the-loco-motion-005",
+                "canonical_entity_id": "little-eva-the-loco-motion",
+                "display_label": "The Loco-Motion",
+                "object_type": "song_recording",
+                "survey_page_role": "page3_deep",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-1-song-005-little-eva-the-loco-motion",
+                "priority_score": 92.26,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Song-first",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph flags it as a must-have song-first dance-pop object.",
+          "listening_angle": "Listen for the professional song machine making a dance instruction record feel like a personality record.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-little-eva-the-loco-motion"
+        },
+        {
+          "display_label": "The Marvelettes — Please Mr. Postman",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "the-marvelettes-please-mr-postman",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-song_recording-the-marvelettes-please-mr-postman-005",
+                "canonical_entity_id": "the-marvelettes-please-mr-postman",
+                "display_label": "Please Mr. Postman",
+                "object_type": "song_recording",
+                "survey_page_role": "page3_deep",
+                "survey_intent": "bridge_test",
+                "source_membership_id": "family-1-song-005-the-marvelettes-please-mr-postman",
+                "priority_score": 92.26,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Artist-worthy",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a Motown-girl-group hinge song, connecting New York pop craft to Detroit soul-pop motion.",
+          "listening_angle": "Listen for how the group-vocal urgency and beat pull the lane toward Motown.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-the-marvelettes-please-mr-postman"
+        },
+        {
+          "display_label": "Dionne Warwick — Anyone Who Had a Heart",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "song_recording",
+            "entity_id": "dionne-warwick-anyone-who-had-a-heart",
+            "candidate_id_matches": []
+          },
+          "reason_compact": "Graph uses Warwick as a bridge to sophisticated Brill/Bacharach-David craft.",
+          "listening_angle": "Listen for asymmetrical phrasing and emotional sophistication: this is pop architecture becoming adult and harmonically strange.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-dionne-warwick-anyone-who-had-a-heart"
+        },
+        {
+          "display_label": "Various Artists — One Kiss Can Lead to Another: Girl Group Sounds Lost & Found",
+          "object_type": "album",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "album",
+            "entity_id": "various-artists-one-kiss-can-lead-to-another-girl-group-sounds-lost-and-found",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-album-various-artists-one-kiss-can-lead-to-another-girl-group-sounds-lost-and-found-005",
+                "canonical_entity_id": "various-artists-one-kiss-can-lead-to-another-girl-group-sounds-lost-and-found",
+                "display_label": "One Kiss Can Lead to Another: Girl Group Sounds Lost & Found",
+                "object_type": "album",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "album_world_test",
+                "source_membership_id": "family-1-album-005-various-artists-one-kiss-can-lead-to-another-girl-group-sounds-lost-and-found",
+                "priority_score": 93.23,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer favorite-artist status without artist/song evidence",
+                  "Compilation object should not overtake anchor songs",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this compilation as a deep-but-accessible girl-group gateway.",
+          "listening_angle": "Use it as a scene sampler: not every record is a landmark, but the ecosystem becomes audible.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-various-artists-one-kiss-can-lead-to-another-girl-group-sounds-lost-and-found"
+        },
+        {
+          "display_label": "Phil Spector / Various Artists — Back to Mono (1958–1969)",
+          "object_type": "album",
+          "graph_ref": {
+            "family_id": 1,
+            "archetype_id": "005",
+            "archetype_ref": "family_01/archetype_005",
+            "object_type": "album",
+            "entity_id": "phil-spector-various-artists-back-to-mono-1958-1969",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f1-album-phil-spector-various-artists-back-to-mono-1958-1969-005",
+                "canonical_entity_id": "phil-spector-various-artists-back-to-mono-1958-1969",
+                "display_label": "Back to Mono (1958-1969)",
+                "object_type": "album",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "album_world_test",
+                "source_membership_id": "family-1-album-005-phil-spector-various-artists-back-to-mono-1958-1969",
+                "priority_score": 91.94,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer favorite-artist status without artist/song evidence",
+                  "Artist credit normalization required",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a canonical Spector ecosystem object.",
+          "listening_angle": "Use it to hear producer-world logic: arrangement, echo, percussion, massed voices, and dramatic scale as authorship.",
+          "claim_refs": [
+            "brill-claim-001-ecosystem-not-one-sound",
+            "brill-claim-003-girl-group-voice"
+          ],
+          "graph_audit_ref": "graph-audit-family_01-archetype_005-phil-spector-various-artists-back-to-mono-1958-1969"
+        }
+      ],
+      "related_roads_lineage_module": {
+        "copy_variants": {
+          "compact": {
+            "text": "Before: doo-wop, teen-idol radio, early soul-pop. After: singer-songwriter craft, power pop, Motown-like hit factories, and modern pop architecture.",
+            "claim_refs": [
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "This road grows out of vocal-group oldies, teen-idol radio, and early soul-pop, then points forward toward Carole King-style singer-songwriter authorship, power pop, Motown-like professional hitmaking, and modern songwriter-producer systems.",
+            "claim_refs": [
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "Lineage should be rendered as roads, not taxonomy changes. Brill/Girl Group pop helps explain how concise hook craft, group-vocal drama, and professional writing rooms can feed later singer-songwriter authority, melodic guitar-pop, pop-soul factory logic, and modern persona-pop architecture while preserving each archetype’s separate graph identity.",
+            "claim_refs": [
+              "brill-claim-006-downstream-pop-architecture"
+            ],
+            "source_refs": [
+              "britannica_brill_assembly_line_pop",
+              "songhall_carole_king"
+            ],
+            "max_chars": null
+          }
+        },
+        "roads": {
+          "before": [
+            {
+              "archetype_ref": "family_01/archetype_003",
+              "archetype_name": "Doo-Wop / Vocal Group Oldies",
+              "relationship": "vocal-group harmony and teenage ballad roots"
+            },
+            {
+              "archetype_ref": "family_01/archetype_004",
+              "archetype_name": "Teen Idol / Early Pop-Rock Radio",
+              "relationship": "teen-idol radio market and early pop-rock audience"
+            },
+            {
+              "archetype_ref": "family_01/archetype_006",
+              "archetype_name": "Early Soul-Pop / R&B Crossover",
+              "relationship": "R&B crossover and early soul-pop motion"
+            }
+          ],
+          "after": [
+            {
+              "archetype_ref": "family_04/archetype_024",
+              "archetype_name": "Classic singer-songwriter",
+              "relationship": "songwriters moving toward singer-songwriter authorship, especially Carole King"
+            },
+            {
+              "archetype_ref": "family_03/archetype_021",
+              "archetype_name": "Power Pop / Melodic Guitar Pop",
+              "relationship": "tight pop architecture feeding later melodic guitar pop and power pop"
+            },
+            {
+              "archetype_ref": "family_12/archetype_091",
+              "archetype_name": "2010s Persona Pop / Architectural Pop",
+              "relationship": "modern pop as songwriter-producer architecture and persona design"
+            }
+          ],
+          "related": [
+            {
+              "archetype_ref": "family_06/archetype_037",
+              "archetype_name": "Motown / Detroit Soul Pop",
+              "relationship": "Motown’s parallel hit-factory model and girl-group crossover"
+            },
+            {
+              "archetype_ref": "family_02/archetype_013",
+              "archetype_name": "Psychedelic Pop / Sunshine Pop / Late-60s Pop-Rock",
+              "relationship": "late-60s sunshine/psychedelic pop inherits some orchestral and hook-craft DNA"
+            },
+            {
+              "archetype_ref": "family_17/archetype_112",
+              "archetype_name": "Holiday / Christmas / Seasonal Canon",
+              "relationship": "Spector Christmas objects as seasonal canon and producer-world gateway"
+            }
+          ],
+          "boundary_or_false_nearby": [
+            {
+              "archetype_ref": "family_03/archetype_022",
+              "archetype_name": "Soft Rock / AM Gold / Adult Pop",
+              "relationship": "soft/adult pop can share polish and melody but lose the teen-drama bite"
+            },
+            {
+              "archetype_ref": "family_12/archetype_092",
+              "archetype_name": "Adult Pop / TV-Drama Anthem / Inspirational Pop",
+              "relationship": "modern adult-pop anthem can imitate emotional scale without the compact craft or pressure"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "render_pack_id": "render-family-8-archetype-054-cbgb-art-punk-downtown-ny-v0-1",
+      "graph_alignment": {
+        "family_id": 8,
+        "family_ref": "family_08",
+        "family_name": "Punk, Hardcore, Post-Punk, New Wave",
+        "archetype_id": "054",
+        "archetype_ref": "family_08/archetype_054",
+        "archetype_name": "CBGB / Art-Punk / Downtown New York",
+        "non_mutation_policy": "This pack explains existing graph refs only. It does not create, rename, merge, quarantine, or promote canonical graph objects.",
+        "staging_status_note": "Built from the 2026-05-26 canonical graph export. Treat as graph-aligned staging copy, not final-lock graph truth."
+      },
+      "editorial_status": "alpha_render_candidate_not_production_copy_approved",
+      "source_claim_refs": [
+        "cbgb-claim-001-venue-origin",
+        "cbgb-claim-002-name-origin",
+        "cbgb-claim-003-scene-not-single-sound",
+        "cbgb-claim-004-artist-roads",
+        "cbgb-claim-005-lineage-roads",
+        "cbgb-claim-006-history-vs-fit"
+      ],
+      "home_region_card": {
+        "title": "CBGB / Downtown Art-Punk",
+        "subtitle_variants": {
+          "compact": {
+            "text": "One room, many exits.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "A downtown New York scene where punk, poetry, pop-art, nervous rhythm, and noise opened different roads out of the same small-room ecology.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "CBGB/Downtown New York is a scene map rather than one sound: Patti Smith, Television, Talking Heads, Blondie, Richard Hell, Suicide, and No Wave all point outward in different directions.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          }
+        },
+        "status_badges": [
+          "graph-aligned",
+          "draft-copy",
+          "alpha-render-candidate"
+        ]
+      },
+      "region_scene_page": {
+        "hero_title": "CBGB / Art-Punk / Downtown New York",
+        "subtitle_variants": {
+          "compact": {
+            "text": "The room where incompatible bands became a map.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "A downtown scene unified less by sound than by permission: original songs, small rooms, art pressure, punk scale, and refusal of classic-rock default settings.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "This region explains CBGB as an ecosystem. The same room could produce poetry-rock, guitar architecture, pop-art new wave, synth menace, and No Wave boundary pressure. Atlas should teach the scene without pretending every branch fits the same listener.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          }
+        },
+        "definition_variants": {
+          "compact": {
+            "text": "A downtown New York scene where punk scale, art pressure, and original-band permission produced many different exits.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "A downtown New York scene/ecosystem where punk urgency, art-school experiment, poetry, pop instincts, minimal electronics, and club culture collided around CBGB and nearby venues rather than resolving into one sound.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "A downtown New York scene/ecosystem where punk urgency, art-school experiment, poetry, pop instincts, minimal electronics, and club culture collided around CBGB and nearby venues rather than resolving into one sound. The useful Atlas lesson is scene ecology: common conditions do not guarantee a common sound or a common user fit.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history"
+            ],
+            "max_chars": null
+          }
+        },
+        "history_variants": {
+          "compact": {
+            "text": "Founded in 1973, CBGB became a key New York room for punk, new wave, and underground rock—even though the name originally pointed somewhere else.",
+            "claim_refs": [
+              "cbgb-claim-001-venue-origin",
+              "cbgb-claim-002-name-origin",
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cbgb_history_by_hilly",
+              "britannica_cbgb",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "CBGB opened in 1973 on the Bowery under Hilly Kristal and became a practical home for original underground rock. What later looks like “the CBGB sound” was actually a cluster of incompatible but mutually intensifying bands: Patti Smith fused rock and poetry; Television stretched guitar interplay into nervous art-rock; Talking Heads turned anxiety, rhythm, and conceptual framing into new wave; Blondie smuggled girl-group/pop/disco instincts through downtown cool; Richard Hell gave punk a persona of damaged refusal; Suicide reduced rock to voice, synth pulse, and menace; and No Wave pushed the scene toward abrasive boundary testing.",
+            "claim_refs": [
+              "cbgb-claim-001-venue-origin",
+              "cbgb-claim-002-name-origin",
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cbgb_history_by_hilly",
+              "britannica_cbgb",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "CBGB opened in 1973 on the Bowery under Hilly Kristal and became a practical home for original underground rock. What later looks like “the CBGB sound” was actually a cluster of incompatible but mutually intensifying bands: Patti Smith fused rock and poetry; Television stretched guitar interplay into nervous art-rock; Talking Heads turned anxiety, rhythm, and conceptual framing into new wave; Blondie smuggled girl-group/pop/disco instincts through downtown cool; Richard Hell gave punk a persona of damaged refusal; Suicide reduced rock to voice, synth pulse, and menace; and No Wave pushed the scene toward abrasive boundary testing. For Alpha, the page should keep historical importance separate from personal fit: CBGB matters even when a user only connects with one branch.",
+            "claim_refs": [
+              "cbgb-claim-001-venue-origin",
+              "cbgb-claim-002-name-origin",
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cbgb_official_history",
+              "cbgb_history_by_hilly",
+              "britannica_cbgb",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          }
+        }
+      },
+      "mission_detail_history_module": {
+        "copy_variants": {
+          "compact": {
+            "text": "This route tests which downtown branch works: poetry-rock, guitar architecture, nervous art-pop, pop bridge, or boundary pressure.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "This route tests CBGB as a branching scene rather than a single preference. Patti Smith, Television, Talking Heads, Blondie, Richard Hell, Suicide, and No Wave should be heard as related roads, not interchangeable recommendations.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "Use this mission when Atlas needs to separate lineage relevance from appetite. The route can show why CBGB matters historically while still asking which branch a user actually wants more of: punk permission, literary performance, art-guitar architecture, pop-art radio, synth menace, or No Wave abrasion.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          }
+        },
+        "mission_boundary_copy": {
+          "included": "Included in the first Alpha batch: this route tests CBGB as a branching scene, not a single genre preference.",
+          "related": "Related to the first Alpha batch: this region explains why included punk, post-punk, new wave, or art-rock songs may share downtown lineage without having the same fit profile.",
+          "not_included": "Not in the first Alpha batch yet. Render as Atlas context only; do not offer dynamic mission creation from this region.",
+          "state_field": "atlas.alpha_v0.mission_inclusion[family_08/archetype_054].status"
+        }
+      },
+      "did_you_know_card": {
+        "card_variants": {
+          "compact": {
+            "text": "CBGB did not begin as a punk acronym; the name pointed to country, bluegrass, blues, and “other music.”",
+            "claim_refs": [
+              "cbgb-claim-002-name-origin",
+              "cbgb-claim-003-scene-not-single-sound"
+            ],
+            "source_refs": [
+              "cbgb_history_by_hilly",
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "The club became punk/new-wave legend partly because the room made space for original underground bands, not because every band sounded alike.",
+            "claim_refs": [
+              "cbgb-claim-002-name-origin",
+              "cbgb-claim-003-scene-not-single-sound"
+            ],
+            "source_refs": [
+              "cbgb_history_by_hilly",
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "That is why Atlas should treat CBGB as a scene ecology. Blondie’s pop-art bridge, Patti Smith’s poetry-rock, Television’s guitar architecture, Talking Heads’ nervous art-pop, and Suicide’s synth menace can all be historically related while producing different user reactions.",
+            "claim_refs": [
+              "cbgb-claim-002-name-origin",
+              "cbgb-claim-003-scene-not-single-sound"
+            ],
+            "source_refs": [
+              "cbgb_history_by_hilly",
+              "cbgb_official_history",
+              "cornell_punk_arrives_new_york"
+            ],
+            "max_chars": null
+          }
+        }
+      },
+      "what_to_listen_for_prompt": {
+        "prompt_variants": {
+          "compact": {
+            "text": "Listen for the branch: poetry, guitar architecture, nervous rhythm, pop polish, or boundary noise.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "Ask what kind of downtown pressure you are hearing: Patti Smith’s invocation, Television’s interlocked guitars, Talking Heads’ nervous rhythm, Blondie’s pop bridge, or Suicide/No Wave menace.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "Do not listen for a single CBGB sound. Listen for the shared conditions—small-room intensity, original songs, anti-arena scale—and then identify which exit road actually works for the user.",
+            "claim_refs": [
+              "cbgb-claim-003-scene-not-single-sound",
+              "cbgb-claim-004-artist-roads"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "cbgb_official_history"
+            ],
+            "max_chars": null
+          }
+        }
+      },
+      "personalized_overlay": {
+        "runtime_hooks": [
+          {
+            "hook_id": "cbgb-runtime-hook-scene-split-warning",
+            "state_field_bindings": [
+              "atlas.evidence.archetype_fit[family_08/archetype_053].polarity",
+              "atlas.evidence.archetype_fit[family_02/archetype_015].polarity",
+              "atlas.evidence.archetype_fit[family_08/archetype_054].status"
+            ],
+            "condition_logic": {
+              "any": [
+                {
+                  "field": "atlas.evidence.archetype_fit[family_08/archetype_053].polarity",
+                  "equals": "positive"
+                },
+                {
+                  "field": "atlas.evidence.archetype_fit[family_02/archetype_015].polarity",
+                  "equals": "positive"
+                }
+              ]
+            },
+            "copy_variants": {
+              "compact": {
+                "text": "This scene may split for you: liking punk energy or proto-alternative source code does not automatically mean every downtown branch works.",
+                "claim_refs": [
+                  "cbgb-claim-003-scene-not-single-sound",
+                  "cbgb-claim-004-artist-roads"
+                ],
+                "source_refs": [
+                  "cornell_punk_arrives_new_york",
+                  "cbgb_official_history"
+                ],
+                "max_chars": null
+              },
+              "standard": {
+                "text": "Atlas sees adjacent evidence, but CBGB is a scene map, not one sound. Patti Smith, Television, Talking Heads, Blondie, Suicide, and No Wave should be tested as different roads from the same room.",
+                "claim_refs": [
+                  "cbgb-claim-003-scene-not-single-sound",
+                  "cbgb-claim-004-artist-roads"
+                ],
+                "source_refs": [
+                  "cornell_punk_arrives_new_york",
+                  "cbgb_official_history"
+                ],
+                "max_chars": null
+              },
+              "deep": {
+                "text": "When a user has positive evidence for first-wave punk or art-rock/proto-alternative, CBGB becomes a high-value lineage test. The page should explain the common ecology—small-room original rock, downtown art pressure, anti-arena scale—while explicitly warning that pop-art Blondie, guitar-architecture Television, poetry-rock Patti Smith, nervous Talking Heads, and Suicide/No Wave boundary pressure are not interchangeable.",
+                "claim_refs": [
+                  "cbgb-claim-003-scene-not-single-sound",
+                  "cbgb-claim-004-artist-roads"
+                ],
+                "source_refs": [
+                  "cornell_punk_arrives_new_york",
+                  "cbgb_official_history"
+                ],
+                "max_chars": null
+              }
+            },
+            "guardrail": "Do not infer Suicide/No Wave fit from Blondie or Talking Heads evidence."
+          },
+          {
+            "hook_id": "cbgb-runtime-hook-history-vs-fit",
+            "state_field_bindings": [
+              "atlas.evidence.archetype_fit[family_08/archetype_054].status",
+              "atlas.evidence.object_signal[suicide-ghost-rider].reaction",
+              "atlas.evidence.object_signal[james-chance-and-the-contortions-contort-yourself].reaction"
+            ],
+            "condition_logic": {
+              "any": [
+                {
+                  "field": "atlas.evidence.object_signal[suicide-ghost-rider].reaction",
+                  "in": [
+                    "unknown",
+                    "partial",
+                    "disliked",
+                    "slop"
+                  ]
+                },
+                {
+                  "field": "atlas.evidence.object_signal[james-chance-and-the-contortions-contort-yourself].reaction",
+                  "in": [
+                    "unknown",
+                    "partial",
+                    "disliked",
+                    "slop"
+                  ]
+                }
+              ]
+            },
+            "copy_variants": {
+              "compact": {
+                "text": "Some CBGB objects are historically important boundary probes, not automatic recommendations.",
+                "claim_refs": [
+                  "cbgb-claim-006-history-vs-fit"
+                ],
+                "source_refs": [
+                  "cornell_punk_arrives_new_york"
+                ],
+                "max_chars": null
+              },
+              "standard": {
+                "text": "Atlas should separate “this changed the map” from “this is likely to fit.” Suicide and James Chance can explain later roads, but they should stay as explicit boundary tests until user evidence supports them.",
+                "claim_refs": [
+                  "cbgb-claim-006-history-vs-fit"
+                ],
+                "source_refs": [
+                  "cornell_punk_arrives_new_york"
+                ],
+                "max_chars": null
+              },
+              "deep": {
+                "text": "This is the place to preserve respect/appetite separation. The region can teach why downtown New York mattered without forcing every user through the harshest or most conceptual branch. Render boundary objects as probes with clear caution language, not as proof that the whole scene is a match.",
+                "claim_refs": [
+                  "cbgb-claim-006-history-vs-fit"
+                ],
+                "source_refs": [
+                  "cornell_punk_arrives_new_york"
+                ],
+                "max_chars": null
+              }
+            },
+            "guardrail": "Never convert historical importance into user-specific fit."
+          }
+        ],
+        "fallback_overlay": "This is an unexplored Atlas region. Treat the mission as a branching scene test and keep historical importance separate from confirmed user fit."
+      },
+      "canonical_examples": [
+        {
+          "display_label": "Patti Smith — Horses",
+          "object_type": "album",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "album",
+            "entity_id": "patti-smith-horses",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-album-patti-smith-horses-054",
+                "canonical_entity_id": "patti-smith-horses",
+                "display_label": "Horses",
+                "object_type": "album",
+                "survey_page_role": "page1_core",
+                "survey_intent": "album_world_test",
+                "source_membership_id": "family-8-album-054-patti-smith-horses",
+                "priority_score": 96.45,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer favorite-artist status without artist/song evidence",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core album anchor for Archetype 054.",
+          "listening_angle": "Listen for poetry, garage-rock ritual, and performance authority: art-punk as invocation rather than technical novelty.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-patti-smith-horses"
+        },
+        {
+          "display_label": "Patti Smith — Gloria",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "song_recording",
+            "entity_id": "patti-smith-gloria",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-song_recording-patti-smith-gloria-054",
+                "canonical_entity_id": "patti-smith-gloria",
+                "display_label": "Gloria",
+                "object_type": "song_recording",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-8-song-054-patti-smith-gloria",
+                "priority_score": 90.0,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "Preserve Patti Smith recording distinct from Them/Van Morrison original.",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core song anchor and preserves Patti Smith’s recording as distinct from the Them/Van Morrison original.",
+          "listening_angle": "Listen for appropriation/transformation: a familiar rock frame becomes downtown manifesto.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-patti-smith-gloria"
+        },
+        {
+          "display_label": "Television — Marquee Moon",
+          "object_type": "album",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "album",
+            "entity_id": "television-marquee-moon",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-album-television-marquee-moon-054",
+                "canonical_entity_id": "television-marquee-moon",
+                "display_label": "Marquee Moon",
+                "object_type": "album",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "album_world_test",
+                "source_membership_id": "family-8-album-054-television-marquee-moon",
+                "priority_score": 87.74,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer favorite-artist status without artist/song evidence",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core album anchor.",
+          "listening_angle": "Listen for long-line guitar architecture: punk-era energy without blunt punk minimalism.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-television-marquee-moon"
+        },
+        {
+          "display_label": "Television — Marquee Moon",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "song_recording",
+            "entity_id": "television-marquee-moon",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-song_recording-television-marquee-moon-054",
+                "canonical_entity_id": "television-marquee-moon",
+                "display_label": "Marquee Moon",
+                "object_type": "song_recording",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "recognition_anchor",
+                "source_membership_id": "family-8-song-054-television-marquee-moon",
+                "priority_score": 87.74,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a clear song-level tap for the archetype.",
+          "listening_angle": "Listen for patient tension, interlocking guitars, and an ecstatic build that still feels lean rather than arena-rock.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-television-marquee-moon"
+        },
+        {
+          "display_label": "Talking Heads — Psycho Killer",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "song_recording",
+            "entity_id": "talking-heads-psycho-killer",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-song_recording-talking-heads-psycho-killer-054",
+                "canonical_entity_id": "talking-heads-psycho-killer",
+                "display_label": "Psycho Killer",
+                "object_type": "song_recording",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "song_first_memory",
+                "source_membership_id": "family-8-song-054-talking-heads-psycho-killer",
+                "priority_score": 96.77,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not over-promote the artist from one song-first response",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core gateway/song-first object.",
+          "listening_angle": "Listen for nervous minimalism, persona weirdness, and how a hook can feel both catchy and unstable.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-talking-heads-psycho-killer"
+        },
+        {
+          "display_label": "Talking Heads — Remain in Light",
+          "object_type": "album",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "album",
+            "entity_id": "talking-heads-remain-in-light",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-album-talking-heads-remain-in-light-054",
+                "canonical_entity_id": "talking-heads-remain-in-light",
+                "display_label": "Remain in Light",
+                "object_type": "album",
+                "survey_page_role": "page1_core",
+                "survey_intent": "album_world_test",
+                "source_membership_id": "family-8-album-054-talking-heads-remain-in-light",
+                "priority_score": 100,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer favorite-artist status without artist/song evidence",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core album anchor and bridge.",
+          "listening_angle": "Listen for downtown art-rock moving toward rhythm systems, studio construction, and post-punk/world-funk logic.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-talking-heads-remain-in-light"
+        },
+        {
+          "display_label": "Blondie — Parallel Lines",
+          "object_type": "album",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "album",
+            "entity_id": "blondie-parallel-lines",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-album-blondie-parallel-lines-054",
+                "canonical_entity_id": "blondie-parallel-lines",
+                "display_label": "Parallel Lines",
+                "object_type": "album",
+                "survey_page_role": "page2_adaptive",
+                "survey_intent": "album_world_test",
+                "source_membership_id": "family-8-album-054-blondie-parallel-lines",
+                "priority_score": 90.97,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer favorite-artist status without artist/song evidence",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core gateway/bridge album.",
+          "listening_angle": "Listen for pop permeability: girl-group memory, punk/new wave snap, disco, and radio craft without losing downtown identity.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-blondie-parallel-lines"
+        },
+        {
+          "display_label": "Blondie — Heart of Glass",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "song_recording",
+            "entity_id": "blondie-heart-of-glass",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-song_recording-blondie-heart-of-glass-054",
+                "canonical_entity_id": "blondie-heart-of-glass",
+                "display_label": "Heart of Glass",
+                "object_type": "song_recording",
+                "survey_page_role": "page1_core",
+                "survey_intent": "song_first_memory",
+                "source_membership_id": "family-8-song-054-blondie-heart-of-glass",
+                "priority_score": 96.77,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not over-promote the artist from one song-first response",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a core bridge/song-first object.",
+          "listening_angle": "Listen for the exact boundary where CBGB-associated new wave crosses into disco-pop and mass pop without becoming ordinary.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-blondie-heart-of-glass"
+        },
+        {
+          "display_label": "Richard Hell & The Voidoids — Blank Generation",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "song_recording",
+            "entity_id": "richard-hell-and-the-voidoids-blank-generation",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-song_recording-richard-hell-and-the-voidoids-blank-generation-054",
+                "canonical_entity_id": "richard-hell-and-the-voidoids-blank-generation",
+                "display_label": "Blank Generation",
+                "object_type": "song_recording",
+                "survey_page_role": "page3_deep",
+                "survey_intent": "deepening_only",
+                "source_membership_id": "family-8-song-054-richard-hell-and-the-voidoids-blank-generation",
+                "priority_score": 66.77,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph keeps this as standard/deepening rather than a page-one anchor.",
+          "listening_angle": "Listen for stance and persona: punk as negation, identity fracture, and anti-romantic style.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-richard-hell-and-the-voidoids-blank-generation"
+        },
+        {
+          "display_label": "Suicide — Ghost Rider",
+          "object_type": "song_recording",
+          "graph_ref": {
+            "family_id": 8,
+            "archetype_id": "054",
+            "archetype_ref": "family_08/archetype_054",
+            "object_type": "song_recording",
+            "entity_id": "suicide-ghost-rider",
+            "candidate_id_matches": [
+              {
+                "candidate_id": "survey-f8-song_recording-suicide-ghost-rider-054",
+                "canonical_entity_id": "suicide-ghost-rider",
+                "display_label": "Ghost Rider",
+                "object_type": "song_recording",
+                "survey_page_role": "page3_deep",
+                "survey_intent": "boundary_test",
+                "source_membership_id": "family-8-song-054-suicide-ghost-rider",
+                "priority_score": 68.06,
+                "do_not_infer": [
+                  "do not infer broad genre appetite from one tap",
+                  "do not infer canonical graph mutation from survey response",
+                  "do not create Atlas Dead End without repeated user signal",
+                  "do not infer adjacent archetypes without follow-up evidence"
+                ]
+              }
+            ]
+          },
+          "reason_compact": "Graph marks this as a boundary/song-first object and dead-end probe.",
+          "listening_angle": "Listen for minimal pulse, threat, and whether synth-punk source-code feels compelling or just historically adjacent.",
+          "claim_refs": [
+            "cbgb-claim-004-artist-roads",
+            "cbgb-claim-006-history-vs-fit"
+          ],
+          "graph_audit_ref": "graph-audit-family_08-archetype_054-suicide-ghost-rider"
+        }
+      ],
+      "related_roads_lineage_module": {
+        "copy_variants": {
+          "compact": {
+            "text": "Before: first-wave punk and proto-alternative. After: post-punk, new wave, college rock, synth-punk, noise rock, and modern post-punk revival.",
+            "claim_refs": [
+              "cbgb-claim-005-lineage-roads",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          },
+          "standard": {
+            "text": "CBGB sits between first-wave punk/proto-alternative source code and later roads: post-punk, new wave, college rock, synth/electronic menace, noise rock, and modern retro-shadow guitar music.",
+            "claim_refs": [
+              "cbgb-claim-005-lineage-roads",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          },
+          "deep": {
+            "text": "Render this lineage as branching roads. CBGB can connect to punk, art-rock, new wave, synth-punk, noise rock, college rock, and post-punk revival, but a user’s fit must be measured branch-by-branch. This module should actively prevent the “liked one CBGB thing, therefore likes all CBGB things” mistake.",
+            "claim_refs": [
+              "cbgb-claim-005-lineage-roads",
+              "cbgb-claim-006-history-vs-fit"
+            ],
+            "source_refs": [
+              "cornell_punk_arrives_new_york",
+              "britannica_cbgb"
+            ],
+            "max_chars": null
+          }
+        },
+        "roads": {
+          "before": [
+            {
+              "archetype_ref": "family_08/archetype_053",
+              "archetype_name": "First-Wave Punk / 70s Punk",
+              "relationship": "first-wave punk shares the stripped-down original-band permission structure"
+            },
+            {
+              "archetype_ref": "family_02/archetype_015",
+              "archetype_name": "Art-Rock / Proto-Alternative / Freak Underground",
+              "relationship": "Velvet Underground/proto-alternative art-rock source code before downtown punk"
+            },
+            {
+              "archetype_ref": "family_01/archetype_005",
+              "archetype_name": "Brill Building / Girl Group / Early 60s Pop Craft",
+              "relationship": "Blondie/Ramones pop-art branch looks backward to girl-group, surf, and bubblegum forms"
+            }
+          ],
+          "after": [
+            {
+              "archetype_ref": "family_08/archetype_056",
+              "archetype_name": "Post-Punk / Dark Melodic / Gothic Roots",
+              "relationship": "post-punk/dark melodic scenes expand the art-punk permission structure"
+            },
+            {
+              "archetype_ref": "family_08/archetype_057",
+              "archetype_name": "New Wave / MTV Pop-Rock",
+              "relationship": "new wave turns parts of the scene into sharper pop-rock and MTV-era language"
+            },
+            {
+              "archetype_ref": "family_08/archetype_059",
+              "archetype_name": "College Rock / Pre-Alternative 80s",
+              "relationship": "college rock inherits small-room originality and anti-arena instincts"
+            },
+            {
+              "archetype_ref": "family_10/archetype_080",
+              "archetype_name": "Post-Punk Revival / Dark Indie Rock",
+              "relationship": "post-punk revival reuses nervous rhythm, angular guitar, and downtown cool as modern vocabulary"
+            }
+          ],
+          "related": [
+            {
+              "archetype_ref": "family_08/archetype_058",
+              "archetype_name": "Synthpop / New Romantic / 80s Electronic Pop",
+              "relationship": "Suicide and synth-punk can point toward electronic pop, but the fit is not the same as later synthpop"
+            },
+            {
+              "archetype_ref": "family_08/archetype_060",
+              "archetype_name": "Noise Rock / Post-Hardcore / Touch and Go Axis",
+              "relationship": "No Wave and boundary objects open roads into noise rock/post-hardcore"
+            },
+            {
+              "archetype_ref": "family_10/archetype_072",
+              "archetype_name": "90s Indie / Lo-Fi / Slacker / Matador Axis",
+              "relationship": "indie/lo-fi inherits some anti-mainstream art-rock values but can fail if it becomes too slack or bloodless"
+            }
+          ],
+          "boundary_or_false_nearby": [
+            {
+              "archetype_ref": "family_11/archetype_084",
+              "archetype_name": "Trip-Hop / Downtempo / Nocturnal Electronic",
+              "relationship": "nocturnal/electronic atmosphere may look adjacent through Suicide or Talking Heads but can be a separate fit problem"
+            },
+            {
+              "archetype_ref": "family_12/archetype_088",
+              "archetype_name": "70s-80s Pop Sovereigns",
+              "relationship": "Blondie mass-pop success should not imply generic pop-sovereign appetite"
+            },
+            {
+              "archetype_ref": "family_08/archetype_060",
+              "archetype_name": "Noise Rock / Post-Hardcore / Touch and Go Axis",
+              "relationship": "No Wave/noise-funk is historically adjacent but likely requires direct boundary testing"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "source_references": {
+    "britannica_brill_assembly_line_pop": {
+      "title": "The Brill Building: Assembly-Line Pop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/The-Brill-Building-Assembly-Line-Pop-1688332",
+      "source_type": "reference",
+      "audit_use": "Brill as professional songwriting/pop-production ecosystem; girl-group examples; Spector collaborator/customer framing.",
+      "rights_note": "Use for paraphrase only; no long quotations."
+    },
+    "teachrock_brill_girl_group_era": {
+      "title": "The Brill Building and the Girl Group Era",
+      "publisher": "TeachRock",
+      "url": "https://teachrock.org/chapter/the-brill-building-and-the-girl-group-era/",
+      "source_type": "educational",
+      "audit_use": "Brill/Girl Group era as artists, producers, publishers, writers; female pop voice; Goffin/King and Greenwich/Barry examples.",
+      "rights_note": "Use for paraphrase only; no long quotations."
+    },
+    "songhall_carole_king": {
+      "title": "Carole King profile",
+      "publisher": "Songwriters Hall of Fame",
+      "url": "https://www.songhall.org/profiles/carole-king",
+      "source_type": "industry_reference",
+      "audit_use": "Carole King early Brill career; Goffin/King; Will You Love Me Tomorrow; transition to singer-songwriter.",
+      "rights_note": "Use for paraphrase only; no long quotations."
+    },
+    "rockhall_brill_library_guide": {
+      "title": "Brill Building Library Guide",
+      "publisher": "Rock & Roll Hall of Fame Library & Archives",
+      "url": "https://library.rockhall.com/brill_building",
+      "source_type": "archive_guide",
+      "audit_use": "Secondary source-finding/support for Brill Building writers and history.",
+      "rights_note": "Use as source guide; do not reproduce archival material."
+    },
+    "songhall_youve_lost_that_lovin_feelin": {
+      "title": "You’ve Lost That Lovin’ Feelin’ profile",
+      "publisher": "Songwriters Hall of Fame",
+      "url": "https://www.songhall.org/profiles/youve-lost-that-lovin-feelin",
+      "source_type": "industry_reference",
+      "audit_use": "Mann/Weil/Spector craft example and adult-pop scale bridge.",
+      "rights_note": "Use for factual paraphrase only; no lyrics."
+    },
+    "cbgb_official_history": {
+      "title": "CBGB History",
+      "publisher": "CBGB & OMFUG",
+      "url": "https://www.cbgb.com/pages/cbgb-history",
+      "source_type": "official_site",
+      "audit_use": "Venue origin, Hilly Kristal, East Village setting, underground rock/new wave launchpad and artist roster.",
+      "rights_note": "Use for factual paraphrase only; no long quotations or proprietary images."
+    },
+    "cbgb_history_by_hilly": {
+      "title": "History By Hilly",
+      "publisher": "CBGB & OMFUG",
+      "url": "https://www.cbgb.com/pages/history-by-hilly",
+      "source_type": "official_primary_context",
+      "audit_use": "Founder explanation of CBGB/OMFUG name and early club framing.",
+      "rights_note": "Use for factual paraphrase only; avoid extended quotation."
+    },
+    "britannica_cbgb": {
+      "title": "CBGB",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/CBGB-1688333",
+      "source_type": "reference",
+      "audit_use": "CBGB as legendary punk/new wave venue founded by Hilly Kristal in 1973.",
+      "rights_note": "Use for paraphrase only; no long quotations."
+    },
+    "cornell_punk_arrives_new_york": {
+      "title": "Anarchy in the Archives: Punk Arrives — New York",
+      "publisher": "Cornell University Library",
+      "url": "https://rmc.library.cornell.edu/punkfest/exhibition/punkarrives/newyork.html",
+      "source_type": "archive_exhibition",
+      "audit_use": "CBGB bands as eclectic scene unified by bohemian spirit; literary-minded Patti Smith/Television and pop-art Blondie/Ramones branches.",
+      "rights_note": "Use for factual paraphrase only; do not reproduce images."
+    },
+    "udiscover_cbgb_birth_of_new_york_punk": {
+      "title": "New Wave Central: CBGBs And The Birth Of New York Punk",
+      "publisher": "uDiscoverMusic",
+      "url": "https://www.udiscovermusic.com/in-depth-features/city-scenes-new-york-punk-cbgb/",
+      "source_type": "music_feature",
+      "audit_use": "Supplemental artist context for Suicide, Patti Smith, Blondie, Talking Heads, and the 1974–75 club ecology.",
+      "rights_note": "Use only as supplemental support; no long quotations."
+    }
+  },
+  "audit": {
+    "all_entries_keyed_to_existing_graph_refs": true,
+    "copy_variants_present": [
+      "compact",
+      "standard",
+      "deep"
+    ],
+    "personalization_hooks_bound_to_state_fields": true,
+    "alpha_v0_mission_boundary_present": true,
+    "rights_policy_present": true,
+    "non_mutation_policy_present": true,
+    "production_status": "alpha_render_candidate_not_final_copy_approved"
+  }
+}

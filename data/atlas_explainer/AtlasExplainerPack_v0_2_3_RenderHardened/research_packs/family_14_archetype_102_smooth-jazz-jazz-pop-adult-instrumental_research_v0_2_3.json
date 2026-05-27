@@ -1,0 +1,1367 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_14_archetype_102_smooth-jazz-jazz-pop-adult-instrumental_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_14/normalized_family_14.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 14,
+    "family_slug": "jazz-standards-vocal-classical-adjacent",
+    "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+    "archetype_id": "102",
+    "archetype_slug": "smooth-jazz-jazz-pop-adult-instrumental",
+    "canonical_graph_ref": "family_14/archetype_102",
+    "existing_graph_label_name": "Smooth Jazz / Jazz-Pop / Adult Instrumental",
+    "editorial_display_title": "Smooth Jazz / Jazz-Pop / Adult Instrumental",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:george-benson",
+        "object_id": "george-benson",
+        "display_label": "George Benson",
+        "source_membership_id": "family-14-artist-102-george-benson",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "George Benson provides a recognizable survey branch for 102 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:kenny-g",
+        "object_id": "kenny-g",
+        "display_label": "Kenny G",
+        "source_membership_id": "family-14-artist-102-kenny-g",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Kenny G provides a recognizable survey branch for 102 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sade",
+        "object_id": "sade",
+        "display_label": "Sade",
+        "source_membership_id": "family-14-artist-102-sade",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Sade provides a recognizable survey branch for 102 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:norah-jones",
+        "object_id": "norah-jones",
+        "display_label": "Norah Jones",
+        "source_membership_id": "family-14-artist-102-norah-jones",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Norah Jones provides a recognizable survey branch for 102 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:grover-washington-jr",
+        "object_id": "grover-washington-jr",
+        "display_label": "Grover Washington Jr.",
+        "source_membership_id": "family-14-artist-102-grover-washington-jr",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Grover Washington Jr. provides a recognizable survey branch for 102 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:chuck-mangione",
+        "object_id": "chuck-mangione",
+        "display_label": "Chuck Mangione",
+        "source_membership_id": "family-14-artist-102-chuck-mangione",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Chuck Mangione adds a concrete 102 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:herb-alpert",
+        "object_id": "herb-alpert",
+        "display_label": "Herb Alpert",
+        "source_membership_id": "family-14-artist-102-herb-alpert",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Herb Alpert adds a concrete 102 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:diana-krall",
+        "object_id": "diana-krall",
+        "display_label": "Diana Krall",
+        "source_membership_id": "family-14-artist-102-diana-krall",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Diana Krall provides a recognizable survey branch for 102 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:david-sanborn",
+        "object_id": "david-sanborn",
+        "display_label": "David Sanborn",
+        "source_membership_id": "family-14-artist-102-david-sanborn",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "David Sanborn adds a concrete 102 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:spyro-gyra",
+        "object_id": "spyro-gyra",
+        "display_label": "Spyro Gyra",
+        "source_membership_id": "family-14-artist-102-spyro-gyra",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Spyro Gyra adds a concrete 102 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:norah-jones-come-away-with-me",
+        "object_id": "norah-jones-come-away-with-me",
+        "display_label": "Come Away with Me - Norah Jones",
+        "source_membership_id": "family-14-album-102-norah-jones-come-away-with-me",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Come Away with Me is a useful album-level gateway for 102.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:george-benson-breezin",
+        "object_id": "george-benson-breezin",
+        "display_label": "Breezin' - George Benson",
+        "source_membership_id": "family-14-album-102-george-benson-breezin",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Breezin' is a useful album-level gateway for 102.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kenny-g-breathless",
+        "object_id": "kenny-g-breathless",
+        "display_label": "Breathless - Kenny G",
+        "source_membership_id": "family-14-album-102-kenny-g-breathless",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Breathless is a useful album-level gateway for 102.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:grover-washington-jr-winelight",
+        "object_id": "grover-washington-jr-winelight",
+        "display_label": "Winelight - Grover Washington Jr.",
+        "source_membership_id": "family-14-album-102-grover-washington-jr-winelight",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Winelight is a useful album-level gateway for 102.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kenny-g-classics-in-the-key-of-g",
+        "object_id": "kenny-g-classics-in-the-key-of-g",
+        "display_label": "Classics in the Key of G - Kenny G",
+        "source_membership_id": "family-14-album-102-kenny-g-classics-in-the-key-of-g",
+        "roles": [
+          "false_nearby",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Classics in the Key of G gives archetype 102 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:chuck-mangione-feels-so-good",
+        "object_id": "chuck-mangione-feels-so-good",
+        "display_label": "Feels So Good - Chuck Mangione",
+        "source_membership_id": "family-14-album-102-chuck-mangione-feels-so-good",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Feels So Good gives archetype 102 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:herb-alpert-rise",
+        "object_id": "herb-alpert-rise",
+        "display_label": "Rise - Herb Alpert",
+        "source_membership_id": "family-14-album-102-herb-alpert-rise",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rise gives archetype 102 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:spyro-gyra-morning-dance",
+        "object_id": "spyro-gyra-morning-dance",
+        "display_label": "Morning Dance - Spyro Gyra",
+        "source_membership_id": "family-14-album-102-spyro-gyra-morning-dance",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Morning Dance gives archetype 102 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:kenny-g-songbird",
+        "object_id": "kenny-g-songbird",
+        "display_label": "Songbird - Kenny G",
+        "source_membership_id": "family-14-song-102-kenny-g-songbird",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Songbird gives 102 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:grover-washington-jr-featuring-bill-withers-just-the-two-of-us",
+        "object_id": "grover-washington-jr-featuring-bill-withers-just-the-two-of-us",
+        "display_label": "Just the Two of Us - Grover Washington Jr. featuring Bill Withers",
+        "source_membership_id": "family-14-song-102-grover-washington-jr-featuring-bill-withers-just-the-two-of-us",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Just the Two of Us gives 102 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sade-smooth-operator",
+        "object_id": "sade-smooth-operator",
+        "display_label": "Smooth Operator - Sade",
+        "source_membership_id": "family-14-song-102-sade-smooth-operator",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Smooth Operator gives 102 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:norah-jones-don-t-know-why",
+        "object_id": "norah-jones-don-t-know-why",
+        "display_label": "Don't Know Why - Norah Jones",
+        "source_membership_id": "family-14-song-102-norah-jones-don-t-know-why",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Don't Know Why gives 102 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:chuck-mangione-feels-so-good",
+        "object_id": "chuck-mangione-feels-so-good",
+        "display_label": "Feels So Good - Chuck Mangione",
+        "source_membership_id": "family-14-song-102-chuck-mangione-feels-so-good",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Feels So Good gives archetype 102 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:george-benson-breezin",
+        "object_id": "george-benson-breezin",
+        "display_label": "Breezin' - George Benson",
+        "source_membership_id": "family-14-song-102-george-benson-breezin",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Breezin' gives 102 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:herb-alpert-rise",
+        "object_id": "herb-alpert-rise",
+        "display_label": "Rise - Herb Alpert",
+        "source_membership_id": "family-14-song-102-herb-alpert-rise",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rise gives archetype 102 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:young-holt-unlimited-soulful-strut",
+        "object_id": "young-holt-unlimited-soulful-strut",
+        "display_label": "Soulful Strut - Young-Holt Unlimited",
+        "source_membership_id": "family-14-song-102-young-holt-unlimited-soulful-strut",
+        "roles": [
+          "false_nearby",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Soulful Strut gives archetype 102 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:diana-krall-the-look-of-love",
+        "object_id": "diana-krall-the-look-of-love",
+        "display_label": "The Look of Love - Diana Krall",
+        "source_membership_id": "family-14-song-102-diana-krall-the-look-of-love",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Look of Love gives 102 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:spyro-gyra-morning-dance",
+        "object_id": "spyro-gyra-morning-dance",
+        "display_label": "Morning Dance - Spyro Gyra",
+        "source_membership_id": "family-14-song-102-spyro-gyra-morning-dance",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Morning Dance gives archetype 102 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:david-a-stewart-featuring-candy-dulfer-lily-was-here",
+        "object_id": "david-a-stewart-featuring-candy-dulfer-lily-was-here",
+        "display_label": "Lily Was Here - David A. Stewart featuring Candy Dulfer",
+        "source_membership_id": "family-14-song-102-david-a-stewart-featuring-candy-dulfer-lily-was-here",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Lily Was Here gives archetype 102 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f14-artist-kenny-g-102",
+        "candidate_id": "survey-f14-artist-kenny-g-102",
+        "object_type": "artist",
+        "display_label": "Kenny G",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-norah-jones-102",
+        "candidate_id": "survey-f14-artist-norah-jones-102",
+        "object_type": "artist",
+        "display_label": "Norah Jones",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-sade-102",
+        "candidate_id": "survey-f14-artist-sade-102",
+        "object_type": "artist",
+        "display_label": "Sade",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-george-benson-102",
+        "candidate_id": "survey-f14-artist-george-benson-102",
+        "object_type": "artist",
+        "display_label": "George Benson",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-grover-washington-jr-102",
+        "candidate_id": "survey-f14-artist-grover-washington-jr-102",
+        "object_type": "artist",
+        "display_label": "Grover Washington Jr.",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-chuck-mangione-102",
+        "candidate_id": "survey-f14-artist-chuck-mangione-102",
+        "object_type": "artist",
+        "display_label": "Chuck Mangione",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-herb-alpert-102",
+        "candidate_id": "survey-f14-artist-herb-alpert-102",
+        "object_type": "artist",
+        "display_label": "Herb Alpert",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-diana-krall-102",
+        "candidate_id": "survey-f14-artist-diana-krall-102",
+        "object_type": "artist",
+        "display_label": "Diana Krall",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-david-sanborn-102",
+        "candidate_id": "survey-f14-artist-david-sanborn-102",
+        "object_type": "artist",
+        "display_label": "David Sanborn",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-spyro-gyra-102",
+        "candidate_id": "survey-f14-artist-spyro-gyra-102",
+        "object_type": "artist",
+        "display_label": "Spyro Gyra",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-norah-jones-come-away-with-me-102",
+        "candidate_id": "survey-f14-album-norah-jones-come-away-with-me-102",
+        "object_type": "album",
+        "display_label": "Come Away with Me",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-kenny-g-breathless-102",
+        "candidate_id": "survey-f14-album-kenny-g-breathless-102",
+        "object_type": "album",
+        "display_label": "Breathless",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-george-benson-breezin-102",
+        "candidate_id": "survey-f14-album-george-benson-breezin-102",
+        "object_type": "album",
+        "display_label": "Breezin'",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-grover-washington-jr-winelight-102",
+        "candidate_id": "survey-f14-album-grover-washington-jr-winelight-102",
+        "object_type": "album",
+        "display_label": "Winelight",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-chuck-mangione-feels-so-good-102",
+        "candidate_id": "survey-f14-album-chuck-mangione-feels-so-good-102",
+        "object_type": "album",
+        "display_label": "Feels So Good",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-herb-alpert-rise-102",
+        "candidate_id": "survey-f14-album-herb-alpert-rise-102",
+        "object_type": "album",
+        "display_label": "Rise",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-kenny-g-classics-in-the-key-of-g-102",
+        "candidate_id": "survey-f14-album-kenny-g-classics-in-the-key-of-g-102",
+        "object_type": "album",
+        "display_label": "Classics in the Key of G",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-spyro-gyra-morning-dance-102",
+        "candidate_id": "survey-f14-album-spyro-gyra-morning-dance-102",
+        "object_type": "album",
+        "display_label": "Morning Dance",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-song_recording-norah-jones-don-t-know-why-102",
+        "candidate_id": "survey-f14-song_recording-norah-jones-don-t-know-why-102",
+        "object_type": "song_recording",
+        "display_label": "Don't Know Why",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-song_recording-grover-washington-jr-featuring-bill-withers-just-the-two-of-us-102",
+        "candidate_id": "survey-f14-song_recording-grover-washington-jr-featuring-bill-withers-just-the-two-of-us-102",
+        "object_type": "song_recording",
+        "display_label": "Just the Two of Us",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f14-album-kenny-g-classics-in-the-key-of-g-102",
+        "question_id": "boundary-survey-f14-album-kenny-g-classics-in-the-key-of-g-102",
+        "display_label": "Classics in the Key of G",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f14-song_recording-young-holt-unlimited-soulful-strut-102",
+        "question_id": "boundary-survey-f14-song_recording-young-holt-unlimited-soulful-strut-102",
+        "display_label": "Soulful Strut",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f14-album-kenny-g-classics-in-the-key-of-g-102",
+        "probe_id": "probe-survey-f14-album-kenny-g-classics-in-the-key-of-g-102",
+        "entity_type": "album",
+        "display_label": "Classics in the Key of G",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f14-song_recording-young-holt-unlimited-soulful-strut-102",
+        "probe_id": "probe-survey-f14-song_recording-young-holt-unlimited-soulful-strut-102",
+        "entity_type": "song_recording",
+        "display_label": "Soulful Strut",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_14/archetype_101",
+      "family_14/archetype_103"
+    ],
+    "before_archetype_refs": [
+      "family_14/archetype_101"
+    ],
+    "after_archetype_refs": [
+      "family_14/archetype_103"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_14": {
+      "title": "Normalized canonical graph export, Family 14",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_14/normalized_family_14.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "allmusic_smooth_jazz": {
+      "title": "Smooth Jazz",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/smooth-jazz-ma0000002860",
+      "source_type": "reference",
+      "audit_use": "Defines the smooth-jazz style lane around polished adult instrumental and pop-jazz textures.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Defines the smooth-jazz style lane around polished adult instrumental and pop-jazz textures."
+    },
+    "britannica_george_benson": {
+      "title": "George Benson",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/George-Benson",
+      "source_type": "reference",
+      "audit_use": "Supports George Benson as a jazz guitarist/vocal crossover anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports George Benson as a jazz guitarist/vocal crossover anchor."
+    },
+    "grammy_norah_jones": {
+      "title": "Norah Jones",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/artists/norah-jones/6849",
+      "source_type": "reference",
+      "audit_use": "Supports Norah Jones as a jazz-pop/adult-pop crossover example.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Norah Jones as a jazz-pop/adult-pop crossover example."
+    },
+    "britannica_jazz": {
+      "title": "Jazz",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/jazz",
+      "source_type": "reference",
+      "audit_use": "Frames jazz context while style and example sources narrow the lane.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Frames jazz context while style and example sources narrow the lane."
+    },
+    "smithsonian_jazz": {
+      "title": "Smithsonian Jazz",
+      "publisher": "Smithsonian National Museum of American History",
+      "url": "https://americanhistory.si.edu/smithsonian-jazz",
+      "source_type": "museum_reference",
+      "audit_use": "Jazz preservation, education, and historical context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Jazz preservation, education, and historical context."
+    },
+    "jazz_at_lincoln_center": {
+      "title": "Jazz Academy",
+      "publisher": "Jazz at Lincoln Center",
+      "url": "https://academy.jazz.org/",
+      "source_type": "educational_archive",
+      "audit_use": "Jazz education source for swing, improvisation, form, and listening context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Jazz education source for swing, improvisation, form, and listening context."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "102-d-01",
+      "claim_text": "The route centers jazz-derived listening that is polished, adult-facing, melodic, and often closer to pop mood than to bebop improvisational challenge.",
+      "source_ref_ids": [
+        "allmusic_smooth_jazz",
+        "britannica_jazz"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_14/archetype_102"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "102-d-02",
+      "claim_text": "George Benson makes the crossover ideal audible because guitar fluency, smooth production, and vocal-pop appeal can sit in the same record.",
+      "source_ref_ids": [
+        "britannica_george_benson",
+        "allmusic_smooth_jazz"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:george-benson",
+        "album:george-benson-breezin"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "102-d-03",
+      "claim_text": "Norah Jones belongs on the jazz-pop edge because Come Away With Me foregrounds intimacy, restraint, and adult-pop warmth more than bop vocabulary.",
+      "source_ref_ids": [
+        "grammy_norah_jones",
+        "britannica_jazz"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "did_you_know",
+        "caution"
+      ],
+      "graph_refs": [
+        "artist:norah-jones",
+        "album:norah-jones-come-away-with-me"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "102-d-04",
+      "claim_text": "Listen for clean sax or guitar melody, soft-focus rhythm sections, restrained improvisation, and radio-friendly adult instrumental sheen.",
+      "source_ref_ids": [
+        "allmusic_smooth_jazz",
+        "britannica_george_benson"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_14/archetype_102",
+        "artist:kenny-g"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "102-smooth_jazz_jazz_pop_adult_instrumental-boundary",
+      "claim_text": "Smooth Jazz / Jazz-Pop / Adult Instrumental's boundary is clearest when sax or guitar lead melody and adult-radio polish appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "allmusic_smooth_jazz",
+        "britannica_george_benson"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_14/archetype_102",
+        "artist:george-benson",
+        "artist:kenny-g"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "102-smooth_jazz_jazz_pop_adult_instrumental-examples",
+      "claim_text": "George Benson, Kenny G, Come Away with Me - Norah Jones gives Smooth Jazz / Jazz-Pop / Adult Instrumental concrete anchors because the examples expose restrained improvisation inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "britannica_george_benson",
+        "grammy_norah_jones"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_14/archetype_102",
+        "artist:george-benson",
+        "artist:kenny-g"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Polished jazz-pop and adult instrumental music where melody, tone, and mood are more prominent than improvisational risk.",
+    "history_capsule": "Kenny G, George Benson, Grover Washington Jr., Norah Jones, Sade, and peers connect jazz vocabulary to adult pop and lifestyle listening.",
+    "why_it_mattered": "It explains a huge everyday-listening pathway into jazz-adjacent sound that formal jazz histories sometimes overlook.",
+    "what_made_it_distinct": "The music smooths the edges of jazz harmony and improvisation into recognizable melody and atmosphere.",
+    "what_to_listen_for": [
+      "sax or guitar lead melody",
+      "adult-radio polish",
+      "restrained improvisation",
+      "soft groove bed",
+      "warm studio ambience"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:george-benson",
+        "example_type": "artist",
+        "display_label": "George Benson",
+        "why_this_example_matters": "George Benson anchors Smooth Jazz / Jazz-Pop / Adult Instrumental by making phrasing and time feel and harmonic color easier to hear.",
+        "what_to_listen_for": [
+          "sax or guitar lead melody",
+          "adult-radio polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:kenny-g",
+        "example_type": "artist",
+        "display_label": "Kenny G",
+        "why_this_example_matters": "Kenny G anchors Smooth Jazz / Jazz-Pop / Adult Instrumental by making harmonic color and improvised response easier to hear.",
+        "what_to_listen_for": [
+          "adult-radio polish",
+          "restrained improvisation"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:norah-jones-come-away-with-me",
+        "example_type": "album",
+        "display_label": "Come Away with Me - Norah Jones",
+        "why_this_example_matters": "Come Away with Me - Norah Jones anchors Smooth Jazz / Jazz-Pop / Adult Instrumental by making improvised response and ensemble interplay easier to hear.",
+        "what_to_listen_for": [
+          "restrained improvisation",
+          "soft groove bed"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:george-benson-breezin",
+        "example_type": "album",
+        "display_label": "Breezin' - George Benson",
+        "why_this_example_matters": "Breezin' - George Benson anchors Smooth Jazz / Jazz-Pop / Adult Instrumental by making ensemble interplay and interpretive timing easier to hear.",
+        "what_to_listen_for": [
+          "soft groove bed",
+          "warm studio ambience"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:kenny-g-songbird",
+        "example_type": "song_recording",
+        "display_label": "Songbird - Kenny G",
+        "why_this_example_matters": "Songbird - Kenny G anchors Smooth Jazz / Jazz-Pop / Adult Instrumental by making interpretive timing and phrasing and time feel easier to hear.",
+        "what_to_listen_for": [
+          "warm studio ambience"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:grover-washington-jr-featuring-bill-withers-just-the-two-of-us",
+        "example_type": "song_recording",
+        "display_label": "Just the Two of Us - Grover Washington Jr. featuring Bill Withers",
+        "why_this_example_matters": "Just the Two of Us - Grover Washington Jr. featuring Bill Withers anchors Smooth Jazz / Jazz-Pop / Adult Instrumental by making phrasing and time feel and harmonic color easier to hear.",
+        "what_to_listen_for": [
+          "sax or guitar lead melody",
+          "adult-radio polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_14/archetype_101"
+      ],
+      "after": [
+        "family_14/archetype_103"
+      ],
+      "related": [
+        "family_14/archetype_101",
+        "family_14/archetype_103"
+      ],
+      "copy": "Use Smooth Jazz / Jazz-Pop / Adult Instrumental as a contextual road inside Jazz, Standards, Vocal, Classical-Adjacent; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "102-dyk-1",
+        "copy": "Just the Two of Us is useful because it crosses soul, pop, and smooth-jazz memory.",
+        "source_ref_ids": [
+          "allmusic_smooth_jazz",
+          "britannica_jazz"
+        ]
+      },
+      {
+        "card_id": "102-dyk-2",
+        "copy": "Norah Jones can route here by mood and audience even when the recording is not smooth jazz in the narrow sense.",
+        "source_ref_ids": [
+          "britannica_george_benson",
+          "allmusic_smooth_jazz"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether smooth jazz / jazz-pop / adult instrumental is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Polished jazz-pop and adult instrumental music where melody, tone, and mood are more prominent than improvisational risk.",
+      "It explains a huge everyday-listening pathway into jazz-adjacent sound that formal jazz histories sometimes overlook.",
+      "The music smooths the edges of jazz harmony and improvisation into recognizable melody and atmosphere."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not claim this route is bebop or hard bop; its value is in jazz-pop accessibility.",
+    "personalization_hooks": [
+      {
+        "hook_id": "102-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[102]",
+          "atlas_state.family_affinity[14]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[102] >= 0.65 || atlas_state.family_affinity[14] >= 0.65",
+        "copy_variant": "Your Atlas signals make Smooth Jazz / Jazz-Pop / Adult Instrumental useful as a contextual landmark.",
+        "fallback_copy": "Use Smooth Jazz / Jazz-Pop / Adult Instrumental as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "102-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_14/archetype_102 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_14/archetype_102",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Smooth Jazz / Jazz-Pop / Adult Instrumental before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "102-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_14/archetype_102 || atlas_state.boundary_question_results has boundary_negative for family_14/archetype_102",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Smooth Jazz / Jazz-Pop / Adult Instrumental.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "102-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_14/archetype_102 || atlas_state.related_mission_ids references family_14/archetype_102",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "102-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_14/archetype_102 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_14/archetype_102 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_14/archetype_102",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Smooth Jazz / Jazz-Pop / Adult Instrumental.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_14": {
+        "title": "Normalized canonical graph export, Family 14",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_14/normalized_family_14.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "allmusic_smooth_jazz": {
+        "title": "Smooth Jazz",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/smooth-jazz-ma0000002860",
+        "source_type": "reference",
+        "audit_use": "Defines the smooth-jazz style lane around polished adult instrumental and pop-jazz textures.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines the smooth-jazz style lane around polished adult instrumental and pop-jazz textures."
+      },
+      "britannica_george_benson": {
+        "title": "George Benson",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/George-Benson",
+        "source_type": "reference",
+        "audit_use": "Supports George Benson as a jazz guitarist/vocal crossover anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports George Benson as a jazz guitarist/vocal crossover anchor."
+      },
+      "grammy_norah_jones": {
+        "title": "Norah Jones",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/artists/norah-jones/6849",
+        "source_type": "reference",
+        "audit_use": "Supports Norah Jones as a jazz-pop/adult-pop crossover example.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Norah Jones as a jazz-pop/adult-pop crossover example."
+      },
+      "britannica_jazz": {
+        "title": "Jazz",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/jazz",
+        "source_type": "reference",
+        "audit_use": "Frames jazz context while style and example sources narrow the lane.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames jazz context while style and example sources narrow the lane."
+      },
+      "smithsonian_jazz": {
+        "title": "Smithsonian Jazz",
+        "publisher": "Smithsonian National Museum of American History",
+        "url": "https://americanhistory.si.edu/smithsonian-jazz",
+        "source_type": "museum_reference",
+        "audit_use": "Jazz preservation, education, and historical context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jazz preservation, education, and historical context."
+      },
+      "jazz_at_lincoln_center": {
+        "title": "Jazz Academy",
+        "publisher": "Jazz at Lincoln Center",
+        "url": "https://academy.jazz.org/",
+        "source_type": "educational_archive",
+        "audit_use": "Jazz education source for swing, improvisation, form, and listening context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jazz education source for swing, improvisation, form, and listening context."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "102-d-01",
+        "claim_text": "The route centers jazz-derived listening that is polished, adult-facing, melodic, and often closer to pop mood than to bebop improvisational challenge.",
+        "source_ref_ids": [
+          "allmusic_smooth_jazz",
+          "britannica_jazz"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_14/archetype_102"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "102-d-02",
+        "claim_text": "George Benson makes the crossover ideal audible because guitar fluency, smooth production, and vocal-pop appeal can sit in the same record.",
+        "source_ref_ids": [
+          "britannica_george_benson",
+          "allmusic_smooth_jazz"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:george-benson",
+          "album:george-benson-breezin"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "102-d-03",
+        "claim_text": "Norah Jones belongs on the jazz-pop edge because Come Away With Me foregrounds intimacy, restraint, and adult-pop warmth more than bop vocabulary.",
+        "source_ref_ids": [
+          "grammy_norah_jones",
+          "britannica_jazz"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "did_you_know",
+          "caution"
+        ],
+        "graph_refs": [
+          "artist:norah-jones",
+          "album:norah-jones-come-away-with-me"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "102-d-04",
+        "claim_text": "Listen for clean sax or guitar melody, soft-focus rhythm sections, restrained improvisation, and radio-friendly adult instrumental sheen.",
+        "source_ref_ids": [
+          "allmusic_smooth_jazz",
+          "britannica_george_benson"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_14/archetype_102",
+          "artist:kenny-g"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "102-smooth_jazz_jazz_pop_adult_instrumental-boundary",
+        "claim_text": "Smooth Jazz / Jazz-Pop / Adult Instrumental's boundary is clearest when sax or guitar lead melody and adult-radio polish appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "allmusic_smooth_jazz",
+          "britannica_george_benson"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_14/archetype_102",
+          "artist:george-benson",
+          "artist:kenny-g"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "102-smooth_jazz_jazz_pop_adult_instrumental-examples",
+        "claim_text": "George Benson, Kenny G, Come Away with Me - Norah Jones gives Smooth Jazz / Jazz-Pop / Adult Instrumental concrete anchors because the examples expose restrained improvisation inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "britannica_george_benson",
+          "grammy_norah_jones"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_14/archetype_102",
+          "artist:george-benson",
+          "artist:kenny-g"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "Smooth jazz jazz-pop adult instrumental Kenny G George Benson Norah Jones Grover Washington Jr",
+    "selected_sources": [
+      {
+        "source_ref_id": "allmusic_smooth_jazz",
+        "title": "Smooth Jazz",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/smooth-jazz-ma0000002860",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines the smooth-jazz style lane around polished adult instrumental and pop-jazz textures."
+      },
+      {
+        "source_ref_id": "britannica_george_benson",
+        "title": "George Benson",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/George-Benson",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports George Benson as a jazz guitarist/vocal crossover anchor."
+      },
+      {
+        "source_ref_id": "grammy_norah_jones",
+        "title": "Norah Jones",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/artists/norah-jones/6849",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Norah Jones as a jazz-pop/adult-pop crossover example."
+      },
+      {
+        "source_ref_id": "britannica_jazz",
+        "title": "Jazz",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/jazz",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames jazz context while style and example sources narrow the lane."
+      },
+      {
+        "source_ref_id": "smithsonian_jazz",
+        "title": "Smithsonian Jazz",
+        "publisher": "Smithsonian National Museum of American History",
+        "url": "https://americanhistory.si.edu/smithsonian-jazz",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jazz preservation, education, and historical context."
+      },
+      {
+        "source_ref_id": "jazz_at_lincoln_center",
+        "title": "Jazz Academy",
+        "publisher": "Jazz at Lincoln Center",
+        "url": "https://academy.jazz.org/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jazz education source for swing, improvisation, form, and listening context."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "example_object_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "allmusic_death_metal",
+        "title": "Death Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/death-metal-ma0000002547",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Metal style context does not support this archetype-specific music history."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Jazz origins, improvisation, swing, bebop, and later styles. Jazz preservation, education, and historical context. Jazz education source for swing, improvisation, form, and listening context. Broad popular-music industry, audience, and stylistic context."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 6,
+    "wrong_context_source_count": 0
+  }
+}

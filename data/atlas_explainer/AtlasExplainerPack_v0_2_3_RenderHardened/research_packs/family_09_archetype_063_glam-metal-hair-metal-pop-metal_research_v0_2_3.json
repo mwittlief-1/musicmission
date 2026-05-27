@@ -1,0 +1,1756 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_09_archetype_063_glam-metal-hair-metal-pop-metal_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_9/normalized_family_9.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 9,
+    "family_slug": "metal-and-heavy-music",
+    "family_name": "Metal and Heavy Music",
+    "archetype_id": "063",
+    "archetype_slug": "glam-metal-hair-metal-pop-metal",
+    "canonical_graph_ref": "family_09/archetype_063",
+    "existing_graph_label_name": "Glam Metal / Hair Metal / Pop Metal",
+    "editorial_display_title": "Glam Metal / Hair Metal / Pop Metal",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:motley-crue",
+        "object_id": "motley-crue",
+        "display_label": "Motley Crue",
+        "source_membership_id": "family-9-artist-063-motley-crue",
+        "roles": [
+          "anchor",
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central glam-metal survey row with strong hooks and image recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:guns-n-roses",
+        "object_id": "guns-n-roses",
+        "display_label": "Guns N' Roses",
+        "source_membership_id": "family-9-artist-063-guns-n-roses",
+        "roles": [
+          "boundary",
+          "bridge",
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Hard-rock/glam-adjacent mass row that separates riff appetite from metal-family identity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:poison",
+        "object_id": "poison",
+        "display_label": "Poison",
+        "source_membership_id": "family-9-artist-063-poison",
+        "roles": [
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Pure pop-metal hook gateway and glam dead-end check.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bon-jovi",
+        "object_id": "bon-jovi",
+        "display_label": "Bon Jovi",
+        "source_membership_id": "family-9-artist-063-bon-jovi",
+        "roles": [
+          "gateway",
+          "boundary",
+          "false_nearby",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition pop-metal and arena-rock boundary; useful even when true metal affinity is absent.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:def-leppard",
+        "object_id": "def-leppard",
+        "display_label": "Def Leppard",
+        "source_membership_id": "family-9-artist-063-def-leppard",
+        "roles": [
+          "gateway",
+          "boundary",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition pop-metal gateway with high survey value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:twisted-sister",
+        "object_id": "twisted-sister",
+        "display_label": "Twisted Sister",
+        "source_membership_id": "family-9-artist-063-twisted-sister",
+        "roles": [
+          "gateway",
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Theatrical pop-metal cultural furniture with song-first recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:whitesnake",
+        "object_id": "whitesnake",
+        "display_label": "Whitesnake",
+        "source_membership_id": "family-9-artist-063-whitesnake",
+        "roles": [
+          "gateway",
+          "boundary",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Arena hard-rock row that many normal users file near hair metal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:europe",
+        "object_id": "europe",
+        "display_label": "Europe",
+        "source_membership_id": "family-9-artist-063-europe",
+        "roles": [
+          "song_first",
+          "false_nearby",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Mass song-first pop-metal boundary object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:skid-row",
+        "object_id": "skid-row",
+        "display_label": "Skid Row",
+        "source_membership_id": "family-9-artist-063-skid-row",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Late glam row with more metal bite than most pop-metal peers.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ratt",
+        "object_id": "ratt",
+        "display_label": "Ratt",
+        "source_membership_id": "family-9-artist-063-ratt",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Core Sunset Strip glam row beyond the biggest pop names.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:cinderella",
+        "object_id": "cinderella",
+        "display_label": "Cinderella",
+        "source_membership_id": "family-9-artist-063-cinderella",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Bluesy glam row for separating hair-metal hooks from sleaze/hard-rock taste.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:warrant",
+        "object_id": "warrant",
+        "display_label": "Warrant",
+        "source_membership_id": "family-9-artist-063-warrant",
+        "roles": [
+          "song_first",
+          "gateway",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Song-first hair-metal marker for pop-novelty tolerance.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:def-leppard-hysteria",
+        "object_id": "def-leppard-hysteria",
+        "display_label": "Hysteria - Def Leppard",
+        "source_membership_id": "family-9-album-063-def-leppard-hysteria",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-metal mega-album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:def-leppard-pyromania",
+        "object_id": "def-leppard-pyromania",
+        "display_label": "Pyromania - Def Leppard",
+        "source_membership_id": "family-9-album-063-def-leppard-pyromania",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Earlier Def Leppard hard-pop-metal anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bon-jovi-slippery-when-wet",
+        "object_id": "bon-jovi-slippery-when-wet",
+        "display_label": "Slippery When Wet - Bon Jovi",
+        "source_membership_id": "family-9-album-063-bon-jovi-slippery-when-wet",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass pop-metal album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:motley-crue-dr-feelgood",
+        "object_id": "motley-crue-dr-feelgood",
+        "display_label": "Dr. Feelgood - Motley Crue",
+        "source_membership_id": "family-9-album-063-motley-crue-dr-feelgood",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Clean Motley Crue gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:guns-n-roses-appetite-for-destruction",
+        "object_id": "guns-n-roses-appetite-for-destruction",
+        "display_label": "Appetite for Destruction - Guns N' Roses",
+        "source_membership_id": "family-9-album-063-guns-n-roses-appetite-for-destruction",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass hard-rock/glam-adjacent bridge album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:poison-open-up-and-say-ahh",
+        "object_id": "poison-open-up-and-say-ahh",
+        "display_label": "Open Up and Say... Ahh! - Poison",
+        "source_membership_id": "family-9-album-063-poison-open-up-and-say-ahh",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Poison pop-metal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:whitesnake-whitesnake",
+        "object_id": "whitesnake-whitesnake",
+        "display_label": "Whitesnake - Whitesnake",
+        "source_membership_id": "family-9-album-063-whitesnake-whitesnake",
+        "roles": [
+          "album_anchor",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Arena hard-rock/pop-metal bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bon-jovi-new-jersey",
+        "object_id": "bon-jovi-new-jersey",
+        "display_label": "New Jersey - Bon Jovi",
+        "source_membership_id": "family-9-album-063-bon-jovi-new-jersey",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Follow-up Bon Jovi pop-metal object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:motley-crue-shout-at-the-devil",
+        "object_id": "motley-crue-shout-at-the-devil",
+        "display_label": "Shout at the Devil - Motley Crue",
+        "source_membership_id": "family-9-album-063-motley-crue-shout-at-the-devil",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Darker glam-metal row with more metal bite.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:poison-look-what-the-cat-dragged-in",
+        "object_id": "poison-look-what-the-cat-dragged-in",
+        "display_label": "Look What the Cat Dragged In - Poison",
+        "source_membership_id": "family-9-album-063-poison-look-what-the-cat-dragged-in",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Early glam image row.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:def-leppard-pour-some-sugar-on-me",
+        "object_id": "def-leppard-pour-some-sugar-on-me",
+        "display_label": "Pour Some Sugar on Me - Def Leppard",
+        "source_membership_id": "family-9-song-063-def-leppard-pour-some-sugar-on-me",
+        "roles": [
+          "gateway",
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-metal mass-recognition hook anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:motley-crue-dr-feelgood",
+        "object_id": "motley-crue-dr-feelgood",
+        "display_label": "Dr. Feelgood - Motley Crue",
+        "source_membership_id": "family-9-song-063-motley-crue-dr-feelgood",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Motley Crue mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:def-leppard-photograph",
+        "object_id": "def-leppard-photograph",
+        "display_label": "Photograph - Def Leppard",
+        "source_membership_id": "family-9-song-063-def-leppard-photograph",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Def Leppard rock-radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bon-jovi-livin-on-a-prayer",
+        "object_id": "bon-jovi-livin-on-a-prayer",
+        "display_label": "Livin' on a Prayer - Bon Jovi",
+        "source_membership_id": "family-9-song-063-bon-jovi-livin-on-a-prayer",
+        "roles": [
+          "gateway",
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass pop-metal/arena-rock hook; often not true-metal affinity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bon-jovi-you-give-love-a-bad-name",
+        "object_id": "bon-jovi-you-give-love-a-bad-name",
+        "display_label": "You Give Love a Bad Name - Bon Jovi",
+        "source_membership_id": "family-9-song-063-bon-jovi-you-give-love-a-bad-name",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Bon Jovi mass hook object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:motley-crue-kickstart-my-heart",
+        "object_id": "motley-crue-kickstart-my-heart",
+        "display_label": "Kickstart My Heart - Motley Crue",
+        "source_membership_id": "family-9-song-063-motley-crue-kickstart-my-heart",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Motley Crue high-energy gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:poison-every-rose-has-its-thorn",
+        "object_id": "poison-every-rose-has-its-thorn",
+        "display_label": "Every Rose Has Its Thorn - Poison",
+        "source_membership_id": "family-9-song-063-poison-every-rose-has-its-thorn",
+        "roles": [
+          "song_first",
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Hair-metal ballad cultural furniture.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:skid-row-18-and-life",
+        "object_id": "skid-row-18-and-life",
+        "display_label": "18 and Life - Skid Row",
+        "source_membership_id": "family-9-song-063-skid-row-18-and-life",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Skid Row power-ballad gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:guns-n-roses-sweet-child-o-mine",
+        "object_id": "guns-n-roses-sweet-child-o-mine",
+        "display_label": "Sweet Child o' Mine - Guns N' Roses",
+        "source_membership_id": "family-9-song-063-guns-n-roses-sweet-child-o-mine",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass hard-rock bridge for glam-adjacent users.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:guns-n-roses-welcome-to-the-jungle",
+        "object_id": "guns-n-roses-welcome-to-the-jungle",
+        "display_label": "Welcome to the Jungle - Guns N' Roses",
+        "source_membership_id": "family-9-song-063-guns-n-roses-welcome-to-the-jungle",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Riff-heavy hard-rock/glam bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:poison-nothin-but-a-good-time",
+        "object_id": "poison-nothin-but-a-good-time",
+        "display_label": "Nothin' but a Good Time - Poison",
+        "source_membership_id": "family-9-song-063-poison-nothin-but-a-good-time",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Poison party-hook gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bon-jovi-wanted-dead-or-alive",
+        "object_id": "bon-jovi-wanted-dead-or-alive",
+        "display_label": "Wanted Dead or Alive - Bon Jovi",
+        "source_membership_id": "family-9-song-063-bon-jovi-wanted-dead-or-alive",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Acoustic/arena side of Bon Jovi boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:guns-n-roses-paradise-city",
+        "object_id": "guns-n-roses-paradise-city",
+        "display_label": "Paradise City - Guns N' Roses",
+        "source_membership_id": "family-9-song-063-guns-n-roses-paradise-city",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "GNR mass song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:whitesnake-here-i-go-again",
+        "object_id": "whitesnake-here-i-go-again",
+        "display_label": "Here I Go Again - Whitesnake",
+        "source_membership_id": "family-9-song-063-whitesnake-here-i-go-again",
+        "roles": [
+          "gateway",
+          "boundary",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Arena hard-rock/pop-metal song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f9-artist-motley-crue-063",
+        "candidate_id": "survey-f9-artist-motley-crue-063",
+        "object_type": "artist",
+        "display_label": "Motley Crue",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-poison-063",
+        "candidate_id": "survey-f9-artist-poison-063",
+        "object_type": "artist",
+        "display_label": "Poison",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-guns-n-roses-063",
+        "candidate_id": "survey-f9-artist-guns-n-roses-063",
+        "object_type": "artist",
+        "display_label": "Guns N' Roses",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-def-leppard-063",
+        "candidate_id": "survey-f9-artist-def-leppard-063",
+        "object_type": "artist",
+        "display_label": "Def Leppard",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-bon-jovi-063",
+        "candidate_id": "survey-f9-artist-bon-jovi-063",
+        "object_type": "artist",
+        "display_label": "Bon Jovi",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-skid-row-063",
+        "candidate_id": "survey-f9-artist-skid-row-063",
+        "object_type": "artist",
+        "display_label": "Skid Row",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-twisted-sister-063",
+        "candidate_id": "survey-f9-artist-twisted-sister-063",
+        "object_type": "artist",
+        "display_label": "Twisted Sister",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-ratt-063",
+        "candidate_id": "survey-f9-artist-ratt-063",
+        "object_type": "artist",
+        "display_label": "Ratt",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-lita-ford-063",
+        "candidate_id": "survey-f9-artist-lita-ford-063",
+        "object_type": "artist",
+        "display_label": "Lita Ford",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-cinderella-063",
+        "candidate_id": "survey-f9-artist-cinderella-063",
+        "object_type": "artist",
+        "display_label": "Cinderella",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-quiet-riot-063",
+        "candidate_id": "survey-f9-artist-quiet-riot-063",
+        "object_type": "artist",
+        "display_label": "Quiet Riot",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-warrant-063",
+        "candidate_id": "survey-f9-artist-warrant-063",
+        "object_type": "artist",
+        "display_label": "Warrant",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-whitesnake-063",
+        "candidate_id": "survey-f9-artist-whitesnake-063",
+        "object_type": "artist",
+        "display_label": "Whitesnake",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-europe-063",
+        "candidate_id": "survey-f9-artist-europe-063",
+        "object_type": "artist",
+        "display_label": "Europe",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-van-halen-063",
+        "candidate_id": "survey-f9-artist-van-halen-063",
+        "object_type": "artist",
+        "display_label": "Van Halen",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-tesla-063",
+        "candidate_id": "survey-f9-artist-tesla-063",
+        "object_type": "artist",
+        "display_label": "Tesla",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-motley-crue-dr-feelgood-063",
+        "candidate_id": "survey-f9-album-motley-crue-dr-feelgood-063",
+        "object_type": "album",
+        "display_label": "Dr. Feelgood",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-def-leppard-hysteria-063",
+        "candidate_id": "survey-f9-album-def-leppard-hysteria-063",
+        "object_type": "album",
+        "display_label": "Hysteria",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-poison-open-up-and-say-ahh-063",
+        "candidate_id": "survey-f9-album-poison-open-up-and-say-ahh-063",
+        "object_type": "album",
+        "display_label": "Open Up and Say... Ahh!",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-def-leppard-pyromania-063",
+        "candidate_id": "survey-f9-album-def-leppard-pyromania-063",
+        "object_type": "album",
+        "display_label": "Pyromania",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-guns-n-roses-063",
+        "question_id": "boundary-survey-f9-artist-guns-n-roses-063",
+        "display_label": "Guns N' Roses",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-def-leppard-063",
+        "question_id": "boundary-survey-f9-artist-def-leppard-063",
+        "display_label": "Def Leppard",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-bon-jovi-063",
+        "question_id": "boundary-survey-f9-artist-bon-jovi-063",
+        "display_label": "Bon Jovi",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-twisted-sister-063",
+        "question_id": "boundary-survey-f9-artist-twisted-sister-063",
+        "display_label": "Twisted Sister",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-cinderella-063",
+        "question_id": "boundary-survey-f9-artist-cinderella-063",
+        "display_label": "Cinderella",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-quiet-riot-063",
+        "question_id": "boundary-survey-f9-artist-quiet-riot-063",
+        "display_label": "Quiet Riot",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-warrant-063",
+        "question_id": "boundary-survey-f9-artist-warrant-063",
+        "display_label": "Warrant",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-whitesnake-063",
+        "question_id": "boundary-survey-f9-artist-whitesnake-063",
+        "display_label": "Whitesnake",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-europe-063",
+        "question_id": "boundary-survey-f9-artist-europe-063",
+        "display_label": "Europe",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-van-halen-063",
+        "question_id": "boundary-survey-f9-artist-van-halen-063",
+        "display_label": "Van Halen",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-tesla-063",
+        "question_id": "boundary-survey-f9-artist-tesla-063",
+        "display_label": "Tesla",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-album-guns-n-roses-appetite-for-destruction-063",
+        "question_id": "boundary-survey-f9-album-guns-n-roses-appetite-for-destruction-063",
+        "display_label": "Appetite for Destruction",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-album-whitesnake-whitesnake-063",
+        "question_id": "boundary-survey-f9-album-whitesnake-whitesnake-063",
+        "display_label": "Whitesnake",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-poison-every-rose-has-its-thorn-063",
+        "question_id": "boundary-survey-f9-song_recording-poison-every-rose-has-its-thorn-063",
+        "display_label": "Every Rose Has Its Thorn",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-bon-jovi-livin-on-a-prayer-063",
+        "question_id": "boundary-survey-f9-song_recording-bon-jovi-livin-on-a-prayer-063",
+        "display_label": "Livin' on a Prayer",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-guns-n-roses-sweet-child-o-mine-063",
+        "question_id": "boundary-survey-f9-song_recording-guns-n-roses-sweet-child-o-mine-063",
+        "display_label": "Sweet Child o' Mine",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-whitesnake-here-i-go-again-063",
+        "question_id": "boundary-survey-f9-song_recording-whitesnake-here-i-go-again-063",
+        "display_label": "Here I Go Again",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-bon-jovi-wanted-dead-or-alive-063",
+        "question_id": "boundary-survey-f9-song_recording-bon-jovi-wanted-dead-or-alive-063",
+        "display_label": "Wanted Dead or Alive",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-warrant-cherry-pie-063",
+        "question_id": "boundary-survey-f9-song_recording-warrant-cherry-pie-063",
+        "display_label": "Cherry Pie",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-europe-the-final-countdown-063",
+        "question_id": "boundary-survey-f9-song_recording-europe-the-final-countdown-063",
+        "display_label": "The Final Countdown",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-guns-n-roses-063",
+        "probe_id": "probe-survey-f9-artist-guns-n-roses-063",
+        "entity_type": "artist",
+        "display_label": "Guns N' Roses",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-def-leppard-063",
+        "probe_id": "probe-survey-f9-artist-def-leppard-063",
+        "entity_type": "artist",
+        "display_label": "Def Leppard",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-bon-jovi-063",
+        "probe_id": "probe-survey-f9-artist-bon-jovi-063",
+        "entity_type": "artist",
+        "display_label": "Bon Jovi",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-twisted-sister-063",
+        "probe_id": "probe-survey-f9-artist-twisted-sister-063",
+        "entity_type": "artist",
+        "display_label": "Twisted Sister",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-cinderella-063",
+        "probe_id": "probe-survey-f9-artist-cinderella-063",
+        "entity_type": "artist",
+        "display_label": "Cinderella",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-quiet-riot-063",
+        "probe_id": "probe-survey-f9-artist-quiet-riot-063",
+        "entity_type": "artist",
+        "display_label": "Quiet Riot",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-warrant-063",
+        "probe_id": "probe-survey-f9-artist-warrant-063",
+        "entity_type": "artist",
+        "display_label": "Warrant",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-whitesnake-063",
+        "probe_id": "probe-survey-f9-artist-whitesnake-063",
+        "entity_type": "artist",
+        "display_label": "Whitesnake",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-europe-063",
+        "probe_id": "probe-survey-f9-artist-europe-063",
+        "entity_type": "artist",
+        "display_label": "Europe",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-van-halen-063",
+        "probe_id": "probe-survey-f9-artist-van-halen-063",
+        "entity_type": "artist",
+        "display_label": "Van Halen",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-tesla-063",
+        "probe_id": "probe-survey-f9-artist-tesla-063",
+        "entity_type": "artist",
+        "display_label": "Tesla",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-album-guns-n-roses-appetite-for-destruction-063",
+        "probe_id": "probe-survey-f9-album-guns-n-roses-appetite-for-destruction-063",
+        "entity_type": "album",
+        "display_label": "Appetite for Destruction",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-album-whitesnake-whitesnake-063",
+        "probe_id": "probe-survey-f9-album-whitesnake-whitesnake-063",
+        "entity_type": "album",
+        "display_label": "Whitesnake",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-poison-every-rose-has-its-thorn-063",
+        "probe_id": "probe-survey-f9-song_recording-poison-every-rose-has-its-thorn-063",
+        "entity_type": "song_recording",
+        "display_label": "Every Rose Has Its Thorn",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-bon-jovi-livin-on-a-prayer-063",
+        "probe_id": "probe-survey-f9-song_recording-bon-jovi-livin-on-a-prayer-063",
+        "entity_type": "song_recording",
+        "display_label": "Livin' on a Prayer",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-guns-n-roses-sweet-child-o-mine-063",
+        "probe_id": "probe-survey-f9-song_recording-guns-n-roses-sweet-child-o-mine-063",
+        "entity_type": "song_recording",
+        "display_label": "Sweet Child o' Mine",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-whitesnake-here-i-go-again-063",
+        "probe_id": "probe-survey-f9-song_recording-whitesnake-here-i-go-again-063",
+        "entity_type": "song_recording",
+        "display_label": "Here I Go Again",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-bon-jovi-wanted-dead-or-alive-063",
+        "probe_id": "probe-survey-f9-song_recording-bon-jovi-wanted-dead-or-alive-063",
+        "entity_type": "song_recording",
+        "display_label": "Wanted Dead or Alive",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-warrant-cherry-pie-063",
+        "probe_id": "probe-survey-f9-song_recording-warrant-cherry-pie-063",
+        "entity_type": "song_recording",
+        "display_label": "Cherry Pie",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-europe-the-final-countdown-063",
+        "probe_id": "probe-survey-f9-song_recording-europe-the-final-countdown-063",
+        "entity_type": "song_recording",
+        "display_label": "The Final Countdown",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_09/archetype_062",
+      "family_09/archetype_064"
+    ],
+    "before_archetype_refs": [
+      "family_09/archetype_062"
+    ],
+    "after_archetype_refs": [
+      "family_09/archetype_064"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_9": {
+      "title": "Normalized canonical graph export, Family 9",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_9/normalized_family_9.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "063_britannica_metal": {
+      "title": "Heavy metal",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/heavy-metal-music",
+      "source_type": "reference",
+      "audit_use": "Places glam metal inside broader metal and hard-rock subgenre development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Places glam metal inside broader metal and hard-rock subgenre development."
+    },
+    "063_allmusic_hair": {
+      "title": "Hair Metal",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/hair-metal",
+      "source_type": "genre_overview",
+      "audit_use": "Direct support for glossy 1980s glam/hair metal style, pop choruses, and visual spectacle.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct support for glossy 1980s glam/hair metal style, pop choruses, and visual spectacle."
+    },
+    "063_rockhall_def_leppard": {
+      "title": "Def Leppard",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/def-leppard/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Def Leppard as the pop-metal production and chorus anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Def Leppard as the pop-metal production and chorus anchor."
+    },
+    "063_rockhall_gnr": {
+      "title": "Guns N' Roses",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/guns-n-roses/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Guns N' Roses as the harder, streetwise boundary inside the glam-era canon.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Guns N' Roses as the harder, streetwise boundary inside the glam-era canon."
+    },
+    "britannica_heavy_metal": {
+      "title": "Heavy metal",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/heavy-metal-music",
+      "source_type": "reference",
+      "audit_use": "Heavy metal's riffs, amplification, theatricality, and subgenre development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+    },
+    "rockhall_judas_priest": {
+      "title": "Judas Priest",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/judas-priest/",
+      "source_type": "museum_reference",
+      "audit_use": "Traditional heavy metal and NWOBHM-adjacent style context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Traditional heavy metal and NWOBHM-adjacent style context."
+    },
+    "rockhall_madonna": {
+      "title": "Madonna",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/madonna/",
+      "source_type": "museum_reference",
+      "audit_use": "Persona pop, dance-pop, visual reinvention, and MTV-era authorship.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Persona pop, dance-pop, visual reinvention, and MTV-era authorship."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "063-claim-01",
+      "claim_text": "Glam metal made heavy guitar compatible with pop choruses, image spectacle, arena scale, and power-ballad dynamics.",
+      "source_ref_ids": [
+        "063_allmusic_hair",
+        "063_britannica_metal"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_09/archetype_063"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "063-claim-02",
+      "claim_text": "Def Leppard's Hysteria and Pyromania anchor the polished pop-metal side through layered production, huge drums, and precision chorus design.",
+      "source_ref_ids": [
+        "063_rockhall_def_leppard",
+        "063_allmusic_hair"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_063",
+        "artist:def-leppard",
+        "album:def-leppard-hysteria"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "063-claim-03",
+      "claim_text": "Motley Crue and the Sunset Strip branch foreground sleaze, theatrical image, and party danger as much as guitar technique.",
+      "source_ref_ids": [
+        "063_allmusic_hair",
+        "063_britannica_metal"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "region_scene_page",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_09/archetype_063",
+        "artist:motley-crue"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "063-claim-04",
+      "claim_text": "Guns N' Roses sit on the archetype boundary because Appetite for Destruction is glam-era and image-aware but rougher, bluesier, and less lacquered than pop-metal peers.",
+      "source_ref_ids": [
+        "063_rockhall_gnr",
+        "063_allmusic_hair"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "caution",
+        "related_roads_lineage_module"
+      ],
+      "graph_refs": [
+        "family_09/archetype_063",
+        "artist:guns-n-roses"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "063-glam_metal_hair_metal_pop_metal-boundary",
+      "claim_text": "Glam Metal / Hair Metal / Pop Metal's boundary is clearest when stacked choruses and big gated drums appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "063_allmusic_hair",
+        "063_rockhall_def_leppard"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_063",
+        "artist:motley-crue",
+        "artist:guns-n-roses"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "063-glam_metal_hair_metal_pop_metal-examples",
+      "claim_text": "Motley Crue, Guns N' Roses, Hysteria - Def Leppard gives Glam Metal / Hair Metal / Pop Metal concrete anchors because the examples expose flashy guitar solos inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "063_rockhall_def_leppard",
+        "063_rockhall_gnr"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_063",
+        "artist:motley-crue",
+        "artist:guns-n-roses"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "1980s metal turned into neon arena pop: riffs, hooks, hair, and spectacle.",
+    "history_capsule": "Glam metal carried hard-rock and metal vocabulary into MTV-ready choruses, image theater, and enormous studio sound.",
+    "why_it_mattered": "It defined a mainstream metal memory that still shapes karaoke, classic-rock radio, and power-ballad culture.",
+    "what_made_it_distinct": "The difference is the gloss: hooks, visual identity, and chorus size are as important as riff weight.",
+    "what_to_listen_for": [
+      "stacked choruses",
+      "big gated drums",
+      "flashy guitar solos",
+      "anthemic ballads",
+      "arena polish"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:motley-crue",
+        "example_type": "artist",
+        "display_label": "Motley Crue",
+        "why_this_example_matters": "Motley Crue anchors Glam Metal / Hair Metal / Pop Metal by making distorted riff architecture and drum weight and speed easier to hear.",
+        "what_to_listen_for": [
+          "stacked choruses",
+          "big gated drums"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:guns-n-roses",
+        "example_type": "artist",
+        "display_label": "Guns N' Roses",
+        "why_this_example_matters": "Guns N' Roses anchors Glam Metal / Hair Metal / Pop Metal by making drum weight and speed and minor-mode tension easier to hear.",
+        "what_to_listen_for": [
+          "big gated drums",
+          "flashy guitar solos"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:def-leppard-hysteria",
+        "example_type": "album",
+        "display_label": "Hysteria - Def Leppard",
+        "why_this_example_matters": "Hysteria - Def Leppard anchors Glam Metal / Hair Metal / Pop Metal by making minor-mode tension and vocal force easier to hear.",
+        "what_to_listen_for": [
+          "flashy guitar solos",
+          "anthemic ballads"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:def-leppard-pyromania",
+        "example_type": "album",
+        "display_label": "Pyromania - Def Leppard",
+        "why_this_example_matters": "Pyromania - Def Leppard anchors Glam Metal / Hair Metal / Pop Metal by making vocal force and precision or abrasion as identity easier to hear.",
+        "what_to_listen_for": [
+          "anthemic ballads",
+          "arena polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:def-leppard-pour-some-sugar-on-me",
+        "example_type": "song_recording",
+        "display_label": "Pour Some Sugar on Me - Def Leppard",
+        "why_this_example_matters": "Pour Some Sugar on Me - Def Leppard anchors Glam Metal / Hair Metal / Pop Metal by making precision or abrasion as identity and distorted riff architecture easier to hear.",
+        "what_to_listen_for": [
+          "arena polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:motley-crue-dr-feelgood",
+        "example_type": "song_recording",
+        "display_label": "Dr. Feelgood - Motley Crue",
+        "why_this_example_matters": "Dr. Feelgood - Motley Crue anchors Glam Metal / Hair Metal / Pop Metal by making distorted riff architecture and drum weight and speed easier to hear.",
+        "what_to_listen_for": [
+          "stacked choruses",
+          "big gated drums"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_09/archetype_062"
+      ],
+      "after": [
+        "family_09/archetype_064"
+      ],
+      "related": [
+        "family_09/archetype_062",
+        "family_09/archetype_064"
+      ],
+      "copy": "Use Glam Metal / Hair Metal / Pop Metal as a contextual road inside Metal and Heavy Music; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "063-dyk-1",
+        "copy": "Power ballads are not side notes here; they are central to the road's pop-metal function.",
+        "source_ref_ids": [
+          "063_allmusic_hair",
+          "063_britannica_metal"
+        ]
+      },
+      {
+        "card_id": "063-dyk-2",
+        "copy": "Guns N' Roses are useful as a boundary case, not a reason to make the whole road gritty.",
+        "source_ref_ids": [
+          "063_rockhall_def_leppard",
+          "063_allmusic_hair"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether glam metal / hair metal / pop metal is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "1980s metal turned into neon arena pop: riffs, hooks, hair, and spectacle.",
+      "It defined a mainstream metal memory that still shapes karaoke, classic-rock radio, and power-ballad culture.",
+      "The difference is the gloss: hooks, visual identity, and chorus size are as important as riff weight."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat all 1980s metal as glam; separate thrash's aggression and traditional metal's codified heaviness.",
+    "personalization_hooks": [
+      {
+        "hook_id": "063-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[063]",
+          "atlas_state.family_affinity[9]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[063] >= 0.65 || atlas_state.family_affinity[9] >= 0.65",
+        "copy_variant": "Your Atlas signals make Glam Metal / Hair Metal / Pop Metal useful as a contextual landmark.",
+        "fallback_copy": "Use Glam Metal / Hair Metal / Pop Metal as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "063-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_09/archetype_063 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_09/archetype_063",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Glam Metal / Hair Metal / Pop Metal before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "063-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_09/archetype_063 || atlas_state.boundary_question_results has boundary_negative for family_09/archetype_063",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Glam Metal / Hair Metal / Pop Metal.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "063-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_09/archetype_063 || atlas_state.related_mission_ids references family_09/archetype_063",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "063-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_09/archetype_063 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_09/archetype_063 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_09/archetype_063",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Glam Metal / Hair Metal / Pop Metal.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_9": {
+        "title": "Normalized canonical graph export, Family 9",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_9/normalized_family_9.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "063_britannica_metal": {
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_type": "reference",
+        "audit_use": "Places glam metal inside broader metal and hard-rock subgenre development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Places glam metal inside broader metal and hard-rock subgenre development."
+      },
+      "063_allmusic_hair": {
+        "title": "Hair Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/hair-metal",
+        "source_type": "genre_overview",
+        "audit_use": "Direct support for glossy 1980s glam/hair metal style, pop choruses, and visual spectacle.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for glossy 1980s glam/hair metal style, pop choruses, and visual spectacle."
+      },
+      "063_rockhall_def_leppard": {
+        "title": "Def Leppard",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/def-leppard/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Def Leppard as the pop-metal production and chorus anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Def Leppard as the pop-metal production and chorus anchor."
+      },
+      "063_rockhall_gnr": {
+        "title": "Guns N' Roses",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/guns-n-roses/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Guns N' Roses as the harder, streetwise boundary inside the glam-era canon.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Guns N' Roses as the harder, streetwise boundary inside the glam-era canon."
+      },
+      "britannica_heavy_metal": {
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_type": "reference",
+        "audit_use": "Heavy metal's riffs, amplification, theatricality, and subgenre development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+      },
+      "rockhall_judas_priest": {
+        "title": "Judas Priest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/judas-priest/",
+        "source_type": "museum_reference",
+        "audit_use": "Traditional heavy metal and NWOBHM-adjacent style context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Traditional heavy metal and NWOBHM-adjacent style context."
+      },
+      "rockhall_madonna": {
+        "title": "Madonna",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/madonna/",
+        "source_type": "museum_reference",
+        "audit_use": "Persona pop, dance-pop, visual reinvention, and MTV-era authorship.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Persona pop, dance-pop, visual reinvention, and MTV-era authorship."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "063-claim-01",
+        "claim_text": "Glam metal made heavy guitar compatible with pop choruses, image spectacle, arena scale, and power-ballad dynamics.",
+        "source_ref_ids": [
+          "063_allmusic_hair",
+          "063_britannica_metal"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_09/archetype_063"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "063-claim-02",
+        "claim_text": "Def Leppard's Hysteria and Pyromania anchor the polished pop-metal side through layered production, huge drums, and precision chorus design.",
+        "source_ref_ids": [
+          "063_rockhall_def_leppard",
+          "063_allmusic_hair"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_063",
+          "artist:def-leppard",
+          "album:def-leppard-hysteria"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "063-claim-03",
+        "claim_text": "Motley Crue and the Sunset Strip branch foreground sleaze, theatrical image, and party danger as much as guitar technique.",
+        "source_ref_ids": [
+          "063_allmusic_hair",
+          "063_britannica_metal"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "region_scene_page",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_09/archetype_063",
+          "artist:motley-crue"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "063-claim-04",
+        "claim_text": "Guns N' Roses sit on the archetype boundary because Appetite for Destruction is glam-era and image-aware but rougher, bluesier, and less lacquered than pop-metal peers.",
+        "source_ref_ids": [
+          "063_rockhall_gnr",
+          "063_allmusic_hair"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "caution",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_09/archetype_063",
+          "artist:guns-n-roses"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "063-glam_metal_hair_metal_pop_metal-boundary",
+        "claim_text": "Glam Metal / Hair Metal / Pop Metal's boundary is clearest when stacked choruses and big gated drums appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "063_allmusic_hair",
+          "063_rockhall_def_leppard"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_063",
+          "artist:motley-crue",
+          "artist:guns-n-roses"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "063-glam_metal_hair_metal_pop_metal-examples",
+        "claim_text": "Motley Crue, Guns N' Roses, Hysteria - Def Leppard gives Glam Metal / Hair Metal / Pop Metal concrete anchors because the examples expose flashy guitar solos inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "063_rockhall_def_leppard",
+          "063_rockhall_gnr"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_063",
+          "artist:motley-crue",
+          "artist:guns-n-roses"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Glam Metal / Hair Metal / Pop Metal: Def Leppard, Motley Crue, Guns N' Roses, Poison, Bon Jovi, 1980s MTV arena hooks, ballads, and Sunset Strip spectacle.",
+    "selected_sources": [
+      {
+        "source_ref_id": "063_britannica_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Places glam metal inside broader metal and hard-rock subgenre development."
+      },
+      {
+        "source_ref_id": "063_allmusic_hair",
+        "title": "Hair Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/hair-metal",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for glossy 1980s glam/hair metal style, pop choruses, and visual spectacle."
+      },
+      {
+        "source_ref_id": "063_rockhall_def_leppard",
+        "title": "Def Leppard",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/def-leppard/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Def Leppard as the pop-metal production and chorus anchor."
+      },
+      {
+        "source_ref_id": "063_rockhall_gnr",
+        "title": "Guns N' Roses",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/guns-n-roses/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Guns N' Roses as the harder, streetwise boundary inside the glam-era canon."
+      },
+      {
+        "source_ref_id": "britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+      },
+      {
+        "source_ref_id": "rockhall_judas_priest",
+        "title": "Judas Priest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/judas-priest/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Traditional heavy metal and NWOBHM-adjacent style context."
+      },
+      {
+        "source_ref_id": "rockhall_madonna",
+        "title": "Madonna",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/madonna/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Persona pop, dance-pop, visual reinvention, and MTV-era authorship."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "example_object_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "063_reject_thrash",
+        "title": "Speed/Thrash Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/speed-thrash-metal",
+        "source_type": "genre_overview",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Thrash shares the decade but rejects the glossy pop-metal and MTV spectacle that define this road."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The selection directly covers hair/glam metal and the two major object poles: Def Leppard's studio pop-metal and Guns N' Roses' harder edge."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  }
+}

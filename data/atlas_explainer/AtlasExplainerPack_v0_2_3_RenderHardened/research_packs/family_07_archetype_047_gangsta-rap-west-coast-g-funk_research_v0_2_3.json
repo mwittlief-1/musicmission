@@ -1,0 +1,1584 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_07_archetype_047_gangsta-rap-west-coast-g-funk_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_7/normalized_family_7.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 7,
+    "family_slug": "hip-hop",
+    "family_name": "Hip-Hop",
+    "archetype_id": "047",
+    "archetype_slug": "gangsta-rap-west-coast-g-funk",
+    "canonical_graph_ref": "family_07/archetype_047",
+    "existing_graph_label_name": "Gangsta Rap / West Coast / G-Funk",
+    "editorial_display_title": "Gangsta Rap / West Coast / G-Funk",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:dr-dre",
+        "object_id": "dr-dre",
+        "display_label": "Dr. Dre",
+        "source_membership_id": "family-7-artist-047-dr-dre",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Producer-artist anchor for G-funk, West Coast mainstreaming, and later 2000s bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:snoop-dogg",
+        "object_id": "snoop-dogg",
+        "display_label": "Snoop Dogg",
+        "source_membership_id": "family-7-artist-047-snoop-dogg",
+        "roles": [
+          "anchor",
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "The most relaxed mass-recognition G-funk gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:2pac",
+        "object_id": "2pac",
+        "display_label": "2Pac",
+        "source_membership_id": "family-7-artist-047-2pac",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "West Coast, political, emotional, and pop-recognition center.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nwa",
+        "object_id": "nwa",
+        "display_label": "N.W.A",
+        "source_membership_id": "family-7-artist-047-nwa",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "The central gangsta-rap and West Coast shockwave object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ice-cube",
+        "object_id": "ice-cube",
+        "display_label": "Ice Cube",
+        "source_membership_id": "family-7-artist-047-ice-cube",
+        "roles": [
+          "anchor",
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Solo West Coast political and street-canon anchor after N.W.A.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:scarface",
+        "object_id": "scarface",
+        "display_label": "Scarface",
+        "source_membership_id": "family-7-artist-047-scarface",
+        "roles": [
+          "bridge",
+          "deepening",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Solo depth anchor for Southern street rap and mature gangsta narratives.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:warren-g",
+        "object_id": "warren-g",
+        "display_label": "Warren G",
+        "source_membership_id": "family-7-artist-047-warren-g",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Smooth G-funk radio gateway with enormous song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:eazy-e",
+        "object_id": "eazy-e",
+        "display_label": "Eazy-E",
+        "source_membership_id": "family-7-artist-047-eazy-e",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "N.W.A-related solo object needed for West Coast genealogy and personality split.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:too-short",
+        "object_id": "too-short",
+        "display_label": "Too Short",
+        "source_membership_id": "family-7-artist-047-too-short",
+        "roles": [
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Bay Area and Oakland bridge often missed by LA-centered West Coast maps.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:geto-boys",
+        "object_id": "geto-boys",
+        "display_label": "Geto Boys",
+        "source_membership_id": "family-7-artist-047-geto-boys",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Southern gangsta and psychological street-rap bridge into both 047 and 049.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:cypress-hill",
+        "object_id": "cypress-hill",
+        "display_label": "Cypress Hill",
+        "source_membership_id": "family-7-artist-047-cypress-hill",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Latino West Coast rap and rock/festival crossover boundary with broad song memory.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:dr-dre-the-chronic",
+        "object_id": "dr-dre-the-chronic",
+        "display_label": "The Chronic - Dr. Dre",
+        "source_membership_id": "family-7-album-047-dr-dre-the-chronic",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive G-funk album and West Coast mainstreaming anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:snoop-dogg-doggystyle",
+        "object_id": "snoop-dogg-doggystyle",
+        "display_label": "Doggystyle - Snoop Dogg",
+        "source_membership_id": "family-7-album-047-snoop-dogg-doggystyle",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Snoop's central G-funk album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:2pac-all-eyez-on-me",
+        "object_id": "2pac-all-eyez-on-me",
+        "display_label": "All Eyez on Me - 2Pac",
+        "source_membership_id": "family-7-album-047-2pac-all-eyez-on-me",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "2Pac's most broadly recognized West Coast album-world object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nwa-straight-outta-compton",
+        "object_id": "nwa-straight-outta-compton",
+        "display_label": "Straight Outta Compton - N.W.A",
+        "source_membership_id": "family-7-album-047-nwa-straight-outta-compton",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "The central gangsta-rap album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ice-cube-amerikkkas-most-wanted",
+        "object_id": "ice-cube-amerikkkas-most-wanted",
+        "display_label": "AmeriKKKa's Most Wanted - Ice Cube",
+        "source_membership_id": "family-7-album-047-ice-cube-amerikkkas-most-wanted",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Ice Cube solo break and political street-rap bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:2pac-me-against-the-world",
+        "object_id": "2pac-me-against-the-world",
+        "display_label": "Me Against the World - 2Pac",
+        "source_membership_id": "family-7-album-047-2pac-me-against-the-world",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Introspective 2Pac album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ice-cube-death-certificate",
+        "object_id": "ice-cube-death-certificate",
+        "display_label": "Death Certificate - Ice Cube",
+        "source_membership_id": "family-7-album-047-ice-cube-death-certificate",
+        "roles": [
+          "album_anchor",
+          "deepening",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Harder-edged Cube album for political and controversy boundary handling.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:warren-g-regulate-g-funk-era",
+        "object_id": "warren-g-regulate-g-funk-era",
+        "display_label": "Regulate... G Funk Era - Warren G",
+        "source_membership_id": "family-7-album-047-warren-g-regulate-g-funk-era",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Smooth G-funk radio album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:geto-boys-we-cant-be-stopped",
+        "object_id": "geto-boys-we-cant-be-stopped",
+        "display_label": "We Can't Be Stopped - Geto Boys",
+        "source_membership_id": "family-7-album-047-geto-boys-we-cant-be-stopped",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Southern gangsta bridge with major song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:eazy-e-eazy-duz-it",
+        "object_id": "eazy-e-eazy-duz-it",
+        "display_label": "Eazy-Duz-It - Eazy-E",
+        "source_membership_id": "family-7-album-047-eazy-e-eazy-duz-it",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "N.W.A-adjacent solo West Coast gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:ice-cube-it-was-a-good-day",
+        "object_id": "ice-cube-it-was-a-good-day",
+        "display_label": "It Was a Good Day - Ice Cube",
+        "source_membership_id": "family-7-song-047-ice-cube-it-was-a-good-day",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "West Coast normal-user gateway with high recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang",
+        "object_id": "dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang",
+        "display_label": "Nuthin' but a G Thang - Dr. Dre feat. Snoop Doggy Dogg",
+        "source_membership_id": "family-7-song-047-dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive G-funk mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:snoop-dogg-gin-and-juice",
+        "object_id": "snoop-dogg-gin-and-juice",
+        "display_label": "Gin and Juice - Snoop Dogg",
+        "source_membership_id": "family-7-song-047-snoop-dogg-gin-and-juice",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Snoop's central party/G-funk object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:2pac-feat-dr-dre-california-love",
+        "object_id": "2pac-feat-dr-dre-california-love",
+        "display_label": "California Love - 2Pac feat. Dr. Dre",
+        "source_membership_id": "family-7-song-047-2pac-feat-dr-dre-california-love",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "West Coast mass anthem and 2Pac/Dre crossover object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:warren-g-feat-nate-dogg-regulate",
+        "object_id": "warren-g-feat-nate-dogg-regulate",
+        "display_label": "Regulate - Warren G feat. Nate Dogg",
+        "source_membership_id": "family-7-song-047-warren-g-feat-nate-dogg-regulate",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Smooth G-funk normal-user gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nwa-straight-outta-compton",
+        "object_id": "nwa-straight-outta-compton",
+        "display_label": "Straight Outta Compton - N.W.A",
+        "source_membership_id": "family-7-song-047-nwa-straight-outta-compton",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Gangsta-rap title-track anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nwa-fuck-tha-police",
+        "object_id": "nwa-fuck-tha-police",
+        "display_label": "Fuck tha Police - N.W.A",
+        "source_membership_id": "family-7-song-047-nwa-fuck-tha-police",
+        "roles": [
+          "song_first",
+          "boundary",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Censorship, protest, and gangsta-rap shockwave object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:2pac-dear-mama",
+        "object_id": "2pac-dear-mama",
+        "display_label": "Dear Mama - 2Pac",
+        "source_membership_id": "family-7-song-047-2pac-dear-mama",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Emotional 2Pac gateway beyond gangsta cliche.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:snoop-dogg-who-am-i-whats-my-name",
+        "object_id": "snoop-dogg-who-am-i-whats-my-name",
+        "display_label": "Who Am I? (What's My Name?) - Snoop Dogg",
+        "source_membership_id": "family-7-song-047-snoop-dogg-who-am-i-whats-my-name",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Snoop identity and G-funk radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:cypress-hill-insane-in-the-brain",
+        "object_id": "cypress-hill-insane-in-the-brain",
+        "display_label": "Insane in the Brain - Cypress Hill",
+        "source_membership_id": "family-7-song-047-cypress-hill-insane-in-the-brain",
+        "roles": [
+          "song_first",
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rap-rock/festival and Latino West Coast gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nwa-express-yourself",
+        "object_id": "nwa-express-yourself",
+        "display_label": "Express Yourself - N.W.A",
+        "source_membership_id": "family-7-song-047-nwa-express-yourself",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Cleaner N.W.A gateway with broad sample and radio value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:eazy-e-boyz-n-the-hood",
+        "object_id": "eazy-e-boyz-n-the-hood",
+        "display_label": "Boyz-n-the-Hood - Eazy-E",
+        "source_membership_id": "family-7-song-047-eazy-e-boyz-n-the-hood",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Eazy-E and early gangsta-rap narrative object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ice-cube-check-yo-self",
+        "object_id": "ice-cube-check-yo-self",
+        "display_label": "Check Yo Self - Ice Cube",
+        "source_membership_id": "family-7-song-047-ice-cube-check-yo-self",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ice Cube radio/party bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dr-dre-let-me-ride",
+        "object_id": "dr-dre-let-me-ride",
+        "display_label": "Let Me Ride - Dr. Dre",
+        "source_membership_id": "family-7-song-047-dr-dre-let-me-ride",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Second Chronic-era G-funk gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f7-artist-2pac-047",
+        "candidate_id": "survey-f7-artist-2pac-047",
+        "object_type": "artist",
+        "display_label": "2Pac",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-dr-dre-047",
+        "candidate_id": "survey-f7-artist-dr-dre-047",
+        "object_type": "artist",
+        "display_label": "Dr. Dre",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-nwa-047",
+        "candidate_id": "survey-f7-artist-nwa-047",
+        "object_type": "artist",
+        "display_label": "N.W.A",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-snoop-dogg-047",
+        "candidate_id": "survey-f7-artist-snoop-dogg-047",
+        "object_type": "artist",
+        "display_label": "Snoop Dogg",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-ice-cube-047",
+        "candidate_id": "survey-f7-artist-ice-cube-047",
+        "object_type": "artist",
+        "display_label": "Ice Cube",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-scarface-047",
+        "candidate_id": "survey-f7-artist-scarface-047",
+        "object_type": "artist",
+        "display_label": "Scarface",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-warren-g-047",
+        "candidate_id": "survey-f7-artist-warren-g-047",
+        "object_type": "artist",
+        "display_label": "Warren G",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-eazy-e-047",
+        "candidate_id": "survey-f7-artist-eazy-e-047",
+        "object_type": "artist",
+        "display_label": "Eazy-E",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-too-short-047",
+        "candidate_id": "survey-f7-artist-too-short-047",
+        "object_type": "artist",
+        "display_label": "Too Short",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-geto-boys-047",
+        "candidate_id": "survey-f7-artist-geto-boys-047",
+        "object_type": "artist",
+        "display_label": "Geto Boys",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-cypress-hill-047",
+        "candidate_id": "survey-f7-artist-cypress-hill-047",
+        "object_type": "artist",
+        "display_label": "Cypress Hill",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-2pac-all-eyez-on-me-047",
+        "candidate_id": "survey-f7-album-2pac-all-eyez-on-me-047",
+        "object_type": "album",
+        "display_label": "All Eyez on Me",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-snoop-dogg-doggystyle-047",
+        "candidate_id": "survey-f7-album-snoop-dogg-doggystyle-047",
+        "object_type": "album",
+        "display_label": "Doggystyle",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-2pac-me-against-the-world-047",
+        "candidate_id": "survey-f7-album-2pac-me-against-the-world-047",
+        "object_type": "album",
+        "display_label": "Me Against the World",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-dr-dre-the-chronic-047",
+        "candidate_id": "survey-f7-album-dr-dre-the-chronic-047",
+        "object_type": "album",
+        "display_label": "The Chronic",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-nwa-straight-outta-compton-047",
+        "candidate_id": "survey-f7-album-nwa-straight-outta-compton-047",
+        "object_type": "album",
+        "display_label": "Straight Outta Compton",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-ice-cube-amerikkkas-most-wanted-047",
+        "candidate_id": "survey-f7-album-ice-cube-amerikkkas-most-wanted-047",
+        "object_type": "album",
+        "display_label": "AmeriKKKa's Most Wanted",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-warren-g-regulate-g-funk-era-047",
+        "candidate_id": "survey-f7-album-warren-g-regulate-g-funk-era-047",
+        "object_type": "album",
+        "display_label": "Regulate... G Funk Era",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-ice-cube-death-certificate-047",
+        "candidate_id": "survey-f7-album-ice-cube-death-certificate-047",
+        "object_type": "album",
+        "display_label": "Death Certificate",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-eazy-e-eazy-duz-it-047",
+        "candidate_id": "survey-f7-album-eazy-e-eazy-duz-it-047",
+        "object_type": "album",
+        "display_label": "Eazy-Duz-It",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-geto-boys-047",
+        "question_id": "boundary-survey-f7-artist-geto-boys-047",
+        "display_label": "Geto Boys",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-cypress-hill-047",
+        "question_id": "boundary-survey-f7-artist-cypress-hill-047",
+        "display_label": "Cypress Hill",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-album-ice-cube-death-certificate-047",
+        "question_id": "boundary-survey-f7-album-ice-cube-death-certificate-047",
+        "display_label": "Death Certificate",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-album-geto-boys-we-cant-be-stopped-047",
+        "question_id": "boundary-survey-f7-album-geto-boys-we-cant-be-stopped-047",
+        "display_label": "We Can't Be Stopped",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-nwa-fuck-tha-police-047",
+        "question_id": "boundary-survey-f7-song_recording-nwa-fuck-tha-police-047",
+        "display_label": "Fuck tha Police",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-geto-boys-mind-playing-tricks-on-me-047",
+        "question_id": "boundary-survey-f7-song_recording-geto-boys-mind-playing-tricks-on-me-047",
+        "display_label": "Mind Playing Tricks on Me",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-cypress-hill-insane-in-the-brain-047",
+        "question_id": "boundary-survey-f7-song_recording-cypress-hill-insane-in-the-brain-047",
+        "display_label": "Insane in the Brain",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-ice-cube-no-vaseline-047",
+        "question_id": "boundary-survey-f7-song_recording-ice-cube-no-vaseline-047",
+        "display_label": "No Vaseline",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-geto-boys-047",
+        "probe_id": "probe-survey-f7-artist-geto-boys-047",
+        "entity_type": "artist",
+        "display_label": "Geto Boys",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-cypress-hill-047",
+        "probe_id": "probe-survey-f7-artist-cypress-hill-047",
+        "entity_type": "artist",
+        "display_label": "Cypress Hill",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-album-ice-cube-death-certificate-047",
+        "probe_id": "probe-survey-f7-album-ice-cube-death-certificate-047",
+        "entity_type": "album",
+        "display_label": "Death Certificate",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-album-geto-boys-we-cant-be-stopped-047",
+        "probe_id": "probe-survey-f7-album-geto-boys-we-cant-be-stopped-047",
+        "entity_type": "album",
+        "display_label": "We Can't Be Stopped",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-nwa-fuck-tha-police-047",
+        "probe_id": "probe-survey-f7-song_recording-nwa-fuck-tha-police-047",
+        "entity_type": "song_recording",
+        "display_label": "Fuck tha Police",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-geto-boys-mind-playing-tricks-on-me-047",
+        "probe_id": "probe-survey-f7-song_recording-geto-boys-mind-playing-tricks-on-me-047",
+        "entity_type": "song_recording",
+        "display_label": "Mind Playing Tricks on Me",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-cypress-hill-insane-in-the-brain-047",
+        "probe_id": "probe-survey-f7-song_recording-cypress-hill-insane-in-the-brain-047",
+        "entity_type": "song_recording",
+        "display_label": "Insane in the Brain",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-ice-cube-no-vaseline-047",
+        "probe_id": "probe-survey-f7-song_recording-ice-cube-no-vaseline-047",
+        "entity_type": "song_recording",
+        "display_label": "No Vaseline",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_07/archetype_046",
+      "family_07/archetype_048"
+    ],
+    "before_archetype_refs": [
+      "family_07/archetype_046"
+    ],
+    "after_archetype_refs": [
+      "family_07/archetype_048"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_7": {
+      "title": "Normalized canonical graph export, Family 7",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_7/normalized_family_7.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "047_rockhall_nwa": {
+      "title": "N.W.A",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nwa/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports N.W.A as a central gangsta-rap and West Coast rap anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports N.W.A as a central gangsta-rap and West Coast rap anchor."
+    },
+    "047_allmusic_gfunk": {
+      "title": "G-Funk",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/g-funk-ma0000002627",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for the funk-sampled West Coast sound associated with Dr. Dre and Snoop Dogg.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for the funk-sampled West Coast sound associated with Dr. Dre and Snoop Dogg."
+    },
+    "047_britannica_rap": {
+      "title": "Rap",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rap",
+      "source_type": "reference",
+      "audit_use": "Provides broader rap history context for gangsta rap's place in the genre.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Provides broader rap history context for gangsta rap's place in the genre."
+    },
+    "britannica_rap": {
+      "title": "Rap",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rap",
+      "source_type": "reference",
+      "audit_use": "Rap as vocal/rhythmic practice and popular music form.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+    },
+    "rockhall_nwa": {
+      "title": "N.W.A",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nwa/",
+      "source_type": "museum_reference",
+      "audit_use": "West Coast gangsta rap and late-1980s hip-hop impact.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "West Coast gangsta rap and late-1980s hip-hop impact."
+    },
+    "rockhall_tupac": {
+      "title": "Tupac Shakur",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/tupac-shakur/",
+      "source_type": "museum_reference",
+      "audit_use": "West Coast rap, persona, and 1990s hip-hop cultural context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "West Coast rap, persona, and 1990s hip-hop cultural context."
+    },
+    "carnegie_hall_hiphop": {
+      "title": "Hip-Hop",
+      "publisher": "Carnegie Hall Timeline of African American Music",
+      "url": "https://timeline.carnegiehall.org/genres/hip-hop",
+      "source_type": "educational_archive",
+      "audit_use": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "047-c01",
+      "claim_text": "Gangsta rap foregrounds street reportage, confrontation, and moral panic, while West Coast G-funk adds slow-rolling funk samples and melodic synth lines.",
+      "source_ref_ids": [
+        "047_rockhall_nwa",
+        "047_allmusic_gfunk",
+        "047_britannica_rap"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_07/archetype_047",
+        "artist:nwa",
+        "artist:dr-dre",
+        "artist:snoop-dogg"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "047-c02",
+      "claim_text": "N.W.A anchors the political controversy and street-documentary side of the lane, making Los Angeles policing and neighborhood reality central to rap's national story.",
+      "source_ref_ids": [
+        "047_rockhall_nwa",
+        "047_britannica_rap"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "artist:nwa",
+        "family_07/archetype_047"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "047-c03",
+      "claim_text": "Dr. Dre's The Chronic and Snoop Dogg's Doggystyle define G-funk's smoother branch, where menace and party cool ride the same laid-back groove.",
+      "source_ref_ids": [
+        "047_allmusic_gfunk"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "artist:dr-dre",
+        "artist:snoop-dogg",
+        "album:dr-dre-the-chronic",
+        "album:snoop-dogg-doggystyle",
+        "song_recording:dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "047-c04",
+      "claim_text": "2Pac and Ice Cube broaden the archetype from gangsta persona into actorly charisma, social argument, and narrative self-mythology.",
+      "source_ref_ids": [
+        "047_britannica_rap",
+        "047_rockhall_nwa"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "artist:2pac",
+        "artist:ice-cube",
+        "song_recording:ice-cube-it-was-a-good-day"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "047-gangsta_rap_west_coast_g_funk-boundary",
+      "claim_text": "Gangsta Rap / West Coast / G-Funk's boundary is clearest when whining synth lead and slow funk bass appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "047_rockhall_nwa",
+        "047_allmusic_gfunk"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_07/archetype_047",
+        "artist:dr-dre",
+        "artist:snoop-dogg"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "047-gangsta_rap_west_coast_g_funk-examples",
+      "claim_text": "Dr. Dre, Snoop Dogg, The Chronic - Dr. Dre gives Gangsta Rap / West Coast / G-Funk concrete anchors because the examples expose street narrative inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "047_allmusic_gfunk",
+        "britannica_rap"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_07/archetype_047",
+        "artist:dr-dre",
+        "artist:snoop-dogg"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "West Coast street rap and G-funk: confrontational stories, slow funk grooves, and cinematic rap personas.",
+    "history_capsule": "The lane rises from late-1980s Los Angeles rap into early-1990s G-funk, turning local street narratives and funk sampling into national hip-hop language.",
+    "why_it_mattered": "It changed rap's commercial center, controversy level, production vocabulary, and image of West Coast hip-hop.",
+    "what_made_it_distinct": "The mood is dangerous and relaxed at once: hard stories over smooth, rubbery funk.",
+    "what_to_listen_for": [
+      "whining synth lead",
+      "slow funk bass",
+      "street narrative",
+      "laid-back flow",
+      "cinematic persona"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:dr-dre",
+        "example_type": "artist",
+        "display_label": "Dr. Dre",
+        "why_this_example_matters": "Dr. Dre anchors Gangsta Rap / West Coast / G-Funk by making beat architecture and flow and cadence easier to hear.",
+        "what_to_listen_for": [
+          "whining synth lead",
+          "slow funk bass"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:snoop-dogg",
+        "example_type": "artist",
+        "display_label": "Snoop Dogg",
+        "why_this_example_matters": "Snoop Dogg anchors Gangsta Rap / West Coast / G-Funk by making flow and cadence and sample or synth signature easier to hear.",
+        "what_to_listen_for": [
+          "slow funk bass",
+          "street narrative"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:dr-dre-the-chronic",
+        "example_type": "album",
+        "display_label": "The Chronic - Dr. Dre",
+        "why_this_example_matters": "The Chronic - Dr. Dre anchors Gangsta Rap / West Coast / G-Funk by making sample or synth signature and regional production color easier to hear.",
+        "what_to_listen_for": [
+          "street narrative",
+          "laid-back flow"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:snoop-dogg-doggystyle",
+        "example_type": "album",
+        "display_label": "Doggystyle - Snoop Dogg",
+        "why_this_example_matters": "Doggystyle - Snoop Dogg anchors Gangsta Rap / West Coast / G-Funk by making regional production color and hook strategy against dense verses easier to hear.",
+        "what_to_listen_for": [
+          "laid-back flow",
+          "cinematic persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:ice-cube-it-was-a-good-day",
+        "example_type": "song_recording",
+        "display_label": "It Was a Good Day - Ice Cube",
+        "why_this_example_matters": "It Was a Good Day - Ice Cube anchors Gangsta Rap / West Coast / G-Funk by making hook strategy against dense verses and beat architecture easier to hear.",
+        "what_to_listen_for": [
+          "cinematic persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang",
+        "example_type": "song_recording",
+        "display_label": "Nuthin' but a G Thang - Dr. Dre feat. Snoop Doggy Dogg",
+        "why_this_example_matters": "Nuthin' but a G Thang - Dr. Dre feat. Snoop Doggy Dogg anchors Gangsta Rap / West Coast / G-Funk by making beat architecture and flow and cadence easier to hear.",
+        "what_to_listen_for": [
+          "whining synth lead",
+          "slow funk bass"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_07/archetype_046"
+      ],
+      "after": [
+        "family_07/archetype_048"
+      ],
+      "related": [
+        "family_07/archetype_046",
+        "family_07/archetype_048"
+      ],
+      "copy": "Use Gangsta Rap / West Coast / G-Funk as a contextual road inside Hip-Hop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "047-dyk-1",
+        "copy": "G-funk softened the groove without softening the subject matter.",
+        "source_ref_ids": [
+          "047_rockhall_nwa",
+          "047_allmusic_gfunk",
+          "047_britannica_rap"
+        ]
+      },
+      {
+        "card_id": "047-dyk-2",
+        "copy": "West Coast gangsta rap became one of the biggest pop-culture flashpoints of the 1990s.",
+        "source_ref_ids": [
+          "047_rockhall_nwa",
+          "047_britannica_rap"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether gangsta rap / west coast / g-funk is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "West Coast street rap and G-funk: confrontational stories, slow funk grooves, and cinematic rap personas.",
+      "It changed rap's commercial center, controversy level, production vocabulary, and image of West Coast hip-hop.",
+      "The mood is dangerous and relaxed at once: hard stories over smooth, rubbery funk."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat all West Coast rap as gangsta rap; G-funk sound and street-reportage stance are separate but overlapping signals.",
+    "personalization_hooks": [
+      {
+        "hook_id": "047-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[047]",
+          "atlas_state.family_affinity[7]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[047] >= 0.65 || atlas_state.family_affinity[7] >= 0.65",
+        "copy_variant": "Your Atlas signals make Gangsta Rap / West Coast / G-Funk useful as a contextual landmark.",
+        "fallback_copy": "Use Gangsta Rap / West Coast / G-Funk as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "047-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_07/archetype_047 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_07/archetype_047",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Gangsta Rap / West Coast / G-Funk before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "047-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_07/archetype_047 || atlas_state.boundary_question_results has boundary_negative for family_07/archetype_047",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Gangsta Rap / West Coast / G-Funk.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "047-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_07/archetype_047 || atlas_state.related_mission_ids references family_07/archetype_047",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "047-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_07/archetype_047 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_07/archetype_047 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_07/archetype_047",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Gangsta Rap / West Coast / G-Funk.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_7": {
+        "title": "Normalized canonical graph export, Family 7",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_7/normalized_family_7.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "047_rockhall_nwa": {
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports N.W.A as a central gangsta-rap and West Coast rap anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports N.W.A as a central gangsta-rap and West Coast rap anchor."
+      },
+      "047_allmusic_gfunk": {
+        "title": "G-Funk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/g-funk-ma0000002627",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for the funk-sampled West Coast sound associated with Dr. Dre and Snoop Dogg.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for the funk-sampled West Coast sound associated with Dr. Dre and Snoop Dogg."
+      },
+      "047_britannica_rap": {
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_type": "reference",
+        "audit_use": "Provides broader rap history context for gangsta rap's place in the genre.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides broader rap history context for gangsta rap's place in the genre."
+      },
+      "britannica_rap": {
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_type": "reference",
+        "audit_use": "Rap as vocal/rhythmic practice and popular music form.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+      },
+      "rockhall_nwa": {
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_type": "museum_reference",
+        "audit_use": "West Coast gangsta rap and late-1980s hip-hop impact.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "West Coast gangsta rap and late-1980s hip-hop impact."
+      },
+      "rockhall_tupac": {
+        "title": "Tupac Shakur",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/tupac-shakur/",
+        "source_type": "museum_reference",
+        "audit_use": "West Coast rap, persona, and 1990s hip-hop cultural context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "West Coast rap, persona, and 1990s hip-hop cultural context."
+      },
+      "carnegie_hall_hiphop": {
+        "title": "Hip-Hop",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/hip-hop",
+        "source_type": "educational_archive",
+        "audit_use": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "047-c01",
+        "claim_text": "Gangsta rap foregrounds street reportage, confrontation, and moral panic, while West Coast G-funk adds slow-rolling funk samples and melodic synth lines.",
+        "source_ref_ids": [
+          "047_rockhall_nwa",
+          "047_allmusic_gfunk",
+          "047_britannica_rap"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_07/archetype_047",
+          "artist:nwa",
+          "artist:dr-dre",
+          "artist:snoop-dogg"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047-c02",
+        "claim_text": "N.W.A anchors the political controversy and street-documentary side of the lane, making Los Angeles policing and neighborhood reality central to rap's national story.",
+        "source_ref_ids": [
+          "047_rockhall_nwa",
+          "047_britannica_rap"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "artist:nwa",
+          "family_07/archetype_047"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047-c03",
+        "claim_text": "Dr. Dre's The Chronic and Snoop Dogg's Doggystyle define G-funk's smoother branch, where menace and party cool ride the same laid-back groove.",
+        "source_ref_ids": [
+          "047_allmusic_gfunk"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "artist:dr-dre",
+          "artist:snoop-dogg",
+          "album:dr-dre-the-chronic",
+          "album:snoop-dogg-doggystyle",
+          "song_recording:dr-dre-feat-snoop-doggy-dogg-nuthin-but-a-g-thang"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047-c04",
+        "claim_text": "2Pac and Ice Cube broaden the archetype from gangsta persona into actorly charisma, social argument, and narrative self-mythology.",
+        "source_ref_ids": [
+          "047_britannica_rap",
+          "047_rockhall_nwa"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "artist:2pac",
+          "artist:ice-cube",
+          "song_recording:ice-cube-it-was-a-good-day"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "047-gangsta_rap_west_coast_g_funk-boundary",
+        "claim_text": "Gangsta Rap / West Coast / G-Funk's boundary is clearest when whining synth lead and slow funk bass appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "047_rockhall_nwa",
+          "047_allmusic_gfunk"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_07/archetype_047",
+          "artist:dr-dre",
+          "artist:snoop-dogg"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "047-gangsta_rap_west_coast_g_funk-examples",
+        "claim_text": "Dr. Dre, Snoop Dogg, The Chronic - Dr. Dre gives Gangsta Rap / West Coast / G-Funk concrete anchors because the examples expose street narrative inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "047_allmusic_gfunk",
+          "britannica_rap"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_07/archetype_047",
+          "artist:dr-dre",
+          "artist:snoop-dogg"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Gangsta rap, West Coast rap, and G-funk: N.W.A, Dr. Dre, Snoop Dogg, 2Pac, Ice Cube, The Chronic, Los Angeles street rap and funk samples.",
+    "selected_sources": [
+      {
+        "source_ref_id": "047_rockhall_nwa",
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports N.W.A as a central gangsta-rap and West Coast rap anchor."
+      },
+      {
+        "source_ref_id": "047_allmusic_gfunk",
+        "title": "G-Funk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/g-funk-ma0000002627",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for the funk-sampled West Coast sound associated with Dr. Dre and Snoop Dogg."
+      },
+      {
+        "source_ref_id": "047_britannica_rap",
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides broader rap history context for gangsta rap's place in the genre."
+      },
+      {
+        "source_ref_id": "britannica_rap",
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+      },
+      {
+        "source_ref_id": "rockhall_nwa",
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "West Coast gangsta rap and late-1980s hip-hop impact."
+      },
+      {
+        "source_ref_id": "rockhall_tupac",
+        "title": "Tupac Shakur",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/tupac-shakur/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "West Coast rap, persona, and 1990s hip-hop cultural context."
+      },
+      {
+        "source_ref_id": "carnegie_hall_hiphop",
+        "title": "Hip-Hop",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/hip-hop",
+        "source_relevance": "example_object_support",
+        "why_fit": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "047_reject_native_tongues",
+        "title": "A Tribe Called Quest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/a-tribe-called-quest/",
+        "source_type": "museum_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "A useful golden-age contrast, but not direct support for gangsta rap or G-funk."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources identify West Coast gangsta rap, G-funk production, and the larger rap frame without using East Coast or conscious-rap proxies."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 6,
+    "wrong_context_source_count": 0
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cartenza.local/schemas/atlas_explainer_research_pack_schema_v0_2_3.json",
+  "title": "Atlas Explainer Research Pack v0.2.3",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pack_id",
+    "identity",
+    "graph_alignment",
+    "explainer_content",
+    "source_references",
+    "claim_level_source_audit",
+    "rights_policy",
+    "editorial_status",
+    "non_mutation_policy",
+    "alpha_v0_mission_boundary",
+    "research_trace"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.3"
+    },
+    "pack_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "identity": {
+      "type": "object"
+    },
+    "graph_alignment": {
+      "type": "object"
+    },
+    "explainer_content": {
+      "type": "object",
+      "required": [
+        "canonical_example_rationales"
+      ],
+      "properties": {
+        "canonical_example_rationales": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "example_ref",
+              "example_type",
+              "display_label",
+              "why_this_example_matters",
+              "what_to_listen_for",
+              "graph_ref_validation_status"
+            ],
+            "properties": {
+              "example_ref": {
+                "type": "string"
+              },
+              "example_type": {
+                "enum": [
+                  "artist",
+                  "album",
+                  "song_recording",
+                  "survey_candidate"
+                ]
+              },
+              "display_label": {
+                "type": "string"
+              },
+              "why_this_example_matters": {
+                "type": "string"
+              },
+              "what_to_listen_for": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "graph_ref_validation_status": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_references": {
+      "type": "object"
+    },
+    "claim_level_source_audit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "claim_text",
+          "source_ref_ids",
+          "confidence",
+          "module_usage",
+          "graph_refs",
+          "audit_status"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "claim_text": {
+            "type": "string"
+          },
+          "source_ref_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "string"
+          },
+          "module_usage": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "graph_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "audit_status": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "minItems": 4
+    },
+    "rights_policy": {
+      "type": "object"
+    },
+    "editorial_status": {
+      "enum": [
+        "draft_research",
+        "pm_review_needed",
+        "visualization_candidate",
+        "alpha_render_candidate",
+        "production_copy_candidate",
+        "blocked"
+      ]
+    },
+    "non_mutation_policy": {
+      "type": "object"
+    },
+    "alpha_v0_mission_boundary": {
+      "type": "object"
+    },
+    "research_trace": {
+      "type": "object",
+      "required": [
+        "archetype_query",
+        "selected_sources",
+        "rejected_sources",
+        "why_selected_sources_fit"
+      ],
+      "properties": {
+        "archetype_query": {
+          "type": "string"
+        },
+        "selected_sources": {
+          "type": "array",
+          "minItems": 3
+        },
+        "rejected_sources": {
+          "type": "array"
+        },
+        "why_selected_sources_fit": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

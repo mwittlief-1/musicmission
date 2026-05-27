@@ -1,0 +1,1418 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_12_archetype_092_adult-pop-tv-drama-anthem-inspirational-pop_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_12/normalized_family_12.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 12,
+    "family_slug": "pop-monoculture-and-persona-pop",
+    "family_name": "Pop Monoculture and Persona Pop",
+    "archetype_id": "092",
+    "archetype_slug": "adult-pop-tv-drama-anthem-inspirational-pop",
+    "canonical_graph_ref": "family_12/archetype_092",
+    "existing_graph_label_name": "Adult Pop / TV-Drama Anthem / Inspirational Pop",
+    "editorial_display_title": "Adult Pop / TV-Drama Anthem / Inspirational Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:adele",
+        "object_id": "adele",
+        "display_label": "Adele",
+        "source_membership_id": "family-12-artist-092-adele",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop album and ballad anchor with huge normal-user recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ed-sheeran",
+        "object_id": "ed-sheeran",
+        "display_label": "Ed Sheeran",
+        "source_membership_id": "family-12-artist-092-ed-sheeran",
+        "roles": [
+          "gateway",
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop singer-songwriter and wedding-pop boundary object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sia",
+        "object_id": "sia",
+        "display_label": "Sia",
+        "source_membership_id": "family-12-artist-092-sia",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Adult-pop, TV-drama anthem, and songwriter/feature boundary object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sam-smith",
+        "object_id": "sam-smith",
+        "display_label": "Sam Smith",
+        "source_membership_id": "family-12-artist-092-sam-smith",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Adult-pop vocal-ballad seed with song-first recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lewis-capaldi",
+        "object_id": "lewis-capaldi",
+        "display_label": "Lewis Capaldi",
+        "source_membership_id": "family-12-artist-092-lewis-capaldi",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming-era adult-pop ballad seed.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:demi-lovato",
+        "object_id": "demi-lovato",
+        "display_label": "Demi Lovato",
+        "source_membership_id": "family-12-artist-092-demi-lovato",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Disney-to-adult pop and inspirational-ballad bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:selena-gomez",
+        "object_id": "selena-gomez",
+        "display_label": "Selena Gomez",
+        "source_membership_id": "family-12-artist-092-selena-gomez",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Disney-to-streaming adult-pop bridge, mostly song-first here.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:rachel-platten",
+        "object_id": "rachel-platten",
+        "display_label": "Rachel Platten",
+        "source_membership_id": "family-12-artist-092-rachel-platten",
+        "roles": [
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Missing-obvious inspirational-pop one-song survey object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:christina-perri",
+        "object_id": "christina-perri",
+        "display_label": "Christina Perri",
+        "source_membership_id": "family-12-artist-092-christina-perri",
+        "roles": [
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Missing-obvious TV/wedding/adult-pop song object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:adele-21",
+        "object_id": "adele-21",
+        "display_label": "21 - Adele",
+        "source_membership_id": "family-12-album-092-adele-21",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:adele-25",
+        "object_id": "adele-25",
+        "display_label": "25 - Adele",
+        "source_membership_id": "family-12-album-092-adele-25",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Follow-on adult-pop mass object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ed-sheeran-x",
+        "object_id": "ed-sheeran-x",
+        "display_label": "x - Ed Sheeran",
+        "source_membership_id": "family-12-album-092-ed-sheeran-x",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop singer-songwriter album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sam-smith-in-the-lonely-hour",
+        "object_id": "sam-smith-in-the-lonely-hour",
+        "display_label": "In the Lonely Hour - Sam Smith",
+        "source_membership_id": "family-12-album-092-sam-smith-in-the-lonely-hour",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Adult-pop vocal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sia-1000-forms-of-fear",
+        "object_id": "sia-1000-forms-of-fear",
+        "display_label": "1000 Forms of Fear - Sia",
+        "source_membership_id": "family-12-album-092-sia-1000-forms-of-fear",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Sia song-first album container.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lewis-capaldi-divinely-uninspired-to-a-hellish-extent",
+        "object_id": "lewis-capaldi-divinely-uninspired-to-a-hellish-extent",
+        "display_label": "Divinely Uninspired to a Hellish Extent - Lewis Capaldi",
+        "source_membership_id": "family-12-album-092-lewis-capaldi-divinely-uninspired-to-a-hellish-extent",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming ballad album container.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:adele-rolling-in-the-deep",
+        "object_id": "adele-rolling-in-the-deep",
+        "display_label": "Rolling in the Deep - Adele",
+        "source_membership_id": "family-12-song-092-adele-rolling-in-the-deep",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop crossover anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:adele-hello",
+        "object_id": "adele-hello",
+        "display_label": "Hello - Adele",
+        "source_membership_id": "family-12-song-092-adele-hello",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop ballad mass anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sia-chandelier",
+        "object_id": "sia-chandelier",
+        "display_label": "Chandelier - Sia",
+        "source_membership_id": "family-12-song-092-sia-chandelier",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TV-drama/adult-pop anthem object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ed-sheeran-thinking-out-loud",
+        "object_id": "ed-sheeran-thinking-out-loud",
+        "display_label": "Thinking Out Loud - Ed Sheeran",
+        "source_membership_id": "family-12-song-092-ed-sheeran-thinking-out-loud",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Wedding/adult-pop song bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ed-sheeran-shape-of-you",
+        "object_id": "ed-sheeran-shape-of-you",
+        "display_label": "Shape of You - Ed Sheeran",
+        "source_membership_id": "family-12-song-092-ed-sheeran-shape-of-you",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Global adult-pop streaming hit.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sam-smith-stay-with-me",
+        "object_id": "sam-smith-stay-with-me",
+        "display_label": "Stay with Me - Sam Smith",
+        "source_membership_id": "family-12-song-092-sam-smith-stay-with-me",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Adult-pop vocal-ballad gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lewis-capaldi-someone-you-loved",
+        "object_id": "lewis-capaldi-someone-you-loved",
+        "display_label": "Someone You Loved - Lewis Capaldi",
+        "source_membership_id": "family-12-song-092-lewis-capaldi-someone-you-loved",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Streaming-era adult-pop ballad object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:rachel-platten-fight-song",
+        "object_id": "rachel-platten-fight-song",
+        "display_label": "Fight Song - Rachel Platten",
+        "source_membership_id": "family-12-song-092-rachel-platten-fight-song",
+        "roles": [
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "edge",
+        "inclusion_reason": "Inspirational-pop survey object, not broad artist appetite.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f12-artist-adele-092",
+        "candidate_id": "survey-f12-artist-adele-092",
+        "object_type": "artist",
+        "display_label": "Adele",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-ed-sheeran-092",
+        "candidate_id": "survey-f12-artist-ed-sheeran-092",
+        "object_type": "artist",
+        "display_label": "Ed Sheeran",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-sam-smith-092",
+        "candidate_id": "survey-f12-artist-sam-smith-092",
+        "object_type": "artist",
+        "display_label": "Sam Smith",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-sia-092",
+        "candidate_id": "survey-f12-artist-sia-092",
+        "object_type": "artist",
+        "display_label": "Sia",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-demi-lovato-092",
+        "candidate_id": "survey-f12-artist-demi-lovato-092",
+        "object_type": "artist",
+        "display_label": "Demi Lovato",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-lewis-capaldi-092",
+        "candidate_id": "survey-f12-artist-lewis-capaldi-092",
+        "object_type": "artist",
+        "display_label": "Lewis Capaldi",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-selena-gomez-092",
+        "candidate_id": "survey-f12-artist-selena-gomez-092",
+        "object_type": "artist",
+        "display_label": "Selena Gomez",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-christina-perri-092",
+        "candidate_id": "survey-f12-artist-christina-perri-092",
+        "object_type": "artist",
+        "display_label": "Christina Perri",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-rachel-platten-092",
+        "candidate_id": "survey-f12-artist-rachel-platten-092",
+        "object_type": "artist",
+        "display_label": "Rachel Platten",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-adele-21-092",
+        "candidate_id": "survey-f12-album-adele-21-092",
+        "object_type": "album",
+        "display_label": "21",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-adele-25-092",
+        "candidate_id": "survey-f12-album-adele-25-092",
+        "object_type": "album",
+        "display_label": "25",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-sam-smith-in-the-lonely-hour-092",
+        "candidate_id": "survey-f12-album-sam-smith-in-the-lonely-hour-092",
+        "object_type": "album",
+        "display_label": "In the Lonely Hour",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-ed-sheeran-x-092",
+        "candidate_id": "survey-f12-album-ed-sheeran-x-092",
+        "object_type": "album",
+        "display_label": "x",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-sia-1000-forms-of-fear-092",
+        "candidate_id": "survey-f12-album-sia-1000-forms-of-fear-092",
+        "object_type": "album",
+        "display_label": "1000 Forms of Fear",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-lewis-capaldi-divinely-uninspired-to-a-hellish-extent-092",
+        "candidate_id": "survey-f12-album-lewis-capaldi-divinely-uninspired-to-a-hellish-extent-092",
+        "object_type": "album",
+        "display_label": "Divinely Uninspired to a Hellish Extent",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-adele-rolling-in-the-deep-092",
+        "candidate_id": "survey-f12-song_recording-adele-rolling-in-the-deep-092",
+        "object_type": "song_recording",
+        "display_label": "Rolling in the Deep",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-sia-chandelier-092",
+        "candidate_id": "survey-f12-song_recording-sia-chandelier-092",
+        "object_type": "song_recording",
+        "display_label": "Chandelier",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-adele-hello-092",
+        "candidate_id": "survey-f12-song_recording-adele-hello-092",
+        "object_type": "song_recording",
+        "display_label": "Hello",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-ed-sheeran-shape-of-you-092",
+        "candidate_id": "survey-f12-song_recording-ed-sheeran-shape-of-you-092",
+        "object_type": "song_recording",
+        "display_label": "Shape of You",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-lewis-capaldi-someone-you-loved-092",
+        "candidate_id": "survey-f12-song_recording-lewis-capaldi-someone-you-loved-092",
+        "object_type": "song_recording",
+        "display_label": "Someone You Loved",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-ed-sheeran-092",
+        "question_id": "boundary-survey-f12-artist-ed-sheeran-092",
+        "display_label": "Ed Sheeran",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-christina-perri-092",
+        "question_id": "boundary-survey-f12-artist-christina-perri-092",
+        "display_label": "Christina Perri",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-rachel-platten-092",
+        "question_id": "boundary-survey-f12-artist-rachel-platten-092",
+        "display_label": "Rachel Platten",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-ed-sheeran-thinking-out-loud-092",
+        "question_id": "boundary-survey-f12-song_recording-ed-sheeran-thinking-out-loud-092",
+        "display_label": "Thinking Out Loud",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-rachel-platten-fight-song-092",
+        "question_id": "boundary-survey-f12-song_recording-rachel-platten-fight-song-092",
+        "display_label": "Fight Song",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-ed-sheeran-092",
+        "probe_id": "probe-survey-f12-artist-ed-sheeran-092",
+        "entity_type": "artist",
+        "display_label": "Ed Sheeran",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-christina-perri-092",
+        "probe_id": "probe-survey-f12-artist-christina-perri-092",
+        "entity_type": "artist",
+        "display_label": "Christina Perri",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-rachel-platten-092",
+        "probe_id": "probe-survey-f12-artist-rachel-platten-092",
+        "entity_type": "artist",
+        "display_label": "Rachel Platten",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-ed-sheeran-thinking-out-loud-092",
+        "probe_id": "probe-survey-f12-song_recording-ed-sheeran-thinking-out-loud-092",
+        "entity_type": "song_recording",
+        "display_label": "Thinking Out Loud",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-rachel-platten-fight-song-092",
+        "probe_id": "probe-survey-f12-song_recording-rachel-platten-fight-song-092",
+        "entity_type": "song_recording",
+        "display_label": "Fight Song",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_12/archetype_091",
+      "family_12/archetype_093"
+    ],
+    "before_archetype_refs": [
+      "family_12/archetype_091"
+    ],
+    "after_archetype_refs": [
+      "family_12/archetype_093"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_12": {
+      "title": "Normalized canonical graph export, Family 12",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_12/normalized_family_12.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "britannica_adele": {
+      "title": "Adele",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Adele-British-singer-and-songwriter",
+      "source_type": "reference",
+      "audit_use": "Supports Adele as the central adult-pop vocal and piano-ballad anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Adele as the central adult-pop vocal and piano-ballad anchor."
+    },
+    "britannica_ed_sheeran": {
+      "title": "Ed Sheeran",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Ed-Sheeran",
+      "source_type": "reference",
+      "audit_use": "Supports the singer-songwriter crossover side of adult pop.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the singer-songwriter crossover side of adult pop."
+    },
+    "allmusic_adult_contemporary": {
+      "title": "Adult Contemporary",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/adult-contemporary-ma0000004445",
+      "source_type": "reference",
+      "audit_use": "Provides style context for polished, broad-audience adult radio pop.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Provides style context for polished, broad-audience adult radio pop."
+    },
+    "grammy_sam_smith": {
+      "title": "Sam Smith",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/artists/sam-smith/18846",
+      "source_type": "reference",
+      "audit_use": "Supports the vocal-ballad and adult-pop crossover strand.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the vocal-ballad and adult-pop crossover strand."
+    },
+    "rockhall_whitney_houston": {
+      "title": "Whitney Houston",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/whitney-houston/",
+      "source_type": "museum_reference",
+      "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "rockhall_carole_king": {
+      "title": "Carole King",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/carole-king/",
+      "source_type": "museum_reference",
+      "audit_use": "Songwriter-to-performer transition and adult pop songcraft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+    },
+    "britannica_taylor_swift": {
+      "title": "Taylor Swift",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Taylor-Swift",
+      "source_type": "reference",
+      "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "092-d-01",
+      "claim_text": "This route centers adult-facing pop anthems where a clear vocal foreground, piano or midtempo arrangement, and emotional directness do most of the work.",
+      "source_ref_ids": [
+        "britannica_adele",
+        "allmusic_adult_contemporary",
+        "grammy_sam_smith"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_12/archetype_092",
+        "artist:adele",
+        "artist:sam-smith"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "092-d-02",
+      "claim_text": "Adele is the strongest anchor because 21 and 25 made retro-soul vocal force and piano-ballad drama into mass pop events.",
+      "source_ref_ids": [
+        "britannica_adele",
+        "allmusic_adult_contemporary"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:adele",
+        "album:adele-21",
+        "album:adele-25",
+        "song_recording:adele-hello"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "092-d-03",
+      "claim_text": "Ed Sheeran shows the lane can be intimate and guitar-based as well as cinematic, especially when singer-songwriter framing crosses into global pop.",
+      "source_ref_ids": [
+        "britannica_ed_sheeran",
+        "allmusic_adult_contemporary"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "did_you_know"
+      ],
+      "graph_refs": [
+        "artist:ed-sheeran"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "092-d-04",
+      "claim_text": "Listen for a chorus designed for communal uplift or television-drama catharsis, but keep it separate from worship music and from dance-pop release.",
+      "source_ref_ids": [
+        "allmusic_adult_contemporary",
+        "britannica_adele",
+        "grammy_sam_smith"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_12/archetype_092"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "092-adult_pop_tv_drama_anthem_inspirational_pop-boundary",
+      "claim_text": "Adult Pop / TV-Drama Anthem / Inspirational Pop's boundary is clearest when big vocal foreground and piano or acoustic core appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "britannica_adele",
+        "britannica_ed_sheeran"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_092",
+        "artist:adele",
+        "artist:ed-sheeran"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "092-adult_pop_tv_drama_anthem_inspirational_pop-examples",
+      "claim_text": "Adele, Ed Sheeran, 21 - Adele gives Adult Pop / TV-Drama Anthem / Inspirational Pop concrete anchors because the examples expose anthemic emotional lift inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "britannica_ed_sheeran",
+        "allmusic_adult_contemporary"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_092",
+        "artist:adele",
+        "artist:ed-sheeran"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "092-adult_pop_tv_drama_anthem_inspirational_pop-distinct",
+      "claim_text": "The key musical distinction in Adult Pop / TV-Drama Anthem / Inspirational Pop is The production is polished, but the main signal is the voice delivering legible emotional stakes, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "britannica_adele",
+        "allmusic_adult_contemporary"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_092",
+        "artist:adele",
+        "artist:ed-sheeran"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Adult pop anthems built from vocal foreground, emotional clarity, and broad cross-generational reach.",
+    "history_capsule": "Adele, Ed Sheeran, Sam Smith, Sia, and related artists turned ballads and uplift anthems into high-recognition pop events.",
+    "why_it_mattered": "The route explains why some modern pop travels through weddings, television dramas, talent shows, and family listening rather than club or teen-pop scenes.",
+    "what_made_it_distinct": "The production is polished, but the main signal is the voice delivering legible emotional stakes.",
+    "what_to_listen_for": [
+      "big vocal foreground",
+      "piano or acoustic core",
+      "anthemic emotional lift",
+      "slow-build drama",
+      "adult radio polish"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:adele",
+        "example_type": "artist",
+        "display_label": "Adele",
+        "why_this_example_matters": "Adele anchors Adult Pop / TV-Drama Anthem / Inspirational Pop by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "big vocal foreground",
+          "piano or acoustic core"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:ed-sheeran",
+        "example_type": "artist",
+        "display_label": "Ed Sheeran",
+        "why_this_example_matters": "Ed Sheeran anchors Adult Pop / TV-Drama Anthem / Inspirational Pop by making vocal persona and high-definition production easier to hear.",
+        "what_to_listen_for": [
+          "piano or acoustic core",
+          "anthemic emotional lift"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:adele-21",
+        "example_type": "album",
+        "display_label": "21 - Adele",
+        "why_this_example_matters": "21 - Adele anchors Adult Pop / TV-Drama Anthem / Inspirational Pop by making high-definition production and dance or video-ready structure easier to hear.",
+        "what_to_listen_for": [
+          "anthemic emotional lift",
+          "slow-build drama"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:adele-25",
+        "example_type": "album",
+        "display_label": "25 - Adele",
+        "why_this_example_matters": "25 - Adele anchors Adult Pop / TV-Drama Anthem / Inspirational Pop by making dance or video-ready structure and direct emotional address easier to hear.",
+        "what_to_listen_for": [
+          "slow-build drama",
+          "adult radio polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:adele-rolling-in-the-deep",
+        "example_type": "song_recording",
+        "display_label": "Rolling in the Deep - Adele",
+        "why_this_example_matters": "Rolling in the Deep - Adele anchors Adult Pop / TV-Drama Anthem / Inspirational Pop by making direct emotional address and instant chorus recognition easier to hear.",
+        "what_to_listen_for": [
+          "adult radio polish"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:adele-hello",
+        "example_type": "song_recording",
+        "display_label": "Hello - Adele",
+        "why_this_example_matters": "Hello - Adele anchors Adult Pop / TV-Drama Anthem / Inspirational Pop by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "big vocal foreground",
+          "piano or acoustic core"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_12/archetype_091"
+      ],
+      "after": [
+        "family_12/archetype_093"
+      ],
+      "related": [
+        "family_12/archetype_091",
+        "family_12/archetype_093"
+      ],
+      "copy": "Use Adult Pop / TV-Drama Anthem / Inspirational Pop as a contextual road inside Pop Monoculture and Persona Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "092-dyk-1",
+        "copy": "Adele keeps this route tied to soul-vocal lineage without making it R&B.",
+        "source_ref_ids": [
+          "britannica_adele",
+          "allmusic_adult_contemporary",
+          "grammy_sam_smith"
+        ]
+      },
+      {
+        "card_id": "092-dyk-2",
+        "copy": "The word inspirational here describes pop usage, not necessarily religious content.",
+        "source_ref_ids": [
+          "britannica_adele",
+          "allmusic_adult_contemporary"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether adult pop / tv-drama anthem / inspirational pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Adult pop anthems built from vocal foreground, emotional clarity, and broad cross-generational reach.",
+      "The route explains why some modern pop travels through weddings, television dramas, talent shows, and family listening rather than club or teen-pop scenes.",
+      "The production is polished, but the main signal is the voice delivering legible emotional stakes."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not cite worship-radio sources unless the object is actually Christian music; this route is secular adult pop.",
+    "personalization_hooks": [
+      {
+        "hook_id": "092-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[092]",
+          "atlas_state.family_affinity[12]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[092] >= 0.65 || atlas_state.family_affinity[12] >= 0.65",
+        "copy_variant": "Your Atlas signals make Adult Pop / TV-Drama Anthem / Inspirational Pop useful as a contextual landmark.",
+        "fallback_copy": "Use Adult Pop / TV-Drama Anthem / Inspirational Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "092-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_12/archetype_092 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_12/archetype_092",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Adult Pop / TV-Drama Anthem / Inspirational Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "092-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_12/archetype_092 || atlas_state.boundary_question_results has boundary_negative for family_12/archetype_092",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Adult Pop / TV-Drama Anthem / Inspirational Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "092-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_12/archetype_092 || atlas_state.related_mission_ids references family_12/archetype_092",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "092-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_12/archetype_092 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_12/archetype_092 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_12/archetype_092",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Adult Pop / TV-Drama Anthem / Inspirational Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_12": {
+        "title": "Normalized canonical graph export, Family 12",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_12/normalized_family_12.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "britannica_adele": {
+        "title": "Adele",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Adele-British-singer-and-songwriter",
+        "source_type": "reference",
+        "audit_use": "Supports Adele as the central adult-pop vocal and piano-ballad anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Adele as the central adult-pop vocal and piano-ballad anchor."
+      },
+      "britannica_ed_sheeran": {
+        "title": "Ed Sheeran",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Ed-Sheeran",
+        "source_type": "reference",
+        "audit_use": "Supports the singer-songwriter crossover side of adult pop.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the singer-songwriter crossover side of adult pop."
+      },
+      "allmusic_adult_contemporary": {
+        "title": "Adult Contemporary",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/adult-contemporary-ma0000004445",
+        "source_type": "reference",
+        "audit_use": "Provides style context for polished, broad-audience adult radio pop.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides style context for polished, broad-audience adult radio pop."
+      },
+      "grammy_sam_smith": {
+        "title": "Sam Smith",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/artists/sam-smith/18846",
+        "source_type": "reference",
+        "audit_use": "Supports the vocal-ballad and adult-pop crossover strand.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-ballad and adult-pop crossover strand."
+      },
+      "rockhall_whitney_houston": {
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_type": "museum_reference",
+        "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "rockhall_carole_king": {
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_type": "museum_reference",
+        "audit_use": "Songwriter-to-performer transition and adult pop songcraft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+      },
+      "britannica_taylor_swift": {
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_type": "reference",
+        "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "092-d-01",
+        "claim_text": "This route centers adult-facing pop anthems where a clear vocal foreground, piano or midtempo arrangement, and emotional directness do most of the work.",
+        "source_ref_ids": [
+          "britannica_adele",
+          "allmusic_adult_contemporary",
+          "grammy_sam_smith"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_12/archetype_092",
+          "artist:adele",
+          "artist:sam-smith"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "092-d-02",
+        "claim_text": "Adele is the strongest anchor because 21 and 25 made retro-soul vocal force and piano-ballad drama into mass pop events.",
+        "source_ref_ids": [
+          "britannica_adele",
+          "allmusic_adult_contemporary"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:adele",
+          "album:adele-21",
+          "album:adele-25",
+          "song_recording:adele-hello"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "092-d-03",
+        "claim_text": "Ed Sheeran shows the lane can be intimate and guitar-based as well as cinematic, especially when singer-songwriter framing crosses into global pop.",
+        "source_ref_ids": [
+          "britannica_ed_sheeran",
+          "allmusic_adult_contemporary"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "did_you_know"
+        ],
+        "graph_refs": [
+          "artist:ed-sheeran"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "092-d-04",
+        "claim_text": "Listen for a chorus designed for communal uplift or television-drama catharsis, but keep it separate from worship music and from dance-pop release.",
+        "source_ref_ids": [
+          "allmusic_adult_contemporary",
+          "britannica_adele",
+          "grammy_sam_smith"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_12/archetype_092"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "092-adult_pop_tv_drama_anthem_inspirational_pop-boundary",
+        "claim_text": "Adult Pop / TV-Drama Anthem / Inspirational Pop's boundary is clearest when big vocal foreground and piano or acoustic core appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "britannica_adele",
+          "britannica_ed_sheeran"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_092",
+          "artist:adele",
+          "artist:ed-sheeran"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "092-adult_pop_tv_drama_anthem_inspirational_pop-examples",
+        "claim_text": "Adele, Ed Sheeran, 21 - Adele gives Adult Pop / TV-Drama Anthem / Inspirational Pop concrete anchors because the examples expose anthemic emotional lift inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "britannica_ed_sheeran",
+          "allmusic_adult_contemporary"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_092",
+          "artist:adele",
+          "artist:ed-sheeran"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "092-adult_pop_tv_drama_anthem_inspirational_pop-distinct",
+        "claim_text": "The key musical distinction in Adult Pop / TV-Drama Anthem / Inspirational Pop is The production is polished, but the main signal is the voice delivering legible emotional stakes, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "britannica_adele",
+          "allmusic_adult_contemporary"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_092",
+          "artist:adele",
+          "artist:ed-sheeran"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "adult pop TV drama anthem inspirational pop Adele Ed Sheeran Sam Smith Sia Rachel Platten",
+    "selected_sources": [
+      {
+        "source_ref_id": "britannica_adele",
+        "title": "Adele",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Adele-British-singer-and-songwriter",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Adele as the central adult-pop vocal and piano-ballad anchor."
+      },
+      {
+        "source_ref_id": "britannica_ed_sheeran",
+        "title": "Ed Sheeran",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Ed-Sheeran",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the singer-songwriter crossover side of adult pop."
+      },
+      {
+        "source_ref_id": "allmusic_adult_contemporary",
+        "title": "Adult Contemporary",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/adult-contemporary-ma0000004445",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides style context for polished, broad-audience adult radio pop."
+      },
+      {
+        "source_ref_id": "grammy_sam_smith",
+        "title": "Sam Smith",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/artists/sam-smith/18846",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-ballad and adult-pop crossover strand."
+      },
+      {
+        "source_ref_id": "rockhall_whitney_houston",
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "rockhall_carole_king",
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+      },
+      {
+        "source_ref_id": "britannica_taylor_swift",
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_relevance": "example_object_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_edm",
+        "title": "Electronic dance music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-dance-music",
+        "source_relevance": "wrong_context",
+        "why_rejected": "EDM club/festival history is outside this archetype and would blur the route boundary."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context. Broad popular-music industry, audience, and stylistic context. Songwriter-to-performer transition and adult pop songcraft. Modern pop authorship, country-pop crossover, and streaming-era scale."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  }
+}

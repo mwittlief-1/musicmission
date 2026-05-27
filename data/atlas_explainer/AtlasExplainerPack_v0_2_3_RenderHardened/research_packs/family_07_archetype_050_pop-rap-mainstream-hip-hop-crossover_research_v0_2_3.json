@@ -1,0 +1,1662 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_07_archetype_050_pop-rap-mainstream-hip-hop-crossover_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_7/normalized_family_7.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 7,
+    "family_slug": "hip-hop",
+    "family_name": "Hip-Hop",
+    "archetype_id": "050",
+    "archetype_slug": "pop-rap-mainstream-hip-hop-crossover",
+    "canonical_graph_ref": "family_07/archetype_050",
+    "existing_graph_label_name": "Pop-Rap / Mainstream Hip-Hop Crossover",
+    "editorial_display_title": "Pop-Rap / Mainstream Hip-Hop Crossover",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:eminem",
+        "object_id": "eminem",
+        "display_label": "Eminem",
+        "source_membership_id": "family-7-artist-050-eminem",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition, album-world, and controversy-era crossover anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:kanye-west",
+        "object_id": "kanye-west",
+        "display_label": "Kanye West",
+        "source_membership_id": "family-7-artist-050-kanye-west",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Major pop-rap, producer-artist, and album-world bridge across 2000s and 2010s hip-hop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nicki-minaj",
+        "object_id": "nicki-minaj",
+        "display_label": "Nicki Minaj",
+        "source_membership_id": "family-7-artist-050-nicki-minaj",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central woman MC and pop-rap crossover figure.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:drake",
+        "object_id": "drake",
+        "display_label": "Drake",
+        "source_membership_id": "family-7-artist-050-drake",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "The clearest streaming-era pop-rap/R&B-rap mass anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:missy-elliott",
+        "object_id": "missy-elliott",
+        "display_label": "Missy Elliott",
+        "source_membership_id": "family-7-artist-050-missy-elliott",
+        "roles": [
+          "anchor",
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Futurist pop-rap and video-era single anchor with album-world support.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:50-cent",
+        "object_id": "50-cent",
+        "display_label": "50 Cent",
+        "source_membership_id": "family-7-artist-050-50-cent",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Early-2000s street-to-pop crossover with one of the strongest club gateways.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nelly",
+        "object_id": "nelly",
+        "display_label": "Nelly",
+        "source_membership_id": "family-7-artist-050-nelly",
+        "roles": [
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Normal-user pop-rap and radio-party anchor that must not be omitted for critic-bias reasons.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:fugees",
+        "object_id": "fugees",
+        "display_label": "Fugees",
+        "source_membership_id": "family-7-artist-050-fugees",
+        "roles": [
+          "gateway",
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Rap, soul, reggae, and alternative-radio crossover with huge normal-user memory.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lauryn-hill",
+        "object_id": "lauryn-hill",
+        "display_label": "Lauryn Hill",
+        "source_membership_id": "family-7-artist-050-lauryn-hill",
+        "roles": [
+          "bridge",
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Solo rap-soul crossover anchor with canonical album and song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:cardi-b",
+        "object_id": "cardi-b",
+        "display_label": "Cardi B",
+        "source_membership_id": "family-7-artist-050-cardi-b",
+        "roles": [
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Modern pop-rap normal-user anchor with explicit-version survey concerns.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:megan-thee-stallion",
+        "object_id": "megan-thee-stallion",
+        "display_label": "Megan Thee Stallion",
+        "source_membership_id": "family-7-artist-050-megan-thee-stallion",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Recent mainstream rap and party/social-media recognition anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:doja-cat",
+        "object_id": "doja-cat",
+        "display_label": "Doja Cat",
+        "source_membership_id": "family-7-artist-050-doja-cat",
+        "roles": [
+          "boundary",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-rap and internet-era boundary object with very high normal-user recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:eminem-the-marshall-mathers-lp",
+        "object_id": "eminem-the-marshall-mathers-lp",
+        "display_label": "The Marshall Mathers LP - Eminem",
+        "source_membership_id": "family-7-album-050-eminem-the-marshall-mathers-lp",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Eminem's central mass and album-canon object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:50-cent-get-rich-or-die-tryin",
+        "object_id": "50-cent-get-rich-or-die-tryin",
+        "display_label": "Get Rich or Die Tryin' - 50 Cent",
+        "source_membership_id": "family-7-album-050-50-cent-get-rich-or-die-tryin",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Early-2000s street/pop crossover album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kanye-west-the-college-dropout",
+        "object_id": "kanye-west-the-college-dropout",
+        "display_label": "The College Dropout - Kanye West",
+        "source_membership_id": "family-7-album-050-kanye-west-the-college-dropout",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Backpack-to-mainstream Kanye album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kanye-west-my-beautiful-dark-twisted-fantasy",
+        "object_id": "kanye-west-my-beautiful-dark-twisted-fantasy",
+        "display_label": "My Beautiful Dark Twisted Fantasy - Kanye West",
+        "source_membership_id": "family-7-album-050-kanye-west-my-beautiful-dark-twisted-fantasy",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "2010s album-canon and pop-rap maximalism anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:drake-take-care",
+        "object_id": "drake-take-care",
+        "display_label": "Take Care - Drake",
+        "source_membership_id": "family-7-album-050-drake-take-care",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Drake's rap/R&B crossover album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:fugees-the-score",
+        "object_id": "fugees-the-score",
+        "display_label": "The Score - Fugees",
+        "source_membership_id": "family-7-album-050-fugees-the-score",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Rap-soul-reggae crossover album with huge normal-user recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lauryn-hill-the-miseducation-of-lauryn-hill",
+        "object_id": "lauryn-hill-the-miseducation-of-lauryn-hill",
+        "display_label": "The Miseducation of Lauryn Hill - Lauryn Hill",
+        "source_membership_id": "family-7-album-050-lauryn-hill-the-miseducation-of-lauryn-hill",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Rap-soul canonical crossover album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nelly-country-grammar",
+        "object_id": "nelly-country-grammar",
+        "display_label": "Country Grammar - Nelly",
+        "source_membership_id": "family-7-album-050-nelly-country-grammar",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-rap and Midwest radio mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:eminem-the-eminem-show",
+        "object_id": "eminem-the-eminem-show",
+        "display_label": "The Eminem Show - Eminem",
+        "source_membership_id": "family-7-album-050-eminem-the-eminem-show",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Second mass Eminem album object with huge radio memory.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kanye-west-graduation",
+        "object_id": "kanye-west-graduation",
+        "display_label": "Graduation - Kanye West",
+        "source_membership_id": "family-7-album-050-kanye-west-graduation",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Arena/electro-pop-rap mass crossover album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:missy-elliott-get-ur-freak-on",
+        "object_id": "missy-elliott-get-ur-freak-on",
+        "display_label": "Get Ur Freak On - Missy Elliott",
+        "source_membership_id": "family-7-song-050-missy-elliott-get-ur-freak-on",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missy futuristic pop-rap and club gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:missy-elliott-work-it",
+        "object_id": "missy-elliott-work-it",
+        "display_label": "Work It - Missy Elliott",
+        "source_membership_id": "family-7-song-050-missy-elliott-work-it",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missy's broadest normal-user single object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:eminem-lose-yourself",
+        "object_id": "eminem-lose-yourself",
+        "display_label": "Lose Yourself - Eminem",
+        "source_membership_id": "family-7-song-050-eminem-lose-yourself",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "One of the strongest mass-recognition rap records.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:50-cent-in-da-club",
+        "object_id": "50-cent-in-da-club",
+        "display_label": "In Da Club - 50 Cent",
+        "source_membership_id": "family-7-song-050-50-cent-in-da-club",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive 2000s rap club gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:cardi-b-bodak-yellow",
+        "object_id": "cardi-b-bodak-yellow",
+        "display_label": "Bodak Yellow - Cardi B",
+        "source_membership_id": "family-7-song-050-cardi-b-bodak-yellow",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Cardi B breakthrough and modern pop-rap anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:coolio-feat-lv-gangstas-paradise",
+        "object_id": "coolio-feat-lv-gangstas-paradise",
+        "display_label": "Gangsta's Paradise - Coolio feat. L.V.",
+        "source_membership_id": "family-7-song-050-coolio-feat-lv-gangstas-paradise",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mainstream rap soundtrack-era mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:fugees-ready-or-not",
+        "object_id": "fugees-ready-or-not",
+        "display_label": "Ready or Not - Fugees",
+        "source_membership_id": "family-7-song-050-fugees-ready-or-not",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Fugees rap-soul alternative-radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:fugees-killing-me-softly",
+        "object_id": "fugees-killing-me-softly",
+        "display_label": "Killing Me Softly - Fugees",
+        "source_membership_id": "family-7-song-050-fugees-killing-me-softly",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Fugees cover/version mass object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lauryn-hill-doo-wop-that-thing",
+        "object_id": "lauryn-hill-doo-wop-that-thing",
+        "display_label": "Doo Wop (That Thing) - Lauryn Hill",
+        "source_membership_id": "family-7-song-050-lauryn-hill-doo-wop-that-thing",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Solo Lauryn rap-soul crossover anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:eminem-feat-dido-stan",
+        "object_id": "eminem-feat-dido-stan",
+        "display_label": "Stan - Eminem feat. Dido",
+        "source_membership_id": "family-7-song-050-eminem-feat-dido-stan",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Narrative rap and pop-sample crossover object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:eminem-the-real-slim-shady",
+        "object_id": "eminem-the-real-slim-shady",
+        "display_label": "The Real Slim Shady - Eminem",
+        "source_membership_id": "family-7-song-050-eminem-the-real-slim-shady",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Eminem pop-culture gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:kanye-west-feat-jamie-foxx-gold-digger",
+        "object_id": "kanye-west-feat-jamie-foxx-gold-digger",
+        "display_label": "Gold Digger - Kanye West feat. Jamie Foxx",
+        "source_membership_id": "family-7-song-050-kanye-west-feat-jamie-foxx-gold-digger",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Kanye's pop-rap mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:kanye-west-stronger",
+        "object_id": "kanye-west-stronger",
+        "display_label": "Stronger - Kanye West",
+        "source_membership_id": "family-7-song-050-kanye-west-stronger",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Electro-pop-rap crossover and Daft Punk bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jay-z-feat-alicia-keys-empire-state-of-mind",
+        "object_id": "jay-z-feat-alicia-keys-empire-state-of-mind",
+        "display_label": "Empire State of Mind - Jay-Z feat. Alicia Keys",
+        "source_membership_id": "family-7-song-050-jay-z-feat-alicia-keys-empire-state-of-mind",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass East Coast pop-rap anthem.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f7-artist-50-cent-050",
+        "candidate_id": "survey-f7-artist-50-cent-050",
+        "object_type": "artist",
+        "display_label": "50 Cent",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-cardi-b-050",
+        "candidate_id": "survey-f7-artist-cardi-b-050",
+        "object_type": "artist",
+        "display_label": "Cardi B",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-drake-050",
+        "candidate_id": "survey-f7-artist-drake-050",
+        "object_type": "artist",
+        "display_label": "Drake",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-eminem-050",
+        "candidate_id": "survey-f7-artist-eminem-050",
+        "object_type": "artist",
+        "display_label": "Eminem",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-fugees-050",
+        "candidate_id": "survey-f7-artist-fugees-050",
+        "object_type": "artist",
+        "display_label": "Fugees",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-kanye-west-050",
+        "candidate_id": "survey-f7-artist-kanye-west-050",
+        "object_type": "artist",
+        "display_label": "Kanye West",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-lauryn-hill-050",
+        "candidate_id": "survey-f7-artist-lauryn-hill-050",
+        "object_type": "artist",
+        "display_label": "Lauryn Hill",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-missy-elliott-050",
+        "candidate_id": "survey-f7-artist-missy-elliott-050",
+        "object_type": "artist",
+        "display_label": "Missy Elliott",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-nelly-050",
+        "candidate_id": "survey-f7-artist-nelly-050",
+        "object_type": "artist",
+        "display_label": "Nelly",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-nicki-minaj-050",
+        "candidate_id": "survey-f7-artist-nicki-minaj-050",
+        "object_type": "artist",
+        "display_label": "Nicki Minaj",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-megan-thee-stallion-050",
+        "candidate_id": "survey-f7-artist-megan-thee-stallion-050",
+        "object_type": "artist",
+        "display_label": "Megan Thee Stallion",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-doja-cat-050",
+        "candidate_id": "survey-f7-artist-doja-cat-050",
+        "object_type": "artist",
+        "display_label": "Doja Cat",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-mc-hammer-050",
+        "candidate_id": "survey-f7-artist-mc-hammer-050",
+        "object_type": "artist",
+        "display_label": "MC Hammer",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-flo-rida-050",
+        "candidate_id": "survey-f7-artist-flo-rida-050",
+        "object_type": "artist",
+        "display_label": "Flo Rida",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-vanilla-ice-050",
+        "candidate_id": "survey-f7-artist-vanilla-ice-050",
+        "object_type": "artist",
+        "display_label": "Vanilla Ice",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-nelly-country-grammar-050",
+        "candidate_id": "survey-f7-album-nelly-country-grammar-050",
+        "object_type": "album",
+        "display_label": "Country Grammar",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-50-cent-get-rich-or-die-tryin-050",
+        "candidate_id": "survey-f7-album-50-cent-get-rich-or-die-tryin-050",
+        "object_type": "album",
+        "display_label": "Get Rich or Die Tryin'",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-kanye-west-graduation-050",
+        "candidate_id": "survey-f7-album-kanye-west-graduation-050",
+        "object_type": "album",
+        "display_label": "Graduation",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-cardi-b-invasion-of-privacy-050",
+        "candidate_id": "survey-f7-album-cardi-b-invasion-of-privacy-050",
+        "object_type": "album",
+        "display_label": "Invasion of Privacy",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-kanye-west-my-beautiful-dark-twisted-fantasy-050",
+        "candidate_id": "survey-f7-album-kanye-west-my-beautiful-dark-twisted-fantasy-050",
+        "object_type": "album",
+        "display_label": "My Beautiful Dark Twisted Fantasy",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-doja-cat-050",
+        "question_id": "boundary-survey-f7-artist-doja-cat-050",
+        "display_label": "Doja Cat",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-mc-hammer-050",
+        "question_id": "boundary-survey-f7-artist-mc-hammer-050",
+        "display_label": "MC Hammer",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-flo-rida-050",
+        "question_id": "boundary-survey-f7-artist-flo-rida-050",
+        "display_label": "Flo Rida",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-vanilla-ice-050",
+        "question_id": "boundary-survey-f7-artist-vanilla-ice-050",
+        "display_label": "Vanilla Ice",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-album-doja-cat-planet-her-050",
+        "question_id": "boundary-survey-f7-album-doja-cat-planet-her-050",
+        "display_label": "Planet Her",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-drake-hotline-bling-050",
+        "question_id": "boundary-survey-f7-song_recording-drake-hotline-bling-050",
+        "display_label": "Hotline Bling",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-digital-underground-the-humpty-dance-050",
+        "question_id": "boundary-survey-f7-song_recording-digital-underground-the-humpty-dance-050",
+        "display_label": "The Humpty Dance",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-mc-hammer-u-cant-touch-this-050",
+        "question_id": "boundary-survey-f7-song_recording-mc-hammer-u-cant-touch-this-050",
+        "display_label": "U Can't Touch This",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-flo-rida-feat-t-pain-low-050",
+        "question_id": "boundary-survey-f7-song_recording-flo-rida-feat-t-pain-low-050",
+        "display_label": "Low",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-doja-cat-say-so-050",
+        "question_id": "boundary-survey-f7-song_recording-doja-cat-say-so-050",
+        "display_label": "Say So",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-nicki-minaj-starships-050",
+        "question_id": "boundary-survey-f7-song_recording-nicki-minaj-starships-050",
+        "display_label": "Starships",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-vanilla-ice-ice-ice-baby-050",
+        "question_id": "boundary-survey-f7-song_recording-vanilla-ice-ice-ice-baby-050",
+        "display_label": "Ice Ice Baby",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-doja-cat-050",
+        "probe_id": "probe-survey-f7-artist-doja-cat-050",
+        "entity_type": "artist",
+        "display_label": "Doja Cat",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-mc-hammer-050",
+        "probe_id": "probe-survey-f7-artist-mc-hammer-050",
+        "entity_type": "artist",
+        "display_label": "MC Hammer",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-flo-rida-050",
+        "probe_id": "probe-survey-f7-artist-flo-rida-050",
+        "entity_type": "artist",
+        "display_label": "Flo Rida",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-vanilla-ice-050",
+        "probe_id": "probe-survey-f7-artist-vanilla-ice-050",
+        "entity_type": "artist",
+        "display_label": "Vanilla Ice",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-album-doja-cat-planet-her-050",
+        "probe_id": "probe-survey-f7-album-doja-cat-planet-her-050",
+        "entity_type": "album",
+        "display_label": "Planet Her",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-drake-hotline-bling-050",
+        "probe_id": "probe-survey-f7-song_recording-drake-hotline-bling-050",
+        "entity_type": "song_recording",
+        "display_label": "Hotline Bling",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-digital-underground-the-humpty-dance-050",
+        "probe_id": "probe-survey-f7-song_recording-digital-underground-the-humpty-dance-050",
+        "entity_type": "song_recording",
+        "display_label": "The Humpty Dance",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-mc-hammer-u-cant-touch-this-050",
+        "probe_id": "probe-survey-f7-song_recording-mc-hammer-u-cant-touch-this-050",
+        "entity_type": "song_recording",
+        "display_label": "U Can't Touch This",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-flo-rida-feat-t-pain-low-050",
+        "probe_id": "probe-survey-f7-song_recording-flo-rida-feat-t-pain-low-050",
+        "entity_type": "song_recording",
+        "display_label": "Low",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-doja-cat-say-so-050",
+        "probe_id": "probe-survey-f7-song_recording-doja-cat-say-so-050",
+        "entity_type": "song_recording",
+        "display_label": "Say So",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-nicki-minaj-starships-050",
+        "probe_id": "probe-survey-f7-song_recording-nicki-minaj-starships-050",
+        "entity_type": "song_recording",
+        "display_label": "Starships",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-vanilla-ice-ice-ice-baby-050",
+        "probe_id": "probe-survey-f7-song_recording-vanilla-ice-ice-ice-baby-050",
+        "entity_type": "song_recording",
+        "display_label": "Ice Ice Baby",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_07/archetype_049",
+      "family_07/archetype_051"
+    ],
+    "before_archetype_refs": [
+      "family_07/archetype_049"
+    ],
+    "after_archetype_refs": [
+      "family_07/archetype_051"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_7": {
+      "title": "Normalized canonical graph export, Family 7",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_7/normalized_family_7.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "050_allmusic_pop_rap": {
+      "title": "Pop-Rap",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/pop-rap-ma0000005012",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for rap's pop-crossover branch.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for rap's pop-crossover branch."
+    },
+    "050_rockhall_eminem": {
+      "title": "Eminem",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/eminem/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Eminem as a massive mainstream rap crossover figure.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Eminem as a massive mainstream rap crossover figure."
+    },
+    "050_rockhall_missy_elliott": {
+      "title": "Missy Elliott",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/missy-elliott/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Missy Elliott as a pop-rap, video-era, and production-innovation anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Missy Elliott as a pop-rap, video-era, and production-innovation anchor."
+    },
+    "britannica_hip_hop": {
+      "title": "Hip-hop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/hip-hop",
+      "source_type": "reference",
+      "audit_use": "Hip-hop culture, DJing, MCing, dance, art, and social context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+    },
+    "britannica_rap": {
+      "title": "Rap",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rap",
+      "source_type": "reference",
+      "audit_use": "Rap as vocal/rhythmic practice and popular music form.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "rockhall_michael_jackson": {
+      "title": "Michael Jackson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/michael-jackson/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop sovereignty, dance, video, and global star image.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Pop sovereignty, dance, video, and global star image."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "050-c01",
+      "claim_text": "Pop-rap turns MC identity, hooks, producer branding, and mass-media charisma into mainstream pop architecture.",
+      "source_ref_ids": [
+        "050_allmusic_pop_rap",
+        "050_rockhall_eminem",
+        "050_rockhall_missy_elliott"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_07/archetype_050",
+        "artist:eminem",
+        "artist:kanye-west",
+        "artist:nicki-minaj",
+        "artist:drake"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "050-c02",
+      "claim_text": "Eminem anchors the early-2000s crossover explosion: technical rap, shock persona, MTV visibility, and huge album sales in one package.",
+      "source_ref_ids": [
+        "050_rockhall_eminem",
+        "050_allmusic_pop_rap"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "artist:eminem",
+        "album:eminem-the-marshall-mathers-lp"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "050-c03",
+      "claim_text": "Missy Elliott represents pop-rap as audiovisual invention, where futuristic production, hooks, dance, and personality are inseparable.",
+      "source_ref_ids": [
+        "050_rockhall_missy_elliott",
+        "050_allmusic_pop_rap"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "song_recording:missy-elliott-get-ur-freak-on",
+        "song_recording:missy-elliott-work-it"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "050-c04",
+      "claim_text": "Kanye West, Nicki Minaj, and Drake show later crossover forms: producer-auteur albums, maximalist rap-pop persona, and melodic streaming-era dominance.",
+      "source_ref_ids": [
+        "050_allmusic_pop_rap",
+        "050_rockhall_eminem",
+        "050_rockhall_missy_elliott"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "artist:kanye-west",
+        "artist:nicki-minaj",
+        "artist:drake",
+        "album:50-cent-get-rich-or-die-tryin"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "050-pop_rap_mainstream_hip_hop_crossover-boundary",
+      "claim_text": "Pop-Rap / Mainstream Hip-Hop Crossover's boundary is clearest when big chorus and producer tag or signature beat appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "050_allmusic_pop_rap",
+        "050_rockhall_eminem"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_07/archetype_050",
+        "artist:eminem",
+        "artist:kanye-west"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "050-pop_rap_mainstream_hip_hop_crossover-examples",
+      "claim_text": "Eminem, Kanye West, The Marshall Mathers LP - Eminem gives Pop-Rap / Mainstream Hip-Hop Crossover concrete anchors because the examples expose high-persona delivery inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "050_rockhall_eminem",
+        "050_rockhall_missy_elliott"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_07/archetype_050",
+        "artist:eminem",
+        "artist:kanye-west"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Rap built for pop-scale reach: hooks, persona, video, production spectacle, and mainstream dominance.",
+    "history_capsule": "As hip-hop became central to popular music, pop-rap gathered artists who could turn rap skill and personality into chart-scale events.",
+    "why_it_mattered": "It made hip-hop one of pop's main languages and changed what a mainstream superstar could sound like.",
+    "what_made_it_distinct": "The rap performance stays central, but the record is engineered for broad recognition and repeat hooks.",
+    "what_to_listen_for": [
+      "big chorus",
+      "producer tag or signature beat",
+      "high-persona delivery",
+      "radio edit energy",
+      "video-ready hook"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:eminem",
+        "example_type": "artist",
+        "display_label": "Eminem",
+        "why_this_example_matters": "Eminem anchors Pop-Rap / Mainstream Hip-Hop Crossover by making beat architecture and flow and cadence easier to hear.",
+        "what_to_listen_for": [
+          "big chorus",
+          "producer tag or signature beat"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:kanye-west",
+        "example_type": "artist",
+        "display_label": "Kanye West",
+        "why_this_example_matters": "Kanye West anchors Pop-Rap / Mainstream Hip-Hop Crossover by making flow and cadence and sample or synth signature easier to hear.",
+        "what_to_listen_for": [
+          "producer tag or signature beat",
+          "high-persona delivery"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:eminem-the-marshall-mathers-lp",
+        "example_type": "album",
+        "display_label": "The Marshall Mathers LP - Eminem",
+        "why_this_example_matters": "The Marshall Mathers LP - Eminem anchors Pop-Rap / Mainstream Hip-Hop Crossover by making sample or synth signature and regional production color easier to hear.",
+        "what_to_listen_for": [
+          "high-persona delivery",
+          "radio edit energy"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:50-cent-get-rich-or-die-tryin",
+        "example_type": "album",
+        "display_label": "Get Rich or Die Tryin' - 50 Cent",
+        "why_this_example_matters": "Get Rich or Die Tryin' - 50 Cent anchors Pop-Rap / Mainstream Hip-Hop Crossover by making regional production color and hook strategy against dense verses easier to hear.",
+        "what_to_listen_for": [
+          "radio edit energy",
+          "video-ready hook"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:missy-elliott-get-ur-freak-on",
+        "example_type": "song_recording",
+        "display_label": "Get Ur Freak On - Missy Elliott",
+        "why_this_example_matters": "Get Ur Freak On - Missy Elliott anchors Pop-Rap / Mainstream Hip-Hop Crossover by making hook strategy against dense verses and beat architecture easier to hear.",
+        "what_to_listen_for": [
+          "video-ready hook"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:missy-elliott-work-it",
+        "example_type": "song_recording",
+        "display_label": "Work It - Missy Elliott",
+        "why_this_example_matters": "Work It - Missy Elliott anchors Pop-Rap / Mainstream Hip-Hop Crossover by making beat architecture and flow and cadence easier to hear.",
+        "what_to_listen_for": [
+          "big chorus",
+          "producer tag or signature beat"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_07/archetype_049"
+      ],
+      "after": [
+        "family_07/archetype_051"
+      ],
+      "related": [
+        "family_07/archetype_049",
+        "family_07/archetype_051"
+      ],
+      "copy": "Use Pop-Rap / Mainstream Hip-Hop Crossover as a contextual road inside Hip-Hop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "050-dyk-1",
+        "copy": "Pop-rap can be technically intense as well as commercially accessible.",
+        "source_ref_ids": [
+          "050_allmusic_pop_rap",
+          "050_rockhall_eminem",
+          "050_rockhall_missy_elliott"
+        ]
+      },
+      {
+        "card_id": "050-dyk-2",
+        "copy": "Some of the lane's biggest records are driven by visual imagination as much as audio.",
+        "source_ref_ids": [
+          "050_rockhall_eminem",
+          "050_allmusic_pop_rap"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether pop-rap / mainstream hip-hop crossover is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Rap built for pop-scale reach: hooks, persona, video, production spectacle, and mainstream dominance.",
+      "It made hip-hop one of pop's main languages and changed what a mainstream superstar could sound like.",
+      "The rap performance stays central, but the record is engineered for broad recognition and repeat hooks."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use popularity alone as proof; the sound must actively merge rap identity with pop architecture.",
+    "personalization_hooks": [
+      {
+        "hook_id": "050-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[050]",
+          "atlas_state.family_affinity[7]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[050] >= 0.65 || atlas_state.family_affinity[7] >= 0.65",
+        "copy_variant": "Your Atlas signals make Pop-Rap / Mainstream Hip-Hop Crossover useful as a contextual landmark.",
+        "fallback_copy": "Use Pop-Rap / Mainstream Hip-Hop Crossover as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "050-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_07/archetype_050 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_07/archetype_050",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Pop-Rap / Mainstream Hip-Hop Crossover before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "050-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_07/archetype_050 || atlas_state.boundary_question_results has boundary_negative for family_07/archetype_050",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Pop-Rap / Mainstream Hip-Hop Crossover.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "050-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_07/archetype_050 || atlas_state.related_mission_ids references family_07/archetype_050",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "050-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_07/archetype_050 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_07/archetype_050 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_07/archetype_050",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Pop-Rap / Mainstream Hip-Hop Crossover.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_7": {
+        "title": "Normalized canonical graph export, Family 7",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_7/normalized_family_7.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "050_allmusic_pop_rap": {
+        "title": "Pop-Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/pop-rap-ma0000005012",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for rap's pop-crossover branch.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for rap's pop-crossover branch."
+      },
+      "050_rockhall_eminem": {
+        "title": "Eminem",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/eminem/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Eminem as a massive mainstream rap crossover figure.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Eminem as a massive mainstream rap crossover figure."
+      },
+      "050_rockhall_missy_elliott": {
+        "title": "Missy Elliott",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/missy-elliott/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Missy Elliott as a pop-rap, video-era, and production-innovation anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Missy Elliott as a pop-rap, video-era, and production-innovation anchor."
+      },
+      "britannica_hip_hop": {
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_type": "reference",
+        "audit_use": "Hip-hop culture, DJing, MCing, dance, art, and social context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+      },
+      "britannica_rap": {
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_type": "reference",
+        "audit_use": "Rap as vocal/rhythmic practice and popular music form.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "rockhall_michael_jackson": {
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop sovereignty, dance, video, and global star image.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "050-c01",
+        "claim_text": "Pop-rap turns MC identity, hooks, producer branding, and mass-media charisma into mainstream pop architecture.",
+        "source_ref_ids": [
+          "050_allmusic_pop_rap",
+          "050_rockhall_eminem",
+          "050_rockhall_missy_elliott"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_07/archetype_050",
+          "artist:eminem",
+          "artist:kanye-west",
+          "artist:nicki-minaj",
+          "artist:drake"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050-c02",
+        "claim_text": "Eminem anchors the early-2000s crossover explosion: technical rap, shock persona, MTV visibility, and huge album sales in one package.",
+        "source_ref_ids": [
+          "050_rockhall_eminem",
+          "050_allmusic_pop_rap"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "artist:eminem",
+          "album:eminem-the-marshall-mathers-lp"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050-c03",
+        "claim_text": "Missy Elliott represents pop-rap as audiovisual invention, where futuristic production, hooks, dance, and personality are inseparable.",
+        "source_ref_ids": [
+          "050_rockhall_missy_elliott",
+          "050_allmusic_pop_rap"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "song_recording:missy-elliott-get-ur-freak-on",
+          "song_recording:missy-elliott-work-it"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050-c04",
+        "claim_text": "Kanye West, Nicki Minaj, and Drake show later crossover forms: producer-auteur albums, maximalist rap-pop persona, and melodic streaming-era dominance.",
+        "source_ref_ids": [
+          "050_allmusic_pop_rap",
+          "050_rockhall_eminem",
+          "050_rockhall_missy_elliott"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "artist:kanye-west",
+          "artist:nicki-minaj",
+          "artist:drake",
+          "album:50-cent-get-rich-or-die-tryin"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "050-pop_rap_mainstream_hip_hop_crossover-boundary",
+        "claim_text": "Pop-Rap / Mainstream Hip-Hop Crossover's boundary is clearest when big chorus and producer tag or signature beat appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "050_allmusic_pop_rap",
+          "050_rockhall_eminem"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_07/archetype_050",
+          "artist:eminem",
+          "artist:kanye-west"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "050-pop_rap_mainstream_hip_hop_crossover-examples",
+        "claim_text": "Eminem, Kanye West, The Marshall Mathers LP - Eminem gives Pop-Rap / Mainstream Hip-Hop Crossover concrete anchors because the examples expose high-persona delivery inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "050_rockhall_eminem",
+          "050_rockhall_missy_elliott"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_07/archetype_050",
+          "artist:eminem",
+          "artist:kanye-west"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Pop-rap and mainstream hip-hop crossover: Eminem, Kanye West, Nicki Minaj, Drake, Missy Elliott, 50 Cent, rap as pop monoculture.",
+    "selected_sources": [
+      {
+        "source_ref_id": "050_allmusic_pop_rap",
+        "title": "Pop-Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/pop-rap-ma0000005012",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for rap's pop-crossover branch."
+      },
+      {
+        "source_ref_id": "050_rockhall_eminem",
+        "title": "Eminem",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/eminem/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Eminem as a massive mainstream rap crossover figure."
+      },
+      {
+        "source_ref_id": "050_rockhall_missy_elliott",
+        "title": "Missy Elliott",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/missy-elliott/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Missy Elliott as a pop-rap, video-era, and production-innovation anchor."
+      },
+      {
+        "source_ref_id": "britannica_hip_hop",
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+      },
+      {
+        "source_ref_id": "britannica_rap",
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "rockhall_michael_jackson",
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "050_reject_folk_music",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Folk history is unrelated to mainstream hip-hop crossover support."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly support pop-rap as a style and two canonical mainstream innovators."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  }
+}

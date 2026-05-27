@@ -1,0 +1,1666 @@
+{
+  "schema_version": "0.2.3",
+  "pack_id": "family_09_archetype_065_industrial-metal-machine-rock_research_v0_2_3",
+  "generated_at": "2026-05-27",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_9/normalized_family_9.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 9,
+    "family_slug": "metal-and-heavy-music",
+    "family_name": "Metal and Heavy Music",
+    "archetype_id": "065",
+    "archetype_slug": "industrial-metal-machine-rock",
+    "canonical_graph_ref": "family_09/archetype_065",
+    "existing_graph_label_name": "Industrial Metal / Machine Rock",
+    "editorial_display_title": "Industrial Metal / Machine Rock",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:ministry",
+        "object_id": "ministry",
+        "display_label": "Ministry",
+        "source_membership_id": "family-9-artist-065-ministry",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Industrial metal center with clear machine-riff identity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nine-inch-nails",
+        "object_id": "nine-inch-nails",
+        "display_label": "Nine Inch Nails",
+        "source_membership_id": "family-9-artist-065-nine-inch-nails",
+        "roles": [
+          "gateway",
+          "bridge",
+          "boundary",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass industrial-rock gateway; essential even when metal affinity is ambiguous.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:rammstein",
+        "object_id": "rammstein",
+        "display_label": "Rammstein",
+        "source_membership_id": "family-9-artist-065-rammstein",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "International industrial-metal gateway with high song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:fear-factory",
+        "object_id": "fear-factory",
+        "display_label": "Fear Factory",
+        "source_membership_id": "family-9-artist-065-fear-factory",
+        "roles": [
+          "anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Machine-riff industrial metal bridge into extreme and groove metal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:white-zombie",
+        "object_id": "white-zombie",
+        "display_label": "White Zombie",
+        "source_membership_id": "family-9-artist-065-white-zombie",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Groove/industrial horror-metal bridge with strong 90s recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:rob-zombie",
+        "object_id": "rob-zombie",
+        "display_label": "Rob Zombie",
+        "source_membership_id": "family-9-artist-065-rob-zombie",
+        "roles": [
+          "gateway",
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Solo horror-industrial row with stronger song recognition than album depth.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:marilyn-manson",
+        "object_id": "marilyn-manson",
+        "display_label": "Marilyn Manson",
+        "source_membership_id": "family-9-artist-065-marilyn-manson",
+        "roles": [
+          "gateway",
+          "boundary",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Industrial shock-rock boundary row that tests image recognition versus heavy affinity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:static-x",
+        "object_id": "static-x",
+        "display_label": "Static-X",
+        "source_membership_id": "family-9-artist-065-static-x",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Nu-industrial gateway with one strong normal-user cue.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:filter",
+        "object_id": "filter",
+        "display_label": "Filter",
+        "source_membership_id": "family-9-artist-065-filter",
+        "roles": [
+          "song_first",
+          "false_nearby",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Alt-industrial radio boundary with strong one-song memory.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:kmfdm",
+        "object_id": "kmfdm",
+        "display_label": "KMFDM",
+        "source_membership_id": "family-9-artist-065-kmfdm",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Industrial-dance/rock bridge useful for separating machine texture from metal riffs.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:killing-joke",
+        "object_id": "killing-joke",
+        "display_label": "Killing Joke",
+        "source_membership_id": "family-9-artist-065-killing-joke",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Post-punk/industrial source-code bridge into heavy machine rock.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:godflesh",
+        "object_id": "godflesh",
+        "display_label": "Godflesh",
+        "source_membership_id": "family-9-artist-065-godflesh",
+        "roles": [
+          "deepening",
+          "boundary",
+          "bridge"
+        ],
+        "recognition_tier": "cult",
+        "survey_tier": "edge",
+        "inclusion_reason": "Extreme industrial-metal source-code row with low mass recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:nine-inch-nails-the-downward-spiral",
+        "object_id": "nine-inch-nails-the-downward-spiral",
+        "display_label": "The Downward Spiral - Nine Inch Nails",
+        "source_membership_id": "family-9-album-065-nine-inch-nails-the-downward-spiral",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Industrial-rock mass album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ministry-psalm-69",
+        "object_id": "ministry-psalm-69",
+        "display_label": "Psalm 69 - Ministry",
+        "source_membership_id": "family-9-album-065-ministry-psalm-69",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Industrial-metal anchor album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nine-inch-nails-pretty-hate-machine",
+        "object_id": "nine-inch-nails-pretty-hate-machine",
+        "display_label": "Pretty Hate Machine - Nine Inch Nails",
+        "source_membership_id": "family-9-album-065-nine-inch-nails-pretty-hate-machine",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "NIN gateway before heavier industrial-rock turn.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:rammstein-sehnsucht",
+        "object_id": "rammstein-sehnsucht",
+        "display_label": "Sehnsucht - Rammstein",
+        "source_membership_id": "family-9-album-065-rammstein-sehnsucht",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Rammstein mass gateway album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:fear-factory-demanufacture",
+        "object_id": "fear-factory-demanufacture",
+        "display_label": "Demanufacture - Fear Factory",
+        "source_membership_id": "family-9-album-065-fear-factory-demanufacture",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Cyber-industrial metal anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nine-inch-nails-broken",
+        "object_id": "nine-inch-nails-broken",
+        "display_label": "Broken - Nine Inch Nails",
+        "source_membership_id": "family-9-album-065-nine-inch-nails-broken",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Heavier NIN EP object for metal-adjacent taste.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:rammstein-mutter",
+        "object_id": "rammstein-mutter",
+        "display_label": "Mutter - Rammstein",
+        "source_membership_id": "family-9-album-065-rammstein-mutter",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rammstein second-step object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:white-zombie-astro-creep-2000",
+        "object_id": "white-zombie-astro-creep-2000",
+        "display_label": "Astro-Creep: 2000 - White Zombie",
+        "source_membership_id": "family-9-album-065-white-zombie-astro-creep-2000",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Horror-industrial groove-metal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:rob-zombie-hellbilly-deluxe",
+        "object_id": "rob-zombie-hellbilly-deluxe",
+        "display_label": "Hellbilly Deluxe - Rob Zombie",
+        "source_membership_id": "family-9-album-065-rob-zombie-hellbilly-deluxe",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Solo Rob Zombie song-led gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:static-x-wisconsin-death-trip",
+        "object_id": "static-x-wisconsin-death-trip",
+        "display_label": "Wisconsin Death Trip - Static-X",
+        "source_membership_id": "family-9-album-065-static-x-wisconsin-death-trip",
+        "roles": [
+          "album_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Nu-industrial gateway object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:nine-inch-nails-head-like-a-hole",
+        "object_id": "nine-inch-nails-head-like-a-hole",
+        "display_label": "Head Like a Hole - Nine Inch Nails",
+        "source_membership_id": "family-9-song-065-nine-inch-nails-head-like-a-hole",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "NIN mass industrial gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:rammstein-du-hast",
+        "object_id": "rammstein-du-hast",
+        "display_label": "Du hast - Rammstein",
+        "source_membership_id": "family-9-song-065-rammstein-du-hast",
+        "roles": [
+          "gateway",
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Rammstein mass-recognition gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ministry-jesus-built-my-hotrod",
+        "object_id": "ministry-jesus-built-my-hotrod",
+        "display_label": "Jesus Built My Hotrod - Ministry",
+        "source_membership_id": "family-9-song-065-ministry-jesus-built-my-hotrod",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Ministry mass industrial-metal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nine-inch-nails-closer",
+        "object_id": "nine-inch-nails-closer",
+        "display_label": "Closer - Nine Inch Nails",
+        "source_membership_id": "family-9-song-065-nine-inch-nails-closer",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition NIN object, but not metal proof alone.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:fear-factory-demanufacture",
+        "object_id": "fear-factory-demanufacture",
+        "display_label": "Demanufacture - Fear Factory",
+        "source_membership_id": "family-9-song-065-fear-factory-demanufacture",
+        "roles": [
+          "anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Cyber-metal title song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nine-inch-nails-hurt",
+        "object_id": "nine-inch-nails-hurt",
+        "display_label": "Hurt - Nine Inch Nails",
+        "source_membership_id": "family-9-song-065-nine-inch-nails-hurt",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "NIN cultural-furniture song with lower metal signal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:rob-zombie-dragula",
+        "object_id": "rob-zombie-dragula",
+        "display_label": "Dragula - Rob Zombie",
+        "source_membership_id": "family-9-song-065-rob-zombie-dragula",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Solo Rob Zombie mass song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:marilyn-manson-the-beautiful-people",
+        "object_id": "marilyn-manson-the-beautiful-people",
+        "display_label": "The Beautiful People - Marilyn Manson",
+        "source_membership_id": "family-9-song-065-marilyn-manson-the-beautiful-people",
+        "roles": [
+          "gateway",
+          "false_nearby"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Shock-rock/industrial song-first boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nine-inch-nails-wish",
+        "object_id": "nine-inch-nails-wish",
+        "display_label": "Wish - Nine Inch Nails",
+        "source_membership_id": "family-9-song-065-nine-inch-nails-wish",
+        "roles": [
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Heavier NIN industrial-rock cue.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ministry-just-one-fix",
+        "object_id": "ministry-just-one-fix",
+        "display_label": "Just One Fix - Ministry",
+        "source_membership_id": "family-9-song-065-ministry-just-one-fix",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ministry second gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:rammstein-sonne",
+        "object_id": "rammstein-sonne",
+        "display_label": "Sonne - Rammstein",
+        "source_membership_id": "family-9-song-065-rammstein-sonne",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rammstein second-step song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:white-zombie-more-human-than-human",
+        "object_id": "white-zombie-more-human-than-human",
+        "display_label": "More Human Than Human - White Zombie",
+        "source_membership_id": "family-9-song-065-white-zombie-more-human-than-human",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "White Zombie industrial/groove gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:static-x-push-it",
+        "object_id": "static-x-push-it",
+        "display_label": "Push It - Static-X",
+        "source_membership_id": "family-9-song-065-static-x-push-it",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Static-X nu-industrial gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ministry-stigmata",
+        "object_id": "ministry-stigmata",
+        "display_label": "Stigmata - Ministry",
+        "source_membership_id": "family-9-song-065-ministry-stigmata",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ministry machine-rock early cue.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f9-artist-nine-inch-nails-065",
+        "candidate_id": "survey-f9-artist-nine-inch-nails-065",
+        "object_type": "artist",
+        "display_label": "Nine Inch Nails",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-rammstein-065",
+        "candidate_id": "survey-f9-artist-rammstein-065",
+        "object_type": "artist",
+        "display_label": "Rammstein",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-ministry-065",
+        "candidate_id": "survey-f9-artist-ministry-065",
+        "object_type": "artist",
+        "display_label": "Ministry",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-fear-factory-065",
+        "candidate_id": "survey-f9-artist-fear-factory-065",
+        "object_type": "artist",
+        "display_label": "Fear Factory",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-white-zombie-065",
+        "candidate_id": "survey-f9-artist-white-zombie-065",
+        "object_type": "artist",
+        "display_label": "White Zombie",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-static-x-065",
+        "candidate_id": "survey-f9-artist-static-x-065",
+        "object_type": "artist",
+        "display_label": "Static-X",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-rob-zombie-065",
+        "candidate_id": "survey-f9-artist-rob-zombie-065",
+        "object_type": "artist",
+        "display_label": "Rob Zombie",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-marilyn-manson-065",
+        "candidate_id": "survey-f9-artist-marilyn-manson-065",
+        "object_type": "artist",
+        "display_label": "Marilyn Manson",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-filter-065",
+        "candidate_id": "survey-f9-artist-filter-065",
+        "object_type": "artist",
+        "display_label": "Filter",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-kmfdm-065",
+        "candidate_id": "survey-f9-artist-kmfdm-065",
+        "object_type": "artist",
+        "display_label": "KMFDM",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-killing-joke-065",
+        "candidate_id": "survey-f9-artist-killing-joke-065",
+        "object_type": "artist",
+        "display_label": "Killing Joke",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-godflesh-065",
+        "candidate_id": "survey-f9-artist-godflesh-065",
+        "object_type": "artist",
+        "display_label": "Godflesh",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-nine-inch-nails-pretty-hate-machine-065",
+        "candidate_id": "survey-f9-album-nine-inch-nails-pretty-hate-machine-065",
+        "object_type": "album",
+        "display_label": "Pretty Hate Machine",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-rammstein-sehnsucht-065",
+        "candidate_id": "survey-f9-album-rammstein-sehnsucht-065",
+        "object_type": "album",
+        "display_label": "Sehnsucht",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-nine-inch-nails-the-downward-spiral-065",
+        "candidate_id": "survey-f9-album-nine-inch-nails-the-downward-spiral-065",
+        "object_type": "album",
+        "display_label": "The Downward Spiral",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-ministry-psalm-69-065",
+        "candidate_id": "survey-f9-album-ministry-psalm-69-065",
+        "object_type": "album",
+        "display_label": "Psalm 69",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-white-zombie-astro-creep-2000-065",
+        "candidate_id": "survey-f9-album-white-zombie-astro-creep-2000-065",
+        "object_type": "album",
+        "display_label": "Astro-Creep: 2000",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-rammstein-mutter-065",
+        "candidate_id": "survey-f9-album-rammstein-mutter-065",
+        "object_type": "album",
+        "display_label": "Mutter",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-nine-inch-nails-broken-065",
+        "candidate_id": "survey-f9-album-nine-inch-nails-broken-065",
+        "object_type": "album",
+        "display_label": "Broken",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-rob-zombie-hellbilly-deluxe-065",
+        "candidate_id": "survey-f9-album-rob-zombie-hellbilly-deluxe-065",
+        "object_type": "album",
+        "display_label": "Hellbilly Deluxe",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-nine-inch-nails-065",
+        "question_id": "boundary-survey-f9-artist-nine-inch-nails-065",
+        "display_label": "Nine Inch Nails",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-rob-zombie-065",
+        "question_id": "boundary-survey-f9-artist-rob-zombie-065",
+        "display_label": "Rob Zombie",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-marilyn-manson-065",
+        "question_id": "boundary-survey-f9-artist-marilyn-manson-065",
+        "display_label": "Marilyn Manson",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-filter-065",
+        "question_id": "boundary-survey-f9-artist-filter-065",
+        "display_label": "Filter",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-kmfdm-065",
+        "question_id": "boundary-survey-f9-artist-kmfdm-065",
+        "display_label": "KMFDM",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-killing-joke-065",
+        "question_id": "boundary-survey-f9-artist-killing-joke-065",
+        "display_label": "Killing Joke",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-godflesh-065",
+        "question_id": "boundary-survey-f9-artist-godflesh-065",
+        "display_label": "Godflesh",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-album-nine-inch-nails-pretty-hate-machine-065",
+        "question_id": "boundary-survey-f9-album-nine-inch-nails-pretty-hate-machine-065",
+        "display_label": "Pretty Hate Machine",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-album-marilyn-manson-antichrist-superstar-065",
+        "question_id": "boundary-survey-f9-album-marilyn-manson-antichrist-superstar-065",
+        "display_label": "Antichrist Superstar",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-album-filter-short-bus-065",
+        "question_id": "boundary-survey-f9-album-filter-short-bus-065",
+        "display_label": "Short Bus",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-marilyn-manson-the-beautiful-people-065",
+        "question_id": "boundary-survey-f9-song_recording-marilyn-manson-the-beautiful-people-065",
+        "display_label": "The Beautiful People",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-nine-inch-nails-hurt-065",
+        "question_id": "boundary-survey-f9-song_recording-nine-inch-nails-hurt-065",
+        "display_label": "Hurt",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-filter-hey-man-nice-shot-065",
+        "question_id": "boundary-survey-f9-song_recording-filter-hey-man-nice-shot-065",
+        "display_label": "Hey Man Nice Shot",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-nine-inch-nails-065",
+        "probe_id": "probe-survey-f9-artist-nine-inch-nails-065",
+        "entity_type": "artist",
+        "display_label": "Nine Inch Nails",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-rob-zombie-065",
+        "probe_id": "probe-survey-f9-artist-rob-zombie-065",
+        "entity_type": "artist",
+        "display_label": "Rob Zombie",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-marilyn-manson-065",
+        "probe_id": "probe-survey-f9-artist-marilyn-manson-065",
+        "entity_type": "artist",
+        "display_label": "Marilyn Manson",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-filter-065",
+        "probe_id": "probe-survey-f9-artist-filter-065",
+        "entity_type": "artist",
+        "display_label": "Filter",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-kmfdm-065",
+        "probe_id": "probe-survey-f9-artist-kmfdm-065",
+        "entity_type": "artist",
+        "display_label": "KMFDM",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-killing-joke-065",
+        "probe_id": "probe-survey-f9-artist-killing-joke-065",
+        "entity_type": "artist",
+        "display_label": "Killing Joke",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-godflesh-065",
+        "probe_id": "probe-survey-f9-artist-godflesh-065",
+        "entity_type": "artist",
+        "display_label": "Godflesh",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-album-nine-inch-nails-pretty-hate-machine-065",
+        "probe_id": "probe-survey-f9-album-nine-inch-nails-pretty-hate-machine-065",
+        "entity_type": "album",
+        "display_label": "Pretty Hate Machine",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-album-marilyn-manson-antichrist-superstar-065",
+        "probe_id": "probe-survey-f9-album-marilyn-manson-antichrist-superstar-065",
+        "entity_type": "album",
+        "display_label": "Antichrist Superstar",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-album-filter-short-bus-065",
+        "probe_id": "probe-survey-f9-album-filter-short-bus-065",
+        "entity_type": "album",
+        "display_label": "Short Bus",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-marilyn-manson-the-beautiful-people-065",
+        "probe_id": "probe-survey-f9-song_recording-marilyn-manson-the-beautiful-people-065",
+        "entity_type": "song_recording",
+        "display_label": "The Beautiful People",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-nine-inch-nails-hurt-065",
+        "probe_id": "probe-survey-f9-song_recording-nine-inch-nails-hurt-065",
+        "entity_type": "song_recording",
+        "display_label": "Hurt",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-filter-hey-man-nice-shot-065",
+        "probe_id": "probe-survey-f9-song_recording-filter-hey-man-nice-shot-065",
+        "entity_type": "song_recording",
+        "display_label": "Hey Man Nice Shot",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_09/archetype_064",
+      "family_09/archetype_066"
+    ],
+    "before_archetype_refs": [
+      "family_09/archetype_064"
+    ],
+    "after_archetype_refs": [
+      "family_09/archetype_066"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_9": {
+      "title": "Normalized canonical graph export, Family 9",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_9/normalized_family_9.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "065_rockhall_nin": {
+      "title": "Nine Inch Nails",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nine-inch-nails/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Nine Inch Nails as industrial rock/metal's mainstream and art-industrial anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Nine Inch Nails as industrial rock/metal's mainstream and art-industrial anchor."
+    },
+    "065_allmusic_industrial_metal": {
+      "title": "Industrial Metal",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/industrial-metal",
+      "source_type": "genre_overview",
+      "audit_use": "Direct support for the fusion of metal guitars, programmed rhythm, samples, and machine textures.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct support for the fusion of metal guitars, programmed rhythm, samples, and machine textures."
+    },
+    "065_ministry_official": {
+      "title": "Ministry",
+      "publisher": "Ministry",
+      "url": "https://ministryband.com/",
+      "source_type": "official_artist",
+      "audit_use": "Supports Ministry as the harsh, riff-driven industrial metal pole.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Ministry as the harsh, riff-driven industrial metal pole."
+    },
+    "065_britannica_electronic": {
+      "title": "Electronic music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/electronic-music",
+      "source_type": "reference",
+      "audit_use": "Technology background for sampling, synthesis, and electronic production methods in machine rock.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Technology background for sampling, synthesis, and electronic production methods in machine rock."
+    },
+    "rockhall_nine_inch_nails": {
+      "title": "Nine Inch Nails",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nine-inch-nails/",
+      "source_type": "museum_reference",
+      "audit_use": "Industrial rock/metal, machine texture, and alternative-era heavy music.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Industrial rock/metal, machine texture, and alternative-era heavy music."
+    },
+    "britannica_electronic_music": {
+      "title": "Electronic music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/electronic-music",
+      "source_type": "reference",
+      "audit_use": "Electronic music technologies, composition, and popular-music applications.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Electronic music technologies, composition, and popular-music applications."
+    },
+    "britannica_heavy_metal": {
+      "title": "Heavy metal",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/heavy-metal-music",
+      "source_type": "reference",
+      "audit_use": "Heavy metal's riffs, amplification, theatricality, and subgenre development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+    },
+    "allmusic_post_punk": {
+      "title": "Post-Punk",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/post-punk-ma0000004450",
+      "source_type": "music_reference",
+      "audit_use": "Supplemental style markers for post-punk and dark alternative roots.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supplemental style markers for post-punk and dark alternative roots."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "065-claim-01",
+      "claim_text": "Industrial metal makes machinery feel musical by locking guitars to programmed drums, samples, loops, and abrasive production.",
+      "source_ref_ids": [
+        "065_allmusic_industrial_metal",
+        "065_britannica_electronic"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_09/archetype_065"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "065-claim-02",
+      "claim_text": "Nine Inch Nails anchor the psychological and studio-sculpted side of the road, where pop hooks can sit inside noise, distortion, and sequenced pressure.",
+      "source_ref_ids": [
+        "065_rockhall_nin",
+        "065_allmusic_industrial_metal"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_09/archetype_065",
+        "artist:nine-inch-nails",
+        "album:nine-inch-nails-the-downward-spiral"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "065-claim-03",
+      "claim_text": "Ministry marks the harsher guitar-riff branch, making Psalm 69-style industrial metal a different signal from synthpop or dance-industrial club tracks.",
+      "source_ref_ids": [
+        "065_ministry_official",
+        "065_allmusic_industrial_metal"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for_prompt",
+        "related_roads_lineage_module"
+      ],
+      "graph_refs": [
+        "family_09/archetype_065",
+        "artist:ministry",
+        "album:ministry-psalm-69"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "065-claim-04",
+      "claim_text": "Rammstein and KMFDM show the road's theatrical and danceable edges, but the center remains machine rhythm plus heavy guitar impact.",
+      "source_ref_ids": [
+        "065_allmusic_industrial_metal"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "caution",
+        "region_scene_page"
+      ],
+      "graph_refs": [
+        "family_09/archetype_065",
+        "artist:rammstein",
+        "artist:kmfdm"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "065-industrial_metal_machine_rock-boundary",
+      "claim_text": "Industrial Metal / Machine Rock's boundary is clearest when programmed drums and sampled noise appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "065_rockhall_nin",
+        "065_allmusic_industrial_metal"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_065",
+        "artist:ministry",
+        "artist:nine-inch-nails"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "065-industrial_metal_machine_rock-examples",
+      "claim_text": "Ministry, Nine Inch Nails, The Downward Spiral - Nine Inch Nails gives Industrial Metal / Machine Rock concrete anchors because the examples expose distorted guitar inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "065_allmusic_industrial_metal",
+        "065_ministry_official"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_065",
+        "artist:ministry",
+        "artist:nine-inch-nails"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Metal and rock rebuilt as machinery: riffs, loops, samples, and controlled abrasion.",
+    "history_capsule": "Industrial metal put electronic production and heavy guitars into the same pressure system, making machines sound emotional, violent, or seductive.",
+    "why_it_mattered": "It gave 1990s alternative and metal a new vocabulary for alienation, rhythm, and studio texture.",
+    "what_made_it_distinct": "Unlike synthpop or house, the machines here are abrasive and guitar-driven rather than purely dance or song-polish tools.",
+    "what_to_listen_for": [
+      "programmed drums",
+      "sampled noise",
+      "distorted guitar",
+      "mechanical repetition",
+      "cold vocal treatment"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:ministry",
+        "example_type": "artist",
+        "display_label": "Ministry",
+        "why_this_example_matters": "Ministry anchors Industrial Metal / Machine Rock by making distorted riff architecture and drum weight and speed easier to hear.",
+        "what_to_listen_for": [
+          "programmed drums",
+          "sampled noise"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:nine-inch-nails",
+        "example_type": "artist",
+        "display_label": "Nine Inch Nails",
+        "why_this_example_matters": "Nine Inch Nails anchors Industrial Metal / Machine Rock by making drum weight and speed and minor-mode tension easier to hear.",
+        "what_to_listen_for": [
+          "sampled noise",
+          "distorted guitar"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:nine-inch-nails-the-downward-spiral",
+        "example_type": "album",
+        "display_label": "The Downward Spiral - Nine Inch Nails",
+        "why_this_example_matters": "The Downward Spiral - Nine Inch Nails anchors Industrial Metal / Machine Rock by making minor-mode tension and vocal force easier to hear.",
+        "what_to_listen_for": [
+          "distorted guitar",
+          "mechanical repetition"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:ministry-psalm-69",
+        "example_type": "album",
+        "display_label": "Psalm 69 - Ministry",
+        "why_this_example_matters": "Psalm 69 - Ministry anchors Industrial Metal / Machine Rock by making vocal force and precision or abrasion as identity easier to hear.",
+        "what_to_listen_for": [
+          "mechanical repetition",
+          "cold vocal treatment"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:nine-inch-nails-head-like-a-hole",
+        "example_type": "song_recording",
+        "display_label": "Head Like a Hole - Nine Inch Nails",
+        "why_this_example_matters": "Head Like a Hole - Nine Inch Nails anchors Industrial Metal / Machine Rock by making precision or abrasion as identity and distorted riff architecture easier to hear.",
+        "what_to_listen_for": [
+          "cold vocal treatment"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:rammstein-du-hast",
+        "example_type": "song_recording",
+        "display_label": "Du hast - Rammstein",
+        "why_this_example_matters": "Du hast - Rammstein anchors Industrial Metal / Machine Rock by making distorted riff architecture and drum weight and speed easier to hear.",
+        "what_to_listen_for": [
+          "programmed drums",
+          "sampled noise"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_09/archetype_064"
+      ],
+      "after": [
+        "family_09/archetype_066"
+      ],
+      "related": [
+        "family_09/archetype_064",
+        "family_09/archetype_066"
+      ],
+      "copy": "Use Industrial Metal / Machine Rock as a contextual road inside Metal and Heavy Music; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "065-dyk-1",
+        "copy": "Nine Inch Nails are a bridge into art-rock and pop structure as well as industrial heaviness.",
+        "source_ref_ids": [
+          "065_allmusic_industrial_metal",
+          "065_britannica_electronic"
+        ]
+      },
+      {
+        "card_id": "065-dyk-2",
+        "copy": "Ministry is useful because it keeps the metal half of the term honest.",
+        "source_ref_ids": [
+          "065_rockhall_nin",
+          "065_allmusic_industrial_metal"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether industrial metal / machine rock is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Metal and rock rebuilt as machinery: riffs, loops, samples, and controlled abrasion.",
+      "It gave 1990s alternative and metal a new vocabulary for alienation, rhythm, and studio texture.",
+      "Unlike synthpop or house, the machines here are abrasive and guitar-driven rather than purely dance or song-polish tools."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not classify any electronic texture as industrial metal; the heavy machine-rock impact needs to be central.",
+    "personalization_hooks": [
+      {
+        "hook_id": "065-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[065]",
+          "atlas_state.family_affinity[9]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[065] >= 0.65 || atlas_state.family_affinity[9] >= 0.65",
+        "copy_variant": "Your Atlas signals make Industrial Metal / Machine Rock useful as a contextual landmark.",
+        "fallback_copy": "Use Industrial Metal / Machine Rock as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "065-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_09/archetype_065 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_09/archetype_065",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Industrial Metal / Machine Rock before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "065-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_09/archetype_065 || atlas_state.boundary_question_results has boundary_negative for family_09/archetype_065",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Industrial Metal / Machine Rock.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "065-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_09/archetype_065 || atlas_state.related_mission_ids references family_09/archetype_065",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "065-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_09/archetype_065 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_09/archetype_065 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_09/archetype_065",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Industrial Metal / Machine Rock.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_9": {
+        "title": "Normalized canonical graph export, Family 9",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_9/normalized_family_9.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "065_rockhall_nin": {
+        "title": "Nine Inch Nails",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nine-inch-nails/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Nine Inch Nails as industrial rock/metal's mainstream and art-industrial anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Nine Inch Nails as industrial rock/metal's mainstream and art-industrial anchor."
+      },
+      "065_allmusic_industrial_metal": {
+        "title": "Industrial Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/industrial-metal",
+        "source_type": "genre_overview",
+        "audit_use": "Direct support for the fusion of metal guitars, programmed rhythm, samples, and machine textures.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for the fusion of metal guitars, programmed rhythm, samples, and machine textures."
+      },
+      "065_ministry_official": {
+        "title": "Ministry",
+        "publisher": "Ministry",
+        "url": "https://ministryband.com/",
+        "source_type": "official_artist",
+        "audit_use": "Supports Ministry as the harsh, riff-driven industrial metal pole.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ministry as the harsh, riff-driven industrial metal pole."
+      },
+      "065_britannica_electronic": {
+        "title": "Electronic music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-music",
+        "source_type": "reference",
+        "audit_use": "Technology background for sampling, synthesis, and electronic production methods in machine rock.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Technology background for sampling, synthesis, and electronic production methods in machine rock."
+      },
+      "rockhall_nine_inch_nails": {
+        "title": "Nine Inch Nails",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nine-inch-nails/",
+        "source_type": "museum_reference",
+        "audit_use": "Industrial rock/metal, machine texture, and alternative-era heavy music.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Industrial rock/metal, machine texture, and alternative-era heavy music."
+      },
+      "britannica_electronic_music": {
+        "title": "Electronic music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-music",
+        "source_type": "reference",
+        "audit_use": "Electronic music technologies, composition, and popular-music applications.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Electronic music technologies, composition, and popular-music applications."
+      },
+      "britannica_heavy_metal": {
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_type": "reference",
+        "audit_use": "Heavy metal's riffs, amplification, theatricality, and subgenre development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+      },
+      "allmusic_post_punk": {
+        "title": "Post-Punk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/post-punk-ma0000004450",
+        "source_type": "music_reference",
+        "audit_use": "Supplemental style markers for post-punk and dark alternative roots.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supplemental style markers for post-punk and dark alternative roots."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "065-claim-01",
+        "claim_text": "Industrial metal makes machinery feel musical by locking guitars to programmed drums, samples, loops, and abrasive production.",
+        "source_ref_ids": [
+          "065_allmusic_industrial_metal",
+          "065_britannica_electronic"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_09/archetype_065"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "065-claim-02",
+        "claim_text": "Nine Inch Nails anchor the psychological and studio-sculpted side of the road, where pop hooks can sit inside noise, distortion, and sequenced pressure.",
+        "source_ref_ids": [
+          "065_rockhall_nin",
+          "065_allmusic_industrial_metal"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_09/archetype_065",
+          "artist:nine-inch-nails",
+          "album:nine-inch-nails-the-downward-spiral"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "065-claim-03",
+        "claim_text": "Ministry marks the harsher guitar-riff branch, making Psalm 69-style industrial metal a different signal from synthpop or dance-industrial club tracks.",
+        "source_ref_ids": [
+          "065_ministry_official",
+          "065_allmusic_industrial_metal"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for_prompt",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_09/archetype_065",
+          "artist:ministry",
+          "album:ministry-psalm-69"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "065-claim-04",
+        "claim_text": "Rammstein and KMFDM show the road's theatrical and danceable edges, but the center remains machine rhythm plus heavy guitar impact.",
+        "source_ref_ids": [
+          "065_allmusic_industrial_metal"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "caution",
+          "region_scene_page"
+        ],
+        "graph_refs": [
+          "family_09/archetype_065",
+          "artist:rammstein",
+          "artist:kmfdm"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "065-industrial_metal_machine_rock-boundary",
+        "claim_text": "Industrial Metal / Machine Rock's boundary is clearest when programmed drums and sampled noise appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "065_rockhall_nin",
+          "065_allmusic_industrial_metal"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_065",
+          "artist:ministry",
+          "artist:nine-inch-nails"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "065-industrial_metal_machine_rock-examples",
+        "claim_text": "Ministry, Nine Inch Nails, The Downward Spiral - Nine Inch Nails gives Industrial Metal / Machine Rock concrete anchors because the examples expose distorted guitar inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "065_allmusic_industrial_metal",
+          "065_ministry_official"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_065",
+          "artist:ministry",
+          "artist:nine-inch-nails"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Industrial Metal / Machine Rock: Ministry, Nine Inch Nails, Rammstein, KMFDM, Rob Zombie, mechanical rhythm, samples, guitars, and machine texture.",
+    "selected_sources": [
+      {
+        "source_ref_id": "065_rockhall_nin",
+        "title": "Nine Inch Nails",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nine-inch-nails/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Nine Inch Nails as industrial rock/metal's mainstream and art-industrial anchor."
+      },
+      {
+        "source_ref_id": "065_allmusic_industrial_metal",
+        "title": "Industrial Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/industrial-metal",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for the fusion of metal guitars, programmed rhythm, samples, and machine textures."
+      },
+      {
+        "source_ref_id": "065_ministry_official",
+        "title": "Ministry",
+        "publisher": "Ministry",
+        "url": "https://ministryband.com/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ministry as the harsh, riff-driven industrial metal pole."
+      },
+      {
+        "source_ref_id": "065_britannica_electronic",
+        "title": "Electronic music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Technology background for sampling, synthesis, and electronic production methods in machine rock."
+      },
+      {
+        "source_ref_id": "rockhall_nine_inch_nails",
+        "title": "Nine Inch Nails",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nine-inch-nails/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Industrial rock/metal, machine texture, and alternative-era heavy music."
+      },
+      {
+        "source_ref_id": "britannica_electronic_music",
+        "title": "Electronic music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Electronic music technologies, composition, and popular-music applications."
+      },
+      {
+        "source_ref_id": "britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+      },
+      {
+        "source_ref_id": "allmusic_post_punk",
+        "title": "Post-Punk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/post-punk-ma0000004450",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supplemental style markers for post-punk and dark alternative roots."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "065_reject_house",
+        "title": "House music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/house-music",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "House shares electronic tools but not the guitar-forward aggression, industrial texture, or machine-rock frame."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources keep the archetype on industrial rock/metal objects and machine-production methods rather than generic electronic music or metal alone."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  }
+}

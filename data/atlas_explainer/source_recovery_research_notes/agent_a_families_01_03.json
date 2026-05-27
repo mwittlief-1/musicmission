@@ -1,0 +1,3377 @@
+{
+  "family_01/archetype_001": {
+    "archetype_query": "Early Rock & Roll Foundations: mid-1950s rock and roll origins, R&B/country/gospel crossover, Chuck Berry, Elvis Presley, teen radio, backbeat.",
+    "selected_sources": [
+      {
+        "source_ref_id": "001_britannica_rock_and_roll",
+        "title": "Rock and roll",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines early rock and roll as a 1950s style formed from R&B, country, gospel, and teen-market forces.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "001_rockhall_chuck_berry",
+        "title": "Chuck Berry",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/chuck-berry/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Chuck Berry as a foundational songwriter-guitarist whose riffs, lyrics, and stagecraft became rock grammar.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "001_rockhall_elvis_presley",
+        "title": "Elvis Presley",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elvis-presley/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors the crossover visibility and mass-audience teen culture that made early rock and roll national pop.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "001_rockhall_rosetta_tharpe",
+        "title": "Sister Rosetta Tharpe",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/sister-rosetta-tharpe/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives gospel-guitar precedent for the sound world that early rock and roll drew into commercial youth music.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "001_reject_british_invasion",
+        "title": "The British Invasion",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/event/British-Invasion",
+        "why_rejected": "Useful for later reception of American rock, but it starts after this archetype's foundational 1950s moment.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "001_claim_01_hybrid_origin",
+        "claim_text": "Early rock and roll emerged by turning R&B backbeat, country phrasing, gospel intensity, and blues forms into concise records aimed at a teen public.",
+        "source_ref_ids": [
+          "001_britannica_rock_and_roll",
+          "001_rockhall_rosetta_tharpe"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "short_definition"
+        ],
+        "graph_refs": [
+          "family_01/archetype_001"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "001_claim_02_chuck_berry_grammar",
+        "claim_text": "Chuck Berry made guitar riffs, car-and-school storytelling, and witty first-person teenage scenes central to the rock and roll vocabulary.",
+        "source_ref_ids": [
+          "001_rockhall_chuck_berry"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_01/archetype_001",
+          "artist:chuck-berry",
+          "song_recording:chuck-berry-johnny-b-goode"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "001_claim_03_elvis_crossover",
+        "claim_text": "Elvis Presley gave early rock and roll a national crossover face by combining Black R&B-derived energy, country repertory, TV exposure, and magnetic vocal phrasing.",
+        "source_ref_ids": [
+          "001_rockhall_elvis_presley",
+          "001_britannica_rock_and_roll"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_001",
+          "artist:elvis-presley",
+          "song_recording:elvis-presley-heartbreak-hotel"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "001_claim_04_listening_clues",
+        "claim_text": "The archetype is easiest to hear in a hard backbeat, shouted or hiccuped vocals, short guitar breaks, piano triplets, stop-time accents, and lyrics that move fast.",
+        "source_ref_ids": [
+          "001_britannica_rock_and_roll",
+          "001_rockhall_chuck_berry"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_01/archetype_001",
+          "song_recording:elvis-presley-hound-dog",
+          "song_recording:carl-perkins-blue-suede-shoes"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The first mass rock and roll lane: R&B backbeat, country/blues forms, gospel charge, teen address, and short radio-ready records.",
+      "history_capsule": "In the mid-1950s, Black R&B, gospel performance, blues structures, country boogie, independent labels, radio, jukeboxes, and TV converged into a new national youth sound. Chuck Berry, Little Richard, Fats Domino, Buddy Holly, Elvis Presley, and others made the language feel simple enough to dance to but strong enough to remake pop culture.",
+      "why_it_mattered": "This road supplies the basic operating system for later rock and pop: backbeat, electric guitar identity, teen self-recognition, songwriter-performer charisma, and records that treat energy as a hook.",
+      "what_made_it_distinct": "It is compact, physical, and direct: the song hits quickly, the rhythm is blunt, the singer sounds like an event, and the guitar or piano usually gives the record its signature shape.",
+      "what_to_listen_for": [
+        "Backbeat snap on two and four",
+        "Blues or 12-bar motion compressed into a pop single",
+        "Guitar breaks that answer the vocal",
+        "Piano triplets, handclaps, or stop-time accents",
+        "Teen scenes about cars, dancing, school, desire, or escape"
+      ],
+      "did_you_know": [
+        "Many later rock styles still use Chuck Berry's guitar-and-story template even when the surface sound changes.",
+        "The lane is not one race, region, or label story; its force comes from crossover and borrowing under unequal industry conditions."
+      ],
+      "caution": "Do not reduce the sound to nostalgia or to one famous singer; the roots are interracial, regional, and deeply tied to Black musical innovation."
+    },
+    "why_selected_sources_fit": "Direct support: 001_britannica_rock_and_roll anchors the named archetype rather than only its family. Example support: 001_rockhall_chuck_berry, 001_rockhall_elvis_presley, 001_rockhall_rosetta_tharpe ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_01/archetype_002": {
+    "archetype_query": "Rockabilly / Primitive Guitar / Proto-Garage: Sun Records, slapback echo, Carl Perkins, Gene Vincent, Link Wray, twang, distortion, stripped rock combos.",
+    "selected_sources": [
+      {
+        "source_ref_id": "002_britannica_rockabilly",
+        "title": "Rockabilly",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rockabilly",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines rockabilly as a country, R&B, blues, and gospel hybrid with specific 1950s style markers.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "002_sun_records_history",
+        "title": "History",
+        "publisher": "Sun Records",
+        "url": "https://sunrecords.com/history/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplies label-scene context for Sam Phillips, Elvis, Carl Perkins, Jerry Lee Lewis, and Memphis rockabilly.",
+        "source_type": "official_label"
+      },
+      {
+        "source_ref_id": "002_rockhall_carl_perkins",
+        "title": "Carl Perkins",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carl-perkins/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Carl Perkins as a core rockabilly anchor and ties the lane to 'Blue Suede Shoes.'",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "002_loc_blue_suede_shoes",
+        "title": "Blue Suede Shoes",
+        "publisher": "Library of Congress National Recording Registry",
+        "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/BlueSuedeShoes.pdf",
+        "source_relevance": "example_object_support",
+        "why_fit": "Provides preservation-context support for one of the archetype's cleanest song-first objects.",
+        "source_type": "archive_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "002_reject_modern_garage_revival",
+        "title": "Garage Rock Revival",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/garage-rock-revival-ma0000004457",
+        "why_rejected": "It describes later revival bands rather than the 1950s rockabilly and primitive-guitar source layer.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "002_claim_01_rockabilly_blend",
+        "claim_text": "Rockabilly fused country boogie and hillbilly phrasing with R&B drive, blues feeling, and a fast vocal attack.",
+        "source_ref_ids": [
+          "002_britannica_rockabilly",
+          "002_sun_records_history"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_01/archetype_002"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "002_claim_02_sun_slapback",
+        "claim_text": "Sun Records is central because its small-room recordings and slapback echo made sparse combos feel urgent, uncanny, and bigger than their instrumentation.",
+        "source_ref_ids": [
+          "002_sun_records_history",
+          "002_britannica_rockabilly"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_01/archetype_002",
+          "artist:carl-perkins",
+          "song_recording:carl-perkins-blue-suede-shoes"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "002_claim_03_carl_perkins_anchor",
+        "claim_text": "Carl Perkins marks the archetype's cleanest songcraft point: 'Blue Suede Shoes' turns swagger, dance-floor warning, and rockabilly guitar into one hook.",
+        "source_ref_ids": [
+          "002_rockhall_carl_perkins",
+          "002_loc_blue_suede_shoes"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_002",
+          "artist:carl-perkins",
+          "song_recording:carl-perkins-blue-suede-shoes"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "002_claim_04_proto_garage_edge",
+        "claim_text": "The primitive-guitar side points forward to garage rock: twang, distortion, clipped riffs, and a sense that the record might break apart.",
+        "source_ref_ids": [
+          "002_britannica_rockabilly"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "what_made_it_distinct",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_01/archetype_002",
+          "song_recording:link-wray-rumble",
+          "artist:duane-eddy"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A stripped 1950s guitar-and-slapback lane where country boogie, blues, R&B, and hillbilly flash become urgent rock records.",
+      "history_capsule": "Rockabilly came out of small labels, Southern studios, young players, and quick takes that prized feel over polish. Sun Records is the best-known center, but the vocabulary spreads through Carl Perkins, Gene Vincent, Johnny Burnette, Eddie Cochran, Duane Eddy, Link Wray, and other records that make guitar attitude the event.",
+      "why_it_mattered": "It preserved the rough edge inside early rock and roll. Later garage, punk, roots rock, psychobilly, and guitar revival styles all return to its compression, echo, and combustible swagger.",
+      "what_made_it_distinct": "Compared with broader early rock, this lane feels more wiry and local: slapped bass, echo, hiccuped vocals, lean drums, sharp guitar breaks, and very little orchestral cushion.",
+      "what_to_listen_for": [
+        "Slapback echo around the voice",
+        "A walking or slapped upright bass",
+        "Short guitar figures that act like hooks",
+        "Country bends rubbing against blues rhythm",
+        "Records that sound spontaneous rather than arranged"
+      ],
+      "did_you_know": [
+        "'Blue Suede Shoes' works as both dance-floor comedy and territorial warning.",
+        "Link Wray's guitar violence makes the archetype point beyond rockabilly toward garage and hard rock."
+      ],
+      "caution": "Do not treat primitive sound as lack of craft; the best records are extremely deliberate about space, echo, timing, and tension."
+    },
+    "why_selected_sources_fit": "Direct support: 002_britannica_rockabilly, 002_sun_records_history anchors the named archetype rather than only its family. Example support: 002_rockhall_carl_perkins, 002_loc_blue_suede_shoes ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_01/archetype_003": {
+    "archetype_query": "Doo-Wop / Vocal Group Oldies: street-corner harmony, nonsense syllables, The Platters, The Drifters, Frankie Lymon, Penguins, Flamingos, vocal blend.",
+    "selected_sources": [
+      {
+        "source_ref_id": "003_britannica_doo_wop",
+        "title": "Doo-wop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/doo-wop-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines doo-wop around vocal harmony, syllabic backing parts, urban youth groups, and 1950s pop/R&B crossover.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "003_teachrock_doo_wop",
+        "title": "Doo Wop",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/genre/doo-wop/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Gives classroom-friendly context for harmony practice, group arrangement, and teen-market transmission.",
+        "source_type": "educational"
+      },
+      {
+        "source_ref_id": "003_rockhall_platters",
+        "title": "The Platters",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/platters/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the archetype's polished vocal-group side and its crossover into mainstream pop standards.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "003_britannica_rock_and_roll",
+        "title": "Rock and roll",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Places doo-wop inside the broader early rock and roll ecosystem without replacing doo-wop-specific sources.",
+        "source_type": "reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "003_reject_barbershop_only",
+        "title": "Barbershop quartet singing",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/barbershop-quartet-singing",
+        "why_rejected": "It helps with older harmony background but misses doo-wop's R&B, teen, street-corner, and radio context.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "003_claim_01_vocal_architecture",
+        "claim_text": "Doo-wop is built from lead voice, close backing harmony, bass vocal parts, and syllables that turn the group itself into the rhythm section.",
+        "source_ref_ids": [
+          "003_britannica_doo_wop",
+          "003_teachrock_doo_wop"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_01/archetype_003"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "003_claim_02_street_corner_to_pop",
+        "claim_text": "The style moved from neighborhood vocal practice and small-label R&B into national oldies memory through radio-friendly ballads and uptempo novelties.",
+        "source_ref_ids": [
+          "003_britannica_doo_wop",
+          "003_britannica_rock_and_roll"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_003",
+          "song_recording:the-penguins-earth-angel",
+          "song_recording:the-chords-sh-boom"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "003_claim_03_platters_polish",
+        "claim_text": "The Platters show the polished end of the lane, where doo-wop harmony meets pop-standard elegance and broad adult recognition.",
+        "source_ref_ids": [
+          "003_rockhall_platters"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_01/archetype_003",
+          "artist:the-platters",
+          "song_recording:the-platters-only-you"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "003_claim_04_teen_drama",
+        "claim_text": "Frankie Lymon-style youth voices and records such as 'Earth Angel' turn adolescent longing into harmony-driven pop theater.",
+        "source_ref_ids": [
+          "003_britannica_doo_wop",
+          "003_teachrock_doo_wop"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_003",
+          "artist:frankie-lymon-and-the-teenagers",
+          "song_recording:the-penguins-earth-angel"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A vocal-group oldies road where harmony, syllables, bass voices, and lead-voice drama carry the whole record.",
+      "history_capsule": "Doo-wop grew through Black and Italian American urban vocal groups, neighborhood singing, R&B labels, and pop radio. Some records are rough street-corner performances, while others, like The Platters, polish the language into elegant crossover ballads.",
+      "why_it_mattered": "It made group vocals a rock and pop engine. Later girl groups, soul harmony, Motown, beach harmonies, and oldies radio all inherit its call-and-response design.",
+      "what_made_it_distinct": "The arrangement is the signature: the backing voices do not just decorate the lead, they create rhythm, harmony, atmosphere, and emotional commentary.",
+      "what_to_listen_for": [
+        "Bass vocal hooks under the lead",
+        "Nonsense syllables used as percussion",
+        "A lead voice telling a small romantic story",
+        "Tight chord changes that feel circular",
+        "A final chorus where the group blend swells"
+      ],
+      "did_you_know": [
+        "Doo-wop can be both street-corner raw and ballroom polished.",
+        "Many oldies listeners know the songs before they know the group names, which is why song-first examples matter here."
+      ],
+      "caution": "Do not file every 1950s vocal record here; the doo-wop signal is the group arrangement, not just the date."
+    },
+    "why_selected_sources_fit": "Direct support: 003_britannica_doo_wop, 003_teachrock_doo_wop anchors the named archetype rather than only its family. Example support: 003_rockhall_platters ties claims to canonical artists, songs, albums, or scene objects. Context support: 003_britannica_rock_and_roll is used only for boundary or lineage framing."
+  },
+  "family_01/archetype_004": {
+    "archetype_query": "Teen Idol / Early Pop-Rock Radio: Ricky Nelson, Paul Anka, Neil Sedaka, Dion, American Bandstand, clean-cut teen image, early pop-rock songwriting.",
+    "selected_sources": [
+      {
+        "source_ref_id": "004_teachrock_dion_teen_idols",
+        "title": "Dion and the Teen Idols",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly addresses the teen-idol role in mainstreaming rock and roll for young radio and TV audiences.",
+        "source_type": "educational"
+      },
+      {
+        "source_ref_id": "004_rockhall_ricky_nelson",
+        "title": "Ricky Nelson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/ricky-nelson/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ricky Nelson as a TV-mediated teen idol whose records also connect to credible early rock musicianship.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "004_britannica_rock_and_roll",
+        "title": "Rock and roll",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames the teen market, radio, and pop-industry forces that softened and spread early rock and roll.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "004_songhall_neil_sedaka",
+        "title": "Neil Sedaka profile",
+        "publisher": "Songwriters Hall of Fame",
+        "url": "https://www.songhall.org/profile/neil_sedaka",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the songwriter-performer craft side of teen-idol pop through Sedaka's early hits and durable writing career.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "004_reject_boy_bands_1990s",
+        "title": "Boy bands",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/boy-band",
+        "why_rejected": "Later teen-pop machinery is a useful descendant, but it does not document the 1950s-early 1960s pop-rock radio formation.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "004_claim_01_pop_taming",
+        "claim_text": "Teen-idol pop softened early rock and roll's rough edges into clean, photogenic, parent-tolerable records for TV and radio circulation.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_britannica_rock_and_roll"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004_claim_02_ricky_nelson_tv_bridge",
+        "claim_text": "Ricky Nelson is a key bridge because his television celebrity converted family-sitcom visibility into credible early pop-rock hits.",
+        "source_ref_ids": [
+          "004_rockhall_ricky_nelson"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:ricky-nelson",
+          "song_recording:ricky-nelson-poor-little-fool"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004_claim_03_songwriter_idols",
+        "claim_text": "Paul Anka and Neil Sedaka show that teen idols were not only faces; the lane also depended on disciplined early pop songwriting.",
+        "source_ref_ids": [
+          "004_songhall_neil_sedaka",
+          "004_teachrock_dion_teen_idols"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:paul-anka",
+          "artist:neil-sedaka"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004_claim_04_radio_signature",
+        "claim_text": "The sound favors bright hooks, clear diction, modest tempos, and romantic premises that can sit between rock and traditional pop programming.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_britannica_rock_and_roll"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "song_recording:paul-anka-diana",
+          "song_recording:neil-sedaka-calendar-girl"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A clean early pop-rock radio lane built around youthful singers, TV visibility, polished hooks, and romance-first singles.",
+      "history_capsule": "After rock and roll's first shock, labels, television, and radio learned to package youth music through approachable stars. Ricky Nelson, Paul Anka, Neil Sedaka, Dion, Brenda Lee, and related figures made rock gestures palatable without fully returning to pre-rock pop manners.",
+      "why_it_mattered": "It helped establish the pop star as an image-and-song package. The road leads toward teen pop, Brill craft, TV-driven music fandom, and the softer side of rock radio.",
+      "what_made_it_distinct": "The records are lighter than rockabilly and less group-centered than doo-wop: the face, voice, melody, and romantic scenario are the selling points.",
+      "what_to_listen_for": [
+        "A clean lead vocal placed upfront",
+        "Simple romantic hooks",
+        "Arrangements that nod to rock without sounding dangerous",
+        "TV-friendly charisma",
+        "Songwriter polish under a youthful surface"
+      ],
+      "did_you_know": [
+        "Ricky Nelson's lane is not merely manufactured; his records often used serious rock musicianship.",
+        "Teen-idol pop is one root of later fan culture, not just a detour from rock."
+      ],
+      "caution": "Do not confuse soft presentation with lack of importance; this road explains how early rock became household pop."
+    },
+    "why_selected_sources_fit": "Direct support: 004_teachrock_dion_teen_idols anchors the named archetype rather than only its family. Example support: 004_rockhall_ricky_nelson, 004_songhall_neil_sedaka ties claims to canonical artists, songs, albums, or scene objects. Context support: 004_britannica_rock_and_roll is used only for boundary or lineage framing."
+  },
+  "family_01/archetype_005": {
+    "archetype_query": "Brill Building / Girl Group / Early 60s Pop Craft: professional New York songwriting, girl-group records, Goffin/King, Greenwich/Barry, Mann/Weil, Bacharach/David, Spector studio craft.",
+    "selected_sources": [
+      {
+        "source_ref_id": "005_britannica_brill_assembly_line_pop",
+        "title": "The Brill Building: Assembly-Line Pop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/The-Brill-Building-Assembly-Line-Pop-1688332",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly supports Brill as a professional songwriting, publishing, and studio craft ecosystem rather than a single sound.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "005_teachrock_brill_girl_group_era",
+        "title": "The Brill Building and the Girl Group Era",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/chapter/the-brill-building-and-the-girl-group-era/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Connects Brill writers, producers, publishers, and girl-group performers in a form suitable for educational rendering.",
+        "source_type": "educational"
+      },
+      {
+        "source_ref_id": "005_songhall_carole_king",
+        "title": "Carole King profile",
+        "publisher": "Songwriters Hall of Fame",
+        "url": "https://www.songhall.org/profiles/carole-king",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Goffin/King writer-team bridge from Brill craft to later singer-songwriter authorship.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "005_songhall_youve_lost_that_lovin_feelin",
+        "title": "You've Lost That Lovin' Feelin' profile",
+        "publisher": "Songwriters Hall of Fame",
+        "url": "https://www.songhall.org/profiles/youve-lost-that-lovin-feelin",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents Mann/Weil/Spector-linked adult-pop scale as a useful edge case for producer-led Brill craft.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "005_rockhall_brill_library_guide",
+        "title": "Brill Building Library Guide",
+        "publisher": "Rock & Roll Hall of Fame Library & Archives",
+        "url": "https://library.rockhall.com/brill_building",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Gives archive-guide support for the building, businesses, writers, and source trail behind the archetype.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "005_reject_generic_girl_group_list",
+        "title": "Girl groups",
+        "publisher": "General encyclopedia/list source",
+        "url": "https://en.wikipedia.org/wiki/Girl_group",
+        "why_rejected": "Too broad for this archetype because it mixes later global girl groups with the specific Brill/early-60s pop-craft ecosystem.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "005_claim_01_ecosystem_not_sound",
+        "claim_text": "Brill Building pop is best explained as a professional songwriting, publishing, studio craft, and performance ecosystem, not one fixed sonic template.",
+        "source_ref_ids": [
+          "005_britannica_brill_assembly_line_pop",
+          "005_teachrock_brill_girl_group_era"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_01/archetype_005"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "005_claim_02_writer_teams",
+        "claim_text": "Goffin/King, Greenwich/Barry, Mann/Weil, Bacharach/David, and Spector-linked studio craft make the lane a songwriter-producer road as much as a performer road.",
+        "source_ref_ids": [
+          "005_britannica_brill_assembly_line_pop",
+          "005_teachrock_brill_girl_group_era",
+          "005_songhall_carole_king"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_01/archetype_005",
+          "artist:carole-king",
+          "artist:dionne-warwick"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "005_claim_03_girl_group_voice",
+        "claim_text": "The girl-group side turns young female perspective, social pressure, devotion, jealousy, and heartbreak into compact radio melodramas.",
+        "source_ref_ids": [
+          "005_teachrock_brill_girl_group_era",
+          "005_britannica_brill_assembly_line_pop"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_to_listen_for",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_005",
+          "artist:the-shirelles",
+          "artist:the-ronettes",
+          "artist:the-shangri-las"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "005_claim_04_spector_scale",
+        "claim_text": "Phil Spector-linked records matter here because studio density, echo, percussion, and massed voices make studio craft scale part of the song's authorship.",
+        "source_ref_ids": [
+          "005_britannica_brill_assembly_line_pop",
+          "005_songhall_youve_lost_that_lovin_feelin"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_01/archetype_005",
+          "song_recording:the-ronettes-be-my-baby",
+          "album:phil-spector-various-artists-back-to-mono-1958-1969"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "005_claim_05_carole_king_bridge",
+        "claim_text": "Carole King makes the road's lineage audible: Brill-era craft later becomes a model for singer-songwriter authorship rather than disappearing with the girl-group era.",
+        "source_ref_ids": [
+          "005_songhall_carole_king"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_005",
+          "family_04/archetype_024",
+          "artist:carole-king"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "prior_proof_pack_comparison_note": "The v0.2.1 scaffold contains broader family-wide Beatles/Rolling Stones/Who source support for archetype 005, but the older hardened Brill proof pack is stronger for this entry. This recovery note restores that pack's specific Brill sources: Britannica on Brill assembly-line pop, TeachRock on Brill and the girl-group era, Songwriters Hall of Fame on Carole King, Songwriters Hall of Fame on 'You've Lost That Lovin' Feelin'', and the Rock Hall Brill library guide. The claims above keep the prior proof pack's ecosystem, writer-team, girl-group voice, Spector scale, and Carole King bridge logic while avoiding its staging/status language.",
+    "render_seed": {
+      "short_definition": "A professional early-1960s pop-craft ecosystem where writers, producers, publishers, studio players, labels, and young vocal performers turned teen emotion into engineered singles.",
+      "history_capsule": "The Brill Building name points to a New York songwriting-and-publishing world more than to one literal room or one sound. Around the late 1950s and early 1960s, teams such as Goffin/King, Greenwich/Barry, Mann/Weil, and Bacharach/David worked with producers, labels, and performers to make records for girl groups, teen idols, dance-craze singers, and pop-soul voices.",
+      "why_it_mattered": "This lane bridges Tin Pan Alley professionalism into modern pop architecture. It proves that youth records can be tightly written, commercially direct, emotionally specific, and formally sophisticated.",
+      "what_made_it_distinct": "Separate roles are part of the sound: songwriter, producer, publisher, arranger, studio musician, and singer can all leave audible fingerprints on a two-and-a-half-minute single.",
+      "what_to_listen_for": [
+        "Immediate scene-setting in the first seconds",
+        "Backing vocals answering the lead like a chorus",
+        "Hooks that double as emotional proof",
+        "Handclaps, strings, percussion, and echo used as drama",
+        "A performer confession that may also be a writerly construction"
+      ],
+      "did_you_know": [
+        "The Brill label should not erase performers; the best records depend on how singers inhabit professionally built songs.",
+        "Carole King's presence connects this lane to later singer-songwriter roads."
+      ],
+      "caution": "Do not reduce the archetype to 'manufactured pop'; its craft can be industrial and emotionally precise at the same time."
+    },
+    "why_selected_sources_fit": "Direct support: 005_britannica_brill_assembly_line_pop, 005_teachrock_brill_girl_group_era, 005_rockhall_brill_library_guide anchors the named archetype rather than only its family. Example support: 005_songhall_carole_king, 005_songhall_youve_lost_that_lovin_feelin ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_01/archetype_006": {
+    "archetype_query": "Early Soul-Pop / R&B Crossover: Ray Charles, Ben E. King, Jackie Wilson, Martha and the Vandellas, gospel-to-pop vocal phrasing, R&B crossover singles.",
+    "selected_sources": [
+      {
+        "source_ref_id": "006_britannica_soul_music",
+        "title": "Soul music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/soul-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines soul through gospel, blues, R&B, jazz, and rock-rooted popular-music synthesis.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "006_britannica_ray_charles",
+        "title": "Ray Charles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Ray-Charles",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ray Charles as a key developer of soul through gospel-inflected secular R&B and pop crossover.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "006_rockhall_ray_charles",
+        "title": "Ray Charles",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/ray-charles/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives museum context for Ray Charles as a foundational crossover figure in rock, R&B, and soul.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "006_britannica_rhythm_and_blues",
+        "title": "Rhythm and blues",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rhythm-and-blues",
+        "source_relevance": "family_context_only",
+        "why_fit": "Places the early soul-pop lane within the R&B chart and radio base it crossed over from.",
+        "source_type": "reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "006_reject_quiet_storm",
+        "title": "Quiet storm",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/quiet-storm-ma0000011874",
+        "why_rejected": "It describes a later smooth adult R&B format, not the late-1950s and early-1960s crossover formation.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "006_claim_01_soul_pop_blend",
+        "claim_text": "Early soul-pop crossover turns gospel vocal attack, R&B rhythm, blues phrasing, and pop arrangement into singles that can travel across radio formats.",
+        "source_ref_ids": [
+          "006_britannica_soul_music",
+          "006_britannica_rhythm_and_blues"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_01/archetype_006"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "006_claim_02_ray_charles_model",
+        "claim_text": "Ray Charles is central because his records make the sacred-to-secular vocal conversion audible without losing blues and jazz sophistication.",
+        "source_ref_ids": [
+          "006_britannica_ray_charles",
+          "006_rockhall_ray_charles"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_006",
+          "artist:ray-charles",
+          "song_recording:ray-charles-whatd-i-say"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "006_claim_03_crossover_hooks",
+        "claim_text": "Ben E. King's 'Stand by Me' side of the lane shows how a memorable bass figure, strings, and a gospel-shaped vocal can become mass pop memory.",
+        "source_ref_ids": [
+          "006_britannica_soul_music"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_to_listen_for",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_006",
+          "artist:ben-e-king",
+          "song_recording:ben-e-king-stand-by-me"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "006_claim_04_motown_bridge",
+        "claim_text": "Martha and the Vandellas and early Motown-linked records pull the archetype toward danceable pop-soul, while still retaining R&B urgency.",
+        "source_ref_ids": [
+          "006_britannica_soul_music",
+          "006_britannica_rhythm_and_blues"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_01/archetype_006",
+          "family_06/archetype_037",
+          "artist:martha-and-the-vandellas",
+          "song_recording:martha-and-the-vandellas-dancing-in-the-street"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The early lane where R&B and gospel-rooted singing become broad pop through hooks, strings, dance rhythm, and unmistakable lead voices.",
+      "history_capsule": "Early soul-pop crossover sits between first-wave rock and the later soul/funk universe. Ray Charles, Sam Cooke, Jackie Wilson, Ben E. King, Etta James, The Isley Brothers, early Motown, and related records show how Black R&B and gospel language entered mass pop without losing emotional pressure.",
+      "why_it_mattered": "It helped create the blueprint for soul as pop language: lead-vocal testimony, rhythm-section lift, hook clarity, and arrangements polished enough for wide radio play.",
+      "what_made_it_distinct": "Compared with doo-wop or teen-idol pop, the lead voice carries more church-derived urgency, the groove is heavier, and the arrangement often balances raw feeling with pop elegance.",
+      "what_to_listen_for": [
+        "Gospel melisma moved into secular lyrics",
+        "A bass or piano figure that hooks the record",
+        "Call-and-response energy",
+        "Strings or backing vocals smoothing an R&B core",
+        "Dance rhythm under adult emotional weight"
+      ],
+      "did_you_know": [
+        "This lane is a hinge between Family 1 oldies memory and later Family 6 soul, funk, disco, and R&B roads.",
+        "A song can be a mass wedding or oldies standard and still carry deep R&B architecture."
+      ],
+      "caution": "Do not treat crossover as dilution by default; many records widened the audience while preserving Black vocal and rhythmic authority."
+    },
+    "why_selected_sources_fit": "Direct support: 006_britannica_soul_music anchors the named archetype rather than only its family. Example support: 006_britannica_ray_charles, 006_rockhall_ray_charles ties claims to canonical artists, songs, albums, or scene objects. Context support: 006_britannica_rhythm_and_blues is used only for boundary or lineage framing."
+  },
+  "family_01/archetype_007": {
+    "archetype_query": "Surf / Instrumental / Early Guitar Pop: Dick Dale, Beach Boys, Jan and Dean, reverb guitar, California surf image, instrumental surf, hot-rod pop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "007_britannica_surf_music",
+        "title": "Surf music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/surf-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly covers Dick Dale, instrumental surf, Beach Boys vocal surf, and West Coast guitar/harmony context.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "007_britannica_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-harmony surf-pop side and Brian Wilson's early studio craft.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "007_rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Museum framing for Beach Boys as essential surf, harmony, and pop-rock anchors.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "007_britannica_dick_dale",
+        "title": "Dick Dale",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dick-Dale",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives direct support for the instrumental guitar side and Dale's surf-guitar identity.",
+        "source_type": "reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "007_reject_surfing_sport",
+        "title": "Surfing",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/sports/surfing",
+        "why_rejected": "The sport explains imagery, but it does not document the musical language of reverb guitar and harmony pop.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "007_claim_01_two_surf_lanes",
+        "claim_text": "Surf music has two useful Atlas faces: instrumental reverb-guitar records and vocal harmony pop built around beach and car imagery.",
+        "source_ref_ids": [
+          "007_britannica_surf_music",
+          "007_britannica_beach_boys"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007_claim_02_dick_dale_attack",
+        "claim_text": "Dick Dale's rapid picking, Middle Eastern-inflected lines, and loud Fender reverb make the instrumental side feel kinetic rather than merely scenic.",
+        "source_ref_ids": [
+          "007_britannica_dick_dale",
+          "007_britannica_surf_music"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_to_listen_for",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "artist:dick-dale-and-his-del-tones"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007_claim_03_beach_boys_harmony",
+        "claim_text": "The Beach Boys translate surf and hot-rod imagery into stacked harmony, bright melodies, and increasingly sophisticated studio pop.",
+        "source_ref_ids": [
+          "007_britannica_beach_boys",
+          "007_rockhall_beach_boys"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "artist:the-beach-boys",
+          "song_recording:the-beach-boys-surfin-usa"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "007_claim_04_guitar_pop_bridge",
+        "claim_text": "The archetype's guitar tone and wordless hooks make it a bridge from early rock instrumentals to later garage, psych, and soundtrack guitar memory.",
+        "source_ref_ids": [
+          "007_britannica_surf_music",
+          "007_britannica_dick_dale"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_007",
+          "song_recording:the-chantays-pipeline",
+          "song_recording:the-surfaris-wipe-out"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A California-coded early guitar-pop lane split between reverb-soaked instrumentals and harmony-rich beach-radio songs.",
+      "history_capsule": "Surf music turns place into sound: ocean motion, hot rods, Southern California youth imagery, and electric-guitar technology. Dick Dale and The Chantays show the instrumental attack; The Beach Boys and Jan and Dean show how surf culture became vocal pop mythology.",
+      "why_it_mattered": "It made guitar tone an environment. Its reverb, tremolo, fast picking, and wordless hooks echo through garage rock, film music, punk revival, and guitar instrumental culture.",
+      "what_made_it_distinct": "The record often feels horizontal and kinetic, like motion across a surface: rolling drums, wet guitar, bright harmonies, and a scene you can picture immediately.",
+      "what_to_listen_for": [
+        "Spring reverb around the lead guitar",
+        "Fast alternate picking",
+        "Toms and snare patterns that mimic waves or motion",
+        "Falsetto and stacked vocal harmony",
+        "Surf, car, beach, and summer imagery"
+      ],
+      "did_you_know": [
+        "Instrumental surf can be much harder-edged than the sunny vocal hits suggest.",
+        "The Beach Boys belong here early, but their later studio work also points into baroque and psychedelic pop roads."
+      ],
+      "caution": "Do not use any Beach Boys song as automatic surf evidence; listen for whether the record is beach/guitar pop or later studio art-pop."
+    },
+    "why_selected_sources_fit": "Direct support: 007_britannica_surf_music anchors the named archetype rather than only its family. Example support: 007_britannica_beach_boys, 007_rockhall_beach_boys, 007_britannica_dick_dale ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_02/archetype_008": {
+    "archetype_query": "British Invasion / Core UK Beat Groups: Beatles, Rolling Stones, Who, Animals, Yardbirds, UK beat boom, American R&B reworked through self-contained bands.",
+    "selected_sources": [
+      {
+        "source_ref_id": "008_britannica_british_invasion",
+        "title": "British Invasion",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/event/British-Invasion",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly frames the 1960s wave of UK groups reshaping U.S. pop and rock markets.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "008_britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Beatles as the central beat-group and songwriting anchor for the archetype.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "008_britannica_rolling_stones",
+        "title": "The Rolling Stones",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the blues/R&B-centered side of the British Invasion.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "008_rockhall_who",
+        "title": "The Who",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-who/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the mod power, volume, and stage-destruction edge that differentiates The Who inside the lane.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "008_reject_britpop",
+        "title": "Britpop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/britpop-ma0000002480",
+        "why_rejected": "Britpop is a 1990s revival/response and should not stand in for the original 1960s British Invasion.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "008_claim_01_us_arrival",
+        "claim_text": "The British Invasion names the mid-1960s moment when UK beat groups entered the U.S. market and reset pop-rock expectations.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_beatles"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "short_definition"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008_claim_02_american_roots_reframed",
+        "claim_text": "The lane reworks American rock and roll, R&B, blues, girl-group, and skiffle sources through self-contained guitar bands.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_rolling_stones"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-rolling-stones",
+          "artist:the-animals"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008_claim_03_beatles_anchor",
+        "claim_text": "The Beatles make the archetype's core move audible: catchy beat music becomes a model for band identity, songwriting, and rapid stylistic growth.",
+        "source_ref_ids": [
+          "008_britannica_beatles"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-beatles",
+          "song_recording:the-beatles-i-want-to-hold-your-hand"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008_claim_04_who_mod_force",
+        "claim_text": "The Who push the beat-group frame toward mod aggression, volume, power-chord drama, and album-era ambition.",
+        "source_ref_ids": [
+          "008_rockhall_who"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-who",
+          "song_recording:the-who-my-generation"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The core 1960s UK beat-group road where British bands reframe American roots music as self-contained pop-rock.",
+      "history_capsule": "Beatlemania opened the U.S. door, but the lane includes multiple UK answers: Beatles melodic craft, Stones blues bite, Who mod force, Animals R&B drama, Yardbirds guitar escalation, and Hollies/Searchers harmony. Together they turned the band into the main pop-rock unit.",
+      "why_it_mattered": "It shifted attention from solo idols toward groups that wrote, played, recorded, and visually branded themselves. Much later rock band mythology starts here.",
+      "what_made_it_distinct": "The sound is guitar-band direct but highly varied: Merseybeat handclaps, blues covers, rave-up solos, harmony hooks, and mod volume can all belong if the UK beat-group engine is clear.",
+      "what_to_listen_for": [
+        "Tight rhythm guitar and backbeat",
+        "British voices reshaping American R&B",
+        "Harmony hooks and call-and-response",
+        "Rave-up guitar breaks",
+        "Band identity as part of the song"
+      ],
+      "did_you_know": [
+        "The Rolling Stones side of the lane is less clean-cut than the Beatles side because blues credibility was part of its identity.",
+        "The Who point from beat-group singles toward hard rock and album rock."
+      ],
+      "caution": "Do not label every 1960s UK record as this archetype; the core evidence is beat-group energy, not just nationality."
+    },
+    "why_selected_sources_fit": "Direct support: 008_britannica_british_invasion anchors the named archetype rather than only its family. Example support: 008_britannica_beatles, 008_britannica_rolling_stones, 008_rockhall_who ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_02/archetype_009": {
+    "archetype_query": "Jangle Pop / Folk-Rock Precursor: Byrds, Searchers, Hollies, Rickenbacker 12-string, chiming guitars, harmony pop, bridge to folk-rock and indie guitar pop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "009_rockhall_byrds",
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Directly supports the Byrds as the electric 12-string and folk-rock jangle anchor.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "009_britannica_folk_rock",
+        "title": "Folk rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Frames the electric folk-rock context that jangle pop precedes and overlaps.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "009_rickenbacker_12_string",
+        "title": "The 12-String Rickenbacker and the Sound of the Sixties",
+        "publisher": "Rickenbacker",
+        "url": "https://www.rickenbacker.com/history/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives instrument-context support for the chiming 12-string guitar tone central to jangle identity.",
+        "source_type": "instrument_maker_history"
+      },
+      {
+        "source_ref_id": "009_britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful context for the British beat-group guitar pop that fed the Searchers/Hollies/Byrds jangle chain.",
+        "source_type": "reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "009_reject_country_rock",
+        "title": "Country rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-rock-ma0000002536",
+        "why_rejected": "It is relevant to the Byrds later, but this archetype is about pre-country-rock chime, harmony, and folk-rock setup.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "009_claim_01_chime_as_identity",
+        "claim_text": "Jangle pop turns bright, ringing guitar tone into the main identity marker, especially through electric 12-string textures.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_rickenbacker_12_string"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "artist:the-byrds"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009_claim_02_byrds_dylan_conversion",
+        "claim_text": "The Byrds' treatment of Dylan material helped convert folk songcraft into electric band pop without abandoning literate lyric focus.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "song_recording:the-byrds-mr-tambourine-man",
+          "artist:bob-dylan"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009_claim_03_searchers_hollies_precursor",
+        "claim_text": "The Searchers and Hollies side of the lane supplies harmony-forward British guitar pop before folk-rock fully hardens into a named style.",
+        "source_ref_ids": [
+          "009_britannica_beatles",
+          "009_britannica_folk_rock"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "history_capsule",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "artist:the-searchers",
+          "artist:the-hollies"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009_claim_04_indie_afterlife",
+        "claim_text": "Because the key signal is clean melodic guitar shimmer rather than heaviness, this road becomes a source code for later college rock and indie pop.",
+        "source_ref_ids": [
+          "009_rockhall_byrds"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "family_08/archetype_059",
+          "family_10/archetype_072"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A chiming guitar-pop road where 12-string brightness, harmony, and folk-song clarity prepare the ground for folk-rock and later indie jangle.",
+      "history_capsule": "The Searchers and Hollies show the British guitar-pop side; The Byrds turn the sound into a Los Angeles folk-rock engine. The shared thread is sparkle, not weight: ringing guitars, close harmonies, and songs that seem to float even when the beat is firm.",
+      "why_it_mattered": "It makes guitar tone gentle but decisive. Later power pop, college rock, indie pop, and alt-country all return to this kind of chime when they want melody with motion.",
+      "what_made_it_distinct": "The archetype sits between beat groups and folk-rock: less raw than garage, less orchestral than baroque pop, and more guitar-texture-driven than harmony pop alone.",
+      "what_to_listen_for": [
+        "Ringing 12-string or treble-heavy guitar",
+        "High vocal harmonies",
+        "Folk-like lyric shapes over a rock beat",
+        "A feeling of lift rather than punch",
+        "Concise melodic guitar hooks"
+      ],
+      "did_you_know": [
+        "The word 'jangle' is as much about texture as genre.",
+        "A quiet record can still be guitar-defined if the chime leads your ear."
+      ],
+      "caution": "Do not fold all folk-rock into jangle; the guitar shimmer has to be doing real explanatory work."
+    },
+    "why_selected_sources_fit": "Direct support: 009_britannica_folk_rock anchors the named archetype rather than only its family. Example support: 009_rockhall_byrds, 009_rickenbacker_12_string ties claims to canonical artists, songs, albums, or scene objects. Context support: 009_britannica_beatles is used only for boundary or lineage framing."
+  },
+  "family_02/archetype_010": {
+    "archetype_query": "Folk-Rock / Harmony Pop / 60s Songcraft: Bob Dylan, Byrds, Simon & Garfunkel, Mamas & Papas, Buffalo Springfield, protest and harmony pop songwriting.",
+    "selected_sources": [
+      {
+        "source_ref_id": "010_britannica_folk_rock",
+        "title": "Folk rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines the fusion of folk songwriting and rock instrumentation that structures the archetype.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "010_britannica_bob_dylan",
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Dylan's central role in moving folk lyric ambition into electric rock culture.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "010_rockhall_byrds",
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the electric-band conversion of folk material and the harmony/jangle side of the lane.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "010_rockhall_simon_garfunkel",
+        "title": "Simon & Garfunkel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/simon-and-garfunkel/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the close-harmony and literate songcraft side of 1960s folk-pop crossover.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "010_reject_urban_folk_revival_only",
+        "title": "Folk music revival",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/folklife-and-fieldwork/articles-and-essays/folk-music-revival/",
+        "why_rejected": "Helpful background, but too pre-rock for the electric, harmony-pop, and 1960s band-songcraft focus.",
+        "source_type": "archive_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "010_claim_01_folk_plus_rock",
+        "claim_text": "Folk-rock joins acoustic folk's lyric seriousness to rock rhythm, electric guitars, and pop single structure.",
+        "source_ref_ids": [
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010_claim_02_dylan_electric_pressure",
+        "claim_text": "Dylan's move into electric contexts made the idea of a rock song carrying dense literary or protest language newly central.",
+        "source_ref_ids": [
+          "010_britannica_bob_dylan",
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "why_it_mattered",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "artist:bob-dylan"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010_claim_03_harmony_pop_west_coast",
+        "claim_text": "The Mamas & the Papas, Simon & Garfunkel, and Buffalo Springfield show the lane's harmony-pop side: group blend, topical feeling, and polished 1960s arrangements.",
+        "source_ref_ids": [
+          "010_rockhall_simon_garfunkel",
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "artist:simon-and-garfunkel",
+          "artist:buffalo-springfield",
+          "song_recording:the-mamas-and-the-papas-california-dreamin"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "010_claim_04_byrds_translator",
+        "claim_text": "The Byrds translate folk material into a bright electric band language, making them a bridge between jangle precursor and full folk-rock songcraft.",
+        "source_ref_ids": [
+          "010_rockhall_byrds",
+          "010_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_010",
+          "family_02/archetype_009",
+          "artist:the-byrds",
+          "song_recording:the-byrds-turn-turn-turn"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A 1960s songcraft lane where folk lyric weight, electric band sound, and vocal harmony become pop-rock language.",
+      "history_capsule": "Folk-rock begins when folk songs and topical writing meet drums, electric guitars, and pop radio. Dylan, The Byrds, Simon & Garfunkel, Buffalo Springfield, and The Mamas & the Papas each balance seriousness and accessibility differently.",
+      "why_it_mattered": "It expands what a pop-rock song can talk about. Protest, poetry, personal reflection, and generational unease can now sit beside hooks and harmonies.",
+      "what_made_it_distinct": "This lane is more lyric-centered than jangle pop alone and less studio-fantastical than psychedelic pop. The words and vocal blend carry as much weight as the guitars.",
+      "what_to_listen_for": [
+        "Acoustic strum under electric accents",
+        "Close harmonies that soften heavy lyrics",
+        "Topical or poetic language",
+        "A rock backbeat under folk phrasing",
+        "Group blend as emotional argument"
+      ],
+      "did_you_know": [
+        "The same Dylan song can point to different roads depending on whether the signal is folk text, electric jangle, or later singer-songwriter gravity.",
+        "Harmony pop made counterculture sound intimate enough for mainstream radio."
+      ],
+      "caution": "Do not treat every acoustic 1960s record as this lane; the rock or pop crossover element has to be audible."
+    },
+    "why_selected_sources_fit": "Direct support: 010_britannica_folk_rock anchors the named archetype rather than only its family. Example support: 010_britannica_bob_dylan, 010_rockhall_byrds, 010_rockhall_simon_garfunkel ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_02/archetype_011": {
+    "archetype_query": "Garage Rock / Nuggets / Proto-Punk Singles: Kingsmen, Sonics, Seeds, Count Five, 96 Tears, fuzz organ, teen bands, regional singles, Nuggets compilation.",
+    "selected_sources": [
+      {
+        "source_ref_id": "011_allmusic_garage_rock",
+        "title": "Garage Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/garage-rock-ma0000002666",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly describes raw 1960s garage-rock style, amateur band energy, fuzz, and proto-punk importance.",
+        "source_type": "music_reference"
+      },
+      {
+        "source_ref_id": "011_britannica_punk",
+        "title": "Punk",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/punk",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for explaining why garage singles later get heard as proto-punk source material.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "011_rhino_nuggets",
+        "title": "Nuggets: Original Artyfacts From The First Psychedelic Era 1965-1968",
+        "publisher": "Rhino Records",
+        "url": "https://www.rhino.com/product/nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the compilation object that retrospectively organized many regional garage and psych singles into a canon.",
+        "source_type": "label_catalog"
+      },
+      {
+        "source_ref_id": "011_rockhall_kingsmen",
+        "title": "The Kingsmen",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-kingsmen/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports 'Louie Louie' as a crude, durable, song-first gateway into garage-rock memory.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "011_reject_grunge",
+        "title": "Grunge",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/grunge-music",
+        "why_rejected": "Grunge inherits some rawness, but it is a 1990s alternative rock formation rather than 1960s regional garage singles.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "011_claim_01_amateur_force",
+        "claim_text": "Garage rock's defining signal is teen-band immediacy: simple riffs, blunt drums, shouted vocals, and a feeling that polish would weaken the record.",
+        "source_ref_ids": [
+          "011_allmusic_garage_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_011"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "011_claim_02_regional_single_culture",
+        "claim_text": "Many core examples were regional singles by local bands, which is why one-hit songs can be more important here than full album careers.",
+        "source_ref_ids": [
+          "011_allmusic_garage_rock",
+          "011_rhino_nuggets"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_02/archetype_011",
+          "song_recording:the-standells-dirty-water",
+          "song_recording:count-five-psychotic-reaction"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "011_claim_03_nuggets_reframing",
+        "claim_text": "The Nuggets compilation matters because it retrospectively framed scattered 1960s garage and psych singles as a coherent source tradition.",
+        "source_ref_ids": [
+          "011_rhino_nuggets"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "why_it_mattered",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_02/archetype_011",
+          "album:nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "011_claim_04_proto_punk_afterlife",
+        "claim_text": "Garage singles become proto-punk evidence because their fuzz, organ grind, repetition, and sneer anticipate punk's later anti-virtuoso stance.",
+        "source_ref_ids": [
+          "011_allmusic_garage_rock",
+          "011_britannica_punk"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_02/archetype_011",
+          "family_08/archetype_053",
+          "song_recording:the-kingsmen-louie-louie"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A raw 1960s singles road of local teen bands, fuzz riffs, cheap organs, shouted hooks, and proto-punk attitude.",
+      "history_capsule": "After the British Invasion, countless local groups made fast, rough records for regional labels. The Kingsmen, The Sonics, The Seeds, Count Five, ? and the Mysterians, and The Standells show a world where crude energy often matters more than refinement. Nuggets later gave that world a durable map.",
+      "why_it_mattered": "It preserved amateur force as a virtue. Punk, garage revival, indie rock, and psych revival repeatedly return to these singles as proof that urgency can beat skill display.",
+      "what_made_it_distinct": "The lane is song-first and texture-first: fuzz guitar, Farfisa organ, stomp rhythm, nasal vocals, and riffs simple enough to become slogans.",
+      "what_to_listen_for": [
+        "Fuzz guitar or cheap organ as lead character",
+        "A two- or three-chord riff that barely changes",
+        "Shouted or snotty lead vocals",
+        "Regional attitude or local-pride references",
+        "Short songs that end before they develop"
+      ],
+      "did_you_know": [
+        "Nuggets did not create the records, but it changed how later listeners grouped them.",
+        "A technically messy performance can be exactly the evidence this archetype needs."
+      ],
+      "caution": "Do not over-weight album craft here; many of the strongest signals are isolated singles."
+    },
+    "why_selected_sources_fit": "Direct support: 011_allmusic_garage_rock anchors the named archetype rather than only its family. Example support: 011_rhino_nuggets, 011_rockhall_kingsmen ties claims to canonical artists, songs, albums, or scene objects. Context support: 011_britannica_punk is used only for boundary or lineage framing."
+  },
+  "family_02/archetype_012": {
+    "archetype_query": "Baroque Pop / Chamber Pop / Artful 60s Pop: Beach Boys, Zombies, Left Banke, Procol Harum, Love, strings, harpsichord, chamber arrangements, Pet Sounds.",
+    "selected_sources": [
+      {
+        "source_ref_id": "012_allmusic_baroque_pop",
+        "title": "Baroque Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/baroque-pop-ma0000012109",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines baroque pop around classical/chamber instrumentation and ornate 1960s pop arrangements.",
+        "source_type": "music_reference"
+      },
+      {
+        "source_ref_id": "012_rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Brian Wilson/Pet Sounds side of artful harmony pop and studio ambition.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "012_britannica_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_relevance": "example_object_support",
+        "why_fit": "Adds reference support for Beach Boys evolution from surf pop into sophisticated studio work.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "012_britannica_progressive_rock",
+        "title": "Progressive rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/progressive-rock",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for the boundary where orchestral 1960s pop starts pointing toward art-rock and prog ambition.",
+        "source_type": "reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "012_reject_classical_baroque",
+        "title": "Baroque period",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/Baroque-period",
+        "why_rejected": "It explains the historical art-music term, but not its 1960s pop adaptation or rock-recording context.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "012_claim_01_chamber_instruments",
+        "claim_text": "Baroque pop brings strings, harpsichord-like timbres, chamber arranging, and classical gestures into concise pop songs.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012_claim_02_pet_sounds_model",
+        "claim_text": "The Beach Boys' mid-1960s studio work marks the lane's emotional high point, where harmony pop, unusual instruments, and adolescent vulnerability become artful architecture.",
+        "source_ref_ids": [
+          "012_rockhall_beach_boys",
+          "012_britannica_beach_boys"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "song_recording:the-beach-boys-god-only-knows",
+          "song_recording:the-beach-boys-wouldnt-it-be-nice"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012_claim_03_zombies_love_album_bridge",
+        "claim_text": "The Zombies' Odessey and Oracle and Love's Forever Changes show baroque pop crossing into psychedelic album craft without losing melodic delicacy.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "album:the-zombies-odessey-and-oracle",
+          "album:love-forever-changes"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012_claim_04_prog_boundary",
+        "claim_text": "Procol Harum and early Moody Blues material create a boundary where ornate pop starts leaning toward symphonic rock and progressive scale.",
+        "source_ref_ids": [
+          "012_britannica_progressive_rock",
+          "012_allmusic_baroque_pop"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "family_03/archetype_018",
+          "artist:procol-harum",
+          "artist:the-moody-blues-early"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A 1960s ornate-pop road where chamber instruments, studio craft, close harmony, and emotional precision make pop feel miniature and grand at once.",
+      "history_capsule": "Baroque pop does not mean classical music pasted onto rock. It means pop writers and producers using strings, harpsichord colors, unusual chord movement, and careful arrangements to give short songs a chamber-world glow. The Beach Boys, Left Banke, Zombies, Love, Procol Harum, and early Bee Gees each approach that glow differently.",
+      "why_it_mattered": "It made studio arrangement a form of pop authorship and helped prepare the way for progressive rock, chamber pop, sophisticated indie, and artful singer-songwriter studio craft.",
+      "what_made_it_distinct": "The lane is polished but fragile: orchestration, harmony, and bittersweet melody matter more than volume or jam energy.",
+      "what_to_listen_for": [
+        "Strings or harpsichord-like keyboard color",
+        "Chords that feel more theatrical than blues-based",
+        "Close harmonies with melancholy under the brightness",
+        "Arrangements that change scene quickly",
+        "A song that feels like a small room with ornate wallpaper"
+      ],
+      "did_you_know": [
+        "A record can be psychedelic and baroque at the same time if the arrangement is doing the dreaming.",
+        "The Left Banke is a song-first anchor even when casual listeners know the tune better than the band."
+      ],
+      "caution": "Do not confuse every orchestral rock record with baroque pop; the chamber-pop scale and melodic delicacy need to be audible."
+    },
+    "why_selected_sources_fit": "Direct support: 012_allmusic_baroque_pop anchors the named archetype rather than only its family. Example support: 012_rockhall_beach_boys, 012_britannica_beach_boys ties claims to canonical artists, songs, albums, or scene objects. Context support: 012_britannica_progressive_rock is used only for boundary or lineage framing."
+  },
+  "family_02/archetype_013": {
+    "archetype_query": "Psychedelic Pop / Sunshine Pop / Late-60s Pop-Rock: Beatles, Beach Boys, Turtles, Jefferson Airplane, Good Vibrations, Strawberry Fields, harmony, studio effects, counterculture color.",
+    "selected_sources": [
+      {
+        "source_ref_id": "013_britannica_psychedelic_rock",
+        "title": "Psychedelic rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/psychedelic-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines the late-1960s psychedelic context, counterculture, sonic experimentation, and studio expansion.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "013_rockhall_beatles",
+        "title": "The Beatles",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-beatles/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Beatles as central to psychedelic pop's studio-songcraft turn.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "013_rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the sunshine-pop and 'Good Vibrations' side of the road.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "013_rockhall_jefferson_airplane",
+        "title": "Jefferson Airplane",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/jefferson-airplane/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors San Francisco psychedelic pop-rock through 'Somebody to Love' and 'White Rabbit' type examples.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "013_reject_heavy_psych_only",
+        "title": "Acid rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/acid-rock-ma0000002507",
+        "why_rejected": "Too heavy and jam-oriented for the pop, harmony, and sunshine side emphasized by this archetype.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "013_claim_01_pop_psychedelia",
+        "claim_text": "Psychedelic pop keeps the song short and hook-centered while adding tape effects, strange textures, surreal images, and expanded studio color.",
+        "source_ref_ids": [
+          "013_britannica_psychedelic_rock",
+          "013_rockhall_beatles"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_02/archetype_013"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "013_claim_02_beach_boys_sunshine",
+        "claim_text": "The Beach Boys side makes psychedelia bright and harmonic: 'Good Vibrations' turns modular studio construction into a mass pop single.",
+        "source_ref_ids": [
+          "013_rockhall_beach_boys"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_013",
+          "song_recording:the-beach-boys-good-vibrations",
+          "artist:the-beach-boys"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "013_claim_03_san_francisco_edge",
+        "claim_text": "Jefferson Airplane adds the San Francisco counterculture edge, where pop hooks coexist with modal color, harder rhythm, and psychedelic imagery.",
+        "source_ref_ids": [
+          "013_britannica_psychedelic_rock",
+          "013_rockhall_jefferson_airplane"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_02/archetype_013",
+          "artist:jefferson-airplane",
+          "song_recording:jefferson-airplane-white-rabbit"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "013_claim_04_sunshine_boundary",
+        "claim_text": "Sunshine pop belongs here when its harmonies and optimism are colored by studio fantasy or late-60s dream logic rather than simple beach nostalgia.",
+        "source_ref_ids": [
+          "013_britannica_psychedelic_rock",
+          "013_rockhall_beach_boys"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "caution",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_013",
+          "artist:the-turtles",
+          "song_recording:the-turtles-happy-together"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A late-1960s pop-rock road where hooks, harmonies, studio effects, and counterculture color make familiar song forms feel unreal.",
+      "history_capsule": "Psychedelic pop is not only long jams and acid-rock heaviness. The Beatles, Beach Boys, Turtles, Monkees, Jefferson Airplane, and others brought dream logic into singles: odd timbres, tape edits, surreal images, bright harmonies, and arrangements that seem to open hidden rooms.",
+      "why_it_mattered": "It made experimental studio craft safe for pop radio and gave later art pop, indie psych, and studio maximalism a colorful ancestor.",
+      "what_made_it_distinct": "Compared with heavy psych, this lane keeps melodic accessibility. Compared with baroque pop, it is more hallucinatory and rhythmically open.",
+      "what_to_listen_for": [
+        "Tape effects, varispeed, or unusual transitions",
+        "Bright harmony with strange undertones",
+        "Surreal or dreamlike lyrics",
+        "A hook that returns after an unexpected detour",
+        "Pop length with expanded color"
+      ],
+      "did_you_know": [
+        "'Good Vibrations' can teach psychedelic pop without sounding dark or jammy.",
+        "The lane often smiles while doing very strange studio things."
+      ],
+      "caution": "Do not over-assign heavy blues-rock psychedelia here; this archetype needs pop craft in the foreground."
+    },
+    "why_selected_sources_fit": "Direct support: 013_britannica_psychedelic_rock anchors the named archetype rather than only its family. Example support: 013_rockhall_beatles, 013_rockhall_beach_boys, 013_rockhall_jefferson_airplane ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_02/archetype_014": {
+    "archetype_query": "Heavy Psych / Blues-Rock / Acid Rock: Jimi Hendrix Experience, Cream, Doors, Steppenwolf, loud blues, distortion, long solos, acid-rock heaviness.",
+    "selected_sources": [
+      {
+        "source_ref_id": "014_britannica_psychedelic_rock",
+        "title": "Psychedelic rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/psychedelic-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Covers the psychedelic-rock context from which heavy psych and acid rock emerge.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "014_britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for the boundary where heavy blues-rock and acid rock feed later metal vocabulary.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "014_rockhall_hendrix",
+        "title": "The Jimi Hendrix Experience",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/jimi-hendrix-experience/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Hendrix as a central example of feedback, distortion, virtuosity, and psychedelic blues-rock expansion.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "014_rockhall_cream",
+        "title": "Cream",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/cream/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the power-trio and blues-improvisation side of the archetype.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "014_reject_sunshine_pop",
+        "title": "Sunshine Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/sunshine-pop-ma0000012018",
+        "why_rejected": "It belongs near psychedelic pop but lacks the volume, blues improvisation, and heavy-guitar emphasis here.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "014_claim_01_heavy_blues_psych",
+        "claim_text": "Heavy psych turns blues-rock into a louder, longer, more distorted language shaped by psychedelic counterculture and amplified solos.",
+        "source_ref_ids": [
+          "014_britannica_psychedelic_rock",
+          "014_rockhall_cream"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014_claim_02_hendrix_guitar_world",
+        "claim_text": "Hendrix makes the guitar sound like a complete environment through feedback, wah, distortion, studio effects, and blues-derived phrasing.",
+        "source_ref_ids": [
+          "014_rockhall_hendrix",
+          "014_britannica_psychedelic_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_to_listen_for",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "artist:the-jimi-hendrix-experience",
+          "song_recording:the-jimi-hendrix-experience-purple-haze"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014_claim_03_power_trio_improv",
+        "claim_text": "Cream shows the power-trio version: blues vocabulary stretched into volume, instrumental competition, and improvisational rock spectacle.",
+        "source_ref_ids": [
+          "014_rockhall_cream"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "artist:cream",
+          "song_recording:cream-sunshine-of-your-love"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "014_claim_04_metal_boundary",
+        "claim_text": "This road is a pre-metal hinge: riffs and heaviness intensify, but the music usually remains tied to blues-rock swing and psychedelic atmosphere.",
+        "source_ref_ids": [
+          "014_britannica_heavy_metal",
+          "014_britannica_psychedelic_rock"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_02/archetype_014",
+          "family_03/archetype_017",
+          "song_recording:steppenwolf-born-to-be-wild"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The late-1960s heavy guitar road where blues-rock, psychedelia, distortion, and extended soloing push toward hard rock and metal.",
+      "history_capsule": "Hendrix, Cream, The Doors, Steppenwolf, and related bands took the blues-rock base of the British Invasion and made it louder, darker, and more exploratory. The sound can be riff-heavy, organ-haunted, feedback-soaked, or jam-driven, but it usually keeps a blues pulse under the psychedelic surface.",
+      "why_it_mattered": "It is one of the clearest bridges from 1960s pop-rock into 1970s hard rock, heavy metal, and arena guitar identity.",
+      "what_made_it_distinct": "Compared with psychedelic pop, it is less cute and less compact. Compared with hard rock, it is more exploratory and acid-colored.",
+      "what_to_listen_for": [
+        "Distorted guitar as atmosphere",
+        "Extended blues-based soloing",
+        "Power-trio push and volume",
+        "Organ or studio effects adding darkness",
+        "Riffs that feel heavier than the song form around them"
+      ],
+      "did_you_know": [
+        "Some of this lane's heaviest records still swing because the blues base has not disappeared.",
+        "The Doors can fit here through mood and organ-driven psych-blues weight, even without a typical lead-guitar hero."
+      ],
+      "caution": "Do not move every loud 1960s record to hard rock; this lane keeps psychedelic space and blues looseness in the foreground."
+    },
+    "why_selected_sources_fit": "Direct support: 014_britannica_psychedelic_rock anchors the named archetype rather than only its family. Example support: 014_rockhall_hendrix, 014_rockhall_cream ties claims to canonical artists, songs, albums, or scene objects. Context support: 014_britannica_heavy_metal is used only for boundary or lineage framing."
+  },
+  "family_02/archetype_015": {
+    "archetype_query": "Art-Rock / Proto-Alternative / Freak Underground: Velvet Underground, Nico, Stooges, Nazz, United States of America, Warhol, avant-garde noise, underground rock.",
+    "selected_sources": [
+      {
+        "source_ref_id": "015_britannica_velvet_underground",
+        "title": "The Velvet Underground",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Velvet-Underground",
+        "source_relevance": "example_object_support",
+        "why_fit": "Directly supports the Velvet Underground's art-world, literary, and underground-rock centrality.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "015_rockhall_velvet_underground",
+        "title": "The Velvet Underground",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/velvet-underground/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Museum context for the band's later influence on punk, alternative, and art rock.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "015_britannica_rock_1960s",
+        "title": "Rock: The 1960s and after",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/The-1960s-and-after",
+        "source_relevance": "family_context_only",
+        "why_fit": "Places underground rock and late-60s experiment inside the larger rock-history shift.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "015_moma_warhol",
+        "title": "Andy Warhol",
+        "publisher": "The Museum of Modern Art",
+        "url": "https://www.moma.org/artists/6246",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the art-world context around Warhol-linked multimedia and Velvet Underground presentation.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "015_reject_cbgb_punk",
+        "title": "CBGB",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/CBGB-1688333",
+        "why_rejected": "CBGB is downstream New York punk context; it does not explain the late-1960s freak-underground source layer itself.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "015_claim_01_art_world_rock",
+        "claim_text": "The Velvet Underground side of the lane makes rock an art-world medium: repetition, drone, literary urban detail, and abrasive texture become the hook.",
+        "source_ref_ids": [
+          "015_britannica_velvet_underground",
+          "015_rockhall_velvet_underground"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_015",
+          "artist:the-velvet-underground",
+          "album:the-velvet-underground-and-nico-the-velvet-underground-and-nico"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "015_claim_02_warhol_multimedia",
+        "claim_text": "Warhol-linked presentation matters because it situates the sound inside multimedia performance, visual art, fashion, and downtown provocation.",
+        "source_ref_ids": [
+          "015_moma_warhol",
+          "015_britannica_velvet_underground"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_02/archetype_015",
+          "artist:nico"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "015_claim_03_proto_alternative_afterlife",
+        "claim_text": "This archetype matters less through immediate hits than through later influence on punk, post-punk, noise rock, indie, and alternative ideas of cool difficulty.",
+        "source_ref_ids": [
+          "015_rockhall_velvet_underground",
+          "015_britannica_rock_1960s"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "why_it_mattered",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_02/archetype_015",
+          "family_08/archetype_054",
+          "family_10/archetype_069"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "015_claim_04_stooges_edge",
+        "claim_text": "The Stooges-adjacent side strips the art impulse down to repetition, body shock, and proto-punk aggression.",
+        "source_ref_ids": [
+          "015_rockhall_velvet_underground",
+          "015_britannica_rock_1960s"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_02/archetype_015",
+          "artist:the-stooges",
+          "song_recording:the-stooges-i-wanna-be-your-dog"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A late-1960s underground road where art-world experiment, drone, noise, provocation, and proto-punk repetition create alternative rock's source code.",
+      "history_capsule": "The Velvet Underground, Nico, The United States of America, The Stooges, Nazz, and related underground figures sit outside normal hit-single logic. Their importance comes from new permissions: rock can be ugly, literary, repetitive, minimal, confrontational, funny, or gallery-adjacent.",
+      "why_it_mattered": "It gave later alternative music a usable ancestry that was not based on virtuosity or mass approval. Punk, post-punk, art rock, indie, noise, and downtown scenes repeatedly claim this road.",
+      "what_made_it_distinct": "The record may sound unfinished, cold, distorted, or deliberately alien. That discomfort is often the point.",
+      "what_to_listen_for": [
+        "Drone or repetition instead of normal release",
+        "Urban or taboo lyrical detail",
+        "Dry vocals that refuse showbiz warmth",
+        "Noise used as structure",
+        "A sense of art project and rock band colliding"
+      ],
+      "did_you_know": [
+        "A low original chart profile can coexist with enormous later influence.",
+        "This lane helps explain why alternative rock often values permission over polish."
+      ],
+      "caution": "Do not judge this archetype by hit-making logic; influence, attitude, and experiment are the main evidence."
+    },
+    "why_selected_sources_fit": "Example support: 015_britannica_velvet_underground, 015_rockhall_velvet_underground, 015_moma_warhol ties claims to canonical artists, songs, albums, or scene objects. Context support: 015_britannica_rock_1960s is used only for boundary or lineage framing."
+  },
+  "family_03/archetype_016": {
+    "archetype_query": "Classic Rock / Album-Rock Spine: Led Zeppelin, Pink Floyd, Fleetwood Mac, Eagles, CCR, FM radio, 1970s LP canon, deep cuts and rock standards.",
+    "selected_sources": [
+      {
+        "source_ref_id": "016_britannica_rock_music",
+        "title": "Rock music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides broad rock-history framing for album-era, hard rock, and classic-rock canon formation.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "016_rockhall_led_zeppelin",
+        "title": "Led Zeppelin",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/led-zeppelin/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors album-rock heaviness, blues-derived riff craft, and FM-radio deep-cut culture.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "016_rockhall_pink_floyd",
+        "title": "Pink Floyd",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/pink-floyd/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the conceptual LP, studio scale, and long-duration listening side of classic rock.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "016_rockhall_fleetwood_mac",
+        "title": "Fleetwood Mac",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/fleetwood-mac/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the polished, adult-songcraft side of the classic-rock spine through Rumours-era canon.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "016_reject_oldies_50s",
+        "title": "Rock and roll",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+        "why_rejected": "It explains roots but stops before the 1970s LP/FM radio canon that defines this archetype.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "016_claim_01_album_spine",
+        "claim_text": "Classic rock as an Atlas road is less a single style than an album-era canon held together by FM radio, LP familiarity, and durable guitar-band standards.",
+        "source_ref_ids": [
+          "016_britannica_rock_music",
+          "016_rockhall_led_zeppelin"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_03/archetype_016"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "016_claim_02_zeppelin_floyd_poles",
+        "claim_text": "Led Zeppelin and Pink Floyd mark two poles of the lane: riff-driven power and immersive album-concept listening.",
+        "source_ref_ids": [
+          "016_rockhall_led_zeppelin",
+          "016_rockhall_pink_floyd"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_016",
+          "artist:led-zeppelin",
+          "artist:pink-floyd",
+          "album:led-zeppelin-led-zeppelin-iv",
+          "album:pink-floyd-the-dark-side-of-the-moon"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "016_claim_03_fleetwood_adult_pop_crossing",
+        "claim_text": "Fleetwood Mac shows the spine's pop-facing side, where adult relationship songs and meticulous studio craft become classic-rock radio staples.",
+        "source_ref_ids": [
+          "016_rockhall_fleetwood_mac"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_03/archetype_016",
+          "artist:fleetwood-mac",
+          "album:fleetwood-mac-rumours",
+          "song_recording:fleetwood-mac-dreams"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "016_claim_04_deep_cut_memory",
+        "claim_text": "The archetype includes songs people know from repeated radio life even when the source albums differ widely in style and ambition.",
+        "source_ref_ids": [
+          "016_britannica_rock_music"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "what_to_listen_for",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_016",
+          "song_recording:eagles-hotel-california",
+          "song_recording:creedence-clearwater-revival-fortunate-son"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The 1970s album-rock backbone: canonical LPs, FM-radio standards, guitar bands, and songs that became shared rock memory.",
+      "history_capsule": "Classic rock is an afterlife as much as an era. Led Zeppelin, Pink Floyd, Fleetwood Mac, Eagles, Creedence, Queen, and related artists were made durable through albums, touring, radio repetition, and later canon-building.",
+      "why_it_mattered": "It became the default rock reference library for several generations: riffs, album covers, long songs, stadium scale, road-trip radio, and deep-cut familiarity.",
+      "what_made_it_distinct": "The lane is broad but not random; its center is the album-rock listening habit, where songs and LPs become durable objects together.",
+      "what_to_listen_for": [
+        "Album sequencing or concept feel",
+        "Guitar riffs that work as public memory",
+        "Studio craft large enough for arena or headphones",
+        "Deep cuts that sound familiar from radio",
+        "A balance of virtuosity and singalong access"
+      ],
+      "did_you_know": [
+        "Classic rock radio helped turn very different 1970s acts into one perceived canon.",
+        "A soft Fleetwood Mac song and a Zeppelin riff can both belong if album-rock memory is the shared mechanism."
+      ],
+      "caution": "Do not use 'classic' as a synonym for any old rock; this road is specifically the album/FM canon spine."
+    },
+    "why_selected_sources_fit": "Direct support: 016_britannica_rock_music anchors the named archetype rather than only its family. Example support: 016_rockhall_led_zeppelin, 016_rockhall_pink_floyd, 016_rockhall_fleetwood_mac ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_03/archetype_017": {
+    "archetype_query": "Hard Rock / Riff Rock / Proto-Metal: Led Zeppelin, Black Sabbath, AC/DC, power chords, heavy riffs, blues-based volume, Paranoid, Back in Black.",
+    "selected_sources": [
+      {
+        "source_ref_id": "017_britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Explains the heavy-riff, amplification, distortion, and proto-metal boundary that this archetype occupies.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "017_rockhall_led_zeppelin",
+        "title": "Led Zeppelin",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/led-zeppelin/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors the blues-rock and riff-heavy side of hard rock.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "017_rockhall_black_sabbath",
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Sabbath as a central heavy-riff and proto-metal anchor.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "017_rockhall_acdc",
+        "title": "AC/DC",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/acdc/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the stripped, high-voltage boogie side of riff rock.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "017_reject_thrash_metal",
+        "title": "Thrash metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/thrash-ma0000002874",
+        "why_rejected": "Thrash is a later, faster metal branch; this archetype is the earlier hard-rock and proto-metal riff base.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "017_claim_01_riff_center",
+        "claim_text": "Hard rock in this lane is organized around the riff: repeated guitar figures, heavy amplification, and rhythm-section force drive the song.",
+        "source_ref_ids": [
+          "017_britannica_heavy_metal",
+          "017_rockhall_led_zeppelin"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_03/archetype_017"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "017_claim_02_sabbath_dark_weight",
+        "claim_text": "Black Sabbath pushes hard rock toward metal through dark themes, down-tuned weight, tritone tension, and monolithic riff repetition.",
+        "source_ref_ids": [
+          "017_britannica_heavy_metal",
+          "017_rockhall_black_sabbath"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_017",
+          "artist:black-sabbath",
+          "song_recording:black-sabbath-iron-man",
+          "album:black-sabbath-paranoid"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "017_claim_03_acdc_economy",
+        "claim_text": "AC/DC represents the economical side of riff rock: blues-based patterns, open-chord punch, gang-shout hooks, and almost no psychedelic haze.",
+        "source_ref_ids": [
+          "017_rockhall_acdc"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_03/archetype_017",
+          "artist:acdc",
+          "song_recording:acdc-back-in-black",
+          "song_recording:acdc-highway-to-hell"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "017_claim_04_proto_metal_not_full_metal",
+        "claim_text": "The road points into metal, but it still includes blues swing, arena rock hooks, and classic-rock familiarity that later metal subgenres may leave behind.",
+        "source_ref_ids": [
+          "017_britannica_heavy_metal",
+          "017_rockhall_led_zeppelin"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_03/archetype_017",
+          "family_09/archetype_061"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The heavy riff road where blues-rock power becomes hard rock, arena crunch, and proto-metal weight.",
+      "history_capsule": "Led Zeppelin, Black Sabbath, AC/DC, Deep Purple, and related bands made guitar repetition, volume, and rhythm-section impact the main event. Some records still swing like blues; others point unmistakably toward metal's darker mass.",
+      "why_it_mattered": "It gave rock its durable heavy grammar: the riff as hook, the amplifier as identity, and the band as a physical force.",
+      "what_made_it_distinct": "The song usually starts in the guitar body, not the lyric. Melody matters, but the riff tells you where you are.",
+      "what_to_listen_for": [
+        "A repeated guitar figure carrying the whole song",
+        "Distortion with clear rhythmic edges",
+        "Bass and drums locked to the riff",
+        "Vocals riding over volume rather than smoothing it",
+        "Blues roots under heavier surface"
+      ],
+      "did_you_know": [
+        "Sabbath can be a metal source and a hard-rock anchor at the same time.",
+        "AC/DC's simplicity is a design feature: the less decoration, the harder the riff lands."
+      ],
+      "caution": "Do not turn every loud classic-rock song into metal; listen for whether heaviness, riff logic, and dark weight are actually central."
+    },
+    "why_selected_sources_fit": "Direct support: 017_britannica_heavy_metal anchors the named archetype rather than only its family. Example support: 017_rockhall_led_zeppelin, 017_rockhall_black_sabbath, 017_rockhall_acdc ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_03/archetype_018": {
+    "archetype_query": "Progressive Rock / Art-Prog Canon: Pink Floyd, Yes, Genesis, Rush, long forms, concept albums, virtuosity, odd meters, album art.",
+    "selected_sources": [
+      {
+        "source_ref_id": "018_britannica_progressive_rock",
+        "title": "Progressive rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/progressive-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines progressive rock's art ambition, extended forms, conceptual albums, and instrumental complexity.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "018_rockhall_pink_floyd",
+        "title": "Pink Floyd",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/pink-floyd/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the studio-concept and immersive album side of the archetype.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "018_rockhall_yes",
+        "title": "Yes",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/yes/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the virtuoso, suite-like, symphonic side of progressive rock.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "018_rockhall_rush",
+        "title": "Rush",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/rush/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the technical trio and odd-meter branch that keeps prog alive into arena-rock memory.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "018_reject_art_pop",
+        "title": "Art pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/art-pop-ma0000011971",
+        "why_rejected": "Art pop overlaps in ambition, but this road requires rock-band virtuosity, extended form, or album-scale prog structure.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "018_claim_01_extended_form",
+        "claim_text": "Progressive rock stretches rock toward suites, concept albums, unusual meters, instrumental virtuosity, and art-music ambition.",
+        "source_ref_ids": [
+          "018_britannica_progressive_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_03/archetype_018"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "018_claim_02_yes_symphonic",
+        "claim_text": "Yes embodies the symphonic and virtuoso side, where bass, guitar, keyboards, drums, and high vocals interlock in large-scale forms.",
+        "source_ref_ids": [
+          "018_rockhall_yes",
+          "018_britannica_progressive_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_03/archetype_018",
+          "artist:yes",
+          "song_recording:yes-roundabout",
+          "album:yes-close-to-the-edge"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "018_claim_03_floyd_concept_world",
+        "claim_text": "Pink Floyd makes the concept-album side mass-readable through sound design, recurring motifs, studio space, and psychological themes.",
+        "source_ref_ids": [
+          "018_rockhall_pink_floyd"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_018",
+          "artist:pink-floyd",
+          "album:pink-floyd-the-dark-side-of-the-moon",
+          "song_recording:pink-floyd-money"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "018_claim_04_rush_technical_gateway",
+        "claim_text": "Rush gives prog a hard-rock gateway: precision, odd meters, fantasy or philosophical themes, and radio-visible technical display.",
+        "source_ref_ids": [
+          "018_rockhall_rush"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_018",
+          "artist:rush",
+          "song_recording:rush-tom-sawyer"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The art-prog road where rock becomes long-form, conceptual, technical, theatrical, and album-centered.",
+      "history_capsule": "Progressive rock grows from late-1960s art ambition into 1970s album culture. Pink Floyd, Yes, Genesis, King Crimson, Emerson Lake & Palmer, Rush, and related artists treat the LP as a constructed world and the band as a technical ensemble.",
+      "why_it_mattered": "It expanded rock's scale and vocabulary: long arcs, concept records, odd meters, synthesizers, fantasy imagery, and headphone-ready studio craft became legitimate rock tools.",
+      "what_made_it_distinct": "The pleasure is often in development rather than immediate release. A riff, theme, or keyboard figure may transform over several minutes.",
+      "what_to_listen_for": [
+        "Long sections or suites",
+        "Odd meters or sudden time shifts",
+        "Keyboard and guitar interplay",
+        "Recurring motifs across an album",
+        "Virtuosity serving a concept"
+      ],
+      "did_you_know": [
+        "Prog can be atmospheric like Pink Floyd or athletic like Yes and Rush; both are valid signals.",
+        "Album art and stage presentation often carry part of the world-building."
+      ],
+      "caution": "Do not assign a long song to prog automatically; the key is art-rock structure, technical ambition, or concept logic."
+    },
+    "why_selected_sources_fit": "Direct support: 018_britannica_progressive_rock anchors the named archetype rather than only its family. Example support: 018_rockhall_pink_floyd, 018_rockhall_yes, 018_rockhall_rush ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_03/archetype_019": {
+    "archetype_query": "Southern Rock / Roots Jam Rock: Allman Brothers, Lynyrd Skynyrd, ZZ Top, blues-country-boogie blend, dual guitars, jam bands, regional Southern identity.",
+    "selected_sources": [
+      {
+        "source_ref_id": "019_allmusic_southern_rock",
+        "title": "Southern Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/southern-rock-ma0000002868",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines Southern rock's blues, country, boogie, and rock blend.",
+        "source_type": "music_reference"
+      },
+      {
+        "source_ref_id": "019_rockhall_allman_brothers",
+        "title": "The Allman Brothers Band",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/allman-brothers-band/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors the improvisational dual-guitar and jam side of the lane.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "019_rockhall_lynyrd_skynyrd",
+        "title": "Lynyrd Skynyrd",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/lynyrd-skynyrd/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the anthem, triple-guitar, and Southern-identity side of the archetype.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "019_rockhall_zz_top",
+        "title": "ZZ Top",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/zz-top/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the Texas blues-boogie branch and its durable riff identity.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "019_reject_country_pop",
+        "title": "Country pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002535",
+        "why_rejected": "Country-pop crossover is relevant to later radio, but it misses the guitar, blues, boogie, and jam-rock core.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "019_claim_01_blues_country_boogie",
+        "claim_text": "Southern rock blends blues, country, boogie, soul feel, and rock volume into a regional guitar-band language.",
+        "source_ref_ids": [
+          "019_allmusic_southern_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019_claim_02_allman_jam",
+        "claim_text": "The Allman Brothers Band defines the roots-jam side through twin guitars, blues improvisation, jazz-like interplay, and long live versions.",
+        "source_ref_ids": [
+          "019_rockhall_allman_brothers"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:the-allman-brothers-band",
+          "album:the-allman-brothers-band-at-fillmore-east",
+          "song_recording:the-allman-brothers-band-whipping-post"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019_claim_03_skynyrd_anthem",
+        "claim_text": "Lynyrd Skynyrd represents the anthem side, where multiple guitars, plainspoken storytelling, and regional pride become arena-scale rock memory.",
+        "source_ref_ids": [
+          "019_rockhall_lynyrd_skynyrd"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "why_it_mattered",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:lynyrd-skynyrd",
+          "song_recording:lynyrd-skynyrd-free-bird",
+          "song_recording:lynyrd-skynyrd-sweet-home-alabama"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019_claim_04_zz_top_boogie",
+        "claim_text": "ZZ Top sharpens the Texas boogie branch: blues riffs are stripped down, tightened, and made immediately recognizable.",
+        "source_ref_ids": [
+          "019_rockhall_zz_top"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:zz-top",
+          "song_recording:zz-top-la-grange"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The Southern guitar-rock road where blues, country, boogie, jam interplay, and regional identity meet arena-scale hooks.",
+      "history_capsule": "The Allman Brothers Band, Lynyrd Skynyrd, ZZ Top, Marshall Tucker Band, and related artists made Southern rock broad enough to include improvisational jams, hard anthems, roadhouse boogie, and rootsy storytelling.",
+      "why_it_mattered": "It gave classic rock a regional voice and created a route from blues/country roots to jam-band culture and arena standards.",
+      "what_made_it_distinct": "The guitars often converse rather than simply stack. Even the big anthems carry bar-band, blues, or country traces.",
+      "what_to_listen_for": [
+        "Dual or triple guitar lines",
+        "Blues bends inside country-rock progressions",
+        "Long live solos or call-and-response jams",
+        "Southern place names, road images, or working-band grit",
+        "Boogie rhythm that feels locomotive"
+      ],
+      "did_you_know": [
+        "At Fillmore East is as important for live-rock form as for Southern identity.",
+        "ZZ Top can fit through Texas boogie even when later studio craft gets slicker."
+      ],
+      "caution": "Do not treat Southern identity alone as enough; the musical evidence needs blues, country, boogie, guitar interplay, or roots-jam behavior."
+    },
+    "why_selected_sources_fit": "Direct support: 019_allmusic_southern_rock anchors the named archetype rather than only its family. Example support: 019_rockhall_allman_brothers, 019_rockhall_lynyrd_skynyrd, 019_rockhall_zz_top ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_03/archetype_020": {
+    "archetype_query": "Glam Rock / Theatrical Seventies Rock: David Bowie, T. Rex, Roxy Music, Queen, Lou Reed, Ziggy Stardust, androgyny, artifice, costume, theatricality.",
+    "selected_sources": [
+      {
+        "source_ref_id": "020_britannica_glam_rock",
+        "title": "Glam rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/glam-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines glam rock's theatricality, androgyny, fashion, and 1970s British rock context.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "020_rockhall_david_bowie",
+        "title": "David Bowie",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/david-bowie/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Bowie as the central reinvention, persona, and Ziggy-era anchor.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "020_britannica_david_bowie",
+        "title": "David Bowie",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/David-Bowie",
+        "source_relevance": "example_object_support",
+        "why_fit": "Adds reference support for Bowie's theatrical identities and long-term art-rock significance.",
+        "source_type": "reference"
+      },
+      {
+        "source_ref_id": "020_rockhall_queen",
+        "title": "Queen",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/queen/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the operatic and arena-theatrical branch that overlaps with glam's performance logic.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "020_reject_glam_metal",
+        "title": "Glam metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/glam-metal-ma0000002619",
+        "why_rejected": "Glam metal is an 1980s hard-rock descendant, not the early-1970s artifice and theatrical rock source.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "020_claim_01_image_as_sound",
+        "claim_text": "Glam rock makes image, costume, gender play, and theatrical persona part of the musical event rather than mere packaging.",
+        "source_ref_ids": [
+          "020_britannica_glam_rock",
+          "020_rockhall_david_bowie"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_03/archetype_020"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "020_claim_02_bowie_persona",
+        "claim_text": "Bowie's Ziggy Stardust era turns the rock star into a constructed character, making reinvention itself a compositional strategy.",
+        "source_ref_ids": [
+          "020_rockhall_david_bowie",
+          "020_britannica_david_bowie"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_020",
+          "artist:david-bowie",
+          "album:david-bowie-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mars",
+          "song_recording:david-bowie-starman"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "020_claim_03_trex_boogie_glitter",
+        "claim_text": "T. Rex shows glam's concise boogie-pop side: simple riffs, sensual groove, glittering image, and hooks that feel both primitive and artificial.",
+        "source_ref_ids": [
+          "020_britannica_glam_rock"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "what_to_listen_for",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_020",
+          "artist:t-rex",
+          "song_recording:t-rex-bang-a-gong-get-it-on"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "020_claim_04_queen_scale",
+        "claim_text": "Queen expands glam theatricality toward opera, arena staging, and maximal vocal arrangement without abandoning guitar-rock spectacle.",
+        "source_ref_ids": [
+          "020_rockhall_queen"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_020",
+          "artist:queen",
+          "song_recording:queen-killer-queen",
+          "song_recording:queen-bohemian-rhapsody"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "The theatrical 1970s rock road where persona, glitter, gender play, costume, and artifice become as audible as riffs and hooks.",
+      "history_capsule": "Glam rock turns performance into argument. Bowie, T. Rex, Roxy Music, Lou Reed, Queen, and related artists use makeup, alter egos, camp, alienation, and flash to make rock feel self-conscious, stylish, and unstable.",
+      "why_it_mattered": "It opened a path for art pop, punk style, new wave, arena theatricality, queer pop signaling, and the idea that identity can be staged rather than confessed plainly.",
+      "what_made_it_distinct": "The record often winks at you. It wants you to hear the song and see the character at the same time.",
+      "what_to_listen_for": [
+        "A theatrical vocal stance",
+        "Riffs that are simple but stylized",
+        "Lyrics about stars, outsiders, desire, or performance",
+        "Stacked vocals or dramatic arrangement flourishes",
+        "Image and sound reinforcing each other"
+      ],
+      "did_you_know": [
+        "Glam can be rough like T. Rex or elaborate like Queen; the shared signal is theatrical artifice.",
+        "Bowie's influence is as much about permission to reinvent as about any one sound."
+      ],
+      "caution": "Do not confuse 1970s glam rock with 1980s glam metal; the former is more artifice/persona-driven than hair-metal virtuosity-driven."
+    },
+    "why_selected_sources_fit": "Direct support: 020_britannica_glam_rock anchors the named archetype rather than only its family. Example support: 020_rockhall_david_bowie, 020_britannica_david_bowie, 020_rockhall_queen ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_03/archetype_021": {
+    "archetype_query": "Power Pop / Melodic Guitar Pop: Big Star, Badfinger, Cheap Trick, The Knack, The Cars, Beatles/Who melody plus crunchy guitars and concise hooks.",
+    "selected_sources": [
+      {
+        "source_ref_id": "021_allmusic_power_pop",
+        "title": "Power Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/power-pop-ma0000002793",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines power pop through Beatles/Who-derived melody, harmonies, and bright electric guitar hooks.",
+        "source_type": "music_reference"
+      },
+      {
+        "source_ref_id": "021_rockhall_cheap_trick",
+        "title": "Cheap Trick",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/cheap-trick/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the mainstream live-album and arena-friendly side of power pop.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "021_rockhall_beatles",
+        "title": "The Beatles",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-beatles/",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides source context for the melodic and harmony grammar power pop repeatedly revives.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "021_memphis_big_star",
+        "title": "Big Star's Third",
+        "publisher": "Memphis Music Hall of Fame",
+        "url": "https://memphismusichalloffame.com/inductee/bigstar/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Big Star as a cult anchor whose influence outweighs original commercial reach.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "021_reject_pop_punk",
+        "title": "Pop punk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/pop-punk-ma0000002806",
+        "why_rejected": "Pop punk is a later, punk-derived lane; power pop's core is melodic guitar pop and classic songcraft.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "021_claim_01_crunch_plus_melody",
+        "claim_text": "Power pop combines crunchy electric guitars with bright melodies, tight harmonies, and concise song forms inherited from Beatles and Who-era pop-rock.",
+        "source_ref_ids": [
+          "021_allmusic_power_pop",
+          "021_rockhall_beatles"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_03/archetype_021"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "021_claim_02_big_star_cult",
+        "claim_text": "Big Star defines the cult side of the road: emotionally direct guitar pop whose later influence far exceeded its original commercial footprint.",
+        "source_ref_ids": [
+          "021_memphis_big_star",
+          "021_allmusic_power_pop"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_021",
+          "artist:big-star",
+          "album:big-star-number-1-record"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "021_claim_03_cheap_trick_gateway",
+        "claim_text": "Cheap Trick gives the archetype a mass gateway by turning melodic guitar pop into loud, witty, arena-capable performance.",
+        "source_ref_ids": [
+          "021_rockhall_cheap_trick"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_03/archetype_021",
+          "artist:cheap-trick",
+          "song_recording:cheap-trick-i-want-you-to-want-me-live",
+          "song_recording:cheap-trick-surrender"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "021_claim_04_hooks_not_softness",
+        "claim_text": "The lane is melodic but not soft: the guitars usually bite, and the hook lands through compression, repetition, and chorus lift.",
+        "source_ref_ids": [
+          "021_allmusic_power_pop"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_03/archetype_021",
+          "song_recording:the-knack-my-sharona",
+          "song_recording:the-cars-just-what-i-needed"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A melodic guitar-pop road where Beatles/Who songcraft meets crunchy guitars, tight choruses, and compact emotional hooks.",
+      "history_capsule": "Power pop is rock's recurring promise that a perfect chorus can still hit hard. Badfinger, Big Star, Raspberries, Cheap Trick, The Knack, The Romantics, and The Cars each balance sweetness and voltage differently.",
+      "why_it_mattered": "It keeps classic pop melody alive inside guitar-band eras and becomes a key source for college rock, pop punk, indie rock, and alternative radio hooks.",
+      "what_made_it_distinct": "The guitars have teeth, but the song is built to be sung back immediately. The tension between ache and brightness is the point.",
+      "what_to_listen_for": [
+        "Crunchy rhythm guitar under a sweet melody",
+        "Tight harmonies in the chorus",
+        "Bridges that raise emotional stakes quickly",
+        "A hook that feels classic rather than fashionable",
+        "Drums pushing the song without making it heavy metal"
+      ],
+      "did_you_know": [
+        "Big Star is central partly because later bands treated them like a secret map.",
+        "Cheap Trick shows that power pop can be loud and funny without losing tenderness."
+      ],
+      "caution": "Do not equate melodic with lightweight; power pop often hides sharp emotion inside bright surfaces."
+    },
+    "why_selected_sources_fit": "Direct support: 021_allmusic_power_pop anchors the named archetype rather than only its family. Example support: 021_rockhall_cheap_trick, 021_memphis_big_star ties claims to canonical artists, songs, albums, or scene objects. Context support: 021_rockhall_beatles is used only for boundary or lineage framing."
+  },
+  "family_03/archetype_022": {
+    "archetype_query": "Soft Rock / AM Gold / Adult Pop: Elton John, Billy Joel, Fleetwood Mac, James Taylor, Carole King, AM radio, piano pop, polished adult songcraft.",
+    "selected_sources": [
+      {
+        "source_ref_id": "022_allmusic_soft_rock",
+        "title": "Soft Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/soft-rock-ma0000002865",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines soft rock as a smoother, radio-friendly adult pop-rock style.",
+        "source_type": "music_reference"
+      },
+      {
+        "source_ref_id": "022_rockhall_elton_john",
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports piano-led pop-rock, ballad craft, and broad AM/FM adult appeal.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "022_rockhall_billy_joel",
+        "title": "Billy Joel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/billy-joel/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents singer-pianist adult pop-rock craft and radio storytelling.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "022_rockhall_fleetwood_mac",
+        "title": "Fleetwood Mac",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/fleetwood-mac/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the polished band-pop side where soft rock overlaps with classic-rock canon.",
+        "source_type": "museum_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "022_reject_easy_listening",
+        "title": "Easy listening",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/easy-listening-ma0000002525",
+        "why_rejected": "It is adjacent in mood, but too orchestrated and pre-rock to explain the songwriter and band-based AM Gold core.",
+        "source_type": "music_reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "022_claim_01_radio_smoothness",
+        "claim_text": "Soft rock centers on smooth studio craft, adult emotional themes, gentle rock rhythm, and melodies designed for broad AM/FM radio familiarity.",
+        "source_ref_ids": [
+          "022_allmusic_soft_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022_claim_02_piano_pop_pillar",
+        "claim_text": "Elton John and Billy Joel make piano-led songwriting a core part of adult pop-rock rather than a separate traditional-pop lane.",
+        "source_ref_ids": [
+          "022_rockhall_elton_john",
+          "022_rockhall_billy_joel"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "history_capsule",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "artist:elton-john",
+          "artist:billy-joel",
+          "song_recording:elton-john-your-song",
+          "song_recording:billy-joel-piano-man"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022_claim_03_fleetwood_overlap",
+        "claim_text": "Fleetwood Mac shows the overlap with classic rock: soft-rock polish can still come from a band with album-era weight.",
+        "source_ref_ids": [
+          "022_rockhall_fleetwood_mac",
+          "022_allmusic_soft_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "family_03/archetype_016",
+          "artist:fleetwood-mac",
+          "song_recording:fleetwood-mac-dreams"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022_claim_04_intimacy_without_folk_only",
+        "claim_text": "James Taylor-style intimacy belongs here when the record favors polished adult radio warmth over folk revival roughness.",
+        "source_ref_ids": [
+          "022_allmusic_soft_rock"
+        ],
+        "confidence": "medium",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "artist:james-taylor",
+          "song_recording:james-taylor-fire-and-rain"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A polished adult pop-rock road of piano ballads, gentle band grooves, warm studio craft, and AM/FM songs built for lasting familiarity.",
+      "history_capsule": "Soft rock and AM Gold gather the gentler side of the 1970s pop-rock mainstream: Elton John, Billy Joel, Fleetwood Mac, James Taylor, Carole King, America, and related artists. The sound can be intimate or huge, but it usually avoids hard-rock attack.",
+      "why_it_mattered": "It gave adult feeling a central place in rock-era radio: breakups, memory, work, home, longing, and self-reflection could become mass singalong material.",
+      "what_made_it_distinct": "The arrangement smooths the edges without erasing songcraft. Piano, acoustic guitar, close drums, and warm backing vocals usually matter more than riffs.",
+      "what_to_listen_for": [
+        "Piano or acoustic guitar carrying the harmony",
+        "A lead vocal mixed close and clear",
+        "Adult relationship or memory themes",
+        "Soft drum grooves and warm backing vocals",
+        "A chorus built for recognition rather than shock"
+      ],
+      "did_you_know": [
+        "AM Gold is partly a radio-memory category, not only a studio style.",
+        "A song can be soft rock and classic rock when album-canon familiarity and polished adult pop meet."
+      ],
+      "caution": "Do not use softness alone as evidence; the archetype needs rock-era songcraft and radio-pop structure, not background music."
+    },
+    "why_selected_sources_fit": "Direct support: 022_allmusic_soft_rock anchors the named archetype rather than only its family. Example support: 022_rockhall_elton_john, 022_rockhall_billy_joel, 022_rockhall_fleetwood_mac ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "family_03/archetype_023": {
+    "archetype_query": "Yacht Rock / Smooth Studio Pop: Steely Dan, Doobie Brothers, Christopher Cross, Toto, Michael McDonald, LA session players, jazz chords, smooth grooves, late-70s/early-80s polish.",
+    "selected_sources": [
+      {
+        "source_ref_id": "023_allmusic_yacht_rock",
+        "title": "Yacht Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/yacht-rock-ma0000012268",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines yacht rock around smooth late-1970s/early-1980s studio pop, jazz/R&B traces, and soft-rock polish.",
+        "source_type": "music_reference"
+      },
+      {
+        "source_ref_id": "023_rockhall_steely_dan",
+        "title": "Steely Dan",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/steely-dan/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the sophisticated harmony, studio perfectionism, and session-musician side through Steely Dan.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "023_rockhall_doobie_brothers",
+        "title": "The Doobie Brothers",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-doobie-brothers/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the Michael McDonald-era smooth R&B-pop bridge.",
+        "source_type": "museum_reference"
+      },
+      {
+        "source_ref_id": "023_grammy_christopher_cross",
+        "title": "Christopher Cross Artist Profile",
+        "publisher": "The Recording Academy / GRAMMY.com",
+        "url": "https://www.grammy.com/artists/christopher-cross/10261",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Christopher Cross as a canonical smooth-pop example through Grammy-recognized early-1980s success.",
+        "source_type": "industry_reference"
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "023_reject_sailing_songs",
+        "title": "Songs about sailing",
+        "publisher": "General playlist/list source",
+        "url": "https://en.wikipedia.org/wiki/Category:Songs_about_sailing",
+        "why_rejected": "Yacht rock is not literally songs about boats; it is a retrospective smooth-studio-pop style category.",
+        "source_type": "reference"
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "023_claim_01_smooth_studio_category",
+        "claim_text": "Yacht rock is a retrospective label for smooth, highly produced late-1970s and early-1980s pop-rock with jazz, R&B, and soft-rock polish.",
+        "source_ref_ids": [
+          "023_allmusic_yacht_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023_claim_02_steely_dan_precision",
+        "claim_text": "Steely Dan anchors the sophisticated side: dense chords, exacting studio work, dry lyrical irony, and elite session-player execution.",
+        "source_ref_ids": [
+          "023_rockhall_steely_dan"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:steely-dan",
+          "album:steely-dan-aja",
+          "song_recording:steely-dan-peg"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023_claim_03_mcdonald_bridge",
+        "claim_text": "The Michael McDonald-era Doobie Brothers show the R&B-inflected branch where blue-eyed soul harmony, electric piano, and soft-rock groove meet.",
+        "source_ref_ids": [
+          "023_rockhall_doobie_brothers",
+          "023_allmusic_yacht_rock"
+        ],
+        "confidence": "high",
+        "module_usage": [
+          "what_to_listen_for",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:the-doobie-brothers",
+          "song_recording:the-doobie-brothers-what-a-fool-believes"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023_claim_04_cross_toto_gateway",
+        "claim_text": "Christopher Cross and Toto make the lane's pop gateway obvious: polished rhythm tracks, clean guitar, high-gloss vocals, and choruses built for adult contemporary radio.",
+        "source_ref_ids": [
+          "023_grammy_christopher_cross",
+          "023_allmusic_yacht_rock"
+        ],
+        "confidence": "medium_high",
+        "module_usage": [
+          "canonical_examples_block",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:christopher-cross",
+          "artist:toto",
+          "song_recording:christopher-cross-sailing",
+          "song_recording:toto-africa"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "render_seed": {
+      "short_definition": "A smooth late-1970s/early-1980s studio-pop road of jazz chords, R&B-schooled vocals, elite session playing, and immaculate adult-radio polish.",
+      "history_capsule": "Yacht rock is a later name for a very specific smooth studio sound. Steely Dan, Michael McDonald-era Doobie Brothers, Christopher Cross, Toto, Kenny Loggins, and related artists make rock feel sleek, harmonically expensive, and rhythmically relaxed.",
+      "why_it_mattered": "It turns professionalism into a vibe. The lane is a masterclass in session-player precision, adult-contemporary crossover, blue-eyed soul influence, and pop arrangements where nothing sounds accidental.",
+      "what_made_it_distinct": "The groove is clean, the chords are richer than standard soft rock, and the musicianship is almost invisible because it is so controlled.",
+      "what_to_listen_for": [
+        "Electric piano and clean guitar textures",
+        "Jazz-influenced chord changes",
+        "Smooth backing vocals and blue-eyed soul phrasing",
+        "A relaxed but exact drum groove",
+        "Studio polish that feels expensive rather than loud"
+      ],
+      "did_you_know": [
+        "The term is retrospective, so older records did not market themselves as yacht rock at release.",
+        "A literal nautical lyric is optional; smooth studio behavior is the real evidence."
+      ],
+      "caution": "Do not classify by boat imagery alone; yacht rock is about feel, personnel, harmony, and studio craft polish."
+    },
+    "why_selected_sources_fit": "Direct support: 023_allmusic_yacht_rock anchors the named archetype rather than only its family. Example support: 023_rockhall_steely_dan, 023_rockhall_doobie_brothers, 023_grammy_christopher_cross ties claims to canonical artists, songs, albums, or scene objects."
+  }
+}
