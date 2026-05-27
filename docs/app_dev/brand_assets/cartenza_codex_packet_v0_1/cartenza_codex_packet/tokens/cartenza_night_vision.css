@@ -1,0 +1,46 @@
+:root {
+  --cartenza-obsidian: #07080A;
+  --cartenza-charcoal: #0E0F12;
+  --cartenza-graphite: #171A1E;
+  --cartenza-slate: #23272B;
+  --cartenza-ash: #7C828A;
+  --cartenza-silver: #BFC3C9;
+  --cartenza-warm-silver: #D4D0C7;
+  --cartenza-antique-gold: #B59A61;
+  --cartenza-dim-gold: #8F7546;
+  --cartenza-deep-teal: #244846;
+  --cartenza-muted-teal: #3F6966;
+  --cartenza-teal-mist: #8FA59A;
+
+  --cartenza-bg: var(--cartenza-obsidian);
+  --cartenza-surface: var(--cartenza-charcoal);
+  --cartenza-card: var(--cartenza-graphite);
+  --cartenza-text: var(--cartenza-warm-silver);
+  --cartenza-text-muted: var(--cartenza-ash);
+  --cartenza-signal: var(--cartenza-antique-gold);
+  --cartenza-atlas: var(--cartenza-muted-teal);
+}
+
+.cartenza-night-vision {
+  background: radial-gradient(circle at 70% 20%, rgba(63,105,102,0.10), transparent 32%), var(--cartenza-bg);
+  color: var(--cartenza-text);
+}
+
+.cartenza-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012)), var(--cartenza-card);
+  border: 1px solid rgba(191,195,201,0.12);
+  border-radius: 24px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+}
+
+.cartenza-eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cartenza-teal-mist);
+}
+
+.cartenza-tagline {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cartenza-antique-gold);
+}

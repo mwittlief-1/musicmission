@@ -1,0 +1,2605 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waymark Alpha 1 Orientation Mockups</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #040507;
+      --panel: #121418;
+      --raised: #1a1c21;
+      --line: rgba(237, 229, 210, 0.12);
+      --text: #f4efe3;
+      --muted: rgba(244, 239, 227, 0.66);
+      --quiet: rgba(244, 239, 227, 0.42);
+      --route: #17a0ff;
+      --signal: #10d4db;
+      --waypoint: #f79f31;
+      --positive: #3ed267;
+      --negative: #eb5353;
+      --paper: #ede5d2;
+      --radius: 18px;
+      --small-radius: 10px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        linear-gradient(90deg, rgba(237, 229, 210, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(237, 229, 210, 0.026) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px, 42px 42px, auto;
+      color: var(--text);
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .page-shell {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) minmax(390px, 460px) minmax(260px, 360px);
+      gap: 24px;
+      align-items: start;
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0;
+    }
+
+    .review-panel {
+      border: 1px solid var(--line);
+      background: rgba(18, 20, 24, 0.76);
+      border-radius: var(--radius);
+      padding: 18px;
+      position: sticky;
+      top: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
+    }
+
+    .brand-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(16, 212, 219, 0.6);
+      border-radius: 50%;
+      position: relative;
+      background: #080a0d;
+      box-shadow: 0 0 22px rgba(16, 212, 219, 0.16);
+    }
+
+    .mark::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      top: 16px;
+      height: 2px;
+      background: var(--signal);
+      transform: rotate(-32deg);
+      border-radius: 99px;
+    }
+
+    .mark::after {
+      content: "";
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      right: 8px;
+      top: 9px;
+      border-radius: 50%;
+      background: var(--waypoint);
+      box-shadow: 0 0 12px rgba(247, 159, 49, 0.4);
+    }
+
+    .eyebrow {
+      color: var(--signal);
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .panel-title {
+      font-family: Georgia, "New York", serif;
+      font-size: 25px;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+
+    .panel-copy {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .flow-list {
+      display: grid;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
+    .flow-step {
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      background: transparent;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 9px;
+      padding: 9px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .flow-step:hover {
+      background: rgba(237, 229, 210, 0.06);
+      color: var(--text);
+    }
+
+    .flow-step.active {
+      border-color: rgba(23, 160, 255, 0.55);
+      background: rgba(23, 160, 255, 0.12);
+      color: var(--text);
+    }
+
+    .flow-index {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(237, 229, 210, 0.08);
+      color: var(--quiet);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .flow-step.active .flow-index {
+      color: #041016;
+      background: var(--signal);
+    }
+
+    .flow-name {
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.2;
+    }
+
+    .flow-note {
+      display: block;
+      margin-top: 3px;
+      color: var(--quiet);
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .phone-wrap {
+      display: grid;
+      justify-items: center;
+      gap: 16px;
+    }
+
+    .phone {
+      width: 390px;
+      height: 844px;
+      border: 1px solid rgba(237, 229, 210, 0.16);
+      border-radius: 42px;
+      background: #000;
+      padding: 14px;
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
+    }
+
+    .phone-screen {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background: var(--bg);
+      border: 1px solid rgba(237, 229, 210, 0.08);
+    }
+
+    .phone-screen::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(160deg, transparent 0 34%, rgba(23, 160, 255, 0.07) 34% 34.35%, transparent 34.35%),
+        linear-gradient(26deg, transparent 0 61%, rgba(16, 212, 219, 0.06) 61% 61.25%, transparent 61.25%);
+      opacity: 0.9;
+    }
+
+    .status-bar {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      color: rgba(244, 239, 227, 0.82);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .status-icons {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .cell-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(244, 239, 227, 0.76);
+    }
+
+    .battery {
+      width: 20px;
+      height: 10px;
+      border: 1px solid rgba(244, 239, 227, 0.72);
+      border-radius: 3px;
+      position: relative;
+    }
+
+    .battery::before {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      width: 12px;
+      background: var(--positive);
+      border-radius: 1px;
+    }
+
+    .app-screen {
+      position: absolute;
+      inset: 42px 0 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      z-index: 1;
+    }
+
+    .screen-pad {
+      padding: 22px;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      min-height: 32px;
+    }
+
+    .wordmark {
+      font-family: Georgia, "New York", serif;
+      font-size: 22px;
+      color: var(--paper);
+    }
+
+    .step-pill {
+      color: var(--signal);
+      background: rgba(16, 212, 219, 0.10);
+      border: 1px solid rgba(16, 212, 219, 0.26);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .hero-space {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      min-height: 0;
+    }
+
+    .orientation-screen {
+      justify-content: flex-start;
+    }
+
+    .orientation-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      min-height: 0;
+      padding-top: 4px;
+    }
+
+    .orientation-headline {
+      max-width: 340px;
+    }
+
+    .orientation-copy {
+      gap: 10px;
+    }
+
+    .orientation-footer {
+      margin-top: auto;
+    }
+
+    .orientation-screen .pager {
+      margin: 0 0 10px;
+    }
+
+    .orientation-actions {
+      margin-top: 0;
+    }
+
+    .route-art {
+      height: 128px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(16, 212, 219, 0.11), transparent 46%),
+        linear-gradient(25deg, rgba(247, 159, 49, 0.10), transparent 44%),
+        #080a0d;
+    }
+
+    .route-line {
+      position: absolute;
+      height: 3px;
+      background: var(--signal);
+      border-radius: 99px;
+      transform-origin: left center;
+      opacity: 0.82;
+    }
+
+    .route-line.one {
+      width: 130px;
+      left: 48px;
+      top: 77px;
+      transform: rotate(-26deg);
+    }
+
+    .route-line.two {
+      width: 92px;
+      left: 165px;
+      top: 50px;
+      transform: rotate(22deg);
+      background: var(--route);
+    }
+
+    .route-point {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--waypoint);
+      border: 2px solid #080a0d;
+      box-shadow: 0 0 22px rgba(247, 159, 49, 0.35);
+    }
+
+    .route-point.a { left: 40px; top: 73px; }
+    .route-point.b { left: 165px; top: 42px; background: var(--signal); }
+    .route-point.c { left: 252px; top: 78px; background: var(--positive); }
+
+    .headline {
+      font-family: Georgia, "New York", serif;
+      color: var(--paper);
+      font-size: 34px;
+      line-height: 1.04;
+      max-width: 320px;
+    }
+
+    .copy-block {
+      display: grid;
+      gap: 12px;
+      color: rgba(244, 239, 227, 0.78);
+      font-size: 15px;
+      line-height: 1.48;
+    }
+
+    .copy-block strong {
+      color: var(--paper);
+    }
+
+    .helper {
+      color: var(--quiet);
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    .action-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .primary,
+    .secondary,
+    .quiet-button {
+      width: 100%;
+      min-height: 52px;
+      border: 0;
+      border-radius: 14px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .primary {
+      background: var(--paper);
+      color: #06070a;
+    }
+
+    .primary.signal {
+      background: linear-gradient(135deg, var(--signal), var(--route));
+      color: #031014;
+    }
+
+    .secondary {
+      background: rgba(237, 229, 210, 0.08);
+      color: var(--paper);
+      border: 1px solid rgba(237, 229, 210, 0.13);
+    }
+
+    .quiet-button {
+      background: transparent;
+      color: var(--muted);
+      min-height: 34px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 12px;
+      border: 1px solid rgba(237, 229, 210, 0.12);
+      border-radius: 14px;
+      background: rgba(237, 229, 210, 0.05);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+      border: 1px solid rgba(16, 212, 219, 0.55);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      color: var(--signal);
+      flex: 0 0 auto;
+      font-weight: 900;
+    }
+
+    .access-row,
+    .mini-card,
+    .faq-item,
+    .mission-card,
+    .review-row {
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 16px;
+      background: rgba(18, 20, 24, 0.88);
+      padding: 14px;
+    }
+
+    .access-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .access-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(16, 212, 219, 0.12);
+      color: var(--signal);
+      font-weight: 900;
+    }
+
+    .row-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--paper);
+    }
+
+    .row-copy {
+      margin-top: 2px;
+      color: var(--quiet);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .pager {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin: 6px 0 12px;
+    }
+
+    .pager-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 99px;
+      background: rgba(237, 229, 210, 0.24);
+    }
+
+    .pager-dot.active {
+      width: 24px;
+      background: var(--signal);
+    }
+
+    .survey-screen {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 0;
+    }
+
+    .survey-header {
+      padding: 16px 16px 10px;
+      border-bottom: 1px solid rgba(237, 229, 210, 0.08);
+      background: rgba(4, 5, 7, 0.95);
+    }
+
+    .survey-title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .survey-title {
+      font-size: 21px;
+      font-weight: 850;
+      color: var(--paper);
+      line-height: 1.1;
+    }
+
+    .survey-subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .progress-track {
+      height: 5px;
+      background: rgba(237, 229, 210, 0.10);
+      border-radius: 99px;
+      margin-top: 14px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: var(--progress);
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--signal), var(--route));
+    }
+
+    .tile-grid {
+      padding: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      flex: 1;
+      align-content: start;
+      overflow: auto;
+      min-height: 0;
+    }
+
+    .tile {
+      border: 1px solid rgba(237, 229, 210, 0.12);
+      background: rgba(18, 20, 24, 0.86);
+      border-radius: 13px;
+      min-height: 113px;
+      padding: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .album-art {
+      position: relative;
+      flex: 1;
+      min-height: 58px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, var(--art-a), transparent 52%),
+        linear-gradient(25deg, transparent 30%, var(--art-b)),
+        #1a1c21;
+      color: rgba(244, 239, 227, 0.90);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .state-badge {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      display: grid;
+      place-items: center;
+      min-width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(4, 5, 7, 0.72);
+      border: 1px solid rgba(237, 229, 210, 0.15);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .tile-name {
+      color: var(--paper);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.15;
+      min-height: 28px;
+    }
+
+    .tile-meta {
+      color: var(--quiet);
+      font-size: 10px;
+      line-height: 1.1;
+    }
+
+    .tile[data-state="unknown"] .state-badge { color: rgba(237, 229, 210, 0.66); }
+    .tile[data-state="ok"] { border-color: rgba(247, 159, 49, 0.52); }
+    .tile[data-state="ok"] .state-badge { color: var(--waypoint); }
+    .tile[data-state="like"] { border-color: rgba(16, 212, 219, 0.62); }
+    .tile[data-state="like"] .state-badge { color: var(--signal); }
+    .tile[data-state="love"] { border-color: rgba(62, 210, 103, 0.72); }
+    .tile[data-state="love"] .state-badge { color: var(--positive); }
+    .tile[data-state="no"] { border-color: rgba(235, 83, 83, 0.72); }
+    .tile[data-state="no"] .state-badge { color: var(--negative); }
+
+    .survey-footer {
+      padding: 10px 14px 14px;
+      border-top: 1px solid rgba(237, 229, 210, 0.08);
+      background: rgba(4, 5, 7, 0.96);
+    }
+
+    .legend {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 9px;
+    }
+
+    .legend span {
+      color: var(--muted);
+      background: rgba(237, 229, 210, 0.06);
+      border-radius: 999px;
+      padding: 5px 7px;
+      font-size: 10px;
+      font-weight: 750;
+    }
+
+    .generation {
+      display: grid;
+      gap: 14px;
+      margin: 8px 0 18px;
+    }
+
+    .gen-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .gen-state {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #041016;
+      background: var(--signal);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .gen-state.wait {
+      background: rgba(237, 229, 210, 0.10);
+      color: var(--quiet);
+    }
+
+    .tab-bar {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(237, 229, 210, 0.10);
+      background: rgba(8, 10, 13, 0.98);
+      padding: 8px 6px 12px;
+    }
+
+    .tab {
+      display: grid;
+      gap: 4px;
+      place-items: center;
+      color: var(--quiet);
+      font-size: 10px;
+      font-weight: 700;
+      border: 0;
+      background: transparent;
+    }
+
+    .tab.active {
+      color: var(--signal);
+    }
+
+    .core-scroll {
+      overflow: auto;
+      padding: 18px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .core-scroll.no-scroll {
+      overflow: hidden;
+    }
+
+    .mission-detail-scroll {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mission-detail-scroll .headline {
+      margin: 8px 0 2px;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .route-song {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.16;
+    }
+
+    .song-number {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      color: var(--signal);
+      background: rgba(16, 212, 219, 0.10);
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .test-chip-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .test-chip {
+      min-height: 42px;
+      display: grid;
+      place-items: center;
+      padding: 7px;
+      border-radius: 12px;
+      color: var(--muted);
+      background: rgba(237, 229, 210, 0.055);
+      border: 1px solid rgba(237, 229, 210, 0.08);
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .player-scroll {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: hidden;
+    }
+
+    .player-scroll .mission-rail,
+    .player-scroll .feedback-panel {
+      margin: 0;
+      flex: 0 0 auto;
+    }
+
+    .player-scroll .compact-player {
+      flex: 0 0 auto;
+      align-items: center;
+    }
+
+    .player-scroll .feedback-panel {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+    }
+
+    .player-scroll .tag-closed-state {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 18px 12px;
+    }
+
+    .player-scroll .feedback-panel.has-reaction .context-rail {
+      flex: 1;
+      align-content: center;
+    }
+
+    .mission-card {
+      display: grid;
+      gap: 11px;
+      margin-top: 12px;
+    }
+
+    .mission-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+      padding-bottom: 8px;
+    }
+
+    .mission-card.compact {
+      padding: 12px;
+      gap: 8px;
+    }
+
+    .mission-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .mission-card h3 {
+      color: var(--paper);
+      font-size: 15px;
+      line-height: 1.18;
+    }
+
+    .mission-index {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 9px;
+      color: var(--signal);
+      background: rgba(16, 212, 219, 0.10);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      padding: 6px 9px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(237, 229, 210, 0.06);
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    .pill.signal { color: var(--signal); background: rgba(16, 212, 219, 0.10); }
+    .pill.warn { color: var(--waypoint); background: rgba(247, 159, 49, 0.10); }
+    .pill.good { color: var(--positive); background: rgba(62, 210, 103, 0.10); }
+
+    .player-art {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 22px;
+      margin: 8px 0 16px;
+      background:
+        linear-gradient(140deg, rgba(16, 212, 219, 0.32), transparent 48%),
+        linear-gradient(30deg, rgba(247, 159, 49, 0.24), rgba(235, 83, 83, 0.18)),
+        #121418;
+      border: 1px solid rgba(237, 229, 210, 0.12);
+      display: grid;
+      place-items: center;
+      color: var(--paper);
+      font-family: Georgia, "New York", serif;
+      font-size: 34px;
+    }
+
+    .mission-rail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      background: rgba(26, 28, 33, 0.92);
+      margin-bottom: 10px;
+    }
+
+    .rail-icon {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(247, 159, 49, 0.12);
+      color: var(--waypoint);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+
+    .rail-copy {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .rail-title {
+      color: var(--paper);
+      font-size: 13px;
+      font-weight: 850;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rail-subtitle {
+      color: var(--quiet);
+      font-size: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    .rail-progress {
+      color: var(--text);
+      background: rgba(237, 229, 210, 0.08);
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .compact-player {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 16px;
+      padding: 16px;
+      min-height: 244px;
+      border-radius: 18px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      background: linear-gradient(180deg, rgba(237, 229, 210, 0.035), rgba(237, 229, 210, 0.012));
+    }
+
+    .flip-card {
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      background:
+        linear-gradient(140deg, rgba(16, 212, 219, 0.30), transparent 48%),
+        linear-gradient(30deg, rgba(247, 159, 49, 0.24), rgba(235, 83, 83, 0.18)),
+        #121418;
+      position: relative;
+      display: grid;
+      place-items: center;
+      color: var(--paper);
+      font-family: Georgia, "New York", serif;
+      font-size: 34px;
+      overflow: hidden;
+    }
+
+    .flip-card::before {
+      content: "02";
+      position: absolute;
+      left: 9px;
+      top: 9px;
+      padding: 5px 7px;
+      border-radius: 8px;
+      background: rgba(4, 5, 7, 0.44);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .flip-card::after {
+      content: "↻";
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(4, 5, 7, 0.46);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .player-info {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .track-title {
+      color: var(--paper);
+      font-size: 23px;
+      font-weight: 850;
+      line-height: 1.08;
+    }
+
+    .track-meta {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .playback-meter {
+      display: grid;
+      gap: 5px;
+    }
+
+    .time-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--quiet);
+      font-size: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .compact-transport {
+      display: grid;
+      grid-template-columns: 40px 64px 40px;
+      align-items: center;
+      gap: 12px;
+      margin-top: 2px;
+    }
+
+    .feedback-panel {
+      margin-top: 14px;
+      padding: 14px;
+      min-height: 184px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 18px;
+      background: rgba(18, 20, 24, 0.94);
+    }
+
+    .context-rail {
+      display: none;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(237, 229, 210, 0.07);
+    }
+
+    .feedback-panel.has-reaction .context-rail {
+      display: grid;
+    }
+
+    .tag-closed-state {
+      margin-top: 12px;
+      padding: 24px 12px;
+      border-top: 1px solid rgba(237, 229, 210, 0.07);
+      color: var(--quiet);
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .feedback-panel.has-reaction .tag-closed-state {
+      display: none;
+    }
+
+    .context-chip {
+      min-height: 70px;
+      border-radius: 12px;
+      background: rgba(237, 229, 210, 0.055);
+      border: 1px solid rgba(237, 229, 210, 0.08);
+      color: var(--muted);
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.14;
+      font-weight: 750;
+    }
+
+    .context-chip.selected {
+      color: var(--paper);
+      border-color: rgba(16, 212, 219, 0.50);
+      background: rgba(16, 212, 219, 0.11);
+    }
+
+    .player-action-bar {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 8px;
+      padding: 8px 14px 12px;
+      border-top: 1px solid rgba(237, 229, 210, 0.08);
+      background: rgba(4, 5, 7, 0.98);
+    }
+
+    .action-tile {
+      min-height: 44px;
+      border: 0;
+      border-radius: 12px;
+      background: rgba(26, 28, 33, 0.96);
+      color: var(--paper);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .action-tile.warn {
+      color: var(--waypoint);
+      border: 1px solid rgba(247, 159, 49, 0.22);
+    }
+
+    .transport {
+      display: grid;
+      grid-template-columns: 46px 64px 46px;
+      justify-content: center;
+      gap: 18px;
+      align-items: center;
+      margin: 14px 0;
+    }
+
+    .circle-btn {
+      height: 46px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(237, 229, 210, 0.08);
+      color: var(--paper);
+      font-weight: 900;
+    }
+
+    .circle-btn.play {
+      height: 64px;
+      background: var(--paper);
+      color: #050607;
+    }
+
+    .reaction-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .reaction {
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 12px;
+      background: rgba(18, 20, 24, 0.94);
+      min-height: 68px;
+      color: var(--paper);
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .reaction.love { border-color: rgba(62, 210, 103, 0.5); }
+    .reaction.like { border-color: rgba(16, 212, 219, 0.5); }
+    .reaction.ok { border-color: rgba(247, 159, 49, 0.5); }
+    .reaction.no { border-color: rgba(235, 83, 83, 0.5); }
+    .reaction.selected {
+      background: rgba(237, 229, 210, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(237, 229, 210, 0.18);
+    }
+
+    .faq-list {
+      overflow: auto;
+      padding: 18px;
+      display: grid;
+      gap: 10px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .faq-item h3 {
+      font-size: 14px;
+      color: var(--paper);
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    .phone-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 390px;
+    }
+
+    .phone-controls button {
+      min-height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(237, 229, 210, 0.12);
+      background: rgba(18, 20, 24, 0.86);
+      color: var(--paper);
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .notes {
+      display: grid;
+      gap: 14px;
+    }
+
+    .review-row-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .text-button {
+      border: 1px solid rgba(237, 229, 210, 0.12);
+      border-radius: 999px;
+      background: rgba(237, 229, 210, 0.05);
+      color: var(--paper);
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 850;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+
+    .song-evidence-card {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 16px;
+      background: rgba(18, 20, 24, 0.88);
+      margin-top: 14px;
+    }
+
+    .song-art {
+      width: 86px;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(140deg, rgba(16, 212, 219, 0.30), transparent 48%),
+        linear-gradient(30deg, rgba(247, 159, 49, 0.24), rgba(235, 83, 83, 0.18)),
+        #121418;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      color: var(--paper);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .review-edit-panel {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+      padding: 14px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 16px;
+      background: rgba(18, 20, 24, 0.88);
+    }
+
+    .edit-reaction-grid {
+      margin-top: 8px;
+    }
+
+    .context-rail.edit-tags {
+      display: grid;
+      margin-top: 8px;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .evidence-note {
+      width: 100%;
+      min-height: 96px;
+      resize: none;
+      border: 1px solid rgba(237, 229, 210, 0.12);
+      border-radius: 14px;
+      background: rgba(4, 5, 7, 0.52);
+      color: var(--paper);
+      padding: 12px;
+      line-height: 1.35;
+    }
+
+    .evidence-note::placeholder {
+      color: var(--quiet);
+    }
+
+    .save-state {
+      color: var(--quiet);
+      font-size: 11px;
+      line-height: 1.35;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .note-box {
+      padding: 14px;
+      border: 1px solid rgba(237, 229, 210, 0.10);
+      border-radius: 16px;
+      background: rgba(237, 229, 210, 0.045);
+    }
+
+    .note-box h3 {
+      color: var(--paper);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .note-box p,
+    .note-box li {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .note-box ul {
+      margin: 8px 0 0;
+      padding-left: 17px;
+    }
+
+    @media (max-width: 980px) {
+      .page-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .review-panel {
+        position: static;
+      }
+
+      .flow-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .page-shell {
+        display: block;
+        width: 100%;
+        max-width: 390px;
+        height: 100svh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .review-panel {
+        display: none;
+      }
+
+      .phone-wrap {
+        display: block;
+        height: 100svh;
+        gap: 0;
+        justify-content: start;
+        width: 100%;
+      }
+
+      .phone,
+      .phone-controls {
+        width: 100%;
+        max-width: none;
+      }
+
+      .phone {
+        height: calc(100svh - 56px);
+        min-height: 0;
+        border-radius: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .phone-screen {
+        border-radius: 0;
+        border: 0;
+      }
+
+      .phone-controls {
+        height: 56px;
+        padding: 6px 10px;
+        background: #080a0d;
+        border-top: 1px solid rgba(237, 229, 210, 0.12);
+      }
+
+      .phone-controls button {
+        min-height: 42px;
+      }
+
+      .status-bar {
+        height: 32px;
+      }
+
+      .app-screen {
+        inset: 32px 0 0;
+      }
+
+      .screen-pad {
+        padding: 15px 16px 12px;
+      }
+
+      .topline {
+        margin-bottom: 10px;
+        min-height: 28px;
+      }
+
+      .wordmark {
+        font-size: 20px;
+      }
+
+      .hero-space {
+        gap: 13px;
+      }
+
+      .route-art {
+        height: 82px;
+        border-radius: 18px;
+      }
+
+      .headline {
+        font-size: clamp(26px, 8.2vw, 31px);
+      }
+
+      .copy-block {
+        gap: 8px;
+        font-size: clamp(12px, 3.55vw, 14px);
+        line-height: 1.36;
+      }
+
+      .orientation-screen {
+        padding-top: 14px;
+      }
+
+      .orientation-screen .topline {
+        margin-bottom: 8px;
+      }
+
+      .orientation-main {
+        justify-content: flex-start;
+        gap: 11px;
+        padding-top: clamp(48px, 8svh, 68px);
+      }
+
+      .orientation-headline {
+        font-size: clamp(27px, 7.8vw, 31px);
+      }
+
+      .orientation-copy {
+        font-size: clamp(12.5px, 3.45vw, 13.8px);
+        line-height: 1.36;
+      }
+
+      .orientation-footer {
+        margin-top: 12px;
+      }
+
+      .helper {
+        font-size: 11px;
+      }
+
+      .action-stack {
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .primary,
+      .secondary,
+      .quiet-button {
+        min-height: 44px;
+        border-radius: 12px;
+      }
+
+      .checkbox-row {
+        padding: 9px;
+        font-size: 12px;
+      }
+
+      .survey-header {
+        padding: 10px 12px 8px;
+      }
+
+      .survey-title {
+        font-size: 19px;
+      }
+
+      .survey-subtitle {
+        font-size: 11px;
+      }
+
+      .progress-track {
+        margin-top: 8px;
+      }
+
+      .tile-grid {
+        padding: 8px;
+        gap: 6px;
+        overflow: hidden;
+      }
+
+      .tile {
+        min-height: 0;
+        padding: 5px;
+        gap: 4px;
+      }
+
+      .album-art {
+        min-height: 43px;
+        font-size: 14px;
+      }
+
+      .state-badge {
+        min-width: 20px;
+        height: 20px;
+        font-size: 9px;
+        right: 4px;
+        top: 4px;
+      }
+
+      .tile-name {
+        font-size: 10.5px;
+        min-height: 24px;
+      }
+
+      .tile-meta {
+        font-size: 9px;
+      }
+
+      .survey-footer {
+        padding: 7px 10px 9px;
+      }
+
+      .legend {
+        margin-bottom: 6px;
+      }
+
+      .legend span {
+        padding: 4px 6px;
+        font-size: 9px;
+      }
+
+      .core-scroll,
+      .faq-list {
+        padding: 14px;
+      }
+
+      .mission-detail-scroll {
+        gap: 8px;
+      }
+
+      .route-song {
+        font-size: 10.5px;
+      }
+
+      .test-chip {
+        min-height: 34px;
+      }
+
+      .mission-card.compact {
+        padding: 11px;
+      }
+
+      .mission-list {
+        gap: 8px;
+      }
+
+      .mission-card h3 {
+        font-size: 14px;
+      }
+
+      .song-evidence-card {
+        grid-template-columns: 74px minmax(0, 1fr);
+      }
+
+      .song-art {
+        width: 74px;
+      }
+
+      .compact-player {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 12px;
+        padding: 14px;
+        min-height: 286px;
+      }
+
+      .track-title {
+        font-size: 21px;
+      }
+
+      .compact-transport {
+        grid-template-columns: 32px 54px 32px;
+        gap: 8px;
+      }
+
+      .circle-btn {
+        height: 36px;
+      }
+
+      .circle-btn.play {
+        height: 54px;
+      }
+
+      .reaction-grid {
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .reaction {
+        min-height: 70px;
+        font-size: 10px;
+      }
+
+      .context-chip {
+        min-height: 62px;
+        font-size: 10px;
+      }
+
+      .feedback-panel {
+        min-height: 214px;
+      }
+
+      .tag-closed-state {
+        padding: 30px 12px;
+      }
+
+      .feedback-panel.has-reaction {
+        min-height: 228px;
+      }
+
+      .feedback-panel.has-reaction .context-rail {
+        margin-top: 14px;
+      }
+
+      .feedback-panel.has-reaction .context-chip {
+        min-height: 70px;
+      }
+
+      .player-action-bar {
+        padding: 7px 10px 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <aside class="review-panel" aria-label="Prototype flow">
+      <div class="brand-row">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div class="eyebrow">Alpha 1 mockup</div>
+          <h1 class="panel-title">Waymark first-run flow</h1>
+        </div>
+      </div>
+      <p class="panel-copy">
+        Static, review-only prototype. This explores flow, copy, hierarchy, and Night Vision tone before Swift implementation.
+      </p>
+      <div class="flow-list" id="flowList"></div>
+    </aside>
+
+    <section class="phone-wrap" aria-label="Phone mockup">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <div class="status-icons" aria-hidden="true">
+              <span class="cell-dot"></span><span class="cell-dot"></span><span class="cell-dot"></span>
+              <span class="battery"></span>
+            </div>
+          </div>
+          <div class="app-screen" id="appScreen"></div>
+        </div>
+      </div>
+      <div class="phone-controls">
+        <button id="prevBtn" type="button">Back</button>
+        <button id="nextBtn" type="button">Next</button>
+      </div>
+    </section>
+
+    <aside class="review-panel notes" aria-label="Review notes">
+      <div>
+        <div class="eyebrow">Review focus</div>
+        <h2 class="panel-title" id="noteTitle">Orientation</h2>
+        <p class="panel-copy" id="noteCopy">
+          Use this packet to review the first-run path before implementation.
+        </p>
+      </div>
+      <div class="note-box">
+        <h3>Locked Alpha choices</h3>
+        <ul>
+          <li>Waymark is the app name.</li>
+          <li>Survey is required after onboarding.</li>
+          <li>No prebuilt missions as user content.</li>
+          <li>Alpha is dark mode and portrait only.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Open engineering check</h3>
+        <p>
+          Evidence can be labeled Share Evidence in product copy, but engineering still needs to confirm automatic/scheduled Supabase sync versus a manual support fallback.
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    const onboardingPages = [
+      {
+        id: "welcome",
+        nav: "Welcome",
+        eyebrow: "Welcome",
+        headline: "Find the music that is actually yours.",
+        body: [
+          "Waymark helps map your music taste through guided listening missions.",
+          "You'll start by answering a short Survey. Waymark will use that evidence to build a first taste read, generate a few listening missions, and learn from how you react.",
+          "This is an early Alpha, so some edges will be rough. What matters most is whether the experience feels useful, personal, and worth continuing."
+        ],
+        primary: "Start",
+        secondary: "What am I testing?",
+        note: "Uses your exact welcome copy. Secondary link can open FAQ or an Alpha scope sheet."
+      },
+      {
+        id: "steps",
+        nav: "What you'll do",
+        eyebrow: "Orientation",
+        headline: "The Alpha has four simple steps.",
+        body: [
+          "First, connect Apple Music so Waymark can play songs.",
+          "Then complete a short Survey so Waymark has a starting point.",
+          "Next, Waymark will create your first missions - structured listening routes designed to test what might work for you.",
+          "As you listen, tap quick reactions and add notes when you want. Those reactions become evidence for your Atlas."
+        ],
+        helper: "You do not need to understand the model, the graph, or the data. Just listen and react honestly.",
+        primary: "Continue",
+        note: "This sets expectations without making the Alpha feel like a tutorial."
+      },
+      {
+        id: "surveyIntro",
+        nav: "Survey",
+        eyebrow: "Survey",
+        headline: "The Survey maps starting territory.",
+        body: [
+          "The Survey is not a quiz, and there are no right answers.",
+          "You'll see artists, albums, or songs and mark what you know, like, love, keep around, or do not want more of.",
+          "\"Don't know\" is useful. \"Ok\" is useful. A miss is useful. Waymark is trying to learn the shape of your taste, not force everything into favorites."
+        ],
+        helper: "When in doubt, answer based on your real reaction - not what you think you should like.",
+        primary: "Got it",
+        note: "Good evidence boundary. We may later rename Ok to Keep if the reaction system follows the brand PDF."
+      },
+      {
+        id: "missions",
+        nav: "Missions",
+        eyebrow: "Missions",
+        headline: "Missions are not playlists.",
+        body: [
+          "A Mission is a listening experiment.",
+          "Each route has a reason: it may test a nearby road, a promising frontier, a possible dead end, or a familiar landmark.",
+          "Some missions should feel safe. Some may be a little risky. The goal is not to be perfect on the first try. The goal is to learn quickly."
+        ],
+        helper: "A good miss can be as useful as a hit.",
+        primary: "Continue",
+        note: "This is the right distinction for Alpha. The mission card later needs to prove it visually."
+      },
+      {
+        id: "react",
+        nav: "Listen and react",
+        eyebrow: "Listen",
+        headline: "React lightly. Add detail when it matters.",
+        body: [
+          "<strong>Love</strong> means this clearly works.",
+          "<strong>Like</strong> means something works, but maybe not everything.",
+          "<strong>Ok</strong> means useful, familiar, or worth keeping around - not necessarily a favorite.",
+          "<strong>Dislike</strong> means this did not work for you.",
+          "You may also see short tags or a note field. Use them when they help explain why something landed or failed."
+        ],
+        helper: "Skipping a song without reacting is treated as unclear, not automatically negative.",
+        primary: "Continue",
+        note: "Reaction semantics are clear. Consider whether Dislike should become Not For Me for brand consistency."
+      },
+      {
+        id: "atlas",
+        nav: "Your Atlas",
+        eyebrow: "Atlas",
+        headline: "Waymark learns from evidence.",
+        body: [
+          "Your Atlas is Waymark's working map of your taste.",
+          "At first, it will be cautious. It may show possible landmarks, frontiers, waypoints, and dead-end risks - but it should not pretend to know everything yet.",
+          "After you finish missions, Waymark should get better at explaining what changed and what to try next."
+        ],
+        primary: "Start Survey",
+        secondary: "Read the Alpha FAQ",
+        note: "This keeps the Atlas provisional, which is exactly the trust posture we need."
+      }
+    ];
+
+    const faqItems = [
+      ["What am I supposed to do first?", "Start with the Survey. After that, Waymark should generate your first mission batch. Pick a mission, listen through the route, and react as you go."],
+      ["Do I need Apple Music?", "Yes. This Alpha uses Apple Music for playback. Waymark is not replacing Apple Music; it uses Apple Music so you can listen and give feedback inside a structured mission."],
+      ["What is the Survey for?", "The Survey gives Waymark starting evidence. It helps the app understand what you already know, what might be important, what is uncertain, and what should be tested through listening. It is not a final taste profile."],
+      ["What if I do not know something in the Survey?", "Use Don't Know. That is helpful. Unknown does not mean dislike. It may simply tell Waymark that an area is unfamiliar or needs a different kind of mission later."],
+      ["What does Ok mean?", "Use Ok for music that is fine, familiar, useful, nostalgic, or worth keeping around - but not necessarily something you actively want more of."],
+      ["What is a Mission?", "A Mission is a guided listening route with a purpose. It might test a familiar area, explore a frontier, check whether something nearby is actually a bad fit, or revisit music you already know with more useful feedback."],
+      ["How much should I react while listening?", "Use the main reaction buttons whenever you have a clear feeling. Add tags or notes when they help. You do not need to write an essay."],
+      ["What happens if I skip a song?", "If you skip after a song starts and do not react, Waymark treats that as unclear evidence. It does not automatically mean you disliked the song."],
+      ["What is the Atlas?", "The Atlas is Waymark's working map of your taste. In this Alpha, the Atlas may be simple or partial. The important thing is whether it helps explain why Waymark is choosing missions for you."],
+      ["What should I report as feedback?", "Tell us when the Survey feels generic, a mission feels random, a song is the wrong version, the app loses your place, an explanation overreaches, or something feels surprisingly right."],
+      ["Is Waymark judging my taste?", "No. Waymark is trying to learn your taste, not rank it. A dead end does not mean the music is bad."],
+      ["How polished is this Alpha supposed to be?", "It should be usable, but not final. The goal is to test whether the loop works: you give evidence, Waymark creates missions, you listen, Waymark learns, and the next route gets smarter."]
+    ];
+
+    const alphaMissions = [
+      ["Dark melody road test", "Testing", "Medium risk", "6 songs", "Tests whether darker, bodily songs work when the melody stays clear.", "Ready"],
+      ["Familiar but not favorite", "Waypoint", "Low risk", "5 songs", "Checks whether familiar music is useful context or just background furniture.", "Ready"],
+      ["Hook strength without gloss", "Frontier", "Medium risk", "6 songs", "Looks for direct hooks that still keep enough grain and pressure.", "Ready"],
+      ["Voice pressure check", "Boundary", "Medium risk", "5 songs", "Separates vocal texture from the rest of the track signal.", "Queued"],
+      ["Warm catalog road", "Landmark", "Low risk", "6 songs", "Revisits likely comfort territory without treating it as a final profile.", "Queued"],
+      ["Sparse late-night route", "Frontier", "Higher risk", "4 songs", "Tests whether less density gives the emotional signal more room.", "Queued"],
+      ["Rhythm-first exception test", "Exception", "Medium risk", "6 songs", "Checks whether rhythm can carry a song when melody is less central.", "Queued"],
+      ["Song version audit", "Support", "Low risk", "4 songs", "Catches wrong versions, remasters, covers, or unavailable playback paths.", "Queued"],
+      ["Album context probe", "Context", "Medium risk", "5 songs", "Tests whether a song works better when the album frame is visible.", "Queued"],
+      ["Dead-end boundary check", "Boundary", "Higher risk", "6 songs", "Looks for nearby music that may be structurally close but personally wrong.", "Queued"]
+    ];
+
+    const playerTagSets = {
+      love: ["voice works", "want more", "anchor this"],
+      like: ["hook works", "promising bridge", "needs edge"],
+      ok: ["useful context", "not a favorite", "maybe later"],
+      dislike: ["voice problem", "too polished", "wrong version?"]
+    };
+
+    const missionReviewItems = [
+      {
+        title: "Bela Lugosi's Dead",
+        artist: "Bauhaus",
+        album: "Bela Lugosi's Dead",
+        reaction: "Love",
+        reactionKey: "love",
+        status: "Ready",
+        tags: ["voice works", "anchor this"],
+        note: "Pressure and atmosphere both worked."
+      },
+      {
+        title: "A Forest",
+        artist: "The Cure",
+        album: "Seventeen Seconds",
+        reaction: "Like",
+        reactionKey: "like",
+        status: "Ready",
+        tags: ["hook works", "promising bridge"],
+        note: "Good bridge item. Keep checking whether the colder texture matters."
+      },
+      {
+        title: "Marquee Moon",
+        artist: "Television",
+        album: "Marquee Moon",
+        reaction: "Ok",
+        reactionKey: "ok",
+        status: "Needs review",
+        tags: ["useful context"],
+        note: "Guitar pressure was interesting, but not clearly a repeat signal."
+      },
+      {
+        title: "Love Will Tear Us Apart",
+        artist: "Joy Division",
+        album: "Substance",
+        reaction: "No signal",
+        reactionKey: "dislike",
+        status: "Needs review",
+        tags: ["wrong version?"],
+        note: ""
+      }
+    ];
+
+    const surveyPages = [
+      ["Artist 1 of 4", "Known territory and calibration", "artist", ["Radiohead", "Beyonce", "The Cure", "Fleetwood Mac", "Kendrick Lamar", "R.E.M.", "Sade", "Nine Inch Nails", "Taylor Swift", "LCD Soundsystem", "Joni Mitchell", "Deftones"]],
+      ["Artist 2 of 4", "Adjacent roads and possible misses", "artist", ["Pavement", "Fiona Apple", "Prince", "Cocteau Twins", "The National", "Outkast", "Charli XCX", "Wilco", "Portishead", "The Smiths", "Daft Punk", "Phoebe Bridgers"]],
+      ["Artist 3 of 4", "Boundary checks", "artist", ["Steely Dan", "Elliott Smith", "The Strokes", "Rosalia", "Sonic Youth", "Carly Rae Jepsen", "Massive Attack", "Tom Petty", "Bjork", "The 1975", "Mazzy Star", "Metallica"]],
+      ["Artist 4 of 4", "Final artist pass", "artist", ["Nick Drake", "A Tribe Called Quest", "Talking Heads", "Lana Del Rey", "PJ Harvey", "Bon Iver", "Kate Bush", "The War on Drugs", "Robyn", "Weyes Blood", "The Clash", "Tame Impala"]],
+      ["Album 1 of 2", "Object-specific taste", "album", ["OK Computer", "Lemonade", "Blue", "Disintegration", "In Rainbows", "Purple Rain", "Dummy", "Blonde", "Rumours", "The Queen Is Dead", "Emotion", "Loveless"]],
+      ["Album 2 of 2", "Albums can break artist assumptions", "album", ["Yankee Hotel Foxtrot", "The Idler Wheel", "Currents", "Vespertine", "Channel Orange", "Hounds of Love", "Kid A", "Melodrama", "Low", "The Suburbs", "SOS", "Remain in Light"]],
+      ["Song 1 of 4", "Hooks, voices, and exceptions", "song", ["Dreams", "Maps", "Bad Habit", "Paper Planes", "Heroes", "Lovefool", "Rebellion", "Royals", "Just Like Heaven", "Redbone", "Running Up That Hill", "Fast Car"]],
+      ["Song 2 of 4", "Frontier probes", "song", ["Midnight City", "This Must Be the Place", "Oblivion", "Motion Sickness", "Digital Love", "Sweet Disposition", "Since U Been Gone", "Bizarre Love Triangle", "Cellophane", "Pink Moon", "Time to Pretend", "Nights"]],
+      ["Song 3 of 4", "Dead-end checks", "song", ["Wonderwall", "Mr. Brightside", "Sex on Fire", "Clocks", "Ho Hey", "Use Somebody", "Viva La Vida", "Seven Nation Army", "Iris", "Somebody That I Used to Know", "Pompeii", "Dog Days Are Over"]],
+      ["Song 4 of 4", "Last signal pass", "song", ["Fade Into You", "No Scrubs", "All My Friends", "Age of Consent", "The Less I Know the Better", "A Case of You", "Dancing on My Own", "Cranes in the Sky", "Once in a Lifetime", "Fade to Black", "Aaliyah", "The Chain"]]
+    ];
+
+    const screens = [
+      { type: "consent", nav: "Privacy", noteTitle: "First-run gate", note: "Required before account, Apple Music, Survey, or evidence collection. Copy here is placeholder until legal/privacy language is approved." },
+      { type: "access", nav: "Apple access", noteTitle: "Account and Music", note: "One product CTA, even if Apple presents separate Sign in with Apple and MusicKit authorization moments." },
+      ...onboardingPages.map((page, index) => ({ type: "onboarding", page, index, nav: page.nav, noteTitle: page.nav, note: page.note })),
+      { type: "faq", nav: "FAQ", noteTitle: "Alpha FAQ", note: "FAQ should be accessible after onboarding, likely under My Account/help. In this mockup it is also linked from orientation for review." },
+      ...surveyPages.map((page, index) => ({ type: "survey", page, index, nav: page[0], noteTitle: "Survey intake", note: "Forced Alpha intake page. Click tiles to cycle: unknown, Ok, Like, Love, Dislike." })),
+      { type: "generating", nav: "Generating", noteTitle: "Post-Survey handoff", note: "Needs to feel active but cautious. Avoid implying final Atlas truth." },
+      { type: "home", nav: "Mission home", noteTitle: "Core IA appears", note: "Core app shell should appear after first-run completion and first batch generation." },
+      { type: "mission", nav: "Mission detail", noteTitle: "Mission detail", note: "Hypothesis is the hero. The route should feel intentional, not like a playlist." },
+      { type: "player", nav: "Player", noteTitle: "Listen and react", note: "Player is the brand center of gravity. Reaction language shown as supplied for review." },
+      { type: "review", nav: "Review", noteTitle: "Evidence review", note: "Review should feel like closing the loop, not a data-entry chore." },
+      { type: "reviewEdit", nav: "Edit evidence", noteTitle: "Per-song evidence edit", note: "Alpha review needs song-level correction: primary selection, dependent tags, and a freeform note with a clear save/update action." },
+      { type: "account", nav: "My Account", noteTitle: "Returning users", note: "FAQ, connection status, privacy, and support live here. Survey return path can be support-level only." }
+    ];
+
+    let current = 0;
+    const tileStates = ["unknown", "ok", "like", "love", "no"];
+    const tileLabels = { unknown: "?", ok: "Ok", like: "Like", love: "Love", no: "No" };
+    const appScreen = document.getElementById("appScreen");
+    const flowList = document.getElementById("flowList");
+    const noteTitle = document.getElementById("noteTitle");
+    const noteCopy = document.getElementById("noteCopy");
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
+
+    function initials(name) {
+      return name.split(" ").slice(0, 2).map(part => part[0]).join("").toUpperCase();
+    }
+
+    function colorPair(index) {
+      const pairs = [
+        ["rgba(16, 212, 219, 0.42)", "rgba(23, 160, 255, 0.36)"],
+        ["rgba(247, 159, 49, 0.44)", "rgba(235, 83, 83, 0.30)"],
+        ["rgba(62, 210, 103, 0.34)", "rgba(16, 212, 219, 0.28)"],
+        ["rgba(237, 229, 210, 0.25)", "rgba(23, 160, 255, 0.24)"]
+      ];
+      return pairs[index % pairs.length];
+    }
+
+    function renderFrame(inner) {
+      appScreen.innerHTML = inner;
+    }
+
+    function topLine(label = "Waymark", step = "") {
+      return `
+        <div class="topline">
+          <div class="wordmark">${label}</div>
+          ${step ? `<div class="step-pill">${step}</div>` : ""}
+        </div>
+      `;
+    }
+
+    function routeArt() {
+      return `
+        <div class="route-art" aria-hidden="true">
+          <div class="route-line one"></div>
+          <div class="route-line two"></div>
+          <div class="route-point a"></div>
+          <div class="route-point b"></div>
+          <div class="route-point c"></div>
+        </div>
+      `;
+    }
+
+    function renderOnboarding(screen) {
+      const page = screen.page;
+      const dots = onboardingPages.map((_, index) => `<span class="pager-dot ${index === screen.index ? "active" : ""}"></span>`).join("");
+      renderFrame(`
+        <div class="screen-pad app-screen orientation-screen">
+          ${topLine("Waymark", `${screen.index + 1}/6`)}
+          <div class="orientation-main">
+            <div>
+              <div class="eyebrow">${escapeHtml(page.eyebrow)}</div>
+              <h2 class="headline orientation-headline">${escapeHtml(page.headline)}</h2>
+            </div>
+            <div class="copy-block orientation-copy">
+              ${page.body.map(paragraph => `<p>${paragraph}</p>`).join("")}
+            </div>
+            ${page.helper ? `<p class="helper">${escapeHtml(page.helper)}</p>` : ""}
+          </div>
+          <div class="orientation-footer">
+            <div class="pager">${dots}</div>
+            <div class="action-stack orientation-actions">
+              <button class="primary ${screen.index === onboardingPages.length - 1 ? "signal" : ""}" type="button" onclick="goNext()">${escapeHtml(page.primary)}</button>
+              ${page.secondary ? `<button class="quiet-button" type="button" onclick="goToType('faq')">${escapeHtml(page.secondary)}</button>` : ""}
+            </div>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderConsent() {
+      renderFrame(`
+        <div class="screen-pad app-screen">
+          ${topLine("Waymark", "Alpha")}
+          <div class="hero-space">
+            ${routeArt()}
+            <div>
+              <div class="eyebrow">Before we start</div>
+              <h2 class="headline">A private Alpha needs clear ground rules.</h2>
+            </div>
+            <div class="copy-block">
+              <p>Waymark will ask for Apple Music access, collect Survey answers, capture listening reactions, and use that evidence to generate your first missions.</p>
+              <p>This Alpha is for product calibration. Some evidence may be stored locally and, if approved, synced with Waymark support systems so the team can improve the experience.</p>
+            </div>
+            <div class="checkbox-row">
+              <div class="check">✓</div>
+              <div>I accept the Alpha privacy terms and understand this is an early test build.</div>
+            </div>
+          </div>
+          <div class="action-stack">
+            <button class="primary signal" type="button" onclick="goNext()">Accept and Continue</button>
+            <button class="quiet-button" type="button">View Privacy Details</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderAccess() {
+      renderFrame(`
+        <div class="screen-pad app-screen">
+          ${topLine("Waymark", "Access")}
+          <div class="hero-space">
+            <div>
+              <div class="eyebrow">Account and playback</div>
+              <h2 class="headline">Connect once. Stay signed in when we can.</h2>
+            </div>
+            <div class="copy-block">
+              <p>Waymark uses your Apple ID for account access and Apple Music for playback.</p>
+              <p>After this first setup, Waymark should keep you signed in as long as possible. If the session times out, you may be asked to reauthenticate with Apple.</p>
+            </div>
+            <div class="access-row">
+              <div class="access-icon"></div>
+              <div>
+                <div class="row-title">Sign in with Apple</div>
+                <div class="row-copy">Used for your Alpha account and returning-session access.</div>
+              </div>
+            </div>
+            <div class="access-row">
+              <div class="access-icon">♪</div>
+              <div>
+                <div class="row-title">Connect Apple Music</div>
+                <div class="row-copy">Used to resolve and play mission tracks. Unknown listening history is not treated as taste truth.</div>
+              </div>
+            </div>
+          </div>
+          <div class="action-stack">
+            <button class="primary" type="button" onclick="goNext()">Continue with Apple + Music</button>
+            <button class="quiet-button" type="button">Why does Waymark need this?</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderFaq() {
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="survey-header">
+            <div class="survey-title-row">
+              <div>
+                <div class="eyebrow">Help</div>
+                <h2 class="survey-title">Alpha FAQ</h2>
+                <p class="survey-subtitle">Survey -> Missions -> Listen -> Feedback -> Learning.</p>
+              </div>
+              <div class="step-pill">FAQ</div>
+            </div>
+          </div>
+          <div class="faq-list">
+            <p class="panel-copy">Some parts are still provisional. Use the app naturally, answer honestly, and tell us where it feels confusing, wrong, boring, or surprisingly good.</p>
+            ${faqItems.map(item => `
+              <section class="faq-item">
+                <h3>${escapeHtml(item[0])}</h3>
+                <p>${escapeHtml(item[1])}</p>
+              </section>
+            `).join("")}
+          </div>
+          <div class="survey-footer">
+            <button class="primary signal" type="button" onclick="goNext()">Continue</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderSurvey(screen) {
+      const [title, subtitle, kind, items] = screen.page;
+      const progress = `${Math.round(((screen.index + 1) / surveyPages.length) * 100)}%`;
+      const tiles = items.map((name, index) => {
+        const [a, b] = colorPair(index);
+        return `
+          <button class="tile" type="button" data-state="unknown" onclick="cycleTile(this)" style="--art-a:${a}; --art-b:${b}">
+            <div class="album-art">
+              ${escapeHtml(initials(name))}
+              <span class="state-badge">?</span>
+            </div>
+            <div class="tile-name">${escapeHtml(name)}</div>
+            <div class="tile-meta">${kind === "artist" ? "Artist" : kind === "album" ? "Album" : "Song"} signal</div>
+          </button>
+        `;
+      }).join("");
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="survey-header">
+            <div class="survey-title-row">
+              <div>
+                <div class="eyebrow">Survey intake</div>
+                <h2 class="survey-title">${escapeHtml(title)}</h2>
+                <p class="survey-subtitle">${escapeHtml(subtitle)}. Tap to cycle. Unknown is useful.</p>
+              </div>
+              <div class="step-pill">${screen.index + 1}/10</div>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="--progress:${progress}"></div></div>
+          </div>
+          <div class="tile-grid">${tiles}</div>
+          <div class="survey-footer">
+            <div class="legend">
+              <span>?</span><span>Ok</span><span>Like</span><span>Love</span><span>No</span>
+            </div>
+            <button class="primary signal" type="button" onclick="goNext()">${screen.index === surveyPages.length - 1 ? "Finish Survey" : "Next Page"}</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderGenerating() {
+      renderFrame(`
+        <div class="screen-pad app-screen">
+          ${topLine("Waymark", "Working")}
+          <div class="hero-space">
+            ${routeArt()}
+            <div>
+              <div class="eyebrow">After Survey</div>
+              <h2 class="headline">Building your first Atlas read and missions.</h2>
+            </div>
+            <div class="copy-block">
+              <p>Waymark is turning your Survey evidence into a cautious first read and a mission batch for listening.</p>
+              <p>This is not a final verdict. The first missions are designed to test what might be true.</p>
+            </div>
+            <div class="generation">
+              <div class="gen-row"><span class="gen-state">✓</span><span>Survey evidence saved</span></div>
+              <div class="gen-row"><span class="gen-state">✓</span><span>Starting Atlas read prepared</span></div>
+              <div class="gen-row"><span class="gen-state wait">•</span><span>Generating first mission batch</span></div>
+            </div>
+          </div>
+          <div class="action-stack">
+            <button class="primary signal" type="button" onclick="goNext()">View First Missions</button>
+            <p class="helper">In the real app this may take a moment. If it fails, Waymark should recover without losing your Survey.</p>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderHome() {
+      const missionCards = alphaMissions.map((mission, index) => {
+        const [title, type, risk, count, description, state] = mission;
+        const stateClass = state === "Ready" ? "good" : "";
+        const riskClass = risk.includes("Higher") || risk.includes("Medium") ? "warn" : "";
+        return `
+          <section class="mission-card compact">
+            <div class="mission-card-header">
+              <div>
+                <div class="pill-row">
+                  <span class="pill ${stateClass}">${escapeHtml(state)}</span>
+                  <span class="pill signal">${escapeHtml(type)}</span>
+                  <span class="pill ${riskClass}">${escapeHtml(risk)}</span>
+                  <span class="pill">${escapeHtml(count)}</span>
+                </div>
+                <h3 style="margin-top:8px;">${escapeHtml(title)}</h3>
+              </div>
+              <div class="mission-index">${String(index + 1).padStart(2, "0")}</div>
+            </div>
+            <p class="panel-copy">${escapeHtml(description)}</p>
+            ${index === 0 ? `<button class="primary signal" type="button" onclick="goNext()">Open Mission</button>` : ""}
+          </section>
+        `;
+      }).join("");
+
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="core-scroll">
+            ${topLine("Waymark", "Ready")}
+            <div class="eyebrow">First mission batch</div>
+            <h2 class="headline" style="font-size:28px;margin:8px 0 10px;">Ten Alpha missions are ready.</h2>
+            <p class="panel-copy">These missions are built from your Survey evidence. They are starting tests, not final conclusions.</p>
+            <div class="mission-list">${missionCards}</div>
+          </div>
+          ${tabBar("missions")}
+        </div>
+      `);
+    }
+
+    function renderMission() {
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="core-scroll no-scroll mission-detail-scroll">
+            ${topLine("Mission", "1/10")}
+            <div class="pill-row"><span class="pill signal">Testing</span><span class="pill warn">Medium risk</span></div>
+            <h2 class="headline" style="font-size:29px;">Dark melody road test</h2>
+            <p class="panel-copy">This mission tests whether darker, bodily post-punk pressure works for you when the melody remains legible.</p>
+            <div class="test-chip-row">
+              <div class="test-chip">vocal texture</div>
+              <div class="test-chip">clear hook</div>
+              <div class="test-chip">repeat pull</div>
+            </div>
+            <section class="mini-card">
+              <div class="row-title">Why this now</div>
+              <p class="row-copy">Your Survey showed possible attraction to pressure and mood, but not enough recurrence to call this a mapped region.</p>
+            </section>
+            <section class="mini-card">
+              <div class="row-title">Route preview</div>
+              <div class="route-list">
+                <div class="route-song"><span class="song-number">01</span><span>Bela Lugosi's Dead<br>Bauhaus</span></div>
+                <div class="route-song"><span class="song-number">02</span><span>A Forest<br>The Cure</span></div>
+                <div class="route-song"><span class="song-number">03</span><span>Marquee Moon<br>Television</span></div>
+                <div class="route-song"><span class="song-number">04</span><span>Love Will Tear Us Apart<br>Joy Division</span></div>
+                <div class="route-song"><span class="song-number">05</span><span>Spellbound<br>Siouxsie and the Banshees</span></div>
+                <div class="route-song"><span class="song-number">06</span><span>Atmosphere<br>Joy Division</span></div>
+              </div>
+            </section>
+          </div>
+          <div class="survey-footer">
+            <button class="primary signal" type="button" onclick="goNext()">Start Listening</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderPlayer() {
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="core-scroll no-scroll player-scroll">
+            <section class="mission-rail">
+              <div class="rail-icon">⚑</div>
+              <div class="rail-copy">
+                <div class="rail-title">Dark melody road test</div>
+                <div class="rail-subtitle">Song 2 of 6</div>
+              </div>
+              <div class="rail-progress">2/6</div>
+            </section>
+
+            <section class="compact-player">
+              <div class="flip-card">♪</div>
+              <div class="player-info">
+                <div>
+                  <div class="track-title">A Forest</div>
+                  <div class="track-meta">The Cure<br>Seventeen Seconds</div>
+                </div>
+                <div class="playback-meter">
+                  <div class="progress-track"><div class="progress-fill" style="--progress:38%"></div></div>
+                  <div class="time-row"><span>1:12</span><span>-2:01</span></div>
+                </div>
+                <div class="compact-transport">
+                  <button class="circle-btn" type="button">‹</button>
+                  <button class="circle-btn play" type="button">▶</button>
+                  <button class="circle-btn" type="button">›</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="feedback-panel" id="feedbackPanel">
+              <div class="reaction-grid">
+                <button class="reaction love" type="button" data-reaction="love" onclick="selectPlayerReaction(this)">Love</button>
+                <button class="reaction like" type="button" data-reaction="like" onclick="selectPlayerReaction(this)">Like</button>
+                <button class="reaction ok" type="button" data-reaction="ok" onclick="selectPlayerReaction(this)">Ok</button>
+                <button class="reaction no" type="button" data-reaction="dislike" onclick="selectPlayerReaction(this)">Dislike</button>
+              </div>
+              <div class="tag-closed-state">Choose a reaction to open matching tags.</div>
+              <div class="context-rail" id="contextRail"></div>
+            </section>
+          </div>
+          <div class="player-action-bar">
+            <button class="action-tile" type="button">Note</button>
+            <button class="action-tile" type="button">Mission Review</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderReview() {
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="core-scroll">
+            ${topLine("Review", "Evidence")}
+            <h2 class="headline" style="font-size:29px;margin-bottom:10px;">Review the songs Waymark heard.</h2>
+            <p class="panel-copy">Confirm reactions, wrong versions, skips, or missing signal before this mission becomes evidence.</p>
+            ${missionReviewItems.map((item, index) => `
+              <section class="review-row" style="margin-top:10px;">
+                <div class="review-row-header">
+                  <div>
+                    <div class="row-title">${index + 1}. ${escapeHtml(item.title)}</div>
+                    <div class="row-copy">${escapeHtml(item.artist)} · ${escapeHtml(item.album)}</div>
+                  </div>
+                  <button class="text-button" type="button" onclick="goToType('reviewEdit')">Edit</button>
+                </div>
+                <div class="pill-row" style="margin-top:8px;">
+                  <span class="pill ${item.status === "Ready" ? "good" : "warn"}">${escapeHtml(item.status)}</span>
+                  <span class="pill">${escapeHtml(item.reaction)}</span>
+                  ${item.tags.slice(0, 2).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}
+                </div>
+              </section>
+            `).join("")}
+          </div>
+          <div class="survey-footer">
+            <button class="primary signal" type="button" onclick="goNext()">Continue</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderReviewEdit() {
+      const item = missionReviewItems[2];
+      const selectedReaction = item.reactionKey;
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="core-scroll">
+            ${topLine("Edit Song", "3/6")}
+            <h2 class="headline" style="font-size:28px;margin-bottom:10px;">Update this song's evidence.</h2>
+            <p class="panel-copy">Change the primary selection, adjust matching tags, and save a freeform note before the mission is finalized.</p>
+            <section class="song-evidence-card">
+              <div class="song-art">${escapeHtml(initials(item.title))}</div>
+              <div>
+                <div class="row-title">${escapeHtml(item.title)}</div>
+                <div class="row-copy">${escapeHtml(item.artist)}<br>${escapeHtml(item.album)}</div>
+                <div class="pill-row" style="margin-top:8px;">
+                  <span class="pill warn">${escapeHtml(item.status)}</span>
+                  <span class="pill">${escapeHtml(item.reaction)}</span>
+                </div>
+              </div>
+            </section>
+            <section class="review-edit-panel" id="reviewEditPanel">
+              <div>
+                <div class="row-title">Primary selection</div>
+                <div class="reaction-grid edit-reaction-grid">
+                  <button class="reaction love ${selectedReaction === "love" ? "selected" : ""}" type="button" data-reaction="love" onclick="selectReviewReaction(this)">Love</button>
+                  <button class="reaction like ${selectedReaction === "like" ? "selected" : ""}" type="button" data-reaction="like" onclick="selectReviewReaction(this)">Like</button>
+                  <button class="reaction ok ${selectedReaction === "ok" ? "selected" : ""}" type="button" data-reaction="ok" onclick="selectReviewReaction(this)">Ok</button>
+                  <button class="reaction no ${selectedReaction === "dislike" ? "selected" : ""}" type="button" data-reaction="dislike" onclick="selectReviewReaction(this)">Dislike</button>
+                </div>
+              </div>
+              <div>
+                <div class="row-title">Secondary tags</div>
+                <div class="context-rail edit-tags" id="reviewContextRail">
+                  ${renderTagButtons(selectedReaction, item.tags)}
+                </div>
+              </div>
+              <div>
+                <div class="row-title">Freeform note</div>
+                <textarea class="evidence-note" placeholder="Add a short note for this song.">${escapeHtml(item.note)}</textarea>
+              </div>
+            </section>
+          </div>
+          <div class="survey-footer">
+            <div class="save-state" id="saveState">Unsaved edits stay on this song until you update evidence.</div>
+            <button class="primary signal" type="button" onclick="markReviewSaved()">Update Song Evidence</button>
+          </div>
+        </div>
+      `);
+    }
+
+    function renderAccount() {
+      renderFrame(`
+        <div class="survey-screen">
+          <div class="core-scroll">
+            ${topLine("My Account", "Alpha")}
+            <h2 class="headline" style="font-size:29px;margin-bottom:12px;">Settings, FAQ, and support.</h2>
+            <section class="access-row">
+              <div class="access-icon"></div>
+              <div><div class="row-title">Apple ID connected</div><div class="row-copy">Session active. Reauthenticate only if timed out.</div></div>
+            </section>
+            <section class="access-row" style="margin-top:10px;">
+              <div class="access-icon">♪</div>
+              <div><div class="row-title">Apple Music ready</div><div class="row-copy">Playback available for mission routes.</div></div>
+            </section>
+            <section class="mission-card">
+              <h3>Alpha FAQ</h3>
+              <p class="panel-copy">Open the FAQ, report a problem, or review privacy details.</p>
+              <button class="secondary" type="button" onclick="goToType('faq')">Open FAQ</button>
+            </section>
+            <section class="mission-card">
+              <h3>Share Evidence</h3>
+              <p class="panel-copy">Evidence sync status should appear here once engineering confirms the Alpha path.</p>
+              <button class="secondary" type="button">Share Evidence Backup</button>
+            </section>
+          </div>
+          ${tabBar("account")}
+        </div>
+      `);
+    }
+
+    function tabBar(active) {
+      const tabs = [["missions", "Missions"], ["player", "Player"], ["review", "Review"], ["account", "Account"]];
+      return `<div class="tab-bar">${tabs.map(tab => `<button class="tab ${active === tab[0] ? "active" : ""}" type="button">${tab[1][0]}<span>${tab[1]}</span></button>`).join("")}</div>`;
+    }
+
+    function renderFlow() {
+      flowList.innerHTML = screens.map((screen, index) => `
+        <button class="flow-step ${index === current ? "active" : ""}" type="button" onclick="goTo(${index})">
+          <span class="flow-index">${index + 1}</span>
+          <span>
+            <span class="flow-name">${escapeHtml(screen.nav)}</span>
+            <span class="flow-note">${escapeHtml(screen.type)}</span>
+          </span>
+        </button>
+      `).join("");
+    }
+
+    function render() {
+      const screen = screens[current];
+      renderFlow();
+      noteTitle.textContent = screen.noteTitle || screen.nav;
+      noteCopy.textContent = screen.note || "Review screen hierarchy, copy, and Alpha readiness.";
+      document.getElementById("prevBtn").disabled = current === 0;
+      document.getElementById("nextBtn").disabled = current === screens.length - 1;
+
+      if (screen.type === "consent") renderConsent();
+      if (screen.type === "access") renderAccess();
+      if (screen.type === "onboarding") renderOnboarding(screen);
+      if (screen.type === "faq") renderFaq();
+      if (screen.type === "survey") renderSurvey(screen);
+      if (screen.type === "generating") renderGenerating();
+      if (screen.type === "home") renderHome();
+      if (screen.type === "mission") renderMission();
+      if (screen.type === "player") renderPlayer();
+      if (screen.type === "review") renderReview();
+      if (screen.type === "reviewEdit") renderReviewEdit();
+      if (screen.type === "account") renderAccount();
+    }
+
+    function goTo(index) {
+      current = Math.max(0, Math.min(index, screens.length - 1));
+      render();
+      window.scrollTo(0, 0);
+    }
+
+    function goNext() {
+      goTo(current + 1);
+    }
+
+    function goPrev() {
+      goTo(current - 1);
+    }
+
+    function goToType(type) {
+      const index = screens.findIndex(screen => screen.type === type);
+      if (index >= 0) goTo(index);
+    }
+
+    function cycleTile(tile) {
+      const state = tile.getAttribute("data-state") || "unknown";
+      const next = tileStates[(tileStates.indexOf(state) + 1) % tileStates.length];
+      tile.setAttribute("data-state", next);
+      tile.querySelector(".state-badge").textContent = tileLabels[next];
+    }
+
+    function renderTagButtons(reaction, selectedTags = []) {
+      const tags = playerTagSets[reaction] || [];
+      return tags.map(tag => `
+        <button class="context-chip ${selectedTags.includes(tag) ? "selected" : ""}" type="button" onclick="selectContextChip(this)">${escapeHtml(tag)}</button>
+      `).join("");
+    }
+
+    function selectPlayerReaction(button) {
+      const panel = document.getElementById("feedbackPanel");
+      if (!panel) return;
+      const reaction = button.dataset.reaction || "like";
+      const rail = document.getElementById("contextRail");
+      panel.classList.add("has-reaction");
+      panel.querySelectorAll(".reaction").forEach(reaction => reaction.classList.remove("selected"));
+      button.classList.add("selected");
+      if (rail) rail.innerHTML = renderTagButtons(reaction);
+    }
+
+    function selectReviewReaction(button) {
+      const panel = document.getElementById("reviewEditPanel");
+      const rail = document.getElementById("reviewContextRail");
+      if (!panel || !rail) return;
+      const reaction = button.dataset.reaction || "like";
+      panel.querySelectorAll(".reaction").forEach(reactionButton => reactionButton.classList.remove("selected"));
+      button.classList.add("selected");
+      rail.innerHTML = renderTagButtons(reaction);
+      const saveState = document.getElementById("saveState");
+      if (saveState) saveState.textContent = "Reaction changed. Update evidence to save this song.";
+    }
+
+    function selectContextChip(button) {
+      button.classList.toggle("selected");
+      const saveState = document.getElementById("saveState");
+      if (saveState) saveState.textContent = "Tags changed. Update evidence to save this song.";
+    }
+
+    function markReviewSaved() {
+      const saveState = document.getElementById("saveState");
+      if (saveState) saveState.textContent = "Saved for this song.";
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", goNext);
+    document.getElementById("prevBtn").addEventListener("click", goPrev);
+    window.goNext = goNext;
+    window.goPrev = goPrev;
+    window.goTo = goTo;
+    window.goToType = goToType;
+    window.cycleTile = cycleTile;
+    window.selectPlayerReaction = selectPlayerReaction;
+    window.selectReviewReaction = selectReviewReaction;
+    window.selectContextChip = selectContextChip;
+    window.markReviewSaved = markReviewSaved;
+
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    const params = new URLSearchParams(window.location.search);
+    const requestedScreen = Number(params.get("screen"));
+    if (Number.isInteger(requestedScreen) && requestedScreen >= 1 && requestedScreen <= screens.length) {
+      current = requestedScreen - 1;
+    }
+    render();
+    const requestedReaction = params.get("reaction");
+    if (requestedReaction && playerTagSets[requestedReaction] && screens[current].type === "player") {
+      const reactionButton = document.querySelector(`.reaction[data-reaction="${requestedReaction}"]`);
+      if (reactionButton) selectPlayerReaction(reactionButton);
+    }
+    window.scrollTo(0, 0);
+  </script>
+</body>
+</html>

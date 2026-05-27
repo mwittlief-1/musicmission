@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Cartenza Concept 5 Mark</title>
+  <desc id="desc">Circular cartographic C monogram with compass seal, inspired by the selected Cartenza Concept 5 direction.</desc>
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0EEE8"/>
+      <stop offset="42%" stop-color="#BFC3C9"/>
+      <stop offset="100%" stop-color="#6E747B"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer cartographic seal -->
+  <circle cx="512" cy="512" r="396" fill="none" stroke="url(#silver)" stroke-width="18" opacity="0.90"/>
+  <circle cx="512" cy="512" r="322" fill="none" stroke="#3F6966" stroke-width="5" opacity="0.55"/>
+  <circle cx="512" cy="512" r="240" fill="none" stroke="#BFC3C9" stroke-width="3" opacity="0.35" stroke-dasharray="8 18"/>
+  <circle cx="512" cy="512" r="142" fill="none" stroke="#BFC3C9" stroke-width="2" opacity="0.28"/>
+
+  <!-- Compass crosshairs -->
+  <path d="M512 118 L512 906 M118 512 L906 512" stroke="#BFC3C9" stroke-width="3" opacity="0.22"/>
+  <path d="M512 194 L512 270 M512 754 L512 830 M194 512 L270 512 M754 512 L830 512" stroke="#B59A61" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+
+  <!-- C monogram; deliberately not a font outline -->
+  <path d="M658 287
+           C586 226 454 222 360 292
+           C253 371 226 524 299 640
+           C369 751 523 801 655 725"
+        fill="none" stroke="url(#silver)" stroke-width="68" stroke-linecap="round" filter="url(#softShadow)"/>
+  <path d="M662 294 C593 247 487 248 407 301" fill="none" stroke="#F4F0E7" stroke-width="16" stroke-linecap="round" opacity="0.48"/>
+  <path d="M412 728 C490 770 593 764 660 721" fill="none" stroke="#757B82" stroke-width="14" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Inner compass star -->
+  <path d="M512 463 L526 498 L562 512 L526 526 L512 562 L498 526 L462 512 L498 498 Z" fill="#B59A61" opacity="0.95"/>
+  <circle cx="512" cy="512" r="8" fill="#F0D58A"/>
+
+  <!-- Cardinal gold points -->
+  <circle cx="512" cy="118" r="12" fill="#B59A61"/>
+  <circle cx="512" cy="906" r="12" fill="#B59A61"/>
+  <circle cx="118" cy="512" r="12" fill="#B59A61"/>
+  <circle cx="906" cy="512" r="12" fill="#B59A61"/>
+</svg>
