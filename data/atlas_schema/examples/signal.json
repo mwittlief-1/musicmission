@@ -1,0 +1,44 @@
+{
+  "record_type": "signal",
+  "schema_version": "0.1",
+  "signal_id": "signal_survey_nirvana_skip_low_evidence",
+  "user_id": "user_demo_atlas_v0_1",
+  "source": "survey",
+  "event_type": "skip",
+  "occurred_at": "2026-05-20T09:50:00-04:00",
+  "captured_at": "2026-05-20T09:50:03-04:00",
+  "subject_music_object_ref": {
+    "object_type": "song_recording",
+    "ref_source": "canonical_graph",
+    "canonical_artist_id": null,
+    "canonical_album_id": null,
+    "canonical_song_recording_id": "nirvana-smells-like-teen-spirit",
+    "composition_placeholder_id": null,
+    "user_music_object_id": null,
+    "external_catalog_refs": {},
+    "display_name": "Smells Like Teen Spirit",
+    "credited_artist_name": "Nirvana",
+    "credit_context": "group",
+    "resolution_state": "resolved",
+    "composition_policy_status": "no_review_needed",
+    "recording_variant_type": "studio"
+  },
+  "subject_atlas_node_id": "atlas_node_nirvana",
+  "reaction_value": "skip",
+  "observed_user_tags": [],
+  "user_note": null,
+  "signal_strength": 0.1,
+  "interpretation_confidence": 0.2,
+  "confidence": {
+    "confidence_score": 0.2,
+    "confidence_band": "low",
+    "confidence_basis": "direct_user_reaction",
+    "confidence_summary": "A skip is real behavior but weak evidence without recurrence or context."
+  },
+  "derived_update_candidate_ids": [],
+  "lifecycle": {
+    "status": "active",
+    "review_state": "unreviewed",
+    "promotion_state": "proposed"
+  }
+}

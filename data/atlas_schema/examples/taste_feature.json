@@ -1,0 +1,170 @@
+{
+  "record_type": "atlas_example_bundle",
+  "schema_version": "0.1",
+  "example_name": "taste_feature",
+  "description": "A global TasteFeature plus one user's state for that feature. User state can cite canonical, user-local, and external-catalog examples.",
+  "records": [
+    {
+      "record_type": "taste_feature",
+      "schema_version": "0.1",
+      "taste_feature_id": "taste_feature_body_force",
+      "feature_key": "body_force",
+      "display_name": "Body force",
+      "definition": "The user responds to music that feels physically pressurized, weighty, or impact-driven rather than merely loud.",
+      "feature_type": "sonic",
+      "global_status": "active",
+      "canonical_examples": [
+        {
+          "object_type": "song_recording",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": null,
+          "canonical_album_id": null,
+          "canonical_song_recording_id": "nirvana-heart-shaped-box",
+          "composition_placeholder_id": null,
+          "user_music_object_id": null,
+          "external_catalog_refs": {},
+          "display_name": "Heart-Shaped Box",
+          "credited_artist_name": "Nirvana",
+          "credit_context": "group",
+          "resolution_state": "resolved",
+          "composition_policy_status": "no_review_needed",
+          "recording_variant_type": "studio"
+        }
+      ],
+      "anti_examples": [
+        {
+          "object_type": "artist",
+          "ref_source": "external_catalog",
+          "canonical_artist_id": null,
+          "canonical_album_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "user_music_object_id": null,
+          "external_catalog_refs": {
+            "example_catalog_key": "external:polished_hard_pop_placeholder"
+          },
+          "display_name": "Polished hard-pop placeholder",
+          "credited_artist_name": null,
+          "credit_context": "unknown",
+          "resolution_state": "needs_resolution",
+          "composition_policy_status": "not_applicable",
+          "recording_variant_type": null
+        }
+      ],
+      "created_at": "2026-05-20T10:00:00-04:00",
+      "updated_at": "2026-05-20T10:00:00-04:00"
+    },
+    {
+      "record_type": "user_vocabulary_term",
+      "schema_version": "0.1",
+      "term_id": "term_has_body",
+      "user_id": "user_demo_atlas_v0_1",
+      "term": "has body",
+      "normalized_term": "has_body",
+      "term_type": "feature_alias",
+      "source_signal_ids": [
+        "signal_note_has_body"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "promoted"
+      },
+      "confidence": {
+        "confidence_score": 0.87,
+        "confidence_band": "high",
+        "confidence_basis": "explicit_user_note",
+        "confidence_summary": "The user supplied this language directly in a note."
+      },
+      "created_at": "2026-05-20T10:01:00-04:00",
+      "updated_at": "2026-05-20T10:01:00-04:00"
+    },
+    {
+      "record_type": "user_taste_feature_state",
+      "schema_version": "0.1",
+      "user_taste_feature_state_id": "user_taste_feature_body_force_demo",
+      "user_id": "user_demo_atlas_v0_1",
+      "taste_feature_id": "taste_feature_body_force",
+      "state": "active",
+      "affinity": "seeks",
+      "intensity_score": 0.88,
+      "representative_music_object_refs": [
+        {
+          "object_type": "artist",
+          "ref_source": "canonical_graph",
+          "canonical_artist_id": "nirvana",
+          "canonical_album_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "user_music_object_id": null,
+          "external_catalog_refs": {},
+          "display_name": "Nirvana",
+          "credited_artist_name": "Nirvana",
+          "credit_context": "group",
+          "resolution_state": "resolved",
+          "composition_policy_status": "not_applicable",
+          "recording_variant_type": null
+        },
+        {
+          "object_type": "artist",
+          "ref_source": "user_local",
+          "canonical_artist_id": null,
+          "canonical_album_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "user_music_object_id": "user_music_object_local_h",
+          "external_catalog_refs": {},
+          "display_name": "Local H",
+          "credited_artist_name": "Local H",
+          "credit_context": "group",
+          "resolution_state": "intentionally_user_local",
+          "composition_policy_status": "not_applicable",
+          "recording_variant_type": null
+        },
+        {
+          "object_type": "artist",
+          "ref_source": "external_catalog",
+          "canonical_artist_id": null,
+          "canonical_album_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "user_music_object_id": null,
+          "external_catalog_refs": {
+            "musicbrainz_artist_id": "fd857293-5ab8-40de-b29e-55a69d4e4d0f"
+          },
+          "display_name": "Muse",
+          "credited_artist_name": "Muse",
+          "credit_context": "group",
+          "resolution_state": "needs_resolution",
+          "composition_policy_status": "not_applicable",
+          "recording_variant_type": null
+        }
+      ],
+      "linked_atlas_node_ids": [
+        "atlas_node_nirvana",
+        "atlas_node_local_h_user_local"
+      ],
+      "user_vocabulary_term_ids": [
+        "term_has_body"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "promoted"
+      },
+      "confidence": {
+        "confidence_score": 0.87,
+        "confidence_band": "high",
+        "confidence_basis": "mixed",
+        "confidence_summary": "User language and repeated reactions both point toward this feature."
+      },
+      "evidence_signal_ids": [
+        "signal_note_has_body",
+        "signal_survey_nirvana_like",
+        "signal_survey_local_h_like"
+      ],
+      "created_at": "2026-05-20T10:02:00-04:00",
+      "updated_at": "2026-05-20T10:02:00-04:00"
+    }
+  ]
+}

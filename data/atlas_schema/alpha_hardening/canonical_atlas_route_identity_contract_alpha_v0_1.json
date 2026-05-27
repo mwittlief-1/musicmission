@@ -1,0 +1,148 @@
+{
+  "artifact": "canonical_atlas_route_identity_contract",
+  "version": "alpha_v0_1",
+  "generated_at": "2026-05-25",
+  "purpose": "Stable route identity, display identity, candidate-pool provenance, and Atlas evidence-boundary contract for live Alpha mission generation recovery.",
+  "field_roles": {
+    "candidate_id": {
+      "source": "candidate_pool",
+      "role": "candidate_membership_identity",
+      "required_for_generated_route_items": true,
+      "validator_rule": "route.items[].candidate_id must exactly match a supplied candidate_id and must not repeat within a mission or active 10-mission batch"
+    },
+    "dedupe_group": {
+      "source": "candidate_pool",
+      "role": "preferred_route_dedupe_key",
+      "validator_rule": "duplicate dedupe_group within a mission or active 10-mission batch is invalid when recoverable"
+    },
+    "canonical_entity_id": {
+      "source": "canonical_graph",
+      "role": "canonical_object_identity",
+      "validator_rule": "backs music_object_ref and may dedupe with canonical_object_type when dedupe_group is unavailable"
+    },
+    "canonical_object_type": {
+      "source": "canonical_graph",
+      "role": "canonical_object_type",
+      "validator_rule": "track route candidates map to song_recording; album route candidates map to album"
+    },
+    "object_type": {
+      "source": "candidate_pool_route_surface",
+      "role": "route_item_surface_type",
+      "allowed_values": [
+        "track",
+        "album"
+      ]
+    },
+    "route_item_type": {
+      "source": "candidate_pool_route_surface",
+      "role": "route_item_surface_type_alias",
+      "validator_rule": "must equal object_type"
+    },
+    "route_item_id": {
+      "field": "route.items[].item_id",
+      "source": "mission_generation_adapter_or_core_app_mission",
+      "role": "app_mission_item_identity",
+      "validator_rule": "unique within a mission and active imported batch, but not sufficient for candidate membership"
+    },
+    "display_name": {
+      "source": "candidate_pool",
+      "role": "candidate_title_display_fallback"
+    },
+    "display_label": {
+      "source": "candidate_pool",
+      "role": "candidate_title_display_preferred"
+    },
+    "credited_artist": {
+      "source": "candidate_pool",
+      "role": "artist_display_credit_preferred"
+    },
+    "music_kit_search_hint": {
+      "source": "candidate_pool_or_route_item",
+      "role": "catalog_search_identity",
+      "not_for": [
+        "canonical_merge",
+        "atlas_truth",
+        "candidate_membership"
+      ]
+    },
+    "music_object_ref": {
+      "source": "canonical_to_atlas_adapter",
+      "role": "atlas_compatible_identity_and_resolution_context",
+      "not_for": [
+        "user_specific_role_truth",
+        "promotion"
+      ]
+    }
+  },
+  "candidate_pool_source_rule": {
+    "route_items_must_come_from_supplied_candidate_pool": true,
+    "allowed_route_item_sources": [
+      "candidate_pool.candidates",
+      "candidate_pool.pools.anchors",
+      "candidate_pool.pools.bridges",
+      "candidate_pool.pools.probes",
+      "candidate_pool.pools.boundary_probes",
+      "candidate_pool.pools.dead_end_checks",
+      "candidate_pool.pools.waypoints"
+    ],
+    "context_only_sources": [
+      "AtlasDigestView",
+      "MissionGenerationDigestView",
+      "Survey visible tiles",
+      "strong regions",
+      "generated prose",
+      "canonical graph rows not supplied in active candidate pool"
+    ],
+    "non_candidate_route_item_status": "review_needed_or_blocked_not_app_import_candidate"
+  },
+  "display_contract": {
+    "candidate_pool": {
+      "title_preferred": "display_label",
+      "title_fallback": "display_name",
+      "artist_preferred": "credited_artist",
+      "never_prefer_for_ui": [
+        "candidate_id",
+        "canonical_entity_id",
+        "dedupe_group",
+        "normalized_slug"
+      ]
+    },
+    "rich_mission_route": {
+      "title": "route.items[].display_metadata.title",
+      "artist": "route.items[].display_metadata.artist",
+      "album": "route.items[].display_metadata.album",
+      "year": "route.items[].display_metadata.release_year"
+    },
+    "app_mission_v0_2": {
+      "title": "items[].title",
+      "artist": "items[].artist",
+      "album": "items[].album",
+      "year": "items[].year"
+    }
+  },
+  "mission_level_validation": {
+    "required": [
+      "route.items[].candidate_id present",
+      "route.items[].candidate_id in supplied candidate pool",
+      "route.items[].item_id unique within mission",
+      "route.items[].candidate_id unique within mission",
+      "normalized item_type + artist + title unique within mission",
+      "route items are concrete track or album objects"
+    ]
+  },
+  "batch_level_validation": {
+    "required": [
+      "candidate_id not repeated across imported active batch",
+      "dedupe_group or canonical route key not repeated across imported active batch when recoverable",
+      "route item_id not repeated across imported active batch",
+      "normalized display identity not repeated across imported active batch"
+    ]
+  },
+  "atlas_evidence_boundary": {
+    "candidate_pool_membership_is_taste_truth": false,
+    "successful_import_is_taste_truth": false,
+    "generated_mission_result_is_signal_without_user_interaction": false,
+    "diagnostics_are_atlas_truth": false,
+    "route_item_can_promote_atlas_role_by_itself": false
+  }
+}

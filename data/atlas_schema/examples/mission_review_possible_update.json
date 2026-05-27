@@ -1,0 +1,98 @@
+{
+  "record_type": "atlas_example_bundle",
+  "schema_version": "0.1",
+  "example_name": "mission_review_possible_update",
+  "description": "Mission Review records evidence and a possible update. The candidate may recommend promotion, but the candidate itself remains unpromoted and review-gated.",
+  "records": [
+    {
+      "record_type": "signal",
+      "schema_version": "0.1",
+      "signal_id": "signal_review_sound_of_silver_waypoint",
+      "user_id": "user_demo_atlas_v0_1",
+      "source": "review",
+      "event_type": "review_decision",
+      "occurred_at": "2026-05-20T10:20:00-04:00",
+      "captured_at": "2026-05-20T10:20:05-04:00",
+      "subject_music_object_ref": {
+        "object_type": "album",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": null,
+        "canonical_album_id": "lcd-soundsystem-sound-of-silver",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "Sound of Silver",
+        "credited_artist_name": "LCD Soundsystem",
+        "credit_context": "group",
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": null
+      },
+      "subject_atlas_node_id": "atlas_node_sound_of_silver",
+      "reaction_value": "want_more",
+      "observed_user_tags": [
+        "album world",
+        "good bridge"
+      ],
+      "user_note": "This helps connect the dots, but it is not home base.",
+      "signal_strength": 0.78,
+      "interpretation_confidence": 0.81,
+      "confidence": {
+        "confidence_score": 0.81,
+        "confidence_band": "high",
+        "confidence_basis": "mission_review",
+        "confidence_summary": "The user explicitly accepted the album's role after a mission."
+      },
+      "derived_update_candidate_ids": [
+        "update_candidate_review_sound_of_silver_waypoint"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "proposed"
+      }
+    },
+    {
+      "record_type": "possible_atlas_update_candidate",
+      "schema_version": "0.1",
+      "update_candidate_id": "update_candidate_review_sound_of_silver_waypoint",
+      "user_id": "user_demo_atlas_v0_1",
+      "source": "mission_review",
+      "source_signal_ids": [
+        "signal_review_sound_of_silver_waypoint"
+      ],
+      "target_atlas_node_id": "atlas_node_sound_of_silver",
+      "target_role_assignment_id": "role_sound_of_silver_frontier_global",
+      "proposed_record_type": "atlas_role_assignment",
+      "proposed_action": "promote",
+      "proposed_payload": {
+        "from_role": "frontier",
+        "to_role": "waypoint",
+        "candidate_pool_behavior": "waypoint",
+        "assignment_summary": "Accepted as a bridge album, not a Landmark.",
+        "do_not_promote_to_landmark": true
+      },
+      "confidence_delta": 0.23,
+      "recurrence_requirement": {
+        "required_count": 2,
+        "min_distinct_sources": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "required": true,
+        "reviewer_type": "human",
+        "reason": "Mission Review can recommend a role change, but promotion requires a later review or threshold policy."
+      },
+      "canonical_graph_mutation_allowed": false,
+      "generated_hypothesis_only": true,
+      "lifecycle": {
+        "status": "provisional",
+        "review_state": "needs_review",
+        "promotion_state": "candidate"
+      },
+      "created_at": "2026-05-20T10:20:05-04:00",
+      "updated_at": "2026-05-20T10:20:05-04:00"
+    }
+  ]
+}

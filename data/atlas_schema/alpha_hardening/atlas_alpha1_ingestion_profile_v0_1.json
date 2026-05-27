@@ -1,0 +1,77 @@
+{
+  "schema_version": "atlas_alpha1_ingestion_profile_v0_1",
+  "generated_at": "2026-05-22T00:00:00Z",
+  "source_decision_ref": "docs/app_dev/alpha_product_decision_addendum_2026_05_22.md",
+  "required_intake": {
+    "source_event_type": "survey_completion",
+    "normal_first_run_survey_optional": false,
+    "artist_pages": 4,
+    "album_pages": 2,
+    "song_pages": 4,
+    "expected_total_pages": 10,
+    "page_count_config_id": "A4_Al2_S4",
+    "minimum_evidence_atom_policy": "one_visible_evidence_atom_per_completed_survey_tile_response"
+  },
+  "required_flow": [
+    "Survey Evidence Export",
+    "Signal",
+    "AtlasNode when needed",
+    "provisional AtlasRoleAssignment when threshold policy allows",
+    "PossibleAtlasUpdateCandidate",
+    "AtlasDigestView",
+    "MissionGenerationDigestView"
+  ],
+  "required_outputs": [
+    "validation_report.json",
+    "signals.jsonl",
+    "atlas_nodes.json",
+    "atlas_role_assignments.json",
+    "possible_atlas_update_candidates.json",
+    "atlas_digest_view.json",
+    "size_report.md"
+  ],
+  "mission_generation_readiness": {
+    "first_batch_generation_supported_from_digest": true,
+    "raw_survey_payload_required": false,
+    "profile_writer_output_allowed": false,
+    "hidden_simulator_truth_allowed": false,
+    "canonical_graph_mutation_allowed": false,
+    "survey_role_promotion_allowed": false
+  },
+  "evidence_policy": {
+    "survey_output_is_evidence_not_truth": true,
+    "uploaded_app_evidence_append_only": true,
+    "uploaded_app_evidence_provisional": true,
+    "delete_or_reset_requires_derived_state_regeneration": true,
+    "apple_exposure_as_taste_truth_allowed": false,
+    "dont_know_as_negative_allowed": false
+  },
+  "generation_status_copy_policy": {
+    "building_your_atlas_allowed": true,
+    "copy_must_imply_provisional_interpretation": true,
+    "copy_must_not_imply_promoted_truth": true,
+    "safe_phrases": [
+      "Building your Atlas",
+      "Reading your Survey evidence",
+      "Finding a careful first route",
+      "Preparing your first mission batch",
+      "Checking uncertainty before we recommend anything"
+    ],
+    "forbidden_phrases": [
+      "We found your true taste",
+      "Your Landmarks are confirmed",
+      "Your permanent Atlas is ready",
+      "We know exactly what you love",
+      "Apple Music proved your taste"
+    ]
+  },
+  "current_fixture_status": {
+    "fixed_A4_Al2_S4_survey_evidence_export_available": false,
+    "available_validated_exports": [
+      "data/survey_simulation/survey_evidence_export/samples/public_profile_01_A3_Al1_S2_survey_evidence_export.json",
+      "data/survey_simulation/survey_evidence_export/samples/public_profile_05_A3_Al1_S2_survey_evidence_export.json",
+      "data/survey_simulation/survey_evidence_export/samples/public_profile_06_A3_Al1_S2_survey_evidence_export.json"
+    ],
+    "blocked_full_fixed_intake_ingestion_proof_issue_id": "ATL-I001"
+  }
+}

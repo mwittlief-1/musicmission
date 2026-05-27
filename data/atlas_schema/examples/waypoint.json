@@ -1,0 +1,86 @@
+{
+  "record_type": "atlas_example_bundle",
+  "schema_version": "0.1",
+  "example_name": "waypoint",
+      "description": "A canonical album represented as a Waypoint after review: useful for travel and comparison, but not a Landmark.",
+  "records": [
+    {
+      "record_type": "atlas_node",
+      "schema_version": "0.1",
+      "atlas_node_id": "atlas_node_sound_of_silver",
+      "user_id": "user_demo_atlas_v0_1",
+      "node_type": "album",
+      "display_name": "Sound of Silver",
+      "subtitle": "Canonical album reference",
+      "music_object_ref": {
+        "object_type": "album",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": null,
+        "canonical_album_id": "lcd-soundsystem-sound-of-silver",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "Sound of Silver",
+        "credited_artist_name": "LCD Soundsystem",
+        "credit_context": "group",
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": null
+      },
+      "origin": "review",
+      "render_hints": {
+        "primary_label": "Sound of Silver",
+        "secondary_label": "Useful bridge album",
+        "card_summary": "A waypoint for testing dance-punk and album-world openness."
+      },
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "promoted"
+      },
+      "confidence": {
+        "confidence_score": 0.74,
+        "confidence_band": "medium",
+        "confidence_basis": "mission_review",
+        "confidence_summary": "A reviewed mission outcome accepted the album as useful but not central."
+      },
+      "evidence_signal_ids": [
+        "signal_review_sound_of_silver_waypoint"
+      ],
+      "created_at": "2026-05-20T09:40:00-04:00",
+      "updated_at": "2026-05-20T09:45:00-04:00"
+    },
+    {
+      "record_type": "atlas_role_assignment",
+      "schema_version": "0.1",
+      "atlas_role_assignment_id": "role_sound_of_silver_waypoint_global",
+      "user_id": "user_demo_atlas_v0_1",
+      "atlas_node_id": "atlas_node_sound_of_silver",
+      "role": "waypoint",
+      "scope": {
+        "scope_type": "global",
+        "scope_id": null,
+        "scope_label": null
+      },
+      "candidate_pool_behavior": "waypoint",
+      "assignment_summary": "Use for route-building between guitar landmarks and rhythm-forward discovery after reviewed evidence.",
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "promoted"
+      },
+      "confidence": {
+        "confidence_score": 0.74,
+        "confidence_band": "medium",
+        "confidence_basis": "mission_review",
+        "confidence_summary": "The user accepted it as useful context but not as a primary anchor."
+      },
+      "evidence_signal_ids": [
+        "signal_review_sound_of_silver_waypoint"
+      ],
+      "created_at": "2026-05-20T09:40:00-04:00",
+      "updated_at": "2026-05-20T09:45:00-04:00"
+    }
+  ]
+}

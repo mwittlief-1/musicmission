@@ -1,0 +1,802 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/atlas_delta_v0_1.schema.json",
+  "title": "Waymark AtlasDelta v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "atlas_delta_id",
+    "user_id",
+    "fixture_profile_id",
+    "source_event_type",
+    "source_event_id",
+    "created_at",
+    "prior_digest_ref",
+    "updated_digest_ref",
+    "strengthened_roles",
+    "weakened_roles",
+    "new_candidate_landmarks",
+    "new_candidate_frontiers",
+    "new_dead_end_hypotheses",
+    "new_waypoints",
+    "contradictions",
+    "unresolved_questions",
+    "paused_paths",
+    "promotion_recommendations",
+    "promotion_blockers",
+    "demotion_recommendations",
+    "confidence_changes",
+    "scope_changes",
+    "next_mission_implications",
+    "user_facing_summary_inputs",
+    "hard_rule_checks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "waymark.atlas_delta.v0.1"
+    },
+    "atlas_delta_id": {
+      "$ref": "#/$defs/id"
+    },
+    "user_id": {
+      "$ref": "#/$defs/nullable_id"
+    },
+    "fixture_profile_id": {
+      "$ref": "#/$defs/nullable_id"
+    },
+    "source_event_type": {
+      "type": "string",
+      "enum": [
+        "survey",
+        "mission_batch",
+        "open_road",
+        "review"
+      ]
+    },
+    "source_event_id": {
+      "$ref": "#/$defs/id"
+    },
+    "created_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "prior_digest_ref": {
+      "$ref": "#/$defs/digest_ref"
+    },
+    "updated_digest_ref": {
+      "$ref": "#/$defs/digest_ref"
+    },
+    "strengthened_roles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/role_change"
+      }
+    },
+    "weakened_roles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/role_change"
+      }
+    },
+    "new_candidate_landmarks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate_change"
+      }
+    },
+    "new_candidate_frontiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate_change"
+      }
+    },
+    "new_dead_end_hypotheses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate_change"
+      }
+    },
+    "new_waypoints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate_change"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contradiction"
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unresolved_question"
+      }
+    },
+    "paused_paths": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/paused_path"
+      }
+    },
+    "promotion_recommendations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/promotion_recommendation"
+      }
+    },
+    "promotion_blockers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/promotion_blocker"
+      }
+    },
+    "demotion_recommendations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/demotion_recommendation"
+      }
+    },
+    "confidence_changes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/confidence_change"
+      }
+    },
+    "scope_changes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scope_change"
+      }
+    },
+    "next_mission_implications": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/next_mission_implication"
+      }
+    },
+    "user_facing_summary_inputs": {
+      "$ref": "#/$defs/user_facing_summary_inputs"
+    },
+    "hard_rule_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "atlas_delta_is_promoted_truth",
+        "derived_from_signals_role_assignments_and_update_candidates",
+        "canonical_graph_mutation_allowed",
+        "auto_promotions",
+        "canonical_graph_mutations"
+      ],
+      "properties": {
+        "atlas_delta_is_promoted_truth": {
+          "const": false
+        },
+        "derived_from_signals_role_assignments_and_update_candidates": {
+          "const": true
+        },
+        "canonical_graph_mutation_allowed": {
+          "const": false
+        },
+        "auto_promotions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "canonical_graph_mutations": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "user_id"
+      ],
+      "properties": {
+        "user_id": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    {
+      "required": [
+        "fixture_profile_id"
+      ],
+      "properties": {
+        "fixture_profile_id": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "nullable_id": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 20
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "landmark",
+        "region",
+        "frontier",
+        "dead_end",
+        "waypoint",
+        "unknown",
+        "signal_only"
+      ]
+    },
+    "promotion_state": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "candidate",
+        "blocked",
+        "demoted"
+      ]
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_id",
+        "ref_type"
+      ],
+      "properties": {
+        "signal_id": {
+          "$ref": "#/$defs/id"
+        },
+        "ref_type": {
+          "type": "string",
+          "enum": [
+            "signal",
+            "update_candidate",
+            "role_assignment"
+          ]
+        }
+      }
+    },
+    "target_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_id",
+        "label",
+        "target_type",
+        "source_candidate_id"
+      ],
+      "properties": {
+        "target_id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_candidate_id": {
+          "$ref": "#/$defs/nullable_id"
+        }
+      }
+    },
+    "digest_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "digest_id",
+        "path"
+      ],
+      "properties": {
+        "digest_id": {
+          "$ref": "#/$defs/nullable_id"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "role_change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "change_id",
+        "target_ref",
+        "role",
+        "change_direction",
+        "confidence_delta",
+        "promotion_state",
+        "review_required",
+        "candidate_pool_behavior",
+        "evidence_refs",
+        "atlas_truth_changed"
+      ],
+      "properties": {
+        "change_id": {
+          "$ref": "#/$defs/id"
+        },
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "role": {
+          "$ref": "#/$defs/role"
+        },
+        "change_direction": {
+          "type": "string",
+          "enum": [
+            "strengthened",
+            "weakened"
+          ]
+        },
+        "confidence_delta": {
+          "type": "number"
+        },
+        "promotion_state": {
+          "$ref": "#/$defs/promotion_state"
+        },
+        "review_required": {
+          "type": "boolean"
+        },
+        "candidate_pool_behavior": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        },
+        "atlas_truth_changed": {
+          "const": false
+        }
+      }
+    },
+    "candidate_change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_id",
+        "target_ref",
+        "role",
+        "candidate_pool_behavior",
+        "confidence_delta",
+        "promotion_state",
+        "review_required",
+        "scope",
+        "trigger_conditions",
+        "evidence_refs",
+        "atlas_truth_changed"
+      ],
+      "properties": {
+        "candidate_id": {
+          "$ref": "#/$defs/id"
+        },
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "role": {
+          "$ref": "#/$defs/role"
+        },
+        "candidate_pool_behavior": {
+          "type": "string"
+        },
+        "confidence_delta": {
+          "type": "number"
+        },
+        "promotion_state": {
+          "$ref": "#/$defs/promotion_state"
+        },
+        "review_required": {
+          "type": "boolean"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "trigger_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        },
+        "atlas_truth_changed": {
+          "const": false
+        }
+      }
+    },
+    "contradiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contradiction_id",
+        "label",
+        "positive_evidence_refs",
+        "negative_evidence_refs",
+        "scope_warning",
+        "review_requirement"
+      ],
+      "properties": {
+        "contradiction_id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "type": "string"
+        },
+        "positive_evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        },
+        "negative_evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        },
+        "scope_warning": {
+          "type": "string"
+        },
+        "review_requirement": {
+          "$ref": "#/$defs/review_requirement"
+        }
+      }
+    },
+    "review_requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "reason"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "unresolved_question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question",
+        "evidence_refs",
+        "resolution_path"
+      ],
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        },
+        "resolution_path": {
+          "type": "string"
+        }
+      }
+    },
+    "paused_path": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path_id",
+        "target_ref",
+        "reason",
+        "resume_conditions",
+        "evidence_refs"
+      ],
+      "properties": {
+        "path_id": {
+          "$ref": "#/$defs/id"
+        },
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "resume_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "promotion_recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_ref",
+        "recommendation",
+        "promotion_state",
+        "auto_promote",
+        "reason",
+        "evidence_refs"
+      ],
+      "properties": {
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "recommendation": {
+          "type": "string"
+        },
+        "promotion_state": {
+          "$ref": "#/$defs/promotion_state"
+        },
+        "auto_promote": {
+          "const": false
+        },
+        "reason": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "promotion_blocker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_ref",
+        "blocker_type",
+        "reason",
+        "evidence_refs"
+      ],
+      "properties": {
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "blocker_type": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "demotion_recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_ref",
+        "recommendation",
+        "reason",
+        "evidence_refs"
+      ],
+      "properties": {
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "recommendation": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "confidence_change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_ref",
+        "prior_confidence",
+        "updated_confidence",
+        "delta",
+        "direction",
+        "confidence_basis",
+        "review_required",
+        "evidence_refs"
+      ],
+      "properties": {
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "prior_confidence": {
+          "$ref": "#/$defs/nullable_number"
+        },
+        "updated_confidence": {
+          "$ref": "#/$defs/nullable_number"
+        },
+        "delta": {
+          "type": "number"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "up",
+            "down",
+            "flat"
+          ]
+        },
+        "confidence_basis": {
+          "type": "string"
+        },
+        "review_required": {
+          "type": "boolean"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "scope_change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_ref",
+        "prior_scope",
+        "updated_scope",
+        "scope_change_type",
+        "reason",
+        "evidence_refs"
+      ],
+      "properties": {
+        "target_ref": {
+          "$ref": "#/$defs/target_ref"
+        },
+        "prior_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "updated_scope": {
+          "type": "string"
+        },
+        "scope_change_type": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "next_mission_implication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "implication_type",
+        "recommendation",
+        "target_refs",
+        "risk_level",
+        "evidence_refs"
+      ],
+      "properties": {
+        "implication_type": {
+          "type": "string"
+        },
+        "recommendation": {
+          "type": "string"
+        },
+        "target_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/target_ref"
+          }
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "user_facing_summary_inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "not_final_copy",
+        "learned_bullets",
+        "caution_bullets",
+        "evidence_refs"
+      ],
+      "properties": {
+        "not_final_copy": {
+          "const": true
+        },
+        "learned_bullets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "caution_bullets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence_ref"
+          }
+        }
+      }
+    },
+    "nullable_number": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

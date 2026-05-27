@@ -1,0 +1,97 @@
+{
+  "record_type": "atlas_example_bundle",
+  "schema_version": "0.1",
+  "example_name": "landmark",
+  "description": "A canonical artist rendered as a Landmark. The AtlasNode contains no authoritative role field; role truth is held by AtlasRoleAssignment.",
+  "records": [
+    {
+      "record_type": "atlas_node",
+      "schema_version": "0.1",
+      "atlas_node_id": "atlas_node_nirvana",
+      "user_id": "user_demo_atlas_v0_1",
+      "node_type": "artist",
+      "display_name": "Nirvana",
+      "subtitle": "Canonical artist reference",
+      "music_object_ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "nirvana",
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "Nirvana",
+        "credited_artist_name": "Nirvana",
+        "credit_context": "group",
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": null,
+        "canonical_membership_context": {
+          "family_numbers": [
+            6
+          ],
+          "archetype_ids": [
+            "038"
+          ],
+          "membership_role_notes": "Canonical graph membership is context, not Atlas role truth."
+        }
+      },
+      "origin": "review",
+      "render_hints": {
+        "primary_label": "Nirvana",
+        "secondary_label": "Landmark validated by repeated positive evidence and review",
+        "card_summary": "A stable anchor for heavy, melodic, high-friction guitar music."
+      },
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "promoted"
+      },
+      "confidence": {
+        "confidence_score": 0.94,
+        "confidence_band": "high",
+        "confidence_basis": "mixed",
+        "confidence_summary": "Repeated survey and playback signals support this as a durable user anchor."
+      },
+      "evidence_signal_ids": [
+        "signal_survey_nirvana_like",
+        "signal_playback_nirvana_replay"
+      ],
+      "created_at": "2026-05-20T09:00:00-04:00",
+      "updated_at": "2026-05-20T09:15:00-04:00"
+    },
+    {
+      "record_type": "atlas_role_assignment",
+      "schema_version": "0.1",
+      "atlas_role_assignment_id": "role_nirvana_landmark_global",
+      "user_id": "user_demo_atlas_v0_1",
+      "atlas_node_id": "atlas_node_nirvana",
+      "role": "landmark",
+      "scope": {
+        "scope_type": "global",
+        "scope_id": null,
+        "scope_label": null
+      },
+      "candidate_pool_behavior": "anchor",
+      "assignment_summary": "Use as a high-confidence anchor when exploring adjacent heavy melodic lanes.",
+      "lifecycle": {
+        "status": "active",
+        "review_state": "reviewed",
+        "promotion_state": "promoted"
+      },
+      "confidence": {
+        "confidence_score": 0.94,
+        "confidence_band": "high",
+        "confidence_basis": "mixed",
+        "confidence_summary": "Role assignment is backed by multiple direct reactions and repeated listening."
+      },
+      "evidence_signal_ids": [
+        "signal_survey_nirvana_like",
+        "signal_playback_nirvana_replay"
+      ],
+      "created_at": "2026-05-20T09:00:00-04:00",
+      "updated_at": "2026-05-20T09:15:00-04:00"
+    }
+  ]
+}

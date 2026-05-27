@@ -1,0 +1,266 @@
+{
+  "artifact": "atlas_live_smoke_diagnostic_contract",
+  "version": "v0.1",
+  "date": "2026-05-24",
+  "purpose": "Classify Alpha client diagnostic artifacts and define how they may link to Atlas evidence without becoming promoted Atlas truth.",
+  "hard_rules": {
+    "diagnostics_are_promoted_atlas_truth": false,
+    "canonical_graph_mutation_allowed": false,
+    "apple_music_exposure_is_taste_truth": false,
+    "survey_construction_audit_is_user_taste_truth": false,
+    "generation_prompt_or_result_is_signal_by_itself": false,
+    "import_failure_is_negative_taste_evidence": false,
+    "quarantined_response_creates_signal": false,
+    "automatic_upload_allowed_before_privacy_copy": false
+  },
+  "artifact_classification": {
+    "apple_music_signal_payload": {
+      "atlas_ingestable": false,
+      "allowed_use": [
+        "exposure_familiarity_context",
+        "resolver_context",
+        "survey_construction_diagnostics"
+      ],
+      "forbidden_use": [
+        "taste_truth",
+        "role_evidence",
+        "atlas_promotion",
+        "final_profile_copy"
+      ]
+    },
+    "survey_page_selection_audit": {
+      "atlas_ingestable": false,
+      "allowed_use": [
+        "displayed_page_validation",
+        "tile_explainability",
+        "quarantine_diagnosis"
+      ],
+      "forbidden_use": [
+        "signal",
+        "role_truth",
+        "user_facing_atlas_claim"
+      ]
+    },
+    "survey_evidence_export": {
+      "atlas_ingestable": true,
+      "ingestable_scope": "valid_visible_evidence_atoms_only",
+      "allowed_records": [
+        "Signal",
+        "AtlasNode",
+        "AtlasRoleAssignment",
+        "PossibleAtlasUpdateCandidate",
+        "AtlasDigestView",
+        "MissionGenerationDigestView"
+      ],
+      "forbidden_use": [
+        "promoted_role_truth",
+        "canonical_graph_mutation"
+      ]
+    },
+    "mission_generation_request_packet": {
+      "atlas_ingestable": false,
+      "allowed_use": [
+        "request_audit",
+        "digest_hash_lineage",
+        "candidate_pool_hash_lineage"
+      ],
+      "forbidden_use": [
+        "signal",
+        "role_assignment",
+        "canonical_graph_mutation_instruction"
+      ]
+    },
+    "mission_generation_result": {
+      "atlas_ingestable": "limited",
+      "allowed_use": [
+        "structured_possible_update_candidate_when_generated_hypothesis_only_true",
+        "generation_status_audit"
+      ],
+      "forbidden_use": [
+        "signal_without_user_interaction",
+        "promoted_atlas_truth",
+        "final_wwtsf_copy"
+      ]
+    },
+    "mission_import_result": {
+      "atlas_ingestable": "limited",
+      "allowed_use": [
+        "operational_import_audit",
+        "mission_id_linkage",
+        "resolver_status_context"
+      ],
+      "forbidden_use": [
+        "taste_signal",
+        "role_promotion",
+        "negative_evidence_from_import_failure"
+      ]
+    },
+    "client_error_event": {
+      "atlas_ingestable": false,
+      "allowed_use": [
+        "support_diagnosis",
+        "missing_link_explanation",
+        "retry_context"
+      ],
+      "forbidden_use": [
+        "taste_signal",
+        "role_evidence",
+        "user_facing_atlas_copy"
+      ]
+    }
+  },
+  "common_link_fields": {
+    "required_for_all": [
+      "artifact_id",
+      "artifact_type",
+      "source_app_version",
+      "source_app_build",
+      "client_created_at",
+      "payload_sha256",
+      "redaction_level"
+    ],
+    "required_when_available": [
+      "tester_alias",
+      "supabase_user_id",
+      "survey_session_id",
+      "client_request_id",
+      "generation_run_id",
+      "mission_id",
+      "evidence_ref"
+    ],
+    "do_not_invent_missing_ids": true
+  },
+  "artifact_specific_links": {
+    "apple_music_signal_payload": {
+      "required": [
+        "artifact_id",
+        "artifact_type",
+        "tester_alias",
+        "source_app_version",
+        "source_app_build",
+        "client_created_at",
+        "payload_sha256"
+      ],
+      "recommended": [
+        "supabase_user_id",
+        "survey_session_id"
+      ]
+    },
+    "survey_page_selection_audit": {
+      "required": [
+        "artifact_id",
+        "artifact_type",
+        "survey_session_id",
+        "displayed_page_ids",
+        "source_app_version",
+        "source_app_build"
+      ],
+      "recommended": [
+        "candidate_surface_refs",
+        "typed_music_object_refs",
+        "prior_visible_response_refs",
+        "apple_exposure_context_refs"
+      ]
+    },
+    "survey_evidence_export": {
+      "required": [
+        "survey_session_id",
+        "evidence_ref",
+        "response_id",
+        "survey_item_id",
+        "page_id",
+        "stage",
+        "page_number"
+      ],
+      "recommended": [
+        "client_request_id",
+        "source_app_version",
+        "source_app_build"
+      ]
+    },
+    "mission_generation_request_packet": {
+      "required": [
+        "client_request_id",
+        "survey_session_id",
+        "mission_generation_digest_ref_or_hash",
+        "candidate_pool_ref_or_hash"
+      ],
+      "recommended": [
+        "attempt_index",
+        "requested_batch_size",
+        "prior_generation_run_ids"
+      ]
+    },
+    "mission_generation_result": {
+      "required": [
+        "client_request_id",
+        "generation_run_id",
+        "status",
+        "validation_summary"
+      ],
+      "recommended": [
+        "generated_mission_ids",
+        "model_version",
+        "prompt_version",
+        "token_summary",
+        "latency_ms"
+      ]
+    },
+    "mission_import_result": {
+      "required": [
+        "generation_run_id",
+        "local_import_status",
+        "imported_mission_ids"
+      ],
+      "recommended": [
+        "client_request_id",
+        "local_validation_errors",
+        "local_mission_count_after_import"
+      ]
+    },
+    "client_error_event": {
+      "required": [
+        "artifact_id",
+        "artifact_type",
+        "error_category",
+        "source_app_version",
+        "source_app_build",
+        "client_created_at"
+      ],
+      "recommended": [
+        "survey_session_id",
+        "client_request_id",
+        "generation_run_id",
+        "mission_id"
+      ]
+    }
+  },
+  "quarantine_policy": {
+    "quarantined_response_creates_signal": false,
+    "required_fields": [
+      "quarantine_id",
+      "survey_session_id",
+      "response_id",
+      "attempted_evidence_ref",
+      "page_id",
+      "survey_item_id",
+      "quarantine_reason",
+      "diagnostic_artifact_id",
+      "created_at",
+      "review_state"
+    ],
+    "allowed_reasons": [
+      "missing_displayed_page",
+      "missing_evidence_ref",
+      "invalid_response_state",
+      "duplicate_response",
+      "schema_mismatch",
+      "object_ref_resolution_failed",
+      "page_count_mismatch",
+      "hidden_or_private_source",
+      "consent_missing",
+      "unknown_needs_review"
+    ],
+    "repair_path": "append_reviewed_correction_or_superseding_atom"
+  }
+}
