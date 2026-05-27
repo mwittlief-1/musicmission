@@ -25,17 +25,23 @@ response disambiguation, and controlled frontier tiles.
 
 ## Layout
 
+Tracked fixture and contract surface:
+
 - `schemas/`: JSON Schemas for fake profiles, Apple payloads, hidden corpora, pages, runs,
   generation logs, visible responses, and lookup coverage.
 - `fake_profiles/`: ten private fake profile definitions.
 - `apple_payloads/`: ten simulated Apple Music-style payloads.
 - `hidden_reaction_corpora/`: ten private corpora with sparse but realism-weighted artist, album, and song reactions.
 - `survey_evidence_export/`: promoted Survey Evidence Export contract/golden fixture material.
-- `llm_profile_review/`: source prompts, schemas, public packets, and request templates for the profile-review pilot.
+- `llm_profile_review/api_requests/`, `prompts/`, `public_packets/`, and `schemas/`: source prompts, schemas, public packets, and request templates for the profile-review pilot.
+
+Ignored generated or local surface:
+
 - `runs/`: generated runs covering graph-only and Apple-biased mode for every profile,
   with Page 1, Page 2, state, evaluation coverage, and album/song handoff artifacts.
 - `reports/`: generated simulator reports; promote selected reports into `docs/` only when accepted as durable evidence.
 - `page_count_backtest/`: generated backtest output.
+- `llm_profile_review/api_pilot*/`, `content_review/`, `evidence_bundles/`, `reports/`, and `simulator_private/`: generated API evidence, reports, private evaluator material, and archives.
 
 Generated run outputs, generated reports, backtest outputs, Finder duplicate files ending in ` 2`, and LLM API pilot outputs are ignored by default.
 

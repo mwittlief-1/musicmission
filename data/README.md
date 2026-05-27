@@ -46,6 +46,8 @@ These paths are deterministic fixtures or golden packets. Track them when they a
 | `data/survey_simulation/fake_profiles/` | Survey simulator source profiles. |
 | `data/survey_simulation/apple_payloads/` | Survey simulator Apple payload fixtures. |
 | `data/survey_simulation/hidden_reaction_corpora/` | Simulator corpora used as controlled test inputs. |
+| `data/survey_simulation/survey_evidence_export/` | Promoted Survey Evidence Export contracts, schemas, app/Atlas handoff samples, and validation reports. |
+| `data/survey_simulation/llm_profile_review/api_requests/`, `prompts/`, `public_packets/`, and `schemas/` | Source templates, public inputs, and Structured Output schemas for the profile-review pilot. Generated API runs stay ignored. |
 
 ## Generated Or Archive Candidates
 
@@ -68,7 +70,9 @@ These paths are generated evidence or historical review material. Do not treat t
 | `data/mission_generation/alpha_first_batch_route_ready_v0_1/` | Generated first-batch route-ready attempts, except promoted contracts/manifests. |
 | `data/survey_simulation/runs/` | Generated simulator runs. |
 | `data/survey_simulation/reports/` | Generated simulator reports. |
-| `data/survey_simulation/llm_profile_review/` | Generated LLM review evidence and evidence bundles. |
+| `data/survey_simulation/page_count_backtest/` | Generated backtest output. |
+| `data/survey_simulation/llm_profile_review/api_pilot*/`, `content_review/`, `evidence_bundles/`, `reports/`, and `simulator_private/` | Generated or private LLM review API outputs and evidence bundles. |
+| `data/survey_simulation/**/* 2*` | Local Finder duplicate files. Ignored by default; remove locally after confirming the non-duplicate file exists. |
 | `data/waymark_canonical_graph_chatgpt_review_packet_*/` | Extracted generated review packets. Ignored by default after manifesting under `docs/reviews/canonical_graph/`; promote only specific artifacts that remain active. |
 
 ## Promotion Rule

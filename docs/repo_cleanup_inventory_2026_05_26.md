@@ -138,7 +138,9 @@ Added in this pass:
 | `data/alpha_packets/golden_alpha_packet_v0_1/` | Golden packet and app-import fixture material. |
 | `data/atlas_schema/examples/` | Atlas schema examples. |
 | `data/atlas_explainer/render_pack_v0_1_hardened/` | Hardened Atlas explainer loader fixture referenced by validation tooling and loader review docs. |
-| `data/survey_simulation/schemas/`, `fake_profiles/`, `apple_payloads/`, `hidden_reaction_corpora/` | Simulator fixtures or fixture-like inputs; do not blanket-ignore. |
+| `data/survey_simulation/schemas/`, `fake_profiles/`, `apple_payloads/`, `hidden_reaction_corpora/` | Simulator fixtures and controlled test inputs; do not blanket-ignore. |
+| `data/survey_simulation/survey_evidence_export/` | Promoted Survey Evidence Export contracts, schemas, handoff samples, and validation reports. |
+| `data/survey_simulation/llm_profile_review/api_requests/`, `prompts/`, `public_packets/`, and `schemas/` | First-class source templates, public inputs, and Structured Output schemas for the profile-review pilot. |
 | `waymark-ai-tests/src/` | First-class mission-generation harness code. |
 | `waymark-ai-tests/fixtures/` | First-class harness fixtures. Some generated digest snapshots function as integration fixtures. |
 | `waymark-atlas-tests/src/` | First-class Atlas ingestion harness code. |
@@ -168,7 +170,8 @@ Added in this pass:
 | --- | --- |
 | `data/survey_simulation/runs/` | Generated simulator runs. |
 | `data/survey_simulation/reports/` | Generated simulator reports. |
-| `data/survey_simulation/llm_profile_review/` | Generated LLM review evidence; includes zip bundles. |
+| `data/survey_simulation/page_count_backtest/` | Generated backtest output. |
+| `data/survey_simulation/llm_profile_review/api_pilot*/`, `content_review/`, `evidence_bundles/`, `reports/`, and `simulator_private/` | Generated or private LLM review API outputs and evidence bundles. |
 | `data/mission_generation/alpha_first_batch_route_ready_v0_1/` | Timestamped generated request/response attempts and app-import candidates. |
 | `data/closed_loop_simulation/` | Generated closed-loop simulation evidence and adaptive contract outputs. |
 | `data/atlas_schema/ingestion_proof/` | Generated proof bundles and validation evidence, plus some docs worth preserving. |
@@ -203,9 +206,9 @@ Added in this pass:
 | `review_packets/*.zip` | Generated review packet archives. |
 | `waymark-ai-tests/review_packets/*.zip` | Generated harness review packet archives. |
 | `data/mission_generation/**/request/` and raw response attempts | Timestamped LLM/API run evidence; bulky and often reproducible. |
-| `data/survey_simulation/llm_profile_review/` | LLM evidence bundles and review outputs. |
+| `data/survey_simulation/llm_profile_review/api_pilot*/`, `content_review/`, `evidence_bundles/`, `reports/`, and `simulator_private/` | Generated LLM evidence bundles and review outputs. |
 | `data/deprecated_mission_fixtures/` | Deprecated duplicate fixtures; requires owner approval before removal. |
-| `docs/app_dev/brand_assets/*.png` | Large generated/reference PNGs, about 11M total; keep only if they are canonical design inputs. |
+| `docs/app_dev/brand_assets/cartenza_codex_packet_v0_1/` | Active design handoff packet. Track the current packet as product/design input; reference PNG boards are directional and should not be treated as runtime app assets. Future bulky iterations should move to external design storage or a manifest. |
 | `docs/reviews/canonical_graph/` | Home for generated canonical graph review Markdown moved out of repo root. Archive externally or into a dated docs archive when no longer active. |
 | `docs/reviews/canonical_graph/chatgpt_review_packet_manifest_2026_05_27.md` | Manifest for the ignored extracted ChatGPT canonical graph review packet. |
 | `docs/reviews/review_packets_manifest_2026_05_27.md` | Manifest for local `review_packets/` archives; keeps the repo aware of ignored packet contents without tracking generated bulk. |
@@ -222,7 +225,7 @@ Largest directory-level findings:
 - `data/canonical_graph/`: 19M, canonical/product source material mixed with generated import and normalization artifacts.
 - `data/mission_generation/`: 18M, contracts plus generated first-batch attempts.
 - `data/alpha_consumable_layer/`: 15M, contract/canonical handoff material with a large audit refs JSON.
-- `docs/app_dev/brand_assets/`: 11M, large untracked PNG references.
+- `docs/app_dev/brand_assets/`: 11M, active tracked Cartenza design handoff packet with directional reference PNG boards.
 
 Largest notable files:
 
@@ -249,8 +252,6 @@ Remaining follow-ups:
 
 1. Review all `data/**/*.zip`, `review_packets/*.zip`, and harness review packet zips for external artifact storage.
 2. Promote selected generated reports into `docs/` only when they are accepted as evidence.
-3. Classify `data/survey_simulation/` more deeply into source fixtures, generated runs, and historical LLM evidence.
-4. Classify `data/atlas_schema/ingestion_proof/` into contract proof fixtures vs generated run evidence.
-5. Decide whether `docs/app_dev/brand_assets/*.png` are canonical brand inputs or external design artifacts.
-6. Review `data/deprecated_mission_fixtures/` before deleting or archiving duplicate mission fixtures.
-7. Treat the remaining iOS app/resource/test changes as an app-runtime slice, not repo cleanup, unless the owner explicitly asks cleanup to stage or validate that work.
+3. Review `data/deprecated_mission_fixtures/` before deleting or archiving duplicate mission fixtures.
+4. Treat the remaining iOS app/resource/test changes as an app-runtime slice, not repo cleanup, unless the owner explicitly asks cleanup to stage or validate that work.
+5. Keep the current Cartenza brand packet tracked as active design input, but move future bulky generated brand iterations to external design storage or manifest-only tracking.

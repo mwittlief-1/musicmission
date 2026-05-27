@@ -47,7 +47,7 @@ This map describes the intended repository shape for the Waymark/Cartenza alpha.
 | `data/alpha_consumable_layer/` | Product/technical contract and canonical handoff | Alpha graph surfaces, resolver policy, guardrails, and audit refs. Large audit JSON may be generated evidence, but it supports active contracts. |
 | `data/alpha_packets/` | Test/source fixture and generated artifact | Golden integration packet used for app/import review. Keep visible until the accepted golden-packet policy is decided. |
 | `data/mission_generation/` | Generated artifact and product contract | Handoff contracts plus timestamped first-batch generation runs. Raw request/response attempts are archive candidates. |
-| `data/survey_simulation/` | Mixed fixture and generated artifact | Schemas, fake profiles, Apple payloads, and hidden reaction corpora look fixture-like. `runs/`, `reports/`, `llm_profile_review/`, and evidence bundles are generated. |
+| `data/survey_simulation/` | Mixed fixture, contract, and generated artifact | Track schemas, fake profiles, Apple payloads, hidden corpora, Survey Evidence Export handoffs, and LLM review prompts/schemas/public packets. Ignore generated runs, reports, backtests, API pilots, evidence bundles, private evaluator material, and Finder duplicates. |
 | `data/closed_loop_simulation/` | Generated artifact and product contract | Closed-loop simulation outputs and adaptive contract evidence. Archive after review if no longer active. |
 | `data/deprecated_mission_fixtures/` | Candidate for external/archive storage | Deprecated duplicate mission fixtures. Keep until owner approves removal or archive move. |
 | `data/exports/` | Local build/cache output | Local app/device/export products. Ignored except `.gitkeep` placeholders. |
@@ -57,7 +57,7 @@ This map describes the intended repository shape for the Waymark/Cartenza alpha.
 
 | Path | Primary classification | Notes |
 | --- | --- | --- |
-| `docs/app_dev/` | Product/technical contract and generated review evidence | Active app specs, TestFlight reports, audits, brand material, and kickoff packet. Large brand reference PNGs need a source-of-truth decision. |
+| `docs/app_dev/` | Product/technical contract and generated review evidence | Active app specs, TestFlight reports, audits, brand material, and kickoff packet. The current Cartenza brand packet is tracked design input; future bulky generated brand iterations should move to external design storage or manifest-only tracking. |
 | `docs/app_dev/kickoff_v0_2/` | Product/technical contract and test/source fixture | Tracked v0.2 product/implementation packet, schemas, and sample mission. |
 | `docs/alpha_backlog/` | Product/technical contract | Active alpha lane backlog and dispatch material. |
 | `docs/infra/` | Product/technical contract and generated review evidence | Supabase, diagnostics, evidence upload, and operations docs. |

@@ -22,4 +22,6 @@ The following directories are generated proof, smoke, or review artifacts and ar
 - `node_interpretation_smoke/`
 - `wwtsf_substrate_smoke/`
 
+The ignored `ingestion_proof/` surface observed on 2026-05-27 is summarized in `docs/reviews/data/generated_artifacts_manifest_2026_05_27.md`.
+
 Promote a generated artifact only by moving or copying the specific accepted file into `examples/`, `alpha_hardening/`, `data/product_contracts/`, or `docs/` with a note explaining why it became source-of-truth.
