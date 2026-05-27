@@ -1,6 +1,6 @@
-# Waymark Mission Generation API Test Harness v0.1
+# Cartenza Mission Generation API Test Harness v0.1
 
-This harness evaluates whether a bounded OpenAI API context packet can generate Waymark missions from:
+This harness evaluates whether a bounded OpenAI API context packet can generate Cartenza missions from:
 
 - a user prompt;
 - a Matt Atlas digest;
@@ -29,6 +29,8 @@ waymark-ai-tests/
 ```
 
 Generated outputs are written to timestamped directories under `outputs/`. Summary reports are written under `reports/`.
+
+The directory and Python package names still use the former Waymark identifier for compatibility. See `../docs/brand_migration_cartenza.md` before renaming technical paths.
 
 ## Setup
 
@@ -88,8 +90,10 @@ python3 waymark-ai-tests/src/run_mission_generation_tests.py \
   --request nirvana_to_current \
   --prompt-template mission_generator_rich_v0_1 \
   --context-mode atlas_plus_features_plus_candidates \
-  --model "$WAYMARK_OPENAI_MODEL"
+  --model "$CARTENZA_OPENAI_MODEL"
 ```
+
+The runner reads `CARTENZA_OPENAI_*` settings first and falls back to legacy `WAYMARK_OPENAI_*` names for compatibility.
 
 The runner saves:
 
@@ -161,14 +165,16 @@ If all live calls fail before model output is produced, the report marks the mat
 The default pricing table lives at `fixtures/pricing/openai_pricing_v0_3.json`. It is manually maintained and can be overridden with:
 
 ```sh
-WAYMARK_MODEL_PRICING_FILE=path/to/openai_pricing.json
+CARTENZA_MODEL_PRICING_FILE=path/to/openai_pricing.json
 ```
 
 or:
 
 ```sh
-WAYMARK_MODEL_PRICING_JSON='{"models":{"example-model":{"input_per_1m":1,"cached_input_per_1m":0.1,"output_per_1m":5}}}'
+CARTENZA_MODEL_PRICING_JSON='{"models":{"example-model":{"input_per_1m":1,"cached_input_per_1m":0.1,"output_per_1m":5}}}'
 ```
+
+Legacy `WAYMARK_MODEL_PRICING_FILE` and `WAYMARK_MODEL_PRICING_JSON` remain accepted.
 
 Each live run records input tokens, cached input tokens if the API returns them, output tokens, total tokens, input/cached/output/total cost estimates, cost status, pricing table version/date, and latency. Cost estimates are for model-comparison and planning. Dashboard reconciliation may differ due to cached tokens, service tier, retries, failed calls, or account-level aggregation.
 

@@ -14,18 +14,22 @@ from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REVIEW_DIR = REPO_ROOT / "data/survey_simulation/llm_profile_review"
-PUBLIC_PACKET_PATH = (
+PUBLIC_PACKET_CANDIDATES = (
     REVIEW_DIR
     / "public_packets"
-    / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json"
+    / "cartenza_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+    REVIEW_DIR
+    / "public_packets"
+    / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json",
 )
+PUBLIC_PACKET_PATH = next((path for path in PUBLIC_PACKET_CANDIDATES if path.exists()), PUBLIC_PACKET_CANDIDATES[0])
 HIDDEN_TRUTH_PATH = (
     REVIEW_DIR
     / "simulator_private"
     / "hidden_truth_packets"
     / "hidden_truth_public_profile_01_A2_Al1_S1.json"
 )
-MODEL_ID = "gpt-5.5"
+MODEL_ID = os.environ.get("CARTENZA_LLM_MODEL") or os.environ.get("WAYMARK_LLM_MODEL", "gpt-5.5")
 GENERATED_AT = "2026-05-20T12:00:00Z"
 OPENAI_RESPONSES_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com").rstrip("/") + "/v1/responses"
 
@@ -293,7 +297,14 @@ def main() -> int:
         "error": None,
     }
     try:
-        reuse_writer = os.environ.get("WAYMARK_REUSE_PROFILE_WRITER_OUTPUT") == "1" and WRITER_OUTPUT_PATH.exists()
+        reuse_writer = (
+            (
+                os.environ.get("CARTENZA_REUSE_PROFILE_WRITER_OUTPUT")
+                or os.environ.get("WAYMARK_REUSE_PROFILE_WRITER_OUTPUT")
+            )
+            == "1"
+            and WRITER_OUTPUT_PATH.exists()
+        )
         metadata["hashes"]["executed_request_hashes"] = {}
         if reuse_writer:
             writer_output = load_json(WRITER_OUTPUT_PATH)

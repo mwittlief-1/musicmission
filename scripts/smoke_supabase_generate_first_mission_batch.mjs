@@ -229,17 +229,30 @@ function checkEnvExample() {
   const envExample = readFileSync(envExamplePath, "utf8");
   for (const key of [
     "OPENAI_API_KEY",
+    "CARTENZA_OPENAI_MODEL",
+    "CARTENZA_APP_MISSION_ADAPTER_VERSION",
+    "CARTENZA_ALPHA_REPLAY_MODE",
+    "CARTENZA_ALPHA_EVIDENCE_TERMS_VERSION",
+    "CARTENZA_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY",
+    "CARTENZA_ALPHA_DIAGNOSTIC_TERMS_VERSION",
+    "SUPABASE_URL",
+    "SUPABASE_SERVICE_ROLE_KEY",
+  ]) {
+    if (!envExample.includes(`${key}=`)) {
+      errors.push(`.env.example missing key: ${key}`);
+    }
+  }
+
+  for (const key of [
     "WAYMARK_OPENAI_MODEL",
     "WAYMARK_APP_MISSION_ADAPTER_VERSION",
     "WAYMARK_ALPHA_REPLAY_MODE",
     "WAYMARK_ALPHA_EVIDENCE_TERMS_VERSION",
     "WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY",
     "WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION",
-    "SUPABASE_URL",
-    "SUPABASE_SERVICE_ROLE_KEY",
   ]) {
     if (!envExample.includes(`${key}=`)) {
-      errors.push(`.env.example missing key: ${key}`);
+      errors.push(`.env.example missing legacy fallback key: ${key}`);
     }
   }
 }

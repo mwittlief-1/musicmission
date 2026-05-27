@@ -1,4 +1,4 @@
-# Waymark WWTSF Substrate Generator v0.1.2
+# Cartenza WWTSF Substrate Generator v0.1.2
 
 Profile: {{PROFILE_ID}}
 

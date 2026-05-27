@@ -2,7 +2,7 @@
 
 Date: 2026-05-23
 
-Status: planning-only review. Assets have been saved for reference, but no Swift, app metadata, prototype UI, launch screen, or app icon wiring has been changed.
+Status: active transition plan. Assets have been saved for reference, and the first Cartenza naming slice has updated repo policy, app display strings, visible app copy, and legacy-named harness product wording. App icon wiring and deeper visual-token work are still pending.
 
 ## Asset Package
 
@@ -78,7 +78,7 @@ Acceptance:
 
 ### CBR-002: Supersede Waymark name decisions in planning docs
 
-Status: pending.
+Status: in progress.
 
 Scope:
 
@@ -91,9 +91,15 @@ Acceptance:
 - Product/release docs consistently state `Cartenza` as the new app name.
 - Any remaining `Waymark` references are clearly historical or migration notes.
 
+Progress:
+
+- Added repo-wide naming policy in `docs/brand_migration_cartenza.md`.
+- Updated `README.md`, `AGENTS.md`, and `docs/repo_map.md` to identify Cartenza as the current product name.
+- Added the first name-reference audit in `docs/app_dev/cartenza_name_reference_audit_2026_05_27.md`.
+
 ### CBR-003: Name/reference audit
 
-Status: pending.
+Status: in progress.
 
 Scope:
 
@@ -105,6 +111,10 @@ Acceptance:
 
 - A list exists of every user-facing `Waymark` and `Music Atlas` reference that must change before TestFlight.
 - Internal symbols that are safe to defer are explicitly documented.
+
+Progress:
+
+- The 2026-05-27 audit classifies app-visible strings, legacy technical identifiers, generated output defaults, and historical archive material.
 
 ### CBR-004: Cartenza token plan
 
@@ -141,11 +151,11 @@ Acceptance:
 
 ### CBR-006: Mockup rebrand pass
 
-Status: pending after approval.
+Status: copy pass complete; visual retune pending.
 
 Scope:
 
-- Rename the HTML mockup packet from Waymark-facing copy to Cartenza-facing copy.
+- Rename the HTML mockup packet from Waymark-facing copy to Cartenza-facing copy. Completed on 2026-05-27.
 - Retune CSS variables from current cyan/blue/bright signal palette to Cartenza tokens.
 - Replace simple route-art motif with subtle contour/compass language.
 - Keep the currently approved flow, spacing, Survey, Player, and Review interaction model.

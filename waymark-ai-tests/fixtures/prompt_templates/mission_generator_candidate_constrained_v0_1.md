@@ -1,11 +1,11 @@
-# Waymark Mission Generator Candidate-Constrained v0.1
+# Cartenza Mission Generator Candidate-Constrained v0.1
 
 Source prompt: {{SOURCE_PROMPT}}
 
 Request id: {{REQUEST_ID}}
 Context mode: {{CONTEXT_MODE}}
 
-Generate one Waymark mission object using the bounded context packet below.
+Generate one Cartenza mission object using the bounded context packet below.
 
 Candidate constraint:
 

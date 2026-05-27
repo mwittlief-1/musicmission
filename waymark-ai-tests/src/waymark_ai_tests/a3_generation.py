@@ -65,7 +65,7 @@ def run_wwtsf_substrate(
             output_stem=f"wwtsf_substrate_profile_{profile}_A3",
             config=config,
             system_prompt=(
-                "You generate Waymark WWTSF substrate objects from bounded Atlas substrate. "
+                "You generate Cartenza WWTSF substrate objects from bounded Atlas substrate. "
                 "Return only JSON conforming to the provided schema. Do not create final user copy."
             ),
             user_prompt=rendered_prompt,
@@ -130,7 +130,7 @@ def run_wwtsf_shadow_comparison(
             output_stem=f"wwtsf_substrate_profile_{profile}_A3",
             config=config,
             system_prompt=(
-                "You generate Waymark WWTSF substrate objects from bounded Atlas substrate. "
+                "You generate Cartenza WWTSF substrate objects from bounded Atlas substrate. "
                 "Return only JSON conforming to the provided schema. Do not create final user copy."
             ),
             user_prompt=rendered_prompt,
@@ -203,7 +203,7 @@ def run_wwtsf_consistency_guardrail_pass(
             output_stem=f"wwtsf_substrate_profile_{profile}_A3",
             config=config,
             system_prompt=(
-                "You generate Waymark WWTSF substrate objects from bounded Atlas substrate. "
+                "You generate Cartenza WWTSF substrate objects from bounded Atlas substrate. "
                 "Return only JSON conforming to the provided schema. Do not create final user copy."
             ),
             user_prompt=rendered_prompt,
@@ -422,7 +422,7 @@ def run_a3_mission_generation(
             output_stem=f"mission_{scenario['scenario_id']}",
             config=config,
             system_prompt=(
-                "You generate Waymark mission objects from bounded Atlas and WWTSF substrate. "
+                "You generate Cartenza mission objects from bounded Atlas and WWTSF substrate. "
                 "Return only JSON conforming to the provided mission schema."
             ),
             user_prompt=rendered_prompt,
@@ -575,7 +575,7 @@ def _run_guarded_wwtsf_generation(
         output_stem=output_stem,
         config=config,
         system_prompt=(
-            "You generate guarded Waymark WWTSF substrate objects from bounded Atlas substrate. "
+            "You generate guarded Cartenza WWTSF substrate objects from bounded Atlas substrate. "
             "Preserve coverage obligations or explicitly mark omissions. Return only schema-valid JSON."
         ),
         user_prompt=rendered_prompt,
@@ -621,7 +621,7 @@ def _run_wwtsf_repair_generation(
         output_stem=output_stem,
         config=config,
         system_prompt=(
-            "You repair Waymark WWTSF substrate objects from bounded repair packets. "
+            "You repair Cartenza WWTSF substrate objects from bounded repair packets. "
             "Return one complete JSON object conforming to the provided schema."
         ),
         user_prompt=rendered_prompt,

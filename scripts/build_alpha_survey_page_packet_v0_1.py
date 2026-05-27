@@ -13,10 +13,17 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SIM_DIR = REPO_ROOT / "data/survey_simulation"
 GRAPH_SURFACE_DIR = REPO_ROOT / "data/canonical_graph/normalization_pass_2"
 HANDOFF_DIR = SIM_DIR / "survey_evidence_export/alpha_fast_survey_app_handoff"
-DEFAULT_SOURCE_PACKET = (
+DEFAULT_SOURCE_PACKET_CANDIDATES = (
     SIM_DIR
     / "llm_profile_review/api_pilot_3x3/public_packets"
-    / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json"
+    / "cartenza_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+    SIM_DIR
+    / "llm_profile_review/api_pilot_3x3/public_packets"
+    / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+)
+DEFAULT_SOURCE_PACKET = next(
+    (path for path in DEFAULT_SOURCE_PACKET_CANDIDATES if path.exists()),
+    DEFAULT_SOURCE_PACKET_CANDIDATES[0],
 )
 DEFAULT_OUTPUT = HANDOFF_DIR / "public_profile_01_A2_Al1_S1_alpha_survey_page_packet.json"
 

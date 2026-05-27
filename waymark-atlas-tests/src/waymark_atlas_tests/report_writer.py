@@ -21,7 +21,7 @@ def write_report(
     reports_root.mkdir(parents=True, exist_ok=True)
     path = reports_root / f"atlas_ingestion_report_{timestamp}.md"
     lines = [
-        "# Waymark Atlas Ingestion + Digest Harness Report",
+        "# Cartenza Atlas Ingestion + Digest Harness Report",
         "",
         f"- Timestamp: `{timestamp}`",
         f"- Output directory: `{output_dir}`",

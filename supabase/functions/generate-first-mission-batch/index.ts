@@ -31,14 +31,18 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
+function cartenzaEnv(name: string): string | undefined {
+  return Deno.env.get(`CARTENZA_${name}`) ?? Deno.env.get(`WAYMARK_${name}`) ?? undefined;
+}
+
 const missionOutputSchemaVersion =
-  Deno.env.get("WAYMARK_MISSION_OUTPUT_SCHEMA_VERSION") ?? "waymark.mission_output.v0.1";
+  cartenzaEnv("MISSION_OUTPUT_SCHEMA_VERSION") ?? "waymark.mission_output.v0.1";
 const appMissionSchemaVersion =
-  Deno.env.get("WAYMARK_APP_MISSION_SCHEMA_VERSION") ?? "mission.v0.2";
+  cartenzaEnv("APP_MISSION_SCHEMA_VERSION") ?? "mission.v0.2";
 const adapterVersion =
-  Deno.env.get("WAYMARK_APP_MISSION_ADAPTER_VERSION") ?? "supabase_generate_first_mission_batch_adapter_v0_1";
+  cartenzaEnv("APP_MISSION_ADAPTER_VERSION") ?? "supabase_generate_first_mission_batch_adapter_v0_1";
 const reviewNeededAppMissionPolicy =
-  Deno.env.get("WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY") ?? "return_app_valid_missions";
+  cartenzaEnv("ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY") ?? "return_app_valid_missions";
 
 const missionOutputSchema = {
   type: "object",
@@ -336,9 +340,9 @@ Deno.serve(async (request: Request) => {
 
   const startedAt = performance.now();
   const runId = crypto.randomUUID();
-  const promptVersion = Deno.env.get("WAYMARK_GENERATION_PROMPT_VERSION") ??
+  const promptVersion = cartenzaEnv("GENERATION_PROMPT_VERSION") ??
     "mission_generator_candidate_constrained_v0_1";
-  const model = Deno.env.get("WAYMARK_OPENAI_MODEL") ?? "gpt-5.4-mini";
+  const model = cartenzaEnv("OPENAI_MODEL") ?? "gpt-5.4-mini";
 
   let inputPacket: AlphaGenerationRequest;
   try {
@@ -490,10 +494,10 @@ function validateInputPacket(packet: AlphaGenerationRequest): ValidationResult {
 }
 
 function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaGenerationRequest): JsonObject {
-  const maxOutputTokens = parseInt(Deno.env.get("WAYMARK_OPENAI_MAX_OUTPUT_TOKENS") ?? "12000", 10);
-  const reasoningEffort = Deno.env.get("WAYMARK_OPENAI_REASONING_EFFORT");
+  const maxOutputTokens = parseInt(cartenzaEnv("OPENAI_MAX_OUTPUT_TOKENS") ?? "12000", 10);
+  const reasoningEffort = cartenzaEnv("OPENAI_REASONING_EFFORT");
   const systemPrompt = [
-    "You generate Waymark trusted Alpha first-batch listening missions.",
+    "You generate Cartenza trusted Alpha first-batch listening missions.",
     "Use only the supplied Survey evidence, MissionGenerationDigestView, and candidate pool.",
     "If the candidate pool includes mission_intent, mission_request, or mission_portfolio_slot, treat them as controlling context for the mission archetype, route shape, risk model, and objective.",
     "Mission intents are generic Atlas-signal tests. Do not turn fixture examples, known tester taste, or a named artist/country into the mission concept unless that named object is present in the supplied candidate pool and source signal refs.",
@@ -589,7 +593,7 @@ function buildReplayOpenAIResponse(generationOutput: JsonObject): JsonObject {
 }
 
 function isReplayModeEnabled(): boolean {
-  return Deno.env.get("WAYMARK_ALPHA_REPLAY_MODE") === "true";
+  return cartenzaEnv("ALPHA_REPLAY_MODE") === "true";
 }
 
 async function callOpenAI(payload: JsonObject): Promise<JsonObject> {

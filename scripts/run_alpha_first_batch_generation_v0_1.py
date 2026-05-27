@@ -235,7 +235,7 @@ def main() -> int:
 
     write_json(out_dir / "generation" / "raw_openai_response.json", raw_response)
     write_text(out_dir / "generation" / "output_text.json", output_text)
-    write_json(out_dir / "generation" / "mission_output_waymark_v0_1.parsed.json", parsed_output)
+    write_json(out_dir / "generation" / "mission_output_cartenza_v0_1.parsed.json", parsed_output)
     write_json(out_dir / "validation" / "rich_mission_validation_result.json", validation_result)
     write_json(out_dir / "validation" / "score_report.json", score_report)
     write_json(out_dir / "metadata.json", metadata)
@@ -282,7 +282,7 @@ def main() -> int:
 def build_system_prompt() -> str:
     return " ".join(
         [
-            "You generate one Waymark trusted Alpha first-batch listening mission.",
+            "You generate one Cartenza trusted Alpha first-batch listening mission.",
             "Use only the supplied Survey evidence export, MissionGenerationDigestView, and route-ready candidate pool.",
             "Digest, Atlas, Survey, and strong-region examples are context only; route items must still come from candidate_pool.candidates.",
             "A mission is a structured listening experiment, not a playlist.",
@@ -718,7 +718,7 @@ This packet reruns Mission Generation with:
 Survey Evidence Export
 -> MissionGenerationDigestView
 -> alpha_v0 route-ready candidate pool
--> Waymark rich mission output
+-> Cartenza rich mission output
 -> optional Core mission.v0.2 app import artifact
 ```
 
@@ -740,7 +740,7 @@ Survey Evidence Export
 - `request/supabase_generate_first_mission_batch_request.json`
 - `request/openai_request_payload.json`
 - `generation/raw_openai_response.json`
-- `generation/mission_output_waymark_v0_1.parsed.json`
+- `generation/mission_output_cartenza_v0_1.parsed.json`
 - `validation/rich_mission_validation_result.json`
 - `validation/score_report.json`
 - `response/supabase_generate_first_mission_batch_response.json`

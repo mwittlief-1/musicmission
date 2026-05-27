@@ -19,6 +19,7 @@ REFERENCE_PROFILE_PUBLIC_ID = "public_profile_01"
 REFERENCE_CONFIG = {"artist_pages": 2, "album_pages": 1, "song_pages": 1}
 REFERENCE_CONFIG_ID = "A2_Al1_S1"
 REFERENCE_RUN_ID = "llm_profile_review_public_profile_01_A2_Al1_S1"
+REFERENCE_PUBLIC_PACKET_FILENAME = "cartenza_survey_output_packet_public_profile_01_A2_Al1_S1.json"
 
 REACTIONS = ["love", "like", "ok", "dont_like", "dont_know_enough"]
 REACTION_SCORE = {"love": 4, "like": 3, "ok": 2, "dont_like": 1, "dont_know_enough": None}
@@ -1104,9 +1105,9 @@ def evaluator_output_schema() -> dict[str, Any]:
     }
 
 
-PROFILE_WRITER_SYSTEM = """You are the Waymark Profile Writer.
+PROFILE_WRITER_SYSTEM = """You are the Cartenza Profile Writer.
 
-Waymark is a music taste-mapping product. Your job is to read visible survey evidence and generate a provisional taste profile that can seed a user's Atlas.
+Cartenza is a music taste-mapping product. Your job is to read visible survey evidence and generate a provisional taste profile that can seed a user's Atlas.
 
 You must treat survey evidence as evidence, not verdict. Apple Music data is an exposure prior, not taste truth. Keep every inference at the smallest justified object: song, album, artist, archetype, region, or use-case. Preserve uncertainty. Do not make broad genre claims from one object.
 
@@ -1115,7 +1116,7 @@ You must use only the input packet provided. You must not infer, invent, or rely
 Output must conform exactly to the provided JSON schema.
 """
 
-PROFILE_WRITER_DEVELOPER = """Waymark vocabulary:
+PROFILE_WRITER_DEVELOPER = """Cartenza vocabulary:
 - Landmark = high-confidence favorite or anchor.
 - Region = cluster of related taste evidence.
 - Frontier = promising but underexplored area.
@@ -1139,7 +1140,7 @@ Interpretation rules:
 12. Prefer dead-end risk over dead end when evidence is thin.
 13. Never say the user loves a genre from one artist, album, or song.
 14. Mention contradictions and mixed evidence.
-15. The output should feel like Waymark: warm, specific, curious, map-like, and honest about uncertainty.
+15. The output should feel like Cartenza: warm, specific, curious, map-like, and honest about uncertainty.
 
 Evidence reference rules:
 - Every major claim must cite one or more visible evidence references from the packet.
@@ -1147,9 +1148,9 @@ Evidence reference rules:
 - Do not cite absent or hidden evidence.
 """
 
-PROFILE_EVALUATOR_SYSTEM = """You are the Waymark Profile Evaluator.
+PROFILE_EVALUATOR_SYSTEM = """You are the Cartenza Profile Evaluator.
 
-Your job is to evaluate whether a generated Waymark taste profile is faithful to the visible evidence, properly scoped, useful for Atlas seeding, and safe for pilot use.
+Your job is to evaluate whether a generated Cartenza taste profile is faithful to the visible evidence, properly scoped, useful for Atlas seeding, and safe for pilot use.
 
 You are not evaluating whether the writer guessed aggressively. You should penalize overconfident claims, hidden-context leakage, broad genre overclaims, unsupported landmarks, and failure to preserve uncertainty.
 
@@ -1164,7 +1165,7 @@ PROFILE_EVALUATOR_DEVELOPER = """Evaluate the profile on these principles:
 5. Reaction handling: love/like/ok/dont_like/dont_know_enough interpreted according to the packet's scale.
 6. Page-intent handling: page intent, candidate basis, false-nearby checks, and boundary probes are used carefully.
 7. Uncertainty: contradictions and thin evidence are preserved.
-8. Waymark voice: output feels like an Atlas seed, not generic recommender copy.
+8. Cartenza voice: output feels like an Atlas seed, not generic recommender copy.
 9. Actionability: recommended next tests are specific and useful.
 10. Schema compliance: output conforms to expected schema and provides evidence references.
 
@@ -1206,7 +1207,7 @@ def render_report(public_packet: dict[str, Any], hidden_truth: dict[str, Any]) -
         "",
         "## Scope",
         "",
-        "This artifact set prepares a narrow two-call API pilot for Waymark taste-profile qualitative review.",
+        "This artifact set prepares a narrow two-call API pilot for Cartenza taste-profile qualitative review.",
         "",
         "- Profile Writer input is visible survey evidence only.",
         "- Evidence-only Evaluator mode uses the public packet plus a Profile Writer output.",
@@ -1266,7 +1267,7 @@ def build() -> None:
     writer_schema = profile_writer_output_schema()
     evaluator_schema = evaluator_output_schema()
 
-    public_packet_path = OUT_DIR / "public_packets" / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json"
+    public_packet_path = OUT_DIR / "public_packets" / REFERENCE_PUBLIC_PACKET_FILENAME
     hidden_truth_path = OUT_DIR / "simulator_private" / "hidden_truth_packets" / "hidden_truth_public_profile_01_A2_Al1_S1.json"
 
     write_json(public_packet_path, public_packet)
@@ -1280,7 +1281,7 @@ def build() -> None:
     write_text(OUT_DIR / "prompts" / "profile_evaluator_developer.md", PROFILE_EVALUATOR_DEVELOPER)
 
     writer_user_payload = {
-        "task": "Generate a provisional Waymark taste profile from the visible survey output packet. Return only schema-valid JSON.",
+        "task": "Generate a provisional Cartenza taste profile from the visible survey output packet. Return only schema-valid JSON.",
         "visible_survey_output_packet": public_packet,
     }
     evidence_eval_payload = {

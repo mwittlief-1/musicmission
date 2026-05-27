@@ -56,7 +56,12 @@ def main() -> int:
     CONTRACT_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     write_role_assignment_policy_doc()
     write_tag_bearing_fixture()
-    packet_paths = sorted(INPUT_DIR.glob("waymark_survey_output_packet_public_profile_*_A3_Al1_S2.json"))
+    packet_paths = sorted(
+        [
+            *INPUT_DIR.glob("cartenza_survey_output_packet_public_profile_*_A3_Al1_S2.json"),
+            *INPUT_DIR.glob("waymark_survey_output_packet_public_profile_*_A3_Al1_S2.json"),
+        ]
+    )
     if not packet_paths:
         raise SystemExit(f"No A3 public packets found under {INPUT_DIR.relative_to(REPO_ROOT)}")
 

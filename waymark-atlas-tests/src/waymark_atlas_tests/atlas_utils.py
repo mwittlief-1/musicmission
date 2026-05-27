@@ -254,7 +254,7 @@ def make_vocabulary_term(
     created_at: str,
     mapped_taste_feature_id: Optional[str] = None,
 ) -> Dict[str, Any]:
-    summary = f"Survey note exposed reusable Waymark user language: {term!r}."
+    summary = f"Survey note exposed reusable Cartenza user language: {term!r}."
     if mapped_taste_feature_id:
         summary += f" Candidate mapping: {mapped_taste_feature_id}."
     return {

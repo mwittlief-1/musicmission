@@ -4417,7 +4417,7 @@ def render_page_n_adaptation_report(
         "- compare Page 1 only vs Page 1 + Page 2",
         "- compare artist-only vs artist + album/song handoff",
         "- score deterministic candidate quality against held-out fake-profile corpora",
-        "- review whether generated pages feel like Waymark or like a generic music quiz",
+        "- review whether generated pages feel like Cartenza or like a generic music quiz",
         "",
     ]
     return "\n".join(lines)

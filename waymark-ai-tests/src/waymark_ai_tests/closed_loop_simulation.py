@@ -244,7 +244,7 @@ def _run_mission_batch_generation(
     schema_name = "waymark_adaptive_second_batch_v0_1" if batch_stage == "second_batch" else "waymark_closed_loop_mission_batch_v0_1"
     request_payload = build_request_payload(
         config,
-        "You generate Waymark mission batches from bounded Atlas substrate. Return only JSON conforming to the provided batch schema.",
+        "You generate Cartenza mission batches from bounded Atlas substrate. Return only JSON conforming to the provided batch schema.",
         prompt,
         batch_schema,
         schema_name=schema_name,
@@ -316,9 +316,9 @@ def _mission_object_schema(mission_schema: Dict[str, Any], *, adaptive_second_ba
         for key, value in mission_schema.items()
         if key not in {"$schema", "$id", "$defs", "title"}
     }
-    mission_object["title"] = "Waymark Mission Object v0.1"
+    mission_object["title"] = "Cartenza Mission Object v0.1"
     if adaptive_second_batch:
-        mission_object["title"] = "Waymark Adaptive Second-Batch Mission Object v0.1"
+        mission_object["title"] = "Cartenza Adaptive Second-Batch Mission Object v0.1"
         mission_object["properties"].update(
             {
                 "mission_type": {"type": "string", "minLength": 1},
@@ -424,7 +424,7 @@ def _mission_batch_schema(mission_schema: Dict[str, Any], *, adaptive_second_bat
         }
     return {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "title": "Waymark Adaptive Second Batch v0.1" if adaptive_second_batch else "Waymark Closed Loop Mission Batch v0.1",
+        "title": "Cartenza Adaptive Second Batch v0.1" if adaptive_second_batch else "Cartenza Closed Loop Mission Batch v0.1",
         "type": "object",
         "additionalProperties": False,
         "required": required,
@@ -860,7 +860,7 @@ def _evaluate_adaptive_batch(batch: Dict[str, Any], adaptive_results: List[Dict[
     if expected_actions.intersection({"contradiction_check", "dead_end_confirmation"}) and not set(actions).intersection({"contradiction_check", "dead_end_confirmation"}):
         errors.append("AtlasDelta indicates contradiction/dead-end evidence, but no second-batch mission handles it.")
     if not any(not _generic_adaptive_text(str((mission.get("what_this_mission_is_not_doing_anymore") or ""))) for mission in batch.get("missions", [])):
-        errors.append("No mission clearly states what Waymark is not doing anymore.")
+        errors.append("No mission clearly states what Cartenza is not doing anymore.")
     mission_failures = [result for result in adaptive_results if result.get("errors")]
     if mission_failures:
         errors.append("One or more adaptive missions failed adaptive evaluator checks.")
@@ -896,6 +896,7 @@ def _generic_adaptive_text(text: str) -> bool:
         "this continues the previous exploration",
         "this mission tests nearby music",
         "batch 1 provided useful evidence",
+        "cartenza learned from the first batch",
         "waymark learned from the first batch",
         "this is the next right test",
     }
@@ -1678,7 +1679,7 @@ def _write_acceptance_report(*, profile_results: List[Dict[str, Any]], dry_run: 
         for result in profile_results
     )
     lines = [
-        "# Closed-Loop Waymark First-Batch Simulation v0.1",
+        "# Closed-Loop Cartenza First-Batch Simulation v0.1",
         "",
         f"- Generated at: `{_now()}`",
         f"- Run type: `{'dry_run' if dry_run else 'live_api'}`",

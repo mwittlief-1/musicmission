@@ -4,7 +4,7 @@ These are human reference notes for inspecting generated missions. They are not 
 
 ## General Bar
 
-A strong Waymark mission should read like a route with a hypothesis, not like a playlist with nicer prose. Every item should have a reason for being placed where it is, a positive signal, a negative signal, and feedback chips that would teach the Atlas something specific.
+A strong Cartenza mission should read like a route with a hypothesis, not like a playlist with nicer prose. Every item should have a reason for being placed where it is, a positive signal, a negative signal, and feedback chips that would teach the Atlas something specific.
 
 Strong chips sound like user-facing evidence:
 

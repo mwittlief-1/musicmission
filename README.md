@@ -1,11 +1,14 @@
-# Waymark / Cartenza Alpha
+# Cartenza Alpha
 
-Private alpha repo for the Waymark/Cartenza iOS TestFlight app, MusicKit integration, mission generation, Atlas contracts, Supabase alpha backend, and supporting test harnesses.
+Private alpha repo for the Cartenza iOS TestFlight app, MusicKit integration, mission generation, Atlas contracts, Supabase alpha backend, and supporting test harnesses.
+
+Waymark is the former product name. Existing `waymark-*` directories, `waymark.*` schema identifiers, and `WAYMARK_*` environment variables remain legacy compatibility identifiers; new config and generated filenames should prefer Cartenza aliases where documented.
 
 Start with the current repo map before moving or adding files:
 
 - `AGENTS.md`
 - `docs/repo_map.md`
+- `docs/brand_migration_cartenza.md`
 - `docs/repo_cleanup_inventory_2026_05_26.md`
 - `data/README.md`
 
@@ -40,13 +43,13 @@ supabase/                       Supabase config, Edge Functions, and migrations
 scripts/                        validation, generation, smoke, and import helpers
 data/                           contracts, canonical material, fixtures, and generated evidence
 docs/                           product/technical contracts, runbooks, reviews, and repo stewardship docs
-waymark-ai-tests/               first-class mission-generation harness; generated outputs ignored
-waymark-atlas-tests/            first-class Atlas ingestion harness; generated outputs ignored
+waymark-ai-tests/               legacy-named first-class mission-generation harness; generated outputs ignored
+waymark-atlas-tests/            legacy-named first-class Atlas ingestion harness; generated outputs ignored
 build/                          local Xcode build output, ignored
 data/exports/                   local app/device exports, ignored except .gitkeep
 ```
 
-For the detailed policy, see `docs/repo_map.md`. For `data/` source-of-truth versus generated/archive decisions, see `data/README.md`.
+For the detailed policy, see `docs/repo_map.md`. For Cartenza naming and legacy Waymark identifiers, see `docs/brand_migration_cartenza.md`. For `data/` source-of-truth versus generated/archive decisions, see `data/README.md`.
 
 ## Validate The Sample Mission
 

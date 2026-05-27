@@ -1,6 +1,6 @@
 # Scripts
 
-This directory contains first-class repo support tooling for the Waymark/Cartenza alpha.
+This directory contains first-class repo support tooling for the Cartenza alpha.
 
 ## What Belongs Here
 

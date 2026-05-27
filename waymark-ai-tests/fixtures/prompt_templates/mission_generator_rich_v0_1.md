@@ -1,11 +1,11 @@
-# Waymark Mission Generator Rich v0.1
+# Cartenza Mission Generator Rich v0.1
 
 Source prompt: {{SOURCE_PROMPT}}
 
 Request id: {{REQUEST_ID}}
 Context mode: {{CONTEXT_MODE}}
 
-You are producing a Waymark mission-generation test output, not a final backend response and not a playlist.
+You are producing a Cartenza mission-generation test output, not a final backend response and not a playlist.
 
 Mission design target:
 

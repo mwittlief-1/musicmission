@@ -15,10 +15,17 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SIM_DIR = REPO_ROOT / "data/survey_simulation"
 GRAPH_SURFACE_DIR = REPO_ROOT / "data/canonical_graph/normalization_pass_2"
-DEFAULT_SOURCE_PACKET = (
+DEFAULT_SOURCE_PACKET_CANDIDATES = (
     SIM_DIR
     / "llm_profile_review/api_pilot_3x3/public_packets"
-    / "waymark_survey_output_packet_public_profile_01_A4_Al2_S3.json"
+    / "cartenza_survey_output_packet_public_profile_01_A4_Al2_S3.json",
+    SIM_DIR
+    / "llm_profile_review/api_pilot_3x3/public_packets"
+    / "waymark_survey_output_packet_public_profile_01_A4_Al2_S3.json",
+)
+DEFAULT_SOURCE_PACKET = next(
+    (path for path in DEFAULT_SOURCE_PACKET_CANDIDATES if path.exists()),
+    DEFAULT_SOURCE_PACKET_CANDIDATES[0],
 )
 DEFAULT_OUTPUT = (
     SIM_DIR

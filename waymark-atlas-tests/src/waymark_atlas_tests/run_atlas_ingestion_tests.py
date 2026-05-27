@@ -24,7 +24,7 @@ MISSION_GENERATION_DIGEST_FIXTURE = REPO_ROOT / "waymark-ai-tests" / "fixtures" 
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Run Waymark Atlas ingestion and digest tests.")
+    parser = argparse.ArgumentParser(description="Run Cartenza Atlas ingestion and digest tests.")
     parser.add_argument("--survey-fixtures", type=Path, default=FIXTURES_ROOT / "survey_outputs" / "survey_outputs_v0_1.json")
     parser.add_argument("--mission-review-fixtures", type=Path, default=FIXTURES_ROOT / "mission_review_outputs" / "mission_review_outputs_v0_1.json")
     parser.add_argument("--canonical-refs", type=Path, default=FIXTURES_ROOT / "canonical_refs" / "music_object_refs_v0_1.json")

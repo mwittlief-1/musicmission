@@ -1,4 +1,4 @@
-"""Waymark mission-generation API test harness."""
+"""Cartenza mission-generation API test harness."""
 
 __all__ = ["__version__"]
 

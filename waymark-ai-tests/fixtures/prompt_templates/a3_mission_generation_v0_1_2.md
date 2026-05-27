@@ -1,10 +1,10 @@
-# Waymark A3 Mission Generation v0.1.2
+# Cartenza A3 Mission Generation v0.1.2
 
 Profile: {{PROFILE_ID}}
 Scenario id: {{SCENARIO_ID}}
 Mission archetype: {{MISSION_ARCHETYPE}}
 
-Generate one Waymark mission object using the existing approved mission schema.
+Generate one Cartenza mission object using the existing approved mission schema.
 
 This mission consumes Atlas substrate and WWTSF substrate as context. WWTSF is not final user copy; use it as structured source material only.
 

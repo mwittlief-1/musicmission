@@ -1,9 +1,9 @@
-# Waymark Closed-Loop Mission Batch Generator v0.1
+# Cartenza Closed-Loop Mission Batch Generator v0.1
 
 Profile: {{PROFILE_ID}}
 Batch stage: {{BATCH_STAGE}}
 
-Generate exactly six Waymark mission objects as a coherent portfolio.
+Generate exactly six Cartenza mission objects as a coherent portfolio.
 
 Use the existing mission object contract for each mission. A Mission is not a playlist. It is a structured listening route designed to gather useful Atlas evidence.
 
@@ -73,13 +73,13 @@ Mission requirements:
 For second-batch generation:
 
 - Do not generate a mission unless it can point to at least one `source_atlas_delta_refs` value from `atlas_delta_after_batch_1.deltas[*].delta_id`.
-- The mission must make the learning visible: “Waymark noticed X, Atlas changed in Y way, so this mission now tests Z.”
+- The mission must make the learning visible: “Cartenza noticed X, Atlas changed in Y way, so this mission now tests Z.”
 - For every mission, copy `source_atlas_delta_refs`, `source_signal_refs`, and `source_update_candidate_refs` from `adaptive_second_batch_reference_table.rows`.
 - `source_signal_refs` must use only `signal:mission:...` refs from the referenced AtlasDelta rows. Do not use `signal:survey:...` refs.
 - `source_update_candidate_refs` must use only `possible_update:signal:mission:...` refs from the referenced AtlasDelta rows.
 - Every mission must choose exactly one `adaptation_action`: `deepen`, `pivot`, `retire_pause`, `contradiction_check`, or `dead_end_confirmation`.
 - When a referenced AtlasDelta has `recommended_adaptation_action`, the mission's `adaptation_action` should usually match it. Do not silently convert a `retire_pause` delta into a `deepen`, `pivot`, or generic contradiction mission.
-- If the reference table includes a `retire_pause` delta, at least one second-batch mission must use `adaptation_action = "retire_pause"` and say what Waymark is pausing, retiring, narrowing, or no longer spending effort on.
+- If the reference table includes a `retire_pause` delta, at least one second-batch mission must use `adaptation_action = "retire_pause"` and say what Cartenza is pausing, retiring, narrowing, or no longer spending effort on.
 - Every mission must explain `what_batch_1_taught`, `what_changed_since_prior_batch`, and `what_this_mission_is_not_doing_anymore`.
 - Every mission must define hit/miss/no-signal semantics through `success_condition`, `failure_condition`, `no_signal_interpretation`, and `expected_next_atlas_update`.
 - At least two missions must visibly adapt because of batch-one learning.

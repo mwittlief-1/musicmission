@@ -29,23 +29,23 @@ def config_from_env(
     timeout_seconds: Optional[int] = None,
 ) -> OpenAIConfig:
     api_key = os.environ.get("OPENAI_API_KEY", "")
-    configured_model = model or os.environ.get("WAYMARK_OPENAI_MODEL") or os.environ.get("OPENAI_MODEL") or "gpt-4.1"
-    configured_style = api_style or os.environ.get("WAYMARK_OPENAI_API_STYLE", "responses")
+    configured_model = model or _env_first("CARTENZA_OPENAI_MODEL", "WAYMARK_OPENAI_MODEL", "OPENAI_MODEL") or "gpt-4.1"
+    configured_style = api_style or _env_first("CARTENZA_OPENAI_API_STYLE", "WAYMARK_OPENAI_API_STYLE") or "responses"
     configured_base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 
-    env_temperature = os.environ.get("WAYMARK_OPENAI_TEMPERATURE")
+    env_temperature = _env_first("CARTENZA_OPENAI_TEMPERATURE", "WAYMARK_OPENAI_TEMPERATURE")
     if temperature is None and env_temperature:
         temperature = float(env_temperature)
 
-    env_max_output = os.environ.get("WAYMARK_OPENAI_MAX_OUTPUT_TOKENS")
+    env_max_output = _env_first("CARTENZA_OPENAI_MAX_OUTPUT_TOKENS", "WAYMARK_OPENAI_MAX_OUTPUT_TOKENS")
     if max_output_tokens is None and env_max_output:
         max_output_tokens = int(env_max_output)
 
-    env_reasoning = os.environ.get("WAYMARK_OPENAI_REASONING_EFFORT")
+    env_reasoning = _env_first("CARTENZA_OPENAI_REASONING_EFFORT", "WAYMARK_OPENAI_REASONING_EFFORT")
     if reasoning_effort is None and env_reasoning:
         reasoning_effort = env_reasoning
 
-    env_timeout = os.environ.get("WAYMARK_OPENAI_TIMEOUT_SECONDS")
+    env_timeout = _env_first("CARTENZA_OPENAI_TIMEOUT_SECONDS", "WAYMARK_OPENAI_TIMEOUT_SECONDS")
     if timeout_seconds is None and env_timeout:
         timeout_seconds = int(env_timeout)
 
@@ -59,6 +59,14 @@ def config_from_env(
         reasoning_effort=reasoning_effort,
         timeout_seconds=timeout_seconds if timeout_seconds is not None else 120,
     )
+
+
+def _env_first(*names: str) -> Optional[str]:
+    for name in names:
+        value = os.environ.get(name)
+        if value:
+            return value
+    return None
 
 
 def build_request_payload(

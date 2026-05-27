@@ -1,4 +1,4 @@
-# Waymark WWTSF Guarded Substrate Generator v0.1.5
+# Cartenza WWTSF Guarded Substrate Generator v0.1.5
 
 Profile: {{PROFILE_ID}}
 

@@ -96,7 +96,7 @@ def build_context_packet(
     packet: Dict[str, Any] = {
         "harness_version": "0.1",
         "product_frame": {
-            "product_name": "Waymark",
+            "product_name": "Cartenza",
             "mission_is_not_playlist": True,
             "mission_definition": (
                 "A mission is a structured listening route designed to test a taste hypothesis, "
@@ -200,7 +200,7 @@ def build_prompt(
         rendered = rendered.replace(placeholder, value)
 
     system_prompt = (
-        "You generate Waymark mission objects for a bounded API test harness. "
+        "You generate Cartenza mission objects for a bounded API test harness. "
         "Return only JSON that conforms to the provided schema. "
         "A mission is not a playlist: every item must have a route function, expected signal, "
         "and reaction-specific feedback chips for love, like, keep, and not_for_me."

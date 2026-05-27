@@ -1,4 +1,4 @@
-# Waymark Alpha Supabase
+# Cartenza Alpha Supabase
 
 This folder is the thin Alpha backend for live first mission generation and provisional evidence intake. Its job is narrow:
 
@@ -10,7 +10,7 @@ This folder is the thin Alpha backend for live first mission generation and prov
 - accept consent-gated Alpha evidence artifacts through `submit-alpha-evidence`;
 - accept consent-gated PM/support diagnostics through `submit-alpha-diagnostic`.
 
-It is not the full Waymark backend, Atlas authority, graph database, public account system, or sync layer.
+It is not the full Cartenza backend, Atlas authority, graph database, public account system, or sync layer.
 
 ## Setup
 
@@ -20,21 +20,23 @@ supabase init # only if supabase/config.toml is missing
 supabase link --project-ref <your-project-ref>
 supabase db push
 supabase secrets set OPENAI_API_KEY=<key>
-supabase secrets set WAYMARK_OPENAI_MODEL=gpt-5.4-mini
-supabase secrets set WAYMARK_OPENAI_REASONING_EFFORT=medium
-supabase secrets set WAYMARK_OPENAI_MAX_OUTPUT_TOKENS=12000
-supabase secrets set WAYMARK_GENERATION_PROMPT_VERSION=mission_generator_candidate_constrained_v0_1
-supabase secrets set WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY=return_app_valid_missions
+supabase secrets set CARTENZA_OPENAI_MODEL=gpt-5.4-mini
+supabase secrets set CARTENZA_OPENAI_REASONING_EFFORT=medium
+supabase secrets set CARTENZA_OPENAI_MAX_OUTPUT_TOKENS=12000
+supabase secrets set CARTENZA_GENERATION_PROMPT_VERSION=mission_generator_candidate_constrained_v0_1
+supabase secrets set CARTENZA_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY=return_app_valid_missions
 supabase functions deploy generate-first-mission-batch
 supabase functions deploy submit-alpha-evidence
 supabase functions deploy submit-alpha-diagnostic
 ```
 
+The functions still accept legacy `WAYMARK_*` secrets during the Cartenza transition. Prefer `CARTENZA_*` for new local env files and new hosted secrets.
+
 For local development:
 
 ```sh
 cp supabase/functions/.env.example supabase/functions/.env.local
-sed -i '' 's/WAYMARK_ALPHA_REPLAY_MODE=false/WAYMARK_ALPHA_REPLAY_MODE=true/' supabase/functions/.env.local
+sed -i '' 's/CARTENZA_ALPHA_REPLAY_MODE=false/CARTENZA_ALPHA_REPLAY_MODE=true/' supabase/functions/.env.local
 supabase functions serve generate-first-mission-batch --env-file supabase/functions/.env.local
 supabase functions serve submit-alpha-evidence --env-file supabase/functions/.env.local
 supabase functions serve submit-alpha-diagnostic --env-file supabase/functions/.env.local
@@ -64,7 +66,7 @@ Minimum request body:
 }
 ```
 
-The function returns raw generation output plus `app_missions` when the app-import gate passes. For trusted Alpha, `WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY=return_app_valid_missions` may also return app-valid missions with `status=review_needed` and an `alpha_import_policy` envelope. The app must keep those review flags auditable and must never import `blocked` output.
+The function returns raw generation output plus `app_missions` when the app-import gate passes. For trusted Alpha, `CARTENZA_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY=return_app_valid_missions` may also return app-valid missions with `status=review_needed` and an `alpha_import_policy` envelope. The legacy `WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY` name is still accepted. The app must keep those review flags auditable and must never import `blocked` output.
 
 ## Evidence Upload Endpoint
 
@@ -170,7 +172,7 @@ supabase/functions/generate-first-mission-batch/fixtures/
 Replay requests include `replay_generation_output` and are accepted only when:
 
 ```text
-WAYMARK_ALPHA_REPLAY_MODE=true
+CARTENZA_ALPHA_REPLAY_MODE=true
 ```
 
 Never enable replay mode for the hosted Alpha function.

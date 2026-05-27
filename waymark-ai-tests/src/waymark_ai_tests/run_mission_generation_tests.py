@@ -45,7 +45,7 @@ LEGACY_MODEL_MATRIX = ["gpt-4.1"]
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Run Waymark mission-generation API tests.")
+    parser = argparse.ArgumentParser(description="Run Cartenza mission-generation API tests.")
     parser.add_argument("--generation-task", choices=["mission_generation", "wwtsf_substrate", "wwtsf_shadow_comparison", "wwtsf_consistency_guardrail_pass", "wwtsf_mini_guarded_repair", "closed_loop_simulation"], default="mission_generation", help="Generation task mode. Default keeps the existing mission-generation harness behavior.")
     parser.add_argument("--a3-dev-run", action="store_true", help="Run the A3 mission-generation dev scenarios using AtlasDigestView, node interpretation, and WWTSF substrate.")
     parser.add_argument("--profiles", default=",".join(A3_PROFILES), help="A3 profiles to run, comma-separated, for WWTSF or A3 mission dev modes.")
@@ -53,13 +53,13 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--suite", help="Suite id from requests_v0_1.json, for example suggested_first_five or all.")
     parser.add_argument("--prompt-template", action="append", default=[], help="Prompt template name without .md. Can be repeated or comma-separated.")
     parser.add_argument("--context-mode", action="append", default=[], help="thin, atlas_digest, atlas_plus_features, or atlas_plus_features_plus_candidates. Can be repeated or comma-separated.")
-    parser.add_argument("--model", help="OpenAI model. Defaults to WAYMARK_OPENAI_MODEL, OPENAI_MODEL, or gpt-4.1. Can be comma-separated.")
+    parser.add_argument("--model", help="OpenAI model. Defaults to CARTENZA_OPENAI_MODEL, WAYMARK_OPENAI_MODEL, OPENAI_MODEL, or gpt-4.1. Can be comma-separated.")
     parser.add_argument("--models", action="append", default=[], help="Model matrix to run. Can be repeated or comma-separated.")
     parser.add_argument("--api-style", choices=["responses", "chat_completions"], help="OpenAI API style. Defaults to responses.")
     parser.add_argument("--temperature", type=float, help="Optional sampling temperature.")
     parser.add_argument("--max-output-tokens", type=int, help="Optional maximum output token budget.")
     parser.add_argument("--reasoning-effort", help="Optional reasoning effort for models that support it.")
-    parser.add_argument("--timeout-seconds", type=int, help="OpenAI request timeout per model call. Defaults to WAYMARK_OPENAI_TIMEOUT_SECONDS or 120.")
+    parser.add_argument("--timeout-seconds", type=int, help="OpenAI request timeout per model call. Defaults to CARTENZA_OPENAI_TIMEOUT_SECONDS, WAYMARK_OPENAI_TIMEOUT_SECONDS, or 120.")
     parser.add_argument("--runs", type=int, default=1, help="Number of repeated runs per matrix cell.")
     parser.add_argument("--output-root", type=Path, default=HARNESS_ROOT / "outputs")
     parser.add_argument("--reports-root", type=Path, default=HARNESS_ROOT / "reports")
@@ -444,20 +444,20 @@ def _list_fixture(kind: str) -> int:
 
 
 def _load_pricing() -> Dict[str, Any]:
-    raw = os.environ.get("WAYMARK_MODEL_PRICING_JSON")
+    raw_name, raw = _env_pair("CARTENZA_MODEL_PRICING_JSON", "WAYMARK_MODEL_PRICING_JSON")
     if raw:
         try:
             parsed = json.loads(raw)
         except json.JSONDecodeError as error:
-            raise SystemExit(f"WAYMARK_MODEL_PRICING_JSON is invalid JSON: {error}") from error
+            raise SystemExit(f"{raw_name} is invalid JSON: {error}") from error
         return {
-            "source": "env:WAYMARK_MODEL_PRICING_JSON",
+            "source": f"env:{raw_name}",
             "models": parsed.get("models", parsed) if isinstance(parsed, dict) else {},
             "pricing_table_version": parsed.get("pricing_table_version") if isinstance(parsed, dict) else None,
             "pricing_table_date": parsed.get("pricing_table_date") if isinstance(parsed, dict) else None,
         }
 
-    pricing_file = os.environ.get("WAYMARK_MODEL_PRICING_FILE")
+    _, pricing_file = _env_pair("CARTENZA_MODEL_PRICING_FILE", "WAYMARK_MODEL_PRICING_FILE")
     paths = [Path(pricing_file)] if pricing_file else [
         FIXTURES_ROOT / "pricing" / "openai_pricing_v0_3.json",
         HARNESS_ROOT / "model_pricing.json",
@@ -478,6 +478,14 @@ def _load_pricing() -> Dict[str, Any]:
         "pricing_table_version": None,
         "pricing_table_date": None,
     }
+
+
+def _env_pair(*names: str) -> tuple[str | None, str | None]:
+    for name in names:
+        value = os.environ.get(name)
+        if value:
+            return name, value
+    return None, None
 
 
 def _estimate_cost_usd(model: str, usage: Dict[str, Optional[int]], pricing: Dict[str, Any]) -> Dict[str, Any]:
@@ -675,7 +683,7 @@ def _mock_output(request_fixture: Dict[str, Any], candidate_pool: Optional[Dict[
         "archetypes": request_fixture.get("expected_archetypes", ["Frontier Route"])[:2],
         "brief": "Local mock output for harness smoke testing.",
         "hypothesis": "A bounded route can test the prompt while preserving uncertainty and avoiding overgeneralization.",
-        "why_now": "The request asks for a specific Waymark mission-generation test.",
+        "why_now": "The request asks for a specific Cartenza mission-generation test.",
         "risk_model": {
             "overall_risk": "medium",
             "known_traps_acknowledged": request_fixture.get("main_risks", [])[:4],

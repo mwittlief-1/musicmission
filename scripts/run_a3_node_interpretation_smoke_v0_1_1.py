@@ -18,7 +18,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 INGESTION_DIR = REPO_ROOT / "data/atlas_schema/ingestion_proof/a3_gpt_5_5_3x3"
 OUT_DIR = REPO_ROOT / "data/atlas_schema/node_interpretation_smoke/a3_v0_1_1"
 
-MODEL_ID = os.environ.get("WAYMARK_LLM_MODEL", "gpt-5.5")
+MODEL_ID = os.environ.get("CARTENZA_LLM_MODEL") or os.environ.get("WAYMARK_LLM_MODEL", "gpt-5.5")
 OPENAI_RESPONSES_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com").rstrip("/") + "/v1/responses"
 GENERATED_AT = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
@@ -521,7 +521,7 @@ def output_schema() -> dict[str, Any]:
 
 def system_prompt() -> str:
     return (
-        "You are Waymark's Atlas node interpretation smoke-test model. "
+        "You are Cartenza's Atlas node interpretation smoke-test model. "
         "Return only strict JSON matching the supplied schema. Interpret Atlas substrate; do not write a prose taste profile."
     )
 

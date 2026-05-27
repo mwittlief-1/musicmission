@@ -6,10 +6,18 @@ import { fileURLToPath } from "node:url";
 const repoRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const packetDir = join(repoRoot, "data/alpha_packets/golden_alpha_packet_v0_1");
 const fixtureDir = join(repoRoot, "supabase/functions/generate-first-mission-batch/fixtures");
+const reviewedGenerationPath = firstExisting([
+  join(packetDir, "generation/mission_output_cartenza_v0_1.reviewed_app_import_candidate.json"),
+  join(packetDir, "generation/mission_output_waymark_v0_1.reviewed_app_import_candidate.json"),
+]);
+const rawGenerationPath = firstExisting([
+  join(packetDir, "generation/mission_output_cartenza_v0_1.raw.json"),
+  join(packetDir, "generation/mission_output_waymark_v0_1.raw.json"),
+]);
 const sourceFiles = [
   join(packetDir, "request/supabase_generate_first_mission_batch_request.json"),
-  join(packetDir, "generation/mission_output_waymark_v0_1.reviewed_app_import_candidate.json"),
-  join(packetDir, "generation/mission_output_waymark_v0_1.raw.json"),
+  reviewedGenerationPath,
+  rawGenerationPath,
   join(packetDir, "response/supabase_generate_first_mission_batch_response.json"),
 ];
 
@@ -33,10 +41,8 @@ if (sourceFiles.some((path) => !existsSync(path))) {
 }
 
 const request = readJson(join(packetDir, "request/supabase_generate_first_mission_batch_request.json"));
-const reviewedGeneration = readJson(
-  join(packetDir, "generation/mission_output_waymark_v0_1.reviewed_app_import_candidate.json"),
-);
-const rawGeneration = readJson(join(packetDir, "generation/mission_output_waymark_v0_1.raw.json"));
+const reviewedGeneration = readJson(reviewedGenerationPath);
+const rawGeneration = readJson(rawGenerationPath);
 const goldenResponse = readJson(join(packetDir, "response/supabase_generate_first_mission_batch_response.json"));
 const enrichedRequest = enrichRequestRouteIdentity(request);
 const reviewedGenerationWithRouteIdentity = enrichGenerationRouteIdentity(
@@ -352,6 +358,10 @@ function writeCase(caseName, files) {
   for (const [filename, value] of Object.entries(files)) {
     writeJson(join(outDir, `${filename}.json`), value);
   }
+}
+
+function firstExisting(paths) {
+  return paths.find((path) => existsSync(path)) ?? paths[0];
 }
 
 function readJson(path) {

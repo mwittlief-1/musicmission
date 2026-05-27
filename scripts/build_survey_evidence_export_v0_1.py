@@ -12,12 +12,17 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SIM_DIR = REPO_ROOT / "data/survey_simulation"
 EXPORT_DIR = SIM_DIR / "survey_evidence_export"
-DEFAULT_SOURCE_PACKET = (
+DEFAULT_SOURCE_PACKET_CANDIDATES = (
     SIM_DIR
-    / "llm_profile_review"
-    / "api_pilot_3x3"
-    / "public_packets"
-    / "waymark_survey_output_packet_public_profile_01_A3_Al1_S2.json"
+    / "llm_profile_review/api_pilot_3x3/public_packets"
+    / "cartenza_survey_output_packet_public_profile_01_A3_Al1_S2.json",
+    SIM_DIR
+    / "llm_profile_review/api_pilot_3x3/public_packets"
+    / "waymark_survey_output_packet_public_profile_01_A3_Al1_S2.json",
+)
+DEFAULT_SOURCE_PACKET = next(
+    (path for path in DEFAULT_SOURCE_PACKET_CANDIDATES if path.exists()),
+    DEFAULT_SOURCE_PACKET_CANDIDATES[0],
 )
 DEFAULT_OUTPUT = EXPORT_DIR / "samples" / "public_profile_01_A3_Al1_S2_survey_evidence_export.json"
 

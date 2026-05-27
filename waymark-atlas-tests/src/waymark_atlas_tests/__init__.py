@@ -1,1 +1,1 @@
-"""Waymark Atlas ingestion and digest harness."""
+"""Cartenza Atlas ingestion and digest harness."""

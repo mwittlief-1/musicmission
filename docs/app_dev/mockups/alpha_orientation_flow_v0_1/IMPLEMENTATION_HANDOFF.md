@@ -1,4 +1,4 @@
-# Waymark Alpha Orientation Flow Implementation Handoff v0.1
+# Cartenza Alpha Orientation Flow Implementation Handoff v0.1
 
 Status: approved for Alpha 1 Swift implementation by Product/Founder on 2026-05-22.
 

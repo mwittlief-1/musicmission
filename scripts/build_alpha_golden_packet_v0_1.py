@@ -46,6 +46,8 @@ GENERATION_RUN = (
 GENERATED_AT = "2026-05-21T20:00:00Z"
 CLIENT_REQUEST_ID = "golden-alpha-v0-1-nirvana-current"
 TESTER_ALIAS = "trusted-alpha-golden"
+RAW_MISSION_OUTPUT_FILENAME = "mission_output_cartenza_v0_1.raw.json"
+REVIEWED_MISSION_OUTPUT_FILENAME = "mission_output_cartenza_v0_1.reviewed_app_import_candidate.json"
 
 
 def main() -> int:
@@ -73,8 +75,8 @@ def main() -> int:
     write_json(OUT_DIR / "inputs" / "mission_generation_digest_view.json", mission_digest)
     write_json(OUT_DIR / "inputs" / "candidate_pool.json", candidate_pool)
     write_json(OUT_DIR / "request" / "supabase_generate_first_mission_batch_request.json", supabase_request)
-    write_json(OUT_DIR / "generation" / "mission_output_waymark_v0_1.raw.json", source_generation)
-    write_json(OUT_DIR / "generation" / "mission_output_waymark_v0_1.reviewed_app_import_candidate.json", reviewed_generation)
+    write_json(OUT_DIR / "generation" / RAW_MISSION_OUTPUT_FILENAME, source_generation)
+    write_json(OUT_DIR / "generation" / REVIEWED_MISSION_OUTPUT_FILENAME, reviewed_generation)
     write_json(OUT_DIR / "generation" / "source_metadata.json", source_metadata)
     write_json(OUT_DIR / "generation" / "source_validation_result.json", source_validation)
     write_json(OUT_DIR / "generation" / "source_score_report.json", source_score)
@@ -535,7 +537,7 @@ Survey Evidence Export
 -> MissionGenerationDigestView
 -> candidate pool
 -> Supabase generate-first-mission-batch request
--> Waymark mission output
+-> Cartenza mission output
 -> reviewed app-import gate
 -> mission.v0.2
 ```
@@ -566,8 +568,8 @@ zero-failure source generation. It is not evidence that autonomous generation is
 - `inputs/mission_generation_digest_view.json`
 - `inputs/candidate_pool.json`
 - `request/supabase_generate_first_mission_batch_request.json`
-- `generation/mission_output_waymark_v0_1.raw.json`
-- `generation/mission_output_waymark_v0_1.reviewed_app_import_candidate.json`
+- `generation/{RAW_MISSION_OUTPUT_FILENAME}`
+- `generation/{REVIEWED_MISSION_OUTPUT_FILENAME}`
 - `review/app_import_review_gate.json`
 - `response/supabase_generate_first_mission_batch_response.json`
 - `app_import/app_mission_v0_2.json`

@@ -4,6 +4,8 @@ Date: 2026-05-26
 
 This directory is not a single bucket. It contains source-of-truth contracts, canonical graph material, deterministic fixtures, generated evidence, and local exports. Treat each subtree by the policy below.
 
+Naming note: Cartenza is the current product name. Existing `waymark.*` schema IDs, historical archive filenames, and accepted fixtures remain legacy technical identifiers until a dedicated compatibility migration updates producers, consumers, validators, and tests together. New generated packet filenames should prefer `cartenza_` when no existing contract requires `waymark_`, and readers should tolerate legacy generated names during the transition.
+
 ## Source Of Truth
 
 These paths are repo source-of-truth and should be tracked when changed intentionally:
@@ -20,7 +22,7 @@ These paths are repo source-of-truth and should be tracked when changed intentio
 | `data/atlas_explainer/AtlasExplainerPack_v0_2_3_RenderHardened/` | Latest alpha render-hardened Atlas explainer candidate handoff. Track as first-class product data while PM approval is pending. |
 | `data/alpha_consumable_layer/alpha_v0/*contract*`, `*policy*`, `*guardrail*`, `*manifest*`, `*.schema.json`, and paired `*.md` contract docs | Alpha graph surface contracts, guardrails, resolver policy, and manifests. |
 | `data/canonical_graph/family_*/` | Canonical graph family source material. |
-| `data/canonical_graph/current/` | Active Canonical Graph v1 source-of-truth corpus for mission engine, tagging, linking, Atlas targets, Apple ID resolution, and album sidecar planning. |
+| `data/canonical_graph/current/` | Active Canonical Graph v1 source-of-truth corpus for mission engine, tagging, linking, Atlas targets, Apple ID resolution, album sidecar planning, and album track sidecar resources. |
 | `data/canonical_graph/canonical_graph_source_of_truth_manifest.json` | Root pointer to the active Canonical Graph source-of-truth corpus. |
 | `data/canonical_graph/CURRENT_CANONICAL_GRAPH.md` | Human-readable current graph source-of-truth pointer and gate summary. |
 | `data/canonical_graph/affinity_contracts/` | Active graphwide affinity tagging contracts, allowed tags, validation schema, and QA evidence. |

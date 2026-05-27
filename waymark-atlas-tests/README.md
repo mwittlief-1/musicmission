@@ -1,4 +1,4 @@
-# Waymark Atlas Ingestion + Digest Harness v0.1
+# Cartenza Atlas Ingestion + Digest Harness v0.1
 
 This harness proves the Atlas schema can sit between:
 
@@ -8,6 +8,8 @@ Mission Review -> Signals + PossibleAtlasUpdateCandidate -> Atlas state refineme
 ```
 
 It uses synthetic fixtures first. The transform layer is intentionally deterministic so real Survey Simulation, iOS Survey, Mission Review, or Listen/Player exports can replace the fixtures later by matching input schema versions.
+
+The directory and Python package names still use the former Waymark identifier for compatibility. See `../docs/brand_migration_cartenza.md` before renaming technical paths.
 
 ## Structure
 

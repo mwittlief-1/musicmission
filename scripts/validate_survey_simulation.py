@@ -101,7 +101,6 @@ BACKTEST_REQUIRED_FILES = {
 
 LLM_PROFILE_REVIEW_REQUIRED_FILES = {
     "README.md",
-    "public_packets/waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json",
     "schemas/profile_writer_input.schema.json",
     "schemas/profile_writer_output.schema.json",
     "schemas/profile_evaluator_output.schema.json",
@@ -115,6 +114,11 @@ LLM_PROFILE_REVIEW_REQUIRED_FILES = {
     "simulator_private/hidden_truth_packets/hidden_truth_public_profile_01_A2_Al1_S1.json",
     "reports/qualitative_profile_review_report.md",
 }
+
+LLM_PROFILE_REVIEW_PUBLIC_PACKET_CANDIDATES = (
+    "public_packets/cartenza_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+    "public_packets/waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+)
 
 SURVEY_EVIDENCE_EXPORT_REQUIRED_FILES = {
     "survey_evidence_export_v0_1.md",
@@ -160,6 +164,18 @@ def load_json(path: Path) -> Any:
 
 class ValidationError(Exception):
     pass
+
+
+def first_existing_path(paths: Iterable[Path]) -> Path:
+    path_list = list(paths)
+    return next((path for path in path_list if path.exists()), path_list[0])
+
+
+def first_existing_relative_path(base: Path, relative_paths: Iterable[str]) -> str | None:
+    for relative_path in relative_paths:
+        if (base / relative_path).exists():
+            return relative_path
+    return None
 
 
 def page1_intent_targets(page_mode: str) -> dict[str, int]:
@@ -649,6 +665,13 @@ def check_llm_profile_review() -> list[str]:
     for relative_name in sorted(LLM_PROFILE_REVIEW_REQUIRED_FILES):
         if not (review_dir / relative_name).exists():
             errors.append(f"LLM profile review missing required file: {relative_name}")
+    public_packet_relative = first_existing_relative_path(
+        review_dir,
+        LLM_PROFILE_REVIEW_PUBLIC_PACKET_CANDIDATES,
+    )
+    if public_packet_relative is None:
+        candidates = " or ".join(LLM_PROFILE_REVIEW_PUBLIC_PACKET_CANDIDATES)
+        errors.append(f"LLM profile review missing required file: {candidates}")
     if errors:
         return errors
 
@@ -669,11 +692,7 @@ def check_llm_profile_review() -> list[str]:
         schema = load_json(schema_path)
         Draft202012Validator.check_schema(schema)
 
-    public_packet_path = (
-        review_dir
-        / "public_packets"
-        / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json"
-    )
+    public_packet_path = review_dir / public_packet_relative
     public_packet = load_json(public_packet_path)
     input_schema = load_json(review_dir / "schemas" / "profile_writer_input.schema.json")
     validator = Draft202012Validator(input_schema, format_checker=FormatChecker())
@@ -920,13 +939,18 @@ def check_llm_profile_review_3x3() -> list[str]:
                 continue
             errors.extend(validate_schema(schema, path))
 
-        public_packet_path = (
+        public_packet_paths = [
             pilot_dir
             / "public_packets"
-            / f"waymark_survey_output_packet_{row.get('profile_public_id')}_{row.get('config_id')}.json"
-        )
+            / f"cartenza_survey_output_packet_{row.get('profile_public_id')}_{row.get('config_id')}.json",
+            pilot_dir
+            / "public_packets"
+            / f"waymark_survey_output_packet_{row.get('profile_public_id')}_{row.get('config_id')}.json",
+        ]
+        public_packet_path = first_existing_path(public_packet_paths)
         if not public_packet_path.exists():
-            errors.append(f"3x3 public packet missing: {public_packet_path.relative_to(REPO_ROOT)}")
+            candidates = " or ".join(str(path.relative_to(REPO_ROOT)) for path in public_packet_paths)
+            errors.append(f"3x3 public packet missing: {candidates}")
         else:
             public_packet = load_json(public_packet_path)
             if public_packet.get("blindness_contract", {}).get("public_packet_contains_hidden_truth") is not False:
@@ -1161,10 +1185,18 @@ def validate(root: Path) -> list[str]:
         *recorded_files,
         *page_log_files,
         *coverage_files,
-        root
-        / "llm_profile_review"
-        / "public_packets"
-        / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+        first_existing_path(
+            [
+                root
+                / "llm_profile_review"
+                / "public_packets"
+                / "cartenza_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+                root
+                / "llm_profile_review"
+                / "public_packets"
+                / "waymark_survey_output_packet_public_profile_01_A2_Al1_S1.json",
+            ]
+        ),
         root
         / "llm_profile_review"
         / "simulator_private"

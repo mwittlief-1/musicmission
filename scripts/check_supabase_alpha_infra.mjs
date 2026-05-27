@@ -96,6 +96,10 @@ for (const file of requiredFiles) {
   }
 }
 
+function hasAnySecret(secrets, names) {
+  return Boolean(secrets && names.some((name) => secrets.includes(name)));
+}
+
 const liveStatus = collectLiveStatus(projectRef);
 const failed = results.filter((result) => !result.ok);
 writeReport({
@@ -162,11 +166,19 @@ function collectLiveStatus(projectRef) {
   if (!secrets?.includes("OPENAI_API_KEY")) {
     blockers.push("OPENAI_API_KEY edge function secret");
   }
-  if (!secrets?.includes("WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY")) {
-    blockers.push("WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY edge function secret");
+  const reviewPolicySecrets = [
+    "CARTENZA_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY",
+    "WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY",
+  ];
+  const diagnosticTermsSecrets = [
+    "CARTENZA_ALPHA_DIAGNOSTIC_TERMS_VERSION",
+    "WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION",
+  ];
+  if (!hasAnySecret(secrets, reviewPolicySecrets)) {
+    blockers.push("CARTENZA_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY or legacy WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY edge function secret");
   }
-  if (!secrets?.includes("WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION")) {
-    blockers.push("WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION edge function secret");
+  if (!hasAnySecret(secrets, diagnosticTermsSecrets)) {
+    blockers.push("CARTENZA_ALPHA_DIAGNOSTIC_TERMS_VERSION or legacy WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION edge function secret");
   }
   blockers.push("authenticated app/JWT smoke path");
   blockers.push("Supabase Auth Apple provider end-to-end smoke");
@@ -181,8 +193,8 @@ function collectLiveStatus(projectRef) {
     evidenceFunctionActive: Boolean(functions?.includes("submit-alpha-evidence") && functions.includes("ACTIVE")),
     diagnosticFunctionActive: Boolean(functions?.includes("submit-alpha-diagnostic") && functions.includes("ACTIVE")),
     openaiSecretPresent: Boolean(secrets?.includes("OPENAI_API_KEY")),
-    reviewNeededPolicySecretPresent: Boolean(secrets?.includes("WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY")),
-    diagnosticTermsSecretPresent: Boolean(secrets?.includes("WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION")),
+    reviewNeededPolicySecretPresent: hasAnySecret(secrets, reviewPolicySecrets),
+    diagnosticTermsSecretPresent: hasAnySecret(secrets, diagnosticTermsSecrets),
     secretsChecked: Boolean(secrets),
     blockers,
   };
@@ -221,8 +233,8 @@ function writeReport({ supabaseVersion, npxSupabaseVersion, denoVersion, nodeVer
     `- Required migrations applied: ${status(liveStatus.migrationsApplied, liveStatus.projectAccessible)}`,
     `- Edge Function secrets checked: ${status(liveStatus.secretsChecked, true)}`,
     `- \`OPENAI_API_KEY\` present: ${status(liveStatus.openaiSecretPresent, liveStatus.secretsChecked)}`,
-    `- \`WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY\` present: ${status(liveStatus.reviewNeededPolicySecretPresent, liveStatus.secretsChecked)}`,
-    `- \`WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION\` present: ${status(liveStatus.diagnosticTermsSecretPresent, liveStatus.secretsChecked)}`,
+    `- \`CARTENZA_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY\` or legacy \`WAYMARK_ALPHA_REVIEW_NEEDED_APP_MISSION_POLICY\` present: ${status(liveStatus.reviewNeededPolicySecretPresent, liveStatus.secretsChecked)}`,
+    `- \`CARTENZA_ALPHA_DIAGNOSTIC_TERMS_VERSION\` or legacy \`WAYMARK_ALPHA_DIAGNOSTIC_TERMS_VERSION\` present: ${status(liveStatus.diagnosticTermsSecretPresent, liveStatus.secretsChecked)}`,
     `- \`generate-first-mission-batch\` deployed/active: ${status(liveStatus.generationFunctionActive, liveStatus.projectAccessible)}`,
     `- \`submit-alpha-evidence\` deployed/active: ${status(liveStatus.evidenceFunctionActive, liveStatus.projectAccessible)}`,
     `- \`submit-alpha-diagnostic\` deployed/active: ${status(liveStatus.diagnosticFunctionActive, liveStatus.projectAccessible)}`,

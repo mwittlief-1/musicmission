@@ -201,7 +201,7 @@ def human_rubric() -> List[Dict[str, Any]]:
         "Uncertainty is preserved.",
         "MusicKit resolution is plausible.",
         "Output length is appropriate.",
-        "Product voice feels like Waymark.",
+        "Product voice feels like Cartenza.",
     ]
     return [{"category": category, "scale": "0-3", "score": None, "notes": ""} for category in categories]
 

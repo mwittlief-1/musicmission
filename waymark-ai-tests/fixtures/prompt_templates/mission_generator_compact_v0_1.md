@@ -1,11 +1,11 @@
-# Waymark Mission Generator Compact v0.1
+# Cartenza Mission Generator Compact v0.1
 
 Source prompt: {{SOURCE_PROMPT}}
 
 Request id: {{REQUEST_ID}}
 Context mode: {{CONTEXT_MODE}}
 
-Generate one Waymark mission object. A mission is not a playlist. It is a structured listening route that tests a taste hypothesis and collects evidence.
+Generate one Cartenza mission object. A mission is not a playlist. It is a structured listening route that tests a taste hypothesis and collects evidence.
 
 Use only the bounded context packet below. Do not assume hidden project memory.
 

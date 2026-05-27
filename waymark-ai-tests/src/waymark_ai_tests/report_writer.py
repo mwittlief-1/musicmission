@@ -20,7 +20,7 @@ def write_run_report(
 ) -> Path:
     run_type = metadata.get("run_type", metadata.get("api_mode", "unknown"))
     lines = [
-        "# Waymark Mission Generation Run Report",
+        "# Cartenza Mission Generation Run Report",
         "",
         f"- Request: `{metadata['request_id']}`",
         f"- Prompt template: `{metadata['prompt_template']}`",
@@ -101,7 +101,7 @@ def write_summary_report(reports_dir: Path, timestamp: str, run_results: List[Di
     reports_dir.mkdir(parents=True, exist_ok=True)
     path = reports_dir / f"summary_{timestamp}.md"
     lines = [
-        "# Waymark Mission Generation Suite Summary",
+        "# Cartenza Mission Generation Suite Summary",
         "",
         f"- Runs: `{len(run_results)}`",
         "",
@@ -196,7 +196,7 @@ def write_model_matrix_report(reports_dir: Path, timestamp: str, run_results: Li
     recommendation_basis = "live API runs" if model_rows else "no live API runs"
 
     lines = [
-        "# Waymark Mission Generation Model Matrix",
+        "# Cartenza Mission Generation Model Matrix",
         "",
         "> Mock runs are schema/harness validation only and must not be interpreted as model-quality or product-quality evidence.",
         "",
@@ -333,7 +333,7 @@ def write_context_matrix_report(reports_dir: Path, timestamp: str, run_results: 
     candidate_answer = _candidate_pool_answer(run_results)
 
     lines = [
-        "# Waymark Mission Generation Context Matrix",
+        "# Cartenza Mission Generation Context Matrix",
         "",
         "> Mock runs are schema/harness validation only and must not be interpreted as model-quality or product-quality evidence.",
         "",

@@ -19,7 +19,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SIM_DIR = REPO_ROOT / "data/survey_simulation"
 BACKTEST_DIR = SIM_DIR / "page_count_backtest"
 REVIEW_DIR = SIM_DIR / "llm_profile_review"
-MODEL_ID = os.environ.get("WAYMARK_LLM_MODEL", "gpt-5.5")
+MODEL_ID = os.environ.get("CARTENZA_LLM_MODEL") or os.environ.get("WAYMARK_LLM_MODEL", "gpt-5.5")
 MODEL_SLUG = MODEL_ID.replace(".", "_").replace("-", "_")
 OUT_DIR = REVIEW_DIR / ("api_pilot_3x3" if MODEL_ID == "gpt-5.5" else f"api_pilot_3x3_{MODEL_SLUG}")
 PUBLIC_PACKET_DIR = OUT_DIR / "public_packets"
@@ -654,7 +654,7 @@ def prompt_schema_hashes() -> dict[str, Any]:
 
 def writer_request(public_packet: dict[str, Any]) -> dict[str, Any]:
     payload = {
-        "task": "Generate a provisional Waymark taste profile from the visible survey output packet. Return only schema-valid JSON.",
+        "task": "Generate a provisional Cartenza taste profile from the visible survey output packet. Return only schema-valid JSON.",
         "visible_survey_output_packet": public_packet,
     }
     return response_request(
@@ -697,7 +697,7 @@ def row_id(profile_public_id: str, config_id: str) -> str:
 def artifact_paths(profile_public_id: str, config_id: str) -> dict[str, Path]:
     stem = row_id(profile_public_id, config_id)
     return {
-        "public_packet": PUBLIC_PACKET_DIR / f"waymark_survey_output_packet_{stem}.json",
+        "public_packet": PUBLIC_PACKET_DIR / f"cartenza_survey_output_packet_{stem}.json",
         "hidden_truth": HIDDEN_TRUTH_DIR / f"hidden_truth_{stem}.json",
         "writer_request": REQUEST_DIR / f"profile_writer_request_{stem}.json",
         "writer_raw": RAW_DIR / f"profile_writer_raw_response_{stem}.json",

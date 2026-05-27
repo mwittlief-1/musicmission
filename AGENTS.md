@@ -1,6 +1,8 @@
 # Agent Repo Stewardship Policy
 
-This repo is an active iOS TestFlight alpha workspace. Treat the worktree as shared with humans and other agents.
+This repo is an active Cartenza iOS TestFlight alpha workspace. Treat the worktree as shared with humans and other agents.
+
+Waymark is the former product name. New product-facing text should say Cartenza unless it is quoting historical material or referring to an existing technical identifier.
 
 ## Start Here
 
@@ -8,6 +10,7 @@ Before editing, read:
 
 - `README.md`
 - `docs/repo_map.md`
+- `docs/brand_migration_cartenza.md`
 - `docs/repo_cleanup_inventory_2026_05_26.md`
 - `data/README.md` before touching anything under `data/`
 
@@ -20,8 +23,17 @@ Run `git status --short` before making changes. If unrelated app/runtime work is
 - Do not delete files unless they are clearly local-only cache/build output or the owner has approved the deletion.
 - Do not blanket-ignore or blanket-delete mixed directories such as `data/`, `docs/`, `MusicAtlasController/Resources/`, or harness fixtures.
 - Keep cleanup slices small and logical. Prefer documentation, ignore rules, manifests, and clearly scoped source promotion over broad reshuffles.
+- Do not opportunistically rename legacy Waymark technical identifiers. Schema IDs, environment variables, Supabase config, persisted filenames, package names, and harness directories need an explicit migration plan and validation.
 - Use `rg`, `find`, `du`, `git status`, `git ls-files`, and `git check-ignore` for inventory and classification.
 - Use `apply_patch` for manual file edits.
+
+## Naming And Brand Policy
+
+- Current product name: Cartenza.
+- Former product name: Waymark.
+- New human-facing docs, app copy, review notes, and generated filenames should prefer `Cartenza` / `cartenza` unless they are tied to a legacy contract.
+- Existing `waymark.*` schema IDs, `WAYMARK_*` environment variables, `waymark-*` directories, Python package names, persisted JSON filenames, Supabase project IDs, and historical review/archive filenames remain as-is until a coordinated migration updates all references and tests in one slice.
+- Historical docs may keep Waymark in titles and filenames when the name is part of the artifact provenance.
 
 ## What Belongs Where
 
@@ -29,7 +41,7 @@ Run `git status --short` before making changes. If unrelated app/runtime work is
 - Supabase runtime/backend source belongs in `supabase/`; `supabase/.temp/` and local env files stay ignored.
 - Product contracts, repo stewardship docs, accepted reviews, and runbooks belong in `docs/`.
 - Source-of-truth data, accepted fixtures, contracts, and promotion notes belong in `data/` according to `data/README.md`.
-- Harness code and deterministic fixtures belong in `waymark-ai-tests/` and `waymark-atlas-tests/`.
+- Harness code and deterministic fixtures belong in the legacy-named `waymark-ai-tests/` and `waymark-atlas-tests/` directories until those packages are migrated deliberately.
 - Generated run outputs, reports, zips, review packet workspaces, local exports, build products, archives, dSYMs, virtualenvs, and local secrets should stay ignored or external unless explicitly promoted.
 
 ## Data And Artifact Policy
