@@ -1,0 +1,106 @@
+{
+  "artifact": "route_ready_candidate_pool_report",
+  "version": "alpha_v0",
+  "generated_at": "2026-05-25T12:52:08.142Z",
+  "status": "live_generation_recovery_route_identity_ready",
+  "input_blocker": "live_generation_duplicate_non_candidate_route_items_2026_05_25",
+  "candidate_pool": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+  "builder": "scripts/build_alpha_compact_candidate_pool_alpha_v0.mjs",
+  "route_identity_contract": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json",
+  "summary": {
+    "total_candidates": 72,
+    "route_ready_candidates": 72,
+    "artist_candidates": 0,
+    "track_candidates": 50,
+    "album_candidates": 22,
+    "waypoints": 12,
+    "dead_end_checks": 12,
+    "default_alpha_mission_eligible": 72,
+    "hard_blocked": 0,
+    "route_candidate_keys": 72,
+    "route_batch_dedupe_keys": 72,
+    "app_route_item_ids": 72,
+    "route_display_identity_keys": 72
+  },
+  "pool_counts": {
+    "anchors": {
+      "total": 12,
+      "track": 12,
+      "album": 0
+    },
+    "bridges": {
+      "total": 12,
+      "track": 12,
+      "album": 0
+    },
+    "probes": {
+      "total": 12,
+      "track": 3,
+      "album": 9
+    },
+    "boundary_probes": {
+      "total": 12,
+      "track": 12,
+      "album": 0
+    },
+    "dead_end_checks": {
+      "total": 12,
+      "track": 11,
+      "album": 1
+    },
+    "waypoints": {
+      "total": 12,
+      "track": 0,
+      "album": 12
+    }
+  },
+  "route_ready_requirements_enforced": [
+    "candidate object_type is track or album",
+    "track candidates reference canonical song_recording objects",
+    "album candidates reference canonical album objects",
+    "artist_level_candidate is false",
+    "playable_route_ready is true",
+    "credited_artist is present",
+    "music_kit_search_hint is present",
+    "source_evidence_refs are present",
+    "route_candidate_key is present and unique in the export",
+    "route_batch_dedupe_key is present and unique in the export",
+    "app_route_item_id is present and unique in the export",
+    "route_display_identity_key is present and unique in the export",
+    "route_item carries the same candidate_id, app_route_item_id, route_candidate_key, route_batch_dedupe_key, and route_display_identity_key",
+    "waypoints pool is non-empty",
+    "dead_end_checks pool is non-empty",
+    "quarantined and manual-review rows are excluded"
+  ],
+  "route_identity_policy": {
+    "candidate_pool_only": true,
+    "digest_or_strong_region_non_candidate_route_items_allowed": false,
+    "display_string_identity_is_primary": false,
+    "single_mission_unique_fields": [
+      "item_id",
+      "candidate_id",
+      "route_candidate_key",
+      "route_batch_dedupe_key",
+      "route_display_identity_key"
+    ],
+    "batch_unique_fields": [
+      "app_route_item_id",
+      "candidate_id",
+      "route_candidate_key",
+      "route_batch_dedupe_key",
+      "route_display_identity_key"
+    ]
+  },
+  "review_gate_policy": {
+    "candidate_review_risk_report": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json",
+    "alpha_safe_with_review_flags_is_hard_block": false,
+    "hard_blocked_candidates": 0,
+    "recommendation": "Continue generation attempts with review flags stored; app import still requires valid mission.v0.2 and route identity validation."
+  },
+  "remaining_boundary": {
+    "music_kit_catalog_resolution": "still required before playback",
+    "atlas_promotion": "not created by graph candidate pool",
+    "mission_generation_status": "Mission Generation must copy candidate identity fields and validate rich mission schema plus Core mission.v0.2 before returning app_import_candidate",
+    "core_handoff_status": "Core must pass these route identity fields from the bundled candidate resource into live candidate_pool.candidates."
+  }
+}

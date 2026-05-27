@@ -1,0 +1,175 @@
+{
+  "artifact": "atlas_music_object_ref_examples",
+  "version": "alpha_v0",
+  "status": "reference_only_examples",
+  "examples": [
+    {
+      "name": "canonical_artist",
+      "ref": {
+        "object_type": "artist",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": "aretha-franklin",
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "Aretha Franklin",
+        "credited_artist_name": null,
+        "credit_context": "unknown",
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": null,
+        "canonical_membership_context": {
+          "family_numbers": [
+            6
+          ],
+          "archetype_ids": [
+            "038"
+          ],
+          "membership_role_notes": "Graph membership context only; not user taste."
+        }
+      }
+    },
+    {
+      "name": "canonical_album",
+      "ref": {
+        "object_type": "album",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": null,
+        "canonical_album_id": "marvin-gaye-whats-going-on",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "What's Going On",
+        "credited_artist_name": null,
+        "credit_context": "unknown",
+        "resolution_state": "resolved",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": null,
+        "canonical_membership_context": {
+          "family_numbers": [
+            6
+          ],
+          "archetype_ids": [
+            "037"
+          ],
+          "membership_role_notes": "Graph membership context only; not user taste."
+        }
+      }
+    },
+    {
+      "name": "canonical_song_recording",
+      "ref": {
+        "object_type": "song_recording",
+        "ref_source": "canonical_graph",
+        "canonical_artist_id": null,
+        "canonical_album_id": null,
+        "canonical_song_recording_id": "michael-jackson-billie-jean",
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "Billie Jean",
+        "credited_artist_name": "Michael Jackson",
+        "credit_context": "unknown",
+        "resolution_state": "resolved",
+        "composition_policy_status": "no_review_needed",
+        "recording_variant_type": "studio",
+        "canonical_membership_context": {
+          "family_numbers": [
+            12
+          ],
+          "archetype_ids": [
+            "088"
+          ],
+          "membership_role_notes": "Graph membership context only; not user taste."
+        }
+      }
+    },
+    {
+      "name": "user_local_song_recording",
+      "ref": {
+        "object_type": "song_recording",
+        "ref_source": "user_local",
+        "canonical_artist_id": null,
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": "user_music_object:local:abc123",
+        "external_catalog_refs": {},
+        "display_name": "Untitled local demo",
+        "credited_artist_name": "Local Artist",
+        "credit_context": "unknown",
+        "resolution_state": "intentionally_user_local",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": "unknown"
+      }
+    },
+    {
+      "name": "external_catalog_song_recording",
+      "ref": {
+        "object_type": "song_recording",
+        "ref_source": "external_catalog",
+        "canonical_artist_id": null,
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {
+          "apple_music_song_id": "1234567890"
+        },
+        "display_name": "Catalog-only track",
+        "credited_artist_name": "Catalog Artist",
+        "credit_context": "unknown",
+        "resolution_state": "needs_resolution",
+        "composition_policy_status": "needs_review",
+        "recording_variant_type": "unknown"
+      }
+    },
+    {
+      "name": "unresolved_artist",
+      "ref": {
+        "object_type": "artist",
+        "ref_source": "unresolved",
+        "canonical_artist_id": null,
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "Unknown artist from user note",
+        "credited_artist_name": null,
+        "credit_context": "unknown",
+        "resolution_state": "needs_resolution",
+        "composition_policy_status": "not_applicable",
+        "recording_variant_type": null
+      }
+    },
+    {
+      "name": "composition_placeholder",
+      "ref": {
+        "object_type": "composition_placeholder",
+        "ref_source": "unresolved",
+        "canonical_artist_id": null,
+        "canonical_album_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": "composition_placeholder:house-of-the-rising-sun",
+        "user_music_object_id": null,
+        "external_catalog_refs": {},
+        "display_name": "House of the Rising Sun",
+        "credited_artist_name": null,
+        "credit_context": "unknown",
+        "resolution_state": "needs_resolution",
+        "composition_policy_status": "composition_first_required",
+        "recording_variant_type": "traditional_arrangement"
+      }
+    }
+  ],
+  "blocked_interpretation": {
+    "taste_truth": false,
+    "atlas_role_truth": false,
+    "graph_mutation_allowed": false,
+    "promotion_allowed_from_ref_only": false
+  }
+}

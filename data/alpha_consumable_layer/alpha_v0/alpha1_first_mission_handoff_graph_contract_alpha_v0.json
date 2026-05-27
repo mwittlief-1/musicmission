@@ -1,0 +1,211 @@
+{
+  "artifact": "alpha1_first_mission_handoff_graph_contract",
+  "version": "alpha_v0",
+  "status": "approved_graph_handoff_contract_for_generated_first_missions",
+  "source_helper": "scripts/build_alpha_compact_candidate_pool_alpha_v0.mjs",
+  "sample_output": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+  "handoff_inputs": [
+    "survey_tile_logs",
+    "survey_evidence_export_or_signal_packet",
+    "atlas_digest_when_available",
+    "compact_candidate_pool_from_alpha_v0_surfaces"
+  ],
+  "required_candidate_fields": [
+    "candidate_id",
+    "app_route_item_id",
+    "route_display_identity_key",
+    "route_batch_dedupe_key",
+    "route_candidate_key",
+    "candidate_role",
+    "music_object_ref",
+    "canonical_entity_id",
+    "object_type",
+    "canonical_object_type",
+    "route_item_type",
+    "playable_route_ready",
+    "artist_level_candidate",
+    "route_item",
+    "display_label",
+    "display_name",
+    "credited_artist",
+    "family_id",
+    "archetype_ids",
+    "survey_page_role",
+    "survey_intent",
+    "mission_candidate_role",
+    "candidate_pool_behavior",
+    "dedupe_group",
+    "priority_score",
+    "trigger_rule",
+    "why_selected",
+    "expected_signal",
+    "risk_class",
+    "candidate_safety_state",
+    "review_gate_status",
+    "review_gate_action",
+    "default_alpha_mission_eligible",
+    "hard_block",
+    "blocked_reason",
+    "quarantine_status",
+    "suppression_status",
+    "resolver_risk_class",
+    "review_risk_flags",
+    "context_only",
+    "manual_review_required",
+    "familiarity_assumption",
+    "positive_inference",
+    "negative_inference",
+    "do_not_infer",
+    "music_kit_search_hint",
+    "music_kit_resolution_status",
+    "apple_music_resolution_policy",
+    "version_risk_note",
+    "source_file",
+    "source_contract_version",
+    "source_membership_id",
+    "source_evidence_refs",
+    "source_evidence_summary",
+    "atlas_role_refs",
+    "atlas_role_ref_status",
+    "review_status",
+    "eligible_for_supabase",
+    "eligible_for_openai"
+  ],
+  "allowed_candidate_pool_behaviors": [
+    "anchor",
+    "bridge",
+    "probe",
+    "risky_probe",
+    "waypoint",
+    "trap"
+  ],
+  "blocked_candidate_pool_behaviors": [
+    "exclude",
+    "unknown"
+  ],
+  "route_ready_requirements": {
+    "candidate_object_type": [
+      "track",
+      "album"
+    ],
+    "track_ref_rule": "object_type=track must carry music_object_ref.object_type=song_recording",
+    "album_ref_rule": "object_type=album must carry music_object_ref.object_type=album",
+    "artist_level_route_candidates_allowed": false,
+    "pseudo_playable_items_allowed": false,
+    "resolver_step_required_before_playback": true
+  },
+  "review_gate_policy": {
+    "alpha_safe_with_review_flags_is_hard_block": false,
+    "generate_allowed_store_review_flags": "Preserve caution/review metadata while continuing Alpha generation attempts.",
+    "hard_block_only_for": [
+      "hard_block == true",
+      "default_alpha_mission_eligible != true",
+      "review_status != approved",
+      "quarantine_status != clear",
+      "suppression_status != active",
+      "manual_review_required == true",
+      "context_only == true",
+      "object_type not in [track, album]",
+      "route item candidate_id not present in supplied candidate pool",
+      "duplicate route_candidate_key within mission or batch",
+      "duplicate route_batch_dedupe_key within mission or batch",
+      "duplicate app_route_item_id within mission or batch",
+      "duplicate route_display_identity_key within mission or batch when stronger keys differ or are missing"
+    ]
+  },
+  "eligible_default_first_mission_families": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    18
+  ],
+  "blocked_default_first_mission_families": [
+    15,
+    17
+  ],
+  "caution_families": {
+    "11": "electronic_version_caution",
+    "13": "language_remix_collaboration_caution",
+    "14": "work_recording_caution",
+    "16": "worship_standard_church_brand_caution"
+  },
+  "graph_lane_non_claims": [
+    "user_likes_candidate",
+    "candidate_is_atlas_landmark",
+    "candidate_is_atlas_region_member",
+    "candidate_is_confirmed_dead_end",
+    "candidate_is_apple_music_auto_resolvable_when_policy_requires_manual_review"
+  ],
+  "safe_to_send_to_supabase_when": [
+    "source_contract_version == alpha_v0",
+    "eligible_for_supabase == true",
+    "review_status == approved",
+    "playable_route_ready == true",
+    "object_type in [track, album]",
+    "music_object_ref validates",
+    "no quarantine or blocklist policy applies",
+    "tile_log_metadata is preserved"
+  ],
+  "safe_to_send_to_openai_when": [
+    "payload is compact",
+    "raw graph rows are excluded",
+    "hidden simulation truth is excluded",
+    "quarantined and manual-review rows are excluded",
+    "graph_metadata_taste_truth == false"
+  ],
+  "downstream_blockers": {
+    "atlas_schema": [
+      "final promotion and demotion thresholds",
+      "final Signal to AtlasRoleAssignment behavior"
+    ],
+    "supabase_infrastructure": [
+      "live project/account access",
+      "evidence upload endpoint"
+    ],
+    "brand_design_release": [
+      "final privacy copy",
+      "final terms copy",
+      "final onboarding copy",
+      "final FAQ copy"
+    ]
+  },
+  "graph_lane_ready_for_core_integration": true,
+  "route_identity_contract": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json",
+  "route_identity_policy": {
+    "route_items_must_come_from_candidate_pool": true,
+    "digest_or_strong_region_items_without_candidate_pool_membership_allowed": false,
+    "display_string_identity_is_primary": false,
+    "route_items_should_copy": {
+      "candidate_id": "candidate_id",
+      "item_id": "app_route_item_id",
+      "route_candidate_key": "route_candidate_key",
+      "route_batch_dedupe_key": "route_batch_dedupe_key"
+    },
+    "single_mission_unique_fields": [
+      "route.items[].item_id",
+      "route.items[].candidate_id",
+      "route.items[].route_candidate_key",
+      "route.items[].route_batch_dedupe_key",
+      "route.items[].route_display_identity_key"
+    ],
+    "batch_unique_fields": [
+      "app_route_item_id",
+      "candidate_id",
+      "route_candidate_key",
+      "route_batch_dedupe_key",
+      "route_display_identity_key"
+    ]
+  }
+}

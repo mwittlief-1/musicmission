@@ -1,0 +1,103 @@
+{
+  "artifact": "resolver_version_policy_sidecar",
+  "version": "alpha_v0",
+  "status": "frozen_for_alpha_consumable_layer",
+  "controlling_source": "data/canonical_graph/normalization_pass_2/canonical_recording_versions.json",
+  "default_song_recording_policy": "exact_recording_required",
+  "allowed_apple_music_resolution_policy_values": [
+    "exact_recording_required",
+    "version_flexible",
+    "composition_search_ok",
+    "manual_review_required"
+  ],
+  "allowed_recording_context_values": [
+    "original",
+    "source_version",
+    "cover",
+    "remake",
+    "live",
+    "radio_edit",
+    "album_version",
+    "single_version",
+    "clean",
+    "explicit",
+    "remix",
+    "cast_recording",
+    "film_version",
+    "traditional_arrangement"
+  ],
+  "resolver_gates": [
+    {
+      "gate": "auto_resolve_allowed",
+      "required_conditions": [
+        "candidate.review_status == approved",
+        "candidate.quarantine_reasons.length == 0",
+        "canonical_quarantine_queue has no matching entity",
+        "recording_versions.review_status == approved",
+        "recording_versions.survey_safe == true",
+        "apple_music_resolution_policy in [exact_recording_required, version_flexible]",
+        "family is not context_only",
+        "candidate is not suppressed_quarantined"
+      ]
+    },
+    {
+      "gate": "manual_review_required",
+      "trigger_conditions": [
+        "apple_music_resolution_policy == manual_review_required",
+        "recording_context in [source_version, cover, remake, live, radio_edit, clean, explicit, remix, cast_recording, film_version, traditional_arrangement]",
+        "composition_review_classification is unresolved or needs human review",
+        "family_id in [11, 13, 14, 16] and row has version/work/worship/language/remix/collaboration ambiguity",
+        "entity is a show, film, cast recording, church brand, worship standard, classical work, traditional song, or composition-first object"
+      ]
+    },
+    {
+      "gate": "blocked",
+      "trigger_conditions": [
+        "candidate.review_status != approved",
+        "candidate.quarantine_reasons.length > 0",
+        "canonical_quarantine_queue has matching entity",
+        "recording_versions.review_status in [quarantined, needs_review]",
+        "recording_versions.survey_safe == false",
+        "candidate source bucket == suppressed_quarantined",
+        "family survey_readiness == context_only",
+        "candidate survey_intent == do_not_survey",
+        "wrong attribution suspected",
+        "raw graph row without approved alpha candidate surface"
+      ]
+    }
+  ],
+  "family_specific_cautions": [
+    {
+      "family_id": 11,
+      "risk": "mix_edit_remix_specificity",
+      "rule": "Electronic/dance rows need exact recording or explicit version_flexible policy before auto-resolution."
+    },
+    {
+      "family_id": 13,
+      "risk": "language_remix_collaboration_specificity",
+      "rule": "Latin/global rows need collaboration, remix, and language variant clarity before auto-resolution if variants change the listening object."
+    },
+    {
+      "family_id": 14,
+      "risk": "work_vs_recording_specificity",
+      "rule": "Jazz standards and classical-adjacent rows require composition/work/recording distinction before auto-resolution."
+    },
+    {
+      "family_id": 16,
+      "risk": "worship_standard_church_brand_specificity",
+      "rule": "Worship/church-brand rows require brand/version handling before auto-resolution unless explicitly approved."
+    }
+  ],
+  "search_hint_requirements": {
+    "artist": ["display_label"],
+    "album": ["display_label", "artist_or_primary_credit_when_known"],
+    "song_recording": ["display_label", "display_artist_credit_or_recording_artist_id", "recording_context_when_not_original"]
+  },
+  "openai_payload_policy": {
+    "include_version_risk_note": true,
+    "include_apple_music_resolution_policy": true,
+    "do_not_include_raw_apple_payload": true,
+    "do_not_ask_model_to_resolve_quarantined_rows": true,
+    "manual_review_only_rows_blocked_from_default_generation": true
+  }
+}

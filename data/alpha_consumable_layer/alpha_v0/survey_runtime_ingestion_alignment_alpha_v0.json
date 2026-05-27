@@ -1,0 +1,79 @@
+{
+  "artifact": "survey_runtime_ingestion_alignment",
+  "version": "alpha_v0",
+  "status": "aligned_with_survey_runtime_page_history",
+  "survey_lane_update_source": "Survey runtime freezes shown pages and emits only visible shown-page response atoms as Atlas-ingestable evidence.",
+  "ownership_boundary": {
+    "survey_owns": [
+      "live page selection",
+      "shown page freezing",
+      "survey_session_id persistence",
+      "displayed page history persistence",
+      "Apple exposure prior capture",
+      "Survey Evidence Export assembly"
+    ],
+    "canonical_graph_owns": [
+      "stable candidate surfaces",
+      "typed canonical IDs",
+      "music_object_ref identity metadata",
+      "quarantine and suppression rules",
+      "version and resolver policy sidecars",
+      "reference-only graph metadata"
+    ],
+    "atlas_owns": [
+      "Signal ingestion",
+      "AtlasNode creation/update",
+      "provisional AtlasRoleAssignment",
+      "PossibleAtlasUpdateCandidate",
+      "AtlasDigestView"
+    ]
+  },
+  "ingestion_rule": {
+    "atlas_ingestable_path": "survey_evidence_export.atlas_ingestable.evidence_atoms",
+    "must_ignore_path": "survey_evidence_export.construction_only_excluded",
+    "same_session_display_history_required": true,
+    "unshown_or_unresolved_response_policy": "quarantine_not_atlas_ingestable"
+  },
+  "semantics": {
+    "apple_exposure_prior_taste_truth": false,
+    "evidence_strength_hint_policy": "survey_metadata_only_not_atlas_confidence",
+    "dont_know_mapping": "familiarity_uncertainty",
+    "dont_know_negative_taste": false,
+    "selected_tags": "visible_signal_evidence",
+    "shown_unselected_tags": "weak_non_selected_context",
+    "graph_meanings": "refs_and_ids_only_unless_canonical_provides_visible_labels"
+  },
+  "music_object_ref_policy": {
+    "visible_survey_object_types": [
+      "artist",
+      "album",
+      "song_recording"
+    ],
+    "reference_only": true,
+    "taste_truth": false,
+    "atlas_role_truth": false,
+    "canonical_mutation_allowed": false
+  },
+  "blocked_ingestion": [
+    "construction_only_excluded",
+    "responses_without_same_session_displayed_page_history",
+    "unshown_responses",
+    "unresolved_responses",
+    "raw_apple_payloads",
+    "raw_graph_rows",
+    "promoted_atlas_role_claims",
+    "final_atlas_confidence_claims"
+  ],
+  "recommended_atlas_pipeline": [
+    "Survey Evidence Export",
+    "Signal",
+    "AtlasNode",
+    "provisional AtlasRoleAssignment",
+    "PossibleAtlasUpdateCandidate",
+    "AtlasDigestView"
+  ],
+  "public_label_policy": {
+    "current_alpha_default": "Canonical may provide IDs and internal labels as metadata; UI/Atlas must not present family/archetype labels as user-facing meaning unless Product requests and Canonical approves a public-label contract.",
+    "dependency_trigger": "If Atlas or UI needs human-readable graph meaning, create a public family/archetype label policy task before surfacing labels."
+  }
+}

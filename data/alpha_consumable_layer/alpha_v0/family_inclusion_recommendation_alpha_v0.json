@@ -1,0 +1,199 @@
+{
+  "artifact": "family_inclusion_recommendation",
+  "version": "alpha_v0",
+  "status": "frozen_for_alpha_consumable_layer",
+  "families": [
+    {
+      "family_id": 1,
+      "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 2,
+      "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 3,
+      "family_name": "Classic Rock, Album Rock, Progressive Rock",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 4,
+      "family_name": "Singer-Songwriter, Folk, Americana, Adult Songcraft",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 5,
+      "family_name": "Country",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 6,
+      "family_name": "Soul, Funk, Disco, R&B Foundations",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 7,
+      "family_name": "Hip-Hop",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 8,
+      "family_name": "Punk, Hardcore, Post-Punk, New Wave",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 9,
+      "family_name": "Metal and Heavy Music",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 10,
+      "family_name": "Alternative, Indie, Grunge, Emo",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 11,
+      "family_name": "Electronic, Dance, Club, Industrial, Experimental Pop",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include_with_caution",
+      "caution_flags": [
+        "mix_edit_remix_specificity"
+      ],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 12,
+      "family_name": "Pop Monoculture and Persona Pop",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 13,
+      "family_name": "Latin, Caribbean, Global Pop",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include_with_caution",
+      "caution_flags": [
+        "language_remix_collaboration_specificity"
+      ],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 14,
+      "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include_with_caution",
+      "caution_flags": [
+        "work_composition_recording_specificity"
+      ],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 15,
+      "family_name": "Soundtrack, Theater, Musicals, Family Context",
+      "survey_readiness": "context_only",
+      "fast_survey_allowed": false,
+      "alpha_recommendation": "concierge_context_only",
+      "caution_flags": [
+        "cast_show_film_score_context_modeling"
+      ],
+      "default_first_mission_allowed": false,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 16,
+      "family_name": "Christian, Worship, Gospel",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include_with_caution",
+      "caution_flags": [
+        "worship_standard_church_brand_specificity"
+      ],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 17,
+      "family_name": "Nostalgia, Novelty, Context, Shared Listening",
+      "survey_readiness": "context_only",
+      "fast_survey_allowed": false,
+      "alpha_recommendation": "concierge_context_only",
+      "caution_flags": [
+        "context_use_case_not_default_taste_canon"
+      ],
+      "default_first_mission_allowed": false,
+      "graph_metadata_taste_truth": false
+    },
+    {
+      "family_id": 18,
+      "family_name": "Modern Rock, Current Discovery, Internet-Native Scenes",
+      "survey_readiness": "survey_ready",
+      "fast_survey_allowed": true,
+      "alpha_recommendation": "include",
+      "caution_flags": [],
+      "default_first_mission_allowed": true,
+      "graph_metadata_taste_truth": false
+    }
+  ]
+}

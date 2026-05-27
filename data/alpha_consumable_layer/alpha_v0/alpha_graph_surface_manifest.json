@@ -1,0 +1,1566 @@
+{
+  "artifact": "alpha_graph_surface_manifest",
+  "version": "alpha_v0",
+  "generated_at": "2026-05-25T13:05:28.120Z",
+  "status": "frozen_alpha_consumable_surfaces_not_hard_lock",
+  "controlling_contracts": [
+    "data/product_contracts/app_local_candidate_pool_contract_alpha_v0.md",
+    "data/product_contracts/graph_staging_contract.md",
+    "data/product_contracts/cross_team_consistency_review.md",
+    "docs/app_dev/alpha_product_decision_addendum_2026_05_22.md"
+  ],
+  "approved_source_files": [
+    {
+      "file": "data/canonical_graph/normalization_pass_2/survey_artist_candidates_v0_2.json",
+      "bytes": 2214388,
+      "sha256": "4d65d3178ea2c303a35bc66af14b733806f9a122d6fc6dff73114b91e821356e"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/survey_album_candidates_v0_2.json",
+      "bytes": 1927430,
+      "sha256": "ccdc69380fcc0342cc63019515503d8b767778e93fef4b6779a26cbea042fcb3"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/survey_song_candidates_v0_2.json",
+      "bytes": 3002522,
+      "sha256": "26c90f4dbe3b5430b1fd32f79041bcd4213cc83ebb61ac01435dc17672cb7391"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/family_survey_readiness_v0_2.json",
+      "bytes": 5190,
+      "sha256": "d6e4d8973059f0148581257e2778e692a9fde43149dfd5905bcae98f38c21d18"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/archetype_readiness_v0_2.json",
+      "bytes": 34425,
+      "sha256": "23197f087b0b3c418ce0911c33c15964d2a355ff93eac50da9419b9323ef09f7"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/canonical_quarantine_queue.json",
+      "bytes": 72798,
+      "sha256": "b4bac88dcc6c706269b353609c9a52b54e56e65d78b94f0102fd7233c6ac5e6a"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/canonical_recording_versions.json",
+      "bytes": 1100062,
+      "sha256": "bf876dfa5e1e4663de4635ffb67179cd6be432d28db92180df3a57048d7c99a2"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/dead_end_probe_candidates_v0_2.json",
+      "bytes": 475012,
+      "sha256": "0398ea2d59e67251dee70138fbe8c538996a2429712a38045a9dc9dba1711418"
+    },
+    {
+      "file": "data/canonical_graph/normalization_pass_2/boundary_question_bank_v0_2.json",
+      "bytes": 366529,
+      "sha256": "10b49e370a5f13053f263ffe1c0e2656f2a51d2096a1e75d700bd199759c5172"
+    }
+  ],
+  "forbidden_source_classes": [
+    "raw_family_rows",
+    "raw_canonical_entity_tables",
+    "merge_review_queue",
+    "composition_review_queue",
+    "hidden_simulation_truth",
+    "raw_apple_music_payloads",
+    "suppressed_quarantined_candidate_rows"
+  ],
+  "included_families": [
+    {
+      "family_id": 1,
+      "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop"
+    },
+    {
+      "family_id": 2,
+      "family_name": "Beatles, British Invasion, 60s Pop-Rock"
+    },
+    {
+      "family_id": 3,
+      "family_name": "Classic Rock, Album Rock, Progressive Rock"
+    },
+    {
+      "family_id": 4,
+      "family_name": "Singer-Songwriter, Folk, Americana, Adult Songcraft"
+    },
+    {
+      "family_id": 5,
+      "family_name": "Country"
+    },
+    {
+      "family_id": 6,
+      "family_name": "Soul, Funk, Disco, R&B Foundations"
+    },
+    {
+      "family_id": 7,
+      "family_name": "Hip-Hop"
+    },
+    {
+      "family_id": 8,
+      "family_name": "Punk, Hardcore, Post-Punk, New Wave"
+    },
+    {
+      "family_id": 9,
+      "family_name": "Metal and Heavy Music"
+    },
+    {
+      "family_id": 10,
+      "family_name": "Alternative, Indie, Grunge, Emo"
+    },
+    {
+      "family_id": 11,
+      "family_name": "Electronic, Dance, Club, Industrial, Experimental Pop"
+    },
+    {
+      "family_id": 12,
+      "family_name": "Pop Monoculture and Persona Pop"
+    },
+    {
+      "family_id": 13,
+      "family_name": "Latin, Caribbean, Global Pop"
+    },
+    {
+      "family_id": 14,
+      "family_name": "Jazz, Standards, Vocal, Classical-Adjacent"
+    },
+    {
+      "family_id": 16,
+      "family_name": "Christian, Worship, Gospel"
+    },
+    {
+      "family_id": 18,
+      "family_name": "Modern Rock, Current Discovery, Internet-Native Scenes"
+    }
+  ],
+  "excluded_families": [
+    {
+      "family_id": 15,
+      "family_name": "Soundtrack, Theater, Musicals, Family Context",
+      "survey_readiness": "context_only",
+      "fast_survey_allowed": false
+    },
+    {
+      "family_id": 17,
+      "family_name": "Nostalgia, Novelty, Context, Shared Listening",
+      "survey_readiness": "context_only",
+      "fast_survey_allowed": false
+    }
+  ],
+  "archetype_readiness_counts": {
+    "survey_ready": 100,
+    "deep_only": 1,
+    "adaptive_only": 11,
+    "context_only": 8
+  },
+  "anchor_eligible_archetype_count": 100,
+  "conditional_probe_archetype_count": 12,
+  "context_only_archetype_count": 8,
+  "anchor_eligible_archetypes": [
+    {
+      "archetype_id": "001",
+      "family_id": 1,
+      "archetype_name": "Early Rock & Roll Foundations"
+    },
+    {
+      "archetype_id": "002",
+      "family_id": 1,
+      "archetype_name": "Rockabilly / Primitive Guitar / Proto-Garage"
+    },
+    {
+      "archetype_id": "003",
+      "family_id": 1,
+      "archetype_name": "Doo-Wop / Vocal Group Oldies"
+    },
+    {
+      "archetype_id": "004",
+      "family_id": 1,
+      "archetype_name": "Teen Idol / Early Pop-Rock Radio"
+    },
+    {
+      "archetype_id": "005",
+      "family_id": 1,
+      "archetype_name": "Brill Building / Girl Group / Early 60s Pop Craft"
+    },
+    {
+      "archetype_id": "006",
+      "family_id": 1,
+      "archetype_name": "Early Soul-Pop / R&B Crossover"
+    },
+    {
+      "archetype_id": "007",
+      "family_id": 1,
+      "archetype_name": "Surf / Instrumental / Early Guitar Pop"
+    },
+    {
+      "archetype_id": "008",
+      "family_id": 2,
+      "archetype_name": "British Invasion / Core UK Beat Groups"
+    },
+    {
+      "archetype_id": "010",
+      "family_id": 2,
+      "archetype_name": "Folk-Rock / Harmony Pop / 60s Songcraft"
+    },
+    {
+      "archetype_id": "012",
+      "family_id": 2,
+      "archetype_name": "Baroque Pop / Chamber Pop / Artful 60s Pop"
+    },
+    {
+      "archetype_id": "013",
+      "family_id": 2,
+      "archetype_name": "Psychedelic Pop / Sunshine Pop / Late-60s Pop-Rock"
+    },
+    {
+      "archetype_id": "014",
+      "family_id": 2,
+      "archetype_name": "Heavy Psych / Blues-Rock / Acid Rock"
+    },
+    {
+      "archetype_id": "016",
+      "family_id": 3,
+      "archetype_name": "Classic Rock / Album-Rock Spine"
+    },
+    {
+      "archetype_id": "017",
+      "family_id": 3,
+      "archetype_name": "Hard Rock / Riff Rock / Proto-Metal"
+    },
+    {
+      "archetype_id": "018",
+      "family_id": 3,
+      "archetype_name": "Progressive Rock / Art-Prog Canon"
+    },
+    {
+      "archetype_id": "019",
+      "family_id": 3,
+      "archetype_name": "Southern Rock / Roots Jam Rock"
+    },
+    {
+      "archetype_id": "020",
+      "family_id": 3,
+      "archetype_name": "Glam Rock / Theatrical Seventies Rock"
+    },
+    {
+      "archetype_id": "022",
+      "family_id": 3,
+      "archetype_name": "Soft Rock / AM Gold / Adult Pop"
+    },
+    {
+      "archetype_id": "023",
+      "family_id": 3,
+      "archetype_name": "Yacht Rock / Smooth Studio Pop"
+    },
+    {
+      "archetype_id": "024",
+      "family_id": 4,
+      "archetype_name": "Classic singer-songwriter"
+    },
+    {
+      "archetype_id": "025",
+      "family_id": 4,
+      "archetype_name": "Piano pop and adult songcraft"
+    },
+    {
+      "archetype_id": "026",
+      "family_id": 4,
+      "archetype_name": "Folk revival and protest folk"
+    },
+    {
+      "archetype_id": "027",
+      "family_id": 4,
+      "archetype_name": "Country-folk and Americana roots"
+    },
+    {
+      "archetype_id": "029",
+      "family_id": 4,
+      "archetype_name": "Adult alternative and coffeehouse songcraft"
+    },
+    {
+      "archetype_id": "030",
+      "family_id": 4,
+      "archetype_name": "Modern indie folk and folk-pop"
+    },
+    {
+      "archetype_id": "031",
+      "family_id": 5,
+      "archetype_name": "Classic Country / Honky-Tonk / Nashville Foundations"
+    },
+    {
+      "archetype_id": "032",
+      "family_id": 5,
+      "archetype_name": "Outlaw Country / Cosmic Country"
+    },
+    {
+      "archetype_id": "033",
+      "family_id": 5,
+      "archetype_name": "Country-Pop / Crossover Country"
+    },
+    {
+      "archetype_id": "034",
+      "family_id": 5,
+      "archetype_name": "90s Country Radio / Hat Acts / New Traditionalists"
+    },
+    {
+      "archetype_id": "035",
+      "family_id": 5,
+      "archetype_name": "Modern Country Radio / Bro-Country / Arena Country"
+    },
+    {
+      "archetype_id": "037",
+      "family_id": 6,
+      "archetype_name": "Motown / Detroit Soul Pop"
+    },
+    {
+      "archetype_id": "038",
+      "family_id": 6,
+      "archetype_name": "Southern Soul / Stax / Muscle Shoals"
+    },
+    {
+      "archetype_id": "039",
+      "family_id": 6,
+      "archetype_name": "Funk / Psychedelic Soul / Groove Canon"
+    },
+    {
+      "archetype_id": "040",
+      "family_id": 6,
+      "archetype_name": "Disco / Dancefloor 70s"
+    },
+    {
+      "archetype_id": "041",
+      "family_id": 6,
+      "archetype_name": "Quiet Storm / Smooth R&B / Adult Soul"
+    },
+    {
+      "archetype_id": "042",
+      "family_id": 6,
+      "archetype_name": "New Jack Swing / 80s-90s R&B Pop"
+    },
+    {
+      "archetype_id": "043",
+      "family_id": 6,
+      "archetype_name": "Neo-Soul / Conscious R&B"
+    },
+    {
+      "archetype_id": "044",
+      "family_id": 6,
+      "archetype_name": "Modern R&B / Alt-R&B / Bedroom R&B"
+    },
+    {
+      "archetype_id": "045",
+      "family_id": 7,
+      "archetype_name": "Old-School Hip-Hop / Electro-Rap Foundations"
+    },
+    {
+      "archetype_id": "046",
+      "family_id": 7,
+      "archetype_name": "Golden Age Hip-Hop / Conscious / Native Tongues"
+    },
+    {
+      "archetype_id": "047",
+      "family_id": 7,
+      "archetype_name": "Gangsta Rap / West Coast / G-Funk"
+    },
+    {
+      "archetype_id": "048",
+      "family_id": 7,
+      "archetype_name": "East Coast 90s / Boom Bap / Street Canon"
+    },
+    {
+      "archetype_id": "049",
+      "family_id": 7,
+      "archetype_name": "Southern Hip-Hop / Crunk / Trap Foundations"
+    },
+    {
+      "archetype_id": "050",
+      "family_id": 7,
+      "archetype_name": "Pop-Rap / Mainstream Hip-Hop Crossover"
+    },
+    {
+      "archetype_id": "051",
+      "family_id": 7,
+      "archetype_name": "Alternative / Experimental / Indie Rap"
+    },
+    {
+      "archetype_id": "052",
+      "family_id": 7,
+      "archetype_name": "Modern Trap / Streaming-Era Rap"
+    },
+    {
+      "archetype_id": "053",
+      "family_id": 8,
+      "archetype_name": "First-Wave Punk / 70s Punk"
+    },
+    {
+      "archetype_id": "054",
+      "family_id": 8,
+      "archetype_name": "CBGB / Art-Punk / Downtown New York"
+    },
+    {
+      "archetype_id": "056",
+      "family_id": 8,
+      "archetype_name": "Post-Punk / Dark Melodic / Gothic Roots"
+    },
+    {
+      "archetype_id": "057",
+      "family_id": 8,
+      "archetype_name": "New Wave / MTV Pop-Rock"
+    },
+    {
+      "archetype_id": "058",
+      "family_id": 8,
+      "archetype_name": "Synthpop / New Romantic / 80s Electronic Pop"
+    },
+    {
+      "archetype_id": "059",
+      "family_id": 8,
+      "archetype_name": "College Rock / Pre-Alternative 80s"
+    },
+    {
+      "archetype_id": "061",
+      "family_id": 9,
+      "archetype_name": "Traditional Heavy Metal / NWOBHM"
+    },
+    {
+      "archetype_id": "062",
+      "family_id": 9,
+      "archetype_name": "Thrash Metal / Speed Metal"
+    },
+    {
+      "archetype_id": "063",
+      "family_id": 9,
+      "archetype_name": "Glam Metal / Hair Metal / Pop Metal"
+    },
+    {
+      "archetype_id": "064",
+      "family_id": 9,
+      "archetype_name": "Doom / Stoner / Desert Heavy"
+    },
+    {
+      "archetype_id": "065",
+      "family_id": 9,
+      "archetype_name": "Industrial Metal / Machine Rock"
+    },
+    {
+      "archetype_id": "066",
+      "family_id": 9,
+      "archetype_name": "Alt-Metal / Nu-Metal / Rap-Metal"
+    },
+    {
+      "archetype_id": "067",
+      "family_id": 9,
+      "archetype_name": "Metalcore / Emo-Heavy / Modern Active Rock"
+    },
+    {
+      "archetype_id": "068",
+      "family_id": 9,
+      "archetype_name": "Extreme Metal Gateway / Black-Death-Sludge"
+    },
+    {
+      "archetype_id": "069",
+      "family_id": 10,
+      "archetype_name": "1980s Alternative Source-Code / Pre-Grunge"
+    },
+    {
+      "archetype_id": "071",
+      "family_id": 10,
+      "archetype_name": "Post-Grunge / Modern Rock Radio"
+    },
+    {
+      "archetype_id": "072",
+      "family_id": 10,
+      "archetype_name": "90s Indie / Lo-Fi / Slacker / Matador Axis"
+    },
+    {
+      "archetype_id": "073",
+      "family_id": 10,
+      "archetype_name": "Shoegaze / Dream Pop / Noise Haze"
+    },
+    {
+      "archetype_id": "074",
+      "family_id": 10,
+      "archetype_name": "Female 90s Alt / Riot Grrrl / Guitar Voices"
+    },
+    {
+      "archetype_id": "075",
+      "family_id": 10,
+      "archetype_name": "Power-Pop Revival / Crunchy Alt-Pop"
+    },
+    {
+      "archetype_id": "076",
+      "family_id": 10,
+      "archetype_name": "Pop-Punk / Skate Punk / 90s-00s Punk Pop"
+    },
+    {
+      "archetype_id": "077",
+      "family_id": 10,
+      "archetype_name": "Emo / Mall Emo / Post-Hardcore Pop"
+    },
+    {
+      "archetype_id": "078",
+      "family_id": 10,
+      "archetype_name": "Blog Indie / Prestige Indie / 2000s Indie Rock"
+    },
+    {
+      "archetype_id": "079",
+      "family_id": 10,
+      "archetype_name": "Garage Revival / Rock-Is-Back 2000s"
+    },
+    {
+      "archetype_id": "080",
+      "family_id": 10,
+      "archetype_name": "Post-Punk Revival / Dark Indie Rock"
+    },
+    {
+      "archetype_id": "081",
+      "family_id": 11,
+      "archetype_name": "House / Chicago / Dance Club Foundations"
+    },
+    {
+      "archetype_id": "083",
+      "family_id": 11,
+      "archetype_name": "EDM / Festival Dance / Big Room / Mainstream Electronic"
+    },
+    {
+      "archetype_id": "084",
+      "family_id": 11,
+      "archetype_name": "Trip-Hop / Downtempo / Nocturnal Electronic"
+    },
+    {
+      "archetype_id": "087",
+      "family_id": 11,
+      "archetype_name": "Experimental Electronic / IDM / Art-Electronic"
+    },
+    {
+      "archetype_id": "088",
+      "family_id": 12,
+      "archetype_name": "70s-80s Pop Sovereigns"
+    },
+    {
+      "archetype_id": "089",
+      "family_id": 12,
+      "archetype_name": "90s Pop / Teen Pop / TRL Monoculture"
+    },
+    {
+      "archetype_id": "090",
+      "family_id": 12,
+      "archetype_name": "2000s Pop / Dance-Pop / Club-Pop"
+    },
+    {
+      "archetype_id": "091",
+      "family_id": 12,
+      "archetype_name": "2010s Persona Pop / Architectural Pop"
+    },
+    {
+      "archetype_id": "092",
+      "family_id": 12,
+      "archetype_name": "Adult Pop / TV-Drama Anthem / Inspirational Pop"
+    },
+    {
+      "archetype_id": "093",
+      "family_id": 12,
+      "archetype_name": "TikTok / Streaming-Era Pop / Internet Pop"
+    },
+    {
+      "archetype_id": "094",
+      "family_id": 13,
+      "archetype_name": "Reggaeton / Urbano / Latin Pop Crossover"
+    },
+    {
+      "archetype_id": "095",
+      "family_id": 13,
+      "archetype_name": "Regional Mexican / Corridos / Musica Mexicana"
+    },
+    {
+      "archetype_id": "096",
+      "family_id": 13,
+      "archetype_name": "Salsa / Latin Dance / Tropical Pop"
+    },
+    {
+      "archetype_id": "097",
+      "family_id": 13,
+      "archetype_name": "Afrobeats / African Pop Crossover"
+    },
+    {
+      "archetype_id": "098",
+      "family_id": 13,
+      "archetype_name": "K-Pop / J-Pop / Asian Pop Crossover"
+    },
+    {
+      "archetype_id": "099",
+      "family_id": 13,
+      "archetype_name": "Global Folk / World Fusion / Diaspora Roots"
+    },
+    {
+      "archetype_id": "100",
+      "family_id": 14,
+      "archetype_name": "Vocal Standards / Crooners / Great American Songbook"
+    },
+    {
+      "archetype_id": "101",
+      "family_id": 14,
+      "archetype_name": "Jazz Foundations / Bebop / Hard Bop Gateway"
+    },
+    {
+      "archetype_id": "102",
+      "family_id": 14,
+      "archetype_name": "Smooth Jazz / Jazz-Pop / Adult Instrumental"
+    },
+    {
+      "archetype_id": "103",
+      "family_id": 14,
+      "archetype_name": "Classical Crossover / Instrumental Popular Canon"
+    },
+    {
+      "archetype_id": "108",
+      "family_id": 16,
+      "archetype_name": "Black Gospel / Gospel Soul"
+    },
+    {
+      "archetype_id": "109",
+      "family_id": 16,
+      "archetype_name": "CCM / Christian Pop-Rock / Worship Radio"
+    },
+    {
+      "archetype_id": "110",
+      "family_id": 16,
+      "archetype_name": "Worship / Praise / Church Songbook"
+    },
+    {
+      "archetype_id": "115",
+      "family_id": 18,
+      "archetype_name": "Current Rock Revival / Post-Punk New Wave 2020s"
+    },
+    {
+      "archetype_id": "116",
+      "family_id": 18,
+      "archetype_name": "Modern Indie Singer-Songwriter / Sad-Prestige Indie"
+    },
+    {
+      "archetype_id": "117",
+      "family_id": 18,
+      "archetype_name": "Modern Psych / Groove Indie / Tame-MGMT-Arctic Axis"
+    },
+    {
+      "archetype_id": "118",
+      "family_id": 18,
+      "archetype_name": "Heavy Modern Alternative / Active Rock Survival"
+    },
+    {
+      "archetype_id": "119",
+      "family_id": 18,
+      "archetype_name": "Hyperpop / Synthetic Edge-Pop / Internet Maximalism"
+    },
+    {
+      "archetype_id": "120",
+      "family_id": 18,
+      "archetype_name": "Algorithmic Mood / Lo-Fi / Chill / Study Music"
+    }
+  ],
+  "conditional_probe_archetypes": [
+    {
+      "archetype_id": "009",
+      "family_id": 2,
+      "archetype_name": "Jangle Pop / Folk-Rock Precursor",
+      "readiness": "deep_only"
+    },
+    {
+      "archetype_id": "011",
+      "family_id": 2,
+      "archetype_name": "Garage Rock / Nuggets / Proto-Punk Singles",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "015",
+      "family_id": 2,
+      "archetype_name": "Art-Rock / Proto-Alternative / Freak Underground",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "021",
+      "family_id": 3,
+      "archetype_name": "Power Pop / Melodic Guitar Pop",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "028",
+      "family_id": 4,
+      "archetype_name": "Alt-country and No Depression",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "036",
+      "family_id": 5,
+      "archetype_name": "Red Dirt / Americana Country / Texas Country",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "055",
+      "family_id": 8,
+      "archetype_name": "Hardcore Punk / US 80s Hardcore",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "060",
+      "family_id": 8,
+      "archetype_name": "Noise Rock / Post-Hardcore / Touch and Go Axis",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "070",
+      "family_id": 10,
+      "archetype_name": "Grunge / Seattle / 90s Alt Center",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "082",
+      "family_id": 11,
+      "archetype_name": "Techno / Detroit / Minimal Electronic",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "085",
+      "family_id": 11,
+      "archetype_name": "Indie Dance / Dance-Punk / Electroclash",
+      "readiness": "adaptive_only"
+    },
+    {
+      "archetype_id": "086",
+      "family_id": 11,
+      "archetype_name": "Synthwave / Chillwave / Bedroom Electronic",
+      "readiness": "adaptive_only"
+    }
+  ],
+  "context_only_archetypes": [
+    {
+      "archetype_id": "104",
+      "family_id": 15,
+      "archetype_name": "Broadway / Modern Musical Theater"
+    },
+    {
+      "archetype_id": "105",
+      "family_id": 15,
+      "archetype_name": "Disney / Family Soundtrack / Animated Musical Canon"
+    },
+    {
+      "archetype_id": "106",
+      "family_id": 15,
+      "archetype_name": "Movie Soundtracks / 80s-90s-00s Soundtrack Memory"
+    },
+    {
+      "archetype_id": "107",
+      "family_id": 15,
+      "archetype_name": "Film Score / Epic Score / Ambient Cinematic"
+    },
+    {
+      "archetype_id": "111",
+      "family_id": 17,
+      "archetype_name": "Novelty / Comedy / Weird Pop"
+    },
+    {
+      "archetype_id": "112",
+      "family_id": 17,
+      "archetype_name": "Holiday / Christmas / Seasonal Canon"
+    },
+    {
+      "archetype_id": "113",
+      "family_id": 17,
+      "archetype_name": "Party / Wedding / Karaoke / Bar Singalong Canon"
+    },
+    {
+      "archetype_id": "114",
+      "family_id": 17,
+      "archetype_name": "Kids / Family / Household Context Music"
+    }
+  ],
+  "candidate_surface_counts": {
+    "artist": {
+      "totals": {
+        "page1_core": 192,
+        "page2_adaptive": 765,
+        "page3_deep": 507,
+        "suppressed_quarantined": 105
+      },
+      "by_family": [
+        {
+          "family_id": 1,
+          "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 91
+        },
+        {
+          "family_id": 2,
+          "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+          "page1_core": 12,
+          "page2_adaptive": 31,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 3,
+          "family_name": "Classic Rock, Album Rock, Progressive Rock",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 64,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 4,
+          "family_name": "Singer-Songwriter, Folk, Americana, Adult Songcraft",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 53,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 5,
+          "family_name": "Country",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 28,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 6,
+          "family_name": "Soul, Funk, Disco, R&B Foundations",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 41,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 7,
+          "family_name": "Hip-Hop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 37,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 8,
+          "family_name": "Punk, Hardcore, Post-Punk, New Wave",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 32,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 9,
+          "family_name": "Metal and Heavy Music",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 68,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 10,
+          "family_name": "Alternative, Indie, Grunge, Emo",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 38,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 11,
+          "family_name": "Electronic, Dance, Club, Industrial, Experimental Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 43,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 12,
+          "family_name": "Pop Monoculture and Persona Pop",
+          "page1_core": 12,
+          "page2_adaptive": 42,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 13,
+          "family_name": "Latin, Caribbean, Global Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 24,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 14,
+          "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+          "page1_core": 12,
+          "page2_adaptive": 28,
+          "page3_deep": 0,
+          "suppressed_quarantined": 1
+        },
+        {
+          "family_id": 15,
+          "family_name": "Soundtrack, Theater, Musicals, Family Context",
+          "page1_core": 0,
+          "page2_adaptive": 33,
+          "page3_deep": 0,
+          "suppressed_quarantined": 6
+        },
+        {
+          "family_id": 16,
+          "family_name": "Christian, Worship, Gospel",
+          "page1_core": 12,
+          "page2_adaptive": 20,
+          "page3_deep": 0,
+          "suppressed_quarantined": 7
+        },
+        {
+          "family_id": 17,
+          "family_name": "Nostalgia, Novelty, Context, Shared Listening",
+          "page1_core": 0,
+          "page2_adaptive": 35,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 18,
+          "family_name": "Modern Rock, Current Discovery, Internet-Native Scenes",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 7,
+          "suppressed_quarantined": 0
+        }
+      ]
+    },
+    "album": {
+      "totals": {
+        "page1_core": 192,
+        "page2_adaptive": 679,
+        "page3_deep": 319,
+        "suppressed_quarantined": 42
+      },
+      "by_family": [
+        {
+          "family_id": 1,
+          "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 58,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 2,
+          "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+          "page1_core": 12,
+          "page2_adaptive": 40,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 3,
+          "family_name": "Classic Rock, Album Rock, Progressive Rock",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 50,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 4,
+          "family_name": "Singer-Songwriter, Folk, Americana, Adult Songcraft",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 25,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 5,
+          "family_name": "Country",
+          "page1_core": 12,
+          "page2_adaptive": 44,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 6,
+          "family_name": "Soul, Funk, Disco, R&B Foundations",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 10,
+          "suppressed_quarantined": 1
+        },
+        {
+          "family_id": 7,
+          "family_name": "Hip-Hop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 44,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 8,
+          "family_name": "Punk, Hardcore, Post-Punk, New Wave",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 21,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 9,
+          "family_name": "Metal and Heavy Music",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 7
+        },
+        {
+          "family_id": 10,
+          "family_name": "Alternative, Indie, Grunge, Emo",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 29,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 11,
+          "family_name": "Electronic, Dance, Club, Industrial, Experimental Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 10,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 12,
+          "family_name": "Pop Monoculture and Persona Pop",
+          "page1_core": 12,
+          "page2_adaptive": 24,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 13,
+          "family_name": "Latin, Caribbean, Global Pop",
+          "page1_core": 12,
+          "page2_adaptive": 42,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 14,
+          "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+          "page1_core": 12,
+          "page2_adaptive": 19,
+          "page3_deep": 0,
+          "suppressed_quarantined": 1
+        },
+        {
+          "family_id": 15,
+          "family_name": "Soundtrack, Theater, Musicals, Family Context",
+          "page1_core": 0,
+          "page2_adaptive": 7,
+          "page3_deep": 0,
+          "suppressed_quarantined": 26
+        },
+        {
+          "family_id": 16,
+          "family_name": "Christian, Worship, Gospel",
+          "page1_core": 12,
+          "page2_adaptive": 11,
+          "page3_deep": 0,
+          "suppressed_quarantined": 6
+        },
+        {
+          "family_id": 17,
+          "family_name": "Nostalgia, Novelty, Context, Shared Listening",
+          "page1_core": 0,
+          "page2_adaptive": 21,
+          "page3_deep": 0,
+          "suppressed_quarantined": 1
+        },
+        {
+          "family_id": 18,
+          "family_name": "Modern Rock, Current Discovery, Internet-Native Scenes",
+          "page1_core": 12,
+          "page2_adaptive": 39,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        }
+      ]
+    },
+    "song_recording": {
+      "totals": {
+        "page1_core": 192,
+        "page2_adaptive": 780,
+        "page3_deep": 602,
+        "suppressed_quarantined": 375
+      },
+      "by_family": [
+        {
+          "family_id": 1,
+          "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 217
+        },
+        {
+          "family_id": 2,
+          "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 11,
+          "suppressed_quarantined": 1
+        },
+        {
+          "family_id": 3,
+          "family_name": "Classic Rock, Album Rock, Progressive Rock",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 13
+        },
+        {
+          "family_id": 4,
+          "family_name": "Singer-Songwriter, Folk, Americana, Adult Songcraft",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 62,
+          "suppressed_quarantined": 4
+        },
+        {
+          "family_id": 5,
+          "family_name": "Country",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 29,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 6,
+          "family_name": "Soul, Funk, Disco, R&B Foundations",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 7
+        },
+        {
+          "family_id": 7,
+          "family_name": "Hip-Hop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 42
+        },
+        {
+          "family_id": 8,
+          "family_name": "Punk, Hardcore, Post-Punk, New Wave",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 36,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 9,
+          "family_name": "Metal and Heavy Music",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 72,
+          "suppressed_quarantined": 37
+        },
+        {
+          "family_id": 10,
+          "family_name": "Alternative, Indie, Grunge, Emo",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 68,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 11,
+          "family_name": "Electronic, Dance, Club, Industrial, Experimental Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 9,
+          "suppressed_quarantined": 20
+        },
+        {
+          "family_id": 12,
+          "family_name": "Pop Monoculture and Persona Pop",
+          "page1_core": 12,
+          "page2_adaptive": 38,
+          "page3_deep": 0,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 13,
+          "family_name": "Latin, Caribbean, Global Pop",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 22,
+          "suppressed_quarantined": 0
+        },
+        {
+          "family_id": 14,
+          "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+          "page1_core": 12,
+          "page2_adaptive": 27,
+          "page3_deep": 0,
+          "suppressed_quarantined": 4
+        },
+        {
+          "family_id": 15,
+          "family_name": "Soundtrack, Theater, Musicals, Family Context",
+          "page1_core": 0,
+          "page2_adaptive": 32,
+          "page3_deep": 0,
+          "suppressed_quarantined": 15
+        },
+        {
+          "family_id": 16,
+          "family_name": "Christian, Worship, Gospel",
+          "page1_core": 12,
+          "page2_adaptive": 20,
+          "page3_deep": 0,
+          "suppressed_quarantined": 12
+        },
+        {
+          "family_id": 17,
+          "family_name": "Nostalgia, Novelty, Context, Shared Listening",
+          "page1_core": 0,
+          "page2_adaptive": 39,
+          "page3_deep": 0,
+          "suppressed_quarantined": 3
+        },
+        {
+          "family_id": 18,
+          "family_name": "Modern Rock, Current Discovery, Internet-Native Scenes",
+          "page1_core": 12,
+          "page2_adaptive": 48,
+          "page3_deep": 5,
+          "suppressed_quarantined": 0
+        }
+      ]
+    }
+  },
+  "quarantine_queue_count": 107,
+  "recording_version_count": 1917,
+  "recording_version_policy_counts": {
+    "apple_music_resolution_policy": {
+      "exact_recording_required": 1857,
+      "manual_review_required": 60
+    },
+    "review_status": {
+      "approved": 1857,
+      "quarantined": 38,
+      "needs_review": 22
+    },
+    "recording_context": {
+      "original": 1885,
+      "live": 1,
+      "source_version": 9,
+      "cover": 9,
+      "explicit": 1,
+      "cast_recording": 2,
+      "traditional_arrangement": 8,
+      "album_version": 1,
+      "film_version": 1
+    },
+    "survey_safe": {
+      "true": 1857,
+      "false": 60
+    }
+  },
+  "alpha_use_rules": {
+    "page1": "page1_core only",
+    "page2": "page2_adaptive only",
+    "page3": "page3_deep only",
+    "raw_graph_rows": "blocked",
+    "quarantined_rows": "blocked from survey, starter Atlas, default Mission Gen, app surfaces, Apple auto-resolution, OpenAI prompt payloads",
+    "context_only_families": "blocked from default first mission generation",
+    "survey_response_semantics": "provisional evidence only",
+    "atlas_promotion_semantics": "blocked until Atlas promotion logic owns decision",
+    "alpha_candidate_blocklist": "blocked from survey display, starter Atlas, default Mission Gen, Supabase active rows, OpenAI prompt payloads, and Apple auto-resolution",
+    "music_object_ref": "required for app/local candidate and tile payloads; reference-only, never user taste",
+    "qa_exception_ledger": "preserve warnings/manual-review rows as QA context; blocked rows do not feed product surfaces",
+    "compact_candidate_pool": "use helper output as curated candidate material only; user Survey/Atlas evidence must select/rank before Mission Generation"
+  },
+  "safe_send_gate": {
+    "supabase": "only passing active candidate-pool rows with alpha_v0 contract version",
+    "openai": "only compact curated candidate pools, no raw graph, no hidden truth, no quarantined rows"
+  },
+  "alpha_overlay_files": [
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha_candidate_blocklist_alpha_v0.json",
+      "row_count": 1,
+      "bytes": 1368,
+      "sha256": "2ecbb8000c9fee3b699fb03e6fef3af828b68064486d57db5429af711fd91c44"
+    }
+  ],
+  "alpha_candidate_blocklist_count": 1,
+  "alpha_contract_files": [
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_alpha_v0.schema.json",
+      "bytes": 6248,
+      "sha256": "42d65258ffa2998278d898fb5bd2dc2a196620c9ecd102b905427da05c80ac1e"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/graph_to_atlas_music_object_ref_alpha_v0.md",
+      "bytes": 9241,
+      "sha256": "7ebf7eae8e267f813f12ba9bc4ffcd397367659bbee92f4f1a147bd7309b9fbd"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_examples_alpha_v0.json",
+      "bytes": 5906,
+      "sha256": "7605adaa13558faec79720f6b59040dcab952842060e43e60c9bd991d53d003c"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/candidate_role_risk_vocabulary_alpha_v0.json",
+      "bytes": 7586,
+      "sha256": "dfc84a5f516eccef5a5ac06b00ebf68e5ff828496076d5234377467ca6af2ba7"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/candidate_role_risk_vocabulary_alpha_v0.md",
+      "bytes": 4261,
+      "sha256": "1d9f844a26bd1fc957f74f7240f7f6183da18a8229900bb2e93bdc99993db3ad"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/resolver_version_policy_sidecar_alpha_v0.json",
+      "bytes": 4081,
+      "sha256": "9afa1efe95e0cd873cb532980fe77be718ca651fc65a16f9c2be2e540b2a817a"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/resolver_version_policy_sidecar_alpha_v0.md",
+      "bytes": 3738,
+      "sha256": "a85661db8fdb6db29168f2e1306603fb37a062db5c2b4ca56c27520c48983491"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/resolver_policy_machine_fields_alpha_v0.json",
+      "bytes": 1373720,
+      "sha256": "4a40f300b49164707a3038810ced12eeec3a71e0c7f5171451403b9b85f5e6f1"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/resolver_policy_machine_fields_alpha_v0.md",
+      "bytes": 1315,
+      "sha256": "29aacd0643cc4d5c7ea1cccfa40140ff85d1fdcd5284263dfef44bd12e1c62ea"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/tile_log_metadata_contract_alpha_v0.json",
+      "bytes": 3405,
+      "sha256": "ea4a4eecae172ab9246da49c30aec7368c26afed29bd0bf0e17b37f4de1feeed"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/tile_log_metadata_contract_alpha_v0.md",
+      "bytes": 3697,
+      "sha256": "97d54af5fdf873da9275198e5ac0aa59c78172d1cc12bcec3499036404fdd65b"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/survey_runtime_ingestion_alignment_alpha_v0.json",
+      "bytes": 2950,
+      "sha256": "8ba13312132a2dfd86dbe2f6a13e2d88fdad019857913dcbeb3909a8acc7e92c"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/survey_runtime_ingestion_alignment_alpha_v0.md",
+      "bytes": 2715,
+      "sha256": "9eb5bd43bdf4ce0485a1ff291c53622eafe5a73f2cfcaa8e71477ccc0aeb9d39"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.json",
+      "bytes": 13683173,
+      "sha256": "ed27eb513208bb8442cd8341b7c7e1e3d37727e407e952ada498f357496db170"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.md",
+      "bytes": 1047,
+      "sha256": "de1b14de7b28145f75e7b4119ed5d801f60d4206e89c82f34ffffd6d92ee1f2d"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha_consumable_layer_guardrails_alpha_v0.md",
+      "bytes": 6124,
+      "sha256": "3f554087f20fe0ea4111994a129ab19587e730ae5e79767b146f020487ec2643"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha1_fixed_survey_intake_graph_support_alpha_v0.json",
+      "bytes": 7089,
+      "sha256": "e7b53672628d40706450c119a741d57920b4a2e7b08d76270347121a6929d517"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha1_fixed_survey_intake_graph_support_alpha_v0.md",
+      "bytes": 6037,
+      "sha256": "a803301c118257883cec5ae805a307e0c3e815baed19111f55569be2f0153223"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/family_inclusion_recommendation_alpha_v0.json",
+      "bytes": 6462,
+      "sha256": "51f99dce55f764c3a44cf224343f577cda0b5f5519dea87f3082b029512ea904"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/family_inclusion_recommendation_alpha_v0.md",
+      "bytes": 3484,
+      "sha256": "f72f396c776c7b78129d0fd3a0adac0ad86989b12969052789142e0af1df7642"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/caution_family_playbook_alpha_v0.md",
+      "bytes": 3507,
+      "sha256": "b77d2891d2737078b0f5a22e1ac0145eb93b826eca69d8ddbce03af21b893c1f"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/canonical_gap_unresolved_object_policy_alpha_v0.md",
+      "bytes": 2906,
+      "sha256": "1a88db4e97a0f2acee2ce7e294fd1350296e729af81198d709877d91357a799b"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/compact_candidate_pool_export_format_alpha_v0.md",
+      "bytes": 4865,
+      "sha256": "0ea212826b22c640ebb15aa85d56d2787343f189d9c73e87f5e021c1059e5fb3"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/route_ready_candidate_pool_report_alpha_v0.json",
+      "bytes": 3865,
+      "sha256": "6de8a823fe834105b9c277acec74d1c48eec249e2d7b7453045fee6a0e706a17"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/route_ready_candidate_pool_report_alpha_v0.md",
+      "bytes": 2950,
+      "sha256": "381c602b7ebfcde7758e5983dfced2575e7b0b2fa76a0802a8d5911dcca398ec"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json",
+      "bytes": 156669,
+      "sha256": "da06895f94a066d5d6cdd9fc5209854cdaf167baa529cb487a44d064ccaafa1e"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.md",
+      "bytes": 13943,
+      "sha256": "a47cdaa6c6271e827e503fe64747f84eca5d2b556b7addb68b58b643bcc218aa"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha1_first_mission_handoff_graph_contract_alpha_v0.json",
+      "bytes": 6368,
+      "sha256": "1e2d8068ed099e8571bb633b32f6474cb9f8d0490657232fe500540a83595aab"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha1_first_mission_handoff_graph_contract_alpha_v0.md",
+      "bytes": 7202,
+      "sha256": "cf9173fa8e73367334f95e8057d16d91596d3123eb0cfa5405353eb1d0095667"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha1_user_facing_graph_language_guardrails_alpha_v0.md",
+      "bytes": 3314,
+      "sha256": "5bda3d8902d3f0cec0f20ab518711ebb5ab0f105b95370d20f923dfc81d4ea60"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/qa_exception_ledger_alpha_v0.json",
+      "bytes": 162277,
+      "sha256": "a6ab8b973979672d670fe2d4c0458e47ccca69f3fe96f961cb0e726e4d9c581f"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/qa_exception_ledger_alpha_v0.md",
+      "bytes": 2182,
+      "sha256": "d24d42ce5d99e685c61066500795dd747c72d086ca23ba52ecd447aeace7cb9a"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json",
+      "bytes": 6454,
+      "sha256": "d7f161d801975029ea8c5cc33b9e8c2cb63890ce3408674a730fafcfdeb2e993"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.md",
+      "bytes": 4667,
+      "sha256": "15c4e937aac7897a6910a9db826b1828c2bd27725e1a0370820a246014985f31"
+    }
+  ],
+  "music_object_ref_alignment": {
+    "schema": "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_alpha_v0.schema.json",
+    "adapter": "data/alpha_consumable_layer/alpha_v0/graph_to_atlas_music_object_ref_alpha_v0.md",
+    "examples": "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_examples_alpha_v0.json",
+    "ref_sources": [
+      "canonical_graph",
+      "user_local",
+      "external_catalog",
+      "unresolved"
+    ],
+    "object_types": [
+      "artist",
+      "album",
+      "song_recording",
+      "composition_placeholder"
+    ],
+    "reference_only": true,
+    "taste_truth": false,
+    "atlas_role_truth": false,
+    "promotion_allowed_from_ref_only": false
+  },
+  "alpha_support_files": [
+    {
+      "file": "scripts/validate_alpha_consumable_layer_alpha_v0.mjs",
+      "bytes": 39552,
+      "sha256": "a67eca7f271ed343fb533a8d8296354a3a5e9113015b6db15654e7be7ba33306"
+    },
+    {
+      "file": "scripts/build_alpha_compact_candidate_pool_alpha_v0.mjs",
+      "bytes": 20672,
+      "sha256": "ac92943478467fe5be19629fee46469d453b44770f42c3f47c50e640bd44b137"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+      "bytes": 512243,
+      "sha256": "d1f1d2a9eb291f1fcef4a17ee614dbb5b5f8ef19c041ce088494b4a7f920fdcd"
+    },
+    {
+      "file": "scripts/build_alpha_live_smoke_recovery_graph_artifacts_alpha_v0.mjs",
+      "bytes": 15585,
+      "sha256": "ed468822d7f45c142cf1c50d1e781760a81ba340a5930c45ca78a2c153d59703"
+    }
+  ],
+  "alpha1_fixed_survey_intake": {
+    "source": "data/alpha_consumable_layer/alpha_v0/alpha1_fixed_survey_intake_graph_support_alpha_v0.json",
+    "tiles_per_page": 12,
+    "required_pages": {
+      "artist": 4,
+      "album": 2,
+      "song_recording": 4
+    },
+    "required_tiles": {
+      "artist": 48,
+      "album": 24,
+      "song_recording": 48
+    },
+    "status": "capacity_pass_guardrails_enforced"
+  },
+  "alpha1_first_mission_handoff": {
+    "source": "data/alpha_consumable_layer/alpha_v0/alpha1_first_mission_handoff_graph_contract_alpha_v0.json",
+    "status": "ready_for_core_app_integration_with_guardrails",
+    "graph_metadata_taste_truth": false,
+    "atlas_promotion_created": false,
+    "route_readiness_status": "route_ready_track_album_candidates",
+    "route_ready_candidate_count": 72,
+    "track_candidate_count": 50,
+    "album_candidate_count": 22,
+    "artist_level_candidates_in_route_pools": false,
+    "resolves_blocker": "MGN-I004"
+  },
+  "survey_runtime_ingestion_alignment": {
+    "source": "data/alpha_consumable_layer/alpha_v0/survey_runtime_ingestion_alignment_alpha_v0.json",
+    "status": "aligned_with_survey_runtime_page_history",
+    "atlas_ingestable_path": "survey_evidence_export.atlas_ingestable.evidence_atoms",
+    "must_ignore_path": "survey_evidence_export.construction_only_excluded",
+    "same_session_display_history_required": true,
+    "apple_exposure_prior_taste_truth": false,
+    "evidence_strength_hint_policy": "survey_metadata_only_not_atlas_confidence",
+    "dont_know_mapping": "familiarity_uncertainty"
+  },
+  "live_alpha_smoke_recovery": {
+    "source": "docs/alpha_backlog/alpha_live_smoke_recovery_2026_05_24.md",
+    "status": "canonical_graph_recovery_tasks_complete",
+    "candidate_review_risk_report": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json",
+    "survey_page_selection_audit_refs": "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.json",
+    "route_candidates_default_alpha_eligible": 72,
+    "route_candidates_hard_blocked": 0,
+    "survey_audit_ref_count": 4228
+  },
+  "live_generation_recovery": {
+    "source": "docs/alpha_backlog/live_generation_recovery_dispatch_2026_05_25.md",
+    "status": "canonical_route_identity_contract_complete",
+    "route_identity_contract": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json",
+    "route_items_must_come_from_candidate_pool": true,
+    "digest_or_strong_region_non_candidate_route_items_allowed": false,
+    "route_ready_candidate_count": 72,
+    "route_candidate_keys": 72,
+    "route_batch_dedupe_keys": 72,
+    "app_route_item_ids": 72
+  }
+}

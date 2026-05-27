@@ -1,0 +1,3610 @@
+{
+  "artifact": "qa_exception_ledger",
+  "version": "alpha_v0",
+  "status": "active_for_alpha_consumable_layer",
+  "summary": {
+    "validation_warning_count": 9,
+    "warning_snippet_count": 99,
+    "composition_review_rows": 24,
+    "quarantine_rows": 107,
+    "manual_or_blocked_recording_rows": 60,
+    "alpha_blocklist_rows": 1
+  },
+  "import_validation_warnings": [
+    {
+      "exception_id": "import-warning-001",
+      "type": "import_validation_warning",
+      "note": "family 4 song f4-026-song-we-shall-overcome-pete-seeger-et-al-traditional: release_year is `None`",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-002",
+      "type": "import_validation_warning",
+      "note": "family 4 song f4-026-song-house-of-the-rising-sun-traditional-revival-circuit-object: release_year is `None`",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-003",
+      "type": "import_validation_warning",
+      "note": "artist `kool-and-the-gang` has multiple display/source names: Kool & The Gang; Kool & the Gang",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-004",
+      "type": "import_validation_warning",
+      "note": "artist `martha-and-the-vandellas` has multiple display/source names: Martha & the Vandellas; Martha and the Vandellas",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-005",
+      "type": "import_validation_warning",
+      "note": "artist `simon-and-garfunkel` has multiple display/source names: Simon & Garfunkel; Simon and Garfunkel",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-006",
+      "type": "import_validation_warning",
+      "note": "artist `smokey-robinson-and-the-miracles` has multiple display/source names: Smokey Robinson & The Miracles; Smokey Robinson and the Miracles",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-007",
+      "type": "import_validation_warning",
+      "note": "album `the-sonics-here-are-the-sonics` has multiple display/source names: Here Are The Sonics; Here Are the Sonics",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-008",
+      "type": "import_validation_warning",
+      "note": "song_recording `martha-and-the-vandellas-dancing-in-the-street` has conflicting `artist_names` values: Martha & the Vandellas; Martha and the Vandellas",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    },
+    {
+      "exception_id": "import-warning-009",
+      "type": "import_validation_warning",
+      "note": "song_recording `shania-twain-man-i-feel-like-a-woman` has conflicting `release_years` values: 1997; 1999",
+      "downstream_impact": "covered by Alpha sidecars/quarantine/survey-surface suppression; not a hard-lock clearance",
+      "alpha_action": "preserve in ledger and block unsafe rows through validator/sidecars"
+    }
+  ],
+  "warning_snippets": [
+    {
+      "exception_id": "warning-snippet-001",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "16",
+      "note": "| songs | 27 | Treat duplicate proposed song IDs as one recording with multiple archetype memberships unless a warning says versions must split. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-002",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "18",
+      "note": "High-risk duplicate/version cases:",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-003",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "22",
+      "note": "| `hound-dog` | Do not merge Big Mama Thornton and Elvis Presley recordings. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-004",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "23",
+      "note": "| `the-twist` | Do not merge Hank Ballard and Chubby Checker recordings. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-005",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "24",
+      "note": "| `shake-rattle-and-roll` | Do not merge Big Joe Turner and Bill Haley recordings. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-006",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "25",
+      "note": "| `thats-all-right` | Do not merge Arthur Crudup and Elvis Presley recordings. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-007",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "27",
+      "note": "| `barbara-ann` | Keep Regents original distinct from later Beach Boys cover if/when imported. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-008",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "28",
+      "note": "| `sh-boom` | Define split rules for The Chords and The Crew-Cuts/pop-cover versions before title-based merging. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-009",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "29",
+      "note": "| `love-potion-no-9` | Preserve The Clovers source version separately from later Searchers/British Invasion cover behavior. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-010",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "30",
+      "note": "| `louie-louie` | Keep Kingsmen garage/frat-rock recording distinct from Richard Berry/source and other covers. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-011",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "31",
+      "note": "| `the-wailers` | Disambiguate the Pacific Northwest Wailers from Bob Marley and the Wailers. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-012",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "32",
+      "note": "| `jimmie-rodgers` | Use `jimmie-rodgers-pop` for the pop singer; do not merge with the country Jimmie Rodgers. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-013",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "33",
+      "note": "| `gene-vincent` / Blue Caps | Decide whether to canonicalize early band recordings under `gene-vincent-and-his-blue-caps` or keep Gene Vincent with alias credits. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-014",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "35",
+      "note": "| The Crickets / Buddy Holly and the Crickets | Keep Buddy Holly solo, Crickets, and Buddy Holly and the Crickets alias rules explicit. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-015",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_1/import_warnings.md",
+      "line": "36",
+      "note": "| Jackie Brenston / Ike Turner | Store `Rocket 88` with Jackie Brenston and His Delta Cats while preserving Ike Turner/Kings of Rhythm credit aliases. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-016",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_10/import_warnings.md",
+      "line": "28",
+      "note": "| `green-day-good-riddance-time-of-your-life` | Acoustic/context use should not split away from Green Day recording without version evidence. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-017",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_11/import_warnings.md",
+      "line": "7",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-018",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_11/import_warnings.md",
+      "line": "10",
+      "note": "- Producer aliases and project names require explicit alias tables: Larry Heard/Mr. Fingers/Fingers Inc., Juan Atkins/Model 500/Cybotron, Kevin Saunderson/Inner City.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-019",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_11/import_warnings.md",
+      "line": "11",
+      "note": "- Club rows often need mix/edit specificity; single titles can refer to radio edits, original mixes, remixes, live/DJ-set versions, or viral clips.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-020",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_11/import_warnings.md",
+      "line": "31",
+      "note": "- Lock still requires source-aligned row review, Page 1/Page 2 ordering, and merge-table confirmation for aliases, covers, remixes, collaborations, live recordings, and language/version variants.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-021",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_12/import_warnings.md",
+      "line": "16",
+      "note": "| songs | 0 | Treat duplicate proposed song IDs as one recording unless a warning says versions must split. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-022",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_12/import_warnings.md",
+      "line": "22",
+      "note": "| `beyonce` solo vs group-era credits | Do not merge Destiny-era recordings into solo Beyonce without explicit alias/member handling. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-023",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_13/import_warnings.md",
+      "line": "7",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-024",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_13/import_warnings.md",
+      "line": "10",
+      "note": "- Language versions, remixes, and collaboration credits are high-risk in Family 13: `Despacito`, `Bailando`, `Danza Kuduro`, `Love Nwantiti`, `AMG`, `Bebe Dame`, and `7 Seconds` need recording-level care.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-025",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_13/import_warnings.md",
+      "line": "12",
+      "note": "- Afrobeat, Afrobeats, Afropiano, African pop, and global-roots rows must remain distinct enough for adaptive survey interpretation.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-026",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_13/import_warnings.md",
+      "line": "14",
+      "note": "- World-fusion rows such as Deep Forest require sampling/ethics/version review before import lock.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-027",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_13/import_warnings.md",
+      "line": "31",
+      "note": "- Lock still requires source-aligned row review, Page 1/Page 2 ordering, and merge-table confirmation for aliases, covers, remixes, collaborations, live recordings, and language/version variants.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-028",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "12",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-029",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "14",
+      "note": "- Louis Armstrong: Jazz, standards, New Orleans, and pop-memory memberships should remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-030",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "35",
+      "note": "- My Favorite Things - John Coltrane: Preserve Coltrane recording distinct from musical-theater composition.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-031",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "37",
+      "note": "- Nessun dorma - Luciano Pavarotti: Opera aria/composition must remain distinct from Pavarotti recording.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-032",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "38",
+      "note": "- Cello Suite No. 1: Prelude - Yo-Yo Ma: Composition vs recording distinction required.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-033",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "44",
+      "note": "- The Girl from Ipanema - Stan Getz and Astrud Gilberto: Bossa nova, jazz, and lounge rows should remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-034",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "54",
+      "note": "- Largest remaining gap: The largest remaining gap is recording-level standard attribution: many songs need composition, definitive recording, and holiday/context split rules before hard lock.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-035",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_14/import_warnings.md",
+      "line": "55",
+      "note": "- Duplicate object IDs across families should be interpreted as multi-membership unless a warning says the display names or source versions conflict.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-036",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "12",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-037",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "14",
+      "note": "- Claude-Michel Schonberg: Composer/show-first object; do not merge with cast recordings.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-038",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "27",
+      "note": "- Ludwig Goransson: Score and hip-hop/R&B soundtrack album rows should remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-039",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "33",
+      "note": "- Guardians of the Galaxy: Awesome Mix Vol. 1 - Various Artists: Compilation soundtrack made of older songs; do not merge with original release albums.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-040",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "36",
+      "note": "- Black Panther - Ludwig Goransson: Score album distinct from Kendrick Lamar-curated soundtrack album.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-041",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "38",
+      "note": "- I Will Always Love You - Whitney Houston: Preserve Whitney Houston recording distinct from Dolly Parton original.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-042",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "43",
+      "note": "- We Don't Talk About Bruno - Carolina Gaitan, Mauro Castillo, Adassa, Rhenzy Feliz, Diane Guerrero, Stephanie Beatriz and Encanto Cast: Ensemble cast credit is version-specific and should not merge to one artist.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-043",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "44",
+      "note": "- Remember Me - Benjamin Bratt: Coco has multiple in-film versions; preserve recording context.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-044",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "48",
+      "note": "- Man of Constant Sorrow - The Soggy Bottom Boys: Film-fictional group and traditional/roots song attribution need review.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-045",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "50",
+      "note": "- James Bond Theme - John Barry Orchestra: Bond theme authorship and performance credits require manual review.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-046",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_15/import_warnings.md",
+      "line": "55",
+      "note": "- Duplicate object IDs across families should be interpreted as multi-membership unless a warning says the display names or source versions conflict.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-047",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "12",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-048",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "14",
+      "note": "- Sister Rosetta Tharpe: Gospel, early rock and roll, and blues memberships should remain linked but distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-049",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "19",
+      "note": "- Passion: Conference/live worship brand needs distinct entity handling.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-050",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "22",
+      "note": "- In Christ Alone - Keith and Kristyn Getty: Modern hymn/songbook row; many church versions exist.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-051",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "24",
+      "note": "- People - Hillsong United: Hillsong Worship, Hillsong United, and church-brand rows should remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-052",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "25",
+      "note": "- Amazing Grace - Aretha Franklin: Composition vs Aretha live recording must remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-053",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "26",
+      "note": "- Soon and Very Soon - Andrae Crouch: Gospel standard has many church and choir versions.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-054",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "28",
+      "note": "- Break Every Chain - Tasha Cobbs Leonard: Worship standard and live gospel recording should remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-055",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "29",
+      "note": "- God's Not Dead (Like a Lion) - Newsboys: Newsboys cover/version should not merge with original Daniel Bashta worship song.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-056",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "31",
+      "note": "- Shout to the Lord - Darlene Zschech: Church-songbook standard with many Hillsong and congregation versions.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-057",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "33",
+      "note": "- In Christ Alone - Keith and Kristyn Getty: Modern hymn should be standard-first and version-aware.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-058",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "35",
+      "note": "- Jireh - Elevation Worship and Maverick City Music featuring Chandler Moore and Naomi Raine: Collaboration and featured-vocal credits need manual handling.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-059",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "37",
+      "note": "- Build My Life - Pat Barrett: Modern worship standard with many artist and church versions.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-060",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "42",
+      "note": "- Largest remaining gap: The largest remaining gap is worship standard/version policy: live, church-brand, songwriter, and congregational versions need explicit import split rules.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-061",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_16/import_warnings.md",
+      "line": "43",
+      "note": "- Duplicate object IDs across families should be interpreted as multi-membership unless a warning says the display names or source versions conflict.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-062",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_17/import_warnings.md",
+      "line": "16",
+      "note": "| songs | 0 | Treat duplicate proposed song IDs as one recording unless a warning says versions must split. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-063",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_17/import_warnings.md",
+      "line": "26",
+      "note": "| Traditional/kids repertoire | Composition-level objects need non-artist canonical handling where performer is not meaningful. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-064",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_18/import_warnings.md",
+      "line": "12",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-065",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_18/import_warnings.md",
+      "line": "14",
+      "note": "- Turnstile: Hardcore, alternative, and current-rock memberships should remain distinct.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-066",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_18/import_warnings.md",
+      "line": "28",
+      "note": "- Beggin' - Maneskin: Preserve Maneskin recording distinct from Four Seasons original.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-067",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_18/import_warnings.md",
+      "line": "38",
+      "note": "- Duplicate object IDs across families should be interpreted as multi-membership unless a warning says the display names or source versions conflict.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-068",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_2/import_warnings.md",
+      "line": "21",
+      "note": "| `the-shadows-of-knight-gloria` | Cover/version-specific row; do not merge with Them's `Gloria`. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-069",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_2/import_warnings.md",
+      "line": "23",
+      "note": "| `the-animals-house-of-the-rising-sun` | Arrangement/recording-specific row; do not merge with traditional-song records. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-070",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_2/import_warnings.md",
+      "line": "47",
+      "note": "Normalized prior `artist_seeded`, `artist_added`, `artist_not_added`, and `artist_ambiguous_or_traditional` song status shorthand into the requested `artist_survey_worthy`, `song_survey_first`, and `song_survey_only` enum.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-071",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_3/import_warnings.md",
+      "line": "26",
+      "note": "| ambiguous_versions | Live vs studio versions and cover-adjacent later memories are not merged. | Requires downstream version-aware matching. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-072",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_4/import_warnings.md",
+      "line": "9",
+      "note": "| date_normalization | 1940/1944, 20th c., traditional, 1998/2000 US breakthrough | release_year uses an integer where defensible and null where attribution/date is traditional or unstable; row warnings preserve ambiguity. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-073",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_4/import_warnings.md",
+      "line": "10",
+      "note": "| collaboration_and_version_risk | Wilco with Billy Bragg, Pete Seeger et al. / traditional, Pete Seeger and Lee Hays; Peter Paul and Mary popularized, Jason Isbell and the 400 Unit | Artist name retained as supplied when needed; import should not collapse collaborations into solo artist rows without manual confirmation. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-074",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_4/import_warnings.md",
+      "line": "11",
+      "note": "| duplicate_cross_archetype_objects | Carole King, Bob Dylan, John Prine, Norah Jones, Tapestry, The Freewheelin Bob Dylan, Come Away with Me, Blowin in the Wind, Dont Know Why | Kept as separate archetype placements with distinct proposed IDs. Consolidation should happen only at a later canonical entity layer. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-075",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_4/import_warnings.md",
+      "line": "20",
+      "note": "Normalized prior `artist_seeded`, `artist_added`, `artist_not_added`, and `artist_ambiguous_or_traditional` song status shorthand into the requested `artist_survey_worthy`, `song_survey_first`, and `song_survey_only` enum.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-076",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_5/import_warnings.md",
+      "line": "7",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-077",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_5/import_warnings.md",
+      "line": "11",
+      "note": "- `Wagon Wheel`, `Tennessee Whiskey`, `Act Naturally`, `Me and Bobby McGee`, and `How Do I Live` require composition/recording/version handling.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-078",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_5/import_warnings.md",
+      "line": "12",
+      "note": "- Darius Rucker solo catalog must remain distinct from Hootie & the Blowfish.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-079",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_5/import_warnings.md",
+      "line": "23",
+      "note": "| 034 | Bridge to line dance, hat-act radio, new traditionalism, and patriotic/bar contexts; false-nearby risk is mistaking novelty recognition for artist depth. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-080",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_5/import_warnings.md",
+      "line": "31",
+      "note": "- Lock still requires source-aligned row review, Page 1/Page 2 ordering, and merge-table confirmation for aliases, covers, remixes, collaborations, live recordings, and language/version variants.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-081",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_6/import_warnings.md",
+      "line": "11",
+      "note": "| era_specific_artist_scope | Bee Gees disco-era; Diana Ross solo; Smokey Robinson solo versus Miracles; Jackson 5 versus Michael Jackson | Preserve artist/era distinction through row warnings and proposed IDs. Do not auto-merge group and solo objects. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-082",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_6/import_warnings.md",
+      "line": "12",
+      "note": "| version_specific_recordings | Respect; Ain't No Mountain High Enough; I Heard It Through the Grapevine; Don't Leave Me This Way; Tyrone live | Preserve recording/version identity rather than merging by composition title. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-083",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_7/import_warnings.md",
+      "line": "20",
+      "note": "| Alias rows | `2Pac`, `The Notorious B.I.G.`, `Mos Def / Yasiin Bey`, `Jeezy`, and `Afrika Bambaataa & Soulsonic Force` require alias-aware matching. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-084",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_7/import_warnings.md",
+      "line": "23",
+      "note": "## Explicit, Clean, And Version Warnings",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-085",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_7/import_warnings.md",
+      "line": "30",
+      "note": "| cardi-b-feat-megan-thee-stallion-wap | Explicit and clean versions are materially different survey objects. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-086",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_7/import_warnings.md",
+      "line": "32",
+      "note": "| run-dmc-walk-this-way | Run-DMC/Aerosmith version must not merge with Aerosmith original recording. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-087",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_7/import_warnings.md",
+      "line": "33",
+      "note": "| fugees-killing-me-softly | Fugees version must not merge with Roberta Flack or earlier recordings. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-088",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_7/import_warnings.md",
+      "line": "36",
+      "note": "| chief-keef-feat-lil-reese-i-dont-like | Original and Kanye remix should remain distinct if both are imported. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-089",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "7",
+      "note": "## Merge / Alias / Version Risks",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-090",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "10",
+      "note": "- Soft Cell: Preserve Soft Cell recording distinct from Gloria Jones original.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-091",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "11",
+      "note": "- Patti Smith: Preserve Patti Smith recording distinct from Them/Van Morrison original.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-092",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "15",
+      "note": "- James Chance / James White / Contortions aliases need review.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-093",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "16",
+      "note": "- Public Image Ltd should remain distinct from Sex Pistols even though John Lydon links both identities.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-094",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "17",
+      "note": "- Love and Rockets should remain distinct from Bauhaus.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-095",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "18",
+      "note": "- Split Enz should remain distinct from Crowded House.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-096",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_8/import_warnings.md",
+      "line": "19",
+      "note": "- Yazoo/Yaz alias handling is required.",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-097",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_9/import_warnings.md",
+      "line": "21",
+      "note": "| `sleep / sleep-token` | Do not merge Sleep with Sleep Token. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-098",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_9/import_warnings.md",
+      "line": "23",
+      "note": "| `hurt` | Nine Inch Nails song row must remain distinct from Johnny Cash cover/version rows in other families. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    },
+    {
+      "exception_id": "warning-snippet-099",
+      "type": "source_import_warning_snippet",
+      "source": "data/canonical_graph/family_9/import_warnings.md",
+      "line": "24",
+      "note": "| `cum-on-feel-the-noize` | Quiet Riot row is a cover/version-specific glam-metal gateway; do not merge with Slade original if imported elsewhere. |",
+      "downstream_impact": "manual review context; do not auto-merge or infer user taste",
+      "alpha_action": "preserve as QA context"
+    }
+  ],
+  "quarantine_rows": [
+    {
+      "exception_id": "quarantine-001",
+      "type": "quarantine",
+      "entity_ref": "album:alan-silvestri-back-to-the-future",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-002",
+      "type": "quarantine",
+      "entity_ref": "album:aretha-franklin-amazing-grace",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-003",
+      "type": "quarantine",
+      "entity_ref": "album:elevation-worship-and-maverick-city-music-old-church-basement",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-004",
+      "type": "quarantine",
+      "entity_ref": "album:hans-zimmer-and-james-newton-howard-the-dark-knight",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-005",
+      "type": "quarantine",
+      "entity_ref": "album:hillsong-united-people",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-006",
+      "type": "quarantine",
+      "entity_ref": "album:hillsong-worship-shout-to-the-lord",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-007",
+      "type": "quarantine",
+      "entity_ref": "album:john-williams-jurassic-park",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-008",
+      "type": "quarantine",
+      "entity_ref": "album:john-williams-star-wars",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-009",
+      "type": "quarantine",
+      "entity_ref": "album:keith-and-kristyn-getty-in-christ-alone",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-010",
+      "type": "quarantine",
+      "entity_ref": "album:ludwig-goransson-black-panther",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-011",
+      "type": "quarantine",
+      "entity_ref": "album:maverick-city-music-maverick-city-vol-3-part-1",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-012",
+      "type": "quarantine",
+      "entity_ref": "album:original-broadway-cast-of-dear-evan-hansen-dear-evan-hansen",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-013",
+      "type": "quarantine",
+      "entity_ref": "album:original-broadway-cast-of-hamilton-hamilton",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-014",
+      "type": "quarantine",
+      "entity_ref": "album:original-broadway-cast-of-rent-rent",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-015",
+      "type": "quarantine",
+      "entity_ref": "album:original-broadway-cast-of-the-sound-of-music-the-sound-of-music",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-016",
+      "type": "quarantine",
+      "entity_ref": "album:original-broadway-cast-of-west-side-story-west-side-story",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-017",
+      "type": "quarantine",
+      "entity_ref": "album:original-broadway-cast-of-wicked-wicked",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-018",
+      "type": "quarantine",
+      "entity_ref": "album:original-london-cast-of-les-miserables-les-miserables",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-019",
+      "type": "quarantine",
+      "entity_ref": "album:original-london-cast-of-the-phantom-of-the-opera-the-phantom-of-the-opera",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-020",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-beauty-and-the-beast",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-021",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-coco",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-022",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-dirty-dancing",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-023",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-encanto",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-024",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-frozen",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-025",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-guardians-of-the-galaxy-awesome-mix-vol-1",
+      "reasons": [
+        "apple_music_resolution_risky",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-026",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-moana",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-027",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-o-brother-where-art-thou",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-028",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-saturday-night-fever",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-029",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-the-bodyguard",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-030",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-the-lion-king",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-031",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-the-little-mermaid",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-032",
+      "type": "quarantine",
+      "entity_ref": "album:various-artists-top-gun",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-033",
+      "type": "quarantine",
+      "entity_ref": "album:yo-yo-ma-bach-cello-suites",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-034",
+      "type": "quarantine",
+      "entity_ref": "artist:alan-menken",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-035",
+      "type": "quarantine",
+      "entity_ref": "artist:alan-silvestri",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-036",
+      "type": "quarantine",
+      "entity_ref": "artist:bethel-music",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-037",
+      "type": "quarantine",
+      "entity_ref": "artist:elevation-worship",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-038",
+      "type": "quarantine",
+      "entity_ref": "artist:hans-zimmer",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-039",
+      "type": "quarantine",
+      "entity_ref": "artist:hillsong-worship",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-040",
+      "type": "quarantine",
+      "entity_ref": "artist:john-williams",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-041",
+      "type": "quarantine",
+      "entity_ref": "artist:keith-and-kristyn-getty",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-042",
+      "type": "quarantine",
+      "entity_ref": "artist:ludwig-goransson",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-043",
+      "type": "quarantine",
+      "entity_ref": "artist:maverick-city-music",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-044",
+      "type": "quarantine",
+      "entity_ref": "artist:original-broadway-cast-of-wicked",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-045",
+      "type": "quarantine",
+      "entity_ref": "artist:passion",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-046",
+      "type": "quarantine",
+      "entity_ref": "artist:sinach",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-047",
+      "type": "quarantine",
+      "entity_ref": "artist:yo-yo-ma",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-048",
+      "type": "quarantine",
+      "entity_ref": "song_recording:alan-silvestri-back-to-the-future",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-049",
+      "type": "quarantine",
+      "entity_ref": "song_recording:aphex-twin-windowlicker",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-050",
+      "type": "quarantine",
+      "entity_ref": "song_recording:aretha-franklin-amazing-grace",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-051",
+      "type": "quarantine",
+      "entity_ref": "song_recording:avicii-levels",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-052",
+      "type": "quarantine",
+      "entity_ref": "song_recording:avicii-wake-me-up",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-053",
+      "type": "quarantine",
+      "entity_ref": "song_recording:bethel-music-and-jenn-johnson-goodness-of-god",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-054",
+      "type": "quarantine",
+      "entity_ref": "song_recording:bethel-music-no-longer-slaves",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-055",
+      "type": "quarantine",
+      "entity_ref": "song_recording:calvin-harris-feel-so-close",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-056",
+      "type": "quarantine",
+      "entity_ref": "song_recording:cardi-b-feat-megan-thee-stallion-wap",
+      "reasons": [
+        "version_unresolved"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-057",
+      "type": "quarantine",
+      "entity_ref": "song_recording:carolina-gaitan-mauro-castillo-adassa-rhenzy-feliz-diane-guerrero-stephanie-beatriz-and-encanto-cast-we-don-t-talk-about-bruno",
+      "reasons": [
+        "special_entity_model_missing",
+        "composition_unresolved"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-058",
+      "type": "quarantine",
+      "entity_ref": "song_recording:cece-peniston-finally",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-059",
+      "type": "quarantine",
+      "entity_ref": "song_recording:crystal-waters-gypsy-woman-she-s-homeless",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-060",
+      "type": "quarantine",
+      "entity_ref": "song_recording:daft-punk-around-the-world",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-061",
+      "type": "quarantine",
+      "entity_ref": "song_recording:daft-punk-one-more-time",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-062",
+      "type": "quarantine",
+      "entity_ref": "song_recording:darlene-zschech-shout-to-the-lord",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-063",
+      "type": "quarantine",
+      "entity_ref": "song_recording:david-guetta-featuring-sia-titanium",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-064",
+      "type": "quarantine",
+      "entity_ref": "song_recording:disclosure-featuring-sam-smith-latch",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-065",
+      "type": "quarantine",
+      "entity_ref": "song_recording:elevation-worship-and-maverick-city-music-featuring-chandler-moore-and-naomi-raine-jireh",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-066",
+      "type": "quarantine",
+      "entity_ref": "song_recording:elevation-worship-graves-into-gardens",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-067",
+      "type": "quarantine",
+      "entity_ref": "song_recording:encanto-cast-we-dont-talk-about-bruno",
+      "reasons": [
+        "special_entity_model_missing",
+        "composition_unresolved"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-068",
+      "type": "quarantine",
+      "entity_ref": "song_recording:f4-026-song-house-of-the-rising-sun-traditional-revival-circuit-object",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-069",
+      "type": "quarantine",
+      "entity_ref": "song_recording:f4-026-song-we-shall-overcome-pete-seeger-et-al-traditional",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-070",
+      "type": "quarantine",
+      "entity_ref": "song_recording:f4-027-song-passionate-kisses-lucinda-williams",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-071",
+      "type": "quarantine",
+      "entity_ref": "song_recording:f4-028-song-waiting-for-a-superman-the-jayhawks",
+      "reasons": [
+        "wrong_attribution_suspected"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-072",
+      "type": "quarantine",
+      "entity_ref": "song_recording:frankie-knuckles-your-love",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-073",
+      "type": "quarantine",
+      "entity_ref": "song_recording:hans-zimmer-time",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-074",
+      "type": "quarantine",
+      "entity_ref": "song_recording:hillsong-united-oceans-where-feet-may-fail",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-075",
+      "type": "quarantine",
+      "entity_ref": "song_recording:hillsong-worship-what-a-beautiful-name",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-076",
+      "type": "quarantine",
+      "entity_ref": "song_recording:john-coltrane-my-favorite-things",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-077",
+      "type": "quarantine",
+      "entity_ref": "song_recording:john-williams-hedwig-s-theme",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-078",
+      "type": "quarantine",
+      "entity_ref": "song_recording:john-williams-main-title",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-079",
+      "type": "quarantine",
+      "entity_ref": "song_recording:john-williams-the-imperial-march",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-080",
+      "type": "quarantine",
+      "entity_ref": "song_recording:john-williams-theme-from-jurassic-park",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-081",
+      "type": "quarantine",
+      "entity_ref": "song_recording:julie-andrews-and-the-sound-of-music-cast-do-re-mi",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-082",
+      "type": "quarantine",
+      "entity_ref": "song_recording:kari-jobe-cody-carnes-and-elevation-worship-the-blessing",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-083",
+      "type": "quarantine",
+      "entity_ref": "song_recording:keith-and-kristyn-getty-in-christ-alone",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-084",
+      "type": "quarantine",
+      "entity_ref": "song_recording:lcd-soundsystem-all-my-friends",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-085",
+      "type": "quarantine",
+      "entity_ref": "song_recording:london-philharmonic-orchestra-adagio-for-strings",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-086",
+      "type": "quarantine",
+      "entity_ref": "song_recording:luciano-pavarotti-nessun-dorma",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-087",
+      "type": "quarantine",
+      "entity_ref": "song_recording:ludwig-goransson-wakanda",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-088",
+      "type": "quarantine",
+      "entity_ref": "song_recording:m83-midnight-city",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-089",
+      "type": "quarantine",
+      "entity_ref": "song_recording:major-lazer-and-dj-snake-featuring-mo-lean-on",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-090",
+      "type": "quarantine",
+      "entity_ref": "song_recording:massive-attack-teardrop",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-091",
+      "type": "quarantine",
+      "entity_ref": "song_recording:nine-inch-nails-closer",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-092",
+      "type": "quarantine",
+      "entity_ref": "song_recording:original-broadway-cast-of-dear-evan-hansen-you-will-be-found",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-093",
+      "type": "quarantine",
+      "entity_ref": "song_recording:original-broadway-cast-of-hamilton-my-shot",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-094",
+      "type": "quarantine",
+      "entity_ref": "song_recording:original-broadway-cast-of-rent-seasons-of-love",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-095",
+      "type": "quarantine",
+      "entity_ref": "song_recording:original-broadway-cast-of-west-side-story-america",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-096",
+      "type": "quarantine",
+      "entity_ref": "song_recording:original-london-cast-of-les-miserables-one-day-more",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-097",
+      "type": "quarantine",
+      "entity_ref": "song_recording:pat-barrett-build-my-life",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-098",
+      "type": "quarantine",
+      "entity_ref": "song_recording:robin-s-show-me-love",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-099",
+      "type": "quarantine",
+      "entity_ref": "song_recording:sinach-way-maker",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-100",
+      "type": "quarantine",
+      "entity_ref": "song_recording:stardust-music-sounds-better-with-you",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-101",
+      "type": "quarantine",
+      "entity_ref": "song_recording:swedish-house-mafia-don-t-you-worry-child",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-102",
+      "type": "quarantine",
+      "entity_ref": "song_recording:the-animals-house-of-the-rising-sun",
+      "reasons": [
+        "composition_unresolved"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-103",
+      "type": "quarantine",
+      "entity_ref": "song_recording:the-lion-king-cast-hakuna-matata",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-104",
+      "type": "quarantine",
+      "entity_ref": "song_recording:the-soggy-bottom-boys-man-of-constant-sorrow",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-105",
+      "type": "quarantine",
+      "entity_ref": "song_recording:traditional-the-wheels-on-the-bus",
+      "reasons": [
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-106",
+      "type": "quarantine",
+      "entity_ref": "song_recording:yo-yo-ma-cello-suite-no-1-prelude",
+      "reasons": [
+        "composition_unresolved",
+        "special_entity_model_missing"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    },
+    {
+      "exception_id": "quarantine-107",
+      "type": "quarantine",
+      "entity_ref": "song_recording:zedd-featuring-foxes-clarity",
+      "reasons": [
+        "apple_music_resolution_risky"
+      ],
+      "blocked_surfaces": [
+        "fast_survey",
+        "page1_deep_survey",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "blocked from survey display, starter Atlas, default Mission Generation, Apple auto-resolution, Supabase active candidate rows, and OpenAI prompt payloads",
+      "alpha_action": "blocked unless later human review writes an explicit override"
+    }
+  ],
+  "manual_or_blocked_recording_rows": [
+    {
+      "exception_id": "recording-review-001",
+      "type": "recording_version_review",
+      "recording_id": "alan-silvestri-back-to-the-future",
+      "composition_id": "composition-back-to-the-future",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-002",
+      "type": "recording_version_review",
+      "recording_id": "aphex-twin-windowlicker",
+      "composition_id": "composition-windowlicker",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-003",
+      "type": "recording_version_review",
+      "recording_id": "aretha-franklin-amazing-grace",
+      "composition_id": "composition-amazing-grace",
+      "recording_context": "live",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-004",
+      "type": "recording_version_review",
+      "recording_id": "avicii-levels",
+      "composition_id": "composition-levels",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-005",
+      "type": "recording_version_review",
+      "recording_id": "avicii-wake-me-up",
+      "composition_id": "composition-wake-me-up",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-006",
+      "type": "recording_version_review",
+      "recording_id": "bethel-music-and-jenn-johnson-goodness-of-god",
+      "composition_id": "composition-goodness-of-god",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-007",
+      "type": "recording_version_review",
+      "recording_id": "bethel-music-no-longer-slaves",
+      "composition_id": "composition-no-longer-slaves",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-008",
+      "type": "recording_version_review",
+      "recording_id": "calvin-harris-feel-so-close",
+      "composition_id": "composition-feel-so-close",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-009",
+      "type": "recording_version_review",
+      "recording_id": "cardi-b-feat-megan-thee-stallion-wap",
+      "composition_id": "composition-wap",
+      "recording_context": "explicit",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: version_unresolved",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-010",
+      "type": "recording_version_review",
+      "recording_id": "carolina-gaitan-mauro-castillo-adassa-rhenzy-feliz-diane-guerrero-stephanie-beatriz-and-encanto-cast-we-don-t-talk-about-bruno",
+      "composition_id": "composition-we-don-t-talk-about-bruno",
+      "recording_context": "cast_recording",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing; composition_unresolved",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-011",
+      "type": "recording_version_review",
+      "recording_id": "cece-peniston-finally",
+      "composition_id": "composition-finally",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-012",
+      "type": "recording_version_review",
+      "recording_id": "crystal-waters-gypsy-woman-she-s-homeless",
+      "composition_id": "composition-gypsy-woman-she-s-homeless",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-013",
+      "type": "recording_version_review",
+      "recording_id": "daft-punk-around-the-world",
+      "composition_id": "composition-around-the-world",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-014",
+      "type": "recording_version_review",
+      "recording_id": "daft-punk-one-more-time",
+      "composition_id": "composition-one-more-time",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-015",
+      "type": "recording_version_review",
+      "recording_id": "darlene-zschech-shout-to-the-lord",
+      "composition_id": "composition-shout-to-the-lord",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-016",
+      "type": "recording_version_review",
+      "recording_id": "david-guetta-featuring-sia-titanium",
+      "composition_id": "composition-titanium",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-017",
+      "type": "recording_version_review",
+      "recording_id": "disclosure-featuring-sam-smith-latch",
+      "composition_id": "composition-latch",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-018",
+      "type": "recording_version_review",
+      "recording_id": "elevation-worship-and-maverick-city-music-featuring-chandler-moore-and-naomi-raine-jireh",
+      "composition_id": "composition-jireh",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-019",
+      "type": "recording_version_review",
+      "recording_id": "elevation-worship-graves-into-gardens",
+      "composition_id": "composition-graves-into-gardens",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-020",
+      "type": "recording_version_review",
+      "recording_id": "encanto-cast-we-dont-talk-about-bruno",
+      "composition_id": "composition-we-don-t-talk-about-bruno",
+      "recording_context": "cast_recording",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing; composition_unresolved",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-021",
+      "type": "recording_version_review",
+      "recording_id": "f4-026-song-house-of-the-rising-sun-traditional-revival-circuit-object",
+      "composition_id": "composition-house-of-the-rising-sun",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-022",
+      "type": "recording_version_review",
+      "recording_id": "f4-026-song-we-shall-overcome-pete-seeger-et-al-traditional",
+      "composition_id": "composition-we-shall-overcome",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-023",
+      "type": "recording_version_review",
+      "recording_id": "f4-027-song-passionate-kisses-lucinda-williams",
+      "composition_id": "composition-passionate-kisses",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-024",
+      "type": "recording_version_review",
+      "recording_id": "f4-028-song-waiting-for-a-superman-the-jayhawks",
+      "composition_id": "composition-waiting-for-a-superman",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: wrong_attribution_suspected",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-025",
+      "type": "recording_version_review",
+      "recording_id": "frankie-knuckles-your-love",
+      "composition_id": "composition-your-love",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-026",
+      "type": "recording_version_review",
+      "recording_id": "hans-zimmer-time",
+      "composition_id": "composition-time",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-027",
+      "type": "recording_version_review",
+      "recording_id": "hillsong-united-oceans-where-feet-may-fail",
+      "composition_id": "composition-oceans-where-feet-may-fail",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-028",
+      "type": "recording_version_review",
+      "recording_id": "hillsong-worship-what-a-beautiful-name",
+      "composition_id": "composition-what-a-beautiful-name",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-029",
+      "type": "recording_version_review",
+      "recording_id": "john-coltrane-my-favorite-things",
+      "composition_id": "composition-my-favorite-things",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-030",
+      "type": "recording_version_review",
+      "recording_id": "john-williams-hedwig-s-theme",
+      "composition_id": "composition-hedwig-s-theme",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-031",
+      "type": "recording_version_review",
+      "recording_id": "john-williams-main-title",
+      "composition_id": "composition-main-title",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-032",
+      "type": "recording_version_review",
+      "recording_id": "john-williams-the-imperial-march",
+      "composition_id": "composition-the-imperial-march",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-033",
+      "type": "recording_version_review",
+      "recording_id": "john-williams-theme-from-jurassic-park",
+      "composition_id": "composition-theme-from-jurassic-park",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-034",
+      "type": "recording_version_review",
+      "recording_id": "julie-andrews-and-the-sound-of-music-cast-do-re-mi",
+      "composition_id": "composition-do-re-mi",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-035",
+      "type": "recording_version_review",
+      "recording_id": "kari-jobe-cody-carnes-and-elevation-worship-the-blessing",
+      "composition_id": "composition-the-blessing",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-036",
+      "type": "recording_version_review",
+      "recording_id": "keith-and-kristyn-getty-in-christ-alone",
+      "composition_id": "composition-in-christ-alone",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-037",
+      "type": "recording_version_review",
+      "recording_id": "lcd-soundsystem-all-my-friends",
+      "composition_id": "composition-all-my-friends",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-038",
+      "type": "recording_version_review",
+      "recording_id": "london-philharmonic-orchestra-adagio-for-strings",
+      "composition_id": "composition-adagio-for-strings",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-039",
+      "type": "recording_version_review",
+      "recording_id": "luciano-pavarotti-nessun-dorma",
+      "composition_id": "composition-nessun-dorma",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-040",
+      "type": "recording_version_review",
+      "recording_id": "ludwig-goransson-wakanda",
+      "composition_id": "composition-wakanda",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-041",
+      "type": "recording_version_review",
+      "recording_id": "m83-midnight-city",
+      "composition_id": "composition-midnight-city",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-042",
+      "type": "recording_version_review",
+      "recording_id": "major-lazer-and-dj-snake-featuring-mo-lean-on",
+      "composition_id": "composition-lean-on",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-043",
+      "type": "recording_version_review",
+      "recording_id": "massive-attack-teardrop",
+      "composition_id": "composition-teardrop",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-044",
+      "type": "recording_version_review",
+      "recording_id": "nine-inch-nails-closer",
+      "composition_id": "composition-closer",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-045",
+      "type": "recording_version_review",
+      "recording_id": "original-broadway-cast-of-dear-evan-hansen-you-will-be-found",
+      "composition_id": "composition-you-will-be-found",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-046",
+      "type": "recording_version_review",
+      "recording_id": "original-broadway-cast-of-hamilton-my-shot",
+      "composition_id": "composition-my-shot",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-047",
+      "type": "recording_version_review",
+      "recording_id": "original-broadway-cast-of-rent-seasons-of-love",
+      "composition_id": "composition-seasons-of-love",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-048",
+      "type": "recording_version_review",
+      "recording_id": "original-broadway-cast-of-west-side-story-america",
+      "composition_id": "composition-america",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-049",
+      "type": "recording_version_review",
+      "recording_id": "original-london-cast-of-les-miserables-one-day-more",
+      "composition_id": "composition-one-day-more",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-050",
+      "type": "recording_version_review",
+      "recording_id": "pat-barrett-build-my-life",
+      "composition_id": "composition-build-my-life",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-051",
+      "type": "recording_version_review",
+      "recording_id": "robin-s-show-me-love",
+      "composition_id": "composition-show-me-love",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-052",
+      "type": "recording_version_review",
+      "recording_id": "sinach-way-maker",
+      "composition_id": "composition-way-maker",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-053",
+      "type": "recording_version_review",
+      "recording_id": "stardust-music-sounds-better-with-you",
+      "composition_id": "composition-music-sounds-better-with-you",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-054",
+      "type": "recording_version_review",
+      "recording_id": "swedish-house-mafia-don-t-you-worry-child",
+      "composition_id": "composition-don-t-you-worry-child",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-055",
+      "type": "recording_version_review",
+      "recording_id": "the-animals-house-of-the-rising-sun",
+      "composition_id": "composition-house-of-the-rising-sun",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: composition_unresolved",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-056",
+      "type": "recording_version_review",
+      "recording_id": "the-lion-king-cast-hakuna-matata",
+      "composition_id": "composition-hakuna-matata",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-057",
+      "type": "recording_version_review",
+      "recording_id": "the-soggy-bottom-boys-man-of-constant-sorrow",
+      "composition_id": "composition-man-of-constant-sorrow",
+      "recording_context": "film_version",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-058",
+      "type": "recording_version_review",
+      "recording_id": "traditional-the-wheels-on-the-bus",
+      "composition_id": "composition-the-wheels-on-the-bus",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-059",
+      "type": "recording_version_review",
+      "recording_id": "yo-yo-ma-cello-suite-no-1-prelude",
+      "composition_id": "composition-cello-suite-no-1-prelude",
+      "recording_context": "traditional_arrangement",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "quarantined",
+      "reason": "quarantined: composition_unresolved; special_entity_model_missing",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    },
+    {
+      "exception_id": "recording-review-060",
+      "type": "recording_version_review",
+      "recording_id": "zedd-featuring-foxes-clarity",
+      "composition_id": "composition-clarity",
+      "recording_context": "original",
+      "apple_music_resolution_policy": "manual_review_required",
+      "survey_safe": false,
+      "review_status": "needs_review",
+      "reason": "quarantined: apple_music_resolution_risky",
+      "downstream_impact": "not eligible for automatic resolver/default mission use unless approved in a later version",
+      "alpha_action": "manual review or blocked"
+    }
+  ],
+  "alpha_blocklist_rows": [
+    {
+      "exception_id": "alpha-block-001",
+      "type": "alpha_overlay_block",
+      "entity_ref": "album:robin-s-show-me-love",
+      "source_candidate_id": "survey-f11-album-robin-s-show-me-love-081",
+      "reason": "canonical_id_collision_with_quarantined_song_recording_mix_edit_risk",
+      "blocked_surfaces": [
+        "survey_display",
+        "starter_atlas",
+        "default_mission_generation",
+        "supabase_active_candidate",
+        "openai_prompt_payload",
+        "apple_music_auto_resolution"
+      ],
+      "downstream_impact": "source remains useful for QA but is blocked from Alpha product surfaces",
+      "alpha_action": "blocked in validator/export helper"
+    }
+  ]
+}

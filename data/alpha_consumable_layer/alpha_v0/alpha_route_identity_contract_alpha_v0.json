@@ -1,0 +1,108 @@
+{
+  "artifact": "alpha_route_identity_contract",
+  "version": "alpha_v0",
+  "status": "live_generation_recovery_identity_contract",
+  "purpose": "Define stable route identity fields for Alpha mission generation, Supabase validation, Core import, and support diagnostics.",
+  "source_dispatch": "docs/alpha_backlog/live_generation_recovery_dispatch_2026_05_25.md",
+  "hard_rules": {
+    "route_items_must_come_from_candidate_pool": true,
+    "digest_or_strong_region_items_without_candidate_pool_membership_allowed": false,
+    "artist_level_route_items_allowed": false,
+    "pseudo_playable_route_items_allowed": false,
+    "display_string_identity_is_primary": false,
+    "diagnostic_artifacts_are_atlas_truth": false,
+    "mission_generation_results_promote_atlas_truth": false
+  },
+  "candidate_identity_fields": {
+    "candidate_id": {
+      "purpose": "Pool-membership identity. Mission output route.items[].candidate_id must exactly match a candidate_id present in the supplied candidate_pool.candidates or approved pool entries.",
+      "validator_use": "required exact membership check",
+      "duplicate_scope": "unique within one mission; should not repeat across the 10-mission batch unless explicitly allowed by a future batch policy"
+    },
+    "route_candidate_key": {
+      "purpose": "Canonical playable route identity independent of display text.",
+      "format": "route:{track|album}:{song_recording|album}:{canonical_entity_id}",
+      "validator_use": "preferred duplicate and batch-repeat key when present",
+      "duplicate_scope": "unique within one mission and across one generated 10-mission batch"
+    },
+    "route_batch_dedupe_key": {
+      "purpose": "Graph dedupe identity, normally copied from dedupe_group, for suppressing alternate candidate rows that resolve to the same playable object.",
+      "validator_use": "preferred cross-mission batch exclusion key when present",
+      "duplicate_scope": "unique within one mission and across one generated 10-mission batch"
+    },
+    "app_route_item_id": {
+      "purpose": "App-safe deterministic route item ID that Mission Generation should copy to route.items[].item_id.",
+      "format": "ITEM_ALPHA_[A-Z0-9_]+_[8_HEX_HASH]",
+      "validator_use": "app import item_id uniqueness and stable client storage",
+      "duplicate_scope": "unique within one mission and across one generated 10-mission batch"
+    },
+    "canonical_entity_id": {
+      "purpose": "Canonical graph object ID. This is not enough by itself when object_type is omitted.",
+      "validator_use": "secondary integrity check with canonical_object_type",
+      "duplicate_scope": "same route object should not repeat across batch"
+    },
+    "dedupe_group": {
+      "purpose": "Survey/candidate-surface dedupe identity.",
+      "validator_use": "fallback duplicate key when route_batch_dedupe_key is missing",
+      "duplicate_scope": "unique within one generated page, mission, and Alpha candidate pool export"
+    },
+    "route_display_identity_key": {
+      "purpose": "Normalized artist/title/type fallback for diagnosing display-level duplicates.",
+      "validator_use": "fallback only; do not use as primary identity when route_candidate_key exists",
+      "duplicate_scope": "unique within one mission and one generated 10-mission batch unless intentionally version-tested in a future contract"
+    }
+  },
+  "display_identity_fields": {
+    "display_name": "Preferred app-facing title for the route object.",
+    "display_label": "Same preferred display title for graph/survey compatibility.",
+    "credited_artist": "Preferred app-facing artist credit for track and album route candidates.",
+    "music_object_ref.display_name": "Atlas/reference display title; should match display_name for canonical graph route candidates.",
+    "music_object_ref.credited_artist_name": "Reference artist credit for song_recording route candidates.",
+    "internal_slug_policy": "candidate_id, canonical_entity_id, route_candidate_key, route_batch_dedupe_key, dedupe_group, and source_membership_id are internal IDs and must not be preferred UI labels."
+  },
+  "mission_output_copy_rules": [
+    "route.items[].candidate_id must copy candidate_id exactly.",
+    "route.items[].item_id should copy app_route_item_id exactly.",
+    "route.items[].route_candidate_key should copy route_candidate_key exactly when the mission schema allows it.",
+    "route.items[].route_batch_dedupe_key should copy route_batch_dedupe_key exactly when the mission schema allows it.",
+    "route.items[].display_metadata.title should use display_name.",
+    "route.items[].display_metadata.artist should use credited_artist.",
+    "route.items[].music_kit_search_hint should derive from music_kit_search_hint or preserve its artist/title components."
+  ],
+  "validation_policy": {
+    "single_mission_blockers": [
+      "duplicate route.items[].item_id",
+      "duplicate route.items[].candidate_id",
+      "duplicate route.items[].route_candidate_key when present",
+      "duplicate route.items[].route_batch_dedupe_key when present",
+      "missing route.items[].candidate_id",
+      "route.items[].candidate_id not found in supplied candidate pool",
+      "route item display identity duplicate when stronger keys are missing"
+    ],
+    "batch_blockers": [
+      "same app_route_item_id repeated across the 10-mission batch",
+      "same candidate_id repeated across the 10-mission batch",
+      "same route_candidate_key repeated across the 10-mission batch",
+      "same route_batch_dedupe_key repeated across the 10-mission batch",
+      "same route_display_identity_key repeated across the 10-mission batch when stronger keys differ or are missing"
+    ],
+    "non_blocking_review_metadata": [
+      "candidate_safety_state == alpha_safe_with_review_flags",
+      "review_gate_action == generate_allowed_store_review_flags",
+      "risk_class == high for risky_probe or trap candidates"
+    ]
+  },
+  "atlas_boundary": {
+    "route_identity_is_atlas_truth": false,
+    "candidate_pool_membership_is_taste_evidence": false,
+    "mission_generation_result_is_signal_without_user_interaction": false,
+    "valid_import_creates_promoted_landmark_region_or_dead_end": false,
+    "allowed_use": [
+      "mission_generation_request_audit",
+      "candidate_pool_hash_lineage",
+      "route import validation",
+      "support diagnostics",
+      "possible Atlas update provenance after user listening evidence exists"
+    ]
+  }
+}

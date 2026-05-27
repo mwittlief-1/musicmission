@@ -1,0 +1,223 @@
+{
+  "artifact": "alpha1_fixed_survey_intake_graph_support",
+  "version": "alpha_v0",
+  "status": "approved_graph_support_for_alpha1_fixed_intake",
+  "product_decision_source": "docs/app_dev/alpha_product_decision_addendum_2026_05_22.md",
+  "contract_boundary": {
+    "graph_lane_owns": [
+      "approved candidate surface availability",
+      "candidate eligibility guardrails",
+      "quarantine and suppression enforcement",
+      "reference-only graph metadata",
+      "MusicKit/version-risk notes"
+    ],
+    "survey_lane_owns": [
+      "live page selection",
+      "shown page freezing",
+      "displayed page history",
+      "final page composition",
+      "adaptive trigger sequencing",
+      "reaction language",
+      "tile UI behavior",
+      "survey evidence export assembly"
+    ],
+    "core_lane_owns": [
+      "first-run state machine",
+      "page display and logging",
+      "local persistence",
+      "post-survey generation screen"
+    ],
+    "atlas_lane_owns": [
+      "Signal ingestion",
+      "AtlasDigestView",
+      "promotion/demotion semantics",
+      "Landmark/Region/Dead End creation rules"
+    ],
+    "mission_lane_owns": [
+      "first mission batch generation",
+      "candidate ranking from Survey/Atlas evidence",
+      "mission review interpretation"
+    ]
+  },
+  "alpha1_required_intake": {
+    "tiles_per_page": 12,
+    "object_surfaces": {
+      "artist": {
+        "required_pages": 4,
+        "required_tiles": 48,
+        "allowed_source_buckets": [
+          "page1_core",
+          "page2_adaptive"
+        ],
+        "default_bucket_guidance": {
+          "page_1": "page1_core",
+          "pages_2_to_4": "page2_adaptive"
+        }
+      },
+      "album": {
+        "required_pages": 2,
+        "required_tiles": 24,
+        "allowed_source_buckets": [
+          "page1_core",
+          "page2_adaptive"
+        ],
+        "default_bucket_guidance": {
+          "page_1": "page1_core",
+          "page_2": "page2_adaptive"
+        }
+      },
+      "song_recording": {
+        "required_pages": 4,
+        "required_tiles": 48,
+        "allowed_source_buckets": [
+          "page1_core",
+          "page2_adaptive"
+        ],
+        "default_bucket_guidance": {
+          "page_1": "page1_core",
+          "pages_2_to_4": "page2_adaptive"
+        }
+      }
+    }
+  },
+  "active_candidate_availability": {
+    "artist": {
+      "page1_core": 192,
+      "page2_adaptive": 765,
+      "available_for_alpha1_intake": 957,
+      "required_tiles": 48,
+      "capacity_status": "pass"
+    },
+    "album": {
+      "page1_core": 192,
+      "page2_adaptive": 679,
+      "available_for_alpha1_intake": 871,
+      "required_tiles": 24,
+      "capacity_status": "pass"
+    },
+    "song_recording": {
+      "page1_core": 192,
+      "page2_adaptive": 780,
+      "available_for_alpha1_intake": 972,
+      "required_tiles": 48,
+      "capacity_status": "pass"
+    }
+  },
+  "source_files_allowed": [
+    "data/canonical_graph/normalization_pass_2/survey_artist_candidates_v0_2.json",
+    "data/canonical_graph/normalization_pass_2/survey_album_candidates_v0_2.json",
+    "data/canonical_graph/normalization_pass_2/survey_song_candidates_v0_2.json",
+    "data/canonical_graph/normalization_pass_2/family_survey_readiness_v0_2.json",
+    "data/canonical_graph/normalization_pass_2/archetype_readiness_v0_2.json",
+    "data/canonical_graph/normalization_pass_2/canonical_quarantine_queue.json",
+    "data/canonical_graph/normalization_pass_2/canonical_recording_versions.json",
+    "data/alpha_consumable_layer/alpha_v0/alpha_candidate_blocklist_alpha_v0.json",
+    "data/alpha_consumable_layer/alpha_v0/resolver_policy_machine_fields_alpha_v0.json",
+    "data/alpha_consumable_layer/alpha_v0/tile_log_metadata_contract_alpha_v0.json"
+  ],
+  "blocked_source_classes": [
+    "raw_family_rows",
+    "raw_canonical_entity_tables",
+    "merge_review_queue",
+    "composition_review_queue",
+    "hidden_simulation_truth",
+    "raw_apple_music_payloads",
+    "suppressed_quarantined_candidate_rows"
+  ],
+  "family_rules": {
+    "eligible_for_fast_intake": "family_survey_readiness.survey_readiness == survey_ready and fast_survey_allowed == true",
+    "context_only_blocked": [
+      15,
+      17
+    ],
+    "caution_families_allowed_with_resolver_policy": [
+      11,
+      13,
+      14,
+      16
+    ]
+  },
+  "candidate_row_requirements": [
+    "candidate_id",
+    "canonical_entity_id",
+    "object_type",
+    "family_id",
+    "archetype_ids",
+    "survey_page_role",
+    "survey_intent",
+    "dedupe_group",
+    "priority_score",
+    "trigger_rule",
+    "positive_inference",
+    "negative_inference",
+    "do_not_infer",
+    "review_status"
+  ],
+  "tile_logging_requirements": [
+    "survey_session_id",
+    "shown_page_id",
+    "shown_page_history_ref",
+    "candidate_id",
+    "canonical_entity_id",
+    "object_type",
+    "family_id",
+    "archetype_ids",
+    "survey_page_role",
+    "survey_intent",
+    "dedupe_group",
+    "priority_score",
+    "trigger_rule",
+    "shown_page_number",
+    "shown_position",
+    "user_response",
+    "familiarity_state",
+    "timestamp",
+    "apple_exposure_prior",
+    "apple_payload_reason",
+    "adaptive_reason",
+    "positive_inference",
+    "negative_inference",
+    "do_not_infer"
+  ],
+  "hard_blocks": [
+    "review_status != approved",
+    "quarantine_reasons non-empty",
+    "candidate appears in alpha_candidate_blocklist",
+    "typed entity ref appears in canonical_quarantine_queue",
+    "song recording missing canonical_recording_versions row",
+    "song recording review_status != approved",
+    "song recording survey_safe != true",
+    "song recording apple_music_resolution_policy == manual_review_required",
+    "family is context_only",
+    "archetype readiness is context_only for Fast Survey"
+  ],
+  "dedupe_rules": {
+    "within_page": [
+      "no duplicate candidate_id",
+      "no duplicate canonical_entity_id",
+      "no duplicate dedupe_group"
+    ],
+    "across_fixed_intake": [
+      "Survey lane may repeat a dedupe group only if explicitly marked as a version/composition test; Alpha default should avoid repeats."
+    ]
+  },
+  "graph_truth_rules": {
+    "graph_metadata_taste_truth": false,
+    "survey_response_creates_atlas_role": false,
+    "survey_response_creates_landmark_region_or_dead_end": false,
+    "apple_payload_is_taste_truth": false,
+    "apple_payload_is_identity_truth": false
+  },
+  "survey_evidence_export_ingestion": {
+    "atlas_ingestable_path": "survey_evidence_export.atlas_ingestable.evidence_atoms",
+    "must_ignore_path": "survey_evidence_export.construction_only_excluded",
+    "same_session_display_history_required": true,
+    "dont_know_mapping": "familiarity_uncertainty",
+    "evidence_strength_hint_policy": "survey_metadata_only_not_atlas_confidence"
+  },
+  "pass_fail": {
+    "safe_to_send_to_supabase": "pass_when_validator_passes_and_only_approved_candidate_rows_are included",
+    "safe_to_send_to_openai": "pass_when_payload_is_compact_candidate_pool_or_tile_log_context_only_and_excludes_raw_graph_rows",
+    "safe_for_alpha1_fixed_intake": "pass"
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/atlas_music_object_ref_alpha_v0.schema.json",
+  "title": "Waymark Atlas music_object_ref Alpha v0",
+  "description": "Standalone Alpha v0 reference contract aligned to Atlas Schema Contract v0.1. This is a reference shape only; it carries object identity and resolution context, never user taste.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "object_type",
+    "ref_source",
+    "canonical_artist_id",
+    "canonical_album_id",
+    "canonical_song_recording_id",
+    "composition_placeholder_id",
+    "user_music_object_id",
+    "external_catalog_refs",
+    "display_name",
+    "resolution_state",
+    "composition_policy_status"
+  ],
+  "properties": {
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "artist",
+        "album",
+        "song_recording",
+        "composition_placeholder"
+      ]
+    },
+    "ref_source": {
+      "type": "string",
+      "enum": [
+        "canonical_graph",
+        "user_local",
+        "external_catalog",
+        "unresolved"
+      ]
+    },
+    "canonical_artist_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "canonical_album_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "canonical_song_recording_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "composition_placeholder_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "user_music_object_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "external_catalog_refs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "credited_artist_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "credit_context": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "solo",
+        "group",
+        "duet",
+        "featured",
+        "cast",
+        "church_brand",
+        "producer_project",
+        "fictional_performer",
+        "various_artists",
+        "unknown",
+        "not_applicable",
+        null
+      ]
+    },
+    "resolution_state": {
+      "type": "string",
+      "enum": [
+        "resolved",
+        "needs_resolution",
+        "intentionally_user_local"
+      ]
+    },
+    "composition_policy_status": {
+      "type": "string",
+      "enum": [
+        "resolved",
+        "needs_review",
+        "not_applicable",
+        "no_review_needed",
+        "composition_first_required",
+        "split_confirmed"
+      ]
+    },
+    "recording_variant_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "source",
+        "hit_cover",
+        "live",
+        "radio_edit",
+        "remix",
+        "clean",
+        "explicit",
+        "cast",
+        "soundtrack_pop",
+        "traditional_arrangement",
+        "studio",
+        "unknown",
+        null
+      ]
+    },
+    "canonical_membership_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "family_numbers": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "archetype_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "membership_role_notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "ref_source": {
+            "const": "canonical_graph"
+          },
+          "object_type": {
+            "const": "artist"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "canonical_artist_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "ref_source": {
+            "const": "canonical_graph"
+          },
+          "object_type": {
+            "const": "album"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "canonical_album_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "ref_source": {
+            "const": "canonical_graph"
+          },
+          "object_type": {
+            "const": "song_recording"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "canonical_song_recording_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "object_type": {
+            "const": "composition_placeholder"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "composition_placeholder_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "ref_source": {
+            "const": "user_local"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "user_music_object_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resolution_state": {
+            "const": "intentionally_user_local"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "ref_source": {
+            "const": "external_catalog"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "external_catalog_refs": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "ref_source": {
+            "const": "unresolved"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "resolution_state": {
+            "const": "needs_resolution"
+          }
+        }
+      }
+    }
+  ]
+}

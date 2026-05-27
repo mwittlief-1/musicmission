@@ -1,0 +1,3801 @@
+{
+  "artifact": "candidate_review_risk_report",
+  "version": "alpha_v0",
+  "alpha_contract_version": "alpha_v0",
+  "generated_at": "2026-05-25T12:50:19.832Z",
+  "status": "route_candidate_review_risk_clear",
+  "purpose": "Expose route-ready candidate safety metadata so Mission Generation/Supabase can store review flags without false hard review gates.",
+  "source_candidate_pool": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+  "summary": {
+    "total_route_candidates": 72,
+    "default_alpha_mission_eligible": 72,
+    "hard_blocked": 0,
+    "track_candidates": 50,
+    "album_candidates": 22,
+    "artist_candidates": 0,
+    "waypoints": 12,
+    "dead_end_checks": 12
+  },
+  "counts": {
+    "by_pool": {
+      "anchors": 12,
+      "bridges": 12,
+      "probes": 12,
+      "boundary_probes": 12,
+      "dead_end_checks": 12,
+      "waypoints": 12
+    },
+    "by_object_type": {
+      "track": 50,
+      "album": 22
+    },
+    "by_risk_class": {
+      "low": 43,
+      "medium": 5,
+      "high": 24
+    },
+    "by_candidate_safety_state": {
+      "alpha_safe_default": 24,
+      "alpha_safe_with_review_flags": 48
+    },
+    "by_review_gate_action": {
+      "generate_allowed": 24,
+      "generate_allowed_store_review_flags": 48
+    },
+    "by_resolver_risk_class": {
+      "exact_recording_required": 50,
+      "album_search_selection": 22
+    }
+  },
+  "gate_policy": {
+    "hard_block_generation_when": [
+      "hard_block == true",
+      "default_alpha_mission_eligible != true",
+      "review_status != approved",
+      "quarantine_status != clear",
+      "suppression_status != active",
+      "manual_review_required == true",
+      "context_only == true",
+      "object_type not in [track, album]"
+    ],
+    "do_not_hard_block_generation_when": [
+      "candidate_safety_state == alpha_safe_with_review_flags",
+      "risk_class == medium",
+      "risk_class == high with candidate_role in [risky_probe, trap]",
+      "resolver_risk_class == album_search_selection",
+      "review_risk_flags is non-empty"
+    ],
+    "alpha_recommendation": "Store review_risk_flags/audit metadata and continue generation attempts; app import still requires valid mission.v0.2."
+  },
+  "route_candidates": [
+    {
+      "candidate_id": "survey-f1-song_recording-elvis-presley-all-shook-up-001",
+      "route_candidate_key": "route:track:song_recording:elvis-presley-all-shook-up",
+      "route_batch_dedupe_key": "song_recording:elvis-presley-all-shook-up",
+      "route_display_identity_key": "track:elvis-presley:all-shook-up",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_ELVIS_PRESLEY_ALL_SHOOK_UP_C35F2FB4",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "elvis-presley-all-shook-up",
+      "display_name": "All Shook Up",
+      "credited_artist": "Elvis Presley",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 1,
+      "archetype_ids": [
+        "001"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-1-song-001-elvis-presley-all-shook-up",
+      "music_kit_search_hint": "Elvis Presley All Shook Up",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f1-song_recording-elvis-presley-all-shook-up-001"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-1-song-001-elvis-presley-all-shook-up"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f2-song_recording-buffalo-springfield-for-what-its-worth-010",
+      "route_candidate_key": "route:track:song_recording:buffalo-springfield-for-what-its-worth",
+      "route_batch_dedupe_key": "song_recording:buffalo-springfield-for-what-its-worth",
+      "route_display_identity_key": "track:buffalo-springfield:for-what-it-s-worth",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BUFFALO_SPRINGFIELD_FOR_WHAT_ITS_WORT_8C8813FC",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "buffalo-springfield-for-what-its-worth",
+      "display_name": "For What It's Worth",
+      "credited_artist": "Buffalo Springfield",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 2,
+      "archetype_ids": [
+        "010"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-2-song-010-buffalo-springfield-for-what-its-worth",
+      "music_kit_search_hint": "Buffalo Springfield For What It's Worth",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f2-song_recording-buffalo-springfield-for-what-its-worth-010"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-2-song-010-buffalo-springfield-for-what-its-worth"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-song_recording-song-stairway-to-heaven-1971-016",
+      "route_candidate_key": "route:track:song_recording:song-stairway-to-heaven-1971",
+      "route_batch_dedupe_key": "song_recording:song-stairway-to-heaven-1971",
+      "route_display_identity_key": "track:led-zeppelin:stairway-to-heaven",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SONG_STAIRWAY_TO_HEAVEN_1971_2BCEF0CF",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "song-stairway-to-heaven-1971",
+      "display_name": "Stairway to Heaven",
+      "credited_artist": "Led Zeppelin",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "016"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-3-song-016-song-stairway-to-heaven-1971",
+      "music_kit_search_hint": "Led Zeppelin Stairway to Heaven",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-song_recording-song-stairway-to-heaven-1971-016"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-song-016-song-stairway-to-heaven-1971"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f4-song_recording-f4-024-song-american-pie-don-mclean-024",
+      "route_candidate_key": "route:track:song_recording:f4-024-song-american-pie-don-mclean",
+      "route_batch_dedupe_key": "song_recording:f4-024-song-american-pie-don-mclean",
+      "route_display_identity_key": "track:don-mclean:american-pie",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_F4_024_SONG_AMERICAN_PIE_DON_MCLEAN_F45D26C8",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "f4-024-song-american-pie-don-mclean",
+      "display_name": "American Pie",
+      "credited_artist": "Don McLean",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 4,
+      "archetype_ids": [
+        "024"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-4-song-024-f4-024-song-american-pie-don-mclean",
+      "music_kit_search_hint": "Don McLean American Pie",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f4-song_recording-f4-024-song-american-pie-don-mclean-024"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-4-song-024-f4-024-song-american-pie-don-mclean"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f5-song_recording-dolly-parton-jolene-033",
+      "route_candidate_key": "route:track:song_recording:dolly-parton-jolene",
+      "route_batch_dedupe_key": "song_recording:dolly-parton-jolene",
+      "route_display_identity_key": "track:dolly-parton:jolene",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_DOLLY_PARTON_JOLENE_A02E0969",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "dolly-parton-jolene",
+      "display_name": "Jolene",
+      "credited_artist": "Dolly Parton",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 5,
+      "archetype_ids": [
+        "033"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-5-song-033-dolly-parton-jolene",
+      "music_kit_search_hint": "Dolly Parton Jolene",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f5-song_recording-dolly-parton-jolene-033"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-5-song-033-dolly-parton-jolene"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f6-song_recording-al-green-lets-stay-together-038",
+      "route_candidate_key": "route:track:song_recording:al-green-lets-stay-together",
+      "route_batch_dedupe_key": "song_recording:al-green-lets-stay-together",
+      "route_display_identity_key": "track:al-green:let-s-stay-together",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_AL_GREEN_LETS_STAY_TOGETHER_D14BA42A",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "al-green-lets-stay-together",
+      "display_name": "Let's Stay Together",
+      "credited_artist": "Al Green",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 6,
+      "archetype_ids": [
+        "038"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-6-song-038-al-green-lets-stay-together",
+      "music_kit_search_hint": "Al Green Let's Stay Together",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f6-song_recording-al-green-lets-stay-together-038"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-6-song-038-al-green-lets-stay-together"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f7-song_recording-2pac-feat-dr-dre-california-love-047",
+      "route_candidate_key": "route:track:song_recording:2pac-feat-dr-dre-california-love",
+      "route_batch_dedupe_key": "song_recording:2pac-feat-dr-dre-california-love",
+      "route_display_identity_key": "track:2pac-feat-dr-dre:california-love",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_2PAC_FEAT_DR_DRE_CALIFORNIA_LOVE_00D2BBDA",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "2pac-feat-dr-dre-california-love",
+      "display_name": "California Love",
+      "credited_artist": "2Pac feat. Dr. Dre",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 7,
+      "archetype_ids": [
+        "047"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-7-song-047-2pac-feat-dr-dre-california-love",
+      "music_kit_search_hint": "2Pac feat. Dr. Dre California Love",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f7-song_recording-2pac-feat-dr-dre-california-love-047"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-7-song-047-2pac-feat-dr-dre-california-love"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f8-song_recording-depeche-mode-enjoy-the-silence-058",
+      "route_candidate_key": "route:track:song_recording:depeche-mode-enjoy-the-silence",
+      "route_batch_dedupe_key": "song_recording:depeche-mode-enjoy-the-silence",
+      "route_display_identity_key": "track:depeche-mode:enjoy-the-silence",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_DEPECHE_MODE_ENJOY_THE_SILENCE_0BE7C2ED",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "depeche-mode-enjoy-the-silence",
+      "display_name": "Enjoy the Silence",
+      "credited_artist": "Depeche Mode",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 8,
+      "archetype_ids": [
+        "058"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-8-song-058-depeche-mode-enjoy-the-silence",
+      "music_kit_search_hint": "Depeche Mode Enjoy the Silence",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f8-song_recording-depeche-mode-enjoy-the-silence-058"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-8-song-058-depeche-mode-enjoy-the-silence"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f9-song_recording-gojira-flying-whales-068",
+      "route_candidate_key": "route:track:song_recording:gojira-flying-whales",
+      "route_batch_dedupe_key": "song_recording:gojira-flying-whales",
+      "route_display_identity_key": "track:gojira:flying-whales",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_GOJIRA_FLYING_WHALES_7B33ED52",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "gojira-flying-whales",
+      "display_name": "Flying Whales",
+      "credited_artist": "Gojira",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 9,
+      "archetype_ids": [
+        "068"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-9-song-068-gojira-flying-whales",
+      "music_kit_search_hint": "Gojira Flying Whales",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f9-song_recording-gojira-flying-whales-068"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-9-song-068-gojira-flying-whales"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f10-song_recording-blink-182-all-the-small-things-076",
+      "route_candidate_key": "route:track:song_recording:blink-182-all-the-small-things",
+      "route_batch_dedupe_key": "song_recording:blink-182-all-the-small-things",
+      "route_display_identity_key": "track:blink-182:all-the-small-things",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BLINK_182_ALL_THE_SMALL_THINGS_568BB271",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "blink-182-all-the-small-things",
+      "display_name": "All the Small Things",
+      "credited_artist": "Blink-182",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 10,
+      "archetype_ids": [
+        "076"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-10-song-076-blink-182-all-the-small-things",
+      "music_kit_search_hint": "Blink-182 All the Small Things",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f10-song_recording-blink-182-all-the-small-things-076"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-10-song-076-blink-182-all-the-small-things"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f11-song_recording-kraftwerk-autobahn-087",
+      "route_candidate_key": "route:track:song_recording:kraftwerk-autobahn",
+      "route_batch_dedupe_key": "song_recording:kraftwerk-autobahn",
+      "route_display_identity_key": "track:kraftwerk:autobahn",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_KRAFTWERK_AUTOBAHN_10DBDD56",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "kraftwerk-autobahn",
+      "display_name": "Autobahn",
+      "credited_artist": "Kraftwerk",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "medium",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "mix_edit_remix_specificity",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 11,
+      "archetype_ids": [
+        "087"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-11-song-087-kraftwerk-autobahn",
+      "music_kit_search_hint": "Kraftwerk Autobahn",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f11-song_recording-kraftwerk-autobahn-087"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-11-song-087-kraftwerk-autobahn"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f12-song_recording-adele-rolling-in-the-deep-092",
+      "route_candidate_key": "route:track:song_recording:adele-rolling-in-the-deep",
+      "route_batch_dedupe_key": "song_recording:adele-rolling-in-the-deep",
+      "route_display_identity_key": "track:adele:rolling-in-the-deep",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_ADELE_ROLLING_IN_THE_DEEP_E162999E",
+      "pool_name": "anchors",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "adele-rolling-in-the-deep",
+      "display_name": "Rolling in the Deep",
+      "credited_artist": "Adele",
+      "candidate_role": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 12,
+      "archetype_ids": [
+        "092"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-12-song-092-adele-rolling-in-the-deep",
+      "music_kit_search_hint": "Adele Rolling in the Deep",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f12-song_recording-adele-rolling-in-the-deep-092"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-12-song-092-adele-rolling-in-the-deep"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f1-song_recording-barrett-strong-money-thats-what-i-want-006",
+      "route_candidate_key": "route:track:song_recording:barrett-strong-money-thats-what-i-want",
+      "route_batch_dedupe_key": "song_recording:barrett-strong-money-thats-what-i-want",
+      "route_display_identity_key": "track:barrett-strong:money-that-s-what-i-want",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BARRETT_STRONG_MONEY_THATS_WHAT_I_WAN_6AF64FF0",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "barrett-strong-money-thats-what-i-want",
+      "display_name": "Money (That's What I Want)",
+      "credited_artist": "Barrett Strong",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 1,
+      "archetype_ids": [
+        "006"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-1-song-006-barrett-strong-money-thats-what-i-want",
+      "music_kit_search_hint": "Barrett Strong Money (That's What I Want)",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f1-song_recording-barrett-strong-money-thats-what-i-want-006"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-1-song-006-barrett-strong-money-thats-what-i-want"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f2-song_recording-question-mark-and-the-mysterians-96-tears-011",
+      "route_candidate_key": "route:track:song_recording:question-mark-and-the-mysterians-96-tears",
+      "route_batch_dedupe_key": "song_recording:question-mark-and-the-mysterians-96-tears",
+      "route_display_identity_key": "track:and-the-mysterians:96-tears",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_QUESTION_MARK_AND_THE_MYSTERIANS_96_T_95B54831",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "question-mark-and-the-mysterians-96-tears",
+      "display_name": "96 Tears",
+      "credited_artist": "? and the Mysterians",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 2,
+      "archetype_ids": [
+        "011"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-2-song-011-question-mark-and-the-mysterians-96-tears",
+      "music_kit_search_hint": "? and the Mysterians 96 Tears",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f2-song_recording-question-mark-and-the-mysterians-96-tears-011"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-2-song-011-question-mark-and-the-mysterians-96-tears"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-song_recording-song-money-1973-018",
+      "route_candidate_key": "route:track:song_recording:song-money-1973",
+      "route_batch_dedupe_key": "song_recording:song-money-1973",
+      "route_display_identity_key": "track:pink-floyd:money",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SONG_MONEY_1973_E85FEF99",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "song-money-1973",
+      "display_name": "Money",
+      "credited_artist": "Pink Floyd",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "018"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-3-song-018-song-money-1973",
+      "music_kit_search_hint": "Pink Floyd Money",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-song_recording-song-money-1973-018"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-song-018-song-money-1973"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f4-song_recording-f4-024-song-time-in-a-bottle-jim-croce-024",
+      "route_candidate_key": "route:track:song_recording:f4-024-song-time-in-a-bottle-jim-croce",
+      "route_batch_dedupe_key": "song_recording:f4-024-song-time-in-a-bottle-jim-croce",
+      "route_display_identity_key": "track:jim-croce:time-in-a-bottle",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_F4_024_SONG_TIME_IN_A_BOTTLE_JIM_CROC_B151C070",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "f4-024-song-time-in-a-bottle-jim-croce",
+      "display_name": "Time in a Bottle",
+      "credited_artist": "Jim Croce",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 4,
+      "archetype_ids": [
+        "024"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-4-song-024-f4-024-song-time-in-a-bottle-jim-croce",
+      "music_kit_search_hint": "Jim Croce Time in a Bottle",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f4-song_recording-f4-024-song-time-in-a-bottle-jim-croce-024"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-4-song-024-f4-024-song-time-in-a-bottle-jim-croce"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f5-song_recording-glen-campbell-wichita-lineman-033",
+      "route_candidate_key": "route:track:song_recording:glen-campbell-wichita-lineman",
+      "route_batch_dedupe_key": "song_recording:glen-campbell-wichita-lineman",
+      "route_display_identity_key": "track:glen-campbell:wichita-lineman",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_GLEN_CAMPBELL_WICHITA_LINEMAN_29543E29",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "glen-campbell-wichita-lineman",
+      "display_name": "Wichita Lineman",
+      "credited_artist": "Glen Campbell",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 5,
+      "archetype_ids": [
+        "033"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-5-song-033-glen-campbell-wichita-lineman",
+      "music_kit_search_hint": "Glen Campbell Wichita Lineman",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f5-song_recording-glen-campbell-wichita-lineman-033"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-5-song-033-glen-campbell-wichita-lineman"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f6-song_recording-alicia-keys-fallin-043",
+      "route_candidate_key": "route:track:song_recording:alicia-keys-fallin",
+      "route_batch_dedupe_key": "song_recording:alicia-keys-fallin",
+      "route_display_identity_key": "track:alicia-keys:fallin",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_ALICIA_KEYS_FALLIN_CDBDC2A4",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "alicia-keys-fallin",
+      "display_name": "Fallin'",
+      "credited_artist": "Alicia Keys",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 6,
+      "archetype_ids": [
+        "043"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-6-song-043-alicia-keys-fallin",
+      "music_kit_search_hint": "Alicia Keys Fallin'",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f6-song_recording-alicia-keys-fallin-043"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-6-song-043-alicia-keys-fallin"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f7-song_recording-a-tribe-called-quest-scenario-046",
+      "route_candidate_key": "route:track:song_recording:a-tribe-called-quest-scenario",
+      "route_batch_dedupe_key": "song_recording:a-tribe-called-quest-scenario",
+      "route_display_identity_key": "track:a-tribe-called-quest:scenario",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_A_TRIBE_CALLED_QUEST_SCENARIO_B1A0AA4C",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "a-tribe-called-quest-scenario",
+      "display_name": "Scenario",
+      "credited_artist": "A Tribe Called Quest",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 7,
+      "archetype_ids": [
+        "046"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-7-song-046-a-tribe-called-quest-scenario",
+      "music_kit_search_hint": "A Tribe Called Quest Scenario",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f7-song_recording-a-tribe-called-quest-scenario-046"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-7-song-046-a-tribe-called-quest-scenario"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f8-song_recording-depeche-mode-personal-jesus-058",
+      "route_candidate_key": "route:track:song_recording:depeche-mode-personal-jesus",
+      "route_batch_dedupe_key": "song_recording:depeche-mode-personal-jesus",
+      "route_display_identity_key": "track:depeche-mode:personal-jesus",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_DEPECHE_MODE_PERSONAL_JESUS_2E66D637",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "depeche-mode-personal-jesus",
+      "display_name": "Personal Jesus",
+      "credited_artist": "Depeche Mode",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 8,
+      "archetype_ids": [
+        "058"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-8-song-058-depeche-mode-personal-jesus",
+      "music_kit_search_hint": "Depeche Mode Personal Jesus",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f8-song_recording-depeche-mode-personal-jesus-058"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-8-song-058-depeche-mode-personal-jesus"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f9-song_recording-black-sabbath-iron-man-061",
+      "route_candidate_key": "route:track:song_recording:black-sabbath-iron-man",
+      "route_batch_dedupe_key": "song_recording:black-sabbath-iron-man",
+      "route_display_identity_key": "track:black-sabbath:iron-man",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BLACK_SABBATH_IRON_MAN_BC853691",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "black-sabbath-iron-man",
+      "display_name": "Iron Man",
+      "credited_artist": "Black Sabbath",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 9,
+      "archetype_ids": [
+        "061"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-9-song-061-black-sabbath-iron-man",
+      "music_kit_search_hint": "Black Sabbath Iron Man",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f9-song_recording-black-sabbath-iron-man-061"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-9-song-061-black-sabbath-iron-man"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f10-song_recording-alice-in-chains-man-in-the-box-070",
+      "route_candidate_key": "route:track:song_recording:alice-in-chains-man-in-the-box",
+      "route_batch_dedupe_key": "song_recording:alice-in-chains-man-in-the-box",
+      "route_display_identity_key": "track:alice-in-chains:man-in-the-box",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_ALICE_IN_CHAINS_MAN_IN_THE_BOX_28DFE754",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "alice-in-chains-man-in-the-box",
+      "display_name": "Man in the Box",
+      "credited_artist": "Alice in Chains",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 10,
+      "archetype_ids": [
+        "070"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-10-song-070-alice-in-chains-man-in-the-box",
+      "music_kit_search_hint": "Alice in Chains Man in the Box",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f10-song_recording-alice-in-chains-man-in-the-box-070"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-10-song-070-alice-in-chains-man-in-the-box"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f11-song_recording-bjork-joga-087",
+      "route_candidate_key": "route:track:song_recording:bjork-joga",
+      "route_batch_dedupe_key": "song_recording:bjork-joga",
+      "route_display_identity_key": "track:bjork:joga",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BJORK_JOGA_F2B5AB62",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "bjork-joga",
+      "display_name": "Joga",
+      "credited_artist": "Bjork",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "medium",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "mix_edit_remix_specificity",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 11,
+      "archetype_ids": [
+        "087"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-11-song-087-bjork-joga",
+      "music_kit_search_hint": "Bjork Joga",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f11-song_recording-bjork-joga-087"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-11-song-087-bjork-joga"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f12-song_recording-beyonce-crazy-in-love-090",
+      "route_candidate_key": "route:track:song_recording:beyonce-crazy-in-love",
+      "route_batch_dedupe_key": "song_recording:beyonce-crazy-in-love",
+      "route_display_identity_key": "track:beyonce:crazy-in-love",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BEYONCE_CRAZY_IN_LOVE_3206F996",
+      "pool_name": "bridges",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "beyonce-crazy-in-love",
+      "display_name": "Crazy in Love",
+      "credited_artist": "Beyonce",
+      "candidate_role": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 12,
+      "archetype_ids": [
+        "090"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-12-song-090-beyonce-crazy-in-love",
+      "music_kit_search_hint": "Beyonce Crazy in Love",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f12-song_recording-beyonce-crazy-in-love-090"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-12-song-090-beyonce-crazy-in-love"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f1-album-dick-dale-and-his-del-tones-checkered-flag-007",
+      "route_candidate_key": "route:album:album:dick-dale-and-his-del-tones-checkered-flag",
+      "route_batch_dedupe_key": "album:dick-dale-and-his-del-tones-checkered-flag",
+      "route_display_identity_key": "album:dick-dale-and-his-del-tones:checkered-flag",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_DICK_DALE_AND_HIS_DEL_TONES_CHECKERED_256CD15B",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "dick-dale-and-his-del-tones-checkered-flag",
+      "display_name": "Checkered Flag",
+      "credited_artist": "Dick Dale and His Del-Tones",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 1,
+      "archetype_ids": [
+        "007"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-1-album-007-dick-dale-and-his-del-tones-checkered-flag",
+      "music_kit_search_hint": "Dick Dale and His Del-Tones Checkered Flag album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f1-album-dick-dale-and-his-del-tones-checkered-flag-007"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-1-album-007-dick-dale-and-his-del-tones-checkered-flag"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f2-song_recording-the-balloon-farm-a-question-of-temperature-011",
+      "route_candidate_key": "route:track:song_recording:the-balloon-farm-a-question-of-temperature",
+      "route_batch_dedupe_key": "song_recording:the-balloon-farm-a-question-of-temperature",
+      "route_display_identity_key": "track:the-balloon-farm:a-question-of-temperature",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_THE_BALLOON_FARM_A_QUESTION_OF_TEMPER_D39C85D9",
+      "pool_name": "probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "the-balloon-farm-a-question-of-temperature",
+      "display_name": "A Question of Temperature",
+      "credited_artist": "The Balloon Farm",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 2,
+      "archetype_ids": [
+        "011"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-2-song-011-the-balloon-farm-a-question-of-temperature",
+      "music_kit_search_hint": "The Balloon Farm A Question of Temperature",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f2-song_recording-the-balloon-farm-a-question-of-temperature-011"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-2-song-011-the-balloon-farm-a-question-of-temperature"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-album-album-shake-your-money-maker-1990-019",
+      "route_candidate_key": "route:album:album:album-shake-your-money-maker-1990",
+      "route_batch_dedupe_key": "album:album-shake-your-money-maker-1990",
+      "route_display_identity_key": "album:the-black-crowes:shake-your-money-maker",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_ALBUM_SHAKE_YOUR_MONEY_MAKER_1990_1C5727E3",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "album-shake-your-money-maker-1990",
+      "display_name": "Shake Your Money Maker",
+      "credited_artist": "The Black Crowes",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "019"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-3-album-019-album-shake-your-money-maker-1990",
+      "music_kit_search_hint": "The Black Crowes Shake Your Money Maker album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-album-album-shake-your-money-maker-1990-019"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-album-019-album-shake-your-money-maker-1990"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f4-album-f4-029-album-brushfire-fairytales-jack-johnson-029",
+      "route_candidate_key": "route:album:album:f4-029-album-brushfire-fairytales-jack-johnson",
+      "route_batch_dedupe_key": "album:f4-029-album-brushfire-fairytales-jack-johnson",
+      "route_display_identity_key": "album:jack-johnson:brushfire-fairytales",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_F4_029_ALBUM_BRUSHFIRE_FAIRYTALES_JAC_3D392E35",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "f4-029-album-brushfire-fairytales-jack-johnson",
+      "display_name": "Brushfire Fairytales",
+      "credited_artist": "Jack Johnson",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 4,
+      "archetype_ids": [
+        "029"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-4-album-029-f4-029-album-brushfire-fairytales-jack-johnson",
+      "music_kit_search_hint": "Jack Johnson Brushfire Fairytales album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f4-album-f4-029-album-brushfire-fairytales-jack-johnson-029"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-4-album-029-f4-029-album-brushfire-fairytales-jack-johnson"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f5-song_recording-reba-mcentire-fancy-034",
+      "route_candidate_key": "route:track:song_recording:reba-mcentire-fancy",
+      "route_batch_dedupe_key": "song_recording:reba-mcentire-fancy",
+      "route_display_identity_key": "track:reba-mcentire:fancy",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_REBA_MCENTIRE_FANCY_AD8A7E29",
+      "pool_name": "probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "reba-mcentire-fancy",
+      "display_name": "Fancy",
+      "credited_artist": "Reba McEntire",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_default",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 5,
+      "archetype_ids": [
+        "034"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-5-song-034-reba-mcentire-fancy",
+      "music_kit_search_hint": "Reba McEntire Fancy",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f5-song_recording-reba-mcentire-fancy-034"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-5-song-034-reba-mcentire-fancy"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f6-album-barry-white-cant-get-enough-041",
+      "route_candidate_key": "route:album:album:barry-white-cant-get-enough",
+      "route_batch_dedupe_key": "album:barry-white-cant-get-enough",
+      "route_display_identity_key": "album:barry-white:can-t-get-enough",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_BARRY_WHITE_CANT_GET_ENOUGH_DD070702",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "barry-white-cant-get-enough",
+      "display_name": "Can't Get Enough",
+      "credited_artist": "Barry White",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 6,
+      "archetype_ids": [
+        "041"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-6-album-041-barry-white-cant-get-enough",
+      "music_kit_search_hint": "Barry White Can't Get Enough album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f6-album-barry-white-cant-get-enough-041"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-6-album-041-barry-white-cant-get-enough"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f7-album-the-roots-things-fall-apart-051",
+      "route_candidate_key": "route:album:album:the-roots-things-fall-apart",
+      "route_batch_dedupe_key": "album:the-roots-things-fall-apart",
+      "route_display_identity_key": "album:the-roots:things-fall-apart",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_THE_ROOTS_THINGS_FALL_APART_D2BCAF8C",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "the-roots-things-fall-apart",
+      "display_name": "Things Fall Apart",
+      "credited_artist": "The Roots",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 7,
+      "archetype_ids": [
+        "051"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-7-album-051-the-roots-things-fall-apart",
+      "music_kit_search_hint": "The Roots Things Fall Apart album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f7-album-the-roots-things-fall-apart-051"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-7-album-051-the-roots-things-fall-apart"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f8-album-yazoo-upstairs-at-eric-s-058",
+      "route_candidate_key": "route:album:album:yazoo-upstairs-at-eric-s",
+      "route_batch_dedupe_key": "album:yazoo-upstairs-at-eric-s",
+      "route_display_identity_key": "album:yazoo:upstairs-at-eric-s",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_YAZOO_UPSTAIRS_AT_ERIC_S_C1D951E0",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "yazoo-upstairs-at-eric-s",
+      "display_name": "Upstairs at Eric's",
+      "credited_artist": "Yazoo",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 8,
+      "archetype_ids": [
+        "058"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-8-album-058-yazoo-upstairs-at-eric-s",
+      "music_kit_search_hint": "Yazoo Upstairs at Eric's album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f8-album-yazoo-upstairs-at-eric-s-058"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-8-album-058-yazoo-upstairs-at-eric-s"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f9-album-black-sabbath-heaven-and-hell-061",
+      "route_candidate_key": "route:album:album:black-sabbath-heaven-and-hell",
+      "route_batch_dedupe_key": "album:black-sabbath-heaven-and-hell",
+      "route_display_identity_key": "album:black-sabbath:heaven-and-hell",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_BLACK_SABBATH_HEAVEN_AND_HELL_89174AD3",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "black-sabbath-heaven-and-hell",
+      "display_name": "Heaven and Hell",
+      "credited_artist": "Black Sabbath",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 9,
+      "archetype_ids": [
+        "061"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-9-album-061-black-sabbath-heaven-and-hell",
+      "music_kit_search_hint": "Black Sabbath Heaven and Hell album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f9-album-black-sabbath-heaven-and-hell-061"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-9-album-061-black-sabbath-heaven-and-hell"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f10-album-dashboard-confessional-the-places-you-have-come-to-fear-the-most-077",
+      "route_candidate_key": "route:album:album:dashboard-confessional-the-places-you-have-come-to-fear-the-most",
+      "route_batch_dedupe_key": "album:dashboard-confessional-the-places-you-have-come-to-fear-the-most",
+      "route_display_identity_key": "album:dashboard-confessional:the-places-you-have-come-to-fear-the-most",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_DASHBOARD_CONFESSIONAL_THE_PLACES_YOU_D78CD9C4",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "dashboard-confessional-the-places-you-have-come-to-fear-the-most",
+      "display_name": "The Places You Have Come to Fear the Most",
+      "credited_artist": "Dashboard Confessional",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 10,
+      "archetype_ids": [
+        "077"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-10-album-077-dashboard-confessional-the-places-you-have-come-to-fear-the-most",
+      "music_kit_search_hint": "Dashboard Confessional The Places You Have Come to Fear the Most album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f10-album-dashboard-confessional-the-places-you-have-come-to-fear-the-most-077"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-10-album-077-dashboard-confessional-the-places-you-have-come-to-fear-the-most"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f11-album-burial-untrue-087",
+      "route_candidate_key": "route:album:album:burial-untrue",
+      "route_batch_dedupe_key": "album:burial-untrue",
+      "route_display_identity_key": "album:burial:untrue",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_BURIAL_UNTRUE_4B6009FC",
+      "pool_name": "probes",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "burial-untrue",
+      "display_name": "Untrue",
+      "credited_artist": "Burial",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "medium",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "mix_edit_remix_specificity",
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 11,
+      "archetype_ids": [
+        "087"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-11-album-087-burial-untrue",
+      "music_kit_search_hint": "Burial Untrue album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f11-album-burial-untrue-087"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-11-album-087-burial-untrue"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f13-song_recording-farruko-pepas-094",
+      "route_candidate_key": "route:track:song_recording:farruko-pepas",
+      "route_batch_dedupe_key": "song_recording:farruko-pepas",
+      "route_display_identity_key": "track:farruko:pepas",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_FARRUKO_PEPAS_5A8CBC7F",
+      "pool_name": "probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "farruko-pepas",
+      "display_name": "Pepas",
+      "credited_artist": "Farruko",
+      "candidate_role": "probe",
+      "candidate_pool_behavior": "probe",
+      "risk_class": "medium",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "language_remix_collaboration_specificity",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 13,
+      "archetype_ids": [
+        "094"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-13-song-094-farruko-pepas",
+      "music_kit_search_hint": "Farruko Pepas",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f13-song_recording-farruko-pepas-094"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-13-song-094-farruko-pepas"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f1-song_recording-link-wray-rumble-002",
+      "route_candidate_key": "route:track:song_recording:link-wray-rumble",
+      "route_batch_dedupe_key": "song_recording:link-wray-rumble",
+      "route_display_identity_key": "track:link-wray:rumble",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_LINK_WRAY_RUMBLE_439174CE",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "link-wray-rumble",
+      "display_name": "Rumble",
+      "credited_artist": "Link Wray",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 1,
+      "archetype_ids": [
+        "002"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-1-song-002-link-wray-rumble",
+      "music_kit_search_hint": "Link Wray Rumble",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f1-song_recording-link-wray-rumble-002"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-1-song-002-link-wray-rumble"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f1-song_recording-link-wray-rumble-002"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f2-song_recording-the-kingsmen-louie-louie-011",
+      "route_candidate_key": "route:track:song_recording:the-kingsmen-louie-louie",
+      "route_batch_dedupe_key": "song_recording:the-kingsmen-louie-louie",
+      "route_display_identity_key": "track:the-kingsmen:louie-louie",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_THE_KINGSMEN_LOUIE_LOUIE_D2A4B154",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "the-kingsmen-louie-louie",
+      "display_name": "Louie Louie",
+      "credited_artist": "The Kingsmen",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 2,
+      "archetype_ids": [
+        "011"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-2-song-011-the-kingsmen-louie-louie",
+      "music_kit_search_hint": "The Kingsmen Louie Louie",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f2-song_recording-the-kingsmen-louie-louie-011"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-2-song-011-the-kingsmen-louie-louie"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f2-song_recording-the-kingsmen-louie-louie-011"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-song_recording-song-owner-of-a-lonely-heart-1983-018",
+      "route_candidate_key": "route:track:song_recording:song-owner-of-a-lonely-heart-1983",
+      "route_batch_dedupe_key": "song_recording:song-owner-of-a-lonely-heart-1983",
+      "route_display_identity_key": "track:yes:owner-of-a-lonely-heart",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SONG_OWNER_OF_A_LONELY_HEART_1983_8E390BBD",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "song-owner-of-a-lonely-heart-1983",
+      "display_name": "Owner of a Lonely Heart",
+      "credited_artist": "Yes",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "018"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-3-song-018-song-owner-of-a-lonely-heart-1983",
+      "music_kit_search_hint": "Yes Owner of a Lonely Heart",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-song_recording-song-owner-of-a-lonely-heart-1983-018"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-song-018-song-owner-of-a-lonely-heart-1983"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f3-song_recording-song-owner-of-a-lonely-heart-1983-018"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f5-song_recording-kacey-musgraves-slow-burn-035",
+      "route_candidate_key": "route:track:song_recording:kacey-musgraves-slow-burn",
+      "route_batch_dedupe_key": "song_recording:kacey-musgraves-slow-burn",
+      "route_display_identity_key": "track:kacey-musgraves:slow-burn",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_KACEY_MUSGRAVES_SLOW_BURN_9D802798",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "kacey-musgraves-slow-burn",
+      "display_name": "Slow Burn",
+      "credited_artist": "Kacey Musgraves",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 5,
+      "archetype_ids": [
+        "035"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-5-song-035-kacey-musgraves-slow-burn",
+      "music_kit_search_hint": "Kacey Musgraves Slow Burn",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f5-song_recording-kacey-musgraves-slow-burn-035"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-5-song-035-kacey-musgraves-slow-burn"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f5-song_recording-kacey-musgraves-slow-burn-035"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f6-song_recording-sade-smooth-operator-041",
+      "route_candidate_key": "route:track:song_recording:sade-smooth-operator",
+      "route_batch_dedupe_key": "song_recording:sade-smooth-operator",
+      "route_display_identity_key": "track:sade:smooth-operator",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SADE_SMOOTH_OPERATOR_2D71BA9F",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "sade-smooth-operator",
+      "display_name": "Smooth Operator",
+      "credited_artist": "Sade",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 6,
+      "archetype_ids": [
+        "041"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-6-song-041-sade-smooth-operator",
+      "music_kit_search_hint": "Sade Smooth Operator",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f6-song_recording-sade-smooth-operator-041"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-6-song-041-sade-smooth-operator"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f6-song_recording-sade-smooth-operator-041"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f7-song_recording-nwa-fuck-tha-police-047",
+      "route_candidate_key": "route:track:song_recording:nwa-fuck-tha-police",
+      "route_batch_dedupe_key": "song_recording:nwa-fuck-tha-police",
+      "route_display_identity_key": "track:n-w-a:fuck-tha-police",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_NWA_FUCK_THA_POLICE_DFFE579D",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "nwa-fuck-tha-police",
+      "display_name": "Fuck tha Police",
+      "credited_artist": "N.W.A",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 7,
+      "archetype_ids": [
+        "047"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-7-song-047-nwa-fuck-tha-police",
+      "music_kit_search_hint": "N.W.A Fuck tha Police",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f7-song_recording-nwa-fuck-tha-police-047"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-7-song-047-nwa-fuck-tha-police"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f7-song_recording-nwa-fuck-tha-police-047"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f8-song_recording-suicidal-tendencies-institutionalized-055",
+      "route_candidate_key": "route:track:song_recording:suicidal-tendencies-institutionalized",
+      "route_batch_dedupe_key": "song_recording:suicidal-tendencies-institutionalized",
+      "route_display_identity_key": "track:suicidal-tendencies:institutionalized",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SUICIDAL_TENDENCIES_INSTITUTIONALIZED_EE31D6FC",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "suicidal-tendencies-institutionalized",
+      "display_name": "Institutionalized",
+      "credited_artist": "Suicidal Tendencies",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 8,
+      "archetype_ids": [
+        "055"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-8-song-055-suicidal-tendencies-institutionalized",
+      "music_kit_search_hint": "Suicidal Tendencies Institutionalized",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f8-song_recording-suicidal-tendencies-institutionalized-055"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-8-song-055-suicidal-tendencies-institutionalized"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f8-song_recording-suicidal-tendencies-institutionalized-055"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f9-song_recording-linkin-park-in-the-end-066",
+      "route_candidate_key": "route:track:song_recording:linkin-park-in-the-end",
+      "route_batch_dedupe_key": "song_recording:linkin-park-in-the-end",
+      "route_display_identity_key": "track:linkin-park:in-the-end",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_LINKIN_PARK_IN_THE_END_B6A2BCA1",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "linkin-park-in-the-end",
+      "display_name": "In the End",
+      "credited_artist": "Linkin Park",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 9,
+      "archetype_ids": [
+        "066"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-9-song-066-linkin-park-in-the-end",
+      "music_kit_search_hint": "Linkin Park In the End",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f9-song_recording-linkin-park-in-the-end-066"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-9-song-066-linkin-park-in-the-end"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f9-song_recording-linkin-park-in-the-end-066"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f10-song_recording-my-bloody-valentine-only-shallow-073",
+      "route_candidate_key": "route:track:song_recording:my-bloody-valentine-only-shallow",
+      "route_batch_dedupe_key": "song_recording:my-bloody-valentine-only-shallow",
+      "route_display_identity_key": "track:my-bloody-valentine:only-shallow",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_MY_BLOODY_VALENTINE_ONLY_SHALLOW_F38A12EA",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "my-bloody-valentine-only-shallow",
+      "display_name": "Only Shallow",
+      "credited_artist": "My Bloody Valentine",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 10,
+      "archetype_ids": [
+        "073"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-10-song-073-my-bloody-valentine-only-shallow",
+      "music_kit_search_hint": "My Bloody Valentine Only Shallow",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f10-song_recording-my-bloody-valentine-only-shallow-073"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-10-song-073-my-bloody-valentine-only-shallow"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f10-song_recording-my-bloody-valentine-only-shallow-073"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f11-song_recording-darude-sandstorm-083",
+      "route_candidate_key": "route:track:song_recording:darude-sandstorm",
+      "route_batch_dedupe_key": "song_recording:darude-sandstorm",
+      "route_display_identity_key": "track:darude:sandstorm",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_DARUDE_SANDSTORM_630FE59C",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "darude-sandstorm",
+      "display_name": "Sandstorm",
+      "credited_artist": "Darude",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "mix_edit_remix_specificity",
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 11,
+      "archetype_ids": [
+        "083"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-11-song-083-darude-sandstorm",
+      "music_kit_search_hint": "Darude Sandstorm",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f11-song_recording-darude-sandstorm-083"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-11-song-083-darude-sandstorm"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f11-song_recording-darude-sandstorm-083"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f12-song_recording-britney-spears-toxic-090",
+      "route_candidate_key": "route:track:song_recording:britney-spears-toxic",
+      "route_batch_dedupe_key": "song_recording:britney-spears-toxic",
+      "route_display_identity_key": "track:britney-spears:toxic",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BRITNEY_SPEARS_TOXIC_1A8CDE30",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "britney-spears-toxic",
+      "display_name": "Toxic",
+      "credited_artist": "Britney Spears",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 12,
+      "archetype_ids": [
+        "090"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-12-song-090-britney-spears-toxic",
+      "music_kit_search_hint": "Britney Spears Toxic",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f12-song_recording-britney-spears-toxic-090"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-12-song-090-britney-spears-toxic"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f12-song_recording-britney-spears-toxic-090"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f13-song_recording-fifty-fifty-cupid-098",
+      "route_candidate_key": "route:track:song_recording:fifty-fifty-cupid",
+      "route_batch_dedupe_key": "song_recording:fifty-fifty-cupid",
+      "route_display_identity_key": "track:fifty-fifty:cupid",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_FIFTY_FIFTY_CUPID_3FFD001E",
+      "pool_name": "boundary_probes",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "fifty-fifty-cupid",
+      "display_name": "Cupid",
+      "credited_artist": "FIFTY FIFTY",
+      "candidate_role": "risky_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "language_remix_collaboration_specificity",
+        "boundary_probe_use_with_care",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 13,
+      "archetype_ids": [
+        "098"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-13-song-098-fifty-fifty-cupid",
+      "music_kit_search_hint": "FIFTY FIFTY Cupid",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f13-song_recording-fifty-fifty-cupid-098"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-13-song-098-fifty-fifty-cupid"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f13-song_recording-fifty-fifty-cupid-098"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f2-song_recording-status-quo-pictures-of-matchstick-men-013",
+      "route_candidate_key": "route:track:song_recording:status-quo-pictures-of-matchstick-men",
+      "route_batch_dedupe_key": "song_recording:status-quo-pictures-of-matchstick-men",
+      "route_display_identity_key": "track:status-quo:pictures-of-matchstick-men",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_STATUS_QUO_PICTURES_OF_MATCHSTICK_MEN_6D02E9A9",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "status-quo-pictures-of-matchstick-men",
+      "display_name": "Pictures of Matchstick Men",
+      "credited_artist": "Status Quo",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 2,
+      "archetype_ids": [
+        "013"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-2-song-013-status-quo-pictures-of-matchstick-men",
+      "music_kit_search_hint": "Status Quo Pictures of Matchstick Men",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f2-song_recording-status-quo-pictures-of-matchstick-men-013"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-2-song-013-status-quo-pictures-of-matchstick-men"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f2-song_recording-status-quo-pictures-of-matchstick-men-013"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-song_recording-song-baby-come-back-1977-023",
+      "route_candidate_key": "route:track:song_recording:song-baby-come-back-1977",
+      "route_batch_dedupe_key": "song_recording:song-baby-come-back-1977",
+      "route_display_identity_key": "track:player:baby-come-back",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SONG_BABY_COME_BACK_1977_C762E7A9",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "song-baby-come-back-1977",
+      "display_name": "Baby Come Back",
+      "credited_artist": "Player",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "023"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-3-song-023-song-baby-come-back-1977",
+      "music_kit_search_hint": "Player Baby Come Back",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-song_recording-song-baby-come-back-1977-023"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-song-023-song-baby-come-back-1977"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f3-song_recording-song-baby-come-back-1977-023"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f4-song_recording-f4-030-song-let-her-go-passenger-030",
+      "route_candidate_key": "route:track:song_recording:f4-030-song-let-her-go-passenger",
+      "route_batch_dedupe_key": "song_recording:f4-030-song-let-her-go-passenger",
+      "route_display_identity_key": "track:passenger:let-her-go",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_F4_030_SONG_LET_HER_GO_PASSENGER_DC8B52F3",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "f4-030-song-let-her-go-passenger",
+      "display_name": "Let Her Go",
+      "credited_artist": "Passenger",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 4,
+      "archetype_ids": [
+        "030"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-4-song-030-f4-030-song-let-her-go-passenger",
+      "music_kit_search_hint": "Passenger Let Her Go",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f4-song_recording-f4-030-song-let-her-go-passenger-030"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-4-song-030-f4-030-song-let-her-go-passenger"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f4-song_recording-f4-030-song-let-her-go-passenger-030"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f7-song_recording-beastie-boys-fight-for-your-right-045",
+      "route_candidate_key": "route:track:song_recording:beastie-boys-fight-for-your-right",
+      "route_batch_dedupe_key": "song_recording:beastie-boys-fight-for-your-right",
+      "route_display_identity_key": "track:beastie-boys:fight-for-your-right",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BEASTIE_BOYS_FIGHT_FOR_YOUR_RIGHT_303C56E8",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "beastie-boys-fight-for-your-right",
+      "display_name": "Fight for Your Right",
+      "credited_artist": "Beastie Boys",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 7,
+      "archetype_ids": [
+        "045"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-7-song-045-beastie-boys-fight-for-your-right",
+      "music_kit_search_hint": "Beastie Boys Fight for Your Right",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f7-song_recording-beastie-boys-fight-for-your-right-045"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-7-song-045-beastie-boys-fight-for-your-right"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f7-song_recording-beastie-boys-fight-for-your-right-045"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f8-song_recording-butthole-surfers-pepper-060",
+      "route_candidate_key": "route:track:song_recording:butthole-surfers-pepper",
+      "route_batch_dedupe_key": "song_recording:butthole-surfers-pepper",
+      "route_display_identity_key": "track:butthole-surfers:pepper",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BUTTHOLE_SURFERS_PEPPER_85BFDEBD",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "butthole-surfers-pepper",
+      "display_name": "Pepper",
+      "credited_artist": "Butthole Surfers",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 8,
+      "archetype_ids": [
+        "060"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-8-song-060-butthole-surfers-pepper",
+      "music_kit_search_hint": "Butthole Surfers Pepper",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f8-song_recording-butthole-surfers-pepper-060"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-8-song-060-butthole-surfers-pepper"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f8-song_recording-butthole-surfers-pepper-060"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f9-song_recording-limp-bizkit-break-stuff-066",
+      "route_candidate_key": "route:track:song_recording:limp-bizkit-break-stuff",
+      "route_batch_dedupe_key": "song_recording:limp-bizkit-break-stuff",
+      "route_display_identity_key": "track:limp-bizkit:break-stuff",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_LIMP_BIZKIT_BREAK_STUFF_B5EB6F60",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "limp-bizkit-break-stuff",
+      "display_name": "Break Stuff",
+      "credited_artist": "Limp Bizkit",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 9,
+      "archetype_ids": [
+        "066"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-9-song-066-limp-bizkit-break-stuff",
+      "music_kit_search_hint": "Limp Bizkit Break Stuff",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f9-song_recording-limp-bizkit-break-stuff-066"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-9-song-066-limp-bizkit-break-stuff"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f9-song_recording-limp-bizkit-break-stuff-066"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f10-song_recording-live-lightning-crashes-071",
+      "route_candidate_key": "route:track:song_recording:live-lightning-crashes",
+      "route_batch_dedupe_key": "song_recording:live-lightning-crashes",
+      "route_display_identity_key": "track:live:lightning-crashes",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_LIVE_LIGHTNING_CRASHES_88C9EBD7",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "live-lightning-crashes",
+      "display_name": "Lightning Crashes",
+      "credited_artist": "Live",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 10,
+      "archetype_ids": [
+        "071"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-10-song-071-live-lightning-crashes",
+      "music_kit_search_hint": "Live Lightning Crashes",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f10-song_recording-live-lightning-crashes-071"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-10-song-071-live-lightning-crashes"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f10-song_recording-live-lightning-crashes-071"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f12-song_recording-black-eyed-peas-i-gotta-feeling-090",
+      "route_candidate_key": "route:track:song_recording:black-eyed-peas-i-gotta-feeling",
+      "route_batch_dedupe_key": "song_recording:black-eyed-peas-i-gotta-feeling",
+      "route_display_identity_key": "track:black-eyed-peas:i-gotta-feeling",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_BLACK_EYED_PEAS_I_GOTTA_FEELING_096DB1EC",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "black-eyed-peas-i-gotta-feeling",
+      "display_name": "I Gotta Feeling",
+      "credited_artist": "Black Eyed Peas",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 12,
+      "archetype_ids": [
+        "090"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-12-song-090-black-eyed-peas-i-gotta-feeling",
+      "music_kit_search_hint": "Black Eyed Peas I Gotta Feeling",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f12-song_recording-black-eyed-peas-i-gotta-feeling-090"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-12-song-090-black-eyed-peas-i-gotta-feeling"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f12-song_recording-black-eyed-peas-i-gotta-feeling-090"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f14-song_recording-young-holt-unlimited-soulful-strut-102",
+      "route_candidate_key": "route:track:song_recording:young-holt-unlimited-soulful-strut",
+      "route_batch_dedupe_key": "song_recording:young-holt-unlimited-soulful-strut",
+      "route_display_identity_key": "track:young-holt-unlimited:soulful-strut",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_YOUNG_HOLT_UNLIMITED_SOULFUL_STRUT_D6E1B4CC",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "young-holt-unlimited-soulful-strut",
+      "display_name": "Soulful Strut",
+      "credited_artist": "Young-Holt Unlimited",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "work_composition_recording_specificity",
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 14,
+      "archetype_ids": [
+        "102"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-14-song-102-young-holt-unlimited-soulful-strut",
+      "music_kit_search_hint": "Young-Holt Unlimited Soulful Strut",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f14-song_recording-young-holt-unlimited-soulful-strut-102"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-14-song-102-young-holt-unlimited-soulful-strut"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f14-song_recording-young-holt-unlimited-soulful-strut-102"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f16-song_recording-skillet-monster-109",
+      "route_candidate_key": "route:track:song_recording:skillet-monster",
+      "route_batch_dedupe_key": "song_recording:skillet-monster",
+      "route_display_identity_key": "track:skillet:monster",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_SKILLET_MONSTER_30EA1FED",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "skillet-monster",
+      "display_name": "Monster",
+      "credited_artist": "Skillet",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "worship_standard_church_brand_specificity",
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 16,
+      "archetype_ids": [
+        "109"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-16-song-109-skillet-monster",
+      "music_kit_search_hint": "Skillet Monster",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f16-song_recording-skillet-monster-109"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-16-song-109-skillet-monster"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f16-song_recording-skillet-monster-109"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f18-song_recording-lo-fi-girl-lofi-hip-hop-radio-120",
+      "route_candidate_key": "route:track:song_recording:lo-fi-girl-lofi-hip-hop-radio",
+      "route_batch_dedupe_key": "song_recording:lo-fi-girl-lofi-hip-hop-radio",
+      "route_display_identity_key": "track:lo-fi-girl:lofi-hip-hop-radio",
+      "app_route_item_id": "ITEM_ALPHA_TRACK_LO_FI_GIRL_LOFI_HIP_HOP_RADIO_16AEA30C",
+      "pool_name": "dead_end_checks",
+      "object_type": "track",
+      "canonical_object_type": "song_recording",
+      "canonical_entity_id": "lo-fi-girl-lofi-hip-hop-radio",
+      "display_name": "lofi hip hop radio",
+      "credited_artist": "Lo-fi Girl",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "exact_recording_required",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "exact_recording_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 18,
+      "archetype_ids": [
+        "120"
+      ],
+      "source_file": "survey_song_candidates_v0_2.json",
+      "source_membership_id": "family-18-song-120-lo-fi-girl-lofi-hip-hop-radio",
+      "music_kit_search_hint": "Lo-fi Girl lofi hip hop radio",
+      "apple_music_resolution_policy": "exact_recording_required",
+      "version_risk_note": "exact_recording_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f18-song_recording-lo-fi-girl-lofi-hip-hop-radio-120"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-18-song-120-lo-fi-girl-lofi-hip-hop-radio"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f18-song_recording-lo-fi-girl-lofi-hip-hop-radio-120"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-album-album-player-1977-023",
+      "route_candidate_key": "route:album:album:album-player-1977",
+      "route_batch_dedupe_key": "album:album-player-1977",
+      "route_display_identity_key": "album:player:player",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_ALBUM_PLAYER_1977_07C2AC26",
+      "pool_name": "dead_end_checks",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "album-player-1977",
+      "display_name": "Player",
+      "credited_artist": "Player",
+      "candidate_role": "trap",
+      "candidate_pool_behavior": "trap",
+      "risk_class": "high",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "dead_end_check_store_as_probe_not_conclusion",
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "023"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-3-album-023-album-player-1977",
+      "music_kit_search_hint": "Player Player album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-album-album-player-1977-023"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-album-023-album-player-1977"
+        },
+        {
+          "ref_type": "dead_end_probe",
+          "ref_id": "probe-survey-f3-album-album-player-1977-023"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f1-album-jerry-lee-lewis-jerry-lees-greatest-001",
+      "route_candidate_key": "route:album:album:jerry-lee-lewis-jerry-lees-greatest",
+      "route_batch_dedupe_key": "album:jerry-lee-lewis-jerry-lees-greatest",
+      "route_display_identity_key": "album:jerry-lee-lewis:jerry-lee-s-greatest",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_JERRY_LEE_LEWIS_JERRY_LEES_GREATEST_5FF77EEB",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "jerry-lee-lewis-jerry-lees-greatest",
+      "display_name": "Jerry Lee's Greatest!",
+      "credited_artist": "Jerry Lee Lewis",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 1,
+      "archetype_ids": [
+        "001"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-1-album-001-jerry-lee-lewis-jerry-lees-greatest",
+      "music_kit_search_hint": "Jerry Lee Lewis Jerry Lee's Greatest! album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f1-album-jerry-lee-lewis-jerry-lees-greatest-001"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-1-album-001-jerry-lee-lewis-jerry-lees-greatest"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f2-album-nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968-011",
+      "route_candidate_key": "route:album:album:nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+      "route_batch_dedupe_key": "album:nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+      "route_display_identity_key": "album:various-artists:nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_NUGGETS_ORIGINAL_ARTYFACTS_FROM_THE_F_190C9B8C",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+      "display_name": "Nuggets: Original Artyfacts From the First Psychedelic Era, 1965-1968",
+      "credited_artist": "Various Artists",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 2,
+      "archetype_ids": [
+        "011"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-2-album-011-nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968",
+      "music_kit_search_hint": "Various Artists Nuggets: Original Artyfacts From the First Psychedelic Era, 1965-1968 album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f2-album-nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968-011"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-2-album-011-nuggets-original-artyfacts-from-the-first-psychedelic-era-1965-1968"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f3-album-album-the-stranger-1977-022",
+      "route_candidate_key": "route:album:album:album-the-stranger-1977",
+      "route_batch_dedupe_key": "album:album-the-stranger-1977",
+      "route_display_identity_key": "album:billy-joel:the-stranger",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_ALBUM_THE_STRANGER_1977_F524A759",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "album-the-stranger-1977",
+      "display_name": "The Stranger",
+      "credited_artist": "Billy Joel",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 3,
+      "archetype_ids": [
+        "022"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-3-album-022-album-the-stranger-1977",
+      "music_kit_search_hint": "Billy Joel The Stranger album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f3-album-album-the-stranger-1977-022"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-3-album-022-album-the-stranger-1977"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f4-album-f4-024-album-sweet-baby-james-james-taylor-024",
+      "route_candidate_key": "route:album:album:f4-024-album-sweet-baby-james-james-taylor",
+      "route_batch_dedupe_key": "album:f4-024-album-sweet-baby-james-james-taylor",
+      "route_display_identity_key": "album:james-taylor:sweet-baby-james",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_F4_024_ALBUM_SWEET_BABY_JAMES_JAMES_T_C2FCF26B",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "f4-024-album-sweet-baby-james-james-taylor",
+      "display_name": "Sweet Baby James",
+      "credited_artist": "James Taylor",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 4,
+      "archetype_ids": [
+        "024"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-4-album-024-f4-024-album-sweet-baby-james-james-taylor",
+      "music_kit_search_hint": "James Taylor Sweet Baby James album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f4-album-f4-024-album-sweet-baby-james-james-taylor-024"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-4-album-024-f4-024-album-sweet-baby-james-james-taylor"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f5-album-kenny-rogers-the-gambler-033",
+      "route_candidate_key": "route:album:album:kenny-rogers-the-gambler",
+      "route_batch_dedupe_key": "album:kenny-rogers-the-gambler",
+      "route_display_identity_key": "album:kenny-rogers:the-gambler",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_KENNY_ROGERS_THE_GAMBLER_2E6157D0",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "kenny-rogers-the-gambler",
+      "display_name": "The Gambler",
+      "credited_artist": "Kenny Rogers",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 5,
+      "archetype_ids": [
+        "033"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-5-album-033-kenny-rogers-the-gambler",
+      "music_kit_search_hint": "Kenny Rogers The Gambler album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f5-album-kenny-rogers-the-gambler-033"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-5-album-033-kenny-rogers-the-gambler"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f6-album-aaliyah-one-in-a-million-042",
+      "route_candidate_key": "route:album:album:aaliyah-one-in-a-million",
+      "route_batch_dedupe_key": "album:aaliyah-one-in-a-million",
+      "route_display_identity_key": "album:aaliyah:one-in-a-million",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_AALIYAH_ONE_IN_A_MILLION_0A20C4AC",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "aaliyah-one-in-a-million",
+      "display_name": "One in a Million",
+      "credited_artist": "Aaliyah",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 6,
+      "archetype_ids": [
+        "042"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-6-album-042-aaliyah-one-in-a-million",
+      "music_kit_search_hint": "Aaliyah One in a Million album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f6-album-aaliyah-one-in-a-million-042"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-6-album-042-aaliyah-one-in-a-million"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f7-album-2pac-me-against-the-world-047",
+      "route_candidate_key": "route:album:album:2pac-me-against-the-world",
+      "route_batch_dedupe_key": "album:2pac-me-against-the-world",
+      "route_display_identity_key": "album:2pac:me-against-the-world",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_2PAC_ME_AGAINST_THE_WORLD_47A6D41C",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "2pac-me-against-the-world",
+      "display_name": "Me Against the World",
+      "credited_artist": "2Pac",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 7,
+      "archetype_ids": [
+        "047"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-7-album-047-2pac-me-against-the-world",
+      "music_kit_search_hint": "2Pac Me Against the World album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f7-album-2pac-me-against-the-world-047"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-7-album-047-2pac-me-against-the-world"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f8-album-joy-division-unknown-pleasures-056",
+      "route_candidate_key": "route:album:album:joy-division-unknown-pleasures",
+      "route_batch_dedupe_key": "album:joy-division-unknown-pleasures",
+      "route_display_identity_key": "album:joy-division:unknown-pleasures",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_JOY_DIVISION_UNKNOWN_PLEASURES_72409C69",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "joy-division-unknown-pleasures",
+      "display_name": "Unknown Pleasures",
+      "credited_artist": "Joy Division",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 8,
+      "archetype_ids": [
+        "056"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-8-album-056-joy-division-unknown-pleasures",
+      "music_kit_search_hint": "Joy Division Unknown Pleasures album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f8-album-joy-division-unknown-pleasures-056"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-8-album-056-joy-division-unknown-pleasures"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f9-album-black-sabbath-paranoid-061",
+      "route_candidate_key": "route:album:album:black-sabbath-paranoid",
+      "route_batch_dedupe_key": "album:black-sabbath-paranoid",
+      "route_display_identity_key": "album:black-sabbath:paranoid",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_BLACK_SABBATH_PARANOID_438BE9D1",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "black-sabbath-paranoid",
+      "display_name": "Paranoid",
+      "credited_artist": "Black Sabbath",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 9,
+      "archetype_ids": [
+        "061"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-9-album-061-black-sabbath-paranoid",
+      "music_kit_search_hint": "Black Sabbath Paranoid album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f9-album-black-sabbath-paranoid-061"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-9-album-061-black-sabbath-paranoid"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f10-album-alice-in-chains-dirt-070",
+      "route_candidate_key": "route:album:album:alice-in-chains-dirt",
+      "route_batch_dedupe_key": "album:alice-in-chains-dirt",
+      "route_display_identity_key": "album:alice-in-chains:dirt",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_ALICE_IN_CHAINS_DIRT_58A10A10",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "alice-in-chains-dirt",
+      "display_name": "Dirt",
+      "credited_artist": "Alice in Chains",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 10,
+      "archetype_ids": [
+        "070"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-10-album-070-alice-in-chains-dirt",
+      "music_kit_search_hint": "Alice in Chains Dirt album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f10-album-alice-in-chains-dirt-070"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-10-album-070-alice-in-chains-dirt"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f11-album-lcd-soundsystem-sound-of-silver-085",
+      "route_candidate_key": "route:album:album:lcd-soundsystem-sound-of-silver",
+      "route_batch_dedupe_key": "album:lcd-soundsystem-sound-of-silver",
+      "route_display_identity_key": "album:lcd-soundsystem:sound-of-silver",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_LCD_SOUNDSYSTEM_SOUND_OF_SILVER_3ECA3DC8",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "lcd-soundsystem-sound-of-silver",
+      "display_name": "Sound of Silver",
+      "credited_artist": "LCD Soundsystem",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "medium",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "mix_edit_remix_specificity",
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 11,
+      "archetype_ids": [
+        "085"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-11-album-085-lcd-soundsystem-sound-of-silver",
+      "music_kit_search_hint": "LCD Soundsystem Sound of Silver album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f11-album-lcd-soundsystem-sound-of-silver-085"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-11-album-085-lcd-soundsystem-sound-of-silver"
+        }
+      ]
+    },
+    {
+      "candidate_id": "survey-f12-album-adele-25-092",
+      "route_candidate_key": "route:album:album:adele-25",
+      "route_batch_dedupe_key": "album:adele-25",
+      "route_display_identity_key": "album:adele:25",
+      "app_route_item_id": "ITEM_ALPHA_ALBUM_ADELE_25_30A8345D",
+      "pool_name": "waypoints",
+      "object_type": "album",
+      "canonical_object_type": "album",
+      "canonical_entity_id": "adele-25",
+      "display_name": "25",
+      "credited_artist": "Adele",
+      "candidate_role": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "risk_class": "low",
+      "candidate_safety_state": "alpha_safe_with_review_flags",
+      "review_gate_status": "eligible_for_default_alpha_generation",
+      "review_gate_action": "generate_allowed_store_review_flags",
+      "default_alpha_mission_eligible": true,
+      "hard_block": false,
+      "blocked_reason": null,
+      "quarantine_status": "clear",
+      "suppression_status": "active",
+      "resolver_risk_class": "album_search_selection",
+      "review_risk_flags": [
+        "album_search_selection_required"
+      ],
+      "review_status": "approved",
+      "manual_review_required": false,
+      "context_only": false,
+      "family_id": 12,
+      "archetype_ids": [
+        "092"
+      ],
+      "source_file": "survey_album_candidates_v0_2.json",
+      "source_membership_id": "family-12-album-092-adele-25",
+      "music_kit_search_hint": "Adele 25 album",
+      "apple_music_resolution_policy": "search_selection_required",
+      "version_risk_note": "album_search_selection_required",
+      "source_evidence_refs": [
+        {
+          "ref_type": "survey_candidate",
+          "ref_id": "survey-f12-album-adele-25-092"
+        },
+        {
+          "ref_type": "source_membership",
+          "ref_id": "family-12-album-092-adele-25"
+        }
+      ]
+    }
+  ]
+}

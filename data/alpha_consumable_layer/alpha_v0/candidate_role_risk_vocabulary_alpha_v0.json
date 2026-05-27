@@ -1,0 +1,179 @@
+{
+  "artifact": "candidate_role_risk_vocabulary",
+  "version": "alpha_v0",
+  "status": "frozen_for_alpha_consumable_layer",
+  "purpose": "Define the candidate role, risk, and resolver vocabulary allowed in app/local first mission candidate pools.",
+  "mission_candidate_roles": [
+    {
+      "value": "anchor",
+      "candidate_pool_behavior": "anchor",
+      "definition": "A safe route start or comparison point supported by strong survey evidence or page1_core recognition.",
+      "allowed_sources": ["page1_core"],
+      "allowed_archetype_readiness": ["survey_ready"],
+      "openai_instruction": "Use as a known or likely-known reference point, not as a promoted Atlas Landmark."
+    },
+    {
+      "value": "bridge",
+      "candidate_pool_behavior": "bridge",
+      "definition": "A connective candidate that tests adjacency from an anchor into a nearby lane.",
+      "allowed_sources": ["page2_adaptive", "page3_deep"],
+      "allowed_archetype_readiness": ["survey_ready", "adaptive_only", "deep_only"],
+      "openai_instruction": "Explain what relationship is being tested and keep the inference scoped."
+    },
+    {
+      "value": "probe",
+      "candidate_pool_behavior": "probe",
+      "definition": "A candidate that tests promising but uncertain taste territory.",
+      "allowed_sources": ["page2_adaptive", "page3_deep"],
+      "allowed_archetype_readiness": ["survey_ready", "adaptive_only", "deep_only"],
+      "openai_instruction": "Frame as an experiment, not a recommendation certainty."
+    },
+    {
+      "value": "boundary_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "definition": "A candidate that tests a taste boundary or false-nearby edge.",
+      "allowed_sources": ["page2_adaptive", "page3_deep", "boundary_question_bank_v0_2"],
+      "allowed_archetype_readiness": ["survey_ready", "adaptive_only", "deep_only"],
+      "openai_instruction": "Use sparingly. Say what boundary it tests. Do not treat a negative response as final Dead End proof."
+    },
+    {
+      "value": "dead_end_check",
+      "candidate_pool_behavior": "trap",
+      "definition": "A cautious candidate that may look nearby but often fails for a known reason.",
+      "allowed_sources": ["dead_end_probe_candidates_v0_2"],
+      "allowed_archetype_readiness": ["survey_ready", "adaptive_only", "deep_only"],
+      "openai_instruction": "Use only when the mission design needs a controlled trap/boundary item. Never frame as a standard recommendation."
+    },
+    {
+      "value": "waypoint",
+      "candidate_pool_behavior": "waypoint",
+      "definition": "A useful but not-yet-promotable candidate for comfort, context, bridging, or weak positive evidence.",
+      "allowed_sources": ["page1_core", "page2_adaptive", "page3_deep"],
+      "allowed_archetype_readiness": ["survey_ready", "adaptive_only", "deep_only"],
+      "openai_instruction": "Use as support or connective tissue. Do not promote to Atlas Waypoint without Atlas logic."
+    },
+    {
+      "value": "palate_cleanser",
+      "candidate_pool_behavior": "waypoint",
+      "definition": "A low-risk spacing item used to keep a mission listenable between harder probes.",
+      "allowed_sources": ["page1_core", "page2_adaptive"],
+      "allowed_archetype_readiness": ["survey_ready"],
+      "openai_instruction": "Use only if it still teaches something. Avoid filler with no signal value."
+    },
+    {
+      "value": "manual_review_only",
+      "candidate_pool_behavior": "exclude",
+      "definition": "A candidate that may be useful but is blocked from automatic OpenAI mission generation until human review resolves risk.",
+      "allowed_sources": ["approved_candidate_with_manual_review_required_policy"],
+      "allowed_archetype_readiness": ["survey_ready", "adaptive_only", "deep_only", "context_only"],
+      "openai_instruction": "Do not send to OpenAI automatic mission generation."
+    }
+  ],
+  "risk_classes": [
+    {
+      "value": "low",
+      "definition": "Approved, survey-safe, unquarantined, clear object identity, low version ambiguity.",
+      "allowed_for_supabase": true,
+      "allowed_for_openai": true
+    },
+    {
+      "value": "medium",
+      "definition": "Approved and survey-safe but requires careful inference, scoped use, or known genre/context caution.",
+      "allowed_for_supabase": true,
+      "allowed_for_openai": true
+    },
+    {
+      "value": "high",
+      "definition": "Approved but likely to overfit, irritate, confuse, or test a sharp boundary if used casually.",
+      "allowed_for_supabase": true,
+      "allowed_for_openai": true,
+      "required_role": ["boundary_probe", "dead_end_check", "probe"]
+    },
+    {
+      "value": "manual_review",
+      "definition": "Potentially useful but blocked from automatic first mission generation until resolver/version/special-entity review completes.",
+      "allowed_for_supabase": false,
+      "allowed_for_openai": false
+    },
+    {
+      "value": "blocked",
+      "definition": "Suppressed, quarantined, context-only, unresolved, unsafe, or raw-graph-only candidate.",
+      "allowed_for_supabase": false,
+      "allowed_for_openai": false
+    }
+  ],
+  "candidate_pool_behavior_alignment": [
+    {
+      "candidate_pool_behavior": "anchor",
+      "mission_candidate_roles": ["anchor"],
+      "meaning": "Route start or comparison anchor. Operational only; does not create an Atlas Landmark."
+    },
+    {
+      "candidate_pool_behavior": "bridge",
+      "mission_candidate_roles": ["bridge"],
+      "meaning": "Connective test between known evidence and nearby territory."
+    },
+    {
+      "candidate_pool_behavior": "probe",
+      "mission_candidate_roles": ["probe"],
+      "meaning": "Uncertain candidate that tests promising territory."
+    },
+    {
+      "candidate_pool_behavior": "risky_probe",
+      "mission_candidate_roles": ["boundary_probe"],
+      "meaning": "False-nearby or boundary test. Use sparingly and never as a conclusion."
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "mission_candidate_roles": ["waypoint", "palate_cleanser"],
+      "meaning": "Useful support/context candidate. Does not create an Atlas Waypoint."
+    },
+    {
+      "candidate_pool_behavior": "trap",
+      "mission_candidate_roles": ["dead_end_check"],
+      "meaning": "Dead-end check or negative-control probe. Does not create an Atlas Dead End."
+    },
+    {
+      "candidate_pool_behavior": "exclude",
+      "mission_candidate_roles": ["manual_review_only"],
+      "meaning": "Keep out of automatic Survey, Mission Generation, Supabase active rows, and OpenAI prompts."
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "mission_candidate_roles": [],
+      "meaning": "Allowed only as an upstream unresolved state; local Alpha candidate pools must map to a concrete role before OpenAI."
+    }
+  ],
+  "familiarity_assumptions": [
+    "known",
+    "likely_known",
+    "unknown",
+    "likely_unknown"
+  ],
+  "source_mix_values": [
+    "apple_payload",
+    "graph_core",
+    "adaptive_bridge",
+    "false_nearby_probe",
+    "frontier_probe",
+    "waypoint_context_probe",
+    "negative_control_probe",
+    "manual_concierge"
+  ],
+  "blocked_survey_page_roles": [
+    "suppressed",
+    "quarantined",
+    "suppressed_quarantined"
+  ],
+  "allowed_survey_page_roles": [
+    "page1_core",
+    "page2_adaptive",
+    "page3_deep"
+  ],
+  "atlas_semantics": {
+    "candidate_role_is_not_atlas_role": true,
+    "survey_response_writes_provisional_evidence_only": true,
+    "dead_end_check_does_not_create_dead_end": true,
+    "waypoint_role_does_not_create_waypoint": true
+  }
+}
