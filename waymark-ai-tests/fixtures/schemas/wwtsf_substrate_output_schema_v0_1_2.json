@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Waymark WWTSF Substrate Output v0.1.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_id",
+    "source_digest_refs",
+    "source_node_interpretation_refs",
+    "not_final_user_copy",
+    "exclusion_confirmations",
+    "provisional_summary_bullets",
+    "known_anchors",
+    "candidate_regions",
+    "candidate_frontiers",
+    "candidate_dead_end_hypotheses",
+    "waypoint_notes",
+    "contradictions_or_review_needs",
+    "confidence_warnings",
+    "scope_limits",
+    "first_mission_input_hints",
+    "evidence_refs"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "waymark.wwtsf_substrate.v0.1.2" },
+    "profile_id": { "type": "string", "minLength": 1 },
+    "source_digest_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["atlas_digest_view_file", "atlas_digest_id", "atlas_records_bundle_file"],
+      "properties": {
+        "atlas_digest_view_file": { "type": "string", "minLength": 1 },
+        "atlas_digest_id": { "type": "string", "minLength": 1 },
+        "atlas_records_bundle_file": { "type": "string" }
+      }
+    },
+    "source_node_interpretation_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_interpretation_file", "source_digest_id", "node_interpretation_schema_file"],
+      "properties": {
+        "node_interpretation_file": { "type": "string", "minLength": 1 },
+        "source_digest_id": { "type": "string", "minLength": 1 },
+        "node_interpretation_schema_file": { "type": "string" }
+      }
+    },
+    "not_final_user_copy": { "type": "boolean", "const": true },
+    "exclusion_confirmations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_a3_payload_used",
+        "profile_writer_output_used",
+        "hidden_truth_used",
+        "canonical_graph_mutation_allowed",
+        "promoted_atlas_truth_assumed"
+      ],
+      "properties": {
+        "raw_a3_payload_used": { "type": "boolean", "const": false },
+        "profile_writer_output_used": { "type": "boolean", "const": false },
+        "hidden_truth_used": { "type": "boolean", "const": false },
+        "canonical_graph_mutation_allowed": { "type": "boolean", "const": false },
+        "promoted_atlas_truth_assumed": { "type": "boolean", "const": false }
+      }
+    },
+    "provisional_summary_bullets": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "known_anchors": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/substrate_item" }
+    },
+    "candidate_regions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/substrate_item" }
+    },
+    "candidate_frontiers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/substrate_item" }
+    },
+    "candidate_dead_end_hypotheses": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/substrate_item" }
+    },
+    "waypoint_notes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/substrate_item" }
+    },
+    "contradictions_or_review_needs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/review_item" }
+    },
+    "confidence_warnings": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "scope_limits": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "first_mission_input_hints": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/mission_hint" }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/evidence_ref" }
+    }
+  },
+  "$defs": {
+    "substrate_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "provisional_role", "confidence", "scope", "why_it_matters", "evidence_ref_ids", "candidate_pool_behavior", "review_needed"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "provisional_role": {
+          "type": "string",
+          "enum": ["Landmark", "Region", "Frontier", "Dead End", "Waypoint", "Unknown", "Signal only"]
+        },
+        "confidence": { "type": "string", "enum": ["low", "medium", "high", "mixed", "unknown"] },
+        "scope": { "type": "string", "minLength": 1 },
+        "why_it_matters": { "type": "string", "minLength": 1 },
+        "evidence_ref_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "candidate_pool_behavior": {
+          "type": "string",
+          "enum": ["anchor", "bridge", "probe", "risky_probe", "waypoint", "trap", "exclude", "unknown"]
+        },
+        "review_needed": { "type": "boolean" }
+      }
+    },
+    "review_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "issue_type", "why_it_needs_review", "mission_test_hint", "evidence_ref_ids"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "issue_type": {
+          "type": "string",
+          "enum": ["contradiction", "scope_limit", "underexplored", "dead_end_hypothesis", "waypoint_vs_landmark", "familiarity_not_taste", "other"]
+        },
+        "why_it_needs_review": { "type": "string", "minLength": 1 },
+        "mission_test_hint": { "type": "string", "minLength": 1 },
+        "evidence_ref_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "mission_hint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hint_id", "mission_archetype", "prompt_seed", "objective", "target_role", "risk_level", "seed_labels", "caution_notes"],
+      "properties": {
+        "hint_id": { "type": "string", "minLength": 1 },
+        "mission_archetype": { "type": "string", "minLength": 1 },
+        "prompt_seed": { "type": "string", "minLength": 1 },
+        "objective": { "type": "string", "minLength": 1 },
+        "target_role": {
+          "type": "string",
+          "enum": ["Landmark", "Region", "Frontier", "Dead End", "Waypoint", "Unknown", "Signal only"]
+        },
+        "risk_level": { "type": "string", "enum": ["low", "medium", "high"] },
+        "seed_labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "caution_notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ref_id", "source_type", "source_record_id", "summary", "supports"],
+      "properties": {
+        "ref_id": { "type": "string", "minLength": 1 },
+        "source_type": {
+          "type": "string",
+          "enum": ["atlas_digest_view", "node_interpretation", "signal", "role_assignment_policy", "possible_update_candidate", "unknown"]
+        },
+        "source_record_id": { "type": "string" },
+        "summary": { "type": "string", "minLength": 1 },
+        "supports": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

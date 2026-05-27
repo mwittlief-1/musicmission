@@ -1,0 +1,259 @@
+{
+  "schema_version": "waymark.atlas_digest.v0.1",
+  "user_id": "matt",
+  "digest_id": "matt_mission_generation_seed_v0_1",
+  "core_taste_summary": "Matt responds most strongly when songs have physical force, pressured hooks, emotional conviction, and a sense that production reveals the artist's essence rather than sanding it down. He likes intelligence, architecture, theater, and polish when they are embodied. He usually rejects music that looks adjacent on genre paper but lacks blood, body, bite, or committed persona.",
+  "landmarks": [
+    {
+      "name": "Nirvana",
+      "role": "Landmark",
+      "evidence": "Core rupture point. Useful for body force, plainspoken wound, hooks under pressure, source-code noise, and anti-slop calibration.",
+      "edge_conditions": "Nirvana does not imply approval of post-grunge, fake-hard rock, generic grunge cosplay, or sludgy seriousness without song pressure."
+    },
+    {
+      "name": "Local H",
+      "role": "Landmark",
+      "evidence": "Working-band identity, compressed guitar pressure, hooks with damage, directness without mush.",
+      "edge_conditions": "Use as evidence for pressure and identity, not as a blanket alt-rock approval signal."
+    },
+    {
+      "name": "Beatles / oldies-radio melody foundation",
+      "role": "Landmark",
+      "evidence": "Deep melody grammar, compression, singability, memory warmth, and pop craft.",
+      "edge_conditions": "Melody alone is insufficient when pressure, ache, or identity are absent."
+    },
+    {
+      "name": "Radiohead: The Bends / OK Computer",
+      "role": "Landmark",
+      "evidence": "Melodic ache, dread architecture, band identity, emotional force inside studio design.",
+      "edge_conditions": "Does not imply automatic appetite for tasteful art-rock, sleepy prestige, or heady abstraction."
+    },
+    {
+      "name": "Weezer: Blue Album / Pinkerton",
+      "role": "Landmark",
+      "evidence": "Hooks under pressure, plain wound, guitar body, self-exposure, melody with ache.",
+      "edge_conditions": "Does not imply broad emo, pop-punk, or ironic geek-rock appetite."
+    },
+    {
+      "name": "Toadies: Rubberneck",
+      "role": "Landmark",
+      "evidence": "Hard guitar songs with menace, body, and no fake-hard costume.",
+      "edge_conditions": "Useful as a slop detector for current rock."
+    },
+    {
+      "name": "Hum: You'd Prefer an Astronaut",
+      "role": "Landmark",
+      "evidence": "Heavy melodic atmosphere, pressure, scale, and body-first space-rock.",
+      "edge_conditions": "Do not turn this into generic shoegaze, post-rock, or metal appetite."
+    },
+    {
+      "name": "Type O Negative",
+      "role": "Landmark",
+      "evidence": "A singular exception where dark melodic atmosphere, commitment, absurdity, theater, and body lock together.",
+      "edge_conditions": "Do not infer broad gothic metal. Treat as one-object exception unless new evidence recurs."
+    },
+    {
+      "name": "Muse: Origin of Symmetry / Absolution",
+      "role": "Landmark",
+      "evidence": "Theatricality earned by scale, hooks, body, melodic pressure, and total commitment.",
+      "edge_conditions": "Muse does not imply Tool, A Perfect Circle, generic prog-metal, or over-serious heady heavy music."
+    },
+    {
+      "name": "The Decemberists peak-era album-worlds",
+      "role": "Landmark",
+      "evidence": "Literary theatrical world-building works when melody, commitment, and album-world logic are strong.",
+      "edge_conditions": "Does not imply generic indie-folk, soft tasteful folk, or cabaret frame."
+    },
+    {
+      "name": "Arcade Fire album-worlds",
+      "role": "Landmark",
+      "evidence": "Communal scale, album-world architecture, emotional conviction, and pressure.",
+      "edge_conditions": "Does not imply general approval of earnest indie or prestige tastefulness."
+    },
+    {
+      "name": "Taylor Swift hard persona-pop / pop architecture",
+      "role": "Landmark",
+      "evidence": "The fit is not generic pop. It is architecture, persona, bite, melodic construction, and emotional center.",
+      "edge_conditions": "Avoid generic pop sheen without persona, story pressure, or hard construction."
+    }
+  ],
+  "strong_regions": [
+    {
+      "name": "body-first alternative rock with song pressure",
+      "signals": ["body_force", "hooks_under_pressure", "working_band_identity", "plainspoken_wound"],
+      "negative_boundary": "fake-hard, post-grunge slop, scene posture"
+    },
+    {
+      "name": "album-world rock/pop",
+      "signals": ["album_world", "studio_architecture_with_blood", "emotional_conviction"],
+      "negative_boundary": "tasteful prestige without body"
+    },
+    {
+      "name": "melody with ache",
+      "signals": ["melody_with_ache", "emotional_conviction", "radio_pop_with_teeth"],
+      "negative_boundary": "adult-alt mush or vocal beauty with no pressure"
+    },
+    {
+      "name": "committed theatricality",
+      "signals": ["theatricality_earned", "literary_theatrical_world", "dark_melodic_atmosphere"],
+      "negative_boundary": "cabaret frame, theater without commitment, over-serious prog"
+    },
+    {
+      "name": "hard persona-pop",
+      "signals": ["hard_persona_pop", "studio_architecture_with_blood", "female_rupture_persona"],
+      "negative_boundary": "generic pop sheen and prestige softness"
+    }
+  ],
+  "promising_frontiers": [
+    {
+      "name": "current rock with pulse",
+      "test_goal": "Find modern guitar music that has body, conviction, and identity without fake-hard or scene-posture traps.",
+      "required_uncertainty": "Old rock love is not evidence that current rock works."
+    },
+    {
+      "name": "female art-pop with bite",
+      "test_goal": "Separate rupture persona and architecture from tasteful soft prestige pop.",
+      "required_uncertainty": "Do not assume art-pop equals fit."
+    },
+    {
+      "name": "Lithuanian artists frontier",
+      "test_goal": "Test cultural/geographic discovery without hallucinating catalog certainty or inflating weak evidence.",
+      "required_uncertainty": "Use resolver placeholders and preserve uncertainty about availability and fit."
+    },
+    {
+      "name": "era-personal routes",
+      "test_goal": "Build personal-year maps that compete with generic critic canon.",
+      "required_uncertainty": "Historical importance is not personal fit."
+    }
+  ],
+  "known_dead_ends": [
+    {
+      "name": "adult-alt / VH1 sincerity",
+      "why_it_fails": "Sincerity becomes mush when there is no pressure, bite, or specific wound.",
+      "use_in_missions": "Can be tested as a Dead End Check if the learning design is explicit."
+    },
+    {
+      "name": "post-grunge slop",
+      "why_it_fails": "Borrows surface heaviness from Nirvana/alt-rock while losing hooks under pressure and artist essence.",
+      "use_in_missions": "Use sparingly as boundary proof, not as filler."
+    },
+    {
+      "name": "fake-hard rock",
+      "why_it_fails": "Performs intensity without blood or identity.",
+      "use_in_missions": "Flag as trap in current rock tests."
+    },
+    {
+      "name": "generic prog-metal as Muse substitute",
+      "why_it_fails": "Replaces committed melodrama and hooks with heady seriousness.",
+      "use_in_missions": "Avoid Tool/APC-style routes unless used as explicit boundary checks."
+    },
+    {
+      "name": "broad emo from Jimmy Eat World",
+      "why_it_fails": "A strong Bleed American response does not license broad emo/pop-punk assumptions.",
+      "use_in_missions": "Keep evidence song/album bounded."
+    },
+    {
+      "name": "generic dance-punk from LCD Soundsystem",
+      "why_it_fails": "This Is Happening does not imply generic dance-punk appetite.",
+      "use_in_missions": "Test architecture, voice, and groove separately."
+    },
+    {
+      "name": "generic indie-folk from The Decemberists",
+      "why_it_fails": "Peak album-worlds do not imply soft folk approval.",
+      "use_in_missions": "Require committed world-building and melodic pressure."
+    },
+    {
+      "name": "broad gothic metal from Type O Negative",
+      "why_it_fails": "Type O is a singular committed exception.",
+      "use_in_missions": "Prevent one-object exception inflation."
+    },
+    {
+      "name": "prestige/tasteful indie without blood/body",
+      "why_it_fails": "Tastefulness can feel inert if the body and emotional center are missing.",
+      "use_in_missions": "Probe only when a candidate has rupture, bite, or architecture."
+    },
+    {
+      "name": "modern rock scene-posture",
+      "why_it_fails": "Signals scene identity more than song pressure or conviction.",
+      "use_in_missions": "Current rock missions should include explicit posture checks."
+    },
+    {
+      "name": "generic pop sheen without persona or architecture",
+      "why_it_fails": "Polish alone is not the fit. The fit is construction plus bite/persona.",
+      "use_in_missions": "Taylor-adjacent routes must test architecture and persona."
+    }
+  ],
+  "useful_waypoints": [
+    {
+      "name": "QOTSA",
+      "role": "Waypoint",
+      "use": "Useful shelf for groove, desert weight, and background energy. Do not promote to core canon without fresh evidence."
+    },
+    {
+      "name": "Kyuss",
+      "role": "Waypoint",
+      "use": "Desert/heavy context. Helpful shelf, not a confirmed Landmark."
+    },
+    {
+      "name": "Thee Oh Sees / Osees",
+      "role": "Waypoint",
+      "use": "Garage/psych force shelf. May supply energy and source-code noise but needs recurrence."
+    },
+    {
+      "name": "Black Keys",
+      "role": "Waypoint",
+      "use": "Some garage revival and family-safe energy. Treat as B/B+ shelf, not core identity."
+    },
+    {
+      "name": "cultural furniture / nostalgia tracks",
+      "role": "Waypoint",
+      "use": "Known songs can be useful in routes but should not become Atlas evidence automatically."
+    }
+  ],
+  "user_vocabulary": [
+    "body first, brain at the summit",
+    "blood",
+    "bite",
+    "architecture",
+    "album-world",
+    "hooks under pressure",
+    "emotional center",
+    "fake-hard",
+    "slop",
+    "scene-posture",
+    "tasteful but no body",
+    "one-object exception",
+    "Waypoint, not Landmark",
+    "B/B+ energy shelf",
+    "opens a lane",
+    "false-nearby"
+  ],
+  "taste_rules": [
+    "Emotional conviction beats vocal beauty.",
+    "Body first, brain at the summit.",
+    "Production should reveal the artist's essence.",
+    "Hooks need pressure.",
+    "Polish is fine if it has blood, bite, architecture, or emotional center.",
+    "Album-worlds matter.",
+    "Theatricality can work when fully committed.",
+    "False-nearby protection is essential."
+  ],
+  "anti_overfitting_rules": [
+    "Muse does not imply generic prog-metal or A Perfect Circle / Tool-style seriousness.",
+    "Type O Negative does not imply broad gothic metal.",
+    "LCD Soundsystem's This Is Happening does not imply generic dance-punk.",
+    "The Decemberists do not imply generic indie-folk.",
+    "Taylor Swift does not imply generic pop appetite.",
+    "Jimmy Eat World's Bleed American does not imply broad emo/pop-punk approval.",
+    "QOTSA / Kyuss are useful shelves, not core canon.",
+    "Current rock must avoid fake-hard, scene-posture, and post-grunge slop traps."
+  ],
+  "mission_generation_priorities": [
+    "Every route item needs a job.",
+    "Every item needs an expected positive and negative signal.",
+    "Feedback chips must be personalized to user, song, mission, expected signal, and reaction operation.",
+    "Use stable primary reaction operations: love, like, keep, not_for_me.",
+    "Prefer bounded update candidates over broad Atlas claims.",
+    "Use MusicKit search hints and unresolved placeholders; do not hallucinate catalog resolution."
+  ]
+}

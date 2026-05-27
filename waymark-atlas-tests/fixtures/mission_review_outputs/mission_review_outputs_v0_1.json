@@ -1,0 +1,159 @@
+{
+  "schema_version": "waymark.synthetic_mission_review_output.v0.1",
+  "fixtures": [
+    {
+      "fixture_id": "mission_review_frontier_positive_provisional",
+      "description": "A positive current-rock probe should create a Frontier candidate with recurrence and review requirements.",
+      "user_id": "user_matt_atlas_harness",
+      "mission_id": "mission:nirvana_to_current_probe",
+      "review_event_id": "mission_review_event:current_rock_probe_like",
+      "occurred_at": "2026-05-20T09:00:00-04:00",
+      "captured_at": "2026-05-20T09:00:08-04:00",
+      "subject_ref_key": "current_rock_probe",
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "node_type": "song_recording",
+      "primary_reaction_operation": "like",
+      "selected_chip_labels": ["body confirms", "current rock has pulse"],
+      "user_note": "This one has pulse without doing the fake-hard thing.",
+      "playback": {
+        "started": true,
+        "completion_ratio": 0.92,
+        "skip_time_seconds": null
+      },
+      "proposed_update": {
+        "role": "frontier",
+        "candidate_pool_behavior": "risky_probe",
+        "proposed_action": "create",
+        "review_required": true,
+        "recurrence_required_count": 3,
+        "min_distinct_sources": 2,
+        "confidence_delta": 0.22
+      },
+      "taste_feature_ids": ["taste_feature:current_rock_has_pulse", "taste_feature:body_force"]
+    },
+    {
+      "fixture_id": "mission_review_dead_end_confirmed",
+      "description": "A rejected explicit trap should strengthen Dead End evidence without mutating canonical graph.",
+      "user_id": "user_matt_atlas_harness",
+      "mission_id": "mission:adult_alt_dead_end_check",
+      "review_event_id": "mission_review_event:post_grunge_trap_not_for_me",
+      "occurred_at": "2026-05-20T09:05:00-04:00",
+      "captured_at": "2026-05-20T09:05:08-04:00",
+      "subject_ref_key": "post_grunge_trap",
+      "atlas_node_id": "atlas_node:post_grunge_trap",
+      "node_type": "song_recording",
+      "primary_reaction_operation": "not_for_me",
+      "selected_chip_labels": ["post-grunge slop", "no blood"],
+      "user_note": "Exactly the dead end. It gestures at force but has no blood.",
+      "playback": {
+        "started": true,
+        "completion_ratio": 0.37,
+        "skip_time_seconds": 82
+      },
+      "proposed_update": {
+        "role": "dead_end",
+        "candidate_pool_behavior": "trap",
+        "proposed_action": "promote",
+        "review_required": true,
+        "recurrence_required_count": 2,
+        "min_distinct_sources": 2,
+        "confidence_delta": 0.28
+      },
+      "taste_feature_ids": ["taste_feature:post_grunge_slop", "taste_feature:no_blood"]
+    },
+    {
+      "fixture_id": "mission_review_trap_unexpectedly_liked",
+      "description": "A liked trap item should create exception/cultural-furniture/reassess candidates, not erase the dead end.",
+      "user_id": "user_matt_atlas_harness",
+      "mission_id": "mission:modern_safe_risky",
+      "review_event_id": "mission_review_event:trap_liked_exception",
+      "occurred_at": "2026-05-20T09:10:00-04:00",
+      "captured_at": "2026-05-20T09:10:08-04:00",
+      "subject_ref_key": "trap_liked_artist",
+      "atlas_node_id": "atlas_node:imagine_dragons",
+      "node_type": "artist",
+      "primary_reaction_operation": "like",
+      "selected_chip_labels": ["unexpected exception", "cultural furniture"],
+      "user_note": "I don't want the lane, but this one has a weird familiar utility.",
+      "playback": {
+        "started": true,
+        "completion_ratio": 0.74,
+        "skip_time_seconds": null
+      },
+      "proposed_update": {
+        "role": "waypoint",
+        "candidate_pool_behavior": "waypoint",
+        "proposed_action": "create",
+        "review_required": true,
+        "recurrence_required_count": 3,
+        "min_distinct_sources": 2,
+        "confidence_delta": 0.12,
+        "exception_semantics": ["unexpected_exception", "cultural_furniture", "reassess_dead_end"],
+        "do_not_erase_dead_end": true,
+        "do_not_promote_broad_lane": true
+      },
+      "taste_feature_ids": ["taste_feature:cultural_furniture", "taste_feature:one_object_exception"]
+    },
+    {
+      "fixture_id": "mission_review_waypoint_clarification",
+      "description": "Keep plus B/B+ shelf chip should clarify a Waypoint role, not promote Landmark status.",
+      "user_id": "user_matt_atlas_harness",
+      "mission_id": "mission:qotsa_waypoint_check",
+      "review_event_id": "mission_review_event:qotsa_keep_waypoint",
+      "occurred_at": "2026-05-20T09:15:00-04:00",
+      "captured_at": "2026-05-20T09:15:08-04:00",
+      "subject_ref_key": "waypoint_album",
+      "atlas_node_id": "atlas_node:qotsa_songs_for_the_deaf",
+      "node_type": "album",
+      "primary_reaction_operation": "keep",
+      "selected_chip_labels": ["B/B+ energy shelf", "useful waypoint"],
+      "user_note": "Useful for routes, still not core canon.",
+      "playback": {
+        "started": true,
+        "completion_ratio": 0.86,
+        "skip_time_seconds": null
+      },
+      "proposed_update": {
+        "role": "waypoint",
+        "candidate_pool_behavior": "waypoint",
+        "proposed_action": "create",
+        "review_required": true,
+        "recurrence_required_count": 2,
+        "min_distinct_sources": 2,
+        "confidence_delta": 0.18,
+        "do_not_promote_to_landmark": true
+      },
+      "taste_feature_ids": ["taste_feature:b_b_plus_energy", "taste_feature:playlist_shelf"]
+    },
+    {
+      "fixture_id": "mission_review_skipped_item",
+      "description": "A skipped composition-placeholder item should create weak behavior evidence and needs-review state, not a role verdict.",
+      "user_id": "user_matt_atlas_harness",
+      "mission_id": "mission:composition_boundary_check",
+      "review_event_id": "mission_review_event:composition_placeholder_skip",
+      "occurred_at": "2026-05-20T09:20:00-04:00",
+      "captured_at": "2026-05-20T09:20:08-04:00",
+      "subject_ref_key": "composition_placeholder_standard",
+      "atlas_node_id": "atlas_node:house_of_the_rising_sun_standard",
+      "node_type": "composition_placeholder",
+      "primary_reaction_operation": null,
+      "selected_chip_labels": [],
+      "user_note": null,
+      "playback": {
+        "started": true,
+        "completion_ratio": 0.18,
+        "skip_time_seconds": 31
+      },
+      "proposed_update": {
+        "role": "unknown",
+        "candidate_pool_behavior": "unknown",
+        "proposed_action": "resolution_request",
+        "review_required": true,
+        "recurrence_required_count": 2,
+        "min_distinct_sources": 2,
+        "confidence_delta": 0.03
+      },
+      "taste_feature_ids": []
+    }
+  ]
+}

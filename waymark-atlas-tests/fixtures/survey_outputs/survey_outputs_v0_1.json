@@ -1,0 +1,139 @@
+{
+  "schema_version": "waymark.synthetic_survey_output.v0.1",
+  "fixtures": [
+    {
+      "fixture_id": "survey_strong_landmark_seed",
+      "description": "Highest positive survey mark for Nirvana should seed provisional Landmark evidence without final promotion.",
+      "user_id": "user_matt_atlas_harness",
+      "survey_event_id": "survey_event:nirvana_favorite",
+      "occurred_at": "2026-05-20T08:00:00-04:00",
+      "captured_at": "2026-05-20T08:00:05-04:00",
+      "subject_ref_key": "nirvana_artist",
+      "atlas_node_id": "atlas_node:nirvana_artist",
+      "node_type": "artist",
+      "reaction_value": "favorite",
+      "familiarity": "deeply_known",
+      "selected_tags": ["highest positive", "body", "hooks under pressure"],
+      "user_note": "This is core. The body and melody both hit.",
+      "seed_policy": {
+        "proposed_role": "landmark",
+        "candidate_pool_behavior": "anchor",
+        "allow_provisional_role_assignment": true,
+        "allow_promoted_role_assignment": false,
+        "review_required": true,
+        "recurrence_required_count": 2
+      },
+      "taste_feature_ids": ["taste_feature:body_force", "taste_feature:hooks_under_pressure", "taste_feature:melody_with_ache"]
+    },
+    {
+      "fixture_id": "survey_waypoint_seed",
+      "description": "QOTSA is useful and liked, but survey wording should preserve Waypoint behavior and avoid Landmark promotion.",
+      "user_id": "user_matt_atlas_harness",
+      "survey_event_id": "survey_event:qotsa_useful_like",
+      "occurred_at": "2026-05-20T08:05:00-04:00",
+      "captured_at": "2026-05-20T08:05:05-04:00",
+      "subject_ref_key": "qotsa_artist",
+      "atlas_node_id": "atlas_node:qotsa_artist",
+      "node_type": "artist",
+      "reaction_value": "like",
+      "familiarity": "familiar",
+      "selected_tags": ["useful shelf", "B/B+ energy", "bridge"],
+      "user_note": "Good and useful, but probably not canon.",
+      "seed_policy": {
+        "proposed_role": "waypoint",
+        "candidate_pool_behavior": "waypoint",
+        "allow_provisional_role_assignment": true,
+        "allow_promoted_role_assignment": false,
+        "review_required": true,
+        "recurrence_required_count": 2
+      },
+      "taste_feature_ids": ["taste_feature:b_b_plus_energy", "taste_feature:working_band_identity"]
+    },
+    {
+      "fixture_id": "survey_dead_end_seed",
+      "description": "A broad adult-alt / Tool-style false-nearby rejection should create a cautious Dead End candidate, not a sweeping final exclusion.",
+      "user_id": "user_matt_atlas_harness",
+      "survey_event_id": "survey_event:adult_alt_tool_false_nearby_not_for_me",
+      "occurred_at": "2026-05-20T08:10:00-04:00",
+      "captured_at": "2026-05-20T08:10:05-04:00",
+      "subject_ref_key": "adult_alt_lane",
+      "atlas_node_id": "atlas_node:adult_alt_lane",
+      "node_type": "genre_lane",
+      "reaction_value": "not_for_me",
+      "familiarity": "title_known",
+      "selected_tags": ["adult-alt mush", "post-grunge slop", "over-serious heady heavy"],
+      "user_note": "This looks close on paper but usually turns into fake-hard or VH1 sincerity.",
+      "seed_policy": {
+        "proposed_role": "dead_end",
+        "candidate_pool_behavior": "trap",
+        "allow_provisional_role_assignment": false,
+        "allow_promoted_role_assignment": false,
+        "review_required": true,
+        "recurrence_required_count": 2
+      },
+      "taste_feature_ids": ["taste_feature:adult_alt_mush", "taste_feature:post_grunge_slop", "taste_feature:fake_hard"]
+    },
+    {
+      "fixture_id": "survey_unknown_frontier_seed",
+      "description": "Unknown familiarity for a promising current-rock lane should stay unknown/frontier-probe only.",
+      "user_id": "user_matt_atlas_harness",
+      "survey_event_id": "survey_event:current_rock_unknown",
+      "occurred_at": "2026-05-20T08:15:00-04:00",
+      "captured_at": "2026-05-20T08:15:05-04:00",
+      "subject_ref_key": "current_rock_probe",
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "node_type": "song_recording",
+      "reaction_value": "dont_know",
+      "familiarity": "unknown",
+      "selected_tags": ["promising unknown", "current rock"],
+      "user_note": null,
+      "seed_policy": {
+        "proposed_role": "unknown",
+        "candidate_pool_behavior": "unknown",
+        "allow_provisional_role_assignment": true,
+        "allow_promoted_role_assignment": false,
+        "review_required": true,
+        "recurrence_required_count": 1
+      },
+      "taste_feature_ids": ["taste_feature:current_rock_has_pulse"]
+    },
+    {
+      "fixture_id": "survey_note_vocabulary_seed",
+      "description": "A reusable user note should create vocabulary candidates and feature references, not role truth.",
+      "user_id": "user_matt_atlas_harness",
+      "survey_event_id": "survey_event:body_fake_hard_note",
+      "occurred_at": "2026-05-20T08:20:00-04:00",
+      "captured_at": "2026-05-20T08:20:05-04:00",
+      "subject_ref_key": "local_h_artist",
+      "atlas_node_id": "atlas_node:local_h_artist",
+      "node_type": "artist",
+      "reaction_value": "note",
+      "familiarity": "familiar",
+      "selected_tags": ["body", "fake-hard"],
+      "user_note": "I like the body but not the fake-hard thing.",
+      "seed_policy": {
+        "proposed_role": "signal_only",
+        "candidate_pool_behavior": "unknown",
+        "allow_provisional_role_assignment": false,
+        "allow_promoted_role_assignment": false,
+        "review_required": true,
+        "recurrence_required_count": 2
+      },
+      "vocabulary_candidates": [
+        {
+          "term": "body",
+          "normalized_term": "body",
+          "term_type": "feature_alias",
+          "mapped_taste_feature_id": "taste_feature:body_force"
+        },
+        {
+          "term": "fake-hard",
+          "normalized_term": "fake-hard",
+          "term_type": "avoidance_label",
+          "mapped_taste_feature_id": "taste_feature:fake_hard"
+        }
+      ],
+      "taste_feature_ids": ["taste_feature:body_force", "taste_feature:fake_hard"]
+    }
+  ]
+}

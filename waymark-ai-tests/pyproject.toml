@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "waymark-ai-tests"
+version = "0.1.0"
+description = "Waymark mission-generation API test harness"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+validation = ["jsonschema>=4.0"]
+
+[project.scripts]
+waymark-mission-tests = "waymark_ai_tests.run_mission_generation_tests:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

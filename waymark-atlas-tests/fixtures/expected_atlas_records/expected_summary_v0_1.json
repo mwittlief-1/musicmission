@@ -1,0 +1,40 @@
+{
+  "schema_version": "waymark.atlas_ingestion_expected_summary.v0.1",
+  "minimum_counts": {
+    "survey_fixtures": 5,
+    "mission_review_fixtures": 5,
+    "signal": 10,
+    "atlas_node": 10,
+    "atlas_role_assignment": 4,
+    "possible_atlas_update_candidate": 8,
+    "user_vocabulary_term": 2,
+    "user_taste_feature_state": 2,
+    "atlas_digest_view": 1
+  },
+  "required_invariants": [
+    "no_canonical_graph_mutation",
+    "atlas_node_has_no_authoritative_role",
+    "survey_does_not_auto_promote_weak_evidence",
+    "mission_review_does_not_auto_promote",
+    "signal_auditability",
+    "signal_strength_separated_from_interpretation_confidence",
+    "candidate_pool_behavior_present",
+    "composition_placeholder_support",
+    "vocabulary_terms_not_automatically_canon",
+    "digest_emits_mission_usable_summaries"
+  ],
+  "required_digest_sections": [
+    "landmarks",
+    "regions",
+    "frontiers",
+    "dead_ends",
+    "waypoints",
+    "taste_feature_states",
+    "user_vocabulary_terms",
+    "recent_signals",
+    "anti_overfitting_rules",
+    "unresolved_questions",
+    "candidate_pool_behavior_summaries",
+    "suggested_candidate_roles"
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waymark.local/schemas/mission_output_v0_1.json",
+  "title": "Waymark Mission Generation Output v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mission_id",
+    "source_prompt",
+    "title",
+    "archetypes",
+    "brief",
+    "hypothesis",
+    "why_now",
+    "risk_model",
+    "route",
+    "completion_criteria",
+    "review_config",
+    "completion_summary_inputs",
+    "possible_atlas_update_candidates"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "waymark.mission_output.v0.1"
+    },
+    "mission_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archetypes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "brief": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "why_now": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overall_risk",
+        "known_traps_acknowledged",
+        "uncertainty_notes",
+        "candidate_policy"
+      ],
+      "properties": {
+        "overall_risk": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "known_traps_acknowledged": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uncertainty_notes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "candidate_policy": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "route_summary",
+        "intended_item_count",
+        "items"
+      ],
+      "properties": {
+        "route_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intended_item_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/route_item"
+          }
+        }
+      }
+    },
+    "completion_criteria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min_items_to_play",
+        "min_primary_reactions",
+        "primary_reaction_policy",
+        "min_chip_selections_for_summary",
+        "chip_selection_policy",
+        "completion_logic"
+      ],
+      "properties": {
+        "min_items_to_play": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "min_primary_reactions": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "primary_reaction_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "min_chip_selections_for_summary": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chip_selection_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "completion_logic": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requires_human_review",
+        "ready_for_app_import",
+        "default_item_review_needed_for",
+        "frontier_or_trap_review_policy",
+        "review_focus",
+        "notes"
+      ],
+      "properties": {
+        "requires_human_review": {
+          "type": "boolean"
+        },
+        "ready_for_app_import": {
+          "type": "boolean"
+        },
+        "default_item_review_needed_for": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["risky", "trap", "dead_end_check", "frontier_unknown"]
+          }
+        },
+        "frontier_or_trap_review_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_focus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "completion_summary_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/completion_summary_input"
+      }
+    },
+    "possible_atlas_update_candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/possible_atlas_update_candidate"
+      }
+    }
+  },
+  "$defs": {
+    "route_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "route_index",
+        "item_id",
+        "candidate_id",
+        "item_type",
+        "display_metadata",
+        "selection_role",
+        "risk_class",
+        "familiarity_assumption",
+        "why_selected",
+        "route_function",
+        "item_hypothesis",
+        "expected_positive_signal",
+        "expected_negative_signal",
+        "expected_features",
+        "feedback_chip_sets",
+        "music_kit_search_hint",
+        "review_state"
+      ],
+      "properties": {
+        "route_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "item_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_id": {
+          "type": "string"
+        },
+        "item_type": {
+          "type": "string",
+          "enum": ["track", "album"]
+        },
+        "display_metadata": {
+          "$ref": "#/$defs/display_metadata"
+        },
+        "selection_role": {
+          "type": "string",
+          "enum": ["anchor", "bridge", "probe", "trap", "checkpoint", "cooldown"]
+        },
+        "risk_class": {
+          "type": "string",
+          "enum": ["safe", "medium", "risky", "trap", "dead_end_check"]
+        },
+        "familiarity_assumption": {
+          "type": "string",
+          "enum": ["deeply_known", "familiar", "title_known", "unknown"]
+        },
+        "why_selected": {
+          "type": "string",
+          "minLength": 1
+        },
+        "route_function": {
+          "type": "string",
+          "minLength": 1
+        },
+        "item_hypothesis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_positive_signal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_negative_signal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_features": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "feedback_chip_sets": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["love", "like", "keep", "not_for_me"],
+          "properties": {
+            "love": {
+              "$ref": "#/$defs/feedback_chip_array"
+            },
+            "like": {
+              "$ref": "#/$defs/feedback_chip_array"
+            },
+            "keep": {
+              "$ref": "#/$defs/feedback_chip_array"
+            },
+            "not_for_me": {
+              "$ref": "#/$defs/feedback_chip_array"
+            }
+          }
+        },
+        "music_kit_search_hint": {
+          "$ref": "#/$defs/music_kit_search_hint"
+        },
+        "review_state": {
+          "$ref": "#/$defs/review_state"
+        }
+      }
+    },
+    "display_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artist", "title", "album", "release_year"],
+      "properties": {
+        "artist": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "album": {
+          "type": "string"
+        },
+        "release_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        }
+      }
+    },
+    "feedback_chip_array": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/feedback_chip"
+      }
+    },
+    "feedback_chip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chip_id",
+        "label",
+        "reaction_operation",
+        "chip_type",
+        "signal_meaning",
+        "mapped_canonical_feature_id",
+        "atlas_effect_hint",
+        "weight_hint",
+        "uses_user_vocabulary"
+      ],
+      "properties": {
+        "chip_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reaction_operation": {
+          "type": "string",
+          "enum": ["love", "like", "keep", "not_for_me"]
+        },
+        "chip_type": {
+          "type": "string",
+          "enum": [
+            "feature_signal",
+            "route_signal",
+            "boundary_signal",
+            "dead_end_signal",
+            "unexpected_exception_signal",
+            "cultural_furniture_signal",
+            "reassess_dead_end_signal",
+            "vocabulary_signal",
+            "familiarity_signal",
+            "correction_signal"
+          ]
+        },
+        "signal_meaning": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mapped_canonical_feature_id": {
+          "type": "string"
+        },
+        "atlas_effect_hint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "weight_hint": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "negative"]
+        },
+        "uses_user_vocabulary": {
+          "type": "boolean"
+        }
+      }
+    },
+    "music_kit_search_hint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "search_query",
+        "artist",
+        "title",
+        "album",
+        "preferred_version_notes",
+        "avoid_versions",
+        "resolution_status_placeholder"
+      ],
+      "properties": {
+        "search_query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artist": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "album": {
+          "type": "string"
+        },
+        "preferred_version_notes": {
+          "type": "string"
+        },
+        "avoid_versions": {
+          "type": "string"
+        },
+        "resolution_status_placeholder": {
+          "type": "string",
+          "enum": ["unresolved", "ambiguous", "unavailable_region"]
+        }
+      }
+    },
+    "review_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["needs_human_review", "review_notes", "uncertainty_flags"],
+      "properties": {
+        "needs_human_review": {
+          "type": "boolean"
+        },
+        "review_notes": {
+          "type": "string"
+        },
+        "uncertainty_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "completion_summary_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_id", "prompt", "source"],
+      "properties": {
+        "input_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "route_item_primary_reactions",
+            "chip_selections",
+            "route_item_reactions",
+            "feedback_chips",
+            "freeform_notes",
+            "resolver_results",
+            "mission_level_review"
+          ]
+        }
+      }
+    },
+    "possible_atlas_update_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_id", "trigger_conditions", "atlas_role", "confidence", "rationale", "review_required"],
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trigger_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/atlas_update_trigger_condition"
+          }
+        },
+        "atlas_role": {
+          "type": "string",
+          "enum": ["Landmark", "Region", "Frontier", "Dead End", "Waypoint", "Signal only"]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_required": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    },
+    "atlas_update_trigger_condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["condition_id", "future_reaction_operations", "required_signal", "minimum_occurrences", "condition_text"],
+      "properties": {
+        "condition_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "future_reaction_operations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["love", "like", "keep", "not_for_me"]
+          }
+        },
+        "required_signal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minimum_occurrences": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "condition_text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

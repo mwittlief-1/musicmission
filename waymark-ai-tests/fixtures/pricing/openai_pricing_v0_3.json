@@ -1,0 +1,44 @@
+{
+  "schema_version": "waymark.openai_pricing.v0.3",
+  "pricing_table_version": "openai_pricing_v0_3",
+  "pricing_table_date": "2026-05-19",
+  "unit": "usd_per_1m_tokens",
+  "processing_mode": "standard",
+  "source_urls": [
+    "https://openai.com/api/pricing/",
+    "https://developers.openai.com/api/docs/models/gpt-5.4-nano",
+    "https://platform.openai.com/docs/pricing"
+  ],
+  "notes": [
+    "Rates are manually maintained for harness-side planning estimates.",
+    "Cost estimates may differ from dashboard totals due to cached tokens, service tier, retries, failed calls, and account-level aggregation.",
+    "Batch, flex, priority, regional processing, tool calls, and long-context surcharges are not modeled in this v0.3 table."
+  ],
+  "models": {
+    "gpt-5.4-nano": {
+      "input_per_1m": 0.2,
+      "cached_input_per_1m": 0.02,
+      "output_per_1m": 1.25
+    },
+    "gpt-5.4-mini": {
+      "input_per_1m": 0.75,
+      "cached_input_per_1m": 0.075,
+      "output_per_1m": 4.5
+    },
+    "gpt-5.4": {
+      "input_per_1m": 2.5,
+      "cached_input_per_1m": 0.25,
+      "output_per_1m": 15.0
+    },
+    "gpt-5.5": {
+      "input_per_1m": 5.0,
+      "cached_input_per_1m": 0.5,
+      "output_per_1m": 30.0
+    },
+    "gpt-4.1": {
+      "input_per_1m": 2.0,
+      "cached_input_per_1m": 0.5,
+      "output_per_1m": 8.0
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "schema_version": "waymark.mission_requests.v0.1",
+  "suites": {
+    "suggested_first_five": [
+      "nirvana_to_current",
+      "lithuanian_artists_frontier",
+      "modern_safe_risky",
+      "muse_boundary_check",
+      "taylor_persona_pop"
+    ],
+    "model_matrix_first_pass": [
+      "nirvana_to_current",
+      "muse_boundary_check",
+      "taylor_persona_pop",
+      "modern_safe_risky",
+      "lithuanian_artists_frontier"
+    ],
+    "model_matrix_v0_3_core": [
+      "nirvana_to_current",
+      "muse_boundary_check",
+      "taylor_persona_pop",
+      "modern_safe_risky",
+      "lithuanian_artists_frontier"
+    ],
+    "model_matrix_v0_3_consistency": [
+      "muse_boundary_check",
+      "lithuanian_artists_frontier"
+    ],
+    "context_matrix_v0_4_core": [
+      "nirvana_to_current",
+      "muse_boundary_check",
+      "taylor_persona_pop",
+      "modern_safe_risky",
+      "lithuanian_artists_frontier"
+    ],
+    "model_matrix_consistency_candidates": [
+      "muse_boundary_check",
+      "lithuanian_artists_frontier",
+      "taylor_persona_pop"
+    ],
+    "consistency_hard_cases": [
+      "lithuanian_artists_frontier",
+      "muse_boundary_check",
+      "modern_safe_risky"
+    ]
+  },
+  "requests": [
+    {
+      "request_id": "listen_to_in_utero",
+      "prompt": "Listen to In Utero.",
+      "expected_archetypes": ["Album Route", "Memory Route"],
+      "expected_route_item_count": { "min": 6, "max": 14 },
+      "candidate_pool_file": "candidate_pool_in_utero.json",
+      "main_risks": [
+        "Treating the request as a generic Nirvana playlist.",
+        "Missing per-track evidence capture inside the album route.",
+        "Overclaiming that all Nirvana-adjacent music should work."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["Nirvana", "post-grunge", "album"],
+        "avoid_artist_terms": ["Puddle of Mudd", "Seether", "Nickelback"],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "lithuanian_artists_frontier",
+      "prompt": "Build me a mission for Lithuanian artists I might like.",
+      "expected_archetypes": ["Country/Scene Frontier Route", "Frontier Route"],
+      "expected_route_item_count": { "min": 6, "max": 12 },
+      "candidate_pool_file": "candidate_pool_lithuanian_frontier.json",
+      "main_risks": [
+        "Hallucinating catalog facts or confidence.",
+        "Using country novelty instead of personal taste logic.",
+        "Ignoring uncertainty and resolver placeholders."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["uncertainty", "Lithuanian", "unresolved"],
+        "avoid_artist_terms": [],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "modern_safe_risky",
+      "prompt": "Give me 70% safe / 30% risky modern music.",
+      "expected_archetypes": ["Safe/Risky Blend Route"],
+      "expected_route_item_count": { "min": 8, "max": 12 },
+      "candidate_pool_file": "candidate_pool_modern_safe_risky.json",
+      "main_risks": [
+        "Producing a generic modern playlist.",
+        "Ignoring the 70/30 risk mix.",
+        "Missing the distinction between safe, useful, risky, and trap."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "expected_risk_ratio": { "safe": 0.7, "risky": 0.3 },
+        "required_warning_terms": ["safe", "risky", "slop"],
+        "avoid_artist_terms": ["Imagine Dragons", "Nickelback"],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "top_1973",
+      "prompt": "Build me the top 20 songs of my taste from 1973.",
+      "expected_archetypes": ["Era Personal Route"],
+      "expected_route_item_count": { "min": 18, "max": 20 },
+      "candidate_pool_file": "candidate_pool_1973_personal_route.json",
+      "main_risks": [
+        "Producing generic 1973 critic canon.",
+        "Selecting hits by reputation instead of personal fit.",
+        "Missing traps that are culturally important but weak for Matt."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "expected_year": 1973,
+        "required_warning_terms": ["1973", "critic", "personal"],
+        "avoid_artist_terms": [],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "nirvana_to_current",
+      "prompt": "Find a route from Nirvana to something current.",
+      "expected_archetypes": ["Bridge Route"],
+      "expected_route_item_count": { "min": 7, "max": 12 },
+      "candidate_pool_file": "candidate_pool_nirvana_to_current.json",
+      "main_risks": [
+        "Falling into post-grunge slop or fake-hard current rock.",
+        "Recommending sounds-like Nirvana copies.",
+        "Skipping source-code and bridge logic."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["post-grunge", "fake-hard", "current"],
+        "avoid_artist_terms": ["Puddle of Mudd", "Seether", "Nickelback", "Creed"],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "test_current_rock",
+      "prompt": "Test whether I actually like current rock.",
+      "expected_archetypes": ["Frontier Route", "Dead End Check"],
+      "expected_route_item_count": { "min": 7, "max": 12 },
+      "candidate_pool_file": "candidate_pool_test_current_rock.json",
+      "main_risks": [
+        "Assuming modern rock is good because old rock is good.",
+        "Ignoring scene posture and fake-hard traps.",
+        "Making the route a generic current guitar playlist."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["current rock", "scene-posture", "fake-hard"],
+        "avoid_artist_terms": ["Puddle of Mudd", "Seether", "Nickelback"],
+        "waypoint_terms": ["QOTSA", "Kyuss"]
+      }
+    },
+    {
+      "request_id": "female_art_pop_with_bite",
+      "prompt": "Give me female art-pop with bite.",
+      "expected_archetypes": ["Frontier Route"],
+      "expected_route_item_count": { "min": 7, "max": 12 },
+      "candidate_pool_file": "candidate_pool_female_art_pop_with_bite.json",
+      "main_risks": [
+        "Drifting into tasteful soft prestige pop.",
+        "Ignoring persona, rupture, and construction.",
+        "Producing generic female singer-songwriter recommendations."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["bite", "persona", "tasteful"],
+        "avoid_artist_terms": [],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "no_slop_guitar_music",
+      "prompt": "Give me no-slop guitar music.",
+      "expected_archetypes": ["Nearby Road", "Frontier Route"],
+      "expected_route_item_count": { "min": 7, "max": 12 },
+      "candidate_pool_file": "candidate_pool_no_slop_guitar_music.json",
+      "main_risks": [
+        "Falling back to generic alt-rock.",
+        "Missing why each item is no-slop.",
+        "Treating heaviness as enough."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["no-slop", "fake-hard", "body"],
+        "avoid_artist_terms": ["Staind", "Nickelback", "Puddle of Mudd"],
+        "waypoint_terms": ["Osees", "Black Keys"]
+      }
+    },
+    {
+      "request_id": "muse_boundary_check",
+      "prompt": "Test whether Muse opens a heavier theatrical lane.",
+      "expected_archetypes": ["Dead End Check", "Correction Route"],
+      "expected_route_item_count": { "min": 7, "max": 11 },
+      "candidate_pool_file": "candidate_pool_muse_boundary_check.json",
+      "main_risks": [
+        "Recommending Tool/APC/prog-metal as Muse substitute.",
+        "Missing that Muse works through hooks, body, scale, and commitment.",
+        "Treating theater as enough without pop pressure."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["Muse", "prog-metal", "Tool"],
+        "avoid_artist_terms": ["Tool", "A Perfect Circle", "Dream Theater"],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "taylor_persona_pop",
+      "prompt": "Build a mission around the Taylor Swift songs that work for me and nearby modern pop.",
+      "expected_archetypes": ["Artist/Region Route"],
+      "expected_route_item_count": { "min": 7, "max": 12 },
+      "candidate_pool_file": "candidate_pool_taylor_persona_pop.json",
+      "main_risks": [
+        "Treating Taylor as generic pop appetite.",
+        "Ignoring architecture, persona, bite, and hard construction.",
+        "Selecting soft prestige or pop sheen without pressure."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["Taylor", "persona", "architecture"],
+        "avoid_artist_terms": [],
+        "waypoint_terms": []
+      }
+    },
+    {
+      "request_id": "qotsa_waypoint_check",
+      "prompt": "Do I actually like QOTSA or are they just useful background?",
+      "expected_archetypes": ["Correction Route", "Waypoint Check"],
+      "expected_route_item_count": { "min": 6, "max": 10 },
+      "candidate_pool_file": "candidate_pool_qotsa_waypoint_check.json",
+      "main_risks": [
+        "Promoting QOTSA or Kyuss to canon too quickly.",
+        "Failing to separate groove/background utility from Landmark evidence.",
+        "Making a generic stoner-rock route."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["Waypoint", "Landmark", "background"],
+        "avoid_artist_terms": [],
+        "waypoint_terms": ["QOTSA", "Queens of the Stone Age", "Kyuss"]
+      }
+    },
+    {
+      "request_id": "dead_end_adult_alt",
+      "prompt": "Test a likely dead end: adult alternative that looks close but probably fails.",
+      "expected_archetypes": ["Dead End Check"],
+      "expected_route_item_count": { "min": 6, "max": 10 },
+      "candidate_pool_file": "candidate_pool_dead_end_adult_alt.json",
+      "main_risks": [
+        "Making the mission unpleasant without learning design.",
+        "Treating adult-alt sincerity as plainspoken wound.",
+        "Failing to explain what evidence would rescue a track."
+      ],
+      "constraints": {
+        "allow_duplicate_songs": false,
+        "candidate_constrained_allowed": true,
+        "required_warning_terms": ["adult-alt", "Dead End", "mush"],
+        "avoid_artist_terms": [],
+        "waypoint_terms": []
+      }
+    }
+  ]
+}

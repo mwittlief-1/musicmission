@@ -1,0 +1,2728 @@
+{
+  "anti_overfitting_rules": [
+    "Survey and Mission Review create evidence, not final verdicts.",
+    "Do not promote Waypoints into Landmarks without recurrence and review.",
+    "Do not turn one-object exceptions into broad lane approval.",
+    "Positive trap response means unexpected exception, cultural furniture, or reassess-dead-end candidate.",
+    "Mission Generation must preserve uncertainty and write possible updates only.",
+    "Candidate Pool Builder reads candidate_pool_behavior, not AtlasNode display fields.",
+    "Signal strength and interpretation confidence must remain separate."
+  ],
+  "atlas_digest_view_contract_record": {
+    "anti_overfitting_rules": [
+      "Survey and Mission Review create evidence, not final verdicts.",
+      "Do not promote Waypoints into Landmarks without recurrence and review.",
+      "Do not turn one-object exceptions into broad lane approval.",
+      "Positive trap response means unexpected exception, cultural furniture, or reassess-dead-end candidate.",
+      "Mission Generation must preserve uncertainty and write possible updates only.",
+      "Candidate Pool Builder reads candidate_pool_behavior, not AtlasNode display fields.",
+      "Signal strength and interpretation confidence must remain separate."
+    ],
+    "digest_id": "atlas_digest_view:synthetic_v0_1",
+    "generated_at": "2026-05-20T15:19:06.758549Z",
+    "mission_context": "mission_generation_and_candidate_pool_builder",
+    "mission_relevant_constraints": [
+      "Use provisional Landmarks as anchors only with visible evidence summaries.",
+      "Use dead-end candidates as explicit boundary tests, not recommendations.",
+      "Use unknown/frontier items as probes with review-needed defaults.",
+      "Do not mutate canonical graph objects from Atlas ingestion or Mission Review."
+    ],
+    "recent_signal_ids": [
+      "signal:survey_event:nirvana_favorite",
+      "signal:survey_event:qotsa_useful_like",
+      "signal:survey_event:adult_alt_tool_false_nearby_not_for_me",
+      "signal:survey_event:current_rock_unknown",
+      "signal:survey_event:body_fake_hard_note",
+      "signal:mission_review_event:current_rock_probe_like",
+      "signal:mission_review_event:post_grunge_trap_not_for_me",
+      "signal:mission_review_event:trap_liked_exception",
+      "signal:mission_review_event:qotsa_keep_waypoint",
+      "signal:mission_review_event:composition_placeholder_skip"
+    ],
+    "record_type": "atlas_digest_view",
+    "relevant_role_assignment_ids": {
+      "dead_ends": [],
+      "frontiers": [],
+      "landmarks": [
+        "role:survey_strong_landmark_seed:landmark"
+      ],
+      "regions": [
+        "role:body_first_guitar_pressure_region:region"
+      ],
+      "waypoints": [
+        "role:survey_waypoint_seed:waypoint"
+      ]
+    },
+    "schema_version": "0.1",
+    "suggested_candidate_roles": [
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": "artist:nirvana",
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "not_applicable",
+          "credit_context": "group",
+          "credited_artist_name": "Nirvana",
+          "display_name": "Nirvana",
+          "external_catalog_refs": {},
+          "object_type": "artist",
+          "recording_variant_type": null,
+          "ref_source": "canonical_graph",
+          "resolution_state": "resolved",
+          "user_music_object_id": null
+        },
+        "reason": "Candidate Landmark seed for anchoring routes; still provisional until recurrence or review.",
+        "suggested_role": "landmark"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": "artist:qotsa",
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "not_applicable",
+          "credit_context": "group",
+          "credited_artist_name": "Queens of the Stone Age",
+          "display_name": "Queens of the Stone Age",
+          "external_catalog_refs": {},
+          "object_type": "artist",
+          "recording_variant_type": null,
+          "ref_source": "canonical_graph",
+          "resolution_state": "resolved",
+          "user_music_object_id": null
+        },
+        "reason": "Use as a useful route shelf or bridge, not as core canon.",
+        "suggested_role": "waypoint"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "no_review_needed",
+          "credit_context": "group",
+          "credited_artist_name": "Model/Actriz",
+          "display_name": "Modern Rock Probe",
+          "external_catalog_refs": {
+            "fixture_catalog_id": "external:current_rock_probe_001"
+          },
+          "object_type": "song_recording",
+          "recording_variant_type": "studio",
+          "ref_source": "external_catalog",
+          "resolution_state": "needs_resolution",
+          "user_music_object_id": null
+        },
+        "reason": "Preserve unknown state for candidate-pool caution; do not infer positive taste.",
+        "suggested_role": "unknown"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": "artist:nirvana",
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "not_applicable",
+          "credit_context": "group",
+          "credited_artist_name": "Nirvana",
+          "display_name": "Nirvana",
+          "external_catalog_refs": {},
+          "object_type": "artist",
+          "recording_variant_type": null,
+          "ref_source": "canonical_graph",
+          "resolution_state": "resolved",
+          "user_music_object_id": null
+        },
+        "reason": "Nirvana is a review-gated possible landmark with candidate_pool_behavior=anchor; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "landmark"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": "artist:qotsa",
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "not_applicable",
+          "credit_context": "group",
+          "credited_artist_name": "Queens of the Stone Age",
+          "display_name": "Queens of the Stone Age",
+          "external_catalog_refs": {},
+          "object_type": "artist",
+          "recording_variant_type": null,
+          "ref_source": "canonical_graph",
+          "resolution_state": "resolved",
+          "user_music_object_id": null
+        },
+        "reason": "Queens of the Stone Age is a review-gated possible waypoint with candidate_pool_behavior=waypoint; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "waypoint"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "no_review_needed",
+          "credit_context": "group",
+          "credited_artist_name": "Model/Actriz",
+          "display_name": "Modern Rock Probe",
+          "external_catalog_refs": {
+            "fixture_catalog_id": "external:current_rock_probe_001"
+          },
+          "object_type": "song_recording",
+          "recording_variant_type": "studio",
+          "ref_source": "external_catalog",
+          "resolution_state": "needs_resolution",
+          "user_music_object_id": null
+        },
+        "reason": "Modern Rock Probe is a review-gated possible unknown with candidate_pool_behavior=unknown; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "unknown"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "no_review_needed",
+          "credit_context": "group",
+          "credited_artist_name": "Model/Actriz",
+          "display_name": "Modern Rock Probe",
+          "external_catalog_refs": {
+            "fixture_catalog_id": "external:current_rock_probe_001"
+          },
+          "object_type": "song_recording",
+          "recording_variant_type": "studio",
+          "ref_source": "external_catalog",
+          "resolution_state": "needs_resolution",
+          "user_music_object_id": null
+        },
+        "reason": "Modern Rock Probe is a review-gated possible frontier with candidate_pool_behavior=risky_probe; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "frontier"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "no_review_needed",
+          "credit_context": "unknown",
+          "credited_artist_name": "Synthetic Post-Grunge Act",
+          "display_name": "Post-Grunge Trap Item",
+          "external_catalog_refs": {
+            "fixture_catalog_id": "external:post_grunge_trap_001"
+          },
+          "object_type": "song_recording",
+          "recording_variant_type": "studio",
+          "ref_source": "external_catalog",
+          "resolution_state": "needs_resolution",
+          "user_music_object_id": null
+        },
+        "reason": "Post-Grunge Trap Item is a review-gated possible dead_end with candidate_pool_behavior=trap; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "dead_end"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": "artist:imagine_dragons",
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "not_applicable",
+          "credit_context": "group",
+          "credited_artist_name": "Imagine Dragons",
+          "display_name": "Imagine Dragons",
+          "external_catalog_refs": {},
+          "object_type": "artist",
+          "recording_variant_type": null,
+          "ref_source": "canonical_graph",
+          "resolution_state": "resolved",
+          "user_music_object_id": null
+        },
+        "reason": "Imagine Dragons is a review-gated possible waypoint with candidate_pool_behavior=waypoint; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "waypoint"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": "album:qotsa_songs_for_the_deaf",
+          "canonical_artist_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": null,
+          "composition_policy_status": "not_applicable",
+          "credit_context": "group",
+          "credited_artist_name": "Queens of the Stone Age",
+          "display_name": "Songs for the Deaf",
+          "external_catalog_refs": {},
+          "object_type": "album",
+          "recording_variant_type": null,
+          "ref_source": "canonical_graph",
+          "resolution_state": "resolved",
+          "user_music_object_id": null
+        },
+        "reason": "Songs for the Deaf is a review-gated possible waypoint with candidate_pool_behavior=waypoint; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "waypoint"
+      },
+      {
+        "music_object_ref": {
+          "canonical_album_id": null,
+          "canonical_artist_id": null,
+          "canonical_song_recording_id": null,
+          "composition_placeholder_id": "composition_placeholder:house_of_the_rising_sun_standard",
+          "composition_policy_status": "composition_first_required",
+          "credit_context": "not_applicable",
+          "credited_artist_name": null,
+          "display_name": "House of the Rising Sun",
+          "external_catalog_refs": {},
+          "object_type": "composition_placeholder",
+          "recording_variant_type": "traditional_arrangement",
+          "ref_source": "unresolved",
+          "resolution_state": "needs_resolution",
+          "user_music_object_id": null
+        },
+        "reason": "House of the Rising Sun is a review-gated possible unknown with candidate_pool_behavior=unknown; use as a candidate-pool cue, not promoted Atlas truth.",
+        "suggested_role": "unknown"
+      }
+    ],
+    "unresolved_questions": [
+      "Does the provisional Nirvana Landmark seed survive repeated playback and mission review?",
+      "Are QOTSA-style items useful waypoints only, or do any become stronger anchors later?",
+      "Can current rock probes show body and pulse without fake-hard scene posture?",
+      "Which Dead End scopes are broad lane exclusions versus narrow trap items?",
+      "Which unknown objects should be resolved before use in mission routes?"
+    ],
+    "user_id": "user_matt_atlas_harness",
+    "user_taste_feature_state_ids": [
+      "user_taste_feature_state:user_matt_atlas_harness:taste_feature:body_force",
+      "user_taste_feature_state:user_matt_atlas_harness:taste_feature:fake_hard"
+    ],
+    "user_vocabulary_term_ids": [
+      "term:body",
+      "term:fake-hard"
+    ]
+  },
+  "candidate_pool_behavior_summaries": [
+    {
+      "candidate_pool_behavior": "anchor",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Nirvana",
+      "role": "landmark",
+      "source_record_id": "role:survey_strong_landmark_seed:landmark",
+      "source_record_type": "atlas_role_assignment"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "role": "waypoint",
+      "source_record_id": "role:survey_waypoint_seed:waypoint",
+      "source_record_type": "atlas_role_assignment"
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "low",
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "role": "unknown",
+      "source_record_id": "role:survey_unknown_frontier_seed:unknown",
+      "source_record_type": "atlas_role_assignment"
+    },
+    {
+      "candidate_pool_behavior": "bridge",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite",
+        "signal:survey_event:body_fake_hard_note",
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "music_object_ref": null,
+      "name": "Body-first guitar pressure",
+      "role": "region",
+      "source_record_id": "role:body_first_guitar_pressure_region:region",
+      "source_record_type": "atlas_role_assignment"
+    },
+    {
+      "candidate_pool_behavior": "anchor",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Nirvana",
+      "review_required": true,
+      "role": "landmark",
+      "source_record_id": "update_candidate:survey_strong_landmark_seed",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "review_required": true,
+      "role": "waypoint",
+      "source_record_id": "update_candidate:survey_waypoint_seed",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "trap",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:adult_alt_tool_false_nearby_not_for_me"
+      ],
+      "music_object_ref": null,
+      "name": "Adult Alternative / VH1 Sincerity Lane",
+      "review_required": true,
+      "role": "dead_end",
+      "source_record_id": "update_candidate:survey_dead_end_seed",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "review_required": true,
+      "role": "unknown",
+      "source_record_id": "update_candidate:survey_unknown_frontier_seed",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "risky_probe",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "review_required": true,
+      "role": "frontier",
+      "source_record_id": "update_candidate:mission_review_frontier_positive_provisional",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "trap",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:post_grunge_trap_not_for_me"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "unknown",
+        "credited_artist_name": "Synthetic Post-Grunge Act",
+        "display_name": "Post-Grunge Trap Item",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:post_grunge_trap_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Post-Grunge Trap Item",
+      "review_required": true,
+      "role": "dead_end",
+      "source_record_id": "update_candidate:mission_review_dead_end_confirmed",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:trap_liked_exception"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:imagine_dragons",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Imagine Dragons",
+        "display_name": "Imagine Dragons",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Imagine Dragons",
+      "review_required": true,
+      "role": "waypoint",
+      "source_record_id": "update_candidate:mission_review_trap_unexpectedly_liked",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:qotsa_keep_waypoint"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": "album:qotsa_songs_for_the_deaf",
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Songs for the Deaf",
+        "external_catalog_refs": {},
+        "object_type": "album",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Songs for the Deaf",
+      "review_required": true,
+      "role": "waypoint",
+      "source_record_id": "update_candidate:mission_review_waypoint_clarification",
+      "source_record_type": "possible_atlas_update_candidate"
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:composition_placeholder_skip"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": "composition_placeholder:house_of_the_rising_sun_standard",
+        "composition_policy_status": "composition_first_required",
+        "credit_context": "not_applicable",
+        "credited_artist_name": null,
+        "display_name": "House of the Rising Sun",
+        "external_catalog_refs": {},
+        "object_type": "composition_placeholder",
+        "recording_variant_type": "traditional_arrangement",
+        "ref_source": "unresolved",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "House of the Rising Sun",
+      "review_required": true,
+      "role": "unknown",
+      "source_record_id": "update_candidate:mission_review_skipped_item",
+      "source_record_type": "possible_atlas_update_candidate"
+    }
+  ],
+  "contract_digest_id": "atlas_digest_view:synthetic_v0_1",
+  "core_taste_summary": "Synthetic Atlas state shows strong provisional evidence for body-first, hook-pressure guitar anchors; useful waypoint evidence for QOTSA-style shelves; caution around fake-hard, post-grunge, and adult-alt lanes; and unresolved current-rock frontier questions that require candidate-constrained testing.",
+  "dead_ends": [
+    {
+      "atlas_node_id": "atlas_node:adult_alt_lane",
+      "candidate_pool_behavior": "trap",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.17,
+      "evidence_signal_ids": [
+        "signal:survey_event:adult_alt_tool_false_nearby_not_for_me"
+      ],
+      "failure_or_edge_conditions": [
+        "Dead End strengthening remains review-gated and scope-bounded."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:adult_alt_mush",
+        "taste_feature:post_grunge_slop",
+        "taste_feature:fake_hard"
+      ],
+      "music_object_ref": null,
+      "name": "Adult Alternative / VH1 Sincerity Lane",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "dead_end",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "dead_end",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_dead_end_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:post_grunge_trap",
+      "candidate_pool_behavior": "trap",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.28,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:post_grunge_trap_not_for_me"
+      ],
+      "failure_or_edge_conditions": [
+        "Dead End strengthening remains review-gated and scope-bounded."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:post_grunge_slop",
+        "taste_feature:no_blood"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "unknown",
+        "credited_artist_name": "Synthetic Post-Grunge Act",
+        "display_name": "Post-Grunge Trap Item",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:post_grunge_trap_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Post-Grunge Trap Item",
+      "promotion_state": "candidate",
+      "proposed_action": "promote",
+      "proposed_role": "dead_end",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "dead_end",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_dead_end_confirmed"
+    }
+  ],
+  "digest_id": "atlas_digest_view_expanded:synthetic_v0_1",
+  "frontiers": [
+    {
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.22,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "failure_or_edge_conditions": [
+        "Frontier candidate requires recurrence before promotion."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:current_rock_has_pulse",
+        "taste_feature:body_force"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "frontier",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 3,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "frontier",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_frontier_positive_provisional"
+    }
+  ],
+  "generated_at": "2026-05-20T15:19:06.758549Z",
+  "known_dead_ends": [
+    {
+      "atlas_node_id": "atlas_node:adult_alt_lane",
+      "candidate_pool_behavior": "trap",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.17,
+      "evidence_signal_ids": [
+        "signal:survey_event:adult_alt_tool_false_nearby_not_for_me"
+      ],
+      "failure_or_edge_conditions": [
+        "Dead End strengthening remains review-gated and scope-bounded."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:adult_alt_mush",
+        "taste_feature:post_grunge_slop",
+        "taste_feature:fake_hard"
+      ],
+      "music_object_ref": null,
+      "name": "Adult Alternative / VH1 Sincerity Lane",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "dead_end",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "dead_end",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_dead_end_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:post_grunge_trap",
+      "candidate_pool_behavior": "trap",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.28,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:post_grunge_trap_not_for_me"
+      ],
+      "failure_or_edge_conditions": [
+        "Dead End strengthening remains review-gated and scope-bounded."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:post_grunge_slop",
+        "taste_feature:no_blood"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "unknown",
+        "credited_artist_name": "Synthetic Post-Grunge Act",
+        "display_name": "Post-Grunge Trap Item",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:post_grunge_trap_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Post-Grunge Trap Item",
+      "promotion_state": "candidate",
+      "proposed_action": "promote",
+      "proposed_role": "dead_end",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "dead_end",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_dead_end_confirmed"
+    }
+  ],
+  "landmarks": [
+    {
+      "atlas_node_id": "atlas_node:nirvana_artist",
+      "candidate_pool_behavior": "anchor",
+      "confidence_band": "medium",
+      "confidence_basis": "direct_user_reaction",
+      "confidence_score": 0.72,
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "evidence_summary": "Candidate Landmark seed for anchoring routes; still provisional until recurrence or review.",
+      "failure_or_edge_conditions": [
+        "Nirvana anchors only the evidenced feature lane; do not infer broad genre approval."
+      ],
+      "linked_taste_feature_ids": [],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Nirvana",
+      "promotion_state": "candidate",
+      "review_state": "needs_review",
+      "role": "landmark",
+      "role_assignment_id": "role:survey_strong_landmark_seed:landmark",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      }
+    },
+    {
+      "atlas_node_id": "atlas_node:nirvana_artist",
+      "candidate_pool_behavior": "anchor",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.22,
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "failure_or_edge_conditions": [
+        "Possible update remains conditional on future reactions and review."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:body_force",
+        "taste_feature:hooks_under_pressure",
+        "taste_feature:melody_with_ache"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Nirvana",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "landmark",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "landmark",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_strong_landmark_seed"
+    }
+  ],
+  "mission_context": "mission_generation_and_candidate_pool_builder",
+  "mission_relevant_constraints": [
+    "Use provisional Landmarks as anchors only with visible evidence summaries.",
+    "Use dead-end candidates as explicit boundary tests, not recommendations.",
+    "Use unknown/frontier items as probes with review-needed defaults.",
+    "Do not mutate canonical graph objects from Atlas ingestion or Mission Review."
+  ],
+  "possible_atlas_update_candidates": [
+    {
+      "atlas_node_id": "atlas_node:nirvana_artist",
+      "candidate_pool_behavior": "anchor",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.22,
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "failure_or_edge_conditions": [
+        "Possible update remains conditional on future reactions and review."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:body_force",
+        "taste_feature:hooks_under_pressure",
+        "taste_feature:melody_with_ache"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Nirvana",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "landmark",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "landmark",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_strong_landmark_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:qotsa_artist",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.14,
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "failure_or_edge_conditions": [
+        "Possible update remains conditional on future reactions and review."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:b_b_plus_energy",
+        "taste_feature:working_band_identity"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_waypoint_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:adult_alt_lane",
+      "candidate_pool_behavior": "trap",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.17,
+      "evidence_signal_ids": [
+        "signal:survey_event:adult_alt_tool_false_nearby_not_for_me"
+      ],
+      "failure_or_edge_conditions": [
+        "Dead End strengthening remains review-gated and scope-bounded."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:adult_alt_mush",
+        "taste_feature:post_grunge_slop",
+        "taste_feature:fake_hard"
+      ],
+      "music_object_ref": null,
+      "name": "Adult Alternative / VH1 Sincerity Lane",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "dead_end",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "dead_end",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_dead_end_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "candidate_pool_behavior": "unknown",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.04,
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "failure_or_edge_conditions": [
+        "Skip/unknown evidence cannot become a role verdict."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:current_rock_has_pulse"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "unknown",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 1,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "unknown",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_unknown_frontier_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.22,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "failure_or_edge_conditions": [
+        "Frontier candidate requires recurrence before promotion."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:current_rock_has_pulse",
+        "taste_feature:body_force"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "frontier",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 3,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "frontier",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_frontier_positive_provisional"
+    },
+    {
+      "atlas_node_id": "atlas_node:post_grunge_trap",
+      "candidate_pool_behavior": "trap",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.28,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:post_grunge_trap_not_for_me"
+      ],
+      "failure_or_edge_conditions": [
+        "Dead End strengthening remains review-gated and scope-bounded."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:post_grunge_slop",
+        "taste_feature:no_blood"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "unknown",
+        "credited_artist_name": "Synthetic Post-Grunge Act",
+        "display_name": "Post-Grunge Trap Item",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:post_grunge_trap_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Post-Grunge Trap Item",
+      "promotion_state": "candidate",
+      "proposed_action": "promote",
+      "proposed_role": "dead_end",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "dead_end",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_dead_end_confirmed"
+    },
+    {
+      "atlas_node_id": "atlas_node:imagine_dragons",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.12,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:trap_liked_exception"
+      ],
+      "failure_or_edge_conditions": [
+        "Unexpected trap positive means exception/cultural furniture/reassess dead end; do not erase the Dead End automatically."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:cultural_furniture",
+        "taste_feature:one_object_exception"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:imagine_dragons",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Imagine Dragons",
+        "display_name": "Imagine Dragons",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Imagine Dragons",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 3,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Positive trap response should create exception/reassess semantics, not erase a Dead End or promote a broad lane.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_trap_unexpectedly_liked"
+    },
+    {
+      "atlas_node_id": "atlas_node:qotsa_songs_for_the_deaf",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.18,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:qotsa_keep_waypoint"
+      ],
+      "failure_or_edge_conditions": [
+        "Waypoint clarification explicitly blocks Landmark promotion without stronger recurrence."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:b_b_plus_energy",
+        "taste_feature:playlist_shelf"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": "album:qotsa_songs_for_the_deaf",
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Songs for the Deaf",
+        "external_catalog_refs": {},
+        "object_type": "album",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Songs for the Deaf",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_waypoint_clarification"
+    },
+    {
+      "atlas_node_id": "atlas_node:house_of_the_rising_sun_standard",
+      "candidate_pool_behavior": "unknown",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.03,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:composition_placeholder_skip"
+      ],
+      "failure_or_edge_conditions": [
+        "Skip/unknown evidence cannot become a role verdict."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": "composition_placeholder:house_of_the_rising_sun_standard",
+        "composition_policy_status": "composition_first_required",
+        "credit_context": "not_applicable",
+        "credited_artist_name": null,
+        "display_name": "House of the Rising Sun",
+        "external_catalog_refs": {},
+        "object_type": "composition_placeholder",
+        "recording_variant_type": "traditional_arrangement",
+        "ref_source": "unresolved",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "House of the Rising Sun",
+      "promotion_state": "candidate",
+      "proposed_action": "resolution_request",
+      "proposed_role": "unknown",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Skipped item produces weak evidence; keep node unresolved and require review before any role movement.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "unknown",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_skipped_item"
+    }
+  ],
+  "promising_frontiers": [
+    {
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "candidate_pool_behavior": "risky_probe",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.22,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "failure_or_edge_conditions": [
+        "Frontier candidate requires recurrence before promotion."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:current_rock_has_pulse",
+        "taste_feature:body_force"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "frontier",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 3,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "frontier",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_frontier_positive_provisional"
+    }
+  ],
+  "read_surfaces": {
+    "candidate_pool_builder": "Use candidate_pool_behavior_summaries and suggested_candidate_roles; do not read role truth from AtlasNode.",
+    "mission_generation": "Use expanded summaries for landmarks/frontiers/dead ends/waypoints, vocabulary, and anti-overfitting constraints."
+  },
+  "recent_signals": [
+    {
+      "confidence_band": "medium",
+      "event_type": "reaction",
+      "interpretation_confidence": 0.72,
+      "observed_user_tags": [
+        "highest positive",
+        "body",
+        "hooks under pressure"
+      ],
+      "reaction_value": "love",
+      "signal_id": "signal:survey_event:nirvana_favorite",
+      "signal_strength": 0.9,
+      "source": "survey",
+      "subject_atlas_node_id": "atlas_node:nirvana_artist",
+      "subject_display_name": "Nirvana",
+      "user_note": "This is core. The body and melody both hit."
+    },
+    {
+      "confidence_band": "medium",
+      "event_type": "reaction",
+      "interpretation_confidence": 0.55,
+      "observed_user_tags": [
+        "useful shelf",
+        "B/B+ energy",
+        "bridge"
+      ],
+      "reaction_value": "like",
+      "signal_id": "signal:survey_event:qotsa_useful_like",
+      "signal_strength": 0.66,
+      "source": "survey",
+      "subject_atlas_node_id": "atlas_node:qotsa_artist",
+      "subject_display_name": "Queens of the Stone Age",
+      "user_note": "Good and useful, but probably not canon."
+    },
+    {
+      "confidence_band": "medium",
+      "event_type": "reaction",
+      "interpretation_confidence": 0.6,
+      "observed_user_tags": [
+        "adult-alt mush",
+        "post-grunge slop",
+        "over-serious heady heavy"
+      ],
+      "reaction_value": "not_for_me",
+      "signal_id": "signal:survey_event:adult_alt_tool_false_nearby_not_for_me",
+      "signal_strength": 0.76,
+      "source": "survey",
+      "subject_atlas_node_id": "atlas_node:adult_alt_lane",
+      "subject_display_name": null,
+      "user_note": "This looks close on paper but usually turns into fake-hard or VH1 sincerity."
+    },
+    {
+      "confidence_band": "low",
+      "event_type": "familiarity",
+      "interpretation_confidence": 0.22,
+      "observed_user_tags": [
+        "promising unknown",
+        "current rock"
+      ],
+      "reaction_value": "dont_know",
+      "signal_id": "signal:survey_event:current_rock_unknown",
+      "signal_strength": 0.2,
+      "source": "survey",
+      "subject_atlas_node_id": "atlas_node:current_rock_probe",
+      "subject_display_name": "Modern Rock Probe",
+      "user_note": null
+    },
+    {
+      "confidence_band": "high",
+      "event_type": "note",
+      "interpretation_confidence": 0.78,
+      "observed_user_tags": [
+        "body",
+        "fake-hard"
+      ],
+      "reaction_value": null,
+      "signal_id": "signal:survey_event:body_fake_hard_note",
+      "signal_strength": 0.45,
+      "source": "survey",
+      "subject_atlas_node_id": "atlas_node:local_h_artist",
+      "subject_display_name": "Local H",
+      "user_note": "I like the body but not the fake-hard thing."
+    },
+    {
+      "confidence_band": "medium",
+      "event_type": "review_decision",
+      "interpretation_confidence": 0.66,
+      "observed_user_tags": [
+        "body confirms",
+        "current rock has pulse"
+      ],
+      "reaction_value": "like",
+      "signal_id": "signal:mission_review_event:current_rock_probe_like",
+      "signal_strength": 0.74,
+      "source": "review",
+      "subject_atlas_node_id": "atlas_node:current_rock_probe",
+      "subject_display_name": "Modern Rock Probe",
+      "user_note": "This one has pulse without doing the fake-hard thing."
+    },
+    {
+      "confidence_band": "high",
+      "event_type": "review_decision",
+      "interpretation_confidence": 0.78,
+      "observed_user_tags": [
+        "post-grunge slop",
+        "no blood"
+      ],
+      "reaction_value": "not_for_me",
+      "signal_id": "signal:mission_review_event:post_grunge_trap_not_for_me",
+      "signal_strength": 0.84,
+      "source": "review",
+      "subject_atlas_node_id": "atlas_node:post_grunge_trap",
+      "subject_display_name": "Post-Grunge Trap Item",
+      "user_note": "Exactly the dead end. It gestures at force but has no blood."
+    },
+    {
+      "confidence_band": "medium",
+      "event_type": "review_decision",
+      "interpretation_confidence": 0.48,
+      "observed_user_tags": [
+        "unexpected exception",
+        "cultural furniture"
+      ],
+      "reaction_value": "like",
+      "signal_id": "signal:mission_review_event:trap_liked_exception",
+      "signal_strength": 0.66,
+      "source": "review",
+      "subject_atlas_node_id": "atlas_node:imagine_dragons",
+      "subject_display_name": "Imagine Dragons",
+      "user_note": "I don't want the lane, but this one has a weird familiar utility."
+    },
+    {
+      "confidence_band": "medium",
+      "event_type": "review_decision",
+      "interpretation_confidence": 0.58,
+      "observed_user_tags": [
+        "B/B+ energy shelf",
+        "useful waypoint"
+      ],
+      "reaction_value": "neutral",
+      "signal_id": "signal:mission_review_event:qotsa_keep_waypoint",
+      "signal_strength": 0.62,
+      "source": "review",
+      "subject_atlas_node_id": "atlas_node:qotsa_songs_for_the_deaf",
+      "subject_display_name": "Songs for the Deaf",
+      "user_note": "Useful for routes, still not core canon."
+    },
+    {
+      "confidence_band": "low",
+      "event_type": "skip",
+      "interpretation_confidence": 0.16,
+      "observed_user_tags": [],
+      "reaction_value": "skip",
+      "signal_id": "signal:mission_review_event:composition_placeholder_skip",
+      "signal_strength": 0.18,
+      "source": "review",
+      "subject_atlas_node_id": "atlas_node:house_of_the_rising_sun_standard",
+      "subject_display_name": "House of the Rising Sun",
+      "user_note": null
+    }
+  ],
+  "record_type": "atlas_digest_view_expanded",
+  "regions": [
+    {
+      "atlas_node_id": "atlas_node:body_first_guitar_pressure_region",
+      "candidate_pool_behavior": "bridge",
+      "confidence_band": "medium",
+      "confidence_basis": "mixed",
+      "confidence_score": 0.61,
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite",
+        "signal:survey_event:body_fake_hard_note",
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "evidence_summary": "Use as a bridge Region for candidate-pool grouping; not a final promoted taste Region.",
+      "failure_or_edge_conditions": [
+        "Use only within the evidenced scope."
+      ],
+      "linked_taste_feature_ids": [],
+      "music_object_ref": null,
+      "name": "Body-first guitar pressure",
+      "promotion_state": "candidate",
+      "review_state": "needs_review",
+      "role": "region",
+      "role_assignment_id": "role:body_first_guitar_pressure_region:region",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      }
+    }
+  ],
+  "schema_version": "waymark.atlas_digest_view.expanded.v0.1",
+  "signal_only": [],
+  "strong_regions": [
+    {
+      "atlas_node_id": "atlas_node:body_first_guitar_pressure_region",
+      "candidate_pool_behavior": "bridge",
+      "confidence_band": "medium",
+      "confidence_basis": "mixed",
+      "confidence_score": 0.61,
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite",
+        "signal:survey_event:body_fake_hard_note",
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "evidence_summary": "Use as a bridge Region for candidate-pool grouping; not a final promoted taste Region.",
+      "failure_or_edge_conditions": [
+        "Use only within the evidenced scope."
+      ],
+      "linked_taste_feature_ids": [],
+      "music_object_ref": null,
+      "name": "Body-first guitar pressure",
+      "promotion_state": "candidate",
+      "review_state": "needs_review",
+      "role": "region",
+      "role_assignment_id": "role:body_first_guitar_pressure_region:region",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      }
+    }
+  ],
+  "suggested_candidate_roles": [
+    {
+      "candidate_pool_behavior": "anchor",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "reason": "Candidate Landmark seed for anchoring routes; still provisional until recurrence or review.",
+      "source_record_id": "role:survey_strong_landmark_seed:landmark",
+      "suggested_role": "landmark"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "reason": "Use as a useful route shelf or bridge, not as core canon.",
+      "source_record_id": "role:survey_waypoint_seed:waypoint",
+      "suggested_role": "waypoint"
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "low",
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "reason": "Preserve unknown state for candidate-pool caution; do not infer positive taste.",
+      "source_record_id": "role:survey_unknown_frontier_seed:unknown",
+      "suggested_role": "unknown"
+    },
+    {
+      "candidate_pool_behavior": "anchor",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:nirvana_favorite"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:nirvana",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Nirvana",
+        "display_name": "Nirvana",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "reason": "Nirvana is a review-gated possible landmark with candidate_pool_behavior=anchor; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:survey_strong_landmark_seed",
+      "suggested_role": "landmark"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "reason": "Queens of the Stone Age is a review-gated possible waypoint with candidate_pool_behavior=waypoint; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:survey_waypoint_seed",
+      "suggested_role": "waypoint"
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "reason": "Modern Rock Probe is a review-gated possible unknown with candidate_pool_behavior=unknown; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:survey_unknown_frontier_seed",
+      "suggested_role": "unknown"
+    },
+    {
+      "candidate_pool_behavior": "risky_probe",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:current_rock_probe_like"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "reason": "Modern Rock Probe is a review-gated possible frontier with candidate_pool_behavior=risky_probe; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:mission_review_frontier_positive_provisional",
+      "suggested_role": "frontier"
+    },
+    {
+      "candidate_pool_behavior": "trap",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:post_grunge_trap_not_for_me"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "unknown",
+        "credited_artist_name": "Synthetic Post-Grunge Act",
+        "display_name": "Post-Grunge Trap Item",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:post_grunge_trap_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "reason": "Post-Grunge Trap Item is a review-gated possible dead_end with candidate_pool_behavior=trap; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:mission_review_dead_end_confirmed",
+      "suggested_role": "dead_end"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:trap_liked_exception"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:imagine_dragons",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Imagine Dragons",
+        "display_name": "Imagine Dragons",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "reason": "Imagine Dragons is a review-gated possible waypoint with candidate_pool_behavior=waypoint; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:mission_review_trap_unexpectedly_liked",
+      "suggested_role": "waypoint"
+    },
+    {
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:qotsa_keep_waypoint"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": "album:qotsa_songs_for_the_deaf",
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Songs for the Deaf",
+        "external_catalog_refs": {},
+        "object_type": "album",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "reason": "Songs for the Deaf is a review-gated possible waypoint with candidate_pool_behavior=waypoint; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:mission_review_waypoint_clarification",
+      "suggested_role": "waypoint"
+    },
+    {
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "candidate",
+      "evidence_signal_ids": [
+        "signal:mission_review_event:composition_placeholder_skip"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": "composition_placeholder:house_of_the_rising_sun_standard",
+        "composition_policy_status": "composition_first_required",
+        "credit_context": "not_applicable",
+        "credited_artist_name": null,
+        "display_name": "House of the Rising Sun",
+        "external_catalog_refs": {},
+        "object_type": "composition_placeholder",
+        "recording_variant_type": "traditional_arrangement",
+        "ref_source": "unresolved",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "reason": "House of the Rising Sun is a review-gated possible unknown with candidate_pool_behavior=unknown; use as a candidate-pool cue, not promoted Atlas truth.",
+      "review_required": true,
+      "source_record_id": "update_candidate:mission_review_skipped_item",
+      "suggested_role": "unknown"
+    }
+  ],
+  "taste_feature_states": [
+    {
+      "affinity": "seeks",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:body_fake_hard_note"
+      ],
+      "intensity_score": 0.67,
+      "state": "provisional",
+      "taste_feature_id": "taste_feature:body_force",
+      "user_taste_feature_state_id": "user_taste_feature_state:user_matt_atlas_harness:taste_feature:body_force",
+      "user_vocabulary_term_ids": [
+        "term:body"
+      ]
+    },
+    {
+      "affinity": "avoids",
+      "confidence_band": "medium",
+      "evidence_signal_ids": [
+        "signal:survey_event:body_fake_hard_note"
+      ],
+      "intensity_score": 0.67,
+      "state": "provisional",
+      "taste_feature_id": "taste_feature:fake_hard",
+      "user_taste_feature_state_id": "user_taste_feature_state:user_matt_atlas_harness:taste_feature:fake_hard",
+      "user_vocabulary_term_ids": [
+        "term:fake-hard"
+      ]
+    }
+  ],
+  "unknowns": [
+    {
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "candidate_pool_behavior": "unknown",
+      "confidence_band": "low",
+      "confidence_basis": "survey_pattern",
+      "confidence_score": 0.22,
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "evidence_summary": "Preserve unknown state for candidate-pool caution; do not infer positive taste.",
+      "failure_or_edge_conditions": [
+        "Modern Rock Probe should be probed only when the mission explicitly needs uncertainty."
+      ],
+      "linked_taste_feature_ids": [],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "promotion_state": "candidate",
+      "review_state": "needs_review",
+      "role": "unknown",
+      "role_assignment_id": "role:survey_unknown_frontier_seed:unknown",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      }
+    },
+    {
+      "atlas_node_id": "atlas_node:current_rock_probe",
+      "candidate_pool_behavior": "unknown",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.04,
+      "evidence_signal_ids": [
+        "signal:survey_event:current_rock_unknown"
+      ],
+      "failure_or_edge_conditions": [
+        "Skip/unknown evidence cannot become a role verdict."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:current_rock_has_pulse"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "no_review_needed",
+        "credit_context": "group",
+        "credited_artist_name": "Model/Actriz",
+        "display_name": "Modern Rock Probe",
+        "external_catalog_refs": {
+          "fixture_catalog_id": "external:current_rock_probe_001"
+        },
+        "object_type": "song_recording",
+        "recording_variant_type": "studio",
+        "ref_source": "external_catalog",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "Modern Rock Probe",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "unknown",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 1,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "unknown",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_unknown_frontier_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:house_of_the_rising_sun_standard",
+      "candidate_pool_behavior": "unknown",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.03,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:composition_placeholder_skip"
+      ],
+      "failure_or_edge_conditions": [
+        "Skip/unknown evidence cannot become a role verdict."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": "composition_placeholder:house_of_the_rising_sun_standard",
+        "composition_policy_status": "composition_first_required",
+        "credit_context": "not_applicable",
+        "credited_artist_name": null,
+        "display_name": "House of the Rising Sun",
+        "external_catalog_refs": {},
+        "object_type": "composition_placeholder",
+        "recording_variant_type": "traditional_arrangement",
+        "ref_source": "unresolved",
+        "resolution_state": "needs_resolution",
+        "user_music_object_id": null
+      },
+      "name": "House of the Rising Sun",
+      "promotion_state": "candidate",
+      "proposed_action": "resolution_request",
+      "proposed_role": "unknown",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Skipped item produces weak evidence; keep node unresolved and require review before any role movement.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "unknown",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_skipped_item"
+    }
+  ],
+  "unresolved_questions": [
+    "Does the provisional Nirvana Landmark seed survive repeated playback and mission review?",
+    "Are QOTSA-style items useful waypoints only, or do any become stronger anchors later?",
+    "Can current rock probes show body and pulse without fake-hard scene posture?",
+    "Which Dead End scopes are broad lane exclusions versus narrow trap items?",
+    "Which unknown objects should be resolved before use in mission routes?"
+  ],
+  "useful_waypoints": [
+    {
+      "atlas_node_id": "atlas_node:qotsa_artist",
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "medium",
+      "confidence_basis": "direct_user_reaction",
+      "confidence_score": 0.55,
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "evidence_summary": "Use as a useful route shelf or bridge, not as core canon.",
+      "failure_or_edge_conditions": [
+        "Queens of the Stone Age is useful route material, not core canon."
+      ],
+      "linked_taste_feature_ids": [],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "promotion_state": "candidate",
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "role_assignment_id": "role:survey_waypoint_seed:waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      }
+    },
+    {
+      "atlas_node_id": "atlas_node:qotsa_artist",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.14,
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "failure_or_edge_conditions": [
+        "Possible update remains conditional on future reactions and review."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:b_b_plus_energy",
+        "taste_feature:working_band_identity"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_waypoint_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:imagine_dragons",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.12,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:trap_liked_exception"
+      ],
+      "failure_or_edge_conditions": [
+        "Unexpected trap positive means exception/cultural furniture/reassess dead end; do not erase the Dead End automatically."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:cultural_furniture",
+        "taste_feature:one_object_exception"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:imagine_dragons",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Imagine Dragons",
+        "display_name": "Imagine Dragons",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Imagine Dragons",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 3,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Positive trap response should create exception/reassess semantics, not erase a Dead End or promote a broad lane.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_trap_unexpectedly_liked"
+    },
+    {
+      "atlas_node_id": "atlas_node:qotsa_songs_for_the_deaf",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.18,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:qotsa_keep_waypoint"
+      ],
+      "failure_or_edge_conditions": [
+        "Waypoint clarification explicitly blocks Landmark promotion without stronger recurrence."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:b_b_plus_energy",
+        "taste_feature:playlist_shelf"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": "album:qotsa_songs_for_the_deaf",
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Songs for the Deaf",
+        "external_catalog_refs": {},
+        "object_type": "album",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Songs for the Deaf",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_waypoint_clarification"
+    }
+  ],
+  "user_id": "user_matt_atlas_harness",
+  "user_vocabulary_terms": [
+    {
+      "normalized_term": "body",
+      "promotion_state": "candidate",
+      "review_state": "unreviewed",
+      "source_signal_ids": [
+        "signal:survey_event:body_fake_hard_note"
+      ],
+      "status": "provisional",
+      "term": "body",
+      "term_id": "term:body",
+      "term_type": "feature_alias",
+      "usable_in_chips": true
+    },
+    {
+      "normalized_term": "fake-hard",
+      "promotion_state": "candidate",
+      "review_state": "unreviewed",
+      "source_signal_ids": [
+        "signal:survey_event:body_fake_hard_note"
+      ],
+      "status": "provisional",
+      "term": "fake-hard",
+      "term_id": "term:fake-hard",
+      "term_type": "avoidance_label",
+      "usable_in_chips": true
+    }
+  ],
+  "waypoints": [
+    {
+      "atlas_node_id": "atlas_node:qotsa_artist",
+      "candidate_pool_behavior": "waypoint",
+      "confidence_band": "medium",
+      "confidence_basis": "direct_user_reaction",
+      "confidence_score": 0.55,
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "evidence_summary": "Use as a useful route shelf or bridge, not as core canon.",
+      "failure_or_edge_conditions": [
+        "Queens of the Stone Age is useful route material, not core canon."
+      ],
+      "linked_taste_feature_ids": [],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "promotion_state": "candidate",
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "role_assignment_id": "role:survey_waypoint_seed:waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      }
+    },
+    {
+      "atlas_node_id": "atlas_node:qotsa_artist",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.14,
+      "evidence_signal_ids": [
+        "signal:survey_event:qotsa_useful_like"
+      ],
+      "failure_or_edge_conditions": [
+        "Possible update remains conditional on future reactions and review."
+      ],
+      "generated_hypothesis_only": false,
+      "linked_taste_feature_ids": [
+        "taste_feature:b_b_plus_energy",
+        "taste_feature:working_band_identity"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:qotsa",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Queens of the Stone Age",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Queens of the Stone Age",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 1,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Survey creates seed evidence and candidates; role truth needs recurrence or review before promotion.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:survey_waypoint_seed"
+    },
+    {
+      "atlas_node_id": "atlas_node:imagine_dragons",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.12,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:trap_liked_exception"
+      ],
+      "failure_or_edge_conditions": [
+        "Unexpected trap positive means exception/cultural furniture/reassess dead end; do not erase the Dead End automatically."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:cultural_furniture",
+        "taste_feature:one_object_exception"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": null,
+        "canonical_artist_id": "artist:imagine_dragons",
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Imagine Dragons",
+        "display_name": "Imagine Dragons",
+        "external_catalog_refs": {},
+        "object_type": "artist",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Imagine Dragons",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 3,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Positive trap response should create exception/reassess semantics, not erase a Dead End or promote a broad lane.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_trap_unexpectedly_liked"
+    },
+    {
+      "atlas_node_id": "atlas_node:qotsa_songs_for_the_deaf",
+      "candidate_pool_behavior": "waypoint",
+      "canonical_graph_mutation_allowed": false,
+      "confidence_delta": 0.18,
+      "evidence_signal_ids": [
+        "signal:mission_review_event:qotsa_keep_waypoint"
+      ],
+      "failure_or_edge_conditions": [
+        "Waypoint clarification explicitly blocks Landmark promotion without stronger recurrence."
+      ],
+      "generated_hypothesis_only": true,
+      "linked_taste_feature_ids": [
+        "taste_feature:b_b_plus_energy",
+        "taste_feature:playlist_shelf"
+      ],
+      "music_object_ref": {
+        "canonical_album_id": "album:qotsa_songs_for_the_deaf",
+        "canonical_artist_id": null,
+        "canonical_song_recording_id": null,
+        "composition_placeholder_id": null,
+        "composition_policy_status": "not_applicable",
+        "credit_context": "group",
+        "credited_artist_name": "Queens of the Stone Age",
+        "display_name": "Songs for the Deaf",
+        "external_catalog_refs": {},
+        "object_type": "album",
+        "recording_variant_type": null,
+        "ref_source": "canonical_graph",
+        "resolution_state": "resolved",
+        "user_music_object_id": null
+      },
+      "name": "Songs for the Deaf",
+      "promotion_state": "candidate",
+      "proposed_action": "create",
+      "proposed_role": "waypoint",
+      "recurrence_requirement": {
+        "min_distinct_sources": 2,
+        "required_count": 2,
+        "satisfied": false
+      },
+      "review_requirement": {
+        "reason": "Mission Review creates possible Atlas updates with recurrence and review requirements; it does not auto-promote.",
+        "required": true,
+        "reviewer_type": "human"
+      },
+      "review_state": "needs_review",
+      "role": "waypoint",
+      "scope": {
+        "scope_id": null,
+        "scope_label": null,
+        "scope_type": "global"
+      },
+      "update_candidate_id": "update_candidate:mission_review_waypoint_clarification"
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "schema_version": "waymark.taste_feature_registry.v0.1",
+  "registry_id": "taste_feature_registry_seed_v0_1",
+  "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Dead End", "Waypoint", "Signal only"],
+  "features": [
+    {
+      "feature_id": "body_force",
+      "display_label": "Body force",
+      "definition": "Physical drive, pressure, weight, or motion before abstract appreciation.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["body hits", "physical pull", "pressure lands"],
+      "related_features": ["hooks_under_pressure", "current_rock_has_pulse"],
+      "overgeneralization_warnings": ["Do not confuse loudness with body force."]
+    },
+    {
+      "feature_id": "hooks_under_pressure",
+      "display_label": "Hooks under pressure",
+      "definition": "Melody or chorus craft that feels compressed by urgency, distortion, ache, or persona.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["hook under strain", "chorus has bite", "melody survives pressure"],
+      "related_features": ["melody_with_ache", "radio_pop_with_teeth"],
+      "overgeneralization_warnings": ["Catchy alone is not enough."]
+    },
+    {
+      "feature_id": "album_world",
+      "display_label": "Album-world",
+      "definition": "A record or route feels like a coherent world with internal rules, not just good songs.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["album-world", "world holds", "wants full record"],
+      "related_features": ["literary_theatrical_world", "studio_architecture_with_blood"],
+      "overgeneralization_warnings": ["World-building without emotional force can become tasteful distance."]
+    },
+    {
+      "feature_id": "emotional_conviction",
+      "display_label": "Emotional conviction",
+      "definition": "Belief and urgency in the performance or construction, even without vocal beauty.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["conviction wins", "believes itself", "emotional center"],
+      "related_features": ["plainspoken_wound", "theatricality_earned"],
+      "overgeneralization_warnings": ["Sincerity without pressure can become adult-alt mush."]
+    },
+    {
+      "feature_id": "melody_with_ache",
+      "display_label": "Melody with ache",
+      "definition": "Strong melody carrying sadness, dread, longing, or damage.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["ache carries", "melody wounds", "sad hook"],
+      "related_features": ["hooks_under_pressure", "plainspoken_wound"],
+      "overgeneralization_warnings": ["Pretty melody without ache or pressure may not matter."]
+    },
+    {
+      "feature_id": "radio_pop_with_teeth",
+      "display_label": "Radio pop with teeth",
+      "definition": "Accessible pop construction that retains bite, angle, or emotional pressure.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["pop with teeth", "radio shape, real bite", "shiny but sharp"],
+      "related_features": ["hard_persona_pop", "hooks_under_pressure"],
+      "overgeneralization_warnings": ["Do not infer generic pop appetite."]
+    },
+    {
+      "feature_id": "polished_but_not_slop",
+      "display_label": "Polished but not slop",
+      "definition": "Clean or big production that keeps identity, pressure, and emotional center.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["polish has blood", "clean but alive", "big without mush"],
+      "related_features": ["studio_architecture_with_blood", "pop_sheen_no_architecture"],
+      "overgeneralization_warnings": ["Polish alone is not evidence."]
+    },
+    {
+      "feature_id": "hard_persona_pop",
+      "display_label": "Hard persona-pop",
+      "definition": "Pop whose persona, story pressure, and construction create force or bite.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["hard persona", "persona bite", "pop architecture"],
+      "related_features": ["radio_pop_with_teeth", "female_rupture_persona"],
+      "overgeneralization_warnings": ["Taylor fit is architecture/persona, not generic pop sheen."]
+    },
+    {
+      "feature_id": "theatricality_earned",
+      "display_label": "Theatricality earned",
+      "definition": "Drama, scale, or absurdity that works because the song fully commits and has body.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["theater earned", "committed drama", "scale lands"],
+      "related_features": ["literary_theatrical_world", "dark_melodic_atmosphere"],
+      "overgeneralization_warnings": ["Muse does not imply generic prog-metal seriousness."]
+    },
+    {
+      "feature_id": "plainspoken_wound",
+      "display_label": "Plainspoken wound",
+      "definition": "Direct hurt, frustration, or exposure without mush or decorative distance.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Signal only"],
+      "example_chip_labels": ["plain wound", "direct hurt", "no mush"],
+      "related_features": ["emotional_conviction", "melody_with_ache"],
+      "overgeneralization_warnings": ["Plainspoken does not mean adult-alt sincerity."]
+    },
+    {
+      "feature_id": "working_band_identity",
+      "display_label": "Working-band identity",
+      "definition": "Band feels like a specific lived machine rather than a genre appliance.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["band identity", "specific machine", "earned grit"],
+      "related_features": ["body_force", "production_reveals_identity"],
+      "overgeneralization_warnings": ["Avoid scene posture that mimics band identity."]
+    },
+    {
+      "feature_id": "studio_architecture_with_blood",
+      "display_label": "Studio architecture with blood",
+      "definition": "Careful production or structure that amplifies feeling instead of sterilizing it.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["architecture has blood", "studio reveals", "designed but alive"],
+      "related_features": ["album_world", "polished_but_not_slop"],
+      "overgeneralization_warnings": ["Tasteful architecture without body is a trap."]
+    },
+    {
+      "feature_id": "source_code_noise",
+      "display_label": "Source-code noise",
+      "definition": "Noise, crud, or abrasion that clarifies an origin road for a later Landmark.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Region", "Frontier", "Waypoint", "Signal only"],
+      "example_chip_labels": ["source code", "useful crud", "prehistory works"],
+      "related_features": ["body_force", "hooks_under_pressure"],
+      "overgeneralization_warnings": ["Historical source-code is not automatic personal fit."]
+    },
+    {
+      "feature_id": "dark_melodic_atmosphere",
+      "display_label": "Dark melodic atmosphere",
+      "definition": "Gloom, dread, or shadow that remains melodic and embodied.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["dark pull", "melodic gloom", "shadow has hook"],
+      "related_features": ["theatricality_earned", "melody_with_ache"],
+      "overgeneralization_warnings": ["Type O does not imply broad gothic metal."]
+    },
+    {
+      "feature_id": "female_rupture_persona",
+      "display_label": "Female rupture persona",
+      "definition": "Female-led pop/rock/art-pop where persona breaks the polite frame.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["rupture persona", "polite frame breaks", "bite in voice"],
+      "related_features": ["hard_persona_pop", "radio_pop_with_teeth"],
+      "overgeneralization_warnings": ["Do not drift into tasteful soft prestige pop."]
+    },
+    {
+      "feature_id": "modernized_retro_shadow",
+      "display_label": "Modernized retro shadow",
+      "definition": "Older melodic or rock grammar reframed with modern pressure or darker angle.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Frontier", "Waypoint", "Signal only"],
+      "example_chip_labels": ["retro shadow", "old grammar, new pressure", "not nostalgia only"],
+      "related_features": ["melody_with_ache", "album_world"],
+      "overgeneralization_warnings": ["Nostalgia alone is cultural furniture."]
+    },
+    {
+      "feature_id": "literary_theatrical_world",
+      "display_label": "Literary theatrical world",
+      "definition": "Narrative, character, and historical frame work as a committed album-world.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Signal only"],
+      "example_chip_labels": ["literary world", "story pressure", "world committed"],
+      "related_features": ["album_world", "theatricality_earned"],
+      "overgeneralization_warnings": ["Decemberists do not imply generic indie-folk."]
+    },
+    {
+      "feature_id": "current_rock_has_pulse",
+      "display_label": "Current rock has pulse",
+      "definition": "Modern rock/guitar music feels alive, bodily, and specific now.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Frontier", "Signal only"],
+      "example_chip_labels": ["current pulse", "alive now", "no scene posture"],
+      "related_features": ["body_force", "working_band_identity"],
+      "overgeneralization_warnings": ["Old rock love does not prove current rock appetite."]
+    },
+    {
+      "feature_id": "production_reveals_identity",
+      "display_label": "Production reveals identity",
+      "definition": "The recording choices make the artist more themselves.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Landmark", "Region", "Frontier", "Signal only"],
+      "example_chip_labels": ["production reveals", "identity sharpened", "sound is the artist"],
+      "related_features": ["studio_architecture_with_blood", "working_band_identity"],
+      "overgeneralization_warnings": ["Production gloss can hide identity."]
+    },
+    {
+      "feature_id": "false_nearby_protection",
+      "display_label": "False-nearby protection",
+      "definition": "Explicitly blocks genre-adjacent recommendations that miss the real taste logic.",
+      "polarity": "positive",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["false-nearby", "looks close, misses", "guardrail holds"],
+      "related_features": ["one_object_exception", "waypoint_not_landmark"],
+      "overgeneralization_warnings": ["This feature should reduce broad claims, not create new ones."]
+    },
+    {
+      "feature_id": "respect_more_than_crave",
+      "display_label": "Respect more than crave",
+      "definition": "User recognizes quality but does not personally want more.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["respect, not crave", "good but not me", "admire only"],
+      "related_features": ["too_tasteful", "background_useful"],
+      "overgeneralization_warnings": ["Do not promote respect into appetite."]
+    },
+    {
+      "feature_id": "cultural_furniture",
+      "display_label": "Cultural furniture",
+      "definition": "Known or nostalgic item is useful context but weak evidence of active taste.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["cultural furniture", "memory object", "not new evidence"],
+      "related_features": ["family_safe_waypoint", "known_landmark_not_today"],
+      "overgeneralization_warnings": ["Familiarity can masquerade as taste."]
+    },
+    {
+      "feature_id": "b_b_plus_energy",
+      "display_label": "B/B+ energy",
+      "definition": "Useful, enjoyable shelf that is not core canon.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["B/B+ shelf", "useful energy", "not canon"],
+      "related_features": ["playlist_shelf", "background_useful"],
+      "overgeneralization_warnings": ["Do not promote shelf energy into Landmark status."]
+    },
+    {
+      "feature_id": "playlist_shelf",
+      "display_label": "Playlist shelf",
+      "definition": "Works as situational listening but not as a mission insight by itself.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["playlist shelf", "situational", "works in mix"],
+      "related_features": ["background_useful", "b_b_plus_energy"],
+      "overgeneralization_warnings": ["A playlist shelf is not a region."]
+    },
+    {
+      "feature_id": "family_safe_waypoint",
+      "display_label": "Family-safe waypoint",
+      "definition": "Useful for shared listening or car context, but not necessarily deep taste evidence.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["family-safe", "shared shelf", "car works"],
+      "related_features": ["cultural_furniture", "background_useful"],
+      "overgeneralization_warnings": ["Shared utility is not core appetite."]
+    },
+    {
+      "feature_id": "background_useful",
+      "display_label": "Background useful",
+      "definition": "Can live in the environment without demanding Atlas promotion.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["background useful", "environmental", "keep nearby"],
+      "related_features": ["playlist_shelf", "respect_more_than_crave"],
+      "overgeneralization_warnings": ["Background approval should stay low-weight."]
+    },
+    {
+      "feature_id": "one_object_exception",
+      "display_label": "One-object exception",
+      "definition": "A single artist, album, or song works without proving its surrounding genre.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Landmark", "Waypoint", "Signal only"],
+      "example_chip_labels": ["one-object exception", "do not generalize", "singular fit"],
+      "related_features": ["false_nearby_protection", "dark_melodic_atmosphere"],
+      "overgeneralization_warnings": ["Treat Type O and similar objects carefully."]
+    },
+    {
+      "feature_id": "best_of_weak_lane",
+      "display_label": "Best of weak lane",
+      "definition": "A standout works inside a generally weak or low-appetite lane.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["best of weak lane", "exception only", "lane still weak"],
+      "related_features": ["one_object_exception", "respect_more_than_crave"],
+      "overgeneralization_warnings": ["Do not let one strong object rescue the whole lane."]
+    },
+    {
+      "feature_id": "known_landmark_not_today",
+      "display_label": "Known Landmark, not today",
+      "definition": "A known anchor remains true but is not the right present-tense route.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Landmark", "Signal only"],
+      "example_chip_labels": ["not today", "anchor but stale", "known road"],
+      "related_features": ["cultural_furniture", "fresh_listen_positive_needs_recurrence"],
+      "overgeneralization_warnings": ["Do not score stale mood as negative evidence."]
+    },
+    {
+      "feature_id": "fresh_listen_positive_needs_recurrence",
+      "display_label": "Fresh positive needs recurrence",
+      "definition": "A first positive reaction should remain provisional until it repeats.",
+      "polarity": "mixed",
+      "allowed_atlas_role_hints": ["Frontier", "Signal only"],
+      "example_chip_labels": ["needs recurrence", "fresh yes", "do not inflate"],
+      "related_features": ["false_nearby_protection", "one_object_exception"],
+      "overgeneralization_warnings": ["Positive first listens must stay bounded."]
+    },
+    {
+      "feature_id": "waypoint_not_landmark",
+      "display_label": "Waypoint, not Landmark",
+      "definition": "A useful shelf or bridge should not become core canon without stronger evidence.",
+      "polarity": "contextual",
+      "allowed_atlas_role_hints": ["Waypoint", "Signal only"],
+      "example_chip_labels": ["Waypoint, not Landmark", "bridge only", "shelf, not canon"],
+      "related_features": ["b_b_plus_energy", "false_nearby_protection"],
+      "overgeneralization_warnings": ["QOTSA and Kyuss start here."]
+    },
+    {
+      "feature_id": "fake_hard",
+      "display_label": "Fake-hard",
+      "definition": "Performs intensity without pressure, identity, or emotional truth.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["fake-hard", "costume heavy", "empty intensity"],
+      "related_features": ["post_grunge_slop", "scene_posture"],
+      "overgeneralization_warnings": ["Use as a boundary, not a recommendation lane."]
+    },
+    {
+      "feature_id": "no_blood",
+      "display_label": "No blood",
+      "definition": "Technically fine or tasteful but emotionally bloodless.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["no blood", "inert", "body absent"],
+      "related_features": ["too_tasteful", "production_obscures_identity"],
+      "overgeneralization_warnings": ["Can appear in any genre, including prestige indie."]
+    },
+    {
+      "feature_id": "too_tasteful",
+      "display_label": "Too tasteful",
+      "definition": "Good taste replaces pressure, body, or personal necessity.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["too tasteful", "prestige soft", "taste over body"],
+      "related_features": ["no_blood", "critic_darling_overclaim"],
+      "overgeneralization_warnings": ["Tastefulness should not be mistaken for fit."]
+    },
+    {
+      "feature_id": "genre_appliance",
+      "display_label": "Genre appliance",
+      "definition": "Artist sounds like a competent instance of a genre, not a specific identity.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["genre appliance", "template band", "nothing specific"],
+      "related_features": ["scene_posture", "production_obscures_identity"],
+      "overgeneralization_warnings": ["Avoid genre matching as recommendation logic."]
+    },
+    {
+      "feature_id": "adult_alt_mush",
+      "display_label": "Adult-alt mush",
+      "definition": "Sincere, mid-tempo, polite emotion without pressure or bite.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["adult-alt mush", "VH1 sincerity", "soft center"],
+      "related_features": ["plainspoken_wound", "no_blood"],
+      "overgeneralization_warnings": ["Plain emotion is not enough."]
+    },
+    {
+      "feature_id": "post_grunge_slop",
+      "display_label": "Post-grunge slop",
+      "definition": "Alt-rock afterimage that borrows heavy surfaces while losing hooks, blood, and specificity.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["post-grunge slop", "slop trap", "Nirvana afterimage"],
+      "related_features": ["fake_hard", "adult_alt_mush"],
+      "overgeneralization_warnings": ["Nirvana routes must guard against this."]
+    },
+    {
+      "feature_id": "scene_posture",
+      "display_label": "Scene posture",
+      "definition": "Signals belonging to a modern scene more than lived song pressure.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["scene posture", "pose over pulse", "looks current only"],
+      "related_features": ["fake_hard", "genre_appliance"],
+      "overgeneralization_warnings": ["Current rock tests should explicitly watch for this."]
+    },
+    {
+      "feature_id": "over_serious_heady_heavy",
+      "display_label": "Over-serious heady heavy",
+      "definition": "Heavy or technical music that privileges seriousness over body, hooks, or committed theater.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["heady heavy", "too serious", "body missing"],
+      "related_features": ["theatricality_earned", "fake_hard"],
+      "overgeneralization_warnings": ["Muse is not a license for Tool/APC/prog-metal routes."]
+    },
+    {
+      "feature_id": "cabaret_frame",
+      "display_label": "Cabaret frame",
+      "definition": "Theatrical presentation feels framed, mannered, or stagey without song necessity.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["cabaret frame", "stagey", "mannered theater"],
+      "related_features": ["theater_without_commitment", "literary_theatrical_world"],
+      "overgeneralization_warnings": ["Theatricality must be earned by commitment and song force."]
+    },
+    {
+      "feature_id": "pop_sheen_no_architecture",
+      "display_label": "Pop sheen, no architecture",
+      "definition": "Glossy pop surface without hard construction, bite, or persona logic.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["sheen only", "no architecture", "gloss without bite"],
+      "related_features": ["hard_persona_pop", "polished_but_not_slop"],
+      "overgeneralization_warnings": ["Taylor-positive evidence should not become generic pop approval."]
+    },
+    {
+      "feature_id": "theater_without_commitment",
+      "display_label": "Theater without commitment",
+      "definition": "Drama is present, but the performance or song does not fully believe it.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["theater unearned", "does not commit", "costume drama"],
+      "related_features": ["theatricality_earned", "cabaret_frame"],
+      "overgeneralization_warnings": ["Do not confuse surface drama with Muse/Type O commitment."]
+    },
+    {
+      "feature_id": "critic_darling_overclaim",
+      "display_label": "Critic-darling overclaim",
+      "definition": "Model leans on reputation or canon instead of personal evidence.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["canon overclaim", "critic logic", "not personal"],
+      "related_features": ["too_tasteful", "respect_more_than_crave"],
+      "overgeneralization_warnings": ["Era routes must not become generic critic canon."]
+    },
+    {
+      "feature_id": "voice_blocks_song",
+      "display_label": "Voice blocks song",
+      "definition": "A vocal presence prevents the user from reaching the song's useful features.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["voice blocks", "can't get past vocal", "song hidden"],
+      "related_features": ["emotional_conviction", "melody_with_ache"],
+      "overgeneralization_warnings": ["Do not reduce all vocal issues to beauty."]
+    },
+    {
+      "feature_id": "production_obscures_identity",
+      "display_label": "Production obscures identity",
+      "definition": "Recording or mix choices hide the artist's essence or turn them generic.",
+      "polarity": "negative",
+      "allowed_atlas_role_hints": ["Dead End", "Signal only"],
+      "example_chip_labels": ["production hides", "identity obscured", "mix flattens"],
+      "related_features": ["production_reveals_identity", "genre_appliance"],
+      "overgeneralization_warnings": ["A slick sound is only good if it reveals the artist."]
+    }
+  ]
+}
