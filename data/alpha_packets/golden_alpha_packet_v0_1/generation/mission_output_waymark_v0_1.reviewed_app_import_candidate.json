@@ -1,0 +1,1127 @@
+{
+  "archetypes": [
+    "Bridge Route"
+  ],
+  "brief": "A bounded bridge mission that starts from Nirvana's body-and-pressure core, tests source-code and working-band bridges, then probes current rock that still has pulse without sliding into post-grunge slop or fake-hard posture.",
+  "completion_criteria": {
+    "chip_selection_policy": "Use chip selections to refine meaning after the primary reaction; chips do not replace primary reactions and should preserve uncertainty.",
+    "completion_logic": "Complete after all 7 route items have primary reactions and at least 10 chip selections total, with trap-item chips interpreted using exception/boundary logic rather than broad lane promotion.",
+    "min_chip_selections_for_summary": 10,
+    "min_items_to_play": 7,
+    "min_primary_reactions": 7,
+    "primary_reaction_policy": "Collect one primary reaction per route item. Primary reactions are separate from chip selections and must be recorded for every played item."
+  },
+  "completion_summary_inputs": [
+    {
+      "input_id": "summary_primary_reactions",
+      "prompt": "Summarize the primary reactions across the 7-item route, especially the transition from Nirvana to current rock.",
+      "source": "route_item_primary_reactions"
+    },
+    {
+      "input_id": "summary_chip_selections",
+      "prompt": "Summarize which chip signals repeated, especially body, current pulse, fake-hard, and post-grunge slop boundaries.",
+      "source": "chip_selections"
+    },
+    {
+      "input_id": "summary_route_item_reactions",
+      "prompt": "Summarize item-by-item route behavior, including the trap boundary check and the current endpoint probe.",
+      "source": "route_item_reactions"
+    }
+  ],
+  "hypothesis": "The user will keep responding to body-first guitar pressure, hooks under pressure, and production that reveals identity; current rock can work if it feels lived-in and not like a genre appliance.",
+  "mission_id": "nirvana_to_current",
+  "possible_atlas_update_candidates": [
+    {
+      "atlas_role": "Landmark",
+      "candidate_id": "NIR_CUR_001",
+      "confidence": "medium",
+      "rationale": "Selected anchor item can support a stable Landmark seed only if body-first and pressure-hook signals recur in future reviewed reactions.",
+      "review_required": true,
+      "trigger_conditions": [
+        {
+          "condition_id": "cond_nir_cur_001_repeat_body",
+          "condition_text": "If future reactions to Nirvana items repeatedly show body-force and hooks-under-pressure, keep the anchor as a stable Landmark seed candidate for review.",
+          "future_reaction_operations": [
+            "love",
+            "like"
+          ],
+          "minimum_occurrences": 2,
+          "required_signal": "body_force"
+        }
+      ]
+    },
+    {
+      "atlas_role": "Frontier",
+      "candidate_id": "NIR_CUR_005",
+      "confidence": "medium",
+      "rationale": "This selected current-rock probe is mission-scoped evidence only; repeated positive current-pulse reactions could justify a Frontier proposal after review.",
+      "review_required": true,
+      "trigger_conditions": [
+        {
+          "condition_id": "cond_nir_cur_005_repeat_current",
+          "condition_text": "If future reactions repeatedly show current-rock pulse and body on this item or close current probes, consider a Frontier candidate for review.",
+          "future_reaction_operations": [
+            "love",
+            "like"
+          ],
+          "minimum_occurrences": 2,
+          "required_signal": "current_rock_has_pulse"
+        }
+      ]
+    },
+    {
+      "atlas_role": "Dead End",
+      "candidate_id": "NIR_CUR_009",
+      "confidence": "medium",
+      "rationale": "This trap item is explicitly a dead-end check; repeated negative boundary reactions can support a Dead End candidate, but only with review.",
+      "review_required": true,
+      "trigger_conditions": [
+        {
+          "condition_id": "cond_nir_cur_009_dead_end_repeat",
+          "condition_text": "If future boundary checks repeatedly hit post-grunge slop and fake-hard on this trap item, keep it as a Dead End candidate under review.",
+          "future_reaction_operations": [
+            "not_for_me"
+          ],
+          "minimum_occurrences": 2,
+          "required_signal": "post_grunge_slop"
+        }
+      ]
+    },
+    {
+      "atlas_role": "Frontier",
+      "candidate_id": "NIR_CUR_007",
+      "confidence": "low",
+      "rationale": "This is a current heavy-melodic checkpoint; repeated positive evidence could support Frontier status, but not Landmark promotion.",
+      "review_required": true,
+      "trigger_conditions": [
+        {
+          "condition_id": "cond_nir_cur_007_repeat_current_body",
+          "condition_text": "If future reactions repeatedly show current pulse plus body on this heavy current item, keep it as a Frontier candidate rather than promoting it to a Landmark.",
+          "future_reaction_operations": [
+            "love",
+            "like"
+          ],
+          "minimum_occurrences": 2,
+          "required_signal": "current_rock_has_pulse"
+        }
+      ]
+    }
+  ],
+  "review_config": {
+    "default_item_review_needed_for": [
+      "risky",
+      "trap",
+      "dead_end_check",
+      "frontier_unknown"
+    ],
+    "frontier_or_trap_review_policy": "Review all risky, trap, dead_end_check, and frontier_unknown items before any Atlas promotion. Trap positives must be treated as bounded exceptions or reassess-dead-end signals, not as lane proof.",
+    "notes": "Mission is candidate-constrained and intentionally preserves uncertainty. No item should be promoted beyond Signal only or Waypoint without recurrence and review. Golden Alpha packet review override: schema-valid product_pass_candidate output is marked app-import-ready for integration testing only. This does not imply Atlas promotion or public-quality autonomy.",
+    "ready_for_app_import": true,
+    "requires_human_review": true,
+    "review_focus": [
+      "body-first pressure",
+      "current rock pulse",
+      "fake-hard boundary",
+      "post-grunge slop boundary",
+      "waypoint not Landmark",
+      "golden packet adapter check"
+    ]
+  },
+  "risk_model": {
+    "candidate_policy": "Prefer route logic over sounds-like matching; use candidate pool only, exclude trap rows unless explicitly used as boundary checks.",
+    "known_traps_acknowledged": [
+      "Adult Alternative / VH1 Sincerity Lane",
+      "Post-Grunge Trap Item",
+      "Seether-style fake-hard lane"
+    ],
+    "overall_risk": "medium",
+    "uncertainty_notes": [
+      "Candidate pool is present, so all route items are drawn only from the provided candidates.",
+      "The route stays within the requested item-count range and uses trap rows only as explicit boundary checks.",
+      "Current-rock evidence remains provisional; one positive reaction should not be inflated into broad appetite.",
+      "Trap positives, if any, should be interpreted as exception/cultural furniture/reassess-dead-end signals, not as proof the dead end is gone."
+    ]
+  },
+  "route": {
+    "intended_item_count": 7,
+    "items": [
+      {
+        "candidate_id": "NIR_CUR_001",
+        "display_metadata": {
+          "album": "In Utero",
+          "artist": "Nirvana",
+          "release_year": 1993,
+          "title": "Serve the Servants"
+        },
+        "expected_features": [
+          "body_force",
+          "hooks_under_pressure",
+          "production_reveals_identity"
+        ],
+        "expected_negative_signal": "Feels like familiar canon without present-tense pull, or the body is there but the song feels stale.",
+        "expected_positive_signal": "Body lands immediately; the mix feels alive, not slop; hooks carry pressure rather than polish.",
+        "familiarity_assumption": "deeply_known",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Prevents overgeneralizing from one anchor listen.",
+              "chip_id": "r1_keep_waypoint_not_landmark",
+              "chip_type": "route_signal",
+              "label": "Waypoint, not Landmark",
+              "mapped_canonical_feature_id": "waypoint_not_landmark",
+              "reaction_operation": "keep",
+              "signal_meaning": "This remains an anchor for the route, but the chip keeps the scope bounded.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Marks clean production that still has blood.",
+              "chip_id": "r1_keep_no_slop",
+              "chip_type": "feature_signal",
+              "label": "no slop",
+              "mapped_canonical_feature_id": "polished_but_not_slop",
+              "reaction_operation": "keep",
+              "signal_meaning": "The recording stays alive and specific rather than mushy or generic.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Adds moderate support for body-first taste.",
+              "chip_id": "r1_like_physical_pull",
+              "chip_type": "feature_signal",
+              "label": "physical pull",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "like",
+              "signal_meaning": "The song has body and motion, even if it is not top-tier core.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Supports the idea that production can clarify identity on this route.",
+              "chip_id": "r1_like_identity_sharp",
+              "chip_type": "feature_signal",
+              "label": "identity sharpened",
+              "mapped_canonical_feature_id": "production_reveals_identity",
+              "reaction_operation": "like",
+              "signal_meaning": "The production reveals the band rather than flattening them.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Strengthens body-first anchor evidence for this route.",
+              "chip_id": "r1_love_body_hits",
+              "chip_type": "feature_signal",
+              "label": "body hits",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "love",
+              "signal_meaning": "The physical drive is the main reason this works.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Reinforces the pressure-hook lane as a strong anchor feature.",
+              "chip_id": "r1_love_hooks_under_pressure",
+              "chip_type": "feature_signal",
+              "label": "hooks under pressure",
+              "mapped_canonical_feature_id": "hooks_under_pressure",
+              "reaction_operation": "love",
+              "signal_meaning": "The melody survives distortion and pressure in a way that feels core.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Keeps stale familiarity from being mistaken for negative evidence.",
+              "chip_id": "r1_nfm_familiar_not_today",
+              "chip_type": "familiarity_signal",
+              "label": "known road, not today",
+              "mapped_canonical_feature_id": "known_landmark_not_today",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The issue is familiarity or staleness, not necessarily a feature mismatch.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Would weaken the body-first anchor if selected.",
+              "chip_id": "r1_nfm_body_absent",
+              "chip_type": "dead_end_signal",
+              "label": "body absent",
+              "mapped_canonical_feature_id": "no_blood",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The song fails if the physical drive is missing for the user.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If the user loves this again, it reinforces that pressure, body, and hooks under strain are the route's base language.",
+        "item_id": "route_1",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "In Utero",
+          "artist": "Nirvana",
+          "avoid_versions": "Avoid live versions and demos.",
+          "preferred_version_notes": "Use the In Utero studio album version.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Nirvana Serve the Servants In Utero",
+          "title": "Serve the Servants"
+        },
+        "review_state": {
+          "needs_human_review": false,
+          "review_notes": "Safe anchor item; no special review needed beyond normal mission review.",
+          "uncertainty_flags": [
+            "anchor_not_landmark"
+          ]
+        },
+        "risk_class": "safe",
+        "route_function": "Establish the known body-first center before any bridge or current probe.",
+        "route_index": 1,
+        "selection_role": "anchor",
+        "why_selected": "This is the anchor that keeps the mission tied to the user's proven body-and-melody core instead of drifting into generic alt-rock."
+      },
+      {
+        "candidate_id": "NIR_CUR_002",
+        "display_metadata": {
+          "album": "Over the Edge",
+          "artist": "Wipers",
+          "release_year": 1983,
+          "title": "Over the Edge"
+        },
+        "expected_features": [
+          "source_code_noise",
+          "body_force",
+          "plainspoken_wound"
+        ],
+        "expected_negative_signal": "Feels too historical, too thin, or like source-code without present-tense payoff.",
+        "expected_positive_signal": "The roughness clarifies the body; the song feels like useful crud rather than homework.",
+        "familiarity_assumption": "title_known",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Prevents the route from turning into a history lesson.",
+              "chip_id": "r2_keep_historical_bridge",
+              "chip_type": "route_signal",
+              "label": "historical bridge",
+              "mapped_canonical_feature_id": "waypoint_not_landmark",
+              "reaction_operation": "keep",
+              "signal_meaning": "This is a bridge, not a destination or a broad genre verdict.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Marks that rough does not automatically mean slop.",
+              "chip_id": "r2_keep_no_slop",
+              "chip_type": "feature_signal",
+              "label": "no slop",
+              "mapped_canonical_feature_id": "polished_but_not_slop",
+              "reaction_operation": "keep",
+              "signal_meaning": "The roughness stays specific instead of becoming mush.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Keeps the bridge role active without overclaiming appetite.",
+              "chip_id": "r2_like_source_code",
+              "chip_type": "route_signal",
+              "label": "source code",
+              "mapped_canonical_feature_id": "source_code_noise",
+              "reaction_operation": "like",
+              "signal_meaning": "This is useful as a bridge even if it is not a personal favorite.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Adds moderate support for body-first bridge logic.",
+              "chip_id": "r2_like_body_force",
+              "chip_type": "feature_signal",
+              "label": "body force",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "like",
+              "signal_meaning": "The physical drive is present enough to matter.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Strengthens the historical bridge as productive evidence.",
+              "chip_id": "r2_love_useful_crud",
+              "chip_type": "feature_signal",
+              "label": "useful crud",
+              "mapped_canonical_feature_id": "source_code_noise",
+              "reaction_operation": "love",
+              "signal_meaning": "The rough source-code quality is exactly what makes the route work.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Supports the idea that directness can bridge to current rock.",
+              "chip_id": "r2_love_plain_wound",
+              "chip_type": "feature_signal",
+              "label": "plain wound",
+              "mapped_canonical_feature_id": "plainspoken_wound",
+              "reaction_operation": "love",
+              "signal_meaning": "The direct hurt and pressure are the point, not decoration.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Pushes the route forward if the bridge feels too historical.",
+              "chip_id": "r2_nfm_too_old",
+              "chip_type": "boundary_signal",
+              "label": "too old for the route",
+              "mapped_canonical_feature_id": "known_landmark_not_today",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The user may want current rock sooner rather than older source-code.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Would suggest the bridge is too academic for this mission.",
+              "chip_id": "r2_nfm_homework",
+              "chip_type": "dead_end_signal",
+              "label": "homework",
+              "mapped_canonical_feature_id": "adult_alt_mush",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The source-code lane feels like obligation rather than useful listening.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If this lands, the user may value raw pressure and plainspoken wound as route material, not just polished modernity.",
+        "item_id": "route_2",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "Over the Edge",
+          "artist": "Wipers",
+          "avoid_versions": "Avoid covers.",
+          "preferred_version_notes": "Use the original studio recording.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Wipers Over the Edge",
+          "title": "Over the Edge"
+        },
+        "review_state": {
+          "needs_human_review": false,
+          "review_notes": "Bridge item is medium risk but bounded and candidate-constrained.",
+          "uncertainty_flags": [
+            "bridge_not_destination"
+          ]
+        },
+        "risk_class": "medium",
+        "route_function": "Bridge backward to a rougher source-code lane so the route can move forward without becoming a Nirvana copy hunt.",
+        "route_index": 2,
+        "selection_role": "bridge",
+        "why_selected": "This is source-code pressure: it helps test whether the user wants the prehistory of the body-and-hooks lane before moving toward current rock."
+      },
+      {
+        "candidate_id": "NIR_CUR_003",
+        "display_metadata": {
+          "album": "As Good as Dead",
+          "artist": "Local H",
+          "release_year": 1996,
+          "title": "Bound for the Floor"
+        },
+        "expected_features": [
+          "working_band_identity",
+          "hooks_under_pressure",
+          "body_force"
+        ],
+        "expected_negative_signal": "Feels like a genre appliance or like pressure without identity.",
+        "expected_positive_signal": "The band feels like a lived machine; the hooks hit with pressure and the body stays intact.",
+        "familiarity_assumption": "deeply_known",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Keeps the route from overpromoting a shelf into a landmark.",
+              "chip_id": "r3_keep_bridge_only",
+              "chip_type": "route_signal",
+              "label": "bridge only",
+              "mapped_canonical_feature_id": "waypoint_not_landmark",
+              "reaction_operation": "keep",
+              "signal_meaning": "Useful route shelf, not core canon.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Marks that this bridge avoids the fake-hard trap.",
+              "chip_id": "r3_keep_no_fake_hard",
+              "chip_type": "boundary_signal",
+              "label": "no fake-hard",
+              "mapped_canonical_feature_id": "fake_hard",
+              "reaction_operation": "keep",
+              "signal_meaning": "The item stays on the right side of the fake-hard line.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Supports the pressure-hook lane as a bridge feature.",
+              "chip_id": "r3_like_hooks_under_pressure",
+              "chip_type": "feature_signal",
+              "label": "hook under strain",
+              "mapped_canonical_feature_id": "hooks_under_pressure",
+              "reaction_operation": "like",
+              "signal_meaning": "The melody survives pressure and distortion.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Adds moderate evidence for lived-in band identity.",
+              "chip_id": "r3_like_earned_grit",
+              "chip_type": "feature_signal",
+              "label": "earned grit",
+              "mapped_canonical_feature_id": "working_band_identity",
+              "reaction_operation": "like",
+              "signal_meaning": "The grit feels earned rather than posed.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Strengthens the working-band bridge as a real route feature.",
+              "chip_id": "r3_love_specific_machine",
+              "chip_type": "feature_signal",
+              "label": "specific machine",
+              "mapped_canonical_feature_id": "working_band_identity",
+              "reaction_operation": "love",
+              "signal_meaning": "The band feels lived-in and specific, not generic.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Reinforces body-first taste in a bridge context.",
+              "chip_id": "r3_love_body_hits",
+              "chip_type": "feature_signal",
+              "label": "body hits",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "love",
+              "signal_meaning": "The physical drive is the main reason this works.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Would weaken the working-band hypothesis if selected.",
+              "chip_id": "r3_nfm_genre_appliance",
+              "chip_type": "dead_end_signal",
+              "label": "genre appliance",
+              "mapped_canonical_feature_id": "genre_appliance",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The song feels like a template rather than a specific identity.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Would point away from current-rock viability.",
+              "chip_id": "r3_nfm_pose_over_pulse",
+              "chip_type": "dead_end_signal",
+              "label": "pose over pulse",
+              "mapped_canonical_feature_id": "scene_posture",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The route loses value if the band posture outruns the song's pulse.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If this lands, the user may like bands that feel like a specific machine rather than a genre appliance.",
+        "item_id": "route_3",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "As Good as Dead",
+          "artist": "Local H",
+          "avoid_versions": "Avoid acoustic or live cuts.",
+          "preferred_version_notes": "Use the studio album/single version.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Local H Bound for the Floor As Good as Dead",
+          "title": "Bound for the Floor"
+        },
+        "review_state": {
+          "needs_human_review": false,
+          "review_notes": "Safe bridge item; useful for working-band identity and pressure.",
+          "uncertainty_flags": []
+        },
+        "risk_class": "safe",
+        "route_function": "Bridge from source-code to a more modern working-band pressure point that can still feel bodily and specific.",
+        "route_index": 3,
+        "selection_role": "bridge",
+        "why_selected": "This tests working-band identity and compressed pressure in a known lane without drifting into fake-hard costume."
+      },
+      {
+        "candidate_id": "NIR_CUR_006",
+        "display_metadata": {
+          "album": "Rat Saw God",
+          "artist": "Wednesday",
+          "release_year": 2023,
+          "title": "Chosen to Deserve"
+        },
+        "expected_features": [
+          "current_rock_has_pulse",
+          "plainspoken_wound",
+          "production_reveals_identity"
+        ],
+        "expected_negative_signal": "Feels loose, too alt-country framed, or like current posture without body.",
+        "expected_positive_signal": "Current pulse is real; the song feels alive now and not like fake-hard or adult-alt mush.",
+        "familiarity_assumption": "unknown",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Keeps the current-rock signal provisional until recurrence.",
+              "chip_id": "r4_keep_current_probe",
+              "chip_type": "route_signal",
+              "label": "current rock probe",
+              "mapped_canonical_feature_id": "fresh_listen_positive_needs_recurrence",
+              "reaction_operation": "keep",
+              "signal_meaning": "This is a probe, not a verdict on the whole lane.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Maintains the body-first criterion for later items.",
+              "chip_id": "r4_keep_body_first",
+              "chip_type": "feature_signal",
+              "label": "body first",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "keep",
+              "signal_meaning": "The route should keep prioritizing physical drive over polish.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Adds moderate support for direct current-rock writing.",
+              "chip_id": "r4_like_plain_wound",
+              "chip_type": "feature_signal",
+              "label": "plain wound",
+              "mapped_canonical_feature_id": "plainspoken_wound",
+              "reaction_operation": "like",
+              "signal_meaning": "The hurt feels direct and useful, even if not core love.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Supports the idea that modern production can reveal identity.",
+              "chip_id": "r4_like_identity_sharp",
+              "chip_type": "feature_signal",
+              "label": "identity sharpened",
+              "mapped_canonical_feature_id": "production_reveals_identity",
+              "reaction_operation": "like",
+              "signal_meaning": "Production helps the band sound like itself.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Strong evidence that current rock can work on this route.",
+              "chip_id": "r4_love_current_pulse",
+              "chip_type": "feature_signal",
+              "label": "current pulse",
+              "mapped_canonical_feature_id": "current_rock_has_pulse",
+              "reaction_operation": "love",
+              "signal_meaning": "The song feels alive now and bodily, not retro by default.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Protects the current-rock lane from pose-based false positives.",
+              "chip_id": "r4_love_no_scene_posture",
+              "chip_type": "boundary_signal",
+              "label": "no scene posture",
+              "mapped_canonical_feature_id": "scene_posture",
+              "reaction_operation": "love",
+              "signal_meaning": "The currentness feels lived-in rather than posed.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Would mark this as useful but not personally compelling.",
+              "chip_id": "r4_nfm_alt_country_loose",
+              "chip_type": "boundary_signal",
+              "label": "alt-country loose",
+              "mapped_canonical_feature_id": "respect_more_than_crave",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The looseness or framing may pull it away from the route's target.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Would caution against overreading current-rock appetite.",
+              "chip_id": "r4_nfm_prestige_distance",
+              "chip_type": "dead_end_signal",
+              "label": "prestige distance",
+              "mapped_canonical_feature_id": "too_tasteful",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The song feels too distanced or tasteful to carry the route.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If this lands, the user may accept current rock when it feels bodily and specific rather than scene-postured.",
+        "item_id": "route_4",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "Rat Saw God",
+          "artist": "Wednesday",
+          "avoid_versions": "Avoid live radio sessions.",
+          "preferred_version_notes": "Use the album version.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Wednesday Chosen to Deserve Rat Saw God",
+          "title": "Chosen to Deserve"
+        },
+        "review_state": {
+          "needs_human_review": true,
+          "review_notes": "Risky current-rock probe; review needed because this is frontier evidence and could be a false-nearby route if it feels too loose or too tasteful.",
+          "uncertainty_flags": [
+            "frontier_unknown",
+            "current_rock_probe"
+          ]
+        },
+        "risk_class": "risky",
+        "route_function": "Probe the present tense with a current rock item that may have pulse, wound, and production identity.",
+        "route_index": 4,
+        "selection_role": "probe",
+        "why_selected": "This is a current-rock probe that can show whether modern guitar music can carry body and ache without prestige distance."
+      },
+      {
+        "candidate_id": "NIR_CUR_009",
+        "display_metadata": {
+          "album": "Come Clean",
+          "artist": "Puddle of Mudd",
+          "release_year": 2001,
+          "title": "Blurry"
+        },
+        "expected_features": [
+          "post_grunge_slop",
+          "adult_alt_mush",
+          "fake_hard"
+        ],
+        "expected_negative_signal": "The expected miss would confirm the post-grunge slop boundary and the no-blood/fake-hard guardrail.",
+        "expected_positive_signal": "If positive, it should be read only as an exception or cultural furniture signal, not as lane approval.",
+        "familiarity_assumption": "familiar",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Reinforces the guardrail against near-miss recommendations.",
+              "chip_id": "r5_keep_false_nearby",
+              "chip_type": "boundary_signal",
+              "label": "false-nearby",
+              "mapped_canonical_feature_id": "false_nearby_protection",
+              "reaction_operation": "keep",
+              "signal_meaning": "This is the kind of close-looking object that can miss the real taste logic.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Keeps the dead-end boundary explicit.",
+              "chip_id": "r5_keep_no_blood",
+              "chip_type": "dead_end_signal",
+              "label": "no blood",
+              "mapped_canonical_feature_id": "no_blood",
+              "reaction_operation": "keep",
+              "signal_meaning": "The route should keep this as a dead-end check for bloodless post-grunge.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Triggers a cautious reassessment rather than a broad claim.",
+              "chip_id": "r5_like_reassess_dead_end",
+              "chip_type": "reassess_dead_end_signal",
+              "label": "reassess dead end",
+              "mapped_canonical_feature_id": "false_nearby_protection",
+              "reaction_operation": "like",
+              "signal_meaning": "A positive reaction would ask for a review, not an automatic promotion.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Allows a narrow exception while preserving the dead-end boundary.",
+              "chip_id": "r5_like_bounded_exception",
+              "chip_type": "unexpected_exception_signal",
+              "label": "bounded exception",
+              "mapped_canonical_feature_id": "best_of_weak_lane",
+              "reaction_operation": "like",
+              "signal_meaning": "The item may be a narrow exception without changing the lane verdict.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Flags a one-off exception for review without promoting the dead-end lane.",
+              "chip_id": "r5_love_unexpected_exception",
+              "chip_type": "unexpected_exception_signal",
+              "label": "unexpected exception",
+              "mapped_canonical_feature_id": "one_object_exception",
+              "reaction_operation": "love",
+              "signal_meaning": "A positive reaction would be treated as a bounded exception, not a lane reversal.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Keeps trap positives bounded and review-gated.",
+              "chip_id": "r5_love_cultural_furniture",
+              "chip_type": "cultural_furniture_signal",
+              "label": "cultural furniture",
+              "mapped_canonical_feature_id": "cultural_furniture",
+              "reaction_operation": "love",
+              "signal_meaning": "A positive reaction would mean this object has shared-context utility, not core appetite.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Strengthens the dead-end boundary if selected.",
+              "chip_id": "r5_nfm_post_grunge_slop",
+              "chip_type": "dead_end_signal",
+              "label": "post-grunge slop",
+              "mapped_canonical_feature_id": "post_grunge_slop",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The song confirms the slop boundary if it feels like an afterimage rather than a living song.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Strengthens the fake-hard guardrail if selected.",
+              "chip_id": "r5_nfm_fake_hard",
+              "chip_type": "dead_end_signal",
+              "label": "fake-hard",
+              "mapped_canonical_feature_id": "fake_hard",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The song fails if intensity is only costume and not body.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If the user rejects this, it confirms the dead-end boundary around post-grunge slop and fake-hard.",
+        "item_id": "route_5",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "Come Clean",
+          "artist": "Puddle of Mudd",
+          "avoid_versions": "Avoid as a recommendation.",
+          "preferred_version_notes": "Use only if making an explicit boundary check.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Puddle of Mudd Blurry Come Clean",
+          "title": "Blurry"
+        },
+        "review_state": {
+          "needs_human_review": true,
+          "review_notes": "Trap item used only as explicit boundary check; positive reactions must be interpreted as exception/cultural furniture/reassess-dead-end signals.",
+          "uncertainty_flags": [
+            "trap",
+            "dead_end_check"
+          ]
+        },
+        "risk_class": "trap",
+        "route_function": "Check the trap so the route can distinguish current pulse from post-grunge afterimage.",
+        "route_index": 5,
+        "selection_role": "trap",
+        "why_selected": "Explicit boundary check for post-grunge slop and fake-hard posture; this is included only to test the dead-end guardrail."
+      },
+      {
+        "candidate_id": "NIR_CUR_007",
+        "display_metadata": {
+          "album": "12th House Rock",
+          "artist": "Narrow Head",
+          "release_year": 2020,
+          "title": "Moments of Clarity"
+        },
+        "expected_features": [
+          "dark_melodic_atmosphere",
+          "body_force",
+          "current_rock_has_pulse"
+        ],
+        "expected_negative_signal": "Feels like generic heavy haze, or the identity gets obscured by production.",
+        "expected_positive_signal": "The song feels dark, melodic, and bodily; the pressure is specific rather than generic.",
+        "familiarity_assumption": "unknown",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Keeps the route scoped and provisional.",
+              "chip_id": "r6_keep_heavy_bridge",
+              "chip_type": "route_signal",
+              "label": "heavy bridge",
+              "mapped_canonical_feature_id": "waypoint_not_landmark",
+              "reaction_operation": "keep",
+              "signal_meaning": "This is a bridge/checkpoint, not a broad genre claim.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Protects against generic heavy haze.",
+              "chip_id": "r6_keep_no_generic_haze",
+              "chip_type": "boundary_signal",
+              "label": "no generic haze",
+              "mapped_canonical_feature_id": "production_obscures_identity",
+              "reaction_operation": "keep",
+              "signal_meaning": "The route should keep rejecting heavy music that loses identity.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Adds moderate evidence for current-rock viability.",
+              "chip_id": "r6_like_current_pulse",
+              "chip_type": "feature_signal",
+              "label": "current pulse",
+              "mapped_canonical_feature_id": "current_rock_has_pulse",
+              "reaction_operation": "like",
+              "signal_meaning": "The item feels alive now, even if it is not a top-tier love.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Supports the idea that darker current rock can still be route material.",
+              "chip_id": "r6_like_melodic_gloom",
+              "chip_type": "feature_signal",
+              "label": "melodic gloom",
+              "mapped_canonical_feature_id": "dark_melodic_atmosphere",
+              "reaction_operation": "like",
+              "signal_meaning": "The shadow has hook and shape.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Strengthens the current heavy-melodic shelf as a viable route.",
+              "chip_id": "r6_love_dark_pull",
+              "chip_type": "feature_signal",
+              "label": "dark pull",
+              "mapped_canonical_feature_id": "dark_melodic_atmosphere",
+              "reaction_operation": "love",
+              "signal_meaning": "The gloom is melodic and embodied, not just texture.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Reinforces the body-first criterion in current rock.",
+              "chip_id": "r6_love_body_force",
+              "chip_type": "feature_signal",
+              "label": "body force",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "love",
+              "signal_meaning": "The physical drive is strong enough to matter on its own.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Would mark this shelf as too obscured to use.",
+              "chip_id": "r6_nfm_haze_only",
+              "chip_type": "dead_end_signal",
+              "label": "haze only",
+              "mapped_canonical_feature_id": "production_obscures_identity",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The song becomes a dead end if atmosphere replaces body and hooks.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Would warn against moving toward heady-heavy routes.",
+              "chip_id": "r6_nfm_too_heavy_serious",
+              "chip_type": "boundary_signal",
+              "label": "too serious",
+              "mapped_canonical_feature_id": "over_serious_heady_heavy",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The item may over-index on heaviness without enough song pressure.",
+              "uses_user_vocabulary": false,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If this lands, the user may accept modern heavy guitar when it has dark melodic atmosphere and body rather than scene posture.",
+        "item_id": "route_6",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "12th House Rock",
+          "artist": "Narrow Head",
+          "avoid_versions": "Avoid remixes.",
+          "preferred_version_notes": "Use studio album version.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Narrow Head Moments of Clarity 12th House Rock",
+          "title": "Moments of Clarity"
+        },
+        "review_state": {
+          "needs_human_review": false,
+          "review_notes": "Medium-risk checkpoint; candidate-constrained and useful for current heavy-melodic testing.",
+          "uncertainty_flags": []
+        },
+        "risk_class": "medium",
+        "route_function": "Test a heavier current shelf that could still feel alive and specific after the trap boundary is established.",
+        "route_index": 6,
+        "selection_role": "checkpoint",
+        "why_selected": "This is a useful checkpoint for whether heavy melodic current rock can keep body and pulse without turning into generic haze."
+      },
+      {
+        "candidate_id": "NIR_CUR_005",
+        "display_metadata": {
+          "album": "I Got Heaven",
+          "artist": "Mannequin Pussy",
+          "release_year": 2024,
+          "title": "I Got Heaven"
+        },
+        "expected_features": [
+          "current_rock_has_pulse",
+          "female_rupture_persona",
+          "body_force"
+        ],
+        "expected_negative_signal": "Feels like polished current sheen, scene posture, or a lane that is too far from the user's body-first taste.",
+        "expected_positive_signal": "Current rock has pulse, body, and rupture without slop or fake-hard posture.",
+        "familiarity_assumption": "unknown",
+        "feedback_chip_sets": {
+          "keep": [
+            {
+              "atlas_effect_hint": "Keeps the endpoint provisional until recurrence.",
+              "chip_id": "r7_keep_current_endpoint",
+              "chip_type": "route_signal",
+              "label": "current endpoint",
+              "mapped_canonical_feature_id": "fresh_listen_positive_needs_recurrence",
+              "reaction_operation": "keep",
+              "signal_meaning": "This is the mission's present-tense test, not a broad canon claim.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            },
+            {
+              "atlas_effect_hint": "Protects the current endpoint from polished slop.",
+              "chip_id": "r7_keep_no_slop",
+              "chip_type": "boundary_signal",
+              "label": "no slop",
+              "mapped_canonical_feature_id": "polished_but_not_slop",
+              "reaction_operation": "keep",
+              "signal_meaning": "The current sound stays alive rather than turning into mush.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "low"
+            }
+          ],
+          "like": [
+            {
+              "atlas_effect_hint": "Adds moderate support for current body-first rock.",
+              "chip_id": "r7_like_body_force",
+              "chip_type": "feature_signal",
+              "label": "body force",
+              "mapped_canonical_feature_id": "body_force",
+              "reaction_operation": "like",
+              "signal_meaning": "The physical drive is present and useful, even if not top-tier love.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            },
+            {
+              "atlas_effect_hint": "Supports the pressure-hook lane in a current setting.",
+              "chip_id": "r7_like_bite",
+              "chip_type": "feature_signal",
+              "label": "bite",
+              "mapped_canonical_feature_id": "hooks_under_pressure",
+              "reaction_operation": "like",
+              "signal_meaning": "The song has enough edge to stay interesting without becoming fake-hard.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "medium"
+            }
+          ],
+          "love": [
+            {
+              "atlas_effect_hint": "Strong evidence for current-rock that carries bite and body.",
+              "chip_id": "r7_love_rupture_persona",
+              "chip_type": "feature_signal",
+              "label": "rupture persona",
+              "mapped_canonical_feature_id": "female_rupture_persona",
+              "reaction_operation": "love",
+              "signal_meaning": "The voice and construction break the polite frame in a way that feels alive.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            },
+            {
+              "atlas_effect_hint": "Strong evidence that the route has reached a current endpoint.",
+              "chip_id": "r7_love_current_pulse",
+              "chip_type": "feature_signal",
+              "label": "current pulse",
+              "mapped_canonical_feature_id": "current_rock_has_pulse",
+              "reaction_operation": "love",
+              "signal_meaning": "This feels like present-tense rock with real life in it.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "high"
+            }
+          ],
+          "not_for_me": [
+            {
+              "atlas_effect_hint": "Would caution against this current lane if selected.",
+              "chip_id": "r7_nfm_scene_posture",
+              "chip_type": "dead_end_signal",
+              "label": "scene posture",
+              "mapped_canonical_feature_id": "scene_posture",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The item fails if it feels like modern scene signaling instead of song pressure.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            },
+            {
+              "atlas_effect_hint": "Would keep the route from drifting into fake-hard current rock.",
+              "chip_id": "r7_nfm_fake_hard",
+              "chip_type": "dead_end_signal",
+              "label": "fake-hard",
+              "mapped_canonical_feature_id": "fake_hard",
+              "reaction_operation": "not_for_me",
+              "signal_meaning": "The item fails if its edge is only costume and not body.",
+              "uses_user_vocabulary": true,
+              "weight_hint": "negative"
+            }
+          ]
+        },
+        "item_hypothesis": "If this lands, the route has reached something current that still carries body and bite.",
+        "item_id": "route_7",
+        "item_type": "track",
+        "music_kit_search_hint": {
+          "album": "I Got Heaven",
+          "artist": "Mannequin Pussy",
+          "avoid_versions": "Avoid clean edits if they blunt force.",
+          "preferred_version_notes": "Use the studio album version.",
+          "resolution_status_placeholder": "unresolved",
+          "search_query": "Mannequin Pussy I Got Heaven",
+          "title": "I Got Heaven"
+        },
+        "review_state": {
+          "needs_human_review": true,
+          "review_notes": "Risky current endpoint; review needed because it is frontier evidence and should not be inflated into a broad lane claim.",
+          "uncertainty_flags": [
+            "frontier_unknown",
+            "current_endpoint"
+          ]
+        },
+        "risk_class": "risky",
+        "route_function": "End on a current-rock test that can validate the route's present-tense hypothesis.",
+        "route_index": 7,
+        "selection_role": "probe",
+        "why_selected": "This is the current endpoint probe: it tests whether the user wants modern rupture, body, and hook pressure without fake-hard costume."
+      }
+    ],
+    "route_summary": "Nirvana anchor -> historical source-code bridge -> working-band bridge -> current-rock probes -> explicit trap boundary check -> useful waypoint shelf -> current current-rock test."
+  },
+  "schema_version": "waymark.mission_output.v0.1",
+  "source_prompt": "Find a route from Nirvana to something current.",
+  "title": "From Nirvana to Current Pulse",
+  "why_now": "Nirvana is a strong anchor seed, Queens of the Stone Age is a useful waypoint shelf, and the current-rock question is still open enough to test with candidate-constrained probes while preserving uncertainty."
+}

@@ -1,0 +1,28 @@
+{
+  "override": {
+    "applied": true,
+    "limits": [
+      "Does not prove autonomous mission generation is ready.",
+      "Does not promote Atlas roles.",
+      "Does not bypass physical-device MusicKit QA."
+    ],
+    "reason": "Golden integration packet needs a complete app-import artifact. The source output is schema-valid with zero automated product failures, but the model left ready_for_app_import false pending human review.",
+    "target_status": "app_import_candidate"
+  },
+  "required_followup": [
+    "Replace this override with the final Supabase product review gate.",
+    "Rerun after Survey, Atlas, and Canonical Graph lanes deliver frozen Alpha contracts.",
+    "Run MusicKit resolution QA against every route item before external testers."
+  ],
+  "reviewed_at": "2026-05-21T20:00:00Z",
+  "schema_version": "waymark.alpha_app_import_review_gate.v0.1",
+  "source_generation_status": {
+    "model_declared_app_import_ready": false,
+    "product_readiness_status": "product_pass_candidate",
+    "score_fail_count": 0,
+    "score_partial_count": 0,
+    "score_pass_count": 24,
+    "validation_error_count": 0,
+    "validation_valid": true
+  }
+}

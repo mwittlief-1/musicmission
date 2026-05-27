@@ -1,0 +1,232 @@
+{
+  "automated_score": 1.0,
+  "checks": [
+    {
+      "check_id": "valid_json",
+      "detail": "Parsed model output JSON.",
+      "status": "pass"
+    },
+    {
+      "check_id": "schema_conformance",
+      "detail": "Output conforms to mission_output_schema_v0_1.json.",
+      "status": "pass"
+    },
+    {
+      "check_id": "route_not_empty",
+      "detail": "Route item count: 7",
+      "status": "pass"
+    },
+    {
+      "check_id": "route_item_count_expected",
+      "detail": "Expected 7-12, got 7.",
+      "status": "pass"
+    },
+    {
+      "check_id": "all_items_have_four_chip_sets",
+      "detail": "OK.",
+      "status": "pass"
+    },
+    {
+      "check_id": "each_chip_set_has_two_chips",
+      "detail": "OK.",
+      "status": "pass"
+    },
+    {
+      "check_id": "music_kit_search_hints_present",
+      "detail": "OK.",
+      "status": "pass"
+    },
+    {
+      "check_id": "no_duplicate_songs_unless_allowed",
+      "detail": "No duplicate songs found.",
+      "status": "pass"
+    },
+    {
+      "check_id": "expected_archetype_present",
+      "detail": "Expected one of ['Bridge Route']; got ['Bridge Route'].",
+      "status": "pass"
+    },
+    {
+      "check_id": "candidate_constrained_uses_pool",
+      "detail": "All route items map to the candidate pool.",
+      "status": "pass"
+    },
+    {
+      "check_id": "risk_ratio_constraints",
+      "detail": "No risk-ratio constraint for this request.",
+      "status": "pass"
+    },
+    {
+      "check_id": "year_constraints",
+      "detail": "No fixed-year constraint for this request.",
+      "status": "pass"
+    },
+    {
+      "check_id": "known_dead_end_warnings_present",
+      "detail": "Required warning terms are present.",
+      "status": "pass"
+    },
+    {
+      "check_id": "false_nearby_traps_not_promoted",
+      "detail": "False-nearby terms used as explicit boundary tests: Puddle of Mudd",
+      "status": "pass"
+    },
+    {
+      "check_id": "feedback_chips_not_generic",
+      "detail": "Structurally useless chip labels: 0 of 56.",
+      "status": "pass"
+    },
+    {
+      "check_id": "waypoint_landmark_distinction",
+      "detail": "No request-specific Waypoint terms configured.",
+      "status": "pass"
+    },
+    {
+      "check_id": "completion_counts_primary_reactions_separately",
+      "detail": "Completion criteria count primary reactions separately from chip selections.",
+      "status": "pass"
+    },
+    {
+      "check_id": "possible_atlas_updates_are_conditional",
+      "detail": "Possible Atlas updates are explicitly conditional on future reactions.",
+      "status": "pass"
+    },
+    {
+      "check_id": "possible_atlas_updates_are_mission_scoped",
+      "detail": "Possible Atlas updates are scoped to selected route evidence.",
+      "status": "pass"
+    },
+    {
+      "check_id": "risky_trap_frontier_items_need_review",
+      "detail": "Risky, trap, dead-end, and frontier-unknown items default to review-needed.",
+      "status": "pass"
+    },
+    {
+      "check_id": "trap_positive_chips_have_exception_semantics",
+      "detail": "Trap love/like chips use unexpected-exception, cultural-furniture, or reassess-dead-end semantics.",
+      "status": "pass"
+    },
+    {
+      "check_id": "generated_hypothesis_is_not_evidence",
+      "detail": "Mission hypothesis is framed as testable rather than already-learned evidence.",
+      "status": "pass"
+    },
+    {
+      "check_id": "candidate_role_discipline",
+      "detail": "Selected candidate roles match route usage.",
+      "status": "pass"
+    },
+    {
+      "check_id": "mission_route_shape",
+      "detail": "Route shape matches the expected archetype.",
+      "status": "pass"
+    }
+  ],
+  "fail_count": 0,
+  "human_rubric": [
+    {
+      "category": "Mission is a mission, not a playlist.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Route logic is coherent.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Hypothesis is personalized.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Uses Atlas context correctly.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Avoids known overgeneralization.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Handles Waypoint vs Landmark distinction.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Handles Dead Ends intelligently.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Feedback chips are specific and useful.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Feedback chips are structurally useful.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Feedback chips use user vocabulary naturally.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Expected signals are meaningful.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Mission would produce useful evidence.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Mission would be listenable and attractive to Matt.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Uncertainty is preserved.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "MusicKit resolution is plausible.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Output length is appropriate.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    },
+    {
+      "category": "Product voice feels like Waymark.",
+      "notes": "",
+      "scale": "0-3",
+      "score": null
+    }
+  ],
+  "partial_count": 0,
+  "pass_count": 24
+}

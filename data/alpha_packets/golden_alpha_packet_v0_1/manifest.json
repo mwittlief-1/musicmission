@@ -1,0 +1,93 @@
+{
+  "app_mission": {
+    "item_count": 7,
+    "mission_id": "MIS_NIRVANA_TO_CURRENT_ALPHA_GOLDEN",
+    "mission_title": "From Nirvana to Current Pulse",
+    "schema_version": "mission.v0.2"
+  },
+  "files": [
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/app_import/app_mission_collection_v0_2.json",
+      "sha256": "95e118ef275bd4787f73dddb0648e28f6fb02762bba30b0957a525e69704ec38"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/app_import/app_mission_v0_2.json",
+      "sha256": "275523f131cada2a316c8ef4d263989740baa22f977566a68d1908bf31b193f8"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/generation/mission_output_waymark_v0_1.raw.json",
+      "sha256": "42bfb061d5b3d13b24390a733ed8989179b2412d6a37a274f95d427a4b941ac3"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/generation/mission_output_waymark_v0_1.reviewed_app_import_candidate.json",
+      "sha256": "692413f63e23835c47aef47ea67ab7af73c2ce6fba1ab02e2bc5fe0e0763eb18"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/generation/source_metadata.json",
+      "sha256": "82690c5eb4bdd853b4d2f11154cc075cd5ab763318346082d73a4f78d5780327"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/generation/source_score_report.json",
+      "sha256": "48583b2492b4eab07df315acbb8ce58ba082748f2f200e83b3181dd1ebee9b82"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/generation/source_validation_result.json",
+      "sha256": "e9fabbccdae25ac66f9269e1e4e3aea8f82845172f581936dab69cb3c17fbed4"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/inputs/candidate_pool.json",
+      "sha256": "adf068cc703c0f22cdce749a1b5b556859521dd3aeb14665dd2fec4dc1759717"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/inputs/mission_generation_digest_view.json",
+      "sha256": "402205dbf93449169a8d3539967c26f79afb0476dd6e53bc155a90cc900a4375"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/inputs/survey_evidence_export.json",
+      "sha256": "c660b6d378de87a6fe6262f07d2f9f29caa62485933217f406949be07f10b676"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/request/supabase_generate_first_mission_batch_request.json",
+      "sha256": "65c23a83876adcc579f43c551000dff1eabec3a8e847eb41993b05a586ae35ea"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/response/supabase_generate_first_mission_batch_response.json",
+      "sha256": "0a861fa983a2a9d35f7fe1478e915220989ebb6d6839f578eb80121d0499f932"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/review/app_import_review_gate.json",
+      "sha256": "2988a211a06d6199deb8962cfff1a5244b285c0d6a1a48e7d17ecb1cdcef0e52"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/validation/app_mission_v0_2_validation_report.md",
+      "sha256": "728347d084ca7188b962814e162b4ef40de84357b7a88536e022b9e9020d3c06"
+    },
+    {
+      "path": "data/alpha_packets/golden_alpha_packet_v0_1/validation/survey_evidence_export_validation_report.md",
+      "sha256": "c151757743338d411b47a7f3a3be5c379d8efa67779466d28bd8010e6dab2a29"
+    }
+  ],
+  "generated_at": "2026-05-21T20:00:00Z",
+  "packet_id": "golden_alpha_packet_v0_1",
+  "purpose": "Golden end-to-end Alpha integration packet from Survey evidence through app-importable mission.v0.2.",
+  "schema_version": "waymark.alpha_golden_packet_manifest.v0.1",
+  "source_paths": {
+    "candidate_pool": "waymark-ai-tests/fixtures/candidate_pools/candidate_pool_nirvana_to_current.json",
+    "generation_run": "waymark-ai-tests/outputs/20260520T152256Z_001_nirvana_to_current_mission_generator_candidate_constrained_v0_1_mission_generation_digest_view_plus_features_plus_candidates_gpt-5_4-mini_run01",
+    "mission_generation_digest_view": "waymark-atlas-tests/outputs/20260520T151906Z/mission_generation_digest_view.json",
+    "survey_evidence_export": "data/survey_simulation/survey_evidence_export/samples/public_profile_01_A3_Al1_S2_survey_evidence_export.json"
+  },
+  "status": {
+    "manual_app_import_review_override_applied": true,
+    "packet_app_import_status": "app_import_candidate",
+    "source_generation_model_declared_app_import_ready": false,
+    "source_generation_product_readiness": "product_pass_candidate",
+    "source_generation_schema_valid": true,
+    "source_generation_score_fail_count": 0,
+    "source_generation_score_partial_count": 0
+  },
+  "validation_commands": [
+    "python3 scripts/validate_survey_evidence_export_v0_1.py --export data/alpha_packets/golden_alpha_packet_v0_1/inputs/survey_evidence_export.json",
+    "python3 scripts/validate_mission_json.py data/alpha_packets/golden_alpha_packet_v0_1/app_import/app_mission_v0_2.json"
+  ]
+}
