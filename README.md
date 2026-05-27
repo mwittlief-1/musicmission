@@ -4,6 +4,7 @@ Private alpha repo for the Waymark/Cartenza iOS TestFlight app, MusicKit integra
 
 Start with the current repo map before moving or adding files:
 
+- `AGENTS.md`
 - `docs/repo_map.md`
 - `docs/repo_cleanup_inventory_2026_05_26.md`
 - `data/README.md`
