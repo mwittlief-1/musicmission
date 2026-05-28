@@ -161,6 +161,7 @@ Progress:
 - Did not add reference concept boards to runtime resources.
 - Added `docs/app_dev/brand_assets/cartenza_logo_refinement_2026_05_27/` with three logo refinement candidates for owner review before any runtime replacement.
 - Locked Candidate B, `Cartographic Cut`, as the Alpha logo direction and promoted it to selected aliases in the refinement packet.
+- Replaced the iOS app icon set with a flattened no-alpha Candidate B render.
 
 ### CBR-006: Mockup rebrand pass
 

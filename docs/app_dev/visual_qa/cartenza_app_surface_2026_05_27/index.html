@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartenza App Surface Visual QA - 2026-05-27</title>
+  <style>
+    :root {
+      --obsidian: #07080a;
+      --charcoal: #0e0f12;
+      --graphite: #171a1e;
+      --slate: #23272b;
+      --border: #2b3035;
+      --ash: #7c828a;
+      --silver: #bfc3c9;
+      --warm-silver: #d4d0c7;
+      --gold: #b59a61;
+      --dim-gold: #8f7546;
+      --teal: #3f6966;
+      --teal-mist: #8fa59a;
+      --danger: #7a4e48;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--obsidian);
+      color: var(--warm-silver);
+      font: 15px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, system-ui, sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+
+    .header {
+      display: grid;
+      gap: 14px;
+      padding: 10px 0 24px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font: 700 clamp(34px, 8vw, 72px)/0.95 ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    }
+
+    h2 {
+      font: 650 24px/1.15 ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    }
+
+    h3 {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .subhead,
+    .muted {
+      color: color-mix(in srgb, var(--silver), transparent 25%);
+    }
+
+    .subhead {
+      max-width: 780px;
+      font-size: 17px;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: max-content;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: var(--gold);
+      background: color-mix(in srgb, var(--slate), transparent 18%);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      display: grid;
+      gap: 16px;
+      padding: 22px 0;
+      border-top: 1px solid color-mix(in srgb, var(--border), transparent 18%);
+    }
+
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+    }
+
+    .asset {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+      min-height: 220px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--graphite);
+    }
+
+    .asset figure {
+      display: grid;
+      place-items: center;
+      min-height: 144px;
+      margin: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .asset .icon {
+      width: 124px;
+      border-radius: 22%;
+    }
+
+    .asset .mark {
+      width: 124px;
+    }
+
+    .asset .texture {
+      width: 100%;
+      height: 144px;
+      object-fit: cover;
+      opacity: 0.75;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+      gap: 10px;
+    }
+
+    .swatch {
+      min-height: 92px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--graphite);
+    }
+
+    .swatch-color {
+      height: 46px;
+    }
+
+    .swatch-copy {
+      display: grid;
+      gap: 2px;
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+
+    .screen-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .screen {
+      position: relative;
+      min-height: 720px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 72% 12%, color-mix(in srgb, var(--teal), transparent 74%), transparent 28%),
+        repeating-radial-gradient(circle at 8% 22%, transparent 0 28px, color-mix(in srgb, var(--border), transparent 55%) 29px 30px),
+        var(--obsidian);
+      box-shadow: 0 18px 60px rgb(0 0 0 / 0.35);
+    }
+
+    .screen-inner {
+      display: grid;
+      gap: 18px;
+      padding: 24px;
+    }
+
+    .screen-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .mini-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .seal {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--slate);
+      color: var(--warm-silver);
+      font: 700 20px/1 ui-serif, "New York", Georgia, serif;
+      box-shadow: 0 0 28px rgb(181 154 97 / 0.16);
+    }
+
+    .seal img {
+      width: 88%;
+      height: 88%;
+      object-fit: contain;
+    }
+
+    .mini-title {
+      display: grid;
+      gap: 0;
+      min-width: 0;
+    }
+
+    .mini-title strong {
+      font-size: 15px;
+    }
+
+    .mini-title span {
+      overflow-wrap: anywhere;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .step {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: var(--slate);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hero-lockup {
+      display: grid;
+      gap: 12px;
+      padding-top: 4px;
+    }
+
+    .hero-lockup .seal {
+      width: 78px;
+      height: 78px;
+      font-size: 46px;
+    }
+
+    .wordmark {
+      font: 650 38px/0.95 ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    }
+
+    .tagline {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .screen h2 {
+      font-size: 30px;
+    }
+
+    .screen p {
+      color: color-mix(in srgb, var(--silver), transparent 24%);
+    }
+
+    .surface {
+      display: grid;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--graphite);
+    }
+
+    .surface strong {
+      color: var(--warm-silver);
+    }
+
+    .surface small {
+      color: color-mix(in srgb, var(--silver), transparent 30%);
+      font-size: 13px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 12px;
+      padding: 10px 14px;
+      background: var(--gold);
+      color: #111;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+    }
+
+    .tile {
+      display: grid;
+      place-items: end start;
+      min-height: 86px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px;
+      background:
+        linear-gradient(180deg, transparent, rgb(0 0 0 / 0.58)),
+        linear-gradient(135deg, color-mix(in srgb, var(--teal), transparent 35%), color-mix(in srgb, var(--gold), transparent 65%));
+      color: var(--warm-silver);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .mission {
+      display: grid;
+      gap: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--graphite);
+    }
+
+    .route {
+      height: 68px;
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 18% 52%, var(--gold) 0 4px, transparent 5px),
+        radial-gradient(circle at 58% 34%, var(--teal-mist) 0 4px, transparent 5px),
+        radial-gradient(circle at 84% 62%, var(--dim-gold) 0 4px, transparent 5px),
+        linear-gradient(110deg, transparent 0 16%, color-mix(in srgb, var(--teal), transparent 42%) 17% 18%, transparent 19% 55%, color-mix(in srgb, var(--gold), transparent 40%) 56% 58%, transparent 59%);
+      background-color: var(--charcoal);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 9px;
+      background: var(--slate);
+      color: var(--silver);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .chip.signal {
+      border-color: color-mix(in srgb, var(--gold), transparent 40%);
+      color: var(--gold);
+    }
+
+    .qa-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .qa-list li {
+      border-left: 3px solid var(--teal);
+      padding: 8px 0 8px 12px;
+      color: color-mix(in srgb, var(--silver), transparent 18%);
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: min(100% - 18px, 420px);
+        padding-top: 18px;
+      }
+
+      .screen {
+        min-height: 680px;
+        border-radius: 22px;
+      }
+
+      .screen-inner {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <span class="tag">Local QA artifact</span>
+      <h1>Cartenza App Surface</h1>
+      <p class="subhead">Phone-friendly visual review for the 2026-05-27 Cartenza surface pass. This gallery reflects the locked Candidate B logo direction and current SwiftUI copy; it is not a simulator screenshot.</p>
+    </header>
+
+    <section class="section" aria-labelledby="assets">
+      <h2 id="assets">Brand Assets In Repo</h2>
+      <div class="asset-grid">
+        <article class="asset">
+          <figure>
+            <img class="icon" src="../../../../MusicAtlasController/Resources/Assets.xcassets/AppIcon.appiconset/Icon-1024.png" alt="Cartenza alpha app icon placeholder">
+          </figure>
+          <h3>Alpha App Icon</h3>
+          <p class="muted">Locked Candidate B rendered into the app icon set and flattened for iOS.</p>
+        </article>
+        <article class="asset">
+          <figure>
+            <img class="mark" src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt="Selected Cartenza Cartographic Cut mark">
+          </figure>
+          <h3>Locked Cartographic Cut Mark</h3>
+          <p class="muted">Selected Candidate B direction for Alpha runtime wiring.</p>
+        </article>
+        <article class="asset">
+          <figure>
+            <img class="mark" src="../../brand_assets/cartenza_codex_packet_v0_1/cartenza_codex_packet/assets/png/cartenza_wordmark_placeholder.png" alt="Cartenza wordmark placeholder">
+          </figure>
+          <h3>Wordmark Placeholder</h3>
+          <p class="muted">Directional typography only. Final vector cleanup still belongs with design.</p>
+        </article>
+        <article class="asset">
+          <figure>
+            <img class="texture" src="../../brand_assets/cartenza_codex_packet_v0_1/cartenza_codex_packet/assets/png/cartenza_topographic_texture.png" alt="Cartenza topographic texture">
+          </figure>
+          <h3>Topographic Texture</h3>
+          <p class="muted">Secondary motif for restrained Atlas atmosphere.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="tokens">
+      <h2 id="tokens">Night Vision Tokens</h2>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:#07080a"></div><div class="swatch-copy"><strong>Obsidian</strong><span>#07080A</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#171a1e"></div><div class="swatch-copy"><strong>Graphite</strong><span>#171A1E</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#23272b"></div><div class="swatch-copy"><strong>Slate</strong><span>#23272B</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#d4d0c7"></div><div class="swatch-copy"><strong>Warm Silver</strong><span>#D4D0C7</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#b59a61"></div><div class="swatch-copy"><strong>Antique Gold</strong><span>#B59A61</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#3f6966"></div><div class="swatch-copy"><strong>Muted Teal</strong><span>#3F6966</span></div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="screens">
+      <h2 id="screens">App Surface Direction</h2>
+      <div class="screen-grid">
+        <article class="screen">
+          <div class="screen-inner">
+            <div class="screen-top">
+              <div class="mini-brand">
+                <span class="seal"><img src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt=""></span>
+                <span class="mini-title"><strong>Cartenza</strong><span>Your music. Mapped.</span></span>
+              </div>
+              <span class="step">Alpha Access</span>
+            </div>
+            <div class="hero-lockup">
+              <span class="seal"><img src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt=""></span>
+              <div>
+                <div class="wordmark">Cartenza</div>
+                <div class="tagline">Your music. Mapped.</div>
+              </div>
+            </div>
+            <h2>A private Alpha needs clear ground rules.</h2>
+            <p>Before Survey or evidence capture, accept the Alpha privacy and terms acknowledgement.</p>
+            <div class="surface"><strong>Evidence is provisional</strong><small>Survey, playback, notes, chips, and skips create Alpha evidence. They do not directly change Atlas truth.</small></div>
+            <div class="surface"><strong>Music access is explicit</strong><small>Apple Music permission is requested before playback or MusicKit-derived signals.</small></div>
+            <div class="button">Accept Alpha Terms</div>
+          </div>
+        </article>
+
+        <article class="screen">
+          <div class="screen-inner">
+            <div class="screen-top">
+              <div class="mini-brand">
+                <span class="seal"><img src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt=""></span>
+                <span class="mini-title"><strong>Cartenza</strong><span>Your music. Mapped.</span></span>
+              </div>
+              <span class="step">1/3</span>
+            </div>
+            <div class="hero-lockup">
+              <span class="seal"><img src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt=""></span>
+            </div>
+            <p class="tagline">Private Alpha</p>
+            <h2>Your music. Mapped.</h2>
+            <p>Connect Apple Music and answer a short Survey. Cartenza will build your starter Atlas and generate your first listening missions.</p>
+            <div class="surface"><strong>Survey starts the map</strong><small>Artists, albums, and songs become starting evidence, not final truth.</small></div>
+            <div class="surface"><strong>Missions test the signal</strong><small>Listening closes the loop on what the Survey thinks it heard.</small></div>
+            <div class="button">Continue</div>
+          </div>
+        </article>
+
+        <article class="screen">
+          <div class="screen-inner">
+            <div class="screen-top">
+              <div class="mini-brand">
+                <span class="seal"><img src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt=""></span>
+                <span class="mini-title"><strong>Cartenza</strong><span>Survey</span></span>
+              </div>
+              <span class="step">Artist Grid 1</span>
+            </div>
+            <h2>Cartenza starts with a required Alpha intake.</h2>
+            <p>Artists, albums, and songs create evidence for the first mission batch.</p>
+            <div class="grid">
+              <div class="tile">Artist 01</div>
+              <div class="tile">Artist 02</div>
+              <div class="tile">Artist 03</div>
+              <div class="tile">Artist 04</div>
+              <div class="tile">Artist 05</div>
+              <div class="tile">Artist 06</div>
+              <div class="tile">Artist 07</div>
+              <div class="tile">Artist 08</div>
+              <div class="tile">Artist 09</div>
+            </div>
+            <div class="chips">
+              <span class="chip">?</span>
+              <span class="chip">Ok</span>
+              <span class="chip signal">Love</span>
+              <span class="chip">No</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="screen">
+          <div class="screen-inner">
+            <div class="screen-top">
+              <div class="mini-brand">
+                <span class="seal"><img src="../../brand_assets/cartenza_logo_refinement_2026_05_27/assets/png/cartenza_logo_selected.png" alt=""></span>
+                <span class="mini-title"><strong>Cartenza</strong><span>Mission</span></span>
+              </div>
+              <span class="step">Core Ready</span>
+            </div>
+            <h2>First mission batch</h2>
+            <p>Missions are tests, not comfort playlists. A clear miss can improve the map.</p>
+            <div class="mission">
+              <div class="route" aria-hidden="true"></div>
+              <h3>Why this route exists</h3>
+              <p>This mission tests whether a provisional Survey signal is a real region or a false-nearby road.</p>
+              <div class="chips">
+                <span class="chip signal">Waypoint</span>
+                <span class="chip">Frontier</span>
+                <span class="chip">Evidence</span>
+              </div>
+            </div>
+            <div class="mission">
+              <h3>Review the songs Cartenza heard.</h3>
+              <p>Adjust reactions, tags, and notes after listening. Exports remain ingestion candidates.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="qa">
+      <h2 id="qa">QA Focus</h2>
+      <ul class="qa-list">
+        <li>Confirm the locked Candidate B icon feels acceptable as an Alpha placeholder on the phone home screen.</li>
+        <li>Check that Night Vision reads premium and restrained, not too bright or too theme-heavy.</li>
+        <li>Check that gold feels like signal/waypoint and teal feels like Atlas/substrate.</li>
+        <li>Watch mobile text fit: Cartenza, tagline, Alpha step labels, and action buttons.</li>
+        <li>Keep Player and Mission Review uncluttered. Brand should support listening, not compete with it.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
