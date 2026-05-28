@@ -35,7 +35,7 @@ Your music. Mapped.
 
 Preferred visual direction:
 
-- Master mark: Concept 5, circular cartographic monogram / compass-seal C.
+- Master mark: Candidate B, Cartographic Cut, from the Concept 5 circular cartographic monogram / compass-seal C refinement pass.
 - Secondary motif: Concept 1, topographic contour / taste terrain.
 - Visual mode: Night Vision.
 - Mood: dark, restrained, premium, intelligent, modern, slightly sexy, musical without being literal, cartographic without travel-app cliches.
@@ -57,7 +57,7 @@ The current Alpha flow and mockup work remain structurally useful. The brand pas
 | Player | Keep layout and interaction model mostly intact. | Player should remain the least logo-heavy surface; album art and reactions are the point. |
 | Mission review/edit | Keep song-data review, editable selection/tags/notes, update/save per song. | Use evidence language. Do not imply Cartenza knows more than the evidence supports. |
 | Share Evidence | Language can still work under Cartenza. | Privacy/retention/sync policy remains an executive/engineering blocker. |
-| App icon / launch | Use Concept 5 as the Alpha candidate direction. | Do not ship concept boards as UI. Use cleaned SVG/PNG starter only if approved for Alpha placeholder. |
+| App icon / launch | Use the locked Candidate B Cartographic Cut mark as the Alpha direction. | Runtime icon/SwiftUI replacement remains a separate implementation slice. |
 
 ## Planning Backlog
 
@@ -118,7 +118,7 @@ Progress:
 
 ### CBR-004: Cartenza token plan
 
-Status: pending.
+Status: first SwiftUI pass in progress.
 
 Scope:
 
@@ -134,9 +134,15 @@ Acceptance:
 - Token names and semantic meanings are agreed before UI wiring.
 - Existing cyan/blue accents have a clear replacement map.
 
+Progress:
+
+- Added SwiftUI constants for the Night Vision palette in `RootView.swift`.
+- Kept `WaymarkTheme` as the compatibility theme API while retuning its colors to Cartenza tokens.
+- Pointed `SurveyStyle` at the shared Cartenza-tuned theme so Survey chrome follows the same palette.
+
 ### CBR-005: App icon and launch direction review
 
-Status: pending executive/design review.
+Status: Candidate B locked; runtime replacement pending.
 
 Scope:
 
@@ -148,6 +154,13 @@ Acceptance:
 
 - Founder/design approval on Alpha icon placeholder direction.
 - Clear decision on whether to use included starter assets or wait for refined vectors.
+
+Progress:
+
+- Resized `cartenza_app_icon_concept5.png` into the existing iOS `AppIcon.appiconset` slots as an Alpha placeholder.
+- Did not add reference concept boards to runtime resources.
+- Added `docs/app_dev/brand_assets/cartenza_logo_refinement_2026_05_27/` with three logo refinement candidates for owner review before any runtime replacement.
+- Locked Candidate B, `Cartographic Cut`, as the Alpha logo direction and promoted it to selected aliases in the refinement packet.
 
 ### CBR-006: Mockup rebrand pass
 
@@ -167,7 +180,7 @@ Acceptance:
 
 ### CBR-007: SwiftUI brand layer implementation plan
 
-Status: pending. Do not implement yet.
+Status: first low-churn implementation pass in progress.
 
 Scope:
 
@@ -190,9 +203,14 @@ Acceptance:
 - Engineering has a low-churn implementation path before any UI code edits begin.
 - Brand is isolated in constants/assets where possible.
 
+Progress:
+
+- Introduced `CartenzaBrand`, `CartenzaBrandLockup`, `CartenzaCompassMark`, and a subtle topographic backdrop for first-run surfaces.
+- Preserved existing `Waymark*` view/type names as internal compatibility names to avoid broad runtime churn.
+
 ### CBR-008: Copy migration pass
 
-Status: pending.
+Status: in progress.
 
 Scope:
 
@@ -210,9 +228,14 @@ Acceptance:
 - No screen implies Cartenza knows more than the available evidence supports.
 - No old name leaks in user-facing Alpha screens.
 
+Progress:
+
+- First-run welcome, account/FAQ, generation, Survey, mission, review, export, and support copy now prefer Cartenza where surfaced to testers.
+- Legacy Waymark identifiers remain in schemas, filenames, app storage keys, and internal type names until a deliberate compatibility migration.
+
 ### CBR-009: Surface-specific visual backlog
 
-Status: pending.
+Status: first app-shell pass in progress.
 
 Scope by surface:
 
@@ -231,6 +254,11 @@ Acceptance:
 
 - Each surface has a visual direction before implementation.
 - Player remains functional and uncluttered.
+
+Progress:
+
+- First-run consent/access/onboarding/generation/account now share the Cartenza lockup, compass mark, and Night Vision backdrop.
+- Mission, detail, review, player-adjacent, and diagnostic surfaces inherit the retuned theme where they already used `WaymarkTheme`.
 
 ### CBR-010: TestFlight/release metadata planning
 

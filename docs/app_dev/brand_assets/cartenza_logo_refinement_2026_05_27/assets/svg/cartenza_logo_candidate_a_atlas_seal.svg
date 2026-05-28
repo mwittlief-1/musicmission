@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Cartenza Logo Candidate A - Atlas Seal</title>
+  <desc id="desc">A refined circular Cartenza compass-seal C with reduced ring detail and clearer small-size silhouette.</desc>
+  <defs>
+    <linearGradient id="cSilverA" x1="248" y1="200" x2="744" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F2EEE6"/>
+      <stop offset="0.46" stop-color="#C8CCD1"/>
+      <stop offset="1" stop-color="#7D858C"/>
+    </linearGradient>
+    <filter id="shadowA" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.36"/>
+    </filter>
+  </defs>
+
+  <circle cx="512" cy="512" r="382" fill="#0E0F12"/>
+  <circle cx="512" cy="512" r="378" fill="none" stroke="#D4D0C7" stroke-width="20" opacity="0.82"/>
+  <circle cx="512" cy="512" r="292" fill="none" stroke="#3F6966" stroke-width="6" opacity="0.60"/>
+  <path d="M512 162 L512 252 M512 772 L512 862 M162 512 L252 512 M772 512 L862 512" fill="none" stroke="#B59A61" stroke-width="10" stroke-linecap="round"/>
+  <path d="M512 176 L512 848 M176 512 L848 512" fill="none" stroke="#D4D0C7" stroke-width="2.5" opacity="0.20"/>
+
+  <path d="M666 295
+           C602 244 499 226 408 260
+           C295 303 228 399 228 512
+           C228 624 294 720 406 764
+           C496 799 600 782 666 729"
+        fill="none" stroke="url(#cSilverA)" stroke-width="88" stroke-linecap="round" filter="url(#shadowA)"/>
+
+  <path d="M646 315 C585 274 499 264 424 292" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.38"/>
+  <path d="M512 454 L530 494 L572 512 L530 530 L512 572 L494 530 L452 512 L494 494 Z" fill="#B59A61"/>
+  <circle cx="512" cy="512" r="9" fill="#F0D58A"/>
+</svg>

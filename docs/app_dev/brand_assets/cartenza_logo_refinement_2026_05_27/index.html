@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartenza Logo Refinement Review - 2026-05-27</title>
+  <style>
+    :root {
+      --obsidian: #07080a;
+      --charcoal: #0e0f12;
+      --graphite: #171a1e;
+      --slate: #23272b;
+      --border: #2b3035;
+      --silver: #bfc3c9;
+      --warm-silver: #d4d0c7;
+      --gold: #b59a61;
+      --dim-gold: #8f7546;
+      --teal: #3f6966;
+      --teal-mist: #8fa59a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--obsidian);
+      color: var(--warm-silver);
+      font: 15px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, system-ui, sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+
+    .header,
+    .section {
+      display: grid;
+      gap: 16px;
+    }
+
+    .header {
+      padding-bottom: 24px;
+    }
+
+    .section {
+      padding: 22px 0;
+      border-top: 1px solid color-mix(in srgb, var(--border), transparent 18%);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font: 700 clamp(34px, 8vw, 72px)/0.95 ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    }
+
+    h2 {
+      font: 650 24px/1.15 ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    }
+
+    h3 {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .muted,
+    .summary {
+      color: color-mix(in srgb, var(--silver), transparent 24%);
+    }
+
+    .summary {
+      max-width: 760px;
+      font-size: 17px;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: max-content;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: var(--gold);
+      background: color-mix(in srgb, var(--slate), transparent 18%);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .candidate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .candidate,
+    .baseline,
+    .test-row {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--graphite);
+    }
+
+    .candidate {
+      display: grid;
+      gap: 14px;
+      padding: 14px;
+    }
+
+    .candidate.selected {
+      border-color: color-mix(in srgb, var(--gold), transparent 24%);
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold), transparent 72%), 0 18px 60px rgb(0 0 0 / 0.28);
+    }
+
+    .mark-stage {
+      display: grid;
+      place-items: center;
+      min-height: 260px;
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 72% 18%, color-mix(in srgb, var(--teal), transparent 70%), transparent 28%),
+        var(--charcoal);
+    }
+
+    .mark-stage img {
+      width: min(78%, 260px);
+    }
+
+    .app-icon {
+      display: grid;
+      place-items: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 22%;
+      background:
+        radial-gradient(circle at 72% 18%, color-mix(in srgb, var(--teal), transparent 70%), transparent 34%),
+        linear-gradient(145deg, #101214, #07080a);
+      box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.04), 0 18px 48px rgb(0 0 0 / 0.36);
+    }
+
+    .app-icon img {
+      width: 82%;
+    }
+
+    .candidate-copy {
+      display: grid;
+      gap: 7px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: var(--silver);
+      background: var(--slate);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .chip.good {
+      border-color: color-mix(in srgb, var(--gold), transparent 42%);
+      color: var(--gold);
+    }
+
+    .lockup {
+      display: grid;
+      grid-template-columns: minmax(120px, 220px) 1fr;
+      gap: 16px;
+      align-items: center;
+      border: 1px solid color-mix(in srgb, var(--gold), transparent 30%);
+      border-radius: 8px;
+      padding: 14px;
+      background:
+        radial-gradient(circle at 76% 18%, color-mix(in srgb, var(--teal), transparent 76%), transparent 34%),
+        var(--graphite);
+    }
+
+    .lockup img {
+      border-radius: 8px;
+      background: var(--charcoal);
+    }
+
+    .small-tests {
+      display: grid;
+      gap: 10px;
+    }
+
+    .test-row {
+      display: grid;
+      grid-template-columns: 88px repeat(4, minmax(52px, 1fr));
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      overflow-x: auto;
+    }
+
+    .test-label {
+      color: var(--silver);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .size-cell {
+      display: grid;
+      gap: 6px;
+      justify-items: center;
+      min-width: 52px;
+    }
+
+    .size-cell span {
+      color: color-mix(in srgb, var(--silver), transparent 28%);
+      font-size: 11px;
+    }
+
+    .icon-29 {
+      width: 29px;
+      height: 29px;
+    }
+
+    .icon-40 {
+      width: 40px;
+      height: 40px;
+    }
+
+    .icon-60 {
+      width: 60px;
+      height: 60px;
+    }
+
+    .icon-120 {
+      width: 120px;
+      height: 120px;
+    }
+
+    .mini-icon {
+      display: grid;
+      place-items: center;
+      border-radius: 22%;
+      background: var(--charcoal);
+      box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.04);
+    }
+
+    .mini-icon img {
+      width: 82%;
+      height: 82%;
+    }
+
+    .baseline {
+      display: grid;
+      grid-template-columns: minmax(120px, 220px) 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 14px;
+    }
+
+    .baseline img {
+      border-radius: 8px;
+      background: var(--charcoal);
+    }
+
+    .decision-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .decision-list li {
+      border-left: 3px solid var(--teal);
+      padding: 8px 0 8px 12px;
+      color: color-mix(in srgb, var(--silver), transparent 16%);
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 18px, 420px);
+        padding-top: 18px;
+      }
+
+      .baseline {
+        grid-template-columns: 1fr;
+      }
+
+      .lockup {
+        grid-template-columns: 1fr;
+      }
+
+      .mark-stage {
+        min-height: 220px;
+      }
+
+      .app-icon {
+        width: 158px;
+        height: 158px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <span class="tag">Logo refinement packet - B locked</span>
+      <h1>Cartenza Logo Review</h1>
+      <p class="summary">Candidate B, Cartographic Cut, is locked as the Alpha logo direction. This packet preserves the review candidates and selected aliases for the runtime implementation slice.</p>
+    </header>
+
+    <section class="section" aria-labelledby="selected">
+      <h2 id="selected">Locked Selection</h2>
+      <article class="lockup">
+        <img src="assets/png/cartenza_logo_selected.png" alt="Selected Cartenza Cartographic Cut logo">
+        <div class="candidate-copy">
+          <h3>B: Cartographic Cut</h3>
+          <p class="muted">Selected for a stronger, more ownable monogram with less literal compass noise and a better tie to cartographic contour language.</p>
+          <div class="chips">
+            <span class="chip good">Locked</span>
+            <span class="chip">Alpha direction</span>
+            <span class="chip">Runtime wiring pending</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="baseline">
+      <h2 id="baseline">Current Direction Baseline</h2>
+      <article class="baseline">
+        <img src="../cartenza_codex_packet_v0_1/cartenza_codex_packet/assets/png/cartenza_mark_concept5.png" alt="Current Cartenza Concept 5 mark">
+        <div class="candidate-copy">
+          <h3>Concept 5 compass-seal C</h3>
+          <p class="muted">Still the correct strategic direction. The weak point is execution: too much detail competes with the C shape, and small sizes need a cleaner silhouette.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="candidates">
+      <h2 id="candidates">Candidates</h2>
+      <div class="candidate-grid">
+        <article class="candidate selected">
+          <div class="mark-stage">
+            <div class="app-icon">
+              <img src="assets/svg/cartenza_logo_candidate_a_atlas_seal.svg" alt="Candidate A Atlas Seal">
+            </div>
+          </div>
+          <div class="candidate-copy">
+            <h3>A: Atlas Seal</h3>
+            <p class="muted">Conservative refinement. Keeps the seal, makes the C heavier, reduces ring noise, and keeps compass cues legible.</p>
+            <div class="chips">
+              <span class="chip good">Safest</span>
+              <span class="chip">Premium</span>
+              <span class="chip">Still compass-forward</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="candidate">
+          <div class="mark-stage">
+            <div class="app-icon">
+              <img src="assets/svg/cartenza_logo_candidate_b_cartographic_cut.svg" alt="Candidate B Cartographic Cut">
+            </div>
+          </div>
+          <div class="candidate-copy">
+            <h3>B: Cartographic Cut</h3>
+            <p class="muted">Locked. More owned and less literal. The C carries subtle contour lines while the compass elements recede.</p>
+            <div class="chips">
+              <span class="chip good">Locked</span>
+              <span class="chip good">Most distinctive</span>
+              <span class="chip">Atlas-forward</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="candidate">
+          <div class="mark-stage">
+            <div class="app-icon">
+              <img src="assets/svg/cartenza_logo_candidate_c_waypoint_c.svg" alt="Candidate C Waypoint C">
+            </div>
+          </div>
+          <div class="candidate-copy">
+            <h3>C: Waypoint C</h3>
+            <p class="muted">Most app-icon oriented. Simple, bold, and readable, with just enough waypoint language to stay Cartenza.</p>
+            <div class="chips">
+              <span class="chip good">Best small-size bet</span>
+              <span class="chip">Icon-first</span>
+              <span class="chip">Least ornate</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="small">
+      <h2 id="small">Small-Size Read</h2>
+      <div class="small-tests">
+        <div class="test-row">
+          <div class="test-label">A</div>
+          <div class="size-cell"><div class="mini-icon icon-29"><img src="assets/svg/cartenza_logo_candidate_a_atlas_seal.svg" alt=""></div><span>29</span></div>
+          <div class="size-cell"><div class="mini-icon icon-40"><img src="assets/svg/cartenza_logo_candidate_a_atlas_seal.svg" alt=""></div><span>40</span></div>
+          <div class="size-cell"><div class="mini-icon icon-60"><img src="assets/svg/cartenza_logo_candidate_a_atlas_seal.svg" alt=""></div><span>60</span></div>
+          <div class="size-cell"><div class="mini-icon icon-120"><img src="assets/svg/cartenza_logo_candidate_a_atlas_seal.svg" alt=""></div><span>120</span></div>
+        </div>
+        <div class="test-row">
+          <div class="test-label">B</div>
+          <div class="size-cell"><div class="mini-icon icon-29"><img src="assets/svg/cartenza_logo_candidate_b_cartographic_cut.svg" alt=""></div><span>29</span></div>
+          <div class="size-cell"><div class="mini-icon icon-40"><img src="assets/svg/cartenza_logo_candidate_b_cartographic_cut.svg" alt=""></div><span>40</span></div>
+          <div class="size-cell"><div class="mini-icon icon-60"><img src="assets/svg/cartenza_logo_candidate_b_cartographic_cut.svg" alt=""></div><span>60</span></div>
+          <div class="size-cell"><div class="mini-icon icon-120"><img src="assets/svg/cartenza_logo_candidate_b_cartographic_cut.svg" alt=""></div><span>120</span></div>
+        </div>
+        <div class="test-row">
+          <div class="test-label">C</div>
+          <div class="size-cell"><div class="mini-icon icon-29"><img src="assets/svg/cartenza_logo_candidate_c_waypoint_c.svg" alt=""></div><span>29</span></div>
+          <div class="size-cell"><div class="mini-icon icon-40"><img src="assets/svg/cartenza_logo_candidate_c_waypoint_c.svg" alt=""></div><span>40</span></div>
+          <div class="size-cell"><div class="mini-icon icon-60"><img src="assets/svg/cartenza_logo_candidate_c_waypoint_c.svg" alt=""></div><span>60</span></div>
+          <div class="size-cell"><div class="mini-icon icon-120"><img src="assets/svg/cartenza_logo_candidate_c_waypoint_c.svg" alt=""></div><span>120</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="decision">
+      <h2 id="decision">Review Questions</h2>
+      <ul class="decision-list">
+        <li>Which candidate still reads as Cartenza after five seconds?</li>
+        <li>Which candidate reads best as a phone app icon at 29 px and 60 px?</li>
+        <li>Does Candidate B feel more ownable, or does it lose too much premium restraint?</li>
+        <li>Does Candidate C get too plain, or is the simplicity the right correction?</li>
+        <li>Should the final mark keep explicit compass points, or should those move into supporting UI only?</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

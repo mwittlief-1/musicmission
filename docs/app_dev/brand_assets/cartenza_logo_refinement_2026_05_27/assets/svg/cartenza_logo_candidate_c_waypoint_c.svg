@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Cartenza Logo Candidate C - Waypoint C</title>
+  <desc id="desc">A minimal Cartenza waypoint C with a bold app-icon silhouette and low-detail cartographic signal marks.</desc>
+  <defs>
+    <linearGradient id="cSilverC" x1="240" y1="240" x2="734" y2="780" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F1EEE8"/>
+      <stop offset="0.52" stop-color="#C5C9CF"/>
+      <stop offset="1" stop-color="#828A91"/>
+    </linearGradient>
+    <filter id="shadowC" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <circle cx="512" cy="512" r="388" fill="#0E0F12"/>
+  <circle cx="512" cy="512" r="350" fill="none" stroke="#243F3D" stroke-width="8" opacity="0.86"/>
+  <path d="M512 188 L512 836 M188 512 L836 512" fill="none" stroke="#D4D0C7" stroke-width="3" opacity="0.18"/>
+
+  <path d="M672 302
+           C612 250 512 230 422 260
+           C300 301 226 398 226 512
+           C226 626 300 724 422 764
+           C512 794 612 774 672 722"
+        fill="none" stroke="url(#cSilverC)" stroke-width="112" stroke-linecap="round" filter="url(#shadowC)"/>
+
+  <path d="M512 448 L536 488 L584 512 L536 536 L512 584 L488 536 L440 512 L488 488 Z" fill="#B59A61"/>
+  <circle cx="512" cy="512" r="10" fill="#F0D58A"/>
+
+  <circle cx="512" cy="188" r="16" fill="#B59A61"/>
+  <circle cx="226" cy="512" r="16" fill="#B59A61"/>
+  <circle cx="512" cy="836" r="16" fill="#8F7546"/>
+  <circle cx="836" cy="512" r="16" fill="#B59A61"/>
+
+  <path d="M674 322 C618 282 535 267 456 291" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" opacity="0.36"/>
+</svg>
