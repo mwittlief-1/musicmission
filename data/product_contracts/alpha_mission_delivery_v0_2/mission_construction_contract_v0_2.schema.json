@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/alpha_mission_delivery_v0_2/mission_construction_contract_v0_2.schema.json",
+  "title": "Cartenza Alpha Mission Construction Contract v0.2",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "active_mission_type_policies",
+    "deferred_mission_type_policies",
+    "universal_alpha_route_rules",
+    "negative_budget",
+    "source_purity"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "alpha_mission_delivery_v0_2"
+    },
+    "active_mission_type_policies": {
+      "type": "object"
+    },
+    "deferred_mission_type_policies": {
+      "type": "object"
+    },
+    "universal_alpha_route_rules": {
+      "type": "object"
+    },
+    "negative_budget": {
+      "type": "object"
+    },
+    "source_purity": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

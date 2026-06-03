@@ -1,0 +1,365 @@
+{
+  "contract_version": "alpha_mission_delivery_v0_2",
+  "created_at": "2026-05-29T00:00:00Z",
+  "product_name": "Cartenza",
+  "scope": "Offline/app-import readiness contract for Alpha-safe mission pack construction.",
+  "runtime_wiring_allowed": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "hidden_oracle_runtime_knowledge_allowed": false,
+  "universal_alpha_route_rules": {
+    "default_route_size": "5-6 songs",
+    "short_route_allowed_only_when_marked": true,
+    "short_route_size": 3,
+    "ordinary_alpha_unresolved_tracks_allowed": false,
+    "requires_concrete_music_object_refs_or_preresolved_playback_metadata": true,
+    "requires_one_sentence_explanation": true,
+    "requires_hypothesis": true,
+    "requires_route_rationale": true,
+    "requires_expected_signal_per_item": true,
+    "requires_risk_level": true,
+    "requires_completion_criteria": true
+  },
+  "negative_budget": {
+    "ordinary_alpha_max_high_risk_negative_candidates": 1,
+    "boundary_or_correction_max_high_risk_negative_candidates": 2,
+    "first_run_alpha_hard_max_negative_risk_items_in_six_song_route": 2,
+    "never_allow_three_or_more_negative_risk_items": true,
+    "diagnostic_not_punitive": true
+  },
+  "source_purity": {
+    "default": "single coherent source opportunity",
+    "mixed_source_allowed_only_when_contract_allows": true,
+    "multi_source_route_flag_required": true,
+    "multi_source_route_reason_required": true
+  },
+  "active_mission_type_policies": {
+    "context_dependence_test": {
+      "product_question": "Clarify whether the listener responds to the music itself, the surrounding context, or both.",
+      "eligible_target_object_types": [
+        "archetype",
+        "artist_within_archetype",
+        "album",
+        "song_cluster"
+      ],
+      "required_source_opportunity_purity": "single coherent opportunity preferred; top-window mixing allowed only when all source opportunities share the same target uncertainty.",
+      "allowed_route_item_roles": [
+        "anchor",
+        "context",
+        "comparator",
+        "control"
+      ],
+      "required_role_counts": {
+        "anchor": {
+          "min": 1
+        },
+        "context": {
+          "min": 2
+        },
+        "comparator": {
+          "min": 1
+        },
+        "control": {
+          "min": 1
+        }
+      },
+      "minimum_route_size": 5,
+      "maximum_route_size": 6,
+      "default_alpha_route_size": 6,
+      "anchor_requirements": "At least one visible-evidence anchor or low-risk representative.",
+      "probe_requirements": "Context-heavy and context-light items must be balanced.",
+      "comparator_control_requirements": "At least one comparator or control isolates the relevant context dimension.",
+      "maximum_negative_risk_exposure": 1,
+      "maximum_known_conflict_exposure": 1,
+      "source_opportunity_mixing_policy": "Allowed only for same target/context question with multi_source_route=true and explanation.",
+      "required_user_facing_explanation_fields": [
+        "brief",
+        "hypothesis",
+        "why_this_mission_now",
+        "coherence_sentence",
+        "why_in_route"
+      ],
+      "rejection_conditions": [
+        "unresolved ordinary route item",
+        "no context contrast",
+        "hidden oracle leakage",
+        "random/unexplainable route"
+      ],
+      "revise_conditions": [
+        "weak control",
+        "overly safe with no context contrast",
+        "too much unknown material"
+      ],
+      "app_import_eligibility_rules": "Eligible when route is coherent, concrete, and no ordinary unresolved playback items remain."
+    },
+    "boundary_test": {
+      "product_question": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+      "eligible_target_object_types": [
+        "archetype_pair",
+        "family_pair",
+        "song_cluster"
+      ],
+      "required_source_opportunity_purity": "Pair target IDs must match the source opportunity pair.",
+      "allowed_route_item_roles": [
+        "anchor",
+        "boundary",
+        "comparator",
+        "control"
+      ],
+      "required_role_counts": {
+        "anchor": {
+          "min": 2
+        },
+        "boundary": {
+          "min": 1
+        },
+        "comparator": {
+          "min": 1
+        },
+        "control": {
+          "min": 1
+        }
+      },
+      "minimum_route_size": 5,
+      "maximum_route_size": 6,
+      "default_alpha_route_size": 6,
+      "anchor_requirements": "Two likely-safe anchors from the positive side.",
+      "probe_requirements": "Boundary items must test a specific edge, not random contrast.",
+      "comparator_control_requirements": "Comparator/control must clarify the differentiating dimension.",
+      "maximum_negative_risk_exposure": 2,
+      "maximum_known_conflict_exposure": 2,
+      "source_opportunity_mixing_policy": "Normally disallowed; allowed only for same pair target and explicit multi_source_route reason.",
+      "required_user_facing_explanation_fields": [
+        "brief",
+        "hypothesis",
+        "why_this_mission_now",
+        "coherence_sentence",
+        "why_in_route"
+      ],
+      "rejection_conditions": [
+        "3+ negative-risk items",
+        "anchor fails thesis with multiple high-risk probes",
+        "unresolved playback",
+        "no differentiating dimension"
+      ],
+      "revise_conditions": [
+        "one anchor only",
+        "contrast too harsh",
+        "control missing"
+      ],
+      "app_import_eligibility_rules": "Eligible only with bounded contrast and a clear one-sentence explanation."
+    },
+    "bridge_test": {
+      "product_question": "Test whether a known positive source area can carry into an under-tested target through a plausible path.",
+      "eligible_target_object_types": [
+        "family_pair",
+        "archetype_pair"
+      ],
+      "required_source_opportunity_purity": "Source and target endpoints must match source opportunity endpoint refs.",
+      "allowed_route_item_roles": [
+        "anchor",
+        "bridge",
+        "probe",
+        "comparator",
+        "control"
+      ],
+      "required_role_counts": {
+        "anchor": {
+          "min": 1
+        },
+        "bridge": {
+          "min": 1
+        },
+        "probe": {
+          "min": 1
+        },
+        "control": {
+          "min": 1
+        }
+      },
+      "minimum_route_size": 5,
+      "maximum_route_size": 6,
+      "default_alpha_route_size": 6,
+      "anchor_requirements": "One source-side anchor grounded in visible evidence.",
+      "probe_requirements": "Target probes must use low-to-medium risk paths.",
+      "comparator_control_requirements": "At least one comparator/control keeps source-to-target continuity interpretable.",
+      "maximum_negative_risk_exposure": 1,
+      "maximum_known_conflict_exposure": 1,
+      "source_opportunity_mixing_policy": "Allowed only across compatible bridge opportunities sharing the same source or target endpoint.",
+      "required_user_facing_explanation_fields": [
+        "brief",
+        "hypothesis",
+        "why_this_mission_now",
+        "coherence_sentence",
+        "why_in_route"
+      ],
+      "rejection_conditions": [
+        "jump too far",
+        "unrelated target dump",
+        "hidden oracle leakage",
+        "unresolved ordinary playback"
+      ],
+      "revise_conditions": [
+        "weak source anchor",
+        "control missing",
+        "target path not explained"
+      ],
+      "app_import_eligibility_rules": "Eligible when continuity is explicit and target risk remains bounded."
+    },
+    "archetype_depth_test": {
+      "product_question": "Test whether the listener likes deeper or less obvious material inside an already promising archetype.",
+      "eligible_target_object_types": [
+        "archetype"
+      ],
+      "required_source_opportunity_purity": "Single archetype target preferred; variants must preserve provenance to the same base target.",
+      "allowed_route_item_roles": [
+        "anchor",
+        "probe",
+        "comparator",
+        "control"
+      ],
+      "required_role_counts": {
+        "anchor": {
+          "min": 1
+        },
+        "probe": {
+          "min": 2
+        },
+        "comparator": {
+          "min": 1
+        },
+        "control": {
+          "min": 1
+        }
+      },
+      "minimum_route_size": 5,
+      "maximum_route_size": 6,
+      "default_alpha_route_size": 6,
+      "anchor_requirements": "One visible anchor or strong representative.",
+      "probe_requirements": "Deeper candidates must remain plausible; no forced negative probe.",
+      "comparator_control_requirements": "Comparator/control stays inside broad family.",
+      "maximum_negative_risk_exposure": 1,
+      "maximum_known_conflict_exposure": 1,
+      "source_opportunity_mixing_policy": "Allowed only for same archetype base target and explicit reason.",
+      "required_user_facing_explanation_fields": [
+        "brief",
+        "hypothesis",
+        "why_this_mission_now",
+        "coherence_sentence",
+        "why_in_route"
+      ],
+      "rejection_conditions": [
+        "obscure/random pile",
+        "multiple high-risk probes",
+        "no visible anchor",
+        "unresolved playback"
+      ],
+      "revise_conditions": [
+        "too safe/no depth",
+        "too many uncertain items",
+        "weak source evidence"
+      ],
+      "app_import_eligibility_rules": "Eligible only with strict negative budget and coherent depth progression."
+    },
+    "gateway_test": {
+      "product_question": "Use a low-risk entry point to introduce an under-tested family or archetype.",
+      "eligible_target_object_types": [
+        "family",
+        "archetype"
+      ],
+      "required_source_opportunity_purity": "One under-tested target with a clean gateway and representative follow-up.",
+      "allowed_route_item_roles": [
+        "anchor",
+        "bridge",
+        "probe",
+        "comparator",
+        "control"
+      ],
+      "required_role_counts": {
+        "anchor": {
+          "min": 1
+        },
+        "bridge": {
+          "min": 1
+        },
+        "probe": {
+          "min": 1
+        }
+      },
+      "minimum_route_size": 5,
+      "maximum_route_size": 6,
+      "default_alpha_route_size": 6,
+      "anchor_requirements": "Low-risk gateway anchor.",
+      "probe_requirements": "Representative follow-up must be available.",
+      "comparator_control_requirements": "Comparator/control recommended for interpretability.",
+      "maximum_negative_risk_exposure": 1,
+      "maximum_known_conflict_exposure": 1,
+      "source_opportunity_mixing_policy": "Normally disallowed.",
+      "required_user_facing_explanation_fields": [
+        "brief",
+        "hypothesis",
+        "why_this_mission_now",
+        "coherence_sentence",
+        "why_in_route"
+      ],
+      "rejection_conditions": [
+        "overfamiliar gateway only",
+        "no representative follow-up",
+        "unresolved playback"
+      ],
+      "revise_conditions": [
+        "weak target explanation",
+        "gateway does not cohere with representative"
+      ],
+      "app_import_eligibility_rules": "Optional Alpha-active when low risk and concrete playback refs exist."
+    }
+  },
+  "deferred_mission_type_policies": {
+    "artist_depth_test": {
+      "alpha_auto_allowed": false,
+      "manual_only": true,
+      "deferred": true,
+      "rationale": "Deferred for Alpha auto-import; requires stricter artist-specific construction before automation.",
+      "app_import_eligibility_rules": "Blocked from automatic Alpha import until a stricter mission-specific construction contract is accepted."
+    },
+    "album_container_test": {
+      "alpha_auto_allowed": false,
+      "manual_only": true,
+      "deferred": true,
+      "rationale": "Deferred for Alpha auto-import; requires stricter album-container construction before automation.",
+      "app_import_eligibility_rules": "Blocked from automatic Alpha import until a stricter mission-specific construction contract is accepted."
+    },
+    "false_nearby_test": {
+      "alpha_auto_allowed": false,
+      "manual_only": true,
+      "deferred": true,
+      "rationale": "Deferred for Alpha auto-import except manual review because the negative-risk profile is high.",
+      "app_import_eligibility_rules": "Blocked from automatic Alpha import until a stricter mission-specific construction contract is accepted."
+    },
+    "evidence_repair_test": {
+      "alpha_auto_allowed": false,
+      "manual_only": true,
+      "deferred": true,
+      "rationale": "Deferred for Alpha auto-import until repair-specific route policy exists.",
+      "app_import_eligibility_rules": "Blocked from automatic Alpha import until a stricter mission-specific construction contract is accepted."
+    },
+    "exception_scope_test": {
+      "alpha_auto_allowed": false,
+      "manual_only": true,
+      "deferred": true,
+      "rationale": "Deferred for Alpha auto-import until scope-isolation policy exists.",
+      "app_import_eligibility_rules": "Blocked from automatic Alpha import until a stricter mission-specific construction contract is accepted."
+    }
+  },
+  "app_import_status_enum": [
+    "review_only",
+    "schema_valid",
+    "contract_valid",
+    "needs_revision",
+    "rejected_product",
+    "app_import_candidate",
+    "app_import_blocked_unresolved",
+    "app_import_blocked_policy",
+    "app_import_ready"
+  ]
+}

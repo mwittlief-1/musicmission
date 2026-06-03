@@ -1,0 +1,36 @@
+{
+  "decision": "PASS",
+  "can_local_fixture_app_wiring_continue": true,
+  "can_music_kit_resolution_begin": true,
+  "can_testflight_uat_begin": false,
+  "approved_fixture_count": 10,
+  "decoded_approved_fixture_count": 10,
+  "debug_imported_fixture_count": 10,
+  "playback_ready_fixture_count": 0,
+  "top_testflight_blocker": "music_resolution_pending",
+  "commands_run": [
+    "plutil -lint MusicAtlasController.xcodeproj/project.pbxproj",
+    "python3 -m json.tool MusicAtlasController/Resources/approved_alpha_app_import_candidates_v0_2.json >/dev/null",
+    "xcodebuild test -project MusicAtlasController.xcodeproj -scheme MusicAtlasController -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.5' -only-testing:MusicAtlasControllerTests/MissionDecodingTests",
+    "xcodebuild test -project MusicAtlasController.xcodeproj -scheme MusicAtlasController -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.5'"
+  ],
+  "test_results": {
+    "project_file_lint": "PASS",
+    "approved_fixture_json_parse": "PASS",
+    "targeted_mission_decoding_tests": "PASS",
+    "full_xctest_suite": "PASS"
+  },
+  "guardrails": {
+    "live_mission_generation_implemented": false,
+    "canonical_graph_mutated": false,
+    "revise_or_rejected_imported_into_normal_ui": false,
+    "candidate_items_marked_playback_ready": false,
+    "mission_types_collapsed_to_legacy_names": false,
+    "testflight_readiness_claimed": false
+  },
+  "remaining_blockers": [
+    "Apple Music IDs/URLs are absent from approved fixtures.",
+    "Wrong-version and unavailable issue operations are mapped but not first-class primary reaction buttons.",
+    "Candidate-state session export/schema compatibility needs hardening before evidence export from unresolved fixture sessions."
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "contract_version": "atlas_visualization_input_v0_2",
+  "fixture_status": "pm_review_sample_only",
+  "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+  "source_package": "derived_affinity_substrate_v0_1_1/",
+  "runtime_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_allowed": false,
+  "surfaces": [
+    {
+      "surface_id": "atlas_surface_sample_region_family_10",
+      "surface_type": "Region",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "family:family_10"
+      ],
+      "source_candidate_types": [
+        "family_rollup"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [
+          "sonic_texture:distorted_guitar",
+          "rhythm_body:driving_eighths",
+          "sonic_texture:guitar_forward",
+          "emotion_theme:alienation"
+        ],
+        "secondary_tags": [
+          "form_container:riff_song",
+          "vocal_performance:ragged_voice",
+          "vocal_performance:detached_cool"
+        ],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {
+          "sample_size": 766,
+          "source_confidence_summary": {
+            "high": 694,
+            "medium": 72,
+            "low": 0
+          }
+        }
+      },
+      "context_overlays": [
+        "nostalgia_context",
+        "karaoke_context",
+        "communal_ritual_context"
+      ],
+      "risk_review": {
+        "risk_flags": [
+          "safe_gateway",
+          "requires_framing",
+          "false_nearby_risk",
+          "duplicate_context_review_needed",
+          "version_ambiguity"
+        ],
+        "review_flags": [
+          "duplicate_context_unclear",
+          "recording_identity_unclear",
+          "version_ambiguity"
+        ],
+        "bridge_category": null,
+        "quarantine_status": "review",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": null,
+        "confidence": "high",
+        "fog_state": "hazy",
+        "readiness_notes": [
+          "Region candidate is coherent but still carries review flags.",
+          "No personal Region assignment is allowed from substrate alone."
+        ]
+      },
+      "listener_evidence": {
+        "status": "required_before_assignment",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "candidate_only",
+        "scope": "non_personal_review_candidate",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Region candidate",
+        "explanation": "Coherent family-level affinity rollup for PM review; not product truth."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/manifest_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_road_family_10_family_2",
+      "surface_type": "Road",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "road_v0_1_1:family_10_family_2"
+      ],
+      "source_candidate_types": [
+        "hardened_road_candidate"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [
+          "rhythm_body:driving_eighths",
+          "form_container:single_craft",
+          "sonic_texture:guitar_forward",
+          "vocal_performance:urgent_delivery"
+        ],
+        "secondary_tags": [
+          "vocal_performance:close_harmony",
+          "form_container:riff_song",
+          "sonic_texture:distorted_guitar"
+        ],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {
+          "source_edge_count": 273,
+          "clean_edge_count": 170,
+          "review_edge_count": 103,
+          "identity_quarantine_edge_count": 31
+        }
+      },
+      "context_overlays": [],
+      "risk_review": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "review_flags": [],
+        "bridge_category": "clean_bridge_candidate",
+        "quarantine_status": "none",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": 0.94,
+        "confidence": "high",
+        "fog_state": "clear",
+        "readiness_notes": [
+          "Ranked by clean bridge availability and product bridge readiness.",
+          "Quarantined edges remain counted but are not clean Road evidence."
+        ]
+      },
+      "listener_evidence": {
+        "status": "absent",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "candidate_only",
+        "scope": "non_personal_review_candidate",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Road candidate",
+        "explanation": "Clean bridge-rich family road candidate for PM review."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/atlas_road_candidates_v0_1_1.json",
+          "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_clean_bridge_so_into_you_strange_brew",
+      "surface_type": "Bridge",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "cross_family_bridge_edge:000001:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew"
+      ],
+      "source_candidate_types": [
+        "hardened_bridge_candidate"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [],
+        "secondary_tags": [],
+        "shared_tags": [
+          "emotion_theme:desire",
+          "form_container:single_craft",
+          "rhythm_body:groove_locked",
+          "sonic_texture:guitar_forward",
+          "sonic_texture:polished_studio",
+          "vocal_performance:detached_cool"
+        ],
+        "intrinsic_affinity_score": 1.0,
+        "score_components": {
+          "shared_affinity_tag_count": 6,
+          "shared_dimension_count": 5,
+          "same_artist_cross_family_bridge": false,
+          "same_or_near_title": false
+        }
+      },
+      "context_overlays": [
+        "nostalgia_context"
+      ],
+      "risk_review": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "review_flags": [],
+        "bridge_category": "clean_bridge_candidate",
+        "quarantine_status": "none",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": 1.0,
+        "confidence": "high",
+        "fog_state": "clear",
+        "readiness_notes": [
+          "Technical affinity and product bridge readiness both clear for review presentation.",
+          "Still not listener preference evidence."
+        ]
+      },
+      "listener_evidence": {
+        "status": "absent",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "candidate_only",
+        "scope": "non_personal_review_candidate",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Bridge candidate",
+        "explanation": "Clean cross-family bridge candidate with separate affinity and readiness scores."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_frontier_archetype_120",
+      "surface_type": "Frontier",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "archetype:120"
+      ],
+      "source_candidate_types": [
+        "frontier_rollup_lineage"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [
+          "vocal_performance:instrumental_identity",
+          "rhythm_body:minimal_pulse",
+          "emotion_theme:nostalgia",
+          "sonic_texture:sample_based"
+        ],
+        "secondary_tags": [
+          "form_container:single_craft",
+          "form_container:album_world",
+          "rhythm_body:groove_locked"
+        ],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {
+          "sample_size": 77,
+          "evidence_gap": "listener_evidence_absent"
+        }
+      },
+      "context_overlays": [
+        "nostalgia_context",
+        "soundtrack_context",
+        "dance_context"
+      ],
+      "risk_review": {
+        "risk_flags": [
+          "context_dependent",
+          "identity_review_needed",
+          "version_ambiguity",
+          "false_nearby_risk",
+          "requires_framing"
+        ],
+        "review_flags": [
+          "version_ambiguity",
+          "recording_identity_unclear",
+          "duplicate_context_unclear"
+        ],
+        "bridge_category": null,
+        "quarantine_status": "review",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": null,
+        "confidence": "medium",
+        "fog_state": "fogged",
+        "readiness_notes": [
+          "Promising but under-evidenced area.",
+          "Must be probed before any role assignment."
+        ]
+      },
+      "listener_evidence": {
+        "status": "required_before_assignment",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "candidate_only",
+        "scope": "requires_listener_evidence",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Frontier candidate",
+        "explanation": "Under-evidenced candidate area for controlled review."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/manifest_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_caution_identity_quarantine",
+      "surface_type": "Caution",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "cross_family_bridge_edge:000009:song_anthrax_caught_in_a_mosh:song_germs_lexicon_devil"
+      ],
+      "source_candidate_types": [
+        "identity_quarantine_bridge"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [],
+        "secondary_tags": [],
+        "shared_tags": [
+          "emotion_theme:rage",
+          "form_container:riff_song",
+          "rhythm_body:mosh_energy",
+          "sonic_texture:distorted_guitar",
+          "vocal_performance:ragged_voice",
+          "vocal_performance:urgent_delivery"
+        ],
+        "intrinsic_affinity_score": 1.0,
+        "score_components": {
+          "product_bridge_readiness_score": 0.44,
+          "risk_penalty": 0.49
+        }
+      },
+      "context_overlays": [],
+      "risk_review": {
+        "risk_flags": [
+          "duplicate_context_review_needed",
+          "identity_review_needed",
+          "recording_identity_unclear",
+          "requires_framing",
+          "version_ambiguity"
+        ],
+        "review_flags": [
+          "identity_or_version:duplicate_context_review_needed",
+          "identity_or_version:identity_review_needed",
+          "identity_or_version:recording_identity_unclear",
+          "identity_or_version:version_ambiguity"
+        ],
+        "bridge_category": "identity_quarantine",
+        "quarantine_status": "identity_quarantine",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": 0.44,
+        "confidence": "high",
+        "fog_state": "blocked",
+        "readiness_notes": [
+          "High technical affinity is preserved for review.",
+          "Identity/version risk blocks clean Road or Bridge presentation."
+        ]
+      },
+      "listener_evidence": {
+        "status": "absent",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "not_assignable_from_substrate",
+        "scope": "blocked",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Identity quarantine",
+        "explanation": "Review-only caution surface; not eligible for clean bridge ranking."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_gateway_so_into_you",
+      "surface_type": "Gateway",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "route_gateway_edge:000004:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew"
+      ],
+      "source_candidate_types": [
+        "route_gateway_candidate"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [
+          "vocal_performance:detached_cool",
+          "emotion_theme:desire",
+          "sonic_texture:guitar_forward",
+          "rhythm_body:groove_locked",
+          "form_container:single_craft"
+        ],
+        "secondary_tags": [],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {
+          "gateway_status": "accessible_route_entry",
+          "quality_score": "not_applicable"
+        }
+      },
+      "context_overlays": [
+        "nostalgia_context"
+      ],
+      "risk_review": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "review_flags": [],
+        "bridge_category": null,
+        "quarantine_status": "none",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": null,
+        "confidence": "high",
+        "fog_state": "hazy",
+        "readiness_notes": [
+          "Gateway status means accessible route entry, not preference or quality."
+        ]
+      },
+      "listener_evidence": {
+        "status": "absent",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "candidate_only",
+        "scope": "non_personal_review_candidate",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Gateway candidate",
+        "explanation": "Review-only route entry candidate; not a listener preference signal."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_waypoint_candidate",
+      "surface_type": "Waypoint",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "cross_family_bridge_edge:000001:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew"
+      ],
+      "source_candidate_types": [
+        "clean_bridge_candidate"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [],
+        "secondary_tags": [],
+        "shared_tags": [
+          "emotion_theme:desire",
+          "form_container:single_craft",
+          "rhythm_body:groove_locked",
+          "sonic_texture:guitar_forward"
+        ],
+        "intrinsic_affinity_score": 1.0,
+        "score_components": {
+          "product_bridge_readiness_score": 1.0,
+          "scope": "useful_but_not_core"
+        }
+      },
+      "context_overlays": [
+        "nostalgia_context"
+      ],
+      "risk_review": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "review_flags": [],
+        "bridge_category": "clean_bridge_candidate",
+        "quarantine_status": "none",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": 1.0,
+        "confidence": "high",
+        "fog_state": "hazy",
+        "readiness_notes": [
+          "Waypoint candidate is scoped and non-core until evidence supports a stronger role."
+        ]
+      },
+      "listener_evidence": {
+        "status": "required_before_assignment",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "candidate_only",
+        "scope": "requires_listener_evidence",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Waypoint candidate",
+        "explanation": "Useful transition candidate; not durable product role without evidence."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_dead_end_candidate",
+      "surface_type": "Dead End",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [
+        "risk:false_nearby_risk"
+      ],
+      "source_candidate_types": [
+        "dead_end_caution_lineage"
+      ],
+      "intrinsic_affinity": {
+        "dominant_tags": [],
+        "secondary_tags": [],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {
+          "dead_end_status": "candidate_only",
+          "known_dead_end": false
+        }
+      },
+      "context_overlays": [],
+      "risk_review": {
+        "risk_flags": [
+          "false_nearby_risk",
+          "requires_framing"
+        ],
+        "review_flags": [
+          "repeated_listener_evidence_required"
+        ],
+        "bridge_category": "false_nearby_bridge",
+        "quarantine_status": "review",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": null,
+        "confidence": "medium",
+        "fog_state": "fogged",
+        "readiness_notes": [
+          "Dead End is candidate-only until repeated evidence or PM-reviewed product evidence exists."
+        ]
+      },
+      "listener_evidence": {
+        "status": "required_before_assignment",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "not_assignable_from_substrate",
+        "scope": "requires_listener_evidence",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Dead End candidate",
+        "explanation": "Risk-derived candidate only; not a known mismatch without evidence."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/manifest_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_landmark_blocked",
+      "surface_type": "Landmark",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [],
+      "source_candidate_types": [],
+      "intrinsic_affinity": {
+        "dominant_tags": [],
+        "secondary_tags": [],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {}
+      },
+      "context_overlays": [],
+      "risk_review": {
+        "risk_flags": [],
+        "review_flags": [
+          "listener_evidence_required"
+        ],
+        "bridge_category": null,
+        "quarantine_status": "not_applicable",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": null,
+        "confidence": "low",
+        "fog_state": "blocked",
+        "readiness_notes": [
+          "Landmark cannot be assigned from substrate alone."
+        ]
+      },
+      "listener_evidence": {
+        "status": "required_before_assignment",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "not_assignable_from_substrate",
+        "scope": "requires_listener_evidence",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Landmark blocked",
+        "explanation": "Substrate can explain why a Landmark is blocked, but cannot assign one."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/manifest_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    },
+    {
+      "surface_id": "atlas_surface_sample_recent_learning_blocked",
+      "surface_type": "Recent Learning",
+      "contract_version": "atlas_visualization_input_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "source_candidate_ids": [],
+      "source_candidate_types": [],
+      "intrinsic_affinity": {
+        "dominant_tags": [],
+        "secondary_tags": [],
+        "shared_tags": [],
+        "intrinsic_affinity_score": null,
+        "score_components": {}
+      },
+      "context_overlays": [],
+      "risk_review": {
+        "risk_flags": [],
+        "review_flags": [
+          "atlas_delta_required"
+        ],
+        "bridge_category": null,
+        "quarantine_status": "not_applicable",
+        "review_required": true
+      },
+      "readiness": {
+        "product_bridge_readiness_score": null,
+        "confidence": "low",
+        "fog_state": "blocked",
+        "readiness_notes": [
+          "Recent Learning requires future evidence or AtlasDelta input."
+        ]
+      },
+      "listener_evidence": {
+        "status": "required_before_assignment",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "role_assignment": {
+        "status": "not_assignable_from_substrate",
+        "scope": "requires_listener_evidence",
+        "requires_pm_approval": true,
+        "assigned_role": null
+      },
+      "display_policy": {
+        "can_render_in_review": true,
+        "can_render_in_product": false,
+        "label": "Recent Learning blocked",
+        "explanation": "No Recent Learning surface is emitted from affinity substrate alone."
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/manifest_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    }
+  ]
+}

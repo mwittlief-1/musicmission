@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/alpha_mission_delivery_v0_2/app_import_mission_payload_v0_2.schema.json",
+  "title": "Cartenza Alpha App-Import Mission Payload v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mission_id",
+    "contract_version",
+    "app_import_status",
+    "mission_type",
+    "mission_archetype",
+    "title",
+    "brief",
+    "hypothesis",
+    "why_this_mission_now",
+    "coherence_sentence",
+    "risk_level",
+    "route",
+    "completion_criteria",
+    "feedback_model",
+    "source_trace",
+    "validation",
+    "resolution",
+    "runtime_flags"
+  ],
+  "properties": {
+    "mission_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contract_version": {
+      "const": "alpha_mission_delivery_v0_2"
+    },
+    "app_import_status": {
+      "enum": [
+        "review_only",
+        "schema_valid",
+        "contract_valid",
+        "needs_revision",
+        "rejected_product",
+        "app_import_candidate",
+        "app_import_blocked_unresolved",
+        "app_import_blocked_policy",
+        "app_import_ready"
+      ]
+    },
+    "mission_type": {
+      "enum": [
+        "context_dependence_test",
+        "boundary_test",
+        "bridge_test",
+        "archetype_depth_test",
+        "gateway_test",
+        "artist_depth_test",
+        "album_container_test",
+        "false_nearby_test",
+        "evidence_repair_test",
+        "exception_scope_test"
+      ]
+    },
+    "mission_archetype": {
+      "enum": [
+        "Nearby Road",
+        "Frontier Route",
+        "Dead End Check",
+        "Correction Route",
+        "Artist Route",
+        "Album Route",
+        "Memory Route",
+        "Start Here"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brief": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "why_this_mission_now": {
+      "type": "string"
+    },
+    "coherence_sentence": {
+      "type": "string"
+    },
+    "risk_level": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "route": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/route_item"
+      }
+    },
+    "completion_criteria": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "feedback_model": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "source_trace": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "resolution": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "runtime_flags": {
+      "type": "object",
+      "required": [
+        "runtime_selector_wiring",
+        "real_listener_evidence_connected",
+        "production_mission_generation_allowed",
+        "final_mission_content",
+        "canonical_graph_mutation_allowed"
+      ],
+      "properties": {
+        "runtime_selector_wiring": {
+          "const": false
+        },
+        "real_listener_evidence_connected": {
+          "const": false
+        },
+        "production_mission_generation_allowed": {
+          "const": false
+        },
+        "final_mission_content": {
+          "const": false
+        },
+        "canonical_graph_mutation_allowed": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "route_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_item_id",
+        "sequence_index",
+        "role",
+        "song_title",
+        "artist_name",
+        "album_title",
+        "canonical_song_id",
+        "canonical_artist_id",
+        "canonical_album_id",
+        "apple_music_id",
+        "apple_music_url",
+        "duration_ms",
+        "artwork_url",
+        "preview_url",
+        "resolution_status",
+        "expected_signal",
+        "why_in_route",
+        "reaction_chip_set_id",
+        "risk_flags",
+        "source_opportunity_id",
+        "source_mission_type",
+        "target_object_ids",
+        "graph_context_refs"
+      ],
+      "properties": {
+        "mission_item_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "role": {
+          "enum": [
+            "anchor",
+            "context",
+            "bridge",
+            "boundary",
+            "probe",
+            "comparator",
+            "control"
+          ]
+        },
+        "song_title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artist_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "album_title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_song_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_artist_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_album_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "apple_music_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "apple_music_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "artwork_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "preview_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resolution_status": {
+          "enum": [
+            "resolved",
+            "candidate",
+            "unresolved",
+            "blocked"
+          ]
+        },
+        "expected_signal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_in_route": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reaction_chip_set_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "risk_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_mission_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "graph_context_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

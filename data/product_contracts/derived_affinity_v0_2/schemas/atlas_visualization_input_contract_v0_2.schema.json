@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/contracts/atlas_visualization_input_contract_v0_2.schema.json",
+  "title": "Cartenza Atlas Visualization Input Contract v0.2",
+  "description": "Offline review-only input contract for Atlas visualization surfaces derived from Derived Affinity Substrate v0.1.1.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "fixture_status",
+    "source_substrate_version",
+    "source_package",
+    "runtime_allowed",
+    "canonical_graph_mutation_allowed",
+    "listener_preference_inference_allowed",
+    "surfaces"
+  ],
+  "properties": {
+    "contract_version": { "const": "atlas_visualization_input_v0_2" },
+    "fixture_status": { "type": "string", "minLength": 1 },
+    "source_substrate_version": { "const": "derived_affinity_substrate_v0_1_1" },
+    "source_package": { "const": "derived_affinity_substrate_v0_1_1/" },
+    "runtime_allowed": { "const": false },
+    "canonical_graph_mutation_allowed": { "const": false },
+    "listener_preference_inference_allowed": { "const": false },
+    "surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/surface" }
+    }
+  },
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "score_components": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "surface_type": {
+      "enum": [
+        "Region",
+        "Road",
+        "Frontier",
+        "Dead End",
+        "Caution",
+        "Gateway",
+        "Landmark",
+        "Waypoint",
+        "Bridge",
+        "Recent Learning"
+      ]
+    },
+    "confidence": {
+      "enum": ["low", "medium", "high"]
+    },
+    "bridge_category": {
+      "enum": [
+        "clean_bridge_candidate",
+        "review_bridge_candidate",
+        "identity_quarantine",
+        "context_only_bridge",
+        "high_whiplash_bridge",
+        "false_nearby_bridge",
+        "mission_specific_bridge"
+      ]
+    },
+    "intrinsic_affinity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dominant_tags",
+        "secondary_tags",
+        "shared_tags",
+        "intrinsic_affinity_score",
+        "score_components"
+      ],
+      "properties": {
+        "dominant_tags": { "$ref": "#/$defs/string_array" },
+        "secondary_tags": { "$ref": "#/$defs/string_array" },
+        "shared_tags": { "$ref": "#/$defs/string_array" },
+        "intrinsic_affinity_score": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "score_components": { "$ref": "#/$defs/score_components" }
+      }
+    },
+    "risk_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "risk_flags",
+        "review_flags",
+        "bridge_category",
+        "quarantine_status",
+        "review_required"
+      ],
+      "properties": {
+        "risk_flags": { "$ref": "#/$defs/string_array" },
+        "review_flags": { "$ref": "#/$defs/string_array" },
+        "bridge_category": {
+          "anyOf": [
+            { "$ref": "#/$defs/bridge_category" },
+            { "type": "null" }
+          ]
+        },
+        "quarantine_status": {
+          "enum": ["none", "review", "identity_quarantine", "not_applicable"]
+        },
+        "review_required": { "const": true }
+      }
+    },
+    "readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product_bridge_readiness_score",
+        "confidence",
+        "fog_state",
+        "readiness_notes"
+      ],
+      "properties": {
+        "product_bridge_readiness_score": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "fog_state": {
+          "enum": ["clear", "hazy", "fogged", "blocked"]
+        },
+        "readiness_notes": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "listener_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidence_ids", "not_inferred_from_affinity"],
+      "properties": {
+        "status": {
+          "enum": ["absent", "present", "required_before_assignment"]
+        },
+        "evidence_ids": { "$ref": "#/$defs/string_array" },
+        "not_inferred_from_affinity": { "const": true }
+      }
+    },
+    "role_assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "scope",
+        "requires_pm_approval",
+        "assigned_role"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "candidate_only",
+            "not_assignable_from_substrate",
+            "assigned_after_review"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "non_personal_review_candidate",
+            "requires_listener_evidence",
+            "blocked"
+          ]
+        },
+        "requires_pm_approval": { "const": true },
+        "assigned_role": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "display_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "can_render_in_review",
+        "can_render_in_product",
+        "label",
+        "explanation"
+      ],
+      "properties": {
+        "can_render_in_review": { "type": "boolean" },
+        "can_render_in_product": { "const": false },
+        "label": { "type": "string", "minLength": 1 },
+        "explanation": { "type": "string", "minLength": 1 }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_files",
+        "canonical_graph_mutation",
+        "runtime_ingestion"
+      ],
+      "properties": {
+        "source_files": { "$ref": "#/$defs/string_array" },
+        "canonical_graph_mutation": { "const": "not_performed" },
+        "runtime_ingestion": { "const": "not_performed" }
+      }
+    },
+    "surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "surface_id",
+        "surface_type",
+        "contract_version",
+        "source_substrate_version",
+        "source_candidate_ids",
+        "source_candidate_types",
+        "intrinsic_affinity",
+        "context_overlays",
+        "risk_review",
+        "readiness",
+        "listener_evidence",
+        "role_assignment",
+        "display_policy",
+        "provenance"
+      ],
+      "properties": {
+        "surface_id": { "type": "string", "minLength": 1 },
+        "surface_type": { "$ref": "#/$defs/surface_type" },
+        "contract_version": { "const": "atlas_visualization_input_v0_2" },
+        "source_substrate_version": { "const": "derived_affinity_substrate_v0_1_1" },
+        "source_candidate_ids": { "$ref": "#/$defs/string_array" },
+        "source_candidate_types": { "$ref": "#/$defs/string_array" },
+        "intrinsic_affinity": { "$ref": "#/$defs/intrinsic_affinity" },
+        "context_overlays": { "$ref": "#/$defs/string_array" },
+        "risk_review": { "$ref": "#/$defs/risk_review" },
+        "readiness": { "$ref": "#/$defs/readiness" },
+        "listener_evidence": { "$ref": "#/$defs/listener_evidence" },
+        "role_assignment": { "$ref": "#/$defs/role_assignment" },
+        "display_policy": { "$ref": "#/$defs/display_policy" },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    }
+  }
+}

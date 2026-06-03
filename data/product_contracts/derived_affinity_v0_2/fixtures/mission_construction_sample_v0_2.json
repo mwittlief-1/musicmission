@@ -1,0 +1,527 @@
+{
+  "contract_version": "mission_construction_v0_2",
+  "fixture_status": "pm_review_sample_only",
+  "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+  "source_package": "derived_affinity_substrate_v0_1_1/",
+  "runtime_allowed": false,
+  "production_mission_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_allowed": false,
+  "mission_candidates": [
+    {
+      "mission_id": "mission_contract_sample_safe_risky_split_v0_2",
+      "contract_version": "mission_construction_v0_2",
+      "source_substrate_version": "derived_affinity_substrate_v0_1_1",
+      "mission_type": "safe_risky_split",
+      "mission_hypothesis": "A listener may distinguish between a low-risk gateway path and a framed caution path even when both share a recognizable affinity pattern.",
+      "target_affinity_pattern": [
+        "vocal_performance:detached_cool",
+        "emotion_theme:desire",
+        "sonic_texture:guitar_forward",
+        "rhythm_body:groove_locked",
+        "form_container:single_craft"
+      ],
+      "known_anchors": [],
+      "gateway_candidates": [
+        {
+          "candidate_id": "route_gateway_edge:000004:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew",
+          "track_id": "song|atlanta rhythm section|so into you",
+          "title": "So Into You",
+          "artist_names": [
+            "Atlanta Rhythm Section"
+          ],
+          "inclusion_reason": "Accessible opener candidate with gateway flag; gateway status is not a quality score.",
+          "intrinsic_affinity_tags": [
+            "vocal_performance:detached_cool",
+            "emotion_theme:desire",
+            "sonic_texture:guitar_forward",
+            "rhythm_body:groove_locked",
+            "form_container:single_craft"
+          ],
+          "context_overlays": [
+            "nostalgia_context"
+          ],
+          "risk_flags": [
+            "safe_gateway"
+          ],
+          "graph_context": {
+            "family_ids": [],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "gateway_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "gateway",
+            "role_basis": "Route gateway role is sourced from the accepted v0.1.1 mission candidate pool; no canonical graph authority was read.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "route_gateway_edge:000004:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew"
+              ],
+              "source_fields": [
+                "gateway_candidates",
+                "risk_flags",
+                "context_overlays"
+              ],
+              "notes": "The substrate carries gateway and tag context but does not carry family or archetype names for this track-level fixture item."
+            }
+          },
+          "confidence": "high"
+        }
+      ],
+      "bridge_candidates": [
+        {
+          "candidate_id": "cross_family_bridge_edge:000001:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew",
+          "bridge_category": "clean_bridge_candidate",
+          "source_track_id": "song|atlanta rhythm section|so into you",
+          "target_track_id": "song|cream|strange brew",
+          "inclusion_reason": "Clean cross-family bridge with high readiness and no identity quarantine.",
+          "shared_affinity_tags": [
+            "emotion_theme:desire",
+            "form_container:single_craft",
+            "rhythm_body:groove_locked",
+            "sonic_texture:guitar_forward",
+            "sonic_texture:polished_studio",
+            "vocal_performance:detached_cool"
+          ],
+          "context_overlays": [
+            "nostalgia_context"
+          ],
+          "risk_flags": [
+            "safe_gateway"
+          ],
+          "graph_context": {
+            "family_ids": [
+              "family_10",
+              "family_2"
+            ],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "cross_family_bridge_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "bridge",
+            "role_basis": "Clean bridge role and family bridge placement are sourced from v0.1.1 hardened bridge and road candidate artifacts.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json",
+                "derived_affinity_substrate_v0_1_1/atlas_road_candidates_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "cross_family_bridge_edge:000001:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew",
+                "road_v0_1_1:family_10_family_2"
+              ],
+              "source_fields": [
+                "bridge_category",
+                "product_bridge_readiness_score",
+                "representative_clean_edge_ids"
+              ],
+              "notes": "Family IDs are carried by the accepted road candidate lineage; family names and archetype tiers are not asserted in this fixture."
+            }
+          },
+          "intrinsic_affinity_score": 1.0,
+          "product_bridge_readiness_score": 1.0,
+          "confidence": "high"
+        }
+      ],
+      "frontier_probes": [
+        {
+          "candidate_id": "frontier_probe_sample:distorted_guitar_album_world_probe",
+          "track_id": "song|medicine|aruca",
+          "title": "Aruca",
+          "artist_names": [
+            "Medicine"
+          ],
+          "inclusion_reason": "Under-evidenced probe that tests whether the affinity pattern survives a more abrasive texture.",
+          "intrinsic_affinity_tags": [
+            "vocal_performance:detached_cool",
+            "emotion_theme:alienation",
+            "sonic_texture:distorted_guitar",
+            "rhythm_body:driving_eighths",
+            "form_container:album_world"
+          ],
+          "context_overlays": [],
+          "risk_flags": [
+            "high_whiplash"
+          ],
+          "graph_context": {
+            "family_ids": [],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "frontier_probe_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "deep_cut",
+            "role_basis": "Frontier probe role is sourced from the accepted v0.1.1 mission candidate pool and carried high-whiplash risk metadata.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "frontier_probe_sample:distorted_guitar_album_world_probe"
+              ],
+              "source_fields": [
+                "frontier_probes",
+                "candidate_tracks",
+                "risk_flags"
+              ],
+              "notes": "Graph role is a mission-planning role, not a canonical tier claim."
+            }
+          },
+          "confidence": "high",
+          "evidence_gap": "listener_evidence_absent"
+        }
+      ],
+      "caution_high_whiplash_controls": [
+        {
+          "candidate_id": "false_nearby_caution_edge:001301:song_medicine_aruca:song_swervedriver_last_train_to_satansvi",
+          "track_id": "song|swervedriver|last train to satansville",
+          "title": "Last Train to Satansville",
+          "artist_names": [
+            "Swervedriver"
+          ],
+          "inclusion_reason": "False-nearby control that can falsify a surface-level distorted-guitar bridge.",
+          "intrinsic_affinity_tags": [
+            "vocal_performance:detached_cool",
+            "emotion_theme:alienation",
+            "sonic_texture:distorted_guitar",
+            "rhythm_body:driving_eighths",
+            "form_container:album_world"
+          ],
+          "context_overlays": [],
+          "risk_flags": [
+            "false_nearby_risk",
+            "requires_framing"
+          ],
+          "graph_context": {
+            "family_ids": [],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "false_nearby_caution_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "contextual_object",
+            "role_basis": "Caution role is sourced from false-nearby risk metadata in the accepted v0.1.1 mission candidate pool.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "false_nearby_caution_edge:001301:song_medicine_aruca:song_swervedriver_last_train_to_satansvi"
+              ],
+              "source_fields": [
+                "caution_high_whiplash_controls",
+                "risk_flags",
+                "framing_required"
+              ],
+              "notes": "Caution placement is review-only and does not assert a product Dead End or listener mismatch."
+            }
+          },
+          "framing_required": true,
+          "confidence": "high"
+        }
+      ],
+      "identity_duplicate_quarantine_exclusions": [
+        {
+          "candidate_id": "cross_family_bridge_edge:000009:song_anthrax_caught_in_a_mosh:song_germs_lexicon_devil",
+          "exclusion_reason": "Identity/version quarantine blocks clean route sequencing despite high intrinsic affinity.",
+          "bridge_category": "identity_quarantine",
+          "risk_flags": [
+            "duplicate_context_review_needed",
+            "identity_review_needed",
+            "recording_identity_unclear",
+            "version_ambiguity"
+          ]
+        }
+      ],
+      "route_sequence": [
+        {
+          "sequence_index": 1,
+          "route_role": "gateway",
+          "candidate_id": "route_gateway_edge:000004:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew",
+          "track_id": "song|atlanta rhythm section|so into you",
+          "inclusion_reason": "Open with accessible gateway evidence before testing riskier material.",
+          "tests": "Whether the target pattern is legible in a low-risk opener.",
+          "intrinsic_affinity_tags": [
+            "vocal_performance:detached_cool",
+            "emotion_theme:desire",
+            "sonic_texture:guitar_forward",
+            "rhythm_body:groove_locked",
+            "form_container:single_craft"
+          ],
+          "context_overlays": [
+            "nostalgia_context"
+          ],
+          "risk_flags": [
+            "safe_gateway"
+          ],
+          "graph_context": {
+            "family_ids": [],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "gateway_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "gateway",
+            "role_basis": "Route item inherits gateway placement from the accepted v0.1.1 mission candidate pool.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "route_gateway_edge:000004:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew"
+              ],
+              "source_fields": [
+                "route_sequence",
+                "gateway_candidates",
+                "risk_flags"
+              ],
+              "notes": "Graph placement is mission-planning input only."
+            }
+          },
+          "confidence": "high",
+          "readiness_notes": [
+            "Accessible gateway opener.",
+            "Gateway status is not listener preference or quality."
+          ]
+        },
+        {
+          "sequence_index": 2,
+          "route_role": "clean_bridge",
+          "candidate_id": "cross_family_bridge_edge:000001:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew",
+          "track_id": "song|cream|strange brew",
+          "inclusion_reason": "Move across families through a clean bridge candidate.",
+          "tests": "Whether the listener accepts the cross-family transition when readiness is high.",
+          "intrinsic_affinity_tags": [
+            "emotion_theme:desire",
+            "form_container:single_craft",
+            "rhythm_body:groove_locked",
+            "sonic_texture:guitar_forward",
+            "sonic_texture:polished_studio",
+            "vocal_performance:detached_cool"
+          ],
+          "context_overlays": [
+            "nostalgia_context"
+          ],
+          "risk_flags": [
+            "safe_gateway"
+          ],
+          "graph_context": {
+            "family_ids": [
+              "family_10",
+              "family_2"
+            ],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "cross_family_bridge_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "bridge",
+            "role_basis": "Route item inherits clean bridge placement from v0.1.1 hardened bridge and road candidate artifacts.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json",
+                "derived_affinity_substrate_v0_1_1/atlas_road_candidates_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "cross_family_bridge_edge:000001:song_atlanta_rhythm_section_so_into_you:song_cream_strange_brew",
+                "road_v0_1_1:family_10_family_2"
+              ],
+              "source_fields": [
+                "route_sequence",
+                "bridge_category",
+                "product_bridge_readiness_score"
+              ],
+              "notes": "Family IDs are lineage IDs, not newly-read canonical graph truth."
+            }
+          },
+          "confidence": "high",
+          "readiness_notes": [
+            "Clean bridge candidate.",
+            "Product bridge readiness is high and separate from intrinsic affinity."
+          ]
+        },
+        {
+          "sequence_index": 3,
+          "route_role": "frontier_probe",
+          "candidate_id": "frontier_probe_sample:distorted_guitar_album_world_probe",
+          "track_id": "song|medicine|aruca",
+          "inclusion_reason": "Probe a promising but under-evidenced region after safer setup.",
+          "tests": "Whether the target pattern survives a higher-whiplash texture.",
+          "intrinsic_affinity_tags": [
+            "vocal_performance:detached_cool",
+            "emotion_theme:alienation",
+            "sonic_texture:distorted_guitar",
+            "rhythm_body:driving_eighths",
+            "form_container:album_world"
+          ],
+          "context_overlays": [],
+          "risk_flags": [
+            "high_whiplash"
+          ],
+          "graph_context": {
+            "family_ids": [],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "frontier_probe_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "deep_cut",
+            "role_basis": "Route item inherits frontier probe placement from v0.1.1 mission candidate pool risk and probe fields.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "frontier_probe_sample:distorted_guitar_album_world_probe"
+              ],
+              "source_fields": [
+                "route_sequence",
+                "frontier_probes",
+                "risk_flags"
+              ],
+              "notes": "Deep cut role is mission-planning shorthand and remains review-only."
+            }
+          },
+          "confidence": "high",
+          "readiness_notes": [
+            "Promising but under-evidenced frontier probe.",
+            "High-whiplash risk requires framing."
+          ]
+        },
+        {
+          "sequence_index": 4,
+          "route_role": "caution_control",
+          "candidate_id": "false_nearby_caution_edge:001301:song_medicine_aruca:song_swervedriver_last_train_to_satansvi",
+          "track_id": "song|swervedriver|last train to satansville",
+          "inclusion_reason": "Use a framed false-nearby control to test whether the bridge is real or surface-level.",
+          "tests": "Whether the listener rejects a candidate that looks similar but may not function similarly.",
+          "intrinsic_affinity_tags": [
+            "vocal_performance:detached_cool",
+            "emotion_theme:alienation",
+            "sonic_texture:distorted_guitar",
+            "rhythm_body:driving_eighths",
+            "form_container:album_world"
+          ],
+          "context_overlays": [],
+          "risk_flags": [
+            "false_nearby_risk",
+            "requires_framing"
+          ],
+          "graph_context": {
+            "family_ids": [],
+            "family_names": [],
+            "archetype_ids": [],
+            "archetype_names": [],
+            "archetype_role": null,
+            "membership_role": "false_nearby_caution_candidate",
+            "track_tier_within_archetype": "unknown",
+            "album_tier_within_archetype": "unknown",
+            "artist_tier_within_archetype": "unknown",
+            "graph_item_role": "contextual_object",
+            "role_basis": "Route item inherits caution placement from false-nearby risk metadata in the v0.1.1 mission candidate pool.",
+            "provenance": {
+              "source_files": [
+                "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json"
+              ],
+              "source_candidate_ids": [
+                "false_nearby_caution_edge:001301:song_medicine_aruca:song_swervedriver_last_train_to_satansvi"
+              ],
+              "source_fields": [
+                "route_sequence",
+                "caution_high_whiplash_controls",
+                "risk_flags"
+              ],
+              "notes": "False-nearby caution is review-only and is not treated as listener mismatch evidence."
+            }
+          },
+          "confidence": "high",
+          "readiness_notes": [
+            "False-nearby control.",
+            "Requires explicit framing and should not be presented as a clean bridge."
+          ]
+        }
+      ],
+      "reaction_prompts": [
+        "Which transition felt earned, and which felt misleading?",
+        "Did the riskier track feel interesting, off-putting, or just context-dependent?",
+        "What should Cartenza learn from this route?"
+      ],
+      "expected_evidence": {
+        "confirming": [
+          "Explicit positive reaction to both gateway and clean bridge tracks.",
+          "Listener note confirms the shared affinity pattern rather than only familiarity.",
+          "Frontier probe is accepted after framing."
+        ],
+        "falsifying": [
+          "Gateway accepted but clean bridge rejected.",
+          "Listener identifies the bridge as context-only or false-nearby.",
+          "Caution control fails in a way that also invalidates the frontier probe."
+        ],
+        "ambiguous": [
+          "Positive reaction appears driven by nostalgia context only.",
+          "Interest is limited to one object and does not support broader route logic."
+        ]
+      },
+      "atlas_delta_plan": {
+        "if_confirmed": [
+          "Record evidence only.",
+          "Queue scoped Road or Waypoint review if repeated evidence supports it.",
+          "Keep Frontier fog visible until more evidence arrives."
+        ],
+        "if_falsified": [
+          "Record negative evidence only.",
+          "Queue Caution review if the false-nearby pattern repeats.",
+          "Do not mutate canonical graph truth."
+        ],
+        "if_ambiguous": [
+          "Record ambiguity.",
+          "Request a safer follow-up mission.",
+          "Do not promote any Atlas role."
+        ],
+        "write_mode": "evidence_only"
+      },
+      "listener_evidence": {
+        "status": "absent_at_construction",
+        "evidence_ids": [],
+        "not_inferred_from_affinity": true
+      },
+      "review": {
+        "pm_review_required": true,
+        "runtime_allowed": false,
+        "production_mission_allowed": false
+      },
+      "provenance": {
+        "source_files": [
+          "derived_affinity_substrate_v0_1_1/mission_candidate_pool_v0_1_1.json",
+          "derived_affinity_substrate_v0_1_1/hardened_bridge_candidates_v0_1_1.json"
+        ],
+        "canonical_graph_mutation": "not_performed",
+        "runtime_ingestion": "not_performed"
+      }
+    }
+  ]
+}

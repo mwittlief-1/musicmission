@@ -1,0 +1,1894 @@
+[
+  {
+    "mission_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "needs_revision",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible profile_weighted_balanced evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible profile_weighted_balanced evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "boundary",
+        "song_title": "Sexual Healing",
+        "artist_name": "Marvin Gaye",
+        "album_title": null,
+        "canonical_song_id": "marvin-gaye-sexual-healing",
+        "canonical_artist_id": "artist-marvin-gaye",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "diagnostic_biased_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Hotel California",
+        "artist_name": "Eagles",
+        "album_title": null,
+        "canonical_song_id": "song-hotel-california-1977",
+        "canonical_artist_id": "artist-eagles",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "diagnostic_biased_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "diagnostic_biased_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "diagnostic_biased_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-011-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-diagnostic-biased-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "anchor",
+        "song_title": "Man! I Feel Like a Woman!",
+        "artist_name": "Shania Twain",
+        "album_title": null,
+        "canonical_song_id": "shania-twain-man-i-feel-like-a-woman",
+        "canonical_artist_id": "artist-shania-twain",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/profile_weighted_balanced/selector_output_public_profile_06_profile_weighted_balanced_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 016 -> Visible Archetype 041",
+          "final_opportunity_score": 0.8234
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "profile_weighted_balanced",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": false,
+      "multi_source_route_reason": null,
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "revise_needed",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_profile_weighted_balanced_200_boundary_test_diagnostic_biased_policy_v0_1",
+      "offline_phase1g_alpha_plausible": false,
+      "offline_phase1g_gate_fail_reasons": [
+        "non_failure_rate_below_0_67",
+        "negative_hit_rate_above_0_33"
+      ],
+      "golden_classification_reasons": [
+        "too_negative",
+        "weak_or_punitive_route_evidence"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      }
+    },
+    "resolution": {
+      "resolved_count": 0,
+      "candidate_count": 6,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": true
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "needs_revision",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "song-bohemian-rhapsody-1975",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "anchor",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Sexual Healing",
+        "artist_name": "Marvin Gaye",
+        "album_title": null,
+        "canonical_song_id": "marvin-gaye-sexual-healing",
+        "canonical_artist_id": "artist-marvin-gaye",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "boundary",
+        "song_title": "Chain of Fools",
+        "artist_name": "Aretha Franklin",
+        "album_title": null,
+        "canonical_song_id": "aretha-franklin-chain-of-fools",
+        "canonical_artist_id": "artist-aretha-franklin",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "comparator",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-012-phase1g-public-profile-06-edge-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "mission_type_native_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/edge_heavy/selector_output_public_profile_06_edge_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041",
+          "final_opportunity_score": 0.9062
+        },
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041 (candidate 02)",
+          "final_opportunity_score": 0.8451
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "edge_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": true,
+      "multi_source_route_reason": "Phase 1G top-window construction combined compatible opportunities for offline review.",
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "revise_needed",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_edge_heavy_200_boundary_test_mission_type_native_policy_v0_1",
+      "offline_phase1g_alpha_plausible": false,
+      "offline_phase1g_gate_fail_reasons": [
+        "non_failure_rate_below_0_67",
+        "negative_hit_rate_above_0_33"
+      ],
+      "golden_classification_reasons": [
+        "too_negative",
+        "weak_or_punitive_route_evidence"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      }
+    },
+    "resolution": {
+      "resolved_count": 0,
+      "candidate_count": 6,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": true
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "needs_revision",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "song-bohemian-rhapsody-1975",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "boundary",
+        "song_title": "Hotel California",
+        "artist_name": "Eagles",
+        "album_title": null,
+        "canonical_song_id": "song-hotel-california-1977",
+        "canonical_artist_id": "artist-eagles",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "diagnostic_biased_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Sexual Healing",
+        "artist_name": "Marvin Gaye",
+        "album_title": null,
+        "canonical_song_id": "marvin-gaye-sexual-healing",
+        "canonical_artist_id": "artist-marvin-gaye",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "diagnostic_biased_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "diagnostic_biased_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "diagnostic_biased_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-013-phase1g-public-profile-06-edge-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "anchor",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/edge_heavy/selector_output_public_profile_06_edge_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041",
+          "final_opportunity_score": 0.9062
+        },
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041 (candidate 02)",
+          "final_opportunity_score": 0.8451
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "edge_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": true,
+      "multi_source_route_reason": "Phase 1G top-window construction combined compatible opportunities for offline review.",
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "revise_needed",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_edge_heavy_200_boundary_test_diagnostic_biased_policy_v0_1",
+      "offline_phase1g_alpha_plausible": false,
+      "offline_phase1g_gate_fail_reasons": [
+        "non_failure_rate_below_0_67",
+        "negative_hit_rate_above_0_33"
+      ],
+      "golden_classification_reasons": [
+        "too_negative",
+        "weak_or_punitive_route_evidence"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      }
+    },
+    "resolution": {
+      "resolved_count": 0,
+      "candidate_count": 6,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": true
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "needs_revision",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible song_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible song_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Livin' on a Prayer",
+        "artist_name": "Bon Jovi",
+        "album_title": null,
+        "canonical_song_id": "bon-jovi-livin-on-a-prayer",
+        "canonical_artist_id": "artist-bon-jovi",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "anchor",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "queen-bohemian-rhapsody",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Hotel California",
+        "artist_name": "Eagles",
+        "album_title": null,
+        "canonical_song_id": "song-hotel-california-1977",
+        "canonical_artist_id": "artist-eagles",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "boundary",
+        "song_title": "Chain of Fools",
+        "artist_name": "Aretha Franklin",
+        "album_title": null,
+        "canonical_song_id": "aretha-franklin-chain-of-fools",
+        "canonical_artist_id": "artist-aretha-franklin",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "comparator",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-014-phase1g-public-profile-06-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "mission_type_native_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/song_heavy/selector_output_public_profile_06_song_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041",
+          "final_opportunity_score": 0.8394
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "song_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": false,
+      "multi_source_route_reason": null,
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "revise_needed",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_song_heavy_200_boundary_test_mission_type_native_policy_v0_1",
+      "offline_phase1g_alpha_plausible": false,
+      "offline_phase1g_gate_fail_reasons": [
+        "non_failure_rate_below_0_67",
+        "negative_hit_rate_above_0_33"
+      ],
+      "golden_classification_reasons": [
+        "too_negative",
+        "weak_or_punitive_route_evidence"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      }
+    },
+    "resolution": {
+      "resolved_count": 0,
+      "candidate_count": 6,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": true
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "needs_revision",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible profile_weighted_balanced evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible profile_weighted_balanced evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "anchor",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "queen-bohemian-rhapsody",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Sexual Healing",
+        "artist_name": "Marvin Gaye",
+        "album_title": null,
+        "canonical_song_id": "marvin-gaye-sexual-healing",
+        "canonical_artist_id": "artist-marvin-gaye",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "boundary",
+        "song_title": "Hotel California",
+        "artist_name": "Eagles",
+        "album_title": null,
+        "canonical_song_id": "song-hotel-california-1977",
+        "canonical_artist_id": "artist-eagles",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "comparator",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-015-phase1g-public-profile-06-profile-weighted-balanced-200-boundary-test-mission-type-native-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "mission_type_native_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "016",
+          "041"
+        ],
+        "graph_context_refs": [
+          "016",
+          "041",
+          "mixed_nearby_boundary",
+          "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:016->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/profile_weighted_balanced/selector_output_public_profile_06_profile_weighted_balanced_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-profile-weighted-balanced-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 016 -> Visible Archetype 041",
+          "final_opportunity_score": 0.8234
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "profile_weighted_balanced",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": false,
+      "multi_source_route_reason": null,
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "revise_needed",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_profile_weighted_balanced_200_boundary_test_mission_type_native_policy_v0_1",
+      "offline_phase1g_alpha_plausible": false,
+      "offline_phase1g_gate_fail_reasons": [
+        "non_failure_rate_below_0_67",
+        "negative_hit_rate_above_0_33"
+      ],
+      "golden_classification_reasons": [
+        "too_negative",
+        "weak_or_punitive_route_evidence"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      }
+    },
+    "resolution": {
+      "resolved_count": 0,
+      "candidate_count": 6,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": true
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "needs_revision",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible song_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible song_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "boundary",
+        "song_title": "Chain of Fools",
+        "artist_name": "Aretha Franklin",
+        "album_title": null,
+        "canonical_song_id": "aretha-franklin-chain-of-fools",
+        "canonical_artist_id": "artist-aretha-franklin",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "diagnostic_biased_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Hotel California",
+        "artist_name": "Eagles",
+        "album_title": null,
+        "canonical_song_id": "song-hotel-california-1977",
+        "canonical_artist_id": "artist-eagles",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "diagnostic_biased_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Fun, Fun, Fun",
+        "artist_name": "The Beach Boys",
+        "album_title": null,
+        "canonical_song_id": "the-beach-boys-fun-fun-fun",
+        "canonical_artist_id": "artist-the-beach-boys",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "diagnostic_biased_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "diagnostic_biased_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-016-phase1g-public-profile-06-song-heavy-200-boundary-test-diagnostic-biased-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "anchor",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "queen-bohemian-rhapsody",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": null,
+        "apple_music_url": null,
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "candidate",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/song_heavy/selector_output_public_profile_06_song_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041",
+          "final_opportunity_score": 0.8394
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "song_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": false,
+      "multi_source_route_reason": null,
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "revise_needed",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_song_heavy_200_boundary_test_diagnostic_biased_policy_v0_1",
+      "offline_phase1g_alpha_plausible": false,
+      "offline_phase1g_gate_fail_reasons": [
+        "non_failure_rate_below_0_67",
+        "negative_hit_rate_above_0_33"
+      ],
+      "golden_classification_reasons": [
+        "too_negative",
+        "weak_or_punitive_route_evidence"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      }
+    },
+    "resolution": {
+      "resolved_count": 0,
+      "candidate_count": 6,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": true
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  }
+]
