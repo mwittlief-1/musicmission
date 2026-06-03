@@ -517,6 +517,10 @@ struct SurveyEvidenceExportBuilder {
         self.itemLookup = pageProvider.itemLookup()
     }
 
+    func loadPersistedSurveySession() -> PersistedSurveySession {
+        persistenceStore.load()
+    }
+
     func makeFirstMissionGenerationRequest(
         testerAlias: String,
         requestedBatchSize: Int = AlphaMissionGenerationConfig.requiredMissionCount,

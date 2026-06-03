@@ -379,6 +379,73 @@ final class SessionExporterTests: XCTestCase {
     }
 
     @MainActor
+    func testSupportDiagnosticsIncludesReviewedMissionCatalogWithoutClearingSurveyResponses() throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+        let surveyPersistenceStore = SurveyPersistenceStore(baseDirectoryURL: tempDirectory)
+        let surveyStore = SurveyStore(persistenceStore: surveyPersistenceStore)
+        surveyStore.prepareRequiredAlphaIntake()
+        surveyStore.goTo(.artistPage1)
+        let firstSurveyItem = try XCTUnwrap(surveyStore.currentPage?.items.first)
+        surveyStore.setState(.favorite, for: firstSurveyItem)
+        let persistedSurveyBeforeDiagnostics = surveyPersistenceStore.load()
+
+        XCTAssertEqual(persistedSurveyBeforeDiagnostics.responses.count, 1)
+
+        let mission = try loadSampleMission()
+        let appModel = AppModel(
+            exportFileStore: ExportFileStore(baseDirectoryURL: tempDirectory),
+            sessionPersistenceStore: .disabled,
+            missionProvider: TestMissionProvider(missions: [mission]),
+            surveyEvidenceBuilder: SurveyEvidenceExportBuilder(persistenceStore: surveyPersistenceStore),
+            clientDiagnosticStore: ClientDiagnosticArtifactStore(baseDirectoryURL: tempDirectory)
+        )
+
+        appModel.saveSupportDiagnosticPackage()
+
+        let persistedSurveyAfterDiagnostics = surveyPersistenceStore.load()
+        XCTAssertEqual(persistedSurveyAfterDiagnostics.surveySessionID, persistedSurveyBeforeDiagnostics.surveySessionID)
+        XCTAssertEqual(persistedSurveyAfterDiagnostics.responses.count, 1)
+        XCTAssertEqual(persistedSurveyAfterDiagnostics.responses[firstSurveyItem.id]?.state, .favorite)
+
+        let package = try XCTUnwrap(appModel.savedSupportDiagnosticsPackage)
+        let artifactObjects = try package.artifactURLs.map { url in
+            try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: url)) as? [String: Any])
+        }
+        let missionCatalogArtifact = try XCTUnwrap(artifactObjects.first { artifact in
+            guard artifact["artifact_type"] as? String == ClientDiagnosticArtifactType.missionSelectionAudit.rawValue,
+                  let payload = artifact["payload"] as? [String: Any] else {
+                return false
+            }
+            return payload["schema_version"] as? String == "cartenza.reviewed_mission_catalog_snapshot.v0.1"
+        })
+        let payload = try XCTUnwrap(missionCatalogArtifact["payload"] as? [String: Any])
+        let surveyLink = try XCTUnwrap(payload["survey_link"] as? [String: Any])
+        let missionCatalog = try XCTUnwrap(payload["mission_catalog"] as? [String: Any])
+        let appMissions = try XCTUnwrap(payload["app_missions"] as? [[String: Any]])
+        let missionSummaries = try XCTUnwrap(payload["mission_summaries"] as? [[String: Any]])
+        let firstMission = try XCTUnwrap(appMissions.first)
+        let firstMissionItems = try XCTUnwrap(firstMission["items"] as? [[String: Any]])
+
+        XCTAssertEqual(payload["snapshot_status"] as? String, "captured")
+        XCTAssertEqual(surveyLink["survey_session_id"] as? String, persistedSurveyBeforeDiagnostics.surveySessionID)
+        XCTAssertEqual(surveyLink["survey_response_count"] as? Int, 1)
+        XCTAssertEqual(missionCatalog["reviewed_mission_count"] as? Int, 1)
+        XCTAssertEqual(missionCatalog["route_item_count"] as? Int, mission.items.count)
+        XCTAssertEqual(appMissions.count, 1)
+        XCTAssertEqual(firstMission["mission_id"] as? String, mission.missionID)
+        XCTAssertEqual(firstMissionItems.count, mission.items.count)
+        XCTAssertEqual(missionSummaries.first?["mission_id"] as? String, mission.missionID)
+        XCTAssertEqual(
+            (missionSummaries.first?["route_items"] as? [[String: Any]])?.count,
+            mission.items.count
+        )
+    }
+
+    @MainActor
     func testNextAfterStartedPlaybackAutoCapturesSkippedNoSignal() async throws {
         let tempDirectory = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString, isDirectory: true)

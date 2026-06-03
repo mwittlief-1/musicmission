@@ -1323,7 +1323,7 @@ final class AppModel: ObservableObject {
 
     func saveSupportDiagnosticPackage(rootStateSnapshot: [String: Any]? = nil) {
         do {
-            let session = SurveyPersistenceStore().load()
+            let session = surveyEvidenceBuilder.loadPersistedSurveySession()
             let context = clientDiagnosticContext(surveySessionID: session.surveySessionID)
             let now = Date()
             var additionalArtifacts: [(type: ClientDiagnosticArtifactType, payload: [String: Any], context: ClientDiagnosticLinkContext)] = []
@@ -1355,6 +1355,12 @@ final class AppModel: ObservableObject {
                 from: surveyEvidenceBuilder.makeSurveyEvidenceExportData(session: session, now: now)
             ) as? [String: Any] ?? [:]
             additionalArtifacts.append((.surveyEvidenceExport, evidenceExport, context))
+
+            let reviewedMissionCatalogSnapshot = makeReviewedMissionCatalogSnapshotPayload(
+                surveySession: session,
+                now: now
+            )
+            additionalArtifacts.append((.missionSelectionAudit, reviewedMissionCatalogSnapshot, context))
 
             savedSupportDiagnosticsPackage = try clientDiagnosticStore.savePackage(
                 additionalArtifacts: additionalArtifacts,
@@ -2029,6 +2035,144 @@ final class AppModel: ObservableObject {
         )
     }
 
+    private func makeReviewedMissionCatalogSnapshotPayload(
+        surveySession: PersistedSurveySession,
+        now: Date
+    ) -> [String: Any] {
+        do {
+            let catalog = try missionProvider.loadMissionCatalog()
+            let assignments = catalog.reviewedAssignments
+            let appMissions = try jsonObject(from: assignments.map(\.mission)) as? [[String: Any]] ?? []
+            let reviewedAssignments = try jsonObject(from: assignments) as? [[String: Any]] ?? []
+            let routeItemCount = assignments.flatMap { $0.mission.items }.count
+
+            return compactDiagnosticDictionary([
+                "schema_version": "cartenza.reviewed_mission_catalog_snapshot.v0.1",
+                "captured_at": ISO8601DateFormatter().string(from: now),
+                "survey_session_id": surveySession.surveySessionID,
+                "source_app_version": Self.appVersion,
+                "source_app_build": Self.appBuild,
+                "snapshot_status": "captured",
+                "artifact_role": "reviewed_mission_catalog_snapshot",
+                "survey_link": compactDiagnosticDictionary([
+                    "survey_session_id": surveySession.surveySessionID,
+                    "survey_response_count": surveySession.responses.count,
+                    "displayed_page_count": surveySession.displayedPages.count,
+                    "freeform_signal_count": surveySession.freeformSignals.count,
+                    "survey_updated_at": surveySession.updatedAt.map { ISO8601DateFormatter().string(from: $0) },
+                    "apple_music_payload_present": surveySession.appleMusicSignalPayload != nil,
+                    "companion_artifact_types": [
+                        ClientDiagnosticArtifactType.surveyEvidenceExport.rawValue,
+                        ClientDiagnosticArtifactType.surveyPageSelectionAudit.rawValue,
+                        ClientDiagnosticArtifactType.appleMusicSignalPayload.rawValue
+                    ]
+                ]),
+                "mission_catalog": [
+                    "reviewed_mission_count": assignments.count,
+                    "route_item_count": routeItemCount,
+                    "all_missions_playback_ready": !assignments.isEmpty && assignments.allSatisfy { $0.mission.isPlaybackReady },
+                    "mission_ids": assignments.map { $0.mission.missionID },
+                    "source_run_ids": Array(Set(assignments.compactMap(\.sourceRunID))).sorted()
+                ],
+                "mission_summaries": assignments.map(reviewedMissionDiagnosticSummary),
+                "app_missions": appMissions,
+                "reviewed_assignments": reviewedAssignments,
+                "diagnostic_policy": [
+                    "support_only": true,
+                    "read_only_snapshot": true,
+                    "survey_responses_preserved": true,
+                    "mission_catalog_preserved": true,
+                    "generation_not_invoked": true,
+                    "atlas_truth_writes_allowed": false,
+                    "copy_review_allowed": true,
+                    "composition_review_allowed": true
+                ]
+            ])
+        } catch {
+            return [
+                "schema_version": "cartenza.reviewed_mission_catalog_snapshot.v0.1",
+                "captured_at": ISO8601DateFormatter().string(from: now),
+                "survey_session_id": surveySession.surveySessionID,
+                "source_app_version": Self.appVersion,
+                "source_app_build": Self.appBuild,
+                "snapshot_status": "capture_failed",
+                "artifact_role": "reviewed_mission_catalog_snapshot",
+                "error_description": error.localizedDescription,
+                "diagnostic_policy": [
+                    "support_only": true,
+                    "read_only_snapshot": true,
+                    "survey_responses_preserved": true,
+                    "mission_catalog_preserved": true,
+                    "generation_not_invoked": true,
+                    "atlas_truth_writes_allowed": false
+                ]
+            ]
+        }
+    }
+
+    private func reviewedMissionDiagnosticSummary(_ assignment: MissionAssignment) -> [String: Any] {
+        let mission = assignment.mission
+        return compactDiagnosticDictionary([
+            "mission_id": mission.missionID,
+            "mission_title": mission.missionTitle,
+            "mission_type": mission.missionType.rawValue,
+            "mission_version": mission.missionVersion,
+            "alpha_app_import_status": mission.alphaAppImportStatus?.rawValue,
+            "alpha_mission_archetype": mission.alphaMissionArchetype,
+            "brief": mission.brief,
+            "hypothesis": mission.hypothesis,
+            "why_this_mission_now": mission.whyThisMissionNow,
+            "risk_level": mission.riskLevel,
+            "source_trace_summary": mission.sourceTraceSummary,
+            "source": assignment.source.rawValue,
+            "source_run_id": assignment.sourceRunID,
+            "import_note": assignment.importNote,
+            "imported_at": ISO8601DateFormatter().string(from: assignment.importedAt),
+            "item_count": mission.items.count,
+            "is_playback_ready": mission.isPlaybackReady,
+            "route_items": mission.items.map(reviewedMissionRouteItemDiagnosticSummary)
+        ])
+    }
+
+    private func reviewedMissionRouteItemDiagnosticSummary(_ item: MissionItem) -> [String: Any] {
+        compactDiagnosticDictionary([
+            "item_id": item.itemID,
+            "sequence": item.sequence,
+            "item_type": item.itemType.rawValue,
+            "artist": item.artist,
+            "title": item.title,
+            "album": item.album,
+            "year": item.year,
+            "why_included": item.whyIncluded,
+            "expected_test_signal": item.expectedTestSignal,
+            "alpha_route_role": item.alphaRouteRole?.rawValue,
+            "alpha_resolution_status": item.alphaResolutionStatus?.rawValue,
+            "alpha_source_opportunity_id": item.alphaSourceOpportunityID,
+            "alpha_source_mission_type": item.alphaSourceMissionType,
+            "alpha_target_object_ids": item.alphaTargetObjectIDs,
+            "alpha_graph_context_refs": item.alphaGraphContextRefs,
+            "candidate_id": item.candidateID,
+            "route_candidate_key": item.routeCandidateKey,
+            "route_batch_dedupe_key": item.routeBatchDedupeKey,
+            "route_display_identity_key": item.routeDisplayIdentityKey,
+            "apple_catalog_id": item.appleMusicResolution.catalogID,
+            "apple_catalog_url": item.appleMusicResolution.catalogURL?.absoluteString,
+            "apple_resolution_status": item.appleMusicResolution.status.rawValue,
+            "apple_resolved_title": item.appleMusicResolution.resolvedTitle,
+            "apple_resolved_artist": item.appleMusicResolution.resolvedArtist,
+            "apple_resolved_album": item.appleMusicResolution.resolvedAlbum,
+            "feedback_chip_sets": item.feedbackChipSets?.mapValues { chips in
+                chips.map { chip in
+                    compactDiagnosticDictionary([
+                        "tag_id": chip.tagID,
+                        "label": chip.label,
+                        "description": chip.description
+                    ])
+                }
+            }
+        ])
+    }
+
     private func recordLocalMissionSelectionAuditDiagnostic(
         responseData: Data,
         importedAssignments: [MissionAssignment],
@@ -2237,7 +2381,7 @@ final class AppModel: ObservableObject {
     }
 
     private func currentSurveySessionID() -> String? {
-        SurveyPersistenceStore().load().surveySessionID
+        surveyEvidenceBuilder.loadPersistedSurveySession().surveySessionID
     }
 
     private func compactDiagnosticDictionary(_ dictionary: [String: Any?]) -> [String: Any] {
@@ -2246,6 +2390,14 @@ final class AppModel: ObservableObject {
                 result[pair.key] = value
             }
         }
+    }
+
+    private func jsonObject<T: Encodable>(from value: T) throws -> Any {
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        encoder.outputFormatting = [.sortedKeys]
+        let data = try encoder.encode(value)
+        return try JSONSerialization.jsonObject(with: data)
     }
 
     private func loadStateDiagnosticValue(_ state: LoadState) -> String {
