@@ -9,6 +9,7 @@ struct MusicAtlasControllerApp: App {
             RootView()
                 .environmentObject(appModel)
                 .task {
+                    appModel.loadAtlasExplainers()
                     appModel.loadMissionLibrary()
                 }
         }

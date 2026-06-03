@@ -15,7 +15,7 @@ struct AppleMusicSignalProbePanel: View {
             } label: {
                 Label("Request Apple Music Access", systemImage: "music.note")
             }
-            .disabled(!appModel.musicAuthorization.snapshot.canRequestAuthorization)
+            .disabled(!appModel.musicAuthorizationSnapshot.canRequestAuthorization)
 
             Button {
                 Task {
@@ -71,29 +71,34 @@ private struct SignalProbeSummary: View {
                 title: "Environment",
                 value: [
                     payload.authorization.musicAuthorizationStatus,
-                    payload.environment.storefront ?? "no storefront"
+                    payload.storefront ?? "no storefront"
                 ].joined(separator: " / ")
             )
 
             SignalProbeSummaryRow(
-                title: "Raw endpoints",
-                value: "\(payload.rawEndpoints.filter(\.success).count) of \(payload.rawEndpoints.count) succeeded"
+                title: "Primary",
+                value: "\(payload.usefulPrimarySignalCount) useful, \(payload.primarySignalSources.heavyRotation.items.count) heavy, \(payload.primarySignalSources.recentlyPlayedTracks.items.count) recent"
             )
 
             SignalProbeSummaryRow(
-                title: "Library sample",
-                value: "\(payload.libraryArtistsSample.count) artists, \(payload.libraryAlbumsSample.count) albums, \(payload.librarySongsSample.count) songs"
+                title: "API probes",
+                value: "\(payload.contextSources.replaySummary.items.count) replay, \(payload.authorization.tokenStatus)"
             )
 
             SignalProbeSummaryRow(
-                title: "Recommendations",
-                value: "\(payload.personalRecommendations.count)"
+                title: "Library windows",
+                value: "\(payload.primarySignalSources.librarySongPlayCount.items.count) play-count, \(payload.primarySignalSources.librarySongLastPlayed.items.count) last-played, \(payload.primarySignalSources.libraryAlbumLibraryAdded.items.count) albums"
             )
 
-            if !payload.errors.isEmpty {
+            SignalProbeSummaryRow(
+                title: "Catalog",
+                value: "\(payload.catalogHydration.resources.count) identities"
+            )
+
+            if !payload.allProbeErrors.isEmpty {
                 SignalProbeSummaryRow(
                     title: "Errors",
-                    value: "\(payload.errors.count)"
+                    value: "\(payload.allProbeErrors.count)"
                 )
             }
         }

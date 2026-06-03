@@ -1,0 +1,1866 @@
+[
+  {
+    "mission_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "app_import_ready",
+    "mission_type": "context_dependence_test",
+    "mission_archetype": "Nearby Road",
+    "title": "Context Check: Same Feeling, Different Frame",
+    "brief": "Test whether reactions depend on context-heavy versus context-light presentation.",
+    "hypothesis": "Clarify whether the listener responds to the music itself, the surrounding context, or both.",
+    "why_this_mission_now": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a context dependence test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a context dependence test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "context",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "song-bohemian-rhapsody-1975",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": "1440650711",
+        "apple_music_url": "https://music.apple.com/us/song/1440650711",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Separate context-heavy response from context-light response.",
+        "why_in_route": "mission_type_native_policy context for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "context_overlay"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "context",
+        "song_title": "Just What I Needed",
+        "artist_name": "The Cars",
+        "album_title": null,
+        "canonical_song_id": "the-cars-just-what-i-needed",
+        "canonical_artist_id": "artist-the-cars",
+        "canonical_album_id": null,
+        "apple_music_id": "1088527515",
+        "apple_music_url": "https://music.apple.com/us/song/1088527515",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Separate context-heavy response from context-light response.",
+        "why_in_route": "mission_type_native_policy context for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "context_overlay"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "comparator",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": "1524651263",
+        "apple_music_url": "https://music.apple.com/us/song/1524651263",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": "1440903439",
+        "apple_music_url": "https://music.apple.com/us/song/1440903439",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "anchor",
+        "song_title": "Man! I Feel Like a Woman!",
+        "artist_name": "Shania Twain",
+        "album_title": null,
+        "canonical_song_id": "shania-twain-man-i-feel-like-a-woman",
+        "canonical_artist_id": "artist-shania-twain",
+        "canonical_album_id": null,
+        "apple_music_id": "1445668856",
+        "apple_music_url": "https://music.apple.com/us/song/1445668856",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-001-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-mission-type-native-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": "1440838444",
+        "apple_music_url": "https://music.apple.com/us/song/1440838444",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "mission_type_native_policy control for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/edge_heavy/selector_output_public_profile_06_edge_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "mission_type": "context_dependence_test",
+          "target_display_name": "Bohemian Rhapsody Context Cluster",
+          "final_opportunity_score": 0.7427
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "edge_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": false,
+      "multi_source_route_reason": null,
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "approved_app_import_ready",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_edge_heavy_200_context_dependence_test_mission_type_native_policy_v0_1",
+      "offline_phase1g_alpha_plausible": true,
+      "offline_phase1g_gate_fail_reasons": [],
+      "golden_classification_reasons": [
+        "approved_for_app_fixture_import_after_music_resolution"
+      ],
+      "role_counts": {
+        "context": 2,
+        "comparator": 2,
+        "anchor": 1,
+        "control": 1
+      },
+      "first_uat_resolution_promoted": true,
+      "music_resolution_source": "canonical_apple_music_catalog_index_v1"
+    },
+    "resolution": {
+      "resolved_count": 6,
+      "candidate_count": 0,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": false,
+      "resolution_source": "canonical_apple_music_catalog_index_v1",
+      "resolved_at": "2026-05-29T00:00:00Z"
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "app_import_ready",
+    "mission_type": "context_dependence_test",
+    "mission_archetype": "Nearby Road",
+    "title": "Context Check: Same Feeling, Different Frame",
+    "brief": "Test whether reactions depend on context-heavy versus context-light presentation.",
+    "hypothesis": "Clarify whether the listener responds to the music itself, the surrounding context, or both.",
+    "why_this_mission_now": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a context dependence test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a context dependence test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "context",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "song-bohemian-rhapsody-1975",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": "1440650711",
+        "apple_music_url": "https://music.apple.com/us/song/1440650711",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Separate context-heavy response from context-light response.",
+        "why_in_route": "diagnostic_biased_policy context for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "context_overlay"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "context",
+        "song_title": "Just What I Needed",
+        "artist_name": "The Cars",
+        "album_title": null,
+        "canonical_song_id": "the-cars-just-what-i-needed",
+        "canonical_artist_id": "artist-the-cars",
+        "canonical_album_id": null,
+        "apple_music_id": "1088527515",
+        "apple_music_url": "https://music.apple.com/us/song/1088527515",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Separate context-heavy response from context-light response.",
+        "why_in_route": "diagnostic_biased_policy context for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "context_overlay"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "comparator",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": "1524651263",
+        "apple_music_url": "https://music.apple.com/us/song/1524651263",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "diagnostic_biased_policy comparator for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Livin' on a Prayer",
+        "artist_name": "Bon Jovi",
+        "album_title": null,
+        "canonical_song_id": "bon-jovi-livin-on-a-prayer",
+        "canonical_artist_id": "artist-bon-jovi",
+        "canonical_album_id": null,
+        "apple_music_id": "1422955211",
+        "apple_music_url": "https://music.apple.com/us/song/1422955211",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "diagnostic_biased_policy comparator for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "anchor",
+        "song_title": "Man! I Feel Like a Woman!",
+        "artist_name": "Shania Twain",
+        "album_title": null,
+        "canonical_song_id": "shania-twain-man-i-feel-like-a-woman",
+        "canonical_artist_id": "artist-shania-twain",
+        "canonical_album_id": null,
+        "apple_music_id": "1445668856",
+        "apple_music_url": "https://music.apple.com/us/song/1445668856",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "diagnostic_biased_policy anchor for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-002-phase1g-public-profile-06-edge-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": "1440838444",
+        "apple_music_url": "https://music.apple.com/us/song/1440838444",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "diagnostic_biased_policy control for context_dependence_test; source opportunity=context_dependence_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+        "source_mission_type": "context_dependence_test",
+        "target_object_ids": [
+          "song-bohemian-rhapsody-1975->041"
+        ],
+        "graph_context_refs": [
+          "context_heavy_signals",
+          "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "song-bohemian-rhapsody-1975->041",
+          "visible_rollup:song_cluster:song-bohemian-rhapsody-1975->041:context_heavy_signals"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/edge_heavy/selector_output_public_profile_06_edge_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_context_dependence_test_context_heavy_signals_eligible_00",
+          "mission_type": "context_dependence_test",
+          "target_display_name": "Bohemian Rhapsody Context Cluster",
+          "final_opportunity_score": 0.7427
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "edge_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": false,
+      "multi_source_route_reason": null,
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "approved_app_import_ready",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_edge_heavy_200_context_dependence_test_diagnostic_biased_policy_v0_1",
+      "offline_phase1g_alpha_plausible": true,
+      "offline_phase1g_gate_fail_reasons": [],
+      "golden_classification_reasons": [
+        "approved_for_app_fixture_import_after_music_resolution"
+      ],
+      "role_counts": {
+        "context": 2,
+        "comparator": 2,
+        "anchor": 1,
+        "control": 1
+      },
+      "first_uat_resolution_promoted": true,
+      "music_resolution_source": "canonical_apple_music_catalog_index_v1"
+    },
+    "resolution": {
+      "resolved_count": 6,
+      "candidate_count": 0,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": false,
+      "resolution_source": "canonical_apple_music_catalog_index_v1",
+      "resolved_at": "2026-05-29T00:00:00Z"
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "app_import_ready",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible edge_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Livin' on a Prayer",
+        "artist_name": "Bon Jovi",
+        "album_title": null,
+        "canonical_song_id": "bon-jovi-livin-on-a-prayer",
+        "canonical_artist_id": "artist-bon-jovi",
+        "canonical_album_id": null,
+        "apple_music_id": "1422955211",
+        "apple_music_url": "https://music.apple.com/us/song/1422955211",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "experience_balanced_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "anchor",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": "1440903439",
+        "apple_music_url": "https://music.apple.com/us/song/1440903439",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "experience_balanced_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113_candidate_02",
+          "041_candidate_02"
+        ],
+        "graph_context_refs": [
+          "041_candidate_02",
+          "113_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "probe",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": "1440838444",
+        "apple_music_url": "https://music.apple.com/us/song/1440838444",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Probe the selected uncertainty without assuming preference.",
+        "why_in_route": "experience_balanced_policy probe for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Smooth Operator",
+        "artist_name": "Sade",
+        "album_title": null,
+        "canonical_song_id": "sade-smooth-operator",
+        "canonical_artist_id": "artist-sade",
+        "canonical_album_id": null,
+        "apple_music_id": "1524651263",
+        "apple_music_url": "https://music.apple.com/us/song/1524651263",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "experience_balanced_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "control",
+        "song_title": "How Will I Know",
+        "artist_name": "Whitney Houston",
+        "album_title": null,
+        "canonical_song_id": "whitney-houston-how-will-i-know",
+        "canonical_artist_id": "artist-whitney-houston",
+        "canonical_album_id": null,
+        "apple_music_id": "1784790781",
+        "apple_music_url": "https://music.apple.com/us/song/1784790781",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "experience_balanced_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-003-phase1g-public-profile-06-edge-heavy-200-boundary-test-experience-balanced-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "boundary",
+        "song_title": "Sexual Healing",
+        "artist_name": "Marvin Gaye",
+        "album_title": null,
+        "canonical_song_id": "marvin-gaye-sexual-healing",
+        "canonical_artist_id": "artist-marvin-gaye",
+        "canonical_album_id": null,
+        "apple_music_id": "158539332",
+        "apple_music_url": "https://music.apple.com/us/song/158539332",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "experience_balanced_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "113",
+          "041"
+        ],
+        "graph_context_refs": [
+          "041",
+          "113",
+          "mixed_nearby_boundary",
+          "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:113->041:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/edge_heavy/selector_output_public_profile_06_edge_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041",
+          "final_opportunity_score": 0.9062
+        },
+        {
+          "opportunity_id": "opp_profile-06-edge-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 113 -> Visible Archetype 041 (candidate 02)",
+          "final_opportunity_score": 0.8451
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "edge_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": true,
+      "multi_source_route_reason": "Phase 1G top-window construction combined compatible opportunities for offline review.",
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "approved_app_import_ready",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_edge_heavy_200_boundary_test_experience_balanced_policy_v0_1",
+      "offline_phase1g_alpha_plausible": true,
+      "offline_phase1g_gate_fail_reasons": [],
+      "golden_classification_reasons": [
+        "approved_for_app_fixture_import_after_music_resolution"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "probe": 1,
+        "comparator": 1,
+        "control": 1,
+        "boundary": 1
+      },
+      "first_uat_resolution_promoted": true,
+      "music_resolution_source": "canonical_apple_music_catalog_index_v1"
+    },
+    "resolution": {
+      "resolved_count": 6,
+      "candidate_count": 0,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": false,
+      "resolution_source": "canonical_apple_music_catalog_index_v1",
+      "resolved_at": "2026-05-29T00:00:00Z"
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "app_import_ready",
+    "mission_type": "boundary_test",
+    "mission_archetype": "Dead End Check",
+    "title": "Boundary Check: Where the Edge Starts",
+    "brief": "Clarify the edge between nearby positive and negative graph areas.",
+    "hypothesis": "Find the edge between a known positive area and a nearby uncertain or mixed area without making the route punitive.",
+    "why_this_mission_now": "You got this mission because visible song_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible song_heavy evidence at 200 atoms suggests a boundary test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "medium",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "DNA.",
+        "artist_name": "Kendrick Lamar",
+        "album_title": null,
+        "canonical_song_id": "kendrick-lamar-dna",
+        "canonical_artist_id": "artist-kendrick-lamar",
+        "canonical_album_id": null,
+        "apple_music_id": "1440881357",
+        "apple_music_url": "https://music.apple.com/us/song/1440881357",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "044",
+          "006"
+        ],
+        "graph_context_refs": [
+          "006",
+          "044",
+          "mixed_nearby_boundary",
+          "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "anchor",
+        "song_title": "Respect",
+        "artist_name": "Aretha Franklin",
+        "album_title": null,
+        "canonical_song_id": "aretha-franklin-respect",
+        "canonical_artist_id": "artist-aretha-franklin",
+        "canonical_album_id": null,
+        "apple_music_id": "937107838",
+        "apple_music_url": "https://music.apple.com/us/song/937107838",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "044_candidate_02",
+          "006_candidate_02"
+        ],
+        "graph_context_refs": [
+          "006_candidate_02",
+          "044_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "boundary",
+        "song_title": "Closer",
+        "artist_name": "Nine Inch Nails",
+        "album_title": null,
+        "canonical_song_id": "nine-inch-nails-closer",
+        "canonical_artist_id": "artist-nine-inch-nails",
+        "canonical_album_id": null,
+        "apple_music_id": "1440837621",
+        "apple_music_url": "https://music.apple.com/us/song/1440837621",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "044_candidate_02",
+          "006_candidate_02"
+        ],
+        "graph_context_refs": [
+          "006_candidate_02",
+          "044_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "boundary",
+        "song_title": "Celebration",
+        "artist_name": "Kool & The Gang",
+        "album_title": null,
+        "canonical_song_id": "kool-and-the-gang-celebration",
+        "canonical_artist_id": "artist-kool-the-gang",
+        "canonical_album_id": null,
+        "apple_music_id": "1431062029",
+        "apple_music_url": "https://music.apple.com/us/song/1431062029",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Clarify whether the listener accepts or rejects the nearby edge case.",
+        "why_in_route": "mission_type_native_policy boundary for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [
+          "controlled_negative_risk"
+        ],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "044",
+          "006"
+        ],
+        "graph_context_refs": [
+          "006",
+          "044",
+          "mixed_nearby_boundary",
+          "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "comparator",
+        "song_title": "m.A.A.d city",
+        "artist_name": "Kendrick Lamar feat. MC Eiht",
+        "album_title": null,
+        "canonical_song_id": "kendrick-lamar-feat-mc-eiht-maad-city",
+        "canonical_artist_id": "artist-kendrick-lamar-feat-mc-eiht",
+        "canonical_album_id": null,
+        "apple_music_id": "1471263912",
+        "apple_music_url": "https://music.apple.com/us/song/1471263912",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "044_candidate_02",
+          "006_candidate_02"
+        ],
+        "graph_context_refs": [
+          "006_candidate_02",
+          "044_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-004-phase1g-public-profile-05-song-heavy-200-boundary-test-mission-type-native-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Public Image",
+        "artist_name": "Public Image Ltd",
+        "album_title": null,
+        "canonical_song_id": "public-image-ltd-public-image",
+        "canonical_artist_id": "artist-public-image-ltd",
+        "canonical_album_id": null,
+        "apple_music_id": "1809861697",
+        "apple_music_url": "https://music.apple.com/us/song/1809861697",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "mission_type_native_policy control for boundary_test; source opportunity=boundary_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+        "source_mission_type": "boundary_test",
+        "target_object_ids": [
+          "044_candidate_02",
+          "006_candidate_02"
+        ],
+        "graph_context_refs": [
+          "006_candidate_02",
+          "044_candidate_02",
+          "mixed_nearby_boundary",
+          "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_05/song_heavy/selector_output_public_profile_05_song_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+        "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 044 -> Visible Archetype 006",
+          "final_opportunity_score": 0.8865
+        },
+        {
+          "opportunity_id": "opp_profile-05-song-heavy-200_boundary_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)",
+          "final_opportunity_score": 0.8254
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_05",
+        "evidence_scale": 200,
+        "sampling_mode": "song_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": true,
+      "multi_source_route_reason": "Phase 1G top-window construction combined compatible opportunities for offline review.",
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "approved_app_import_ready",
+      "offline_review_source_pack_id": "phase1g_public_profile_05_song_heavy_200_boundary_test_mission_type_native_policy_v0_1",
+      "offline_phase1g_alpha_plausible": true,
+      "offline_phase1g_gate_fail_reasons": [],
+      "golden_classification_reasons": [
+        "approved_for_app_fixture_import_after_music_resolution"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "boundary": 2,
+        "comparator": 1,
+        "control": 1
+      },
+      "first_uat_resolution_promoted": true,
+      "music_resolution_source": "canonical_apple_music_catalog_index_v1"
+    },
+    "resolution": {
+      "resolved_count": 6,
+      "candidate_count": 0,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": false,
+      "resolution_source": "canonical_apple_music_catalog_index_v1",
+      "resolved_at": "2026-05-29T00:00:00Z"
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "app_import_ready",
+    "mission_type": "archetype_depth_test",
+    "mission_archetype": "Nearby Road",
+    "title": "Depth Route: Past the Obvious Signal",
+    "brief": "Test whether deeper same-archetype material works after visible positive evidence.",
+    "hypothesis": "Test whether the listener likes deeper or less obvious material inside an already promising archetype.",
+    "why_this_mission_now": "You got this mission because visible profile_weighted_balanced evidence at 200 atoms suggests a archetype depth test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible profile_weighted_balanced evidence at 200 atoms suggests a archetype depth test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "low",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "Bohemian Rhapsody",
+        "artist_name": "Queen",
+        "album_title": null,
+        "canonical_song_id": "song-bohemian-rhapsody-1975",
+        "canonical_artist_id": "artist-queen",
+        "canonical_album_id": null,
+        "apple_music_id": "1440650711",
+        "apple_music_url": "https://music.apple.com/us/song/1440650711",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "experience_balanced_policy anchor for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "016"
+        ],
+        "graph_context_refs": [
+          "016",
+          "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:016:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "anchor",
+        "song_title": "Lose Yourself",
+        "artist_name": "Eminem",
+        "album_title": null,
+        "canonical_song_id": "eminem-lose-yourself",
+        "canonical_artist_id": "artist-eminem",
+        "canonical_album_id": null,
+        "apple_music_id": "1440903439",
+        "apple_music_url": "https://music.apple.com/us/song/1440903439",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "experience_balanced_policy anchor for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "016_candidate_02"
+        ],
+        "graph_context_refs": [
+          "016_candidate_02",
+          "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:016:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "probe",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": "1440838444",
+        "apple_music_url": "https://music.apple.com/us/song/1440838444",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Test whether deeper same-archetype material remains tolerable.",
+        "why_in_route": "experience_balanced_policy probe for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "016_candidate_03"
+        ],
+        "graph_context_refs": [
+          "016_candidate_03",
+          "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:016:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "comparator",
+        "song_title": "Livin' on a Prayer",
+        "artist_name": "Bon Jovi",
+        "album_title": null,
+        "canonical_song_id": "bon-jovi-livin-on-a-prayer",
+        "canonical_artist_id": "artist-bon-jovi",
+        "canonical_album_id": null,
+        "apple_music_id": "1422955211",
+        "apple_music_url": "https://music.apple.com/us/song/1422955211",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "experience_balanced_policy comparator for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "016"
+        ],
+        "graph_context_refs": [
+          "016",
+          "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:016:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "control",
+        "song_title": "Only Shallow",
+        "artist_name": "My Bloody Valentine",
+        "album_title": null,
+        "canonical_song_id": "my-bloody-valentine-only-shallow",
+        "canonical_artist_id": "artist-my-bloody-valentine",
+        "canonical_album_id": null,
+        "apple_music_id": "1589230439",
+        "apple_music_url": "https://music.apple.com/us/song/1589230439",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "experience_balanced_policy control for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "016"
+        ],
+        "graph_context_refs": [
+          "016",
+          "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:016:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-007-phase1g-public-profile-06-profile-weighted-balanced-200-archetype-depth-test-experience-balanced-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "probe",
+        "song_title": "Not Strong Enough",
+        "artist_name": "boygenius",
+        "album_title": null,
+        "canonical_song_id": "boygenius-not-strong-enough",
+        "canonical_artist_id": "artist-boygenius",
+        "canonical_album_id": null,
+        "apple_music_id": "1666138718",
+        "apple_music_url": "https://music.apple.com/us/song/1666138718",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Test whether deeper same-archetype material remains tolerable.",
+        "why_in_route": "experience_balanced_policy probe for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "016_candidate_02"
+        ],
+        "graph_context_refs": [
+          "016_candidate_02",
+          "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:016:strong_archetype_shallow_depth"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_06/profile_weighted_balanced/selector_output_public_profile_06_profile_weighted_balanced_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+        "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+        "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_04"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 016",
+          "final_opportunity_score": 0.86
+        },
+        {
+          "opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 016 (candidate 02)",
+          "final_opportunity_score": 0.808
+        },
+        {
+          "opportunity_id": "opp_profile-06-profile-weighted-balanced-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 016 (candidate 03)",
+          "final_opportunity_score": 0.7485
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_06",
+        "evidence_scale": 200,
+        "sampling_mode": "profile_weighted_balanced",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": true,
+      "multi_source_route_reason": "Phase 1G top-window construction combined compatible opportunities for offline review.",
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "approved_app_import_ready",
+      "offline_review_source_pack_id": "phase1g_public_profile_06_profile_weighted_balanced_200_archetype_depth_test_experience_balanced_policy_v0_1",
+      "offline_phase1g_alpha_plausible": true,
+      "offline_phase1g_gate_fail_reasons": [],
+      "golden_classification_reasons": [
+        "approved_for_app_fixture_import_after_music_resolution"
+      ],
+      "role_counts": {
+        "anchor": 2,
+        "probe": 2,
+        "comparator": 1,
+        "control": 1
+      },
+      "first_uat_resolution_promoted": true,
+      "music_resolution_source": "canonical_apple_music_catalog_index_v1"
+    },
+    "resolution": {
+      "resolved_count": 6,
+      "candidate_count": 0,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": false,
+      "resolution_source": "canonical_apple_music_catalog_index_v1",
+      "resolved_at": "2026-05-29T00:00:00Z"
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  },
+  {
+    "mission_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1",
+    "contract_version": "alpha_mission_delivery_v0_2",
+    "app_import_status": "app_import_ready",
+    "mission_type": "archetype_depth_test",
+    "mission_archetype": "Nearby Road",
+    "title": "Depth Route: Past the Obvious Signal",
+    "brief": "Test whether deeper same-archetype material works after visible positive evidence.",
+    "hypothesis": "Test whether the listener likes deeper or less obvious material inside an already promising archetype.",
+    "why_this_mission_now": "You got this mission because visible song_heavy evidence at 200 atoms suggests a archetype depth test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "coherence_sentence": "You got this mission because visible song_heavy evidence at 200 atoms suggests a archetype depth test is testable, and these songs test the specific uncertainty without using hidden oracle truth.",
+    "risk_level": "low",
+    "route": [
+      {
+        "mission_item_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1-item-01",
+        "sequence_index": 1,
+        "role": "anchor",
+        "song_title": "DNA.",
+        "artist_name": "Kendrick Lamar",
+        "album_title": null,
+        "canonical_song_id": "kendrick-lamar-dna",
+        "canonical_artist_id": "artist-kendrick-lamar",
+        "canonical_album_id": null,
+        "apple_music_id": "1440881357",
+        "apple_music_url": "https://music.apple.com/us/song/1440881357",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Confirm the known signal is still a usable anchor.",
+        "why_in_route": "mission_type_native_policy anchor for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "044"
+        ],
+        "graph_context_refs": [
+          "044",
+          "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1-item-02",
+        "sequence_index": 2,
+        "role": "probe",
+        "song_title": "Public Image",
+        "artist_name": "Public Image Ltd",
+        "album_title": null,
+        "canonical_song_id": "public-image-ltd-public-image",
+        "canonical_artist_id": "artist-public-image-ltd",
+        "canonical_album_id": null,
+        "apple_music_id": "1809861697",
+        "apple_music_url": "https://music.apple.com/us/song/1809861697",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Test whether deeper same-archetype material remains tolerable.",
+        "why_in_route": "mission_type_native_policy probe for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "044_candidate_02"
+        ],
+        "graph_context_refs": [
+          "044_candidate_02",
+          "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1-item-03",
+        "sequence_index": 3,
+        "role": "probe",
+        "song_title": "Fight the Power",
+        "artist_name": "Public Enemy",
+        "album_title": null,
+        "canonical_song_id": "public-enemy-fight-the-power",
+        "canonical_artist_id": "artist-public-enemy",
+        "canonical_album_id": null,
+        "apple_music_id": "1440838444",
+        "apple_music_url": "https://music.apple.com/us/song/1440838444",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Test whether deeper same-archetype material remains tolerable.",
+        "why_in_route": "mission_type_native_policy probe for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "044_candidate_03"
+        ],
+        "graph_context_refs": [
+          "044_candidate_03",
+          "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1-item-04",
+        "sequence_index": 4,
+        "role": "probe",
+        "song_title": "Not Strong Enough",
+        "artist_name": "boygenius",
+        "album_title": null,
+        "canonical_song_id": "boygenius-not-strong-enough",
+        "canonical_artist_id": "artist-boygenius",
+        "canonical_album_id": null,
+        "apple_music_id": "1666138718",
+        "apple_music_url": "https://music.apple.com/us/song/1666138718",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Test whether deeper same-archetype material remains tolerable.",
+        "why_in_route": "mission_type_native_policy probe for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "044"
+        ],
+        "graph_context_refs": [
+          "044",
+          "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1-item-05",
+        "sequence_index": 5,
+        "role": "comparator",
+        "song_title": "B.O.B.",
+        "artist_name": "OutKast",
+        "album_title": null,
+        "canonical_song_id": "outkast-bob",
+        "canonical_artist_id": "artist-outkast",
+        "canonical_album_id": null,
+        "apple_music_id": "255837382",
+        "apple_music_url": "https://music.apple.com/us/song/255837382",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Provide a nearby comparison point for the target uncertainty.",
+        "why_in_route": "mission_type_native_policy comparator for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "044_candidate_03"
+        ],
+        "graph_context_refs": [
+          "044_candidate_03",
+          "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ]
+      },
+      {
+        "mission_item_id": "alpha-mission-v0-2-008-phase1g-public-profile-05-song-heavy-200-archetype-depth-test-mission-type-native-policy-v0-1-item-06",
+        "sequence_index": 6,
+        "role": "control",
+        "song_title": "Money (That's What I Want)",
+        "artist_name": "Barrett Strong",
+        "album_title": null,
+        "canonical_song_id": "barrett-strong-money-thats-what-i-want",
+        "canonical_artist_id": "artist-barrett-strong",
+        "canonical_album_id": null,
+        "apple_music_id": "1445297290",
+        "apple_music_url": "https://music.apple.com/us/song/1445297290",
+        "duration_ms": 0,
+        "artwork_url": null,
+        "preview_url": null,
+        "resolution_status": "resolved",
+        "expected_signal": "Keep the route interpretable by isolating one contrast dimension.",
+        "why_in_route": "mission_type_native_policy control for archetype_depth_test; source opportunity=archetype_depth_test; selected from reaction-stripped offline corpus.",
+        "reaction_chip_set_id": "alpha_v0_2_standard_reactions",
+        "risk_flags": [],
+        "source_opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+        "source_mission_type": "archetype_depth_test",
+        "target_object_ids": [
+          "044_candidate_02"
+        ],
+        "graph_context_refs": [
+          "044_candidate_02",
+          "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "strong_archetype_shallow_depth",
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ]
+      }
+    ],
+    "completion_criteria": {
+      "minimum_items_played": 4,
+      "minimum_primary_reactions": 4,
+      "teaches": "Whether the selected opportunity can produce interpretable route-level evidence."
+    },
+    "feedback_model": {
+      "chip_set_id": "alpha_v0_2_standard_reactions",
+      "display_labels": [
+        "Love",
+        "Like",
+        "Ok / Keep",
+        "Dislike",
+        "Skip",
+        "Wrong version",
+        "Unavailable"
+      ],
+      "operation_mapping": {
+        "Love": "strong_positive",
+        "Like": "qualified_positive",
+        "Ok / Keep": "keep_waypoint",
+        "Dislike": "negative",
+        "Skip": "skip_or_no_signal",
+        "Wrong version": "issue_wrong_version",
+        "Unavailable": "issue_unavailable"
+      },
+      "survey_ok_semantics": "ignored/no signal",
+      "mission_ok_semantics": "weak non-failure/waypoint evidence"
+    },
+    "source_trace": {
+      "source_layer": "offline_phase1g_synthetic_song_pack",
+      "source_selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/evaluations/phase1e_expanded_visible_evidence_scale/selector_outputs_by_profile_scale/public_profile_05/song_heavy/selector_output_public_profile_05_song_heavy_200_v0_1.json",
+      "source_opportunity_refs": [
+        "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+        "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+        "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03"
+      ],
+      "source_opportunity_summary": [
+        {
+          "opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 044",
+          "final_opportunity_score": 0.8583
+        },
+        {
+          "opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 044 (candidate 02)",
+          "final_opportunity_score": 0.7987
+        },
+        {
+          "opportunity_id": "opp_profile-05-song-heavy-200_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 044 (candidate 03)",
+          "final_opportunity_score": 0.7393
+        }
+      ],
+      "source_evidence_summary": {
+        "profile_id": "public_profile_05",
+        "evidence_scale": 200,
+        "sampling_mode": "song_heavy",
+        "visible_evidence_only_for_selector": true,
+        "survey_ok_semantics": "ignored/no signal",
+        "mission_ok_semantics": "weak non-failure/waypoint evidence"
+      },
+      "multi_source_route": true,
+      "multi_source_route_reason": "Phase 1G top-window construction combined compatible opportunities for offline review.",
+      "held_out_review_data_used_for_runtime": false,
+      "selector_read_held_out_review_data": false,
+      "canonical_graph_mutation_allowed": false
+    },
+    "validation": {
+      "expected_class": "approved_app_import_ready",
+      "offline_review_source_pack_id": "phase1g_public_profile_05_song_heavy_200_archetype_depth_test_mission_type_native_policy_v0_1",
+      "offline_phase1g_alpha_plausible": true,
+      "offline_phase1g_gate_fail_reasons": [],
+      "golden_classification_reasons": [
+        "approved_for_app_fixture_import_after_music_resolution"
+      ],
+      "role_counts": {
+        "anchor": 1,
+        "probe": 3,
+        "comparator": 1,
+        "control": 1
+      },
+      "first_uat_resolution_promoted": true,
+      "music_resolution_source": "canonical_apple_music_catalog_index_v1"
+    },
+    "resolution": {
+      "resolved_count": 6,
+      "candidate_count": 0,
+      "unresolved_count": 0,
+      "blocked_count": 0,
+      "ordinary_alpha_ready_requires_no_unresolved": true,
+      "apple_music_resolution_remaining": false,
+      "resolution_source": "canonical_apple_music_catalog_index_v1",
+      "resolved_at": "2026-05-29T00:00:00Z"
+    },
+    "runtime_flags": {
+      "runtime_selector_wiring": false,
+      "real_listener_evidence_connected": false,
+      "production_mission_generation_allowed": false,
+      "final_mission_content": false,
+      "canonical_graph_mutation_allowed": false
+    }
+  }
+]

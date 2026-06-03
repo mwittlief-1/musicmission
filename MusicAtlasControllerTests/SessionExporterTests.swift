@@ -6,8 +6,8 @@ final class SessionExporterTests: XCTestCase {
         let store = await ReactionStore()
         let now = Date()
         let selectedTag = ReactionTag(
-            tagID: "TAG_DARK_PULL",
-            label: "dark pull",
+            tagID: "TAG_BODY_PRESSURE",
+            label: "body pressure",
             primaryReactionValue: .hit,
             description: nil
         )
@@ -105,7 +105,7 @@ final class SessionExporterTests: XCTestCase {
     }
 
     func testDevelopmentExportCanIncludeMultipleMissionItems() async throws {
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let firstItem = try XCTUnwrap(mission.items.first)
         let secondItem = try XCTUnwrap(mission.items.dropFirst().first)
         let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-18T12:00:00Z"))
@@ -153,8 +153,8 @@ final class SessionExporterTests: XCTestCase {
         XCTAssertEqual(session.sessionSummary?.resolvedCount, 2)
         XCTAssertEqual(session.sessionSummary?.playedCount, 2)
         XCTAssertEqual(session.sessionSummary?.reactionCount, 2)
-        XCTAssertTrue(preview.markdownString.contains("### 1. Solo Ansamblis - Netildai"))
-        XCTAssertTrue(preview.markdownString.contains("### 2. Solo Ansamblis - Malda"))
+        XCTAssertTrue(preview.markdownString.contains("### 1. Love - A House Is Not a Motel"))
+        XCTAssertTrue(preview.markdownString.contains("### 2. The Move - I Can Hear the Grass Grow"))
     }
 
     func testAcceptanceExportRequiresPhysicalNonStubEvidence() async throws {
@@ -616,6 +616,7 @@ final class SessionExporterTests: XCTestCase {
             anonKey: "sb_publishable_test",
             generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
             submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
             testerAlias: "trusted-alpha-test"
         )
         let client = LiveSupabaseMissionGenerationClient(config: config)
@@ -632,8 +633,13 @@ final class SessionExporterTests: XCTestCase {
                 sourceAppVersion: "0.2",
                 sourceAppBuild: "2",
                 storefront: "us",
-                surveyPageCount: SurveyPageCount(artist: 4, album: 2, song: 4)
-            )
+                surveyPageCount: SurveyPageCount(artist: 4, album: 2, song: 4),
+                alreadySelectedRouteItemIDs: ["ITEM_ALREADY_USED"],
+                alreadySelectedRouteDisplayIdentityKeys: ["track::already::used"],
+                batchMemoryDirective: "Do not repeat imported route items."
+            ),
+            alreadySelectedRouteItemIDs: ["ITEM_ALREADY_USED"],
+            alreadySelectedRouteDisplayIdentityKeys: ["track::already::used"]
         )
 
         let urlRequest = try client.makeURLRequest(request: request, accessToken: "session.jwt")
@@ -647,6 +653,13 @@ final class SessionExporterTests: XCTestCase {
         XCTAssertNotNil(object["survey_evidence_export"] as? [String: Any])
         XCTAssertNotNil(object["mission_generation_digest_view"] as? [String: Any])
         XCTAssertNotNil(object["candidate_pool"] as? [String: Any])
+        XCTAssertEqual(object["already_selected_route_item_ids"] as? [String], ["ITEM_ALREADY_USED"])
+        XCTAssertEqual(object["already_selected_route_display_identity_keys"] as? [String], ["track::already::used"])
+        XCTAssertEqual(object["already_selected_display_keys"] as? [String], ["track::already::used"])
+        let promptContext = try XCTUnwrap(object["prompt_context"] as? [String: Any])
+        XCTAssertEqual(promptContext["already_selected_route_item_ids"] as? [String], ["ITEM_ALREADY_USED"])
+        XCTAssertEqual(promptContext["already_selected_route_display_identity_keys"] as? [String], ["track::already::used"])
+        XCTAssertEqual(promptContext["already_selected_display_keys"] as? [String], ["track::already::used"])
     }
 
     func testLiveEvidenceUploadRequestUsesSessionBearerAndConsent() throws {
@@ -655,6 +668,7 @@ final class SessionExporterTests: XCTestCase {
             anonKey: "sb_publishable_test",
             generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
             submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
             testerAlias: "trusted-alpha-test"
         )
         let client = LiveEvidenceUploadClient(config: config)
@@ -696,6 +710,184 @@ final class SessionExporterTests: XCTestCase {
         XCTAssertEqual(consent["evidence_upload_allowed"] as? Bool, true)
         XCTAssertEqual(consent["terms_version"] as? String, "alpha_terms_2026_05_22")
         XCTAssertNotNil(object["payload"] as? [String: Any])
+    }
+
+    func testLiveDiagnosticUploadRequestUsesSessionBearerAndConsent() throws {
+        let config = SupabaseAlphaConfig(
+            projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
+            anonKey: "sb_publishable_test",
+            generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
+            testerAlias: "trusted-alpha-test"
+        )
+        let client = LiveDiagnosticUploadClient(config: config)
+        let directoryURL = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark-diagnostic-upload-test-\(UUID().uuidString)", isDirectory: true)
+        try FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true)
+        let artifactURL = directoryURL.appendingPathComponent("client_diag_mission_import_result.json")
+        let requestedAt = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-24T12:00:00Z"))
+        let artifact = """
+        {
+          "schema_version": "waymark.alpha_client_diagnostic_artifact.v0.1",
+          "artifact_id": "client_diag:mission_import_result:request-1",
+          "artifact_type": "mission_import_result",
+          "tester_alias": "trusted-alpha-test",
+          "survey_session_id": "survey-session-1",
+          "client_request_id": "request-1",
+          "generation_run_id": "00000000-0000-4000-8000-000000000001",
+          "mission_id": "mission-1",
+          "source_app_version": "0.2",
+          "source_app_build": "8",
+          "client_created_at": "2026-05-24T12:00:00Z",
+          "redaction_level": "support_diagnostic",
+          "payload": {
+            "local_import_status": "imported",
+            "imported_mission_ids": ["mission-1"]
+          }
+        }
+        """
+        try Data(artifact.utf8).write(to: artifactURL)
+        let package = SavedClientDiagnosticPackage(
+            directoryURL: directoryURL,
+            indexURL: directoryURL.appendingPathComponent("index.json"),
+            artifactURLs: [artifactURL]
+        )
+        let request = DiagnosticUploadRequest(
+            testerAlias: "trusted-alpha-test",
+            package: package,
+            requestedAt: requestedAt,
+            sourceAppVersion: "0.2",
+            sourceAppBuild: "8",
+            termsVersion: "alpha_privacy_terms_v0_1",
+            acceptedAt: requestedAt
+        )
+
+        let urlRequest = try client.makeURLRequest(
+            artifactURL: artifactURL,
+            request: request,
+            accessToken: "session.jwt"
+        )
+        XCTAssertEqual(urlRequest.value(forHTTPHeaderField: "apikey"), "sb_publishable_test")
+        XCTAssertEqual(urlRequest.value(forHTTPHeaderField: "Authorization"), "Bearer session.jwt")
+        XCTAssertEqual(urlRequest.url?.absoluteString, "https://example.supabase.co/functions/v1/submit-alpha-diagnostic")
+
+        let body = try XCTUnwrap(urlRequest.httpBody)
+        let object = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
+        XCTAssertEqual(object["client_artifact_id"] as? String, "client_diag:mission_import_result:request-1")
+        XCTAssertEqual(object["artifact_type"] as? String, "mission_import_result")
+        XCTAssertEqual(object["schema_version"] as? String, "waymark.alpha_client_diagnostic_artifact.v0.1")
+        XCTAssertEqual(object["generation_run_id"] as? String, "00000000-0000-4000-8000-000000000001")
+        XCTAssertEqual(object["upload_cadence"] as? String, "manual_share")
+        let consent = try XCTUnwrap(object["consent"] as? [String: Any])
+        XCTAssertEqual(consent["diagnostic_upload_allowed"] as? Bool, true)
+        XCTAssertEqual(consent["terms_version"] as? String, "alpha_privacy_terms_v0_1")
+        let payload = try XCTUnwrap(object["payload"] as? [String: Any])
+        XCTAssertEqual(payload["local_import_status"] as? String, "imported")
+    }
+
+    func testLiveDiagnosticUploadRequestOmitsNonUUIDGenerationRunID() throws {
+        let config = SupabaseAlphaConfig(
+            projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
+            anonKey: "sb_publishable_test",
+            generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
+            testerAlias: "trusted-alpha-test"
+        )
+        let client = LiveDiagnosticUploadClient(config: config)
+        let directoryURL = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark-diagnostic-upload-local-run-id-test-\(UUID().uuidString)", isDirectory: true)
+        try FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true)
+        let artifactURL = directoryURL.appendingPathComponent("client_diag_local_selector.json")
+        let requestedAt = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-24T12:00:00Z"))
+        let artifact = """
+        {
+          "schema_version": "waymark.alpha_client_diagnostic_artifact.v0.1",
+          "artifact_id": "client_diag:mission_generation_result:local-selector-run",
+          "artifact_type": "mission_generation_result",
+          "tester_alias": "trusted-alpha-test",
+          "generation_run_id": "local-selector-run-2026-05-24",
+          "source_app_version": "0.3",
+          "source_app_build": "42",
+          "client_created_at": "2026-05-24T12:00:00Z",
+          "redaction_level": "support_diagnostic",
+          "payload": {
+            "generation_run_id": "local-selector-run-2026-05-24",
+            "generation_run_id_context_omitted": "Local selector run ids are diagnostic strings, not Supabase UUIDs."
+          }
+        }
+        """
+        try Data(artifact.utf8).write(to: artifactURL)
+        let package = SavedClientDiagnosticPackage(
+            directoryURL: directoryURL,
+            indexURL: directoryURL.appendingPathComponent("index.json"),
+            artifactURLs: [artifactURL]
+        )
+        let request = DiagnosticUploadRequest(
+            testerAlias: "trusted-alpha-test",
+            package: package,
+            requestedAt: requestedAt,
+            sourceAppVersion: "0.3",
+            sourceAppBuild: "42",
+            termsVersion: "alpha_privacy_terms_v0_1",
+            acceptedAt: requestedAt
+        )
+
+        let urlRequest = try client.makeURLRequest(
+            artifactURL: artifactURL,
+            request: request,
+            accessToken: "session.jwt"
+        )
+        let body = try XCTUnwrap(urlRequest.httpBody)
+        let object = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
+        XCTAssertNil(object["generation_run_id"])
+
+        let payload = try XCTUnwrap(object["payload"] as? [String: Any])
+        XCTAssertEqual(payload["generation_run_id"] as? String, "local-selector-run-2026-05-24")
+    }
+
+    func testAlphaLegacyDataQuarantineMovesKnownLocalStateRoots() throws {
+        let rootURL = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark-alpha-quarantine-test-\(UUID().uuidString)", isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: rootURL)
+        }
+
+        let applicationSupportURL = rootURL.appendingPathComponent("Application Support", isDirectory: true)
+        let documentURL = rootURL.appendingPathComponent("Documents", isDirectory: true)
+        let appStateURL = applicationSupportURL.appendingPathComponent("MusicAtlasController", isDirectory: true)
+        let exportStateURL = documentURL.appendingPathComponent("MusicAtlasControllerExports", isDirectory: true)
+        try FileManager.default.createDirectory(at: appStateURL, withIntermediateDirectories: true)
+        try FileManager.default.createDirectory(at: exportStateURL, withIntermediateDirectories: true)
+        try Data("legacy app state".utf8)
+            .write(to: appStateURL.appendingPathComponent("waymark_survey_session_v0_1.json"))
+        try Data("legacy export state".utf8)
+            .write(to: exportStateURL.appendingPathComponent("support.json"))
+
+        let quarantine = AlphaLegacyDataQuarantine(
+            applicationSupportURL: applicationSupportURL,
+            documentURL: documentURL
+        )
+        let movedURLs = try quarantine.quarantineKnownLocalState(
+            now: try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-24T12:00:00Z"))
+        )
+
+        XCTAssertEqual(movedURLs.count, 2)
+        XCTAssertFalse(FileManager.default.fileExists(atPath: appStateURL.path))
+        XCTAssertFalse(FileManager.default.fileExists(atPath: exportStateURL.path))
+        let destinationNames = Set(movedURLs.map(\.lastPathComponent))
+        XCTAssertEqual(
+            destinationNames,
+            [
+                "application_support_MusicAtlasController",
+                "documents_MusicAtlasControllerExports"
+            ]
+        )
+        let appStateArchive = try XCTUnwrap(movedURLs.first { $0.lastPathComponent == "application_support_MusicAtlasController" })
+        let exportStateArchive = try XCTUnwrap(movedURLs.first { $0.lastPathComponent == "documents_MusicAtlasControllerExports" })
+        XCTAssertTrue(FileManager.default.fileExists(atPath: appStateArchive.appendingPathComponent("waymark_survey_session_v0_1.json").path))
+        XCTAssertTrue(FileManager.default.fileExists(atPath: exportStateArchive.appendingPathComponent("support.json").path))
     }
 
     private static func liveResolution(for item: MissionItem, at date: Date) -> AppleMusicResolution {

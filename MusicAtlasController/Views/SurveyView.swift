@@ -2,12 +2,27 @@ import SwiftUI
 
 struct SurveyView: View {
     @EnvironmentObject private var appModel: AppModel
-    @StateObject private var surveyStore = SurveyStore()
+    @StateObject private var surveyStore: SurveyStore
     @StateObject private var artworkStore = SurveyArtworkStore()
     @State private var nuanceItem: SurveyItem?
     @State private var freeformDraft = ""
+    @State private var isCapturingAppleSignals = false
+    @State private var appleSignalMessage: String?
 
+    private let isFirstRunIntake: Bool
+    private let onComplete: (() -> Void)?
+    private let appleSignalProbeService = AppleMusicSignalProbeService()
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 9), count: 3)
+
+    init(
+        isFirstRunIntake: Bool = false,
+        onComplete: (() -> Void)? = nil,
+        surveyStore: SurveyStore? = nil
+    ) {
+        self.isFirstRunIntake = isFirstRunIntake
+        self.onComplete = onComplete
+        _surveyStore = StateObject(wrappedValue: surveyStore ?? SurveyStore())
+    }
 
     var body: some View {
         NavigationStack {
@@ -28,7 +43,7 @@ struct SurveyView: View {
                             welcomeView
                         case .connectAppleMusic:
                             connectView
-                        case .artistPage1, .artistPage2, .artistPage3, .albumPage1, .songPage1:
+                        case .artistPage1, .artistPage2, .artistPage3, .artistPage4, .albumPage1, .albumPage2, .songPage1, .songPage2, .songPage3, .songPage4:
                             gridView
                         case .artistPage3Prompt:
                             artistPage3PromptView
@@ -51,6 +66,11 @@ struct SurveyView: View {
                     .presentationDetents([.medium, .large])
                     .presentationDragIndicator(.visible)
             }
+            .task {
+                if isFirstRunIntake {
+                    surveyStore.prepareRequiredAlphaIntake()
+                }
+            }
         }
     }
 
@@ -67,7 +87,7 @@ struct SurveyView: View {
                     .font(.largeTitle.weight(.bold))
                     .foregroundStyle(.white)
 
-                Text("Waymark will start with a quick Apple Music-seeded pass, then ask whether you want to go deeper.")
+                Text("Cartenza starts with a required Alpha intake: artists, albums, and songs that create evidence for the first mission batch.")
                     .font(.body)
                     .foregroundStyle(SurveyStyle.secondaryText)
                     .fixedSize(horizontal: false, vertical: true)
@@ -76,7 +96,7 @@ struct SurveyView: View {
             VStack(alignment: .leading, spacing: 12) {
                 SurveyWelcomeRow(systemImage: "person.2.crop.square.stack", title: "Artists first", detail: "The strongest first read of known territory.")
                 SurveyWelcomeRow(systemImage: "square.stack.3d.up", title: "Albums and songs next", detail: "Object-specific checks catch exceptions and false inferences.")
-                SurveyWelcomeRow(systemImage: "slider.horizontal.3", title: "Advanced is optional", detail: "Filters and freeform notes stay available after the simple pass.")
+                SurveyWelcomeRow(systemImage: "lock.shield", title: "Alpha intake is required", detail: "Four artist pages, two album pages, and four song pages before the first mission batch.")
             }
             .padding(.top, 8)
 
@@ -102,7 +122,7 @@ struct SurveyView: View {
                         .font(.title2.weight(.bold))
                         .foregroundStyle(.white)
 
-                    Text("This first build uses seeded fixtures for the grid, but the flow is shaped around Apple Music becoming the primary source for Page 1.")
+                    Text("Cartenza uses Apple Music access as the starting signal, then keeps every Survey tap provisional until listening evidence confirms it.")
                         .font(.callout)
                         .foregroundStyle(SurveyStyle.secondaryText)
                         .fixedSize(horizontal: false, vertical: true)
@@ -118,17 +138,44 @@ struct SurveyView: View {
                         .stroke(SurveyStyle.stroke, lineWidth: 1)
                 )
 
+                if let appleSignalMessage {
+                    Text(appleSignalMessage)
+                        .font(.caption)
+                        .foregroundStyle(SurveyStyle.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
                 Button {
-                    surveyStore.advance()
+                    Task {
+                        await captureAppleSignalsAndAdvance()
+                    }
                 } label: {
-                    Label("Continue to Artist Grid", systemImage: "square.grid.3x3")
+                    Label(
+                        isCapturingAppleSignals ? "Reading Apple Music" : "Continue to Artist Grid",
+                        systemImage: isCapturingAppleSignals ? "waveform.path.ecg" : "square.grid.3x3"
+                    )
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
+                .disabled(isCapturingAppleSignals)
             }
             .padding(20)
         }
+    }
+
+    private func captureAppleSignalsAndAdvance() async {
+        guard !isCapturingAppleSignals else {
+            return
+        }
+
+        isCapturingAppleSignals = true
+        appleSignalMessage = "Reading Apple Music exposure as a survey prior..."
+        let payload = await appleSignalProbeService.capture()
+        surveyStore.updateAppleMusicSignalPayload(payload)
+        appleSignalMessage = payload.summaryDescription
+        isCapturingAppleSignals = false
+        surveyStore.advance()
     }
 
     private var gridView: some View {
@@ -302,7 +349,7 @@ struct SurveyView: View {
                     }
 
                     VStack(alignment: .leading, spacing: 10) {
-                        Label("Anything Waymark should know?", systemImage: "text.quote")
+                        Label("Anything Cartenza should know?", systemImage: "text.quote")
                             .font(.headline)
                             .foregroundStyle(.white)
 
@@ -387,14 +434,23 @@ struct SurveyView: View {
                     }
                 }
 
-                Button {
-                    surveyStore.goTo(.advancedSurvey)
-                } label: {
-                    Label("Add Advanced Signals", systemImage: "slider.horizontal.3")
-                        .frame(maxWidth: .infinity)
+                if let onComplete {
+                    Button(action: onComplete) {
+                        Label("Build My Atlas", systemImage: "sparkles")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                } else {
+                    Button {
+                        surveyStore.goTo(.advancedSurvey)
+                    } label: {
+                        Label("Add Advanced Signals", systemImage: "slider.horizontal.3")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                    .controlSize(.large)
                 }
-                .buttonStyle(.bordered)
-                .controlSize(.large)
             }
             .padding(20)
         }
@@ -404,10 +460,18 @@ struct SurveyView: View {
         switch page.kind {
         case .artist where page.pageIndex == 1:
             return "Artist Grid 2"
+        case .artist where page.pageIndex == 2:
+            return "Artist Grid 3"
+        case .artist where page.pageIndex == 3:
+            return "Artist Grid 4"
         case .artist:
-            return "Continue"
+            return "Album Grid"
+        case .album where page.pageIndex == 1:
+            return "Album Grid 2"
         case .album:
-            return "Song Grid"
+            return "Song Grid 1"
+        case .song where page.pageIndex < 4:
+            return "Song Grid \(page.pageIndex + 1)"
         case .song:
             return "Readout"
         }
@@ -415,11 +479,11 @@ struct SurveyView: View {
 }
 
 private enum SurveyStyle {
-    static let background = Color.black
-    static let panel = Color(red: 0.09, green: 0.095, blue: 0.102)
-    static let elevatedPanel = Color(red: 0.13, green: 0.135, blue: 0.145)
-    static let stroke = Color.white.opacity(0.08)
-    static let secondaryText = Color.white.opacity(0.66)
+    static let background = WaymarkTheme.background
+    static let panel = WaymarkTheme.panel
+    static let elevatedPanel = WaymarkTheme.raisedPanel
+    static let stroke = WaymarkTheme.line
+    static let secondaryText = WaymarkTheme.mutedText
 }
 
 private struct SurveyHeader: View {
@@ -510,11 +574,16 @@ private struct SurveyGridPageSurface: View {
             let verticalPadding: CGFloat = 8
             let columnCount = max(1, columns.count)
             let rowCount = max(1, Int(ceil(Double(page.items.count) / Double(columnCount))))
-            let availableHeight = proxy.size.height - (verticalPadding * 2)
+            let titleHeight: CGFloat = 46
+            let titleSpacing: CGFloat = 8
+            let availableHeight = proxy.size.height - (verticalPadding * 2) - titleHeight - titleSpacing
             let rawTileHeight = (availableHeight - (gridSpacing * CGFloat(max(0, rowCount - 1)))) / CGFloat(rowCount)
             let tileHeight = min(max(rawTileHeight, 84), 132)
 
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: titleSpacing) {
+                SurveyPageTitle(page: page)
+                    .frame(height: titleHeight, alignment: .topLeading)
+
                 LazyVGrid(columns: columns, spacing: gridSpacing) {
                     ForEach(page.items) { item in
                         SurveyGridTile(
@@ -932,10 +1001,20 @@ private extension SurveyStep {
             return "Optional Pass"
         case .artistPage3:
             return "Artist Grid 3"
+        case .artistPage4:
+            return "Artist Grid 4"
         case .albumPage1:
-            return "Album Grid"
+            return "Album Grid 1"
+        case .albumPage2:
+            return "Album Grid 2"
         case .songPage1:
-            return "Song Grid"
+            return "Song Grid 1"
+        case .songPage2:
+            return "Song Grid 2"
+        case .songPage3:
+            return "Song Grid 3"
+        case .songPage4:
+            return "Song Grid 4"
         case .deeperPrompt:
             return "Go Deeper?"
         case .advancedSurvey:
@@ -958,11 +1037,21 @@ private extension SurveyStep {
         case .artistPage3Prompt:
             return "Sharpen now or keep moving"
         case .artistPage3:
-            return "Optional signal sharpening"
+            return "Signal sharpening"
+        case .artistPage4:
+            return "Final artist calibration"
         case .albumPage1:
             return "Artist-wide versus object-specific taste"
+        case .albumPage2:
+            return "Album-specific contradictions"
         case .songPage1:
             return "Exceptions and cultural furniture"
+        case .songPage2:
+            return "Song-specific edge cases"
+        case .songPage3:
+            return "False-nearby checks"
+        case .songPage4:
+            return "Final song calibration"
         case .deeperPrompt:
             return "Advanced Survey stays optional"
         case .advancedSurvey:
@@ -979,11 +1068,11 @@ private extension SurveySignalState {
         case .dontKnow:
             return "?"
         case .fine:
-            return "Fine"
+            return "Ok"
         case .like:
             return "Like"
         case .favorite:
-            return "Fav"
+            return "Love"
         case .notForMe:
             return "No"
         }

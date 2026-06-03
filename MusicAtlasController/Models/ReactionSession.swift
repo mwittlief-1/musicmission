@@ -13,6 +13,7 @@ struct ReactionSession: Codable {
     let musicContext: MusicContext
     let itemResults: [ItemResult]
     let sessionSummary: SessionSummary?
+    let atlasSignalCandidateBundle: AtlasSignalCandidateBundle?
     let export: ExportRecord
 
     enum CodingKeys: String, CodingKey {
@@ -28,6 +29,7 @@ struct ReactionSession: Codable {
         case musicContext = "music_context"
         case itemResults = "item_results"
         case sessionSummary = "session_summary"
+        case atlasSignalCandidateBundle = "atlas_signal_candidate_bundle"
         case export
     }
 }
@@ -367,7 +369,7 @@ enum ReactionValue: String, Codable, CaseIterable, Identifiable {
     static let primarySignalValues: [ReactionValue] = [.hit, .partial, .okShelf, .miss]
 }
 
-enum ReactionOperation: String, CaseIterable, Identifiable {
+enum ReactionOperation: String, Codable, CaseIterable, Identifiable {
     case strongPositive = "strong_positive"
     case qualifiedPositive = "qualified_positive"
     case keepWaypoint = "keep_waypoint"
@@ -486,5 +488,175 @@ struct ExportRecord: Codable {
         case markdownFilename = "markdown_filename"
         case validationStatus = "validation_status"
         case validationErrors = "validation_errors"
+    }
+}
+
+struct AtlasSignalCandidateBundle: Codable {
+    let recordType: String
+    let schemaVersion: String
+    let candidateStatus: String
+    let promotionState: String
+    let writesAtlasTruth: Bool
+    let canonicalGraphMutationAllowed: Bool
+    let exportID: String
+    let sessionID: String
+    let missionID: String
+    let generatedAt: Date
+    let sourceAppSchemaVersion: String
+    let sourceAppVersion: String
+    let isPhysicalDevice: Bool
+    let guardrails: [String]
+    let candidates: [AtlasSignalCandidate]
+
+    enum CodingKeys: String, CodingKey {
+        case recordType = "record_type"
+        case schemaVersion = "schema_version"
+        case candidateStatus = "candidate_status"
+        case promotionState = "promotion_state"
+        case writesAtlasTruth = "writes_atlas_truth"
+        case canonicalGraphMutationAllowed = "canonical_graph_mutation_allowed"
+        case exportID = "export_id"
+        case sessionID = "session_id"
+        case missionID = "mission_id"
+        case generatedAt = "generated_at"
+        case sourceAppSchemaVersion = "source_app_schema_version"
+        case sourceAppVersion = "source_app_version"
+        case isPhysicalDevice = "is_physical_device"
+        case guardrails
+        case candidates
+    }
+}
+
+struct AtlasSignalCandidate: Codable, Identifiable {
+    let candidateID: String
+    let source: String
+    let eventType: AtlasSignalCandidateEventType
+    let occurredAt: Date?
+    let capturedAt: Date
+    let missionID: String
+    let missionItemID: String
+    let exportID: String
+    let subjectMusicObjectRef: AtlasSignalCandidateSubject
+    let evidence: AtlasSignalCandidateEvidence
+    let reviewState: String
+    let promotionState: String
+    let writesAtlasTruth: Bool
+
+    var id: String {
+        candidateID
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case candidateID = "candidate_id"
+        case source
+        case eventType = "event_type"
+        case occurredAt = "occurred_at"
+        case capturedAt = "captured_at"
+        case missionID = "mission_id"
+        case missionItemID = "mission_item_id"
+        case exportID = "export_id"
+        case subjectMusicObjectRef = "subject_music_object_ref"
+        case evidence
+        case reviewState = "review_state"
+        case promotionState = "promotion_state"
+        case writesAtlasTruth = "writes_atlas_truth"
+    }
+}
+
+enum AtlasSignalCandidateEventType: String, Codable, CaseIterable {
+    case resolution
+    case playback
+    case skip
+    case reaction
+    case chip
+    case note
+    case review
+}
+
+struct AtlasSignalCandidateSubject: Codable {
+    let objectType: String
+    let refSource: String
+    let missionItemID: String
+    let itemType: MissionItemType
+    let catalogID: String?
+    let catalogURL: URL?
+    let artworkURL: URL?
+    let displayName: String
+    let creditedArtistName: String
+    let albumName: String?
+    let resolutionState: ResolutionStatus
+    let resolver: ResolverKind?
+    let storefront: String?
+
+    enum CodingKeys: String, CodingKey {
+        case objectType = "object_type"
+        case refSource = "ref_source"
+        case missionItemID = "mission_item_id"
+        case itemType = "item_type"
+        case catalogID = "catalog_id"
+        case catalogURL = "catalog_url"
+        case artworkURL = "artwork_url"
+        case displayName = "display_name"
+        case creditedArtistName = "credited_artist_name"
+        case albumName = "album_name"
+        case resolutionState = "resolution_state"
+        case resolver
+        case storefront
+    }
+}
+
+struct AtlasSignalCandidateEvidence: Codable {
+    let resolutionStatus: ResolutionStatus?
+    let candidateCount: Int?
+    let confidence: Double?
+    let resolver: ResolverKind?
+    let playbackStatus: PlaybackStatus?
+    let playbackStartedAt: Date?
+    let playbackEndedAt: Date?
+    let playbackDurationSeconds: Double?
+    let skipPolicy: String?
+    let reactionValue: ReactionValue?
+    let reactionOperation: ReactionOperation?
+    let reactionLabel: String?
+    let selectedChip: AtlasSignalCandidateChip?
+    let selectedChips: [AtlasSignalCandidateChip]?
+    let shownUnselectedChips: [AtlasSignalCandidateChip]?
+    let noteText: String?
+    let reviewFlags: [String]?
+    let reviewNeeded: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case resolutionStatus = "resolution_status"
+        case candidateCount = "candidate_count"
+        case confidence
+        case resolver
+        case playbackStatus = "playback_status"
+        case playbackStartedAt = "playback_started_at"
+        case playbackEndedAt = "playback_ended_at"
+        case playbackDurationSeconds = "playback_duration_seconds"
+        case skipPolicy = "skip_policy"
+        case reactionValue = "reaction_value"
+        case reactionOperation = "reaction_operation"
+        case reactionLabel = "reaction_label"
+        case selectedChip = "selected_chip"
+        case selectedChips = "selected_chips"
+        case shownUnselectedChips = "shown_unselected_chips"
+        case noteText = "note_text"
+        case reviewFlags = "review_flags"
+        case reviewNeeded = "review_needed"
+    }
+}
+
+struct AtlasSignalCandidateChip: Codable, Equatable {
+    let tagID: String
+    let label: String
+    let primaryReactionValue: ReactionValue
+    let description: String?
+
+    enum CodingKeys: String, CodingKey {
+        case tagID = "tag_id"
+        case label
+        case primaryReactionValue = "primary_reaction_value"
+        case description
     }
 }

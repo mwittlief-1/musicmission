@@ -37,13 +37,13 @@ enum SurveySignalState: String, Codable, CaseIterable, Identifiable {
         case .dontKnow:
             return "Don't Know"
         case .fine:
-            return "Fine"
+            return "Ok"
         case .like:
             return "Like"
         case .favorite:
-            return "Favorite"
+            return "Love"
         case .notForMe:
-            return "Not For Me"
+            return "No"
         }
     }
 
@@ -133,7 +133,7 @@ struct SurveyItem: Codable, Identifiable, Hashable {
     let artworkSeed: String
 }
 
-struct SurveyGridPage: Identifiable {
+struct SurveyGridPage: Codable, Equatable, Identifiable {
     let id: String
     let title: String
     let subtitle: String
@@ -141,6 +141,91 @@ struct SurveyGridPage: Identifiable {
     let pageIndex: Int
     let isOptional: Bool
     let items: [SurveyItem]
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case subtitle
+        case kind
+        case pageIndex = "page_index"
+        case isOptional = "is_optional"
+        case items
+    }
+}
+
+protocol SurveyPageProviding {
+    func page(for step: SurveyStep, responses: [String: SurveyResponse]) -> SurveyGridPage?
+    func page(
+        for step: SurveyStep,
+        responses: [String: SurveyResponse],
+        displayedPages: [String: SurveyGridPage]
+    ) -> SurveyGridPage?
+    func advancedPage(for filter: SurveyAdvancedFilter, responses: [String: SurveyResponse]) -> SurveyGridPage
+    func itemLookup() -> [String: SurveyItem]
+    func shouldOfferArtistPage3(responses: [String: SurveyResponse]) -> Bool
+    func updateAppleMusicSignalPayload(_ payload: AppleMusicSignalPayload?)
+}
+
+extension SurveyPageProviding {
+    func page(
+        for step: SurveyStep,
+        responses: [String: SurveyResponse],
+        displayedPages: [String: SurveyGridPage]
+    ) -> SurveyGridPage? {
+        page(for: step, responses: responses)
+    }
+}
+
+struct FixtureSurveyPageProvider: SurveyPageProviding {
+    private let alphaProvider = AlphaDynamicSurveyPageProvider()
+
+    func page(for step: SurveyStep, responses: [String: SurveyResponse]) -> SurveyGridPage? {
+        alphaProvider.page(for: step, responses: responses)
+    }
+
+    func page(
+        for step: SurveyStep,
+        responses: [String: SurveyResponse],
+        displayedPages: [String: SurveyGridPage]
+    ) -> SurveyGridPage? {
+        alphaProvider.page(for: step, responses: responses, displayedPages: displayedPages)
+    }
+
+    func advancedPage(for filter: SurveyAdvancedFilter, responses: [String: SurveyResponse]) -> SurveyGridPage {
+        SurveyFixtureLibrary.advancedPage(for: filter, responses: responses)
+    }
+
+    func itemLookup() -> [String: SurveyItem] {
+        alphaProvider.itemLookup()
+    }
+
+    func shouldOfferArtistPage3(responses: [String: SurveyResponse]) -> Bool {
+        alphaProvider.shouldOfferArtistPage3(responses: responses)
+    }
+
+    func updateAppleMusicSignalPayload(_ payload: AppleMusicSignalPayload?) {
+        alphaProvider.updateAppleMusicSignalPayload(payload)
+    }
+}
+
+struct LegacySurveyFixturePageProvider: SurveyPageProviding {
+    func page(for step: SurveyStep, responses: [String: SurveyResponse]) -> SurveyGridPage? {
+        SurveyFixtureLibrary.page(for: step, responses: responses)
+    }
+
+    func advancedPage(for filter: SurveyAdvancedFilter, responses: [String: SurveyResponse]) -> SurveyGridPage {
+        SurveyFixtureLibrary.advancedPage(for: filter, responses: responses)
+    }
+
+    func itemLookup() -> [String: SurveyItem] {
+        SurveyFixtureLibrary.itemLookup()
+    }
+
+    func shouldOfferArtistPage3(responses: [String: SurveyResponse]) -> Bool {
+        SurveyFixtureLibrary.shouldOfferArtistPage3(responses: responses)
+    }
+
+    func updateAppleMusicSignalPayload(_ payload: AppleMusicSignalPayload?) {}
 }
 
 struct SurveyResponse: Codable, Equatable {
@@ -186,11 +271,55 @@ enum SurveyStep: String, Codable, CaseIterable {
     case artistPage2
     case artistPage3Prompt
     case artistPage3
+    case artistPage4
     case albumPage1
+    case albumPage2
     case songPage1
+    case songPage2
+    case songPage3
+    case songPage4
     case deeperPrompt
     case advancedSurvey
     case readout
+}
+
+extension SurveyStep {
+    var auditOrder: Int {
+        switch self {
+        case .welcome:
+            return 0
+        case .connectAppleMusic:
+            return 1
+        case .artistPage1:
+            return 2
+        case .artistPage2:
+            return 3
+        case .artistPage3Prompt:
+            return 4
+        case .artistPage3:
+            return 5
+        case .artistPage4:
+            return 6
+        case .albumPage1:
+            return 7
+        case .albumPage2:
+            return 8
+        case .songPage1:
+            return 9
+        case .songPage2:
+            return 10
+        case .songPage3:
+            return 11
+        case .songPage4:
+            return 12
+        case .deeperPrompt:
+            return 13
+        case .advancedSurvey:
+            return 14
+        case .readout:
+            return 15
+        }
+    }
 }
 
 enum SurveyAdvancedFilter: String, Codable, CaseIterable, Identifiable {

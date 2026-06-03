@@ -151,6 +151,18 @@
             "type": "string",
             "pattern": "^ITEM_[A-Z0-9_]+$"
           },
+          "candidate_id": {
+            "type": "string"
+          },
+          "route_candidate_key": {
+            "type": "string"
+          },
+          "route_batch_dedupe_key": {
+            "type": "string"
+          },
+          "route_display_identity_key": {
+            "type": "string"
+          },
           "sequence": {
             "type": "integer",
             "minimum": 1

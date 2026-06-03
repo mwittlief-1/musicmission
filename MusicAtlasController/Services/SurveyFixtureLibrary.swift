@@ -13,7 +13,7 @@ enum SurveyFixtureLibrary {
                 kind: .artist,
                 pageIndex: 1,
                 isOptional: false,
-                items: artistPage1().prefixItems(gridPageItemLimit)
+                items: itemsForStep(step, responses: responses, candidates: artistPage1())
             )
         case .artistPage2:
             return SurveyGridPage(
@@ -23,37 +23,87 @@ enum SurveyFixtureLibrary {
                 kind: .artist,
                 pageIndex: 2,
                 isOptional: false,
-                items: adaptiveArtistPage2(responses: responses).prefixItems(gridPageItemLimit)
+                items: itemsForStep(step, responses: responses, candidates: adaptiveArtistPage2(responses: responses))
             )
         case .artistPage3:
             return SurveyGridPage(
                 id: "SURVEY_ARTIST_PAGE_3",
                 title: "Artist Grid 3",
-                subtitle: "Optional sharpening pass",
+                subtitle: "Sleeper frontiers and false-nearby risks",
                 kind: .artist,
                 pageIndex: 3,
-                isOptional: true,
-                items: adaptiveArtistPage3(responses: responses).prefixItems(gridPageItemLimit)
+                isOptional: false,
+                items: itemsForStep(step, responses: responses, candidates: adaptiveArtistPage3(responses: responses))
+            )
+        case .artistPage4:
+            return SurveyGridPage(
+                id: "SURVEY_ARTIST_PAGE_4",
+                title: "Artist Grid 4",
+                subtitle: "Final artist calibration pass",
+                kind: .artist,
+                pageIndex: 4,
+                isOptional: false,
+                items: itemsForStep(step, responses: responses, candidates: artistPage4(responses: responses))
             )
         case .albumPage1:
             return SurveyGridPage(
                 id: "SURVEY_ALBUM_PAGE_1",
-                title: "Album Grid",
+                title: "Album Grid 1",
                 subtitle: "Object-specific checks",
                 kind: .album,
                 pageIndex: 1,
                 isOptional: false,
-                items: albumPage(responses: responses).prefixItems(gridPageItemLimit)
+                items: itemsForStep(step, responses: responses, candidates: albumPage(responses: responses))
+            )
+        case .albumPage2:
+            return SurveyGridPage(
+                id: "SURVEY_ALBUM_PAGE_2",
+                title: "Album Grid 2",
+                subtitle: "Object-specific contradictions and boundary checks",
+                kind: .album,
+                pageIndex: 2,
+                isOptional: false,
+                items: itemsForStep(step, responses: responses, candidates: albumPage2(responses: responses))
             )
         case .songPage1:
             return SurveyGridPage(
                 id: "SURVEY_SONG_PAGE_1",
-                title: "Song Grid",
+                title: "Song Grid 1",
                 subtitle: "Exceptions, furniture, and false inference checks",
                 kind: .song,
                 pageIndex: 1,
                 isOptional: false,
-                items: songPage(responses: responses).prefixItems(gridPageItemLimit)
+                items: itemsForStep(step, responses: responses, candidates: songPage(responses: responses, pageIndex: 1))
+            )
+        case .songPage2:
+            return SurveyGridPage(
+                id: "SURVEY_SONG_PAGE_2",
+                title: "Song Grid 2",
+                subtitle: "Known songs, sleepers, and useful negatives",
+                kind: .song,
+                pageIndex: 2,
+                isOptional: false,
+                items: itemsForStep(step, responses: responses, candidates: songPage(responses: responses, pageIndex: 2))
+            )
+        case .songPage3:
+            return SurveyGridPage(
+                id: "SURVEY_SONG_PAGE_3",
+                title: "Song Grid 3",
+                subtitle: "Song-only exceptions and cultural furniture",
+                kind: .song,
+                pageIndex: 3,
+                isOptional: false,
+                items: itemsForStep(step, responses: responses, candidates: songPage(responses: responses, pageIndex: 3))
+            )
+        case .songPage4:
+            return SurveyGridPage(
+                id: "SURVEY_SONG_PAGE_4",
+                title: "Song Grid 4",
+                subtitle: "Final song calibration pass",
+                kind: .song,
+                pageIndex: 4,
+                isOptional: false,
+                items: itemsForStep(step, responses: responses, candidates: songPage(responses: responses, pageIndex: 4))
             )
         default:
             return nil
@@ -122,7 +172,9 @@ enum SurveyFixtureLibrary {
             calibrationPool() +
             appleMusicLooseEndPool() +
             albumBasePool() +
+            albumExpansionPool() +
             songBasePool() +
+            songExpansionPool() +
             advancedEraItems() +
             advancedGenreItems() +
             advancedCountryItems() +
@@ -169,6 +221,19 @@ enum SurveyFixtureLibrary {
         return unique(page).prefixItems(gridPageItemLimit)
     }
 
+    private static func artistPage4(responses: [String: SurveyResponse]) -> [SurveyItem] {
+        let negativeCount = responses.values.filter { $0.state == .notForMe }.count
+        var page = [SurveyItem]()
+
+        page.append(contentsOf: calibrationPool().prefixItems(3))
+        page.append(contentsOf: appleMusicLooseEndPool().dropFirst(3).prefixItems(3))
+        page.append(contentsOf: adjacentArtistPool(preferNoiseRoad: negativeCount < 5).dropFirst(2).prefixItems(3))
+        page.append(contentsOf: sleeperPool().dropFirst(1).prefixItems(2))
+        page.append(contentsOf: rejectionPool().dropFirst(1).prefixItems(2))
+
+        return unique(page).prefixItems(gridPageItemLimit)
+    }
+
     private static func albumPage(responses: [String: SurveyResponse]) -> [SurveyItem] {
         let hasNirvanaPositive = responses["SURV_ARTIST_NIRVANA"]?.state == .like || responses["SURV_ARTIST_NIRVANA"]?.state == .favorite
         var page = albumBasePool()
@@ -178,13 +243,113 @@ enum SurveyFixtureLibrary {
         return unique(page).prefixItems(gridPageItemLimit)
     }
 
-    private static func songPage(responses: [String: SurveyResponse]) -> [SurveyItem] {
+    private static func albumPage2(responses: [String: SurveyResponse]) -> [SurveyItem] {
+        let positiveArtistCount = responses.values.filter { $0.itemKind == .artist && ($0.state == .like || $0.state == .favorite) }.count
+        var page = [SurveyItem]()
+
+        page.append(contentsOf: albumExpansionPool().prefixItems(positiveArtistCount >= 6 ? 8 : 6))
+        page.append(contentsOf: albumBasePool().dropFirst(gridPageItemLimit).prefixItems(8))
+
+        return unique(page).prefixItems(gridPageItemLimit)
+    }
+
+    private static func songPage(responses: [String: SurveyResponse], pageIndex: Int) -> [SurveyItem] {
         let notForMeCount = responses.values.filter { $0.state == .notForMe }.count
-        var page = songBasePool()
+        let songPool = unique(songBasePool() + songExpansionPool())
+        let offset = max(0, pageIndex - 1) * gridPageItemLimit
+        var page = rotated(songPool, offset: offset).prefixItems(gridPageItemLimit)
         if notForMeCount >= 5 {
             page.insert(item(id: "SURV_SONG_REJECTION_CONTROL", kind: .song, title: "The Distance", subtitle: "Cake", source: .rejectionProbe, objective: .checkDeadEnd, rationale: "Tests ironic sing-talk tolerance after many negatives."), at: 3)
         }
         return unique(page).prefixItems(gridPageItemLimit)
+    }
+
+    private static func itemsForStep(
+        _ step: SurveyStep,
+        responses: [String: SurveyResponse],
+        candidates: [SurveyItem]
+    ) -> [SurveyItem] {
+        let previousIDs = priorRequiredPageIDs(before: step, responses: responses)
+        var seen = Set<String>()
+        var selected: [SurveyItem] = []
+
+        for item in candidates where !previousIDs.contains(item.id) && !seen.contains(item.id) {
+            selected.append(item)
+            seen.insert(item.id)
+            if selected.count == gridPageItemLimit {
+                return selected
+            }
+        }
+
+        for item in fallbackPool(for: step, responses: responses) where !previousIDs.contains(item.id) && !seen.contains(item.id) {
+            selected.append(item)
+            seen.insert(item.id)
+            if selected.count == gridPageItemLimit {
+                return selected
+            }
+        }
+
+        return selected
+    }
+
+    private static func priorRequiredPageIDs(before step: SurveyStep, responses: [String: SurveyResponse]) -> Set<String> {
+        let priorItems: [SurveyItem]
+        switch step {
+        case .artistPage1:
+            priorItems = []
+        case .artistPage2:
+            priorItems = artistPage1().prefixItems(gridPageItemLimit)
+        case .artistPage3:
+            priorItems = artistPage1().prefixItems(gridPageItemLimit) +
+                adaptiveArtistPage2(responses: responses).prefixItems(gridPageItemLimit)
+        case .artistPage4:
+            priorItems = artistPage1().prefixItems(gridPageItemLimit) +
+                adaptiveArtistPage2(responses: responses).prefixItems(gridPageItemLimit) +
+                adaptiveArtistPage3(responses: responses).prefixItems(gridPageItemLimit)
+        case .albumPage1:
+            priorItems = []
+        case .albumPage2:
+            priorItems = albumPage(responses: responses).prefixItems(gridPageItemLimit)
+        case .songPage1:
+            priorItems = []
+        case .songPage2:
+            priorItems = songPage(responses: responses, pageIndex: 1).prefixItems(gridPageItemLimit)
+        case .songPage3:
+            priorItems = songPage(responses: responses, pageIndex: 1).prefixItems(gridPageItemLimit) +
+                songPage(responses: responses, pageIndex: 2).prefixItems(gridPageItemLimit)
+        case .songPage4:
+            priorItems = songPage(responses: responses, pageIndex: 1).prefixItems(gridPageItemLimit) +
+                songPage(responses: responses, pageIndex: 2).prefixItems(gridPageItemLimit) +
+                songPage(responses: responses, pageIndex: 3).prefixItems(gridPageItemLimit)
+        default:
+            priorItems = []
+        }
+
+        return Set(priorItems.map(\.id))
+    }
+
+    private static func fallbackPool(for step: SurveyStep, responses: [String: SurveyResponse]) -> [SurveyItem] {
+        switch step {
+        case .artistPage1, .artistPage2, .artistPage3, .artistPage4:
+            return unique(
+                artistPage1() +
+                appleMusicLooseEndPool() +
+                adjacentArtistPool() +
+                sleeperPool() +
+                rejectionPool() +
+                calibrationPool()
+            )
+        case .albumPage1, .albumPage2:
+            return unique(albumBasePool() + albumExpansionPool())
+        case .songPage1, .songPage2, .songPage3, .songPage4:
+            var pool = unique(songBasePool() + songExpansionPool())
+            if responses.values.filter({ $0.state == .notForMe }).count >= 5 {
+                pool.append(item(id: "SURV_SONG_REJECTION_CONTROL", kind: .song, title: "The Distance", subtitle: "Cake", source: .rejectionProbe, objective: .checkDeadEnd, rationale: "Tests ironic sing-talk tolerance after many negatives."))
+            }
+            return unique(pool)
+        default:
+            return []
+        }
     }
 
     private static func artistPage1() -> [SurveyItem] {
@@ -329,6 +494,46 @@ enum SurveyFixtureLibrary {
         ]
     }
 
+    private static func albumExpansionPool() -> [SurveyItem] {
+        [
+            item(id: "SURV_ALBUM_EXILE_MAIN_ST", kind: .album, title: "Exile on Main St.", subtitle: "The Rolling Stones", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Loose classic-rock sprawl tolerance."),
+            item(id: "SURV_ALBUM_MARQUEE_MOON", kind: .album, title: "Marquee Moon", subtitle: "Television", source: .responseAdjacent, objective: .testAdjacentRoad, rationale: "Art-rock guitar architecture."),
+            item(id: "SURV_ALBUM_PINKERTON", kind: .album, title: "Pinkerton", subtitle: "Weezer", source: .responseAdjacent, objective: .resolveContradiction, rationale: "Crunch, neediness, and songcraft boundary."),
+            item(id: "SURV_ALBUM_LONDON_CALLING", kind: .album, title: "London Calling", subtitle: "The Clash", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Punk breadth and canon appetite."),
+            item(id: "SURV_ALBUM_IS_THIS_IT", kind: .album, title: "Is This It", subtitle: "The Strokes", source: .appleMusicLooseEnd, objective: .resolveContradiction, rationale: "Cool guitar-pop versus active craving."),
+            item(id: "SURV_ALBUM_YANKEE_FOXTROT", kind: .album, title: "Yankee Hotel Foxtrot", subtitle: "Wilco", source: .appleMusicLooseEnd, objective: .checkDeadEnd, rationale: "Tasteful alt-Americana boundary."),
+            item(id: "SURV_ALBUM_UNKNOWN_PLEASURES", kind: .album, title: "Unknown Pleasures", subtitle: "Joy Division", source: .responseAdjacent, objective: .confirmLikelyRegion, rationale: "Post-punk source-code appetite."),
+            item(id: "SURV_ALBUM_THE_BENDS", kind: .album, title: "The Bends", subtitle: "Radiohead", source: .appleMusicDerived, objective: .separateObjectTaste, rationale: "Rock-song Radiohead versus album-world Radiohead."),
+            item(id: "SURV_ALBUM_ELVIS_COSTELLO_MY_AIM", kind: .album, title: "My Aim Is True", subtitle: "Elvis Costello", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Smart hooks and voice boundary."),
+            item(id: "SURV_ALBUM_FLEET_FOXES", kind: .album, title: "Fleet Foxes", subtitle: "Fleet Foxes", source: .rejectionProbe, objective: .checkDeadEnd, rationale: "Tasteful folk softness boundary.")
+        ]
+    }
+
+    private static func songExpansionPool() -> [SurveyItem] {
+        [
+            item(id: "SURV_SONG_ONCE", kind: .song, title: "Once", subtitle: "Pearl Jam", source: .appleMusicLooseEnd, objective: .testAdjacentRoad, rationale: "Grunge force and voice boundary."),
+            item(id: "SURV_SONG_DEBASER", kind: .song, title: "Debaser", subtitle: "Pixies", source: .responseAdjacent, objective: .testAdjacentRoad, rationale: "Alt source-code bite."),
+            item(id: "SURV_SONG_DISORDER", kind: .song, title: "Disorder", subtitle: "Joy Division", source: .responseAdjacent, objective: .confirmLikelyRegion, rationale: "Body plus gloom calibration."),
+            item(id: "SURV_SONG_ALL_MY_FRIENDS", kind: .song, title: "All My Friends", subtitle: "LCD Soundsystem", source: .responseAdjacent, objective: .confirmLikelyRegion, rationale: "Repetition, ache, and release."),
+            item(id: "SURV_SONG_COMMON_PEOPLE", kind: .song, title: "Common People", subtitle: "Pulp", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Theatrical pop bite."),
+            item(id: "SURV_SONG_LAST_NITE", kind: .song, title: "Last Nite", subtitle: "The Strokes", source: .appleMusicLooseEnd, objective: .resolveContradiction, rationale: "Cool revival rock appetite."),
+            item(id: "SURV_SONG_BORN_TO_RUN", kind: .song, title: "Born to Run", subtitle: "Bruce Springsteen", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Heartland grandeur boundary."),
+            item(id: "SURV_SONG_RUNNING_UP_THAT_HILL", kind: .song, title: "Running Up That Hill", subtitle: "Kate Bush", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Theatrical synth-pop force."),
+            item(id: "SURV_SONG_SABOTAGE", kind: .song, title: "Sabotage", subtitle: "Beastie Boys", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Rap-rock energy without mush."),
+            item(id: "SURV_SONG_1979", kind: .song, title: "1979", subtitle: "The Smashing Pumpkins", source: .appleMusicLooseEnd, objective: .resolveContradiction, rationale: "Nostalgia, haze, and appetite."),
+            item(id: "SURV_SONG_BITTER_SWEET_SYMPHONY", kind: .song, title: "Bitter Sweet Symphony", subtitle: "The Verve", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Cultural furniture versus craving."),
+            item(id: "SURV_SONG_CREEP", kind: .song, title: "Creep", subtitle: "Radiohead", source: .appleMusicDerived, objective: .separateObjectTaste, rationale: "Song exception versus artist appetite."),
+            item(id: "SURV_SONG_WHERE_IS_MY_MIND", kind: .song, title: "Where Is My Mind?", subtitle: "Pixies", source: .responseAdjacent, objective: .testAdjacentRoad, rationale: "Melodic surreal source-code."),
+            item(id: "SURV_SONG_FAKE_PLASTIC_TREES", kind: .song, title: "Fake Plastic Trees", subtitle: "Radiohead", source: .appleMusicDerived, objective: .separateObjectTaste, rationale: "Softness tolerance inside known artist."),
+            item(id: "SURV_SONG_WAKE_UP", kind: .song, title: "Wake Up", subtitle: "Arcade Fire", source: .appleMusicLooseEnd, objective: .resolveContradiction, rationale: "Earnest anthem risk."),
+            item(id: "SURV_SONG_NO_ONE_KNOWS", kind: .song, title: "No One Knows", subtitle: "Queens of the Stone Age", source: .responseAdjacent, objective: .confirmLikelyRegion, rationale: "Hard groove and bite."),
+            item(id: "SURV_SONG_PAPER_PLANES", kind: .song, title: "Paper Planes", subtitle: "M.I.A.", source: .broadCalibration, objective: .calibrateBroadly, rationale: "Pop edge and novelty boundary."),
+            item(id: "SURV_SONG_TEENAGE_DIRTBAG", kind: .song, title: "Teenage Dirtbag", subtitle: "Wheatus", source: .rejectionProbe, objective: .checkDeadEnd, rationale: "Novelty and nostalgia control."),
+            item(id: "SURV_SONG_HO_HEY", kind: .song, title: "Ho Hey", subtitle: "The Lumineers", source: .rejectionProbe, objective: .checkDeadEnd, rationale: "Folk stomp boundary."),
+            item(id: "SURV_SONG_SEX_ON_FIRE", kind: .song, title: "Sex on Fire", subtitle: "Kings of Leon", source: .rejectionProbe, objective: .checkDeadEnd, rationale: "Arena-rock heat versus mush.")
+        ]
+    }
+
     private static func advancedEraItems() -> [SurveyItem] {
         [
             item(id: "SURV_ADV_ERA_70S_BOWIE", title: "1970s Bowie", source: .advancedFilter, objective: .calibrateBroadly, rationale: "Theatrical rock era appetite."),
@@ -408,6 +613,15 @@ enum SurveyFixtureLibrary {
             output.append(item)
         }
         return output
+    }
+
+    private static func rotated(_ items: [SurveyItem], offset: Int) -> [SurveyItem] {
+        guard !items.isEmpty else {
+            return []
+        }
+
+        let normalizedOffset = offset % items.count
+        return Array(items.dropFirst(normalizedOffset)) + Array(items.prefix(normalizedOffset))
     }
 }
 

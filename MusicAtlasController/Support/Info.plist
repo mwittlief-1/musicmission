@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Waymark</string>
+	<string>Cartenza</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconName</key>
@@ -19,9 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.2</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CartenzaAlphaUATFixturesEnabled</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
@@ -29,11 +31,25 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>Waymark needs Apple Music access to search, resolve, and play discovery mission tracks.</string>
+	<string>Cartenza needs Apple Music access to search, resolve, and play discovery mission tracks.</string>
+	<key>CartenzaSupabaseAnonKey</key>
+	<string>$(CARTENZA_SUPABASE_ANON_KEY)</string>
+	<key>CartenzaSupabaseEvidenceFunctionName</key>
+	<string>submit-alpha-evidence</string>
+	<key>CartenzaSupabaseDiagnosticFunctionName</key>
+	<string>submit-alpha-diagnostic</string>
+	<key>CartenzaSupabaseGenerateFunctionName</key>
+	<string>generate-first-mission-batch</string>
+	<key>CartenzaSupabaseProjectURL</key>
+	<string>https://ewuffhezhgyskcfyzkvw.supabase.co</string>
+	<key>CartenzaSupabaseTesterAlias</key>
+	<string>trusted-alpha-001</string>
 	<key>WaymarkSupabaseAnonKey</key>
 	<string>$(WAYMARK_SUPABASE_ANON_KEY)</string>
 	<key>WaymarkSupabaseEvidenceFunctionName</key>
 	<string>submit-alpha-evidence</string>
+	<key>WaymarkSupabaseDiagnosticFunctionName</key>
+	<string>submit-alpha-diagnostic</string>
 	<key>WaymarkSupabaseGenerateFunctionName</key>
 	<string>generate-first-mission-batch</string>
 	<key>WaymarkSupabaseProjectURL</key>

@@ -1,0 +1,450 @@
+{
+  "schema_version": "apple_music_signal_payload.v0.2",
+  "payload_id": "apple_music_signal_payload:fixture:v0_2:001",
+  "probe_version": "apple_probe.v0.2",
+  "captured_at": "2026-05-25T12:00:00Z",
+  "storefront": "us",
+  "authorization": {
+    "music_authorization_status": "authorized",
+    "can_request_authorization": false,
+    "subscription_status": "catalog_playback_allowed_cloud_library_enabled",
+    "token_status": "music_user_token_not_persisted",
+    "errors": []
+  },
+  "primary_signal_sources": {
+    "heavy_rotation": {
+      "source_id": "heavy_rotation",
+      "status": "captured",
+      "cap": 50,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "heavy_rotation:cat_album_wipers_youth",
+          "resource_type": "album",
+          "apple_id": "cat_album_wipers_youth",
+          "catalog_id": "cat_album_wipers_youth",
+          "library_id": null,
+          "persistent_id": null,
+          "display_name": "Youth of America",
+          "artist_name": "Wipers",
+          "album_title": "Youth of America",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Punk"],
+          "play_count": null,
+          "last_played_at": null,
+          "library_added_at": null,
+          "release_date": "1981",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "heavy_rotation",
+          "source_confidence": "ranked_by_apple",
+          "observed_source_refs": ["heavy_rotation"]
+        }
+      ],
+      "errors": []
+    },
+    "recently_played_tracks": {
+      "source_id": "recently_played_tracks",
+      "status": "captured",
+      "cap": 50,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "recently_played_tracks:cat_song_fugazi_waiting_room",
+          "resource_type": "song",
+          "apple_id": "cat_song_fugazi_waiting_room",
+          "catalog_id": "cat_song_fugazi_waiting_room",
+          "library_id": null,
+          "persistent_id": null,
+          "display_name": "Waiting Room",
+          "artist_name": "Fugazi",
+          "album_title": "Repeater + 3 Songs",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Punk"],
+          "play_count": null,
+          "last_played_at": "2026-05-12T14:58:24Z",
+          "library_added_at": null,
+          "release_date": "1989",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "recently_played",
+          "source_confidence": "explicit_observed",
+          "observed_source_refs": ["recently_played_tracks"]
+        }
+      ],
+      "errors": []
+    },
+    "library_song_play_count": {
+      "source_id": "library_song_play_count",
+      "status": "captured",
+      "cap": 200,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "library_song_play_count:lib_song_radiohead_fake_plastic_trees",
+          "resource_type": "song",
+          "apple_id": "cat_song_radiohead_fake_plastic_trees",
+          "catalog_id": "cat_song_radiohead_fake_plastic_trees",
+          "library_id": "lib_song_radiohead_fake_plastic_trees",
+          "persistent_id": null,
+          "display_name": "Fake Plastic Trees",
+          "artist_name": "Radiohead",
+          "album_title": "The Bends",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Alternative"],
+          "play_count": 5,
+          "last_played_at": "2026-03-19T00:44:48Z",
+          "library_added_at": "2011-02-27T22:46:02Z",
+          "release_date": "1995",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "library_song_play_count",
+          "source_confidence": "library_sorted",
+          "observed_source_refs": ["library_song_play_count"]
+        }
+      ],
+      "errors": []
+    },
+    "library_song_last_played": {
+      "source_id": "library_song_last_played",
+      "status": "captured",
+      "cap": 100,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "library_song_last_played:lib_song_radiohead_fake_plastic_trees",
+          "resource_type": "song",
+          "apple_id": "cat_song_radiohead_fake_plastic_trees",
+          "catalog_id": "cat_song_radiohead_fake_plastic_trees",
+          "library_id": "lib_song_radiohead_fake_plastic_trees",
+          "persistent_id": null,
+          "display_name": "Fake Plastic Trees",
+          "artist_name": "Radiohead",
+          "album_title": "The Bends",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Alternative"],
+          "play_count": 5,
+          "last_played_at": "2026-03-19T00:44:48Z",
+          "library_added_at": "2011-02-27T22:46:02Z",
+          "release_date": "1995",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "library_song_last_played",
+          "source_confidence": "library_sorted",
+          "observed_source_refs": ["library_song_last_played"]
+        }
+      ],
+      "errors": []
+    },
+    "library_song_library_added": {
+      "source_id": "library_song_library_added",
+      "status": "captured",
+      "cap": 100,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "library_song_library_added:lib_song_love_you_set_the_scene",
+          "resource_type": "song",
+          "apple_id": "cat_song_love_you_set_the_scene",
+          "catalog_id": "cat_song_love_you_set_the_scene",
+          "library_id": "lib_song_love_you_set_the_scene",
+          "persistent_id": null,
+          "display_name": "You Set the Scene",
+          "artist_name": "Love",
+          "album_title": "Forever Changes",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Rock"],
+          "play_count": 2,
+          "last_played_at": "2026-05-13T13:08:22Z",
+          "library_added_at": "2026-05-15T15:51:50Z",
+          "release_date": "1967",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "library_song_library_added",
+          "source_confidence": "library_sorted",
+          "observed_source_refs": ["library_song_library_added"]
+        }
+      ],
+      "errors": []
+    },
+    "library_album_library_added": {
+      "source_id": "library_album_library_added",
+      "status": "captured",
+      "cap": 100,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "library_album_library_added:lib_album_love_forever_changes",
+          "resource_type": "album",
+          "apple_id": "cat_album_love_forever_changes",
+          "catalog_id": "cat_album_love_forever_changes",
+          "library_id": "lib_album_love_forever_changes",
+          "persistent_id": null,
+          "display_name": "Forever Changes",
+          "artist_name": "Love",
+          "album_title": "Forever Changes",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Rock"],
+          "play_count": null,
+          "last_played_at": null,
+          "library_added_at": "2026-05-15T15:51:50Z",
+          "release_date": "1967",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "library_album_library_added",
+          "source_confidence": "library_sorted",
+          "observed_source_refs": ["library_album_library_added"]
+        }
+      ],
+      "errors": []
+    },
+    "personal_recommendations": {
+      "source_id": "personal_recommendations",
+      "status": "captured",
+      "cap": 50,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "personal_recommendations:cat_album_wipers_youth",
+          "resource_type": "album",
+          "apple_id": "cat_album_wipers_youth",
+          "catalog_id": "cat_album_wipers_youth",
+          "library_id": null,
+          "persistent_id": null,
+          "display_name": "Youth of America",
+          "artist_name": "Wipers",
+          "album_title": "Youth of America",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Punk"],
+          "play_count": null,
+          "last_played_at": null,
+          "library_added_at": null,
+          "release_date": "1981",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "personal_recommendation",
+          "source_confidence": "recommendation_context",
+          "observed_source_refs": ["personal_recommendations:punk"]
+        }
+      ],
+      "errors": []
+    }
+  },
+  "context_sources": {
+    "playlist_contexts": {
+      "source_id": "playlist_contexts",
+      "status": "captured",
+      "cap": 50,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "playlist_contexts:lib_playlist_lithuanian_discovery",
+          "resource_type": "playlist",
+          "apple_id": "pl_lithuanian_discovery",
+          "catalog_id": null,
+          "library_id": "lib_playlist_lithuanian_discovery",
+          "persistent_id": null,
+          "display_name": "Lithuanian Discovery Mission",
+          "artist_name": null,
+          "album_title": null,
+          "playlist_name": "Lithuanian Discovery Mission",
+          "curator_name": "Alpha Tester",
+          "genre_names": [],
+          "play_count": null,
+          "last_played_at": "2026-05-18T21:14:47Z",
+          "library_added_at": "2026-05-16T23:45:10Z",
+          "release_date": null,
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "playlist_context",
+          "source_confidence": "playlist_context",
+          "observed_source_refs": ["playlist_contexts"]
+        }
+      ],
+      "errors": []
+    },
+    "playlist_track_samples": {
+      "source_id": "playlist_track_samples",
+      "status": "captured",
+      "cap": 250,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "playlist_track_samples:cat_song_demo_playlist_track",
+          "resource_type": "song",
+          "apple_id": "cat_song_demo_playlist_track",
+          "catalog_id": "cat_song_demo_playlist_track",
+          "library_id": null,
+          "persistent_id": null,
+          "display_name": "Mock Playlist Track",
+          "artist_name": "Mock Artist",
+          "album_title": "Demo Album",
+          "playlist_name": "Lithuanian Discovery Mission",
+          "curator_name": null,
+          "genre_names": ["Alternative"],
+          "play_count": null,
+          "last_played_at": null,
+          "library_added_at": null,
+          "release_date": "2026",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "playlist_track_sample",
+          "source_confidence": "playlist_context",
+          "observed_source_refs": ["playlist_track_samples", "playlist_contexts:lib_playlist_lithuanian_discovery"]
+        }
+      ],
+      "errors": []
+    },
+    "replay_summary": {
+      "source_id": "replay_summary",
+      "status": "unavailable",
+      "cap": 0,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [],
+      "errors": [
+        {
+          "source": "replay_summary",
+          "code": "unavailable_in_mock",
+          "message": "Replay summary is represented as unavailable in this fixture."
+        }
+      ]
+    }
+  },
+  "observed_resource_annotations": {
+    "favorite_resources": {
+      "source_id": "favorite_resources",
+      "status": "captured",
+      "cap": 100,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [
+        {
+          "source_item_id": "favorite_resources:lib_song_radiohead_fake_plastic_trees",
+          "resource_type": "song",
+          "apple_id": "cat_song_radiohead_fake_plastic_trees",
+          "catalog_id": "cat_song_radiohead_fake_plastic_trees",
+          "library_id": "lib_song_radiohead_fake_plastic_trees",
+          "persistent_id": null,
+          "display_name": "Fake Plastic Trees",
+          "artist_name": "Radiohead",
+          "album_title": "The Bends",
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": ["Alternative"],
+          "play_count": null,
+          "last_played_at": null,
+          "library_added_at": null,
+          "release_date": "1995",
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "favorite_annotation",
+          "source_confidence": "user_annotation",
+          "observed_source_refs": ["library_song_play_count:lib_song_radiohead_fake_plastic_trees"]
+        }
+      ],
+      "errors": []
+    },
+    "rated_resources": {
+      "source_id": "rated_resources",
+      "status": "empty",
+      "cap": 100,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "items": [],
+      "errors": []
+    }
+  },
+  "catalog_hydration": {
+    "status": "captured",
+    "resources": [
+      {
+        "source_item_id": "catalog:cat_album_wipers_youth",
+        "resource_type": "album",
+        "apple_id": "cat_album_wipers_youth",
+        "catalog_id": "cat_album_wipers_youth",
+        "library_id": null,
+        "persistent_id": null,
+        "display_name": "Youth of America",
+        "artist_name": "Wipers",
+        "album_title": "Youth of America",
+        "playlist_name": null,
+        "curator_name": null,
+        "genre_names": ["Punk"],
+        "play_count": null,
+        "last_played_at": null,
+        "library_added_at": null,
+        "release_date": "1981",
+        "url": null,
+        "artwork_url": null,
+        "evidence_basis": "catalog_identity",
+        "source_confidence": "catalog_identity",
+        "observed_source_refs": ["heavy_rotation:cat_album_wipers_youth", "personal_recommendations:cat_album_wipers_youth"]
+      },
+      {
+        "source_item_id": "catalog:cat_song_radiohead_fake_plastic_trees",
+        "resource_type": "song",
+        "apple_id": "cat_song_radiohead_fake_plastic_trees",
+        "catalog_id": "cat_song_radiohead_fake_plastic_trees",
+        "library_id": null,
+        "persistent_id": null,
+        "display_name": "Fake Plastic Trees",
+        "artist_name": "Radiohead",
+        "album_title": "The Bends",
+        "playlist_name": null,
+        "curator_name": null,
+        "genre_names": ["Alternative"],
+        "play_count": null,
+        "last_played_at": null,
+        "library_added_at": null,
+        "release_date": "1995",
+        "url": null,
+        "artwork_url": null,
+        "evidence_basis": "catalog_identity",
+        "source_confidence": "catalog_identity",
+        "observed_source_refs": ["library_song_play_count:lib_song_radiohead_fake_plastic_trees", "library_song_last_played:lib_song_radiohead_fake_plastic_trees"]
+      }
+    ],
+    "errors": []
+  },
+  "excluded_or_diagnostic_sources": [
+    {
+      "source_id": "library_artists_alphabetical_snapshot",
+      "status": "captured",
+      "cap": 50,
+      "captured_at": "2026-05-25T12:00:00Z",
+      "excluded_from_survey_evidence": true,
+      "diagnostic_reason": "Alphabetical library artist snapshots are support-only and excluded from Survey evidence.",
+      "items": [
+        {
+          "source_item_id": "library_artists_alphabetical_snapshot:lib_artist_alphabetical",
+          "resource_type": "artist",
+          "apple_id": null,
+          "catalog_id": null,
+          "library_id": "lib_artist_alphabetical",
+          "persistent_id": null,
+          "display_name": "Alphabetical Artist",
+          "artist_name": "Alphabetical Artist",
+          "album_title": null,
+          "playlist_name": null,
+          "curator_name": null,
+          "genre_names": [],
+          "play_count": null,
+          "last_played_at": null,
+          "library_added_at": "2020-01-01T00:00:00Z",
+          "release_date": null,
+          "url": null,
+          "artwork_url": null,
+          "evidence_basis": "diagnostic_excluded",
+          "source_confidence": "diagnostic_excluded",
+          "observed_source_refs": ["library_artists_alphabetical_snapshot"]
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

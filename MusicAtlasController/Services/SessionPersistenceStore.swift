@@ -3,13 +3,42 @@ import Foundation
 struct PersistedSessionLibrary: Codable {
     var activeMissionID: String?
     var sessionsByMissionID: [String: PersistedMissionSession]
+    var savedExports: [SavedExport]
     var updatedAt: Date?
 
     static let empty = PersistedSessionLibrary(
         activeMissionID: nil,
         sessionsByMissionID: [:],
+        savedExports: [],
         updatedAt: nil
     )
+
+    enum CodingKeys: String, CodingKey {
+        case activeMissionID = "active_mission_id"
+        case sessionsByMissionID = "sessions_by_mission_id"
+        case savedExports = "saved_exports"
+        case updatedAt = "updated_at"
+    }
+
+    init(
+        activeMissionID: String?,
+        sessionsByMissionID: [String: PersistedMissionSession],
+        savedExports: [SavedExport],
+        updatedAt: Date?
+    ) {
+        self.activeMissionID = activeMissionID
+        self.sessionsByMissionID = sessionsByMissionID
+        self.savedExports = savedExports
+        self.updatedAt = updatedAt
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        activeMissionID = try container.decodeIfPresent(String.self, forKey: .activeMissionID)
+        sessionsByMissionID = try container.decodeIfPresent([String: PersistedMissionSession].self, forKey: .sessionsByMissionID) ?? [:]
+        savedExports = try container.decodeIfPresent([SavedExport].self, forKey: .savedExports) ?? []
+        updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt)
+    }
 }
 
 struct PersistedMissionSession: Codable {
@@ -84,6 +113,17 @@ struct SessionPersistenceStore {
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         let data = try encoder.encode(library)
         try data.write(to: url, options: .atomic)
+    }
+
+    func reset() throws {
+        guard isEnabled else {
+            return
+        }
+
+        let url = try storeURL()
+        if fileManager.fileExists(atPath: url.path) {
+            try fileManager.removeItem(at: url)
+        }
     }
 
     private func storeURL() throws -> URL {

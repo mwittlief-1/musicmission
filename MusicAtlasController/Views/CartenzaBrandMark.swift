@@ -128,18 +128,19 @@ private struct CartenzaCartographicCut: View {
             }
             .stroke(CartenzaTheme.text.opacity(0.14), lineWidth: 1)
 
-            Circle()
-                .trim(from: 0.13, to: 0.87)
+            selectedCArc
                 .stroke(
                     LinearGradient(
                         colors: [CartenzaBrand.warmSilver, CartenzaBrand.silver, CartenzaBrand.ash],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     ),
-                    style: StrokeStyle(lineWidth: max(5, size * 0.18), lineCap: .round)
+                    style: StrokeStyle(
+                        lineWidth: max(5, size * 0.102),
+                        lineCap: .round,
+                        lineJoin: .round
+                    )
                 )
-                .rotationEffect(.degrees(92))
-                .padding(size * 0.17)
 
             CartenzaContourCuts(size: size)
 
@@ -148,6 +149,36 @@ private struct CartenzaCartographicCut: View {
 
             CartenzaSignalStar(size: size)
         }
+    }
+
+    private var selectedCArc: Path {
+        Path { path in
+            path.move(to: point(697, 281))
+            path.addCurve(
+                to: point(426, 236),
+                control1: point(631, 225),
+                control2: point(526, 204)
+            )
+            path.addCurve(
+                to: point(204, 512),
+                control1: point(287, 281),
+                control2: point(204, 388)
+            )
+            path.addCurve(
+                to: point(425, 789),
+                control1: point(204, 637),
+                control2: point(286, 744)
+            )
+            path.addCurve(
+                to: point(697, 742),
+                control1: point(525, 822),
+                control2: point(631, 800)
+            )
+        }
+    }
+
+    private func point(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
+        CGPoint(x: size * x / 1024, y: size * y / 1024)
     }
 }
 

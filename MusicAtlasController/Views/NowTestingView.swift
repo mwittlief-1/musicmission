@@ -197,12 +197,12 @@ struct NowTestingView: View {
 }
 
 private enum PlayerSurfaceStyle {
-    static let background = Color.black
-    static let panel = Color(red: 0.075, green: 0.078, blue: 0.082)
-    static let elevatedPanel = Color(red: 0.105, green: 0.108, blue: 0.114)
-    static let tile = Color(red: 0.13, green: 0.135, blue: 0.142)
-    static let mutedText = Color.white.opacity(0.62)
-    static let faintStroke = Color.white.opacity(0.08)
+    static let background = WaymarkTheme.background
+    static let panel = WaymarkTheme.panel
+    static let elevatedPanel = WaymarkTheme.raisedPanel
+    static let tile = Color(red: 0.130, green: 0.136, blue: 0.153)
+    static let mutedText = WaymarkTheme.mutedText
+    static let faintStroke = WaymarkTheme.line
 }
 
 private struct MissionRailBanner: View {
@@ -987,20 +987,22 @@ private struct PlayerActionBar: View {
             }
             .buttonStyle(.plain)
 
-            Button(action: openResolveIssue) {
-                Label("Resolve Issue", systemImage: "exclamationmark.triangle")
-                    .font(.subheadline.weight(.semibold))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.84)
-                    .foregroundStyle(.orange.opacity(0.95))
-                    .frame(maxWidth: .infinity, minHeight: 48)
-                    .background(PlayerSurfaceStyle.elevatedPanel, in: RoundedRectangle(cornerRadius: 10))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.orange.opacity(0.28), lineWidth: 1)
-                    )
+            if AppFeatureFlags.showDiagnosticTabs {
+                Button(action: openResolveIssue) {
+                    Label("Resolve Issue", systemImage: "exclamationmark.triangle")
+                        .font(.subheadline.weight(.semibold))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.84)
+                        .foregroundStyle(WaymarkTheme.waypoint)
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(PlayerSurfaceStyle.elevatedPanel, in: RoundedRectangle(cornerRadius: 10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(WaymarkTheme.waypoint.opacity(0.28), lineWidth: 1)
+                        )
+                }
+                .buttonStyle(.plain)
             }
-            .buttonStyle(.plain)
         }
     }
 }

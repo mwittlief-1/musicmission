@@ -14,48 +14,9 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertEqual(mission.items.first?.appleMusicResolution.status, .unresolved)
     }
 
-    func testLithuanianAlphaMissionDecodesContextualFeedback() throws {
-        let mission = try loadLithuanianAlphaMission()
-
-        XCTAssertEqual(mission.missionID, "MIS_LITHUANIAN_DISCOVERY_BALTIC_PRESSURE_V01_ALPHA")
-        XCTAssertEqual(mission.items.count, 14)
-        XCTAssertEqual(mission.runInstructions?.listenInOrder, true)
-        XCTAssertEqual(mission.runInstructions?.shuffleAllowed, false)
-
-        let firstItem = try XCTUnwrap(mission.items.first)
-        XCTAssertEqual(firstItem.title, "Netildai")
-        XCTAssertEqual(firstItem.playerCard?.flipSide?.songHypothesis, "Does this open a Lithuanian dark-post-punk/electronic-rock lane?")
-        XCTAssertEqual(firstItem.feedbackChips(for: .hit).map(\.label), [
-            "dark pull",
-            "body + gloom",
-            "opens lane"
-        ])
-        XCTAssertEqual(firstItem.feedbackChips(for: .miss).map(\.label), [
-            "too electronic?",
-            "good but not me"
-        ])
-    }
-
-    func testPersonalMissionPackDecodes() throws {
-        let missions = try loadPersonalMissionPack()
-
-        XCTAssertEqual(missions.count, 10)
-        XCTAssertEqual(missions.first?.missionID, "MIS_LOST_NIRVANA_TIMELINE")
-
-        let firstMission = try XCTUnwrap(missions.first)
-        XCTAssertEqual(firstMission.items.count, 12)
-        XCTAssertTrue(firstMission.items.allSatisfy { $0.playerCard?.flipSide?.songHypothesis?.isEmpty == false })
-        XCTAssertTrue(firstMission.items.allSatisfy { item in
-            !item.feedbackChips(for: .hit).isEmpty &&
-            !item.feedbackChips(for: .partial).isEmpty &&
-            !item.feedbackChips(for: .okShelf).isEmpty &&
-            !item.feedbackChips(for: .miss).isEmpty
-        })
-    }
-
     func testLocalMissionProviderImportsAppImportCandidateResponse() throws {
         let importedAt = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-21T12:00:00Z"))
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let provider = try makeImportTestProvider()
         let response = TestGenerationResponse(
             run_id: "run_alpha_001",
@@ -72,11 +33,38 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertEqual(imported.first?.source, .generatedReviewed)
         XCTAssertEqual(imported.first?.sourceRunID, "run_alpha_001")
         XCTAssertEqual(catalog.reviewedAssignments.count, 1)
-        XCTAssertTrue(catalog.debugAssignments.isEmpty)
+    }
+
+    func testLocalMissionProviderPreservesRouteIdentityMetadataFromAppMissions() throws {
+        let mission = try loadMissionFromData(try makeMissionDataWithFirstItemRouteIdentity(
+            try loadSampleMission(),
+            candidateID: "candidate_alpha_001",
+            routeCandidateKey: "route:track:alpha:001",
+            routeBatchDedupeKey: "song_recording:alpha:001",
+            routeDisplayIdentityKey: "track:alpha-artist:alpha-title"
+        ))
+        let provider = try makeImportTestProvider()
+        let response = TestGenerationResponse(
+            run_id: "run_alpha_route_identity_001",
+            status: "app_import_candidate",
+            app_missions: [mission]
+        )
+
+        let imported = try provider.importSupabaseMissionBatchResponseData(
+            try JSONEncoder.missionTestEncoder.encode(response)
+        )
+        let importedItem = try XCTUnwrap(imported.first?.mission.items.first)
+
+        XCTAssertEqual(importedItem.candidateID, "candidate_alpha_001")
+        XCTAssertEqual(importedItem.routeCandidateKey, "route:track:alpha:001")
+        XCTAssertEqual(importedItem.routeBatchDedupeKey, "song_recording:alpha:001")
+        XCTAssertEqual(importedItem.routeDisplayIdentityKey, "track:alpha-artist:alpha-title")
+        XCTAssertEqual(MissionImportGate.routeDisplayIdentityKey(for: importedItem), "track:alpha-artist:alpha-title")
+        XCTAssertEqual(MissionImportGate.routeCandidateIDs(in: imported), Set(["candidate_alpha_001"]))
     }
 
     func testLocalSupabaseMissionClientStubReturnsAppImportCandidateShape() async throws {
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let provider = try makeImportTestProvider()
         let response = TestGenerationResponse(
             run_id: "run_alpha_stub_001",
@@ -110,8 +98,151 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertEqual(imported.first?.sourceRunID, "run_alpha_stub_001")
     }
 
-    func testLocalMissionProviderRejectsNonCandidateGenerationStatus() throws {
-        let mission = try loadLithuanianAlphaMission()
+    @MainActor
+    func testGraphNativeStarterPackBuildsSixImportableEightSongMissions() throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark_graph_native_starter_tests", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let surveyPersistenceStore = SurveyPersistenceStore(baseDirectoryURL: tempDirectory)
+        let surveyStore = SurveyStore(persistenceStore: surveyPersistenceStore)
+        surveyStore.prepareRequiredAlphaIntake()
+        surveyStore.goTo(.artistPage1)
+        XCTAssertNotNil(surveyStore.currentPage)
+
+        let builder = SurveyEvidenceExportBuilder(persistenceStore: surveyPersistenceStore)
+        let responseData = try builder.makeGraphNativeStarterMissionBatchResponseData(
+            testerAlias: "unit-alpha",
+            requestedMissionCount: 6,
+            sourceAppVersion: "test",
+            sourceAppBuild: "test"
+        )
+        let provider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+
+        let imported = try provider.importSupabaseMissionBatchResponseData(responseData)
+        let items = imported.flatMap(\.mission.items)
+
+        XCTAssertEqual(imported.count, 6)
+        XCTAssertEqual(items.count, 48)
+        XCTAssertTrue(imported.allSatisfy { $0.mission.items.count == 8 })
+        XCTAssertEqual(items.map(\.itemID).count, Set(items.map(\.itemID)).count)
+        XCTAssertEqual(items.compactMap(\.routeDisplayIdentityKey).count, items.count)
+        XCTAssertEqual(items.compactMap(\.routeDisplayIdentityKey).count, Set(items.compactMap(\.routeDisplayIdentityKey)).count)
+        XCTAssertTrue(items.allSatisfy { $0.appleMusicResolution.status == .unresolved })
+        XCTAssertTrue(imported.allSatisfy { $0.sourceRunID?.hasPrefix("local_graph_native_starter_pack_") == true })
+    }
+
+    @MainActor
+    func testSurveyOpportunityBatchBuildsResolvedSurveyDerivedMissions() throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("cartenza_survey_opportunity_tests", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let surveyPersistenceStore = SurveyPersistenceStore(baseDirectoryURL: tempDirectory)
+        let surveyStore = SurveyStore(persistenceStore: surveyPersistenceStore)
+        surveyStore.prepareRequiredAlphaIntake()
+        var ratedSongDisplayKeys = Set<String>()
+
+        let requiredSteps: [SurveyStep] = [
+            .artistPage1,
+            .artistPage2,
+            .artistPage3,
+            .artistPage4,
+            .albumPage1,
+            .albumPage2,
+            .songPage1,
+            .songPage2,
+            .songPage3,
+            .songPage4
+        ]
+
+        for step in requiredSteps {
+            surveyStore.goTo(step)
+            let page = try XCTUnwrap(surveyStore.currentPage)
+            for (index, item) in page.items.enumerated() {
+                let state: SurveySignalState
+                switch index % 6 {
+                case 0:
+                    state = .favorite
+                case 1:
+                    state = .like
+                case 2:
+                    state = .fine
+                case 3, 4:
+                    state = .notForMe
+                default:
+                    state = .dontKnow
+                }
+                surveyStore.setState(state, for: item)
+                if item.kind == .song {
+                    ratedSongDisplayKeys.insert(Self.routeDisplayIdentityKey(title: item.title, artist: item.subtitle ?? ""))
+                }
+            }
+        }
+
+        let builder = SurveyEvidenceExportBuilder(persistenceStore: surveyPersistenceStore)
+        let responseData = try builder.makeSurveyOpportunityMissionBatchResponseData(
+            testerAlias: "unit-alpha",
+            requestedMissionCount: 6,
+            sourceAppVersion: "test",
+            sourceAppBuild: "test"
+        )
+        let responseObject = try XCTUnwrap(SupabaseJSON.object(from: responseData) as? [String: Any])
+        let selectionAudit = try XCTUnwrap(responseObject["selection_audit"] as? [String: Any])
+        let auditMissions = try XCTUnwrap(selectionAudit["missions"] as? [[String: Any]])
+        let firstAuditMission = try XCTUnwrap(auditMissions.first)
+        let firstAuditItems = try XCTUnwrap(firstAuditMission["selected_route_items"] as? [[String: Any]])
+        let firstCandidateScreen = try XCTUnwrap(firstAuditMission["candidate_screen"] as? [String: Any])
+
+        XCTAssertEqual(selectionAudit["schema_version"] as? String, "cartenza.local_mission_selection_audit.v0.1")
+        XCTAssertEqual(selectionAudit["no_openai_call"] as? Bool, true)
+        XCTAssertEqual(selectionAudit["no_supabase_generation_call"] as? Bool, true)
+        XCTAssertEqual(selectionAudit["no_static_public_profile_fixture"] as? Bool, true)
+        XCTAssertEqual(selectionAudit["selected_mission_count"] as? Int, 6)
+        XCTAssertEqual(selectionAudit["selected_route_item_count"] as? Int, 36)
+        XCTAssertEqual(auditMissions.count, 6)
+        XCTAssertEqual(firstAuditItems.count, 6)
+        XCTAssertGreaterThan(firstCandidateScreen["eligible_count"] as? Int ?? 0, 0)
+        XCTAssertTrue(firstAuditItems.allSatisfy { item in
+            let appleMusic = item["apple_music"] as? [String: Any]
+            return appleMusic?["status"] as? String == "resolved" &&
+                appleMusic?["catalog_id"] as? String != nil &&
+                item["canonical_song_recording_id"] as? String != nil &&
+                item["score"] as? Double != nil
+        })
+
+        let provider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+
+        let imported = try provider.importSupabaseMissionBatchResponseData(responseData)
+        let missions = imported.map(\.mission)
+        let items = missions.flatMap(\.items)
+
+        XCTAssertEqual(imported.count, 6)
+        XCTAssertEqual(items.count, 36)
+        XCTAssertTrue(missions.allSatisfy { $0.alphaAppImportStatus == .appImportReady })
+        XCTAssertTrue(missions.allSatisfy(\.isPlaybackReady))
+        XCTAssertTrue(items.allSatisfy { $0.appleMusicResolution.status == .resolved })
+        XCTAssertTrue(items.allSatisfy { $0.appleMusicResolution.catalogID?.isEmpty == false || $0.appleMusicResolution.catalogURL != nil })
+        XCTAssertEqual(items.map(\.itemID).count, Set(items.map(\.itemID)).count)
+        XCTAssertEqual(items.compactMap(\.routeDisplayIdentityKey).count, Set(items.compactMap(\.routeDisplayIdentityKey)).count)
+        XCTAssertTrue(items.allSatisfy { item in
+            !ratedSongDisplayKeys.contains(Self.routeDisplayIdentityKey(title: item.title, artist: item.artist))
+        })
+        XCTAssertTrue(imported.allSatisfy { $0.sourceRunID?.hasPrefix("local_survey_opportunity_selection_") == true })
+    }
+
+    func testLocalMissionProviderImportsReviewNeededWhenAppValid() throws {
+        let mission = try loadSampleMission()
         let provider = try makeImportTestProvider()
         let response = TestGenerationResponse(
             run_id: "run_alpha_002",
@@ -120,15 +251,35 @@ final class MissionDecodingTests: XCTestCase {
         )
         let data = try JSONEncoder.missionTestEncoder.encode(response)
 
+        let imported = try provider.importSupabaseMissionBatchResponseData(data)
+
+        XCTAssertEqual(imported.count, 1)
+        XCTAssertEqual(imported.first?.mission.missionID, mission.missionID)
+        XCTAssertEqual(imported.first?.source, .generatedReviewed)
+        XCTAssertEqual(imported.first?.sourceRunID, "run_alpha_002")
+        XCTAssertTrue(imported.first?.importNote?.contains("review_needed") == true)
+        XCTAssertEqual(try provider.loadMissionCatalog().reviewedAssignments.count, 1)
+    }
+
+    func testLocalMissionProviderRejectsBlockedGenerationStatus() throws {
+        let mission = try loadSampleMission()
+        let provider = try makeImportTestProvider()
+        let response = TestGenerationResponse(
+            run_id: "run_alpha_blocked_001",
+            status: "blocked",
+            app_missions: [mission]
+        )
+        let data = try JSONEncoder.missionTestEncoder.encode(response)
+
         XCTAssertThrowsError(try provider.importSupabaseMissionBatchResponseData(data)) { error in
-            XCTAssertEqual(error as? MissionImportError, .blockedStatus("review_needed"))
+            XCTAssertEqual(error as? MissionImportError, .blockedStatus("blocked"))
         }
 
         XCTAssertTrue(try provider.loadMissionCatalog().reviewedAssignments.isEmpty)
     }
 
     func testMissionImportGateRejectsPreResolvedMissionEvidence() throws {
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let provider = try makeImportTestProvider()
         let data = try makeMissionDataWithFirstItemResolutionStatus(mission, status: "resolved")
 
@@ -142,7 +293,7 @@ final class MissionDecodingTests: XCTestCase {
     }
 
     func testMissionImportGateRequiresExpectedSignalAndPlayerCard() throws {
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let provider = try makeImportTestProvider()
         let data = try makeMissionDataWithFirstItemField(mission, field: "expected_test_signal", value: "")
 
@@ -155,8 +306,69 @@ final class MissionDecodingTests: XCTestCase {
         }
     }
 
+    func testMissionImportGateRejectsDuplicateDisplayIdentity() throws {
+        let mission = try loadSampleMission()
+        let provider = try makeImportTestProvider()
+        let data = try makeMissionDataWithDuplicateDisplayIdentity(mission)
+
+        XCTAssertThrowsError(try provider.importReviewedMissionData(data, source: .manualReviewed, importedAt: Date())) { error in
+            guard case .invalidMission(let reason) = error as? MissionImportError else {
+                XCTFail("Expected invalidMission import error, got \(error)")
+                return
+            }
+            XCTAssertTrue(reason.contains("duplicate display identity"))
+        }
+    }
+
+    func testMissionImportGateRejectsDuplicateRouteDisplayIdentityMetadata() throws {
+        let mission = try loadSampleMission()
+        let provider = try makeImportTestProvider()
+        let data = try makeMissionDataWithDuplicateRouteDisplayIdentity(mission)
+
+        XCTAssertThrowsError(try provider.importReviewedMissionData(data, source: .manualReviewed, importedAt: Date())) { error in
+            guard case .invalidMission(let reason) = error as? MissionImportError else {
+                XCTFail("Expected invalidMission import error, got \(error)")
+                return
+            }
+            XCTAssertTrue(reason.contains("duplicate display identity track:duplicate-explicit-route"))
+        }
+    }
+
+    func testLocalMissionProviderRejectsRouteItemAlreadyInAlphaBatch() throws {
+        let mission = try loadSampleMission()
+        let provider = try makeImportTestProvider()
+        let firstResponse = TestGenerationResponse(
+            run_id: "run_alpha_batch_001",
+            status: "app_import_candidate",
+            app_missions: [mission]
+        )
+        let firstData = try JSONEncoder.missionTestEncoder.encode(firstResponse)
+        let imported = try provider.importSupabaseMissionBatchResponseData(firstData)
+        let secondResponse = TestGenerationResponse(
+            run_id: "run_alpha_batch_002",
+            status: "app_import_candidate",
+            app_missions: [mission]
+        )
+        let secondData = try JSONEncoder.missionTestEncoder.encode(secondResponse)
+
+        XCTAssertThrowsError(
+            try provider.importSupabaseMissionBatchResponseData(
+                secondData,
+                importedAt: Date(),
+                excludingRouteItemIDs: MissionImportGate.routeItemIDs(in: imported),
+                excludingRouteDisplayIdentityKeys: MissionImportGate.routeDisplayIdentityKeys(in: imported)
+            )
+        ) { error in
+            guard case .invalidMission(let reason) = error as? MissionImportError else {
+                XCTFail("Expected invalidMission import error, got \(error)")
+                return
+            }
+            XCTAssertTrue(reason.contains("already exists in the Alpha mission batch"))
+        }
+    }
+
     func testLocalMissionProviderResetClearsReviewedAssignments() throws {
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let provider = try makeImportTestProvider()
         let data = try JSONEncoder.missionTestEncoder.encode(mission)
 
@@ -171,8 +383,7 @@ final class MissionDecodingTests: XCTestCase {
     @MainActor
     func testAppModelStartsMissionlessWhenNoReviewedOrDebugAssignments() {
         let provider = LocalMissionProvider(
-            reviewedMissionStore: .disabled,
-            includeDebugBundledMissions: false
+            reviewedMissionStore: .disabled
         )
         let appModel = AppModel(
             sessionPersistenceStore: .disabled,
@@ -196,8 +407,7 @@ final class MissionDecodingTests: XCTestCase {
         }
 
         let provider = LocalMissionProvider(
-            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory),
-            includeDebugBundledMissions: false
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
         )
         let persistenceStore = SessionPersistenceStore(baseDirectoryURL: tempDirectory)
         let exportStore = ExportFileStore(baseDirectoryURL: tempDirectory)
@@ -211,7 +421,7 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertNil(appModel.mission)
         XCTAssertTrue(appModel.availableMissions.isEmpty)
 
-        let mission = try loadLithuanianAlphaMission()
+        let mission = try loadSampleMission()
         let response = TestGenerationResponse(
             run_id: "run_alpha_smoke_001",
             status: "app_import_candidate",
@@ -282,6 +492,66 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertEqual(resolution.storefront, "dev_stub")
     }
 
+    func testLiveResolverUsesCanonicalAppleMusicIndexBeforeCatalogSearch() async throws {
+        let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-29T12:00:00Z"))
+        let item = MissionItem(
+            itemID: "ITEM_ALPHA_TRACK_TEST",
+            sequence: 1,
+            itemType: .track,
+            artist: "Test Artist",
+            title: "Test Song",
+            album: nil,
+            year: 2026,
+            whyIncluded: "Test fixture.",
+            expectedTestSignal: "Index lookup should resolve before search.",
+            playerCard: MissionPlayerCard(flipSide: MissionPlayerCardFlipSide(songHypothesis: "Index fixture.", detail: nil)),
+            feedbackChipSets: [
+                "hit": [FeedbackChipOption(tagID: "hit_test", label: "Hit", description: nil)],
+                "partial": [FeedbackChipOption(tagID: "partial_test", label: "Partial", description: nil)],
+                "miss": [FeedbackChipOption(tagID: "miss_test", label: "Miss", description: nil)]
+            ],
+            appleMusicResolution: .unresolved(),
+            candidateID: "survey-test-song",
+            routeCandidateKey: "route:track:song_recording:test-artist-test-song",
+            routeBatchDedupeKey: "song_recording:test-artist-test-song",
+            routeDisplayIdentityKey: "track:test-artist:test-song",
+            notes: nil
+        )
+        let index = CanonicalAppleMusicCatalogIndex(entries: [
+            CanonicalAppleMusicCatalogIndex.Entry(
+                entryID: "graph_song:song|test artist|test song",
+                sourceType: "graph_song",
+                sourceRef: "song|test artist|test song",
+                itemType: "track",
+                appleCatalogID: "123456789",
+                appleResourceType: "song",
+                appleAlbumID: "987654321",
+                appleCatalogURL: "https://music.apple.com/us/album/example/987654321?i=123456789",
+                storefront: "us",
+                resolvedTitle: "Test Song",
+                resolvedArtist: "Test Artist",
+                resolvedAlbum: "Test Album",
+                confidence: 0.95,
+                matchStatus: "verified",
+                matchBasis: "unit_test",
+                priority: 1000,
+                matchKeys: [
+                    "route_candidate_key:route:track:song_recording:test-artist-test-song",
+                    "route_display_identity_key:track:test-artist:test-song"
+                ]
+            )
+        ])
+
+        let resolution = try await MusicKitCatalogSearchService(canonicalIndex: index).resolve(item: item, at: now)
+
+        XCTAssertEqual(resolution.status, .resolved)
+        XCTAssertEqual(resolution.catalogID, "123456789")
+        XCTAssertEqual(resolution.catalogURL?.absoluteString, "https://music.apple.com/us/album/example/987654321?i=123456789")
+        XCTAssertEqual(resolution.resolver, .cached)
+        XCTAssertEqual(resolution.reason, "canonical_apple_music_catalog_index_v1:graph_song:verified")
+        XCTAssertEqual(resolution.resolvedAt, now)
+    }
+
     func testStubPlaybackRequiresResolvedResolution() async throws {
         let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-05-17T12:00:00Z"))
         let playbackService = StubMusicPlaybackService()
@@ -322,27 +592,262 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertEqual(stopped.endedAt, stoppedAt)
         XCTAssertEqual(stopped.durationSeconds, 30)
     }
+
+    func testAlphaApprovedMissionFixturesDecodeAndAdaptForLocalImport() throws {
+        let data = try loadAlphaMissionDeliveryFixture("approved_app_import_candidates_v0_2")
+        let payloads = try AlphaAppImportAdapter.decodeCandidatePayloads(from: data)
+        let missions = try payloads.map(AlphaAppImportAdapter.makeMission)
+
+        XCTAssertEqual(payloads.count, 10)
+        XCTAssertEqual(missions.count, 10)
+        XCTAssertTrue(missions.allSatisfy { $0.alphaAppImportStatus == .appImportCandidate })
+        XCTAssertTrue(missions.allSatisfy { $0.items.count == 6 })
+        XCTAssertTrue(missions.allSatisfy { !$0.isPlaybackReady })
+
+        let missionTypes = Set(missions.map(\.missionType))
+        XCTAssertTrue(missionTypes.contains(.contextDependenceTest))
+        XCTAssertTrue(missionTypes.contains(.boundaryTest))
+        XCTAssertTrue(missionTypes.contains(.bridgeTest))
+        XCTAssertTrue(missionTypes.contains(.archetypeDepthTest))
+
+        let firstMission = try XCTUnwrap(missions.first)
+        XCTAssertEqual(firstMission.items.map(\.sequence), [1, 2, 3, 4, 5, 6])
+        XCTAssertEqual(firstMission.items.compactMap(\.alphaRouteRole).count, 6)
+        XCTAssertTrue(firstMission.items.allSatisfy { $0.alphaResolutionStatus == .candidate })
+        XCTAssertTrue(firstMission.items.allSatisfy { $0.appleMusicResolution.status == .candidate })
+        XCTAssertNotNil(firstMission.brief)
+        XCTAssertNotNil(firstMission.whyThisMissionNow)
+        XCTAssertNotNil(firstMission.sourceTraceSummary)
+    }
+
+    func testAlphaReviseAndRejectedFixturesAreIgnoredByNormalLocalImport() throws {
+        let reviseData = try loadAlphaMissionDeliveryFixture("revise_needed_v0_2")
+        let rejectedData = try loadAlphaMissionDeliveryFixture("rejected_v0_2")
+
+        XCTAssertTrue(try AlphaAppImportAdapter.decodeCandidatePayloads(from: reviseData).isEmpty)
+        XCTAssertTrue(try AlphaAppImportAdapter.decodeCandidatePayloads(from: rejectedData).isEmpty)
+    }
+
+    func testLocalMissionProviderImportsApprovedAlphaCandidatesAsDebugFixtures() throws {
+        let provider = try makeImportTestProvider()
+        let data = try loadAlphaMissionDeliveryFixture("approved_app_import_candidates_v0_2")
+
+        let imported = try provider.importAlphaAppImportCandidateData(data, importedAt: Date())
+        let catalog = try provider.loadMissionCatalog()
+
+        XCTAssertEqual(imported.count, 10)
+        XCTAssertEqual(catalog.reviewedAssignments.count, 10)
+        XCTAssertTrue(imported.allSatisfy { $0.source == .localAlphaFixture })
+        XCTAssertTrue(imported.allSatisfy { $0.mission.alphaAppImportStatus == .appImportCandidate })
+        XCTAssertTrue(imported.allSatisfy { !$0.mission.isPlaybackReady })
+    }
+
+    func testAlphaFeedbackOperationMappingPreservesMissionOkAsWaypoint() {
+        XCTAssertEqual(AlphaFeedbackMapping.operation(for: .hit), .strongPositive)
+        XCTAssertEqual(AlphaFeedbackMapping.operation(for: .partial), .qualifiedPositive)
+        XCTAssertEqual(AlphaFeedbackMapping.operation(for: .okShelf), .keepWaypoint)
+        XCTAssertEqual(AlphaFeedbackMapping.operation(for: .miss), .negative)
+        XCTAssertEqual(AlphaFeedbackMapping.operation(for: .skipped), .skipOrNoSignal)
+        XCTAssertNil(AlphaFeedbackMapping.operation(for: .unresolved))
+        XCTAssertEqual(AlphaFeedbackMapping.missingPrimaryUIOperations, [.issueWrongVersion, .issueUnavailable])
+    }
+
+    func testAlphaCandidateItemsBlockPlaybackReadyUntilResolved() throws {
+        let candidateData = try loadAlphaMissionDeliveryFixture("approved_app_import_candidates_v0_2")
+        let candidatePayload = try XCTUnwrap(try AlphaAppImportAdapter.decodeCandidatePayloads(from: candidateData).first)
+        let candidateMission = try AlphaAppImportAdapter.makeMission(from: candidatePayload)
+
+        XCTAssertFalse(candidateMission.isPlaybackReady)
+        XCTAssertTrue(candidateMission.items.allSatisfy { $0.appleMusicResolution.status == .candidate })
+
+        let resolvedData = try makeResolvedAlphaFixtureData(from: candidateData)
+        let resolvedPayload = try XCTUnwrap(try AlphaAppImportAdapter.decodeCandidatePayloads(from: resolvedData).first)
+        let resolvedMission = try AlphaAppImportAdapter.makeMission(from: resolvedPayload)
+
+        XCTAssertTrue(resolvedMission.isPlaybackReady)
+        XCTAssertTrue(resolvedMission.items.allSatisfy { $0.appleMusicResolution.status == .resolved })
+    }
+
+    func testAlphaAppImportReadyUATFixturesDecodeAsPlaybackReady() throws {
+        let readyData = try loadAlphaUATFixture("app_import_ready_alpha_uat_fixtures_v0_2")
+        let candidatePayloads = try AlphaAppImportAdapter.decodeCandidatePayloads(from: readyData)
+        let readyPayloads = try AlphaAppImportAdapter.decodeImportablePayloads(from: readyData)
+        let missions = try readyPayloads.map(AlphaAppImportAdapter.makeMission)
+
+        XCTAssertTrue(candidatePayloads.isEmpty)
+        XCTAssertEqual(readyPayloads.count, 6)
+        XCTAssertTrue(readyPayloads.allSatisfy(\.isApprovedReady))
+        XCTAssertTrue(missions.allSatisfy { $0.alphaAppImportStatus == .appImportReady })
+        XCTAssertTrue(missions.allSatisfy(\.isPlaybackReady))
+        XCTAssertTrue(missions.allSatisfy { $0.items.count == 6 })
+        XCTAssertTrue(missions.flatMap(\.items).allSatisfy { item in
+            item.appleMusicResolution.status == .resolved &&
+                (item.appleMusicResolution.catalogID?.isEmpty == false || item.appleMusicResolution.catalogURL != nil)
+        })
+        XCTAssertTrue(missions.flatMap(\.items).allSatisfy { $0.alphaRouteRole != nil })
+
+        let missionTypes = Set(missions.map(\.missionType))
+        XCTAssertTrue(missionTypes.contains(.contextDependenceTest))
+        XCTAssertTrue(missionTypes.contains(.boundaryTest))
+        XCTAssertTrue(missionTypes.contains(.archetypeDepthTest))
+    }
+
+    func testAlphaUATFixturesExcludeSuspectMixedSourceContextRoutes() throws {
+        let readyData = try loadAlphaUATFixture("app_import_ready_alpha_uat_fixtures_v0_2")
+        let missions = try AlphaAppImportAdapter.decodeImportablePayloads(from: readyData)
+        let missionIDs = Set(missions.map(\.missionID))
+
+        XCTAssertFalse(missionIDs.contains("alpha-mission-v0-2-009-phase1g-public-profile-06-song-heavy-200-context-dependence-test-mission-type-native-policy-v0-1"))
+        XCTAssertFalse(missionIDs.contains("alpha-mission-v0-2-010-phase1g-public-profile-06-song-heavy-200-context-dependence-test-diagnostic-biased-policy-v0-1"))
+    }
+
+    func testLocalMissionProviderImportsResolvedUATFixturesAsPlaybackReady() throws {
+        let provider = try makeImportTestProvider()
+        let data = try loadAlphaUATFixture("app_import_ready_alpha_uat_fixtures_v0_2")
+
+        let imported = try provider.importAlphaAppImportCandidateData(data, importedAt: Date())
+        let catalog = try provider.loadMissionCatalog()
+
+        XCTAssertEqual(imported.count, 6)
+        XCTAssertEqual(catalog.reviewedAssignments.count, 6)
+        XCTAssertTrue(imported.allSatisfy { $0.source == .localAlphaFixture })
+        XCTAssertTrue(imported.allSatisfy { $0.mission.alphaAppImportStatus == .appImportReady })
+        XCTAssertTrue(imported.allSatisfy { $0.mission.isPlaybackReady })
+        XCTAssertNotNil(imported.first?.mission.items.first?.appleMusicResolution.catalogID)
+        XCTAssertNotNil(imported.first?.mission.items.first?.appleMusicResolution.catalogURL)
+    }
+
+    @MainActor
+    func testResolvedUATFixtureCanBeSelectedForPlaybackSmoke() throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark_alpha_uat_fixture_tests", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let provider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+        let appModel = AppModel(
+            sessionPersistenceStore: .disabled,
+            missionProvider: provider
+        )
+
+        let data = try loadAlphaUATFixture("app_import_ready_alpha_uat_fixtures_v0_2")
+        try provider.importAlphaAppImportCandidateData(data, importedAt: Date())
+        appModel.loadMissionLibrary()
+
+        let selectedMission = try XCTUnwrap(appModel.mission)
+        let selectedItem = try XCTUnwrap(appModel.selectedItem)
+        XCTAssertTrue(selectedMission.isPlaybackReady)
+        XCTAssertEqual(selectedItem.appleMusicResolution.status, .resolved)
+        XCTAssertNotNil(selectedItem.appleMusicResolution.catalogID)
+    }
+
+    @MainActor
+    func testAppModelClearsLegacyUATFixturesWhenSurveyDerivedBuildDisablesFixtureControls() throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("cartenza_alpha_uat_fixture_migration_tests", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let provider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+        let persistenceStore = SessionPersistenceStore(baseDirectoryURL: tempDirectory)
+        let data = try loadAlphaUATFixture("app_import_ready_alpha_uat_fixtures_v0_2")
+        try provider.importAlphaAppImportCandidateData(data, importedAt: Date())
+
+        let appModel = AppModel(
+            sessionPersistenceStore: persistenceStore,
+            missionProvider: provider,
+            shouldClearLegacyAlphaUATFixturesOnLoad: true
+        )
+        appModel.loadMissionLibrary()
+
+        XCTAssertEqual(appModel.missionLoadState, .loaded)
+        XCTAssertTrue(appModel.availableMissions.isEmpty)
+        XCTAssertNil(appModel.mission)
+        XCTAssertTrue(try provider.loadMissionCatalog().reviewedAssignments.isEmpty)
+        XCTAssertTrue(appModel.lastActionMessage?.contains("Cleared prior static UAT fixture missions") == true)
+    }
+
+    @MainActor
+    func testAppModelResolvedUATFixtureImportReplacesPriorAssignmentsAndPersistsSelection() throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("waymark_alpha_uat_fixture_replace_tests", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let provider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+        let persistenceStore = SessionPersistenceStore(baseDirectoryURL: tempDirectory)
+        let appModel = AppModel(
+            sessionPersistenceStore: persistenceStore,
+            missionProvider: provider
+        )
+        let oldMission = try loadSampleMission()
+        let oldData = try JSONEncoder.missionTestEncoder.encode(oldMission)
+        try provider.importReviewedMissionData(oldData, source: .manualReviewed)
+
+        appModel.loadMissionLibrary()
+        XCTAssertEqual(appModel.availableMissions.map(\.missionID), [oldMission.missionID])
+
+        appModel.importLocalAlphaAppImportReadyUATFixtures()
+
+        XCTAssertEqual(appModel.availableMissions.count, 6)
+        XCTAssertFalse(appModel.availableMissions.contains { $0.missionID == oldMission.missionID })
+        XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.alphaAppImportStatus == .appImportReady })
+        XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.items.count == 6 })
+        XCTAssertTrue(appModel.availableMissions.allSatisfy(\.isPlaybackReady))
+
+        let persistedLibrary = persistenceStore.load()
+        let selectedMissionID = try XCTUnwrap(appModel.mission?.missionID)
+        XCTAssertEqual(persistedLibrary.activeMissionID, selectedMissionID)
+        XCTAssertNotNil(persistedLibrary.sessionsByMissionID[selectedMissionID])
+    }
+
+    func testBlockedAlphaFixtureItemCannotImportAsPlaybackReady() throws {
+        let candidateData = try loadAlphaMissionDeliveryFixture("approved_app_import_candidates_v0_2")
+        let blockedData = try makeBlockedAlphaFixtureData(from: candidateData)
+        let blockedPayload = try XCTUnwrap(try AlphaAppImportAdapter.decodeImportablePayloads(from: blockedData).first)
+        let blockedMission = try AlphaAppImportAdapter.makeMission(from: blockedPayload)
+
+        XCTAssertFalse(blockedMission.isPlaybackReady)
+        XCTAssertEqual(blockedMission.items.first?.appleMusicResolution.status, .blocked)
+
+        let provider = try makeImportTestProvider()
+        XCTAssertThrowsError(try provider.importAlphaAppImportCandidateData(blockedData, importedAt: Date())) { error in
+            guard case .invalidMission(let reason) = error as? MissionImportError else {
+                XCTFail("Expected invalidMission import error, got \(error)")
+                return
+            }
+            XCTAssertTrue(reason.contains("must enter the app unresolved"))
+        }
+    }
+
+    private static func routeDisplayIdentityKey(title: String, artist: String) -> String {
+        "track:\(normalizedRoutePart(artist)):\(normalizedRoutePart(title))"
+    }
+
+    private static func normalizedRoutePart(_ value: String) -> String {
+        value
+            .folding(options: [.caseInsensitive, .diacriticInsensitive], locale: Locale(identifier: "en_US_POSIX"))
+            .lowercased()
+            .components(separatedBy: CharacterSet.alphanumerics.inverted)
+            .filter { !$0.isEmpty }
+            .joined(separator: "-")
+    }
 }
 
 func loadSampleMission(file: StaticString = #filePath, line: UInt = #line) throws -> Mission {
     try loadMissionResource("sample_mission_love_tributaries_v0_2", file: file, line: line)
-}
-
-func loadLithuanianAlphaMission(file: StaticString = #filePath, line: UInt = #line) throws -> Mission {
-    try loadMissionResource("sample_mission_lithuanian_discovery_v0_3_alpha", file: file, line: line)
-}
-
-func loadPersonalMissionPack(file: StaticString = #filePath, line: UInt = #line) throws -> [Mission] {
-    let bundle = Bundle(for: TestBundleMarker.self)
-    guard let url = bundle.url(forResource: "waymark_matt_10_personal_missions_v0_1", withExtension: "json") else {
-        XCTFail("Missing waymark_matt_10_personal_missions_v0_1 test resource", file: file, line: line)
-        throw TestResourceError.missingSampleMission
-    }
-
-    let data = try Data(contentsOf: url)
-    let decoder = JSONDecoder()
-    decoder.dateDecodingStrategy = .iso8601
-    return try decoder.decode([Mission].self, from: data)
 }
 
 private func loadMissionResource(_ resourceName: String, file: StaticString = #filePath, line: UInt = #line) throws -> Mission {
@@ -358,6 +863,65 @@ private func loadMissionResource(_ resourceName: String, file: StaticString = #f
     return try decoder.decode(Mission.self, from: data)
 }
 
+private func loadAlphaMissionDeliveryFixture(_ resourceName: String) throws -> Data {
+    let repoRoot = URL(fileURLWithPath: #filePath)
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+    let url = repoRoot
+        .appendingPathComponent("data/product_contracts/alpha_mission_delivery_v0_2/fixtures/golden", isDirectory: true)
+        .appendingPathComponent("\(resourceName).json")
+    return try Data(contentsOf: url)
+}
+
+private func loadAlphaUATFixture(_ resourceName: String) throws -> Data {
+    let repoRoot = URL(fileURLWithPath: #filePath)
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+    let url = repoRoot
+        .appendingPathComponent("data/product_contracts/alpha_mission_delivery_v0_2/fixtures/uat", isDirectory: true)
+        .appendingPathComponent("\(resourceName).json")
+    return try Data(contentsOf: url)
+}
+
+private func makeResolvedAlphaFixtureData(from data: Data) throws -> Data {
+    guard var missions = try JSONSerialization.jsonObject(with: data) as? [[String: Any]],
+          !missions.isEmpty,
+          var route = missions[0]["route"] as? [[String: Any]] else {
+        throw TestResourceError.malformedMissionJSON
+    }
+
+    for index in route.indices {
+        route[index]["resolution_status"] = "resolved"
+        route[index]["apple_music_id"] = "alpha_resolved_\(index + 1)"
+        route[index]["apple_music_url"] = "https://music.apple.com/us/song/alpha-resolved-\(index + 1)"
+    }
+    missions[0]["route"] = route
+
+    return try JSONSerialization.data(withJSONObject: [missions[0]], options: [.sortedKeys])
+}
+
+private func makeBlockedAlphaFixtureData(from data: Data) throws -> Data {
+    guard var missions = try JSONSerialization.jsonObject(with: data) as? [[String: Any]],
+          !missions.isEmpty,
+          var route = missions[0]["route"] as? [[String: Any]],
+          !route.isEmpty else {
+        throw TestResourceError.malformedMissionJSON
+    }
+
+    route[0]["resolution_status"] = "blocked"
+    route[0]["apple_music_id"] = nil
+    route[0]["apple_music_url"] = nil
+    missions[0]["route"] = route
+
+    return try JSONSerialization.data(withJSONObject: [missions[0]], options: [.sortedKeys])
+}
+
+private func loadMissionFromData(_ data: Data) throws -> Mission {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
+    return try decoder.decode(Mission.self, from: data)
+}
+
 private func makeImportTestProvider() throws -> LocalMissionProvider {
     let directoryURL = FileManager.default.temporaryDirectory
         .appendingPathComponent("waymark_import_provider_tests", isDirectory: true)
@@ -365,8 +929,7 @@ private func makeImportTestProvider() throws -> LocalMissionProvider {
     try FileManager.default.createDirectory(at: directoryURL, withIntermediateDirectories: true)
 
     return LocalMissionProvider(
-        reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: directoryURL),
-        includeDebugBundledMissions: false
+        reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: directoryURL)
     )
 }
 
@@ -394,6 +957,56 @@ private func makeMissionDataWithFirstItemField(_ mission: Mission, field: String
     }
 
     items[0][field] = value
+    object["items"] = items
+    return try JSONSerialization.data(withJSONObject: object)
+}
+
+private func makeMissionDataWithFirstItemRouteIdentity(
+    _ mission: Mission,
+    candidateID: String,
+    routeCandidateKey: String,
+    routeBatchDedupeKey: String,
+    routeDisplayIdentityKey: String
+) throws -> Data {
+    let data = try JSONEncoder.missionTestEncoder.encode(mission)
+    guard var object = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+          var items = object["items"] as? [[String: Any]],
+          !items.isEmpty else {
+        throw TestResourceError.malformedMissionJSON
+    }
+
+    items[0]["candidate_id"] = candidateID
+    items[0]["route_candidate_key"] = routeCandidateKey
+    items[0]["route_batch_dedupe_key"] = routeBatchDedupeKey
+    items[0]["route_display_identity_key"] = routeDisplayIdentityKey
+    object["items"] = items
+    return try JSONSerialization.data(withJSONObject: object)
+}
+
+private func makeMissionDataWithDuplicateDisplayIdentity(_ mission: Mission) throws -> Data {
+    let data = try JSONEncoder.missionTestEncoder.encode(mission)
+    guard var object = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+          var items = object["items"] as? [[String: Any]],
+          items.count > 1 else {
+        throw TestResourceError.malformedMissionJSON
+    }
+
+    items[1]["artist"] = items[0]["artist"]
+    items[1]["title"] = items[0]["title"]
+    object["items"] = items
+    return try JSONSerialization.data(withJSONObject: object)
+}
+
+private func makeMissionDataWithDuplicateRouteDisplayIdentity(_ mission: Mission) throws -> Data {
+    let data = try JSONEncoder.missionTestEncoder.encode(mission)
+    guard var object = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+          var items = object["items"] as? [[String: Any]],
+          items.count > 1 else {
+        throw TestResourceError.malformedMissionJSON
+    }
+
+    items[0]["route_display_identity_key"] = "track:duplicate-explicit-route"
+    items[1]["route_display_identity_key"] = "track:duplicate-explicit-route"
     object["items"] = items
     return try JSONSerialization.data(withJSONObject: object)
 }
@@ -429,14 +1042,23 @@ struct TestMissionProvider: MissionProviding {
     }
 
     func loadMissionCatalog() throws -> MissionCatalog {
-        MissionCatalog(reviewedAssignments: assignments, debugAssignments: [])
+        MissionCatalog(reviewedAssignments: assignments)
     }
 
     func importReviewedMissionData(_ data: Data, source: MissionAssignmentSource, importedAt: Date) throws -> [MissionAssignment] {
         assignments
     }
 
-    func importSupabaseMissionBatchResponseData(_ data: Data, importedAt: Date) throws -> [MissionAssignment] {
+    func importAlphaAppImportCandidateData(_ data: Data, importedAt: Date) throws -> [MissionAssignment] {
+        assignments
+    }
+
+    func importSupabaseMissionBatchResponseData(
+        _ data: Data,
+        importedAt: Date,
+        excludingRouteItemIDs: Set<String>,
+        excludingRouteDisplayIdentityKeys: Set<String>
+    ) throws -> [MissionAssignment] {
         assignments
     }
 

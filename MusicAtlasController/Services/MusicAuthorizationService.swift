@@ -5,7 +5,7 @@ import Combine
 import MusicKit
 #endif
 
-struct MusicAuthorizationSnapshot {
+struct MusicAuthorizationSnapshot: Equatable {
     let status: String
     let detail: String
     let canRequestAuthorization: Bool
@@ -17,7 +17,7 @@ struct MusicAuthorizationSnapshot {
     )
 }
 
-struct MusicEnvironmentSnapshot {
+struct MusicEnvironmentSnapshot: Equatable {
     let status: String
     let detail: String
     let storefront: String?

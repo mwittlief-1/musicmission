@@ -1,0 +1,58 @@
+{
+  "artifact": "alpha_candidate_blocklist",
+  "version": "alpha_v0",
+  "status": "active_overlay_for_alpha_consumable_layer",
+  "purpose": "Block active source-surface candidates from app/local Alpha use when the repaired graph source remains useful for QA but is unsafe for default Survey, starter Atlas, Mission Generation, Supabase active rows, OpenAI prompts, or MusicKit auto-resolution.",
+  "blocklist": [
+    {
+      "block_id": "alpha-block-album-robin-s-show-me-love",
+      "entity_ref": "album:robin-s-show-me-love",
+      "object_type": "album",
+      "canonical_entity_id": "robin-s-show-me-love",
+      "source_file": "data/canonical_graph/normalization_pass_2/survey_album_candidates_v0_2.json",
+      "source_bucket": "page2_adaptive",
+      "source_candidate_id": "survey-f11-album-robin-s-show-me-love-081",
+      "reason": "canonical_id_collision_with_quarantined_song_recording_mix_edit_risk",
+      "source_quarantine_ref": "song_recording:robin-s-show-me-love",
+      "blocked_surfaces": [
+        "survey_display",
+        "starter_atlas",
+        "default_mission_generation",
+        "supabase_active_candidate",
+        "openai_prompt_payload",
+        "apple_music_auto_resolution"
+      ],
+      "allowed_surfaces": [
+        "qa_review",
+        "manual_resolver_review"
+      ],
+      "review_status": "approved_alpha_block"
+    },
+    {
+      "block_id": "alpha-block-album-various-artists-garden-state",
+      "entity_ref": "album:various-artists-garden-state",
+      "object_type": "album",
+      "canonical_entity_id": "various-artists-garden-state",
+      "source_file": "data/canonical_graph/normalization_pass_2/survey_album_candidates_v0_2.json",
+      "source_bucket": "page2_adaptive",
+      "source_candidate_id": "survey-f15-album-various-artists-garden-state-106",
+      "reason": "context_only_soundtrack_album_excluded_from_alpha_playback_and_apple_auto_resolution",
+      "source_quarantine_ref": "album:various-artists-garden-state",
+      "blocked_surfaces": [
+        "survey_display",
+        "starter_atlas",
+        "default_mission_generation",
+        "supabase_active_candidate",
+        "openai_prompt_payload",
+        "apple_music_auto_resolution",
+        "app_catalog_index"
+      ],
+      "allowed_surfaces": [
+        "qa_review",
+        "manual_resolver_review",
+        "historical_context_only"
+      ],
+      "review_status": "approved_alpha_block"
+    }
+  ]
+}

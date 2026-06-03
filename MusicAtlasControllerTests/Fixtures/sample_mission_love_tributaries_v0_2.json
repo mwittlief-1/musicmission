@@ -1,0 +1,228 @@
+{
+  "schema_version": "mission.v0.2",
+  "mission_id": "MIS_LOVE_TRIBUTARIES_V02_SPIKE",
+  "mission_title": "Love Tributaries \u2014 v0.2 Spike Sample",
+  "mission_version": "v0.2",
+  "created_at": "2026-05-16T13:00:00Z",
+  "mission_type": "track_probe",
+  "recommended_format": "play_items_in_order",
+  "hypothesis": "Test whether the app can execute a compact discovery mission built around psych-pop / power-pop with teeth.",
+  "inflation_warning": "This sample is for app-spike workflow validation. Do not update the Atlas automatically from these reactions.",
+  "success_bar": {
+    "minimum_items_to_resolve": 1,
+    "minimum_items_to_play": 1,
+    "minimum_reactions_required": 1,
+    "requires_physical_iphone": true,
+    "notes": "The v0.2 spike succeeds with one resolved/playable track, not full mission resolution."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_LOVE_A_HOUSE_IS_NOT_A_MOTEL",
+      "sequence": 1,
+      "item_type": "track",
+      "artist": "Love",
+      "title": "A House Is Not a Motel",
+      "album": "Forever Changes",
+      "year": 1967,
+      "why_included": "Anchor sample for Love as nervous psych-pop with guitar bite.",
+      "expected_test_signal": "Love node / psych-pop with teeth",
+      "player_card": {
+        "flip_side": {
+          "song_hypothesis": "This should test whether compact psych-pop can feel physical and melodic rather than decorative.",
+          "detail": "Use this as a neutral import-gate fixture, not as Atlas truth."
+        }
+      },
+      "feedback_chip_sets": {
+        "hit": [
+          {
+            "tag_id": "TAG_BODY_FORCE",
+            "label": "Body confirms",
+            "description": "The physical attack is part of why the track works."
+          }
+        ],
+        "partial": [
+          {
+            "tag_id": "TAG_NEEDS_SHARPER_EDGE",
+            "label": "Needs sharper edge",
+            "description": "The idea works, but the item may need more pressure."
+          }
+        ],
+        "ok_shelf": [
+          {
+            "tag_id": "TAG_USEFUL_CONTEXT",
+            "label": "Useful context",
+            "description": "The track is useful evidence without becoming a core anchor."
+          }
+        ],
+        "miss": [
+          {
+            "tag_id": "TAG_TOO_DECORATIVE",
+            "label": "Too decorative",
+            "description": "The song reads as style without enough body or need."
+          }
+        ]
+      },
+      "apple_music_resolution": {
+        "status": "unresolved",
+        "reason": "not_attempted"
+      },
+      "notes": "Representative spike item; app should resolve via Apple Music search."
+    },
+    {
+      "item_id": "ITEM_MOVE_I_CAN_HEAR_THE_GRASS_GROW",
+      "sequence": 2,
+      "item_type": "track",
+      "artist": "The Move",
+      "title": "I Can Hear the Grass Grow",
+      "album": "The Move",
+      "year": 1967,
+      "why_included": "Psych-pop with teeth / melodic pressure branch.",
+      "expected_test_signal": "Beatles mid-period craft with more edge",
+      "player_card": {
+        "flip_side": {
+          "song_hypothesis": "This should test whether melodic craft still lands when the arrangement is brighter and stranger.",
+          "detail": "Use this as a neutral import-gate fixture, not as Atlas truth."
+        }
+      },
+      "feedback_chip_sets": {
+        "hit": [
+          {
+            "tag_id": "TAG_MELODY_WITH_PRESSURE",
+            "label": "Melody has pressure",
+            "description": "The hook works because the performance keeps enough charge."
+          }
+        ],
+        "partial": [
+          {
+            "tag_id": "TAG_CRAFT_OVER_FORCE",
+            "label": "Craft over force",
+            "description": "The craft is visible, but the track may not hit physically enough."
+          }
+        ],
+        "ok_shelf": [
+          {
+            "tag_id": "TAG_CONTEXT_SHELF",
+            "label": "Context shelf",
+            "description": "The track helps map the lane without becoming a repeat target."
+          }
+        ],
+        "miss": [
+          {
+            "tag_id": "TAG_TOO_LIGHT",
+            "label": "Too light",
+            "description": "The brightness loses the pressure this route is testing."
+          }
+        ]
+      },
+      "apple_music_resolution": {
+        "status": "unresolved",
+        "reason": "not_attempted"
+      },
+      "notes": "May have multiple remaster/compilation matches."
+    },
+    {
+      "item_id": "ITEM_NAZZ_OPEN_MY_EYES",
+      "sequence": 3,
+      "item_type": "track",
+      "artist": "Nazz",
+      "title": "Open My Eyes",
+      "album": "Nazz",
+      "year": 1968,
+      "why_included": "Early power-pop / psych-pop with garage pressure.",
+      "expected_test_signal": "Nazz / Todd Rundgren pre-solo branch",
+      "player_card": {
+        "flip_side": {
+          "song_hypothesis": "This should test whether a sharper garage-pop edge makes the lane more usable.",
+          "detail": "Use this as a neutral import-gate fixture, not as Atlas truth."
+        }
+      },
+      "feedback_chip_sets": {
+        "hit": [
+          {
+            "tag_id": "TAG_GARAGE_PRESSURE",
+            "label": "Garage pressure works",
+            "description": "The rougher edge makes the melodic idea land."
+          }
+        ],
+        "partial": [
+          {
+            "tag_id": "TAG_HOOK_NEEDS_MORE_BODY",
+            "label": "Hook needs more body",
+            "description": "The hook is legible, but the track needs more weight."
+          }
+        ],
+        "ok_shelf": [
+          {
+            "tag_id": "TAG_RESOLVER_CONTEXT",
+            "label": "Resolver context",
+            "description": "Useful as a route/resolution check more than a taste claim."
+          }
+        ],
+        "miss": [
+          {
+            "tag_id": "TAG_GARAGE_NOT_ENOUGH",
+            "label": "Garage is not enough",
+            "description": "The roughness alone does not make the song compelling."
+          }
+        ]
+      },
+      "apple_music_resolution": {
+        "status": "unresolved",
+        "reason": "not_attempted"
+      },
+      "notes": "Useful resolver test because artist name may be confused with unrelated catalog entries."
+    },
+    {
+      "item_id": "ITEM_XTC_EARN_ENOUGH_FOR_US",
+      "sequence": 4,
+      "item_type": "track",
+      "artist": "XTC",
+      "title": "Earn Enough for Us",
+      "album": "Skylarking",
+      "year": 1986,
+      "why_included": "Later side-stream test for clever melodic craft with enough bite.",
+      "expected_test_signal": "XTC / accessible psych-pop-power-pop branch",
+      "player_card": {
+        "flip_side": {
+          "song_hypothesis": "This should test whether later clever pop craft keeps enough emotional and melodic force.",
+          "detail": "Use this as a neutral import-gate fixture, not as Atlas truth."
+        }
+      },
+      "feedback_chip_sets": {
+        "hit": [
+          {
+            "tag_id": "TAG_CRAFT_WITH_BITE",
+            "label": "Craft with bite",
+            "description": "The polish and construction still feel alive."
+          }
+        ],
+        "partial": [
+          {
+            "tag_id": "TAG_SMART_BUT_LIGHT",
+            "label": "Smart but light",
+            "description": "The construction is good, but the emotional hit may be thin."
+          }
+        ],
+        "ok_shelf": [
+          {
+            "tag_id": "TAG_USE_CASE_POP",
+            "label": "Use-case pop",
+            "description": "Works in context without demanding a stronger Atlas claim."
+          }
+        ],
+        "miss": [
+          {
+            "tag_id": "TAG_CLEVER_FOG",
+            "label": "Clever fog",
+            "description": "The craft gets in the way of direct signal."
+          }
+        ]
+      },
+      "apple_music_resolution": {
+        "status": "unresolved",
+        "reason": "not_attempted"
+      },
+      "notes": "Neutral app-spike mission item and good resolver test."
+    }
+  ]
+}

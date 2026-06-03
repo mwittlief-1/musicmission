@@ -47,6 +47,7 @@ const allowedArtifactTypes = new Set([
   "mission_generation_request_packet",
   "mission_generation_result",
   "mission_import_result",
+  "mission_selection_audit",
   "client_state_snapshot",
   "client_error_event",
 ]);

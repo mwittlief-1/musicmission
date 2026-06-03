@@ -4,6 +4,42 @@
   "title": "Music Atlas Reaction Session v0.2",
   "type": "object",
   "additionalProperties": false,
+  "$defs": {
+    "atlas_signal_candidate_chip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tag_id",
+        "label",
+        "primary_reaction_value"
+      ],
+      "properties": {
+        "tag_id": {
+          "type": "string",
+          "pattern": "^TAG_[A-Z0-9_]+$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primary_reaction_value": {
+          "type": "string",
+          "enum": [
+            "hit",
+            "partial",
+            "ok_shelf",
+            "miss",
+            "slop",
+            "skipped",
+            "unresolved"
+          ]
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  },
   "required": [
     "schema_version",
     "session_id",
@@ -519,6 +555,361 @@
         },
         "summary_note": {
           "type": "string"
+        }
+      }
+    },
+    "atlas_signal_candidate_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type",
+        "schema_version",
+        "candidate_status",
+        "promotion_state",
+        "writes_atlas_truth",
+        "canonical_graph_mutation_allowed",
+        "export_id",
+        "session_id",
+        "mission_id",
+        "generated_at",
+        "source_app_schema_version",
+        "source_app_version",
+        "is_physical_device",
+        "guardrails",
+        "candidates"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "atlas_signal_candidate_bundle"
+        },
+        "schema_version": {
+          "const": "atlas_signal_candidate_bundle.v0.1"
+        },
+        "candidate_status": {
+          "const": "ingestion_candidate"
+        },
+        "promotion_state": {
+          "const": "not_promoted"
+        },
+        "writes_atlas_truth": {
+          "const": false
+        },
+        "canonical_graph_mutation_allowed": {
+          "const": false
+        },
+        "export_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "session_id": {
+          "type": "string",
+          "pattern": "^SESS_[A-Z0-9_]+$"
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^MIS_[A-Z0-9_]+$"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_app_schema_version": {
+          "const": "reaction_session.v0.2"
+        },
+        "source_app_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "is_physical_device": {
+          "type": "boolean"
+        },
+        "guardrails": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "candidate_id",
+              "source",
+              "event_type",
+              "captured_at",
+              "mission_id",
+              "mission_item_id",
+              "export_id",
+              "subject_music_object_ref",
+              "evidence",
+              "review_state",
+              "promotion_state",
+              "writes_atlas_truth"
+            ],
+            "properties": {
+              "candidate_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "enum": [
+                  "mission_review"
+                ]
+              },
+              "event_type": {
+                "type": "string",
+                "enum": [
+                  "resolution",
+                  "playback",
+                  "skip",
+                  "reaction",
+                  "chip",
+                  "note",
+                  "review"
+                ]
+              },
+              "occurred_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "captured_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "mission_id": {
+                "type": "string",
+                "pattern": "^MIS_[A-Z0-9_]+$"
+              },
+              "mission_item_id": {
+                "type": "string",
+                "pattern": "^ITEM_[A-Z0-9_]+$"
+              },
+              "export_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "subject_music_object_ref": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "object_type",
+                  "ref_source",
+                  "mission_item_id",
+                  "item_type",
+                  "display_name",
+                  "credited_artist_name",
+                  "resolution_state"
+                ],
+                "properties": {
+                  "object_type": {
+                    "type": "string",
+                    "enum": [
+                      "song_recording",
+                      "album"
+                    ]
+                  },
+                  "ref_source": {
+                    "type": "string",
+                    "enum": [
+                      "apple_music_catalog",
+                      "mission_item"
+                    ]
+                  },
+                  "mission_item_id": {
+                    "type": "string",
+                    "pattern": "^ITEM_[A-Z0-9_]+$"
+                  },
+                  "item_type": {
+                    "type": "string",
+                    "enum": [
+                      "track",
+                      "album"
+                    ]
+                  },
+                  "catalog_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "catalog_url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "artwork_url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "display_name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "credited_artist_name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "album_name": {
+                    "type": "string"
+                  },
+                  "resolution_state": {
+                    "type": "string",
+                    "enum": [
+                      "unresolved",
+                      "resolved",
+                      "ambiguous",
+                      "skipped",
+                      "unavailable_region",
+                      "unavailable_subscription",
+                      "failed"
+                    ]
+                  },
+                  "resolver": {
+                    "type": "string",
+                    "enum": [
+                      "not_attempted",
+                      "automatic_search",
+                      "manual_selection",
+                      "cached",
+                      "system"
+                    ]
+                  },
+                  "storefront": {
+                    "type": "string"
+                  }
+                }
+              },
+              "evidence": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "resolution_status": {
+                    "type": "string",
+                    "enum": [
+                      "unresolved",
+                      "resolved",
+                      "ambiguous",
+                      "skipped",
+                      "unavailable_region",
+                      "unavailable_subscription",
+                      "failed"
+                    ]
+                  },
+                  "candidate_count": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "confidence": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "resolver": {
+                    "type": "string",
+                    "enum": [
+                      "not_attempted",
+                      "automatic_search",
+                      "manual_selection",
+                      "cached",
+                      "system"
+                    ]
+                  },
+                  "playback_status": {
+                    "type": "string",
+                    "enum": [
+                      "not_attempted",
+                      "queued",
+                      "playing",
+                      "played",
+                      "skipped",
+                      "failed"
+                    ]
+                  },
+                  "playback_started_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "playback_ended_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "playback_duration_seconds": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "skip_policy": {
+                    "type": "string"
+                  },
+                  "reaction_value": {
+                    "type": "string",
+                    "enum": [
+                      "hit",
+                      "partial",
+                      "ok_shelf",
+                      "miss",
+                      "slop",
+                      "skipped",
+                      "unresolved"
+                    ]
+                  },
+                  "reaction_operation": {
+                    "type": "string",
+                    "enum": [
+                      "strong_positive",
+                      "qualified_positive",
+                      "keep_waypoint",
+                      "negative"
+                    ]
+                  },
+                  "reaction_label": {
+                    "type": "string"
+                  },
+                  "selected_chip": {
+                    "$ref": "#/$defs/atlas_signal_candidate_chip"
+                  },
+                  "selected_chips": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/atlas_signal_candidate_chip"
+                    }
+                  },
+                  "shown_unselected_chips": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/atlas_signal_candidate_chip"
+                    }
+                  },
+                  "note_text": {
+                    "type": "string"
+                  },
+                  "review_flags": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "review_needed": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "review_state": {
+                "type": "string",
+                "enum": [
+                  "unreviewed",
+                  "needs_review"
+                ]
+              },
+              "promotion_state": {
+                "const": "not_promoted"
+              },
+              "writes_atlas_truth": {
+                "const": false
+              }
+            }
+          }
         }
       }
     },

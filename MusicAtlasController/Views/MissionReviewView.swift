@@ -15,29 +15,53 @@ struct MissionReviewView: View {
         let snapshot = appModel.missionReviewSnapshot
 
         if let mission = snapshot.mission {
-            List {
-                MissionReviewSummarySection(
-                    mission: mission,
-                    summary: snapshot.summary
-                )
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Review Rail")
+                            .font(.caption.weight(.bold))
+                            .foregroundStyle(WaymarkTheme.route)
+                            .textCase(.uppercase)
+                        Text("Review the songs Cartenza heard.")
+                            .font(.largeTitle.weight(.bold))
+                            .foregroundStyle(WaymarkTheme.text)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text("Edit only the evidence that needs more depth. No-signal and skipped items can remain unresolved.")
+                            .font(.callout)
+                            .foregroundStyle(WaymarkTheme.mutedText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
 
-                Section("Route Items") {
+                    MissionReviewSummaryPanel(
+                        mission: mission,
+                        summary: snapshot.summary
+                    )
+
+                    Text("Route items")
+                        .font(.headline)
+                        .foregroundStyle(WaymarkTheme.text)
+
                     ForEach(snapshot.items) { evidence in
                         NavigationLink {
                             MissionReviewItemEditorView(itemID: evidence.item.itemID)
                         } label: {
                             MissionReviewRow(evidence: evidence)
                         }
+                        .buttonStyle(.plain)
                     }
-                }
 
-                if let message = appModel.lastActionMessage {
-                    Section("Last Action") {
+                    if let message = appModel.lastActionMessage {
                         Text(message)
-                            .foregroundStyle(.secondary)
+                            .font(.callout)
+                            .foregroundStyle(WaymarkTheme.mutedText)
+                            .padding(12)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(WaymarkTheme.panel, in: RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius))
                     }
                 }
+                .padding(18)
             }
+            .background(WaymarkTheme.background.ignoresSafeArea())
         } else {
             ContentUnavailableView(
                 "No mission loaded",
@@ -48,39 +72,60 @@ struct MissionReviewView: View {
     }
 }
 
-private struct MissionReviewSummarySection: View {
+private struct MissionReviewSummaryPanel: View {
     let mission: Mission
     let summary: MissionReviewSummary
 
     var body: some View {
-        Section {
-            VStack(alignment: .leading, spacing: 10) {
-                Text(mission.missionTitle)
-                    .font(.headline)
+        VStack(alignment: .leading, spacing: 12) {
+            Text(mission.missionTitle)
+                .font(.headline)
+                .foregroundStyle(WaymarkTheme.text)
 
-                Text(mission.hypothesis)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(3)
+            Text(mission.hypothesis)
+                .font(.caption)
+                .foregroundStyle(WaymarkTheme.mutedText)
+                .lineLimit(3)
 
-                ReviewPill(
-                    title: summary.readinessLabel,
-                    systemImage: summary.reviewNeededCount == 0 ? "checkmark.circle" : "exclamationmark.circle",
-                    tint: summary.reviewNeededCount == 0 ? .green : .orange
-                )
+            ReviewPill(
+                title: summary.readinessLabel,
+                systemImage: summary.reviewNeededCount == 0 ? "checkmark.circle" : "exclamationmark.circle",
+                tint: summary.reviewNeededCount == 0 ? WaymarkTheme.positive : WaymarkTheme.waypoint
+            )
+
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
+                ReviewMetric(title: "Playable", value: "\(summary.resolvedCount)/\(summary.itemCount)")
+                ReviewMetric(title: "Evidence", value: "\(summary.playbackEvidenceCount)/\(summary.itemCount)")
+                ReviewMetric(title: "Skipped", value: "\(summary.skippedCount)")
+                ReviewMetric(title: "Review Needed", value: "\(summary.reviewNeededCount)")
             }
-            .padding(.vertical, 4)
-
-            LabeledContent("Resolved", value: "\(summary.resolvedCount)/\(summary.itemCount)")
-            LabeledContent("Playback Evidence", value: "\(summary.playbackEvidenceCount)/\(summary.itemCount)")
-            LabeledContent("Completed", value: "\(summary.completedCount)")
-            LabeledContent("Skipped", value: "\(summary.skippedCount)")
-            LabeledContent("Reactions", value: "\(summary.reactionCount)")
-            LabeledContent("Exportable Items", value: "\(summary.exportableEvidenceCount)")
-            LabeledContent("Review Needed", value: "\(summary.reviewNeededCount)")
-        } header: {
-            Text("Evidence Summary")
         }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(WaymarkTheme.panel, in: RoundedRectangle(cornerRadius: WaymarkTheme.radius))
+        .overlay(
+            RoundedRectangle(cornerRadius: WaymarkTheme.radius)
+                .stroke(WaymarkTheme.line, lineWidth: 1)
+        )
+    }
+}
+
+private struct ReviewMetric: View {
+    let title: String
+    let value: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(value)
+                .font(.headline.weight(.bold))
+                .foregroundStyle(WaymarkTheme.text)
+            Text(title)
+                .font(.caption)
+                .foregroundStyle(WaymarkTheme.mutedText)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(WaymarkTheme.raisedPanel, in: RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius))
     }
 }
 
@@ -127,6 +172,13 @@ private struct MissionReviewRow: View {
             }
         }
         .padding(.vertical, 5)
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(WaymarkTheme.panel, in: RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius))
+        .overlay(
+            RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius)
+                .stroke(evidence.needsReview ? WaymarkTheme.waypoint.opacity(0.45) : WaymarkTheme.line, lineWidth: 1)
+        )
     }
 
     private var playbackTint: Color {
@@ -176,20 +228,43 @@ private struct MissionReviewItemEditorView: View {
     var body: some View {
         Group {
             if let evidence = appModel.missionReviewEvidence(for: itemID) {
-                List {
-                    Section("Evidence") {
-                        LabeledContent("Track", value: "\(evidence.item.sequence). \(evidence.item.title)")
-                        LabeledContent("Artist", value: evidence.item.artist)
-                        LabeledContent("Resolution", value: evidence.resolution.status.rawValue)
-                        LabeledContent("Playback", value: evidence.playbackLabel)
-                        LabeledContent("Reaction", value: evidence.reactionLabel)
-
-                        if !evidence.flags.isEmpty {
-                            FlowPillRow(flags: evidence.flags)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 16) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Edit Evidence")
+                                .font(.caption.weight(.bold))
+                                .foregroundStyle(WaymarkTheme.route)
+                                .textCase(.uppercase)
+                            Text(evidence.item.title)
+                                .font(.largeTitle.weight(.bold))
+                                .foregroundStyle(WaymarkTheme.text)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text(evidence.item.artist)
+                                .font(.title3)
+                                .foregroundStyle(WaymarkTheme.mutedText)
                         }
-                    }
 
-                    Section("Primary Signal") {
+                        VStack(alignment: .leading, spacing: 10) {
+                            EvidenceLine(title: "Track", value: "\(evidence.item.sequence). \(evidence.item.title)")
+                            EvidenceLine(title: "Resolution", value: evidence.resolution.status.rawValue)
+                            EvidenceLine(title: "Playback", value: evidence.playbackLabel)
+                            EvidenceLine(title: "Reaction", value: evidence.reactionLabel)
+
+                            if !evidence.flags.isEmpty {
+                                FlowPillRow(flags: evidence.flags)
+                            }
+                        }
+                        .padding(14)
+                        .background(WaymarkTheme.panel, in: RoundedRectangle(cornerRadius: WaymarkTheme.radius))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: WaymarkTheme.radius)
+                                .stroke(WaymarkTheme.line, lineWidth: 1)
+                        )
+
+                        Text("Primary signal")
+                            .font(.headline)
+                            .foregroundStyle(WaymarkTheme.text)
+
                         SignalGrid(
                             selectedReaction: selectedReaction,
                             selectReaction: { reaction in
@@ -206,67 +281,96 @@ private struct MissionReviewItemEditorView: View {
                             save(evidence: evidence)
                         } label: {
                             Label("Keep As No Signal", systemImage: "circle.dashed")
+                                .frame(maxWidth: .infinity)
                         }
-                    }
+                        .buttonStyle(.bordered)
 
-                    Section("Context Tags") {
+                        Text("Context tags")
+                            .font(.headline)
+                            .foregroundStyle(WaymarkTheme.text)
+
                         if let selectedReaction, ReactionValue.primarySignalValues.contains(selectedReaction) {
                             let chips = evidence.item.feedbackChips(for: selectedReaction)
                             if chips.isEmpty {
                                 Text("No contextual tags are defined for this signal yet.")
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(WaymarkTheme.mutedText)
                             } else {
-                                ForEach(chips) { chip in
-                                    Button {
-                                        toggle(chip)
-                                    } label: {
-                                        HStack {
-                                            VStack(alignment: .leading, spacing: 3) {
-                                                Text(chip.label)
-                                                if let description = chip.description {
-                                                    Text(description)
-                                                        .font(.caption)
-                                                        .foregroundStyle(.secondary)
+                                VStack(spacing: 8) {
+                                    ForEach(chips) { chip in
+                                        Button {
+                                            toggle(chip)
+                                        } label: {
+                                            HStack {
+                                                VStack(alignment: .leading, spacing: 3) {
+                                                    Text(chip.label)
+                                                        .foregroundStyle(WaymarkTheme.text)
+                                                    if let description = chip.description {
+                                                        Text(description)
+                                                            .font(.caption)
+                                                            .foregroundStyle(WaymarkTheme.mutedText)
+                                                    }
+                                                }
+
+                                                Spacer()
+
+                                                if selectedTagIDs.contains(chip.tagID) {
+                                                    Image(systemName: "checkmark.circle.fill")
+                                                        .foregroundStyle(WaymarkTheme.positive)
                                                 }
                                             }
-
-                                            Spacer()
-
-                                            if selectedTagIDs.contains(chip.tagID) {
-                                                Image(systemName: "checkmark.circle.fill")
-                                                    .foregroundStyle(.green)
-                                            }
+                                            .padding(12)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .background(
+                                                selectedTagIDs.contains(chip.tagID) ? WaymarkTheme.route.opacity(0.16) : WaymarkTheme.panel,
+                                                in: RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius)
+                                            )
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius)
+                                                    .stroke(selectedTagIDs.contains(chip.tagID) ? WaymarkTheme.route.opacity(0.5) : WaymarkTheme.line, lineWidth: 1)
+                                            )
                                         }
+                                        .buttonStyle(.plain)
                                     }
-                                    .buttonStyle(.plain)
                                 }
                             }
                         } else {
                             Text("Choose a primary signal before selecting context tags.")
-                                .foregroundStyle(.secondary)
+                                .foregroundStyle(WaymarkTheme.mutedText)
                         }
-                    }
 
-                    Section("Notes") {
+                        Text("Note")
+                            .font(.headline)
+                            .foregroundStyle(WaymarkTheme.text)
+
                         TextField("Optional note", text: $note, axis: .vertical)
                             .lineLimit(3...8)
-                    }
+                            .padding(12)
+                            .background(WaymarkTheme.panel, in: RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: WaymarkTheme.smallRadius)
+                                    .stroke(WaymarkTheme.line, lineWidth: 1)
+                            )
 
-                    Section {
                         Button {
                             save(evidence: evidence)
                         } label: {
                             Label("Save Review Edits", systemImage: "checkmark.circle")
+                                .frame(maxWidth: .infinity)
                         }
                         .disabled(selectedReaction == nil)
+                        .buttonStyle(.borderedProminent)
 
                         Button {
                             appModel.selectItem(evidence.item)
                         } label: {
                             Label("Set As Player Item", systemImage: "play.circle")
+                                .frame(maxWidth: .infinity)
                         }
+                        .buttonStyle(.bordered)
                     }
+                    .padding(18)
                 }
+                .background(WaymarkTheme.background.ignoresSafeArea())
                 .navigationTitle(evidence.item.title)
                 .navigationBarTitleDisplayMode(.inline)
                 .onAppear {
@@ -317,6 +421,26 @@ private struct MissionReviewItemEditorView: View {
             note: note,
             selectedTags: tags
         )
+    }
+}
+
+private struct EvidenceLine: View {
+    let title: String
+    let value: String
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(title)
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(WaymarkTheme.mutedText)
+
+            Spacer(minLength: 16)
+
+            Text(value)
+                .font(.callout.weight(.semibold))
+                .foregroundStyle(WaymarkTheme.text)
+                .multilineTextAlignment(.trailing)
+        }
     }
 }
 

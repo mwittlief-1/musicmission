@@ -26,32 +26,34 @@ struct MusicAuthorizationPanel: View {
             }
             .disabled(!service.snapshot.canRequestAuthorization)
 
-            Divider()
+            if AppFeatureFlags.showDiagnosticTabs {
+                Divider()
 
-            LabeledContent("MusicKit check", value: service.environmentSnapshot.status)
-            if let storefront = service.environmentSnapshot.storefront {
-                LabeledContent("Storefront", value: storefront)
-            }
-            if let canPlayCatalogContent = service.environmentSnapshot.canPlayCatalogContent {
-                LabeledContent("Can play catalog", value: canPlayCatalogContent ? "true" : "false")
-            }
-            if let hasCloudLibraryEnabled = service.environmentSnapshot.hasCloudLibraryEnabled {
-                LabeledContent("Cloud library", value: hasCloudLibraryEnabled ? "true" : "false")
-            }
-
-            Text(service.environmentSnapshot.detail)
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .textSelection(.enabled)
-
-            Button {
-                Task {
-                    await service.refreshEnvironment()
+                LabeledContent("MusicKit check", value: service.environmentSnapshot.status)
+                if let storefront = service.environmentSnapshot.storefront {
+                    LabeledContent("Storefront", value: storefront)
                 }
-            } label: {
-                Label("Check MusicKit Status", systemImage: "checkmark.seal")
+                if let canPlayCatalogContent = service.environmentSnapshot.canPlayCatalogContent {
+                    LabeledContent("Can play catalog", value: canPlayCatalogContent ? "true" : "false")
+                }
+                if let hasCloudLibraryEnabled = service.environmentSnapshot.hasCloudLibraryEnabled {
+                    LabeledContent("Cloud library", value: hasCloudLibraryEnabled ? "true" : "false")
+                }
+
+                Text(service.environmentSnapshot.detail)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .textSelection(.enabled)
+
+                Button {
+                    Task {
+                        await service.refreshEnvironment()
+                    }
+                } label: {
+                    Label("Check MusicKit Status", systemImage: "checkmark.seal")
+                }
+                .disabled(service.snapshot.status != "authorized")
             }
-            .disabled(service.snapshot.status != "authorized")
         }
         .padding(.vertical, 4)
     }

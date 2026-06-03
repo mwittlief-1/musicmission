@@ -31,7 +31,17 @@ struct StubMusicSearchService: MusicSearchServing {
 }
 
 struct MusicKitCatalogSearchService: MusicSearchServing {
+    private let canonicalIndex: CanonicalAppleMusicCatalogIndex
+
+    init(canonicalIndex: CanonicalAppleMusicCatalogIndex = .loadFromBundle()) {
+        self.canonicalIndex = canonicalIndex
+    }
+
     func resolve(item: MissionItem, at date: Date) async throws -> AppleMusicResolution {
+        if let indexedResolution = canonicalIndex.resolution(for: item, at: date) {
+            return indexedResolution
+        }
+
         #if canImport(MusicKit)
         do {
             let searchTerm = Self.searchTerm(for: item)
