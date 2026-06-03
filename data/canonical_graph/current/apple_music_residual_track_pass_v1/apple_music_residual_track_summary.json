@@ -1,0 +1,33 @@
+{
+  "run_version": "apple_music_residual_track_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T00:17:21.825Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "counts": {
+    "album_jobs_completed": 507,
+    "new_links_total": 666,
+    "deferred_total": 1806,
+    "new_links_by_match_basis": {
+      "residual_track_album_artist_fallback_auto_match": 666
+    },
+    "deferred_by_reason": {
+      "residual_track_no_safe_match": 1806
+    }
+  }
+}

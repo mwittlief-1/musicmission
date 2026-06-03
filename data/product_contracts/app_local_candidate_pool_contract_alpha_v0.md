@@ -32,6 +32,10 @@ data/alpha_consumable_layer/alpha_v0/alpha1_first_mission_handoff_graph_contract
 data/alpha_consumable_layer/alpha_v0/alpha1_user_facing_graph_language_guardrails_alpha_v0.md
 data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json
 data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.md
+data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json
+data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.md
+data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json
+data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.md
 ```
 
 This contract freezes the app/local candidate pool boundary for first mission generation in trusted Alpha. It does not approve raw canonical graph use, full canonical import, hard lock, or unguarded Atlas promotion.
@@ -50,14 +54,26 @@ Its job is to give first mission generation enough concrete music objects, roles
 
 The candidate pool is not the canonical graph. It is not the Atlas. It is not a final recommendation engine. It is an Alpha-safe packet of eligible candidates and constraints.
 
-Current route-readiness rule:
+Current mission-item rule:
 
 ```text
-default first mission candidate pools must contain concrete track/album route items.
+the full canonical grid is available as mission material.
+the compact pool is a sample/slice for handoff tests, not the universe.
+playback route items must require an Apple Music catalog ID for each playable track.
+any canonical grid item with an Apple Music catalog ID is eligible for Survey consideration unless blocklisted.
 artist-level candidates may inform context, but must not become pseudo-playable route items.
+album candidates are held as graph/reference context unless a future album-route contract explicitly enables them.
 ```
 
-The route-ready `alpha_v0` sample now resolves `MGN-I004` by exporting `track` and `album` candidates with credited artist, MusicKit search hints, candidate role, risk class, review status, and reference-safe `music_object_ref` values.
+The playback-ready `alpha_v0` sample now resolves `MGN-I004` by exporting `track` candidates with credited artist, Apple Music catalog IDs, MusicKit search hints, candidate role, risk class, review status, and reference-safe `music_object_ref` values. It does not cap the canonical mission universe.
+
+Survey availability rule:
+
+```text
+canonical graph + Apple Music catalog ID = available for Survey consideration
+```
+
+The curated `survey_*_candidates_v0_2.json` files are approved/default Alpha surfaces. They are not the outer limit of what Survey may draw from when a canonical graph item has an Apple ID and is not blocklisted.
 
 Live generation recovery route identity rule:
 
@@ -102,6 +118,7 @@ data/canonical_graph/normalization_pass_2/canonical_quarantine_queue.json
 data/canonical_graph/normalization_pass_2/canonical_recording_versions.json
 data/canonical_graph/normalization_pass_2/dead_end_probe_candidates_v0_2.json
 data/canonical_graph/normalization_pass_2/boundary_question_bank_v0_2.json
+MusicAtlasController/Resources/canonical_apple_music_catalog_index_v1.json
 ```
 
 Do not build the local first-mission pool directly from:
@@ -113,6 +130,37 @@ Do not build the local first-mission pool directly from:
 - composition review queues
 - suppressed/quarantined buckets
 - hidden simulation truth
+
+## 2A. Apple Music ID Gate
+
+Canonical songs may remain in the graph even when they do not yet have an Apple Music catalog ID. For Alpha app playback and playback-route selection, those rows are `do_not_use_no_apple_id`.
+
+The canonical mission universe is:
+
+```text
+data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json
+```
+
+The derived queue is:
+
+```text
+data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json
+```
+
+Rows in that queue must not feed:
+
+- Survey display
+- playback route selection
+- Supabase active candidate import
+- OpenAI prompt payloads
+- app playback
+- Apple Music auto-resolution
+
+Manual resolver work may clear the status by adding a verified Apple Music catalog entry to:
+
+```text
+MusicAtlasController/Resources/canonical_apple_music_catalog_index_v1.json
+```
 
 ## 3. Included Families
 

@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "version": "album_track_sidecar_manual_apple_overrides_v1",
+    "created_on": "2026-05-27",
+    "source": "manual Apple Music URL review for album_track_sidecar_v1 unresolved rows",
+    "status_policy": {
+      "apply": "Use this exact Apple collection ID for sidecar track lookup.",
+      "review_only": "Record candidate Apple URL but do not resolve automatically.",
+      "replacement_candidate": "Current graph row appears not to be an Apple album; review graph replacement.",
+      "not_found": "Manual review did not find a credible Apple album."
+    },
+    "post_freeze_availability_patch": {
+      "id": "album_graph_availability_updates_v1",
+      "applied_on": "2026-05-27",
+      "status": "applied",
+      "intent": "Post-freeze availability patch for Apple-resolvable album sidecar execution while preserving source-intent aliases in notes.",
+      "actions": [
+        "replace_title_keep_role",
+        "replace_active_album_preserve_historical_original",
+        "demote_to_special_entity_no_album_sidecar",
+        "bad_match_replace_with_swum_2018_album_anchor",
+        "normalize_title_year_catalog_alias",
+        "historical_unavailable_split_replacement",
+        "correct_artist_keep_album"
+      ]
+    }
+  },
+  "overrides": [
+    {
+      "candidate_identity_key": "album|celia cruz and johnny pacheco|celia and johnny",
+      "status": "apply",
+      "apple_collection_id": 1769530314,
+      "apple_url": "https://music.apple.com/us/album/celia-johnny-remastered-2024/1769530314",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Manual Apple URL. Remastered 2024 version."
+    },
+    {
+      "candidate_identity_key": "album|eddie cochran|eddie cochran sings to you",
+      "status": "apply",
+      "apple_collection_id": 1443405815,
+      "apple_url": "https://music.apple.com/us/album/singin-to-my-baby/1443405815",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Closest Apple match; same year, similar title."
+    },
+    {
+      "candidate_identity_key": "album|five satins|50 best hits 2023 remastered",
+      "status": "apply",
+      "apple_collection_id": 1715543363,
+      "apple_url": "https://music.apple.com/us/album/50-best-hits-2023-remastered/1715543363",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "replace_title_keep_role",
+      "notes": "Active Apple availability replacement. Preserve Golden Hits as source-intent alias."
+    },
+    {
+      "candidate_identity_key": "album|geto boys|grip it on that other level",
+      "status": "apply",
+      "apple_collection_id": 1812969997,
+      "apple_url": "https://music.apple.com/il/album/grip-it-on-that-other-level/1812969997",
+      "country": "IL",
+      "confidence": "high",
+      "notes": "Apple title omits exclamation point."
+    },
+    {
+      "candidate_identity_key": "album|janet jackson|janet jackson s rhythm nation 1814",
+      "status": "apply",
+      "apple_collection_id": 1440838561,
+      "apple_url": "https://music.apple.com/us/album/rhythm-nation-1814/1440838561",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple title is Rhythm Nation 1814 without artist prefix."
+    },
+    {
+      "candidate_identity_key": "album|jive five|best of the jive five",
+      "status": "apply",
+      "apple_collection_id": 350891841,
+      "apple_url": "https://music.apple.com/us/album/their-greatest-hits/350891841",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Compilation from same year; title differs."
+    },
+    {
+      "candidate_identity_key": "album|journey|journey greatest hits",
+      "status": "apply",
+      "apple_collection_id": 169003304,
+      "apple_url": "https://music.apple.com/us/album/greatest-hits-2024-remaster/169003304",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Remastered version."
+    },
+    {
+      "candidate_identity_key": "album|krs one|edutainment",
+      "status": "apply",
+      "apple_collection_id": 306669485,
+      "apple_url": "https://music.apple.com/us/album/edutainment/306669485",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple artist is Boogie Down Productions."
+    },
+    {
+      "candidate_identity_key": "album|little anthony and the imperials|greatest hits of little anthony and the imperials",
+      "status": "apply",
+      "apple_collection_id": 80004926,
+      "apple_url": "https://music.apple.com/us/album/the-greatest-hits-of-little-anthony-and-the-imperials/80004926",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "replace_active_album_preserve_historical_original",
+      "notes": "Use concise Apple-resolvable Rhino compilation as active sidecar object. Preserve 1959 LP as historical_original_album_alias."
+    },
+    {
+      "candidate_identity_key": "album|mannheim steamroller|mannheim steamroller christmas",
+      "status": "apply",
+      "apple_collection_id": 577633220,
+      "apple_url": "https://music.apple.com/us/album/christmas/577633220",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple title is Christmas."
+    },
+    {
+      "candidate_identity_key": "album|original broadway cast of pippin|pippin",
+      "status": "apply",
+      "apple_collection_id": 1452529555,
+      "apple_url": "https://music.apple.com/us/album/pippin-1972-original-broadway-cast-recording/1452529555",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple artist listed as Bob Fosse."
+    },
+    {
+      "candidate_identity_key": "album|original broadway cast of six|six",
+      "status": "apply",
+      "apple_collection_id": 1465183308,
+      "apple_url": "https://music.apple.com/us/album/six-the-musical-studio-cast-recording/1465183308",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Best Apple match; studio cast recording with multiple artists."
+    },
+    {
+      "candidate_identity_key": "album|original broadway cast of sweeney todd|sweeney todd",
+      "status": "apply",
+      "apple_collection_id": 1086882395,
+      "apple_url": "https://music.apple.com/us/album/sweeney-todd-the-demon-barber-of-fleet-street/1086882395",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple artist listed as Stephen Sondheim."
+    },
+    {
+      "candidate_identity_key": "album|original london cast of cats|cats",
+      "status": "apply",
+      "apple_collection_id": 1843487732,
+      "apple_url": "https://music.apple.com/us/album/cats-original-1981-london-cast/1843487732",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple artist listed as Andrew Lloyd Webber and others."
+    },
+    {
+      "candidate_identity_key": "album|otis redding|dictionary of soul",
+      "status": "apply",
+      "apple_collection_id": 1146946661,
+      "apple_url": "https://music.apple.com/us/album/complete-unbelievable-the-otis-redding-dictionary/1146946661",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "50th Anniversary edition."
+    },
+    {
+      "candidate_identity_key": "album|peter gabriel|peter gabriel 3 melt",
+      "status": "apply",
+      "apple_collection_id": 986713177,
+      "apple_url": "https://music.apple.com/us/album/peter-gabriel-3-melt-remastered/986713177",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Remastered version."
+    },
+    {
+      "candidate_identity_key": "album|richie hawtin|concept 1 96 cd",
+      "status": "apply",
+      "apple_collection_id": 1545579873,
+      "apple_url": "https://music.apple.com/us/album/concept-1-96-12/1545579873",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Manual review notes graph title/year may be wrong; Apple title is Concept 1 96:12."
+    },
+    {
+      "candidate_identity_key": "album|rock a teens|rock a teens woo hoo",
+      "status": "apply",
+      "apple_collection_id": 1742706776,
+      "apple_url": "https://music.apple.com/us/album/woo-hoo/1742706776",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple title omits artist prefix."
+    },
+    {
+      "candidate_identity_key": "album|swum|swum",
+      "status": "apply",
+      "apple_collection_id": 1754636804,
+      "apple_url": "https://music.apple.com/us/album/swum/1754636804",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "bad_match_replace_with_swum_2018_album_anchor",
+      "notes": "Replace bad Wishful Thinking album row with SwuM - Swum (2018) Apple album anchor."
+    },
+    {
+      "candidate_identity_key": "album|too short|life is too short",
+      "status": "apply",
+      "apple_collection_id": 270246707,
+      "apple_url": "https://music.apple.com/us/album/life-is-too-%24hort/270246707",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple stylizes Short as $hort."
+    },
+    {
+      "candidate_identity_key": "album|various artists|children s favorites vol 1",
+      "status": "apply",
+      "apple_collection_id": 1440798564,
+      "apple_url": "https://music.apple.com/us/album/childrens-favorites-vol-1/1440798564",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "normalize_title_year_catalog_alias",
+      "notes": "Accepted active Apple object. Preserve 1979 original-lineage alias/source intent."
+    },
+    {
+      "candidate_identity_key": "album|jan and dean|ride the wild surf",
+      "status": "apply",
+      "apple_collection_id": 715562999,
+      "apple_url": "https://music.apple.com/us/album/ride-the-wild-surf/715562999",
+      "country": "US",
+      "confidence": "high",
+      "import_action": "correct_artist_keep_album",
+      "notes": "Correct active Apple attribution to Jan & Dean; keep soundtrack/movie-tie-in risk note."
+    },
+    {
+      "candidate_identity_key": "album|various artists|essential sun rockabillies vol 1",
+      "status": "apply",
+      "apple_collection_id": 156819935,
+      "apple_url": "https://music.apple.com/us/album/essential-sun-rockabillies-vol-1/156819935",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "replace_title_keep_role",
+      "notes": "Active Apple-resolvable Sun/Charly comp. Preserve The Sun Rockabilly Years as source-intent/historical alias."
+    },
+    {
+      "candidate_identity_key": "album|weezer|weezer blue album",
+      "status": "apply",
+      "apple_collection_id": 1890580956,
+      "apple_url": "https://music.apple.com/us/album/weezer-2024-remaster/1890580956",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "Remastered version."
+    },
+    {
+      "candidate_identity_key": "album|white zombie|la sexorcisto devil music volume one",
+      "status": "apply",
+      "apple_collection_id": 1440905956,
+      "apple_url": "https://music.apple.com/us/album/la-sexorcisto-devil-music-vol-1/1440905956",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Slight title mismatch: Vol. 1 vs Volume One."
+    },
+    {
+      "candidate_identity_key": "album|wisin and yandel|pal mundo",
+      "status": "apply",
+      "apple_collection_id": 1488849982,
+      "apple_url": "https://music.apple.com/us/album/pal-mundo/1488849982",
+      "country": "US",
+      "confidence": "high",
+      "notes": "Apple title shows Pa'l Mundo."
+    },
+    {
+      "candidate_identity_key": "album|yardbirds|having a rave up with the yardbirds",
+      "status": "apply",
+      "apple_collection_id": 1512238072,
+      "apple_url": "https://music.apple.com/us/album/having-a-rave-up-with-the-yardbirds-2015-remaster/1512238072",
+      "country": "US",
+      "confidence": "medium",
+      "notes": "2015 remaster."
+    },
+    {
+      "candidate_identity_key": "album|dixie cups|very best of the dixie cups chapel of love",
+      "status": "apply",
+      "apple_collection_id": 1881889298,
+      "apple_url": "https://music.apple.com/us/album/the-very-best-of-the-dixie-cups-chapel-of-love/1881889298",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "historical_unavailable_split_replacement",
+      "notes": "Red Bird Girls split replacement: Dixie Cups Apple-resolvable best-of."
+    },
+    {
+      "candidate_identity_key": "album|shangri las|20th century masters the millennium collection the best of the shangri las",
+      "status": "apply",
+      "apple_collection_id": 1444000328,
+      "apple_url": "https://music.apple.com/us/album/20th-century-masters-the-millennium-collection-the/1444000328",
+      "country": "US",
+      "confidence": "medium",
+      "import_action": "historical_unavailable_split_replacement",
+      "notes": "Red Bird Girls split replacement: Shangri-Las Apple-resolvable best-of."
+    }
+  ]
+}

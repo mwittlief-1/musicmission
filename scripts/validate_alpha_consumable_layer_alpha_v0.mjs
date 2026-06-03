@@ -35,6 +35,12 @@ const candidateReviewRiskReportPath =
   "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json";
 const surveyPageSelectionAuditRefsPath =
   "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.json";
+const canonicalMissionItemUniversePath =
+  "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json";
+const appleMusicUnmatchedDoNotUsePath =
+  "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json";
+const appleMusicCatalogIndexPath =
+  "MusicAtlasController/Resources/canonical_apple_music_catalog_index_v1.json";
 
 function readJson(path) {
   return JSON.parse(fs.readFileSync(path, "utf8"));
@@ -60,6 +66,19 @@ function normalizedIdentityPart(value) {
 
 function routeDisplayIdentityKey(routeType, artist, displayName) {
   return [routeType, artist, displayName].map(normalizedIdentityPart).join(":");
+}
+
+function appleMusicCatalogLookup(index) {
+  const canonicalSongIds = new Map();
+  for (const entry of index.entries || []) {
+    if (entry.item_type !== "track" || !entry.apple_catalog_id) continue;
+    for (const key of entry.match_keys || []) {
+      if (!key.startsWith("canonical_entity_id:")) continue;
+      const canonicalId = key.slice("canonical_entity_id:".length);
+      if (!canonicalSongIds.has(canonicalId)) canonicalSongIds.set(canonicalId, entry);
+    }
+  }
+  return canonicalSongIds;
 }
 
 const allowedRefSources = new Set([
@@ -276,6 +295,8 @@ for (const requiredContract of [
   routeIdentityContractPath,
   candidateReviewRiskReportPath,
   surveyPageSelectionAuditRefsPath,
+  canonicalMissionItemUniversePath,
+  appleMusicUnmatchedDoNotUsePath,
   "data/alpha_consumable_layer/alpha_v0/alpha1_user_facing_graph_language_guardrails_alpha_v0.md"
 ]) {
   if (!manifestContractFiles.has(requiredContract)) {
@@ -325,6 +346,110 @@ const blockedTypedRefs = new Set(alphaBlocklist.map((row) => row.entity_ref));
 
 const recordingVersions = readJson(`${root}/canonical_recording_versions.json`);
 const recordingById = new Map(recordingVersions.map((row) => [row.recording_id, row]));
+const appleCatalogIndex = readJson(appleMusicCatalogIndexPath);
+const appleMusicTrackByCanonicalSongId = appleMusicCatalogLookup(appleCatalogIndex);
+const noAppleIdPayload = readJson(appleMusicUnmatchedDoNotUsePath);
+const canonicalMissionItemUniverse = readJson(canonicalMissionItemUniversePath);
+const noAppleIdSurveyIds = new Set(
+  (noAppleIdPayload.active_survey_unmatched_rows || []).map((row) => row.candidate_id)
+);
+const noAppleIdCanonicalIds = new Set(
+  (noAppleIdPayload.active_survey_unmatched_rows || []).map((row) => row.canonical_entity_id)
+);
+if (noAppleIdPayload.status !== "do_not_use_no_apple_id_status_applied") {
+  fail(`apple music unmatched do-not-use status=${noAppleIdPayload.status}`);
+}
+if (noAppleIdPayload.policy?.canonical_rows_remain_in_graph !== true) {
+  fail("apple music unmatched do-not-use policy must keep canonical rows in graph");
+}
+if (
+  (noAppleIdPayload.grid_unmatched_rows || []).length !==
+  noAppleIdPayload.summary?.canonical_grid_rows_do_not_use_no_apple_id
+) {
+  fail("apple music unmatched do-not-use grid_unmatched_rows count must match summary");
+}
+if (
+  noAppleIdPayload.summary?.canonical_grid_rows_do_not_use_no_apple_id !==
+  canonicalMissionItemUniverse.summary?.alpha_survey_unavailable_no_apple_id
+) {
+  fail("apple music unmatched grid no-Apple count must match canonical mission universe survey-unavailable count");
+}
+if (canonicalMissionItemUniverse.status !== "canonical_grid_available_for_mission_items_with_playback_gate") {
+  fail(`canonical mission item universe status=${canonicalMissionItemUniverse.status}`);
+}
+if (canonicalMissionItemUniverse.policy?.canonical_grid_available_for_mission_items !== true) {
+  fail("canonical mission item universe must mark the canonical grid available for mission items");
+}
+if (canonicalMissionItemUniverse.policy?.compact_candidate_pool_is_not_the_universe !== true) {
+  fail("canonical mission item universe must state compact pool is not the universe");
+}
+if (canonicalMissionItemUniverse.policy?.playback_requires_apple_music_catalog_id !== true) {
+  fail("canonical mission item universe must require Apple Music catalog IDs for playback");
+}
+if ((canonicalMissionItemUniverse.mission_items || []).length !== canonicalMissionItemUniverse.summary?.canonical_grid_items) {
+  fail("canonical mission item universe item count must match summary");
+}
+const noAppleUniverseCount = (canonicalMissionItemUniverse.mission_items || []).filter(
+  (row) => row.do_not_use_status === "do_not_use_no_apple_id"
+).length;
+const surveyEligibleUniverseCount = (canonicalMissionItemUniverse.mission_items || []).filter(
+  (row) => row.alpha_survey_eligible === true
+).length;
+if (
+  noAppleUniverseCount !==
+  canonicalMissionItemUniverse.summary?.playback_candidate_rows_do_not_use_no_apple_id
+) {
+  fail("canonical mission item universe no-Apple count must match summary");
+}
+if (surveyEligibleUniverseCount !== canonicalMissionItemUniverse.summary?.alpha_survey_eligible_grid_items) {
+  fail("canonical mission item universe survey-eligible count must match summary");
+}
+for (const row of canonicalMissionItemUniverse.mission_items || []) {
+  const label = `canonical_mission_item_universe:${row.mission_item_id}`;
+  if (row.survey_apple_music_catalog_id && row.alpha_mission_item_status !== "blocked_by_alpha_blocklist") {
+    if (row.alpha_survey_eligible !== true) {
+      fail(`${label} has Apple ID but is not survey eligible`);
+    }
+    if (row.alpha_survey_status !== "survey_eligible_apple_id_resolved") {
+      fail(`${label} has Apple ID but invalid alpha_survey_status=${row.alpha_survey_status}`);
+    }
+  }
+  if (!row.survey_apple_music_catalog_id && row.alpha_survey_eligible === true) {
+    fail(`${label} is survey eligible without Apple ID`);
+  }
+}
+if (
+  canonicalMissionItemUniverse.summary?.playback_candidate_rows_do_not_use_no_apple_id !==
+  noAppleIdPayload.summary?.active_graph_playback_rows_do_not_use_no_apple_id
+) {
+  fail("canonical mission item universe no-Apple count must match no-Apple queue");
+}
+const gardenStateMissionItem = (canonicalMissionItemUniverse.mission_items || []).find(
+  (row) => row.candidate_identity_key === "album|various artists|garden state"
+);
+if (!gardenStateMissionItem) {
+  fail("canonical mission item universe must retain Garden State for QA visibility");
+} else if (gardenStateMissionItem.alpha_mission_item_status !== "blocked_by_alpha_blocklist") {
+  fail("Garden State must be blocked_by_alpha_blocklist in canonical mission item universe");
+} else if (gardenStateMissionItem.alpha_survey_eligible !== false) {
+  fail("Garden State must not be survey eligible");
+}
+for (const row of noAppleIdPayload.active_survey_unmatched_rows || []) {
+  const label = `apple_music_unmatched_do_not_use:${row.candidate_id}`;
+  if (row.status !== "do_not_use_no_apple_id") fail(`${label} status must be do_not_use_no_apple_id`);
+  if (row.alpha_playback_eligible !== false) fail(`${label} alpha_playback_eligible must be false`);
+  requireArrayIncludes(
+    row.blocked_surfaces || [],
+    [
+      "default_mission_generation",
+      "supabase_active_candidate",
+      "openai_prompt_payload",
+      "app_playback",
+      "apple_music_auto_resolution"
+    ],
+    label
+  );
+}
 
 const refExamples = readJson(
   "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_examples_alpha_v0.json"
@@ -403,6 +528,12 @@ if (alpha1FirstMissionHandoff.version !== "alpha_v0") {
 if (alpha1FirstMissionHandoff.graph_lane_ready_for_core_integration !== true) {
   fail("alpha1 first mission handoff must be marked ready for Core integration");
 }
+if (alpha1FirstMissionHandoff.mission_item_universe !== canonicalMissionItemUniversePath) {
+  fail("alpha1 first mission handoff must reference the canonical mission item universe");
+}
+if (alpha1FirstMissionHandoff.compact_pool_is_full_mission_universe !== false) {
+  fail("alpha1 first mission handoff must state compact pool is not the full mission universe");
+}
 requireArrayIncludes(
   alpha1FirstMissionHandoff.required_candidate_fields || [],
   [
@@ -435,6 +566,8 @@ requireArrayIncludes(
     "negative_inference",
     "do_not_infer",
     "source_evidence_refs",
+    "apple_music_catalog_status",
+    "apple_music_catalog_id",
     "eligible_for_supabase",
     "eligible_for_openai"
   ],
@@ -480,7 +613,7 @@ for (const familyId of alpha1FirstMissionHandoff.blocked_default_first_mission_f
 }
 requireArrayIncludes(
   alpha1FirstMissionHandoff.route_ready_requirements?.candidate_object_type || [],
-  ["track", "album"],
+  ["track"],
   "alpha1 first mission handoff route_ready_requirements.candidate_object_type"
 );
 if (alpha1FirstMissionHandoff.route_ready_requirements?.artist_level_route_candidates_allowed !== false) {
@@ -488,6 +621,15 @@ if (alpha1FirstMissionHandoff.route_ready_requirements?.artist_level_route_candi
 }
 if (alpha1FirstMissionHandoff.route_ready_requirements?.pseudo_playable_items_allowed !== false) {
   fail("alpha1 first mission handoff must block pseudo-playable route items");
+}
+if (alpha1FirstMissionHandoff.route_ready_requirements?.full_canonical_grid_available_for_mission_items !== true) {
+  fail("alpha1 first mission handoff must keep full canonical grid available for mission items");
+}
+if (alpha1FirstMissionHandoff.route_ready_requirements?.compact_pool_is_sample_slice_not_universe !== true) {
+  fail("alpha1 first mission handoff must state compact pool is a sample/slice");
+}
+if (alpha1FirstMissionHandoff.route_ready_requirements?.apple_music_catalog_id_required_for_default_playback !== true) {
+  fail("alpha1 first mission handoff must require Apple Music catalog ID for default playback");
 }
 if (alpha1FirstMissionHandoff.review_gate_policy?.alpha_safe_with_review_flags_is_hard_block !== false) {
   fail("alpha1 first mission handoff must not hard-block alpha_safe_with_review_flags");
@@ -694,8 +836,14 @@ if (samplePool.graph_metadata_taste_truth !== false) {
 if (samplePool.atlas_promotion_created !== false) {
   fail("sample compact candidate pool must mark atlas_promotion_created=false");
 }
-if (samplePool.route_readiness_status !== "route_ready_track_album_candidates") {
-  fail("sample compact candidate pool must be route-ready track/album candidates");
+if (samplePool.compact_pool_is_full_mission_universe !== false) {
+  fail("sample compact candidate pool must state it is not the full mission universe");
+}
+if (samplePool.mission_item_universe !== canonicalMissionItemUniversePath) {
+  fail("sample compact candidate pool must reference canonical mission item universe");
+}
+if (samplePool.route_readiness_status !== "route_ready_canonical_song_candidates") {
+  fail("sample compact candidate pool must be playback-ready canonical song candidates");
 }
 if (samplePool.resolves_blocker !== "MGN-I004") {
   fail("sample compact candidate pool must declare resolves_blocker=MGN-I004");
@@ -744,8 +892,24 @@ for (const [poolName, rows] of Object.entries(samplePool.pools || {})) {
     if (row.candidate_role !== row.candidate_pool_behavior) {
       fail(`${label} candidate_role must match candidate_pool_behavior`);
     }
-    if (!["track", "album"].includes(row.object_type)) {
-      fail(`${label} object_type must be route-ready track or album, got ${row.object_type}`);
+    if (row.object_type !== "track") {
+      fail(`${label} object_type must be playback-ready track, got ${row.object_type}`);
+    }
+    if (noAppleIdSurveyIds.has(row.candidate_id) || noAppleIdCanonicalIds.has(row.canonical_entity_id)) {
+      fail(`${label} is marked do_not_use_no_apple_id`);
+    }
+    const appleEntry = appleMusicTrackByCanonicalSongId.get(row.canonical_entity_id);
+    if (!appleEntry) {
+      fail(`${label} missing Apple Music catalog index entry`);
+    }
+    if (row.apple_music_catalog_status !== "resolved") {
+      fail(`${label} apple_music_catalog_status must be resolved`);
+    }
+    if (!row.apple_music_catalog_id) {
+      fail(`${label} missing apple_music_catalog_id`);
+    }
+    if (appleEntry && row.apple_music_catalog_id !== appleEntry.apple_catalog_id) {
+      fail(`${label} apple_music_catalog_id does not match catalog index`);
     }
     const expectedRoutePrefix = `route:${row.object_type}:${row.canonical_object_type}:`;
     if (!String(row.route_candidate_key || "").startsWith(expectedRoutePrefix)) {
@@ -820,6 +984,12 @@ for (const [poolName, rows] of Object.entries(samplePool.pools || {})) {
     if (!row.route_item || row.route_item.route_item_type !== row.object_type) {
       fail(`${label} missing matching route_item`);
     }
+    if (row.route_item?.apple_music_catalog_id !== row.apple_music_catalog_id) {
+      fail(`${label} route_item.apple_music_catalog_id must match candidate`);
+    }
+    if (row.route_item?.apple_music_catalog_status !== "resolved") {
+      fail(`${label} route_item.apple_music_catalog_status must be resolved`);
+    }
     if (row.route_item?.item_id !== row.app_route_item_id) {
       fail(`${label} route_item.item_id must match app_route_item_id`);
     }
@@ -838,9 +1008,7 @@ for (const [poolName, rows] of Object.entries(samplePool.pools || {})) {
     if (row.object_type === "track" && row.music_object_ref.object_type !== "song_recording") {
       fail(`${label} track route item must reference a canonical song_recording`);
     }
-    if (row.object_type === "album" && row.music_object_ref.object_type !== "album") {
-      fail(`${label} album route item must reference a canonical album`);
-    }
+    if (row.object_type === "album") fail(`${label} album route items are blocked in early Alpha default pool`);
     if (sampleSeen.has(row.dedupe_group)) {
       fail(`${label} duplicates sample dedupe_group ${row.dedupe_group}`);
     }
@@ -867,7 +1035,7 @@ for (const [poolName, rows] of Object.entries(samplePool.pools || {})) {
   }
 }
 if (routeReadySampleCount === 0) {
-  fail("sample compact candidate pool has no route-ready track/album candidates");
+  fail("sample compact candidate pool has no playback-ready canonical song candidates");
 }
 if (sampleObjectTypeCounts.artist) {
   fail("sample compact candidate pool must not contain artist route candidates");
@@ -883,7 +1051,7 @@ if (candidateReviewRiskReport.status !== "route_candidate_review_risk_clear") {
   fail(`candidate review-risk report status=${candidateReviewRiskReport.status}`);
 }
 if (candidateReviewRiskReport.summary?.total_route_candidates !== routeReadySampleCount) {
-  fail("candidate review-risk report total_route_candidates must match route-ready sample count");
+  fail("candidate review-risk report total_route_candidates must match playback-ready sample count");
 }
 if (candidateReviewRiskReport.summary?.hard_blocked !== 0) {
   fail("candidate review-risk report must have hard_blocked=0");
@@ -910,7 +1078,7 @@ for (const row of candidateReviewRiskReport.route_candidates || []) {
   if (row.hard_block !== false) fail(`${label} must not be hard-blocked`);
   if (row.quarantine_status !== "clear") fail(`${label} quarantine_status must be clear`);
   if (row.suppression_status !== "active") fail(`${label} suppression_status must be active`);
-  if (!["track", "album"].includes(row.object_type)) fail(`${label} object_type must be track or album`);
+  if (row.object_type !== "track") fail(`${label} object_type must be track`);
 }
 
 const surveyPageSelectionAuditRefs = readJson(surveyPageSelectionAuditRefsPath);
@@ -941,6 +1109,13 @@ for (const row of surveyPageSelectionAuditRefs.audit_refs || []) {
   }
   if (row.safety?.raw_graph_row_exposed !== false) fail(`${label} must not expose raw graph rows`);
   if (row.safety?.hidden_simulator_truth !== false) fail(`${label} must not expose hidden simulator truth`);
+  if (
+    row.object_type === "song_recording" &&
+    row.safety?.apple_music_catalog_status === "unmatched_no_apple_id" &&
+    row.safety?.do_not_use_status !== "do_not_use_no_apple_id"
+  ) {
+    fail(`${label} unmatched song audit ref missing do_not_use_no_apple_id`);
+  }
   if (row.family?.graph_metadata_taste_truth !== false) fail(`${label} family graph metadata must not be taste truth`);
   if (!row.approved_surface_ref?.source_file || !row.approved_surface_ref?.source_bucket) {
     fail(`${label} missing approved surface source file/bucket`);

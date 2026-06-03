@@ -1,0 +1,53 @@
+{
+  "run_version": "apple_music_offline_reconciliation_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T01:24:21.720Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "first_pass_links": "data/canonical_graph/current/apple_music_link_pass_v1/apple_music_links_v1.jsonl",
+    "try_harder_links": "data/canonical_graph/current/apple_music_try_harder_pass_v1/apple_music_try_harder_links_v1.jsonl",
+    "residual_track_links": "data/canonical_graph/current/apple_music_residual_track_pass_v1/apple_music_residual_track_links_v1.jsonl",
+    "album_variant_links": "data/canonical_graph/current/apple_music_album_variant_pass_v1/apple_music_album_variant_links_v1.jsonl",
+    "first_pass_review_queue": "data/canonical_graph/current/apple_music_link_pass_v1/apple_music_manual_review_queue.csv",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv"
+  },
+  "counts": {
+    "sidecar_track_candidates_with_apple_ids": 23403,
+    "graph_song_recording_review_rows_considered": 1198,
+    "new_links_total": 143,
+    "deferred_total": 1055,
+    "new_links_by_source_type": {
+      "graph_recording": 6,
+      "graph_song": 137
+    },
+    "new_links_by_match_basis": {
+      "offline_sidecar_exact_title_compatible_artist_year": 5,
+      "offline_sidecar_exact_title_effective_artist_year": 138
+    },
+    "deferred_by_reason": {
+      "offline_sidecar_no_unique_track_match": 1054,
+      "offline_sidecar_ambiguous_track_match": 1
+    },
+    "links_by_prior_review_reason": {
+      "apple_song_search_no_auto_match": 84,
+      "apple_song_search_needs_review_version_risk": 36,
+      "apple_song_search_no_results": 23
+    }
+  }
+}

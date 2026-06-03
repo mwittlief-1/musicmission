@@ -241,7 +241,7 @@ For Survey Evidence Export atoms, the visible Survey `music_object_ref.object_ty
 - `album`
 - `song_recording`
 
-Route-ready Mission candidate pools may expose app route `object_type = track|album`, but their nested `music_object_ref.object_type` must still point back to `song_recording` or `album`.
+Playback-ready Mission candidate pools may expose app route `object_type = track|album`, but their nested `music_object_ref.object_type` must still point back to `song_recording` or `album`.
 
 Always include:
 

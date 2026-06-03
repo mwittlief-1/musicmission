@@ -11,9 +11,12 @@ It does not define Atlas promotion semantics. It does not generate missions by i
 MGN-I004 resolution:
 
 ```text
-Mission Generation must receive concrete route-ready `track` / `album` candidates.
+The full canonical grid is available as mission material.
+The compact pool is a sample/slice for handoff tests, not the mission universe.
+Playback route selection must receive concrete playback-ready `track` candidates for early Alpha default playback.
 Artist-level candidates are blocked from route pools.
-The graph pool may still use canonical song-recording or album refs under `music_object_ref`.
+Album objects remain graph/reference material unless a future album-route contract explicitly enables them.
+Playable track candidates must have a resolved Apple Music catalog ID; no-Apple-ID songs remain in the graph but are `do_not_use_no_apple_id` for Alpha playback/default playback-route selection.
 ```
 
 ## Handoff Shape
@@ -37,6 +40,12 @@ The sample output remains:
 
 ```text
 data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json
+```
+
+The full canonical mission-item universe is:
+
+```text
+data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json
 ```
 
 Route identity contract:
@@ -97,6 +106,11 @@ Mission Generation needs these graph-provided candidate fields:
 - `do_not_infer`
 - `music_kit_search_hint`
 - `music_kit_resolution_status`
+- `apple_music_catalog_status`
+- `apple_music_catalog_id`
+- `apple_music_catalog_url`
+- `apple_music_catalog_match_status`
+- `apple_music_catalog_match_basis`
 - `apple_music_resolution_policy`
 - `version_risk_note`
 - `source_file`
@@ -110,7 +124,7 @@ Mission Generation needs these graph-provided candidate fields:
 - `eligible_for_supabase`
 - `eligible_for_openai`
 
-Route-ready rule:
+Playback identity rule:
 
 - `candidate_id` is the exact candidate-pool membership ID and must be copied to `route.items[].candidate_id`
 - `app_route_item_id` is the deterministic app-safe item ID and should be copied to `route.items[].item_id`
@@ -118,7 +132,9 @@ Route-ready rule:
 - `route_batch_dedupe_key` is the batch-level dedupe identity and should be unique within a mission and across the generated 10-mission batch
 - `route_display_identity_key` is a fallback duplicate guard and should not repeat within a mission or batch when stronger keys differ or are missing
 - `object_type = track` must carry `music_object_ref.object_type = song_recording`
-- `object_type = album` must carry `music_object_ref.object_type = album`
+- `object_type = album` is blocked from the early Alpha default playback sample pool
+- `apple_music_catalog_status = resolved` and a non-empty `apple_music_catalog_id` are required for playable track candidates
+- `do_not_use_no_apple_id` rows must remain out of playback routes and default playback-route selection
 - `playable_route_ready` must be `true`
 - `artist_level_candidate` must be `false`
 - `credited_artist` and `music_kit_search_hint` must be present
@@ -160,6 +176,7 @@ Mission Generation must not use:
 - suppressed rows
 - manual-review recording rows
 - context-only family rows unless a deliberate context mission is approved
+- songs without Apple Music catalog IDs
 
 ## Handoff Guardrails
 
@@ -205,6 +222,7 @@ Safe for Supabase when:
 - candidate comes from approved `alpha_v0` surfaces
 - `eligible_for_supabase == true`
 - no quarantine/blocklist/manual-review policy applies
+- Apple Music catalog ID is present for playable tracks
 - `music_object_ref` validates
 - tile log metadata is preserved
 

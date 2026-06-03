@@ -1,0 +1,64 @@
+{
+  "run_version": "apple_music_artist_album_resolver_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T03:01:45.524Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv",
+    "existing_link_passes": [
+      "apple_music_link_pass_v1",
+      "apple_music_try_harder_pass_v1",
+      "apple_music_residual_track_pass_v1",
+      "apple_music_album_variant_pass_v1",
+      "apple_music_offline_reconciliation_pass_v1"
+    ]
+  },
+  "counts": {
+    "album_jobs_completed": 178,
+    "new_links_total": 335,
+    "deferred_total": 144,
+    "new_links_by_source_type": {
+      "album_sidecar_album": 34,
+      "album_sidecar_track": 267,
+      "graph_album": 34
+    },
+    "new_links_by_resource_type": {
+      "album": 68,
+      "song": 267
+    },
+    "new_links_by_match_basis": {
+      "artist_album_list_title_year_auto_match": 34,
+      "artist_album_list_censored_title_tracklist_auto_match": 8,
+      "artist_album_list_tracklist_auto_match": 10,
+      "artist_album_list_title_containment_auto_match": 16,
+      "artist_album_resolver_track_auto_match": 267
+    },
+    "new_links_by_edition_class": {
+      "expanded": 16,
+      "original_like": 38,
+      "remaster": 12,
+      "ep": 2
+    },
+    "deferred_by_reason": {
+      "artist_album_resolver_no_safe_album_match": 137,
+      "artist_album_resolver_no_artist_id": 7
+    }
+  }
+}

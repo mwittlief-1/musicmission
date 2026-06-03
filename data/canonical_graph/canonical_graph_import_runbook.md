@@ -86,6 +86,9 @@ Use these stable paths:
 - `data/canonical_graph/current/graph_tagging_corpus.json`
 - `data/canonical_graph/current/apple_id_resolution_queue.json`
 - `data/canonical_graph/current/album_sidecar_seed_albums.json`
+- `data/canonical_graph/current/album_track_sidecar.json`
+- `data/canonical_graph/current/album_track_sidecar_tracks.csv`
+- `data/canonical_graph/current/album_track_sidecar_album_resolution.csv`
 - `data/canonical_graph/current/atlas_archetype_profile_targets.json`
 - `data/canonical_graph/current/graph_linking_node_set.json`
 - `data/canonical_graph/current/pm_multi_membership_decisions.json`

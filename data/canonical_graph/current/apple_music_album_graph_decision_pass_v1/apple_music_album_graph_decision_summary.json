@@ -1,0 +1,50 @@
+{
+  "run_version": "apple_music_album_graph_decision_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T18:48:36.492Z",
+  "storefront": "us",
+  "policy": {
+    "preserve_original_graph_target_for_unresolvable_albums": true,
+    "replacement_model": "add_new_graph_node_with_relationship_to_original_target",
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "decision metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "counts": {
+    "decisions_total": 20,
+    "direct_link_decisions": 2,
+    "replacement_node_decisions": 14,
+    "unresolvable_without_replacement_decisions": 4,
+    "replacement_nodes_total": 14,
+    "new_links_total": 18,
+    "new_links_by_source_type": {
+      "album_sidecar_album": 2,
+      "graph_album": 2,
+      "graph_replacement_album": 14
+    },
+    "new_links_by_resource_type": {
+      "album": 17,
+      "playlist": 1
+    },
+    "decisions_by_status": {
+      "apple_music_unresolvable": 18,
+      "resolved_direct": 2
+    },
+    "replacement_status_counts": {
+      "replacement_node_selected": 14,
+      "no_replacement_selected": 4,
+      "not_applicable": 2
+    }
+  }
+}

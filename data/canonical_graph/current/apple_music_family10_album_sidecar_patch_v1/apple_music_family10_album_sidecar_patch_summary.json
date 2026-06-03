@@ -1,0 +1,93 @@
+{
+  "run_version": "apple_music_family10_album_sidecar_patch_v1",
+  "status": "complete",
+  "generated_at": "2026-06-01T23:45:08.892Z",
+  "storefront": "us",
+  "raw_apple_payloads_persisted": false,
+  "scope": {
+    "target_album_keys": [
+      "album|radiohead|bends",
+      "album|radiohead|ok computer",
+      "album|radiohead|kid a",
+      "album|radiohead|in rainbows",
+      "album|oasis|what s the story morning glory"
+    ],
+    "source_seed_file": "data/canonical_graph/current/album_sidecar_seed_albums.json",
+    "source_link_file": "data/canonical_graph/current/apple_music_family10_missing_obvious_hotfix_v1/apple_music_family10_missing_obvious_hotfix_links_v1.jsonl"
+  },
+  "counts": {
+    "albums_added_to_sidecar": 5,
+    "albums_updated_in_sidecar": 0,
+    "apple_track_rows_added_in_scope": 57,
+    "sidecar_albums_total": 2167,
+    "sidecar_albums_with_apple_collection_id": 2117,
+    "sidecar_albums_without_apple_collection_id": 50,
+    "sidecar_track_rows_total": 29667,
+    "sidecar_track_rows_with_apple_track_id": 28595,
+    "sidecar_track_rows_missing_apple_track_id": 1072,
+    "missing_track_ids_on_apple_resolved_albums": 0,
+    "missing_track_ids_on_albums_without_apple_id": 1072
+  },
+  "albums": [
+    {
+      "candidate_identity_key": "album|radiohead|bends",
+      "artist_display_name": "Radiohead",
+      "title": "The Bends",
+      "apple_collection_id": "1097862703",
+      "status": "added_sidecar_album",
+      "previous_track_count": 0,
+      "previous_tracks_with_apple_id": 0,
+      "apple_track_count": 12,
+      "first_track_id": 1097862726,
+      "last_track_id": 1097863295
+    },
+    {
+      "candidate_identity_key": "album|radiohead|ok computer",
+      "artist_display_name": "Radiohead",
+      "title": "OK Computer",
+      "apple_collection_id": "1097861387",
+      "status": "added_sidecar_album",
+      "previous_track_count": 0,
+      "previous_tracks_with_apple_id": 0,
+      "apple_track_count": 12,
+      "first_track_id": 1097861769,
+      "last_track_id": 1097861845
+    },
+    {
+      "candidate_identity_key": "album|radiohead|kid a",
+      "artist_display_name": "Radiohead",
+      "title": "Kid A",
+      "apple_collection_id": "1097862870",
+      "status": "added_sidecar_album",
+      "previous_track_count": 0,
+      "previous_tracks_with_apple_id": 0,
+      "apple_track_count": 11,
+      "first_track_id": 1097863108,
+      "last_track_id": 1097863582
+    },
+    {
+      "candidate_identity_key": "album|radiohead|in rainbows",
+      "artist_display_name": "Radiohead",
+      "title": "In Rainbows",
+      "apple_collection_id": "1109714933",
+      "status": "added_sidecar_album",
+      "previous_track_count": 0,
+      "previous_tracks_with_apple_id": 0,
+      "apple_track_count": 10,
+      "first_track_id": 1109715066,
+      "last_track_id": 1109715479
+    },
+    {
+      "candidate_identity_key": "album|oasis|what s the story morning glory",
+      "artist_display_name": "Oasis",
+      "title": "(What's the Story) Morning Glory?",
+      "apple_collection_id": "1517447039",
+      "status": "added_sidecar_album",
+      "previous_track_count": 0,
+      "previous_tracks_with_apple_id": 0,
+      "apple_track_count": 12,
+      "first_track_id": 1517447321,
+      "last_track_id": 1517447869
+    }
+  ]
+}

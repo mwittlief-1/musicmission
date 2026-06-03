@@ -1,0 +1,65 @@
+{
+  "run_version": "apple_music_high_confidence_album_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T04:25:17.112Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv",
+    "existing_link_passes": [
+      "apple_music_link_pass_v1",
+      "apple_music_try_harder_pass_v1",
+      "apple_music_residual_track_pass_v1",
+      "apple_music_album_variant_pass_v1",
+      "apple_music_offline_reconciliation_pass_v1",
+      "apple_music_artist_album_resolver_pass_v1"
+    ]
+  },
+  "counts": {
+    "album_jobs_completed": 144,
+    "new_links_total": 501,
+    "deferred_total": 104,
+    "new_links_by_source_type": {
+      "album_sidecar_album": 40,
+      "album_sidecar_track": 421,
+      "graph_album": 40
+    },
+    "new_links_by_resource_type": {
+      "album": 80,
+      "song": 421
+    },
+    "new_links_by_match_basis": {
+      "high_confidence_edition_variant_tracklist_auto_match": 2,
+      "high_confidence_title_tracklist_auto_match": 34,
+      "high_confidence_title_variant_tracklist_auto_match": 6,
+      "high_confidence_alternate_title_tracklist_auto_match": 12,
+      "high_confidence_curated_seed_tracklist_auto_match": 20,
+      "high_confidence_soundtrack_title_tracklist_auto_match": 6,
+      "high_confidence_album_track_auto_match": 421
+    },
+    "album_links_by_edition_class": {
+      "expanded": 14,
+      "original_like": 56,
+      "remaster": 10
+    },
+    "deferred_by_reason": {
+      "high_confidence_album_no_safe_match": 104
+    }
+  }
+}

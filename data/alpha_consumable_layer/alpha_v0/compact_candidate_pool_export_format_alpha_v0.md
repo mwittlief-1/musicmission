@@ -32,11 +32,19 @@ data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.md
 
 ## Purpose
 
-The compact candidate pool gives Mission Generation a small, curated, role-labeled set of route-ready candidates. It is sourced only from approved Alpha graph surfaces and should be further filtered/ranked by user Survey and Atlas evidence.
+The compact candidate pool gives Mission Generation a small, curated, role-labeled set of playback-ready candidates for handoff tests and compact prompt payloads. It is sourced from approved Alpha graph surfaces and should be further filtered/ranked by user Survey and Atlas evidence.
+
+It is not the canonical mission-item universe. The full mission universe is:
+
+```text
+data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json
+```
 
 Do not send the whole graph to OpenAI.
 
-MGN-I004 guardrail: route pools must contain concrete `track` and/or `album` candidates. Artist-only candidates are not route-ready and must not be used as pseudo-playable mission items.
+MGN-I004 guardrail: playback route pools must contain concrete `track` candidates for early Alpha default playback. Artist-only candidates must not be used as pseudo-playable playback items. Album candidates remain reference/context material unless a later album-route contract explicitly enables them.
+
+Playable `track` candidates must have a resolved Apple Music catalog ID. Canonical songs without an Apple ID remain in the graph but are marked `do_not_use_no_apple_id` for Alpha playback and default Mission Generation.
 
 ## Pool Buckets
 
@@ -97,6 +105,11 @@ Each candidate includes:
 - `do_not_infer`
 - `music_kit_search_hint`
 - `music_kit_resolution_status`
+- `apple_music_catalog_status`
+- `apple_music_catalog_id`
+- `apple_music_catalog_url`
+- `apple_music_catalog_match_status`
+- `apple_music_catalog_match_basis`
 - `apple_music_resolution_policy`
 - `version_risk_note`
 - `source_file`
@@ -112,16 +125,18 @@ Each candidate includes:
 
 For route candidates:
 
-- `object_type` is `track` or `album`.
+- `object_type` is `track` for early Alpha default playback.
 - `candidate_id` is the exact candidate-pool membership ID.
 - `app_route_item_id` is the app-safe deterministic ID Mission Generation should copy to `route.items[].item_id`.
 - `route_candidate_key` is the canonical playable route identity.
 - `route_batch_dedupe_key` is the mission/batch uniqueness key.
 - `route_display_identity_key` is fallback diagnostic identity only.
-- `canonical_object_type` preserves the graph source type, usually `song_recording` or `album`.
+- `canonical_object_type` preserves the graph source type, normally `song_recording` in the default pool.
 - `track` candidates carry `music_object_ref.object_type = song_recording`.
-- `album` candidates carry `music_object_ref.object_type = album`.
-- `music_kit_resolution_status = search_required` means the app/resolver still needs a catalog match before playback.
+- `album` candidates remain reference/context material until a future album-route contract enables them.
+- `music_kit_resolution_status = catalog_id_resolved` means the candidate already has an Apple Music catalog ID in the app catalog index.
+- `apple_music_catalog_status = resolved` and a non-empty `apple_music_catalog_id` are required for the early Alpha default pool.
+- `do_not_use_no_apple_id` rows are retained for graph/QA/manual resolver work but excluded from playback routes and default Mission Generation.
 - `candidate_safety_state = alpha_safe_with_review_flags` means store/review the flags, not automatically block generation.
 - `review_gate_action = generate_allowed_store_review_flags` means Mission Generation/Supabase should preserve caution metadata while continuing attempts.
 
@@ -145,6 +160,7 @@ The helper blocks:
 - Alpha blocklist rows
 - manual-review recording rows
 - missing or unsafe recording-version sidecars
+- rows without a resolved Apple Music catalog ID
 - duplicate dedupe groups in one export
 - duplicate route display identities in one export
 

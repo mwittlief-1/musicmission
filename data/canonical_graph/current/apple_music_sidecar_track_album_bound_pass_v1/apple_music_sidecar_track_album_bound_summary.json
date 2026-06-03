@@ -1,0 +1,39 @@
+{
+  "run_version": "apple_music_sidecar_track_album_bound_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-29T03:28:04.727Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "apple_catalog_requests": "album_tracks_sparse_transient_only",
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token",
+      "apple_track_title",
+      "apple_track_artist",
+      "apple_album_name"
+    ]
+  },
+  "counts": {
+    "album_jobs": 608,
+    "track_rows_missing_ids_in_scope": 2943,
+    "links_total": 738,
+    "deferred_total": 2205,
+    "links_by_confidence": {
+      "high": 102,
+      "medium": 636
+    },
+    "deferred_by_reason": {
+      "album_bound_track_no_safe_match": 2205
+    }
+  }
+}

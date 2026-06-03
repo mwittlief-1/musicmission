@@ -13,7 +13,7 @@ Generated: 2026-05-20
 | 7 | artist | 12 | 48 | 37 | 0 | {} |
 | 8 | artist | 12 | 48 | 32 | 0 | {} |
 | 9 | artist | 12 | 48 | 68 | 0 | {} |
-| 10 | artist | 12 | 48 | 38 | 0 | {} |
+| 10 | artist | 12 | 50 | 38 | 0 | {} |
 | 11 | artist | 12 | 48 | 43 | 0 | {} |
 | 12 | artist | 12 | 42 | 0 | 0 | {} |
 | 13 | artist | 12 | 48 | 24 | 0 | {} |
@@ -31,7 +31,7 @@ Generated: 2026-05-20
 | 7 | album | 12 | 48 | 44 | 0 | {} |
 | 8 | album | 12 | 48 | 21 | 0 | {} |
 | 9 | album | 12 | 48 | 72 | 7 | {'suppressed': 7} |
-| 10 | album | 12 | 48 | 29 | 0 | {} |
+| 10 | album | 12 | 52 | 30 | 0 | {} |
 | 11 | album | 12 | 48 | 10 | 0 | {} |
 | 12 | album | 12 | 24 | 0 | 0 | {} |
 | 13 | album | 12 | 42 | 0 | 0 | {} |
@@ -49,7 +49,7 @@ Generated: 2026-05-20
 | 7 | song_recording | 12 | 48 | 72 | 42 | {'quarantined': 1, 'suppressed': 41} |
 | 8 | song_recording | 12 | 48 | 36 | 0 | {} |
 | 9 | song_recording | 12 | 48 | 72 | 37 | {'quarantined': 1, 'suppressed': 36} |
-| 10 | song_recording | 12 | 48 | 68 | 0 | {} |
+| 10 | song_recording | 12 | 55 | 71 | 0 | {} |
 | 11 | song_recording | 12 | 48 | 9 | 20 | {'quarantined': 20} |
 | 12 | song_recording | 12 | 38 | 0 | 0 | {} |
 | 13 | song_recording | 12 | 48 | 22 | 0 | {} |

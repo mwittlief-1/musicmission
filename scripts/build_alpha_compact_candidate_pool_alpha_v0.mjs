@@ -4,6 +4,7 @@ import fs from "node:fs";
 const ROOT = "data/canonical_graph/normalization_pass_2";
 const IMPORT_DRY_RUN = "data/canonical_graph/import_dry_run";
 const ALPHA = "data/alpha_consumable_layer/alpha_v0";
+const APPLE_CATALOG_INDEX = "MusicAtlasController/Resources/canonical_apple_music_catalog_index_v1.json";
 
 const args = new Map();
 for (let i = 2; i < process.argv.length; i += 1) {
@@ -15,6 +16,7 @@ for (let i = 2; i < process.argv.length; i += 1) {
 
 const output = args.get("output") || `${ALPHA}/sample_compact_candidate_pool_alpha_v0.json`;
 const maxPerPool = Number(args.get("max-per-pool") || 12);
+const includeAlbums = args.get("include-albums") === true;
 const familyFilter = args.get("family")
   ? new Set(String(args.get("family")).split(",").map((value) => Number(value.trim())))
   : null;
@@ -43,10 +45,32 @@ const canonicalAlbums = readJson(`${IMPORT_DRY_RUN}/canonical_albums.json`);
 const albumById = new Map(canonicalAlbums.map((row) => [row.canonical_album_id, row]));
 const canonicalSongs = readJson(`${IMPORT_DRY_RUN}/canonical_song_recordings.json`);
 const songById = new Map(canonicalSongs.map((row) => [row.canonical_song_recording_id, row]));
+const appleCatalogIndex = readJson(APPLE_CATALOG_INDEX);
 const deadEndProbes = readJson(`${ROOT}/dead_end_probe_candidates_v0_2.json`);
 const deadEndProbeByTypedRef = new Map(
   deadEndProbes.map((row) => [`${row.entity_type}:${row.entity_id}`, row])
 );
+
+function appleMusicCatalogIndexByCanonicalSongId(index) {
+  const byCanonicalId = new Map();
+  for (const entry of index.entries || []) {
+    if (entry.item_type !== "track" || !entry.apple_catalog_id) continue;
+    for (const key of entry.match_keys || []) {
+      if (!key.startsWith("canonical_entity_id:")) continue;
+      const canonicalId = key.slice("canonical_entity_id:".length);
+      if (!byCanonicalId.has(canonicalId)) byCanonicalId.set(canonicalId, entry);
+    }
+  }
+  return byCanonicalId;
+}
+
+const appleMusicTrackByCanonicalSongId =
+  appleMusicCatalogIndexByCanonicalSongId(appleCatalogIndex);
+
+function appleMusicCatalogEntry(row) {
+  if (row.object_type !== "song_recording") return null;
+  return appleMusicTrackByCanonicalSongId.get(row.canonical_entity_id) || null;
+}
 
 const recordingVariantByContext = {
   original: "studio",
@@ -78,6 +102,7 @@ function compositionPolicyStatusForVersion(version) {
 function musicObjectRef(row) {
   const version =
     row.object_type === "song_recording" ? recordingById.get(row.canonical_entity_id) : null;
+  const appleEntry = appleMusicCatalogEntry(row);
   return {
     object_type: row.object_type,
     ref_source: "canonical_graph",
@@ -87,7 +112,18 @@ function musicObjectRef(row) {
       row.object_type === "song_recording" ? row.canonical_entity_id : null,
     composition_placeholder_id: null,
     user_music_object_id: null,
-    external_catalog_refs: {},
+    external_catalog_refs: appleEntry
+      ? {
+          apple_music: {
+            catalog_id: appleEntry.apple_catalog_id,
+            resource_type: appleEntry.apple_resource_type || "song",
+            storefront: appleEntry.storefront || "us",
+            url: appleEntry.apple_catalog_url || null,
+            match_status: appleEntry.match_status || null,
+            match_basis: appleEntry.match_basis || null
+          }
+        }
+      : {},
     display_name: row.display_label,
     credited_artist_name: creditedArtist(row),
     credit_context: "route_candidate",
@@ -202,7 +238,7 @@ function sourceFileFor(type) {
 }
 
 function allowed(row) {
-  if (!["album", "song_recording"].includes(row.object_type)) return false;
+  if (row.object_type !== "song_recording" && !(includeAlbums && row.object_type === "album")) return false;
   if (!eligibleFamilies.has(row.family_id)) return false;
   if (familyFilter && !familyFilter.has(row.family_id)) return false;
   if (row.review_status !== "approved") return false;
@@ -213,6 +249,7 @@ function allowed(row) {
     const version = recordingById.get(row.canonical_entity_id);
     if (!version || version.review_status !== "approved" || version.survey_safe !== true) return false;
     if (version.apple_music_resolution_policy === "manual_review_required") return false;
+    if (!appleMusicCatalogEntry(row)) return false;
   }
   if (row.object_type === "album" && !albumById.has(row.canonical_entity_id)) return false;
   return routeItemType(row) !== "unsupported";
@@ -259,6 +296,28 @@ function reviewMetadata(row, candidateRole, riskClass) {
   };
 }
 
+function appleMusicCatalogStatus(row) {
+  const entry = appleMusicCatalogEntry(row);
+  if (!entry) {
+    return {
+      apple_music_catalog_status: "unmatched_no_apple_id",
+      apple_music_catalog_id: null,
+      apple_music_catalog_url: null,
+      apple_music_catalog_match_status: null,
+      apple_music_catalog_match_basis: null,
+      apple_music_storefront: null
+    };
+  }
+  return {
+    apple_music_catalog_status: "resolved",
+    apple_music_catalog_id: entry.apple_catalog_id,
+    apple_music_catalog_url: entry.apple_catalog_url || null,
+    apple_music_catalog_match_status: entry.match_status || null,
+    apple_music_catalog_match_basis: entry.match_basis || null,
+    apple_music_storefront: entry.storefront || "us"
+  };
+}
+
 function familiarityFor(row, bucket, candidateRole) {
   if (candidateRole === "waypoint") return "likely_known_or_contextual";
   if (bucket === "page1_core") return "likely_known";
@@ -296,6 +355,7 @@ function toCandidate(row, bucket, candidateRole, poolName) {
   const batchDedupeKey = routeBatchDedupeKey(row, routeType);
   const displayIdentityKey = routeDisplayIdentityKey(routeType, artist, row.display_label);
   const stableItemId = appRouteItemId(routeType, row.object_type, row.canonical_entity_id);
+  const appleStatus = appleMusicCatalogStatus(row);
   return {
     candidate_id: row.candidate_id,
     route_candidate_key: routeKey,
@@ -322,7 +382,7 @@ function toCandidate(row, bucket, candidateRole, poolName) {
     dedupe_group: row.dedupe_group,
     priority_score: row.priority_score,
     trigger_rule: row.trigger_rule,
-    why_selected: `${candidateRole} route-ready ${routeType} from ${bucket} ${row.object_type} surface`,
+    why_selected: `${candidateRole} playback-ready ${routeType} from ${bucket} ${row.object_type} surface`,
     expected_signal: `tests ${row.survey_intent} response without creating Atlas truth`,
     risk_class: risk,
     candidate_safety_state: review.candidate_safety_state,
@@ -343,7 +403,8 @@ function toCandidate(row, bucket, candidateRole, poolName) {
     negative_inference: row.negative_inference,
     do_not_infer: row.do_not_infer,
     music_kit_search_hint: searchHint,
-    music_kit_resolution_status: "search_required",
+    music_kit_resolution_status: "catalog_id_resolved",
+    ...appleStatus,
     apple_music_resolution_policy: appleMusicResolutionPolicy(row),
     version_risk_note: versionRiskNote(row),
     route_item: {
@@ -359,6 +420,8 @@ function toCandidate(row, bucket, candidateRole, poolName) {
       canonical_object_type: row.object_type,
       music_object_ref: ref,
       music_kit_search_hint: searchHint,
+      music_kit_resolution_status: "catalog_id_resolved",
+      ...appleStatus,
       apple_music_resolution_policy: appleMusicResolutionPolicy(row),
       version_risk_note: versionRiskNote(row)
     },
@@ -522,14 +585,19 @@ const payload = {
     `${ROOT}/survey_album_candidates_v0_2.json`,
     `${ROOT}/survey_song_candidates_v0_2.json`
   ],
-  note: "Route-ready graph-only sample/export helper output. User-specific Survey/Atlas evidence should further select and rank this pool.",
-  route_readiness_status: "route_ready_track_album_candidates",
+  note: "Early Alpha playback-ready graph-only sample/export helper output. This compact pool is a sample/slice for handoff validation, not the full canonical mission-item universe. Default playback candidates are canonical song recordings only; album objects remain reference/context material unless a future run passes --include-albums.",
+  mission_item_universe: `${ALPHA}/canonical_mission_item_universe_alpha_v0.json`,
+  compact_pool_is_full_mission_universe: false,
+  route_readiness_status: "route_ready_canonical_song_candidates",
   resolves_blocker: "MGN-I004",
+  apple_music_catalog_index: APPLE_CATALOG_INDEX,
+  apple_music_catalog_id_required_for_default_playback: true,
+  no_apple_id_policy: "do_not_use_no_apple_id",
   graph_metadata_taste_truth: false,
   atlas_promotion_created: false,
   artist_level_candidates_in_route_pools: false,
   resolver_step_required_before_playback: true,
-  route_ready_object_types: ["track", "album"],
+  route_ready_object_types: includeAlbums ? ["track", "album"] : ["track"],
   route_ready_candidate_count: routeReadyCount,
   max_per_pool: maxPerPool,
   pools

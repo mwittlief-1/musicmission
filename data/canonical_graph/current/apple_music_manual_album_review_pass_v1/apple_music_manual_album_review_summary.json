@@ -1,0 +1,50 @@
+{
+  "run_version": "apple_music_manual_album_review_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T11:12:44.610Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "approved_album_count": 17,
+    "held_out_for_manual_check": [
+      "album|my bloody valentine|loveless",
+      "album|original broadway cast of oklahoma|oklahoma",
+      "album|link wray|link wray and the wraymen"
+    ],
+    "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv"
+  },
+  "counts": {
+    "new_links_total": 117,
+    "deferred_total": 0,
+    "new_links_by_source_type": {
+      "album_sidecar_album": 17,
+      "album_sidecar_track": 83,
+      "graph_album": 17
+    },
+    "new_links_by_resource_type": {
+      "album": 34,
+      "song": 83
+    },
+    "new_links_by_match_basis": {
+      "user_manual_album_review_approved": 34,
+      "user_manual_album_review_track_auto_match": 83
+    },
+    "deferred_by_reason": {}
+  }
+}

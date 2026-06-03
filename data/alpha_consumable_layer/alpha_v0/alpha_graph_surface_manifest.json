@@ -1,7 +1,7 @@
 {
   "artifact": "alpha_graph_surface_manifest",
   "version": "alpha_v0",
-  "generated_at": "2026-05-25T13:05:28.120Z",
+  "generated_at": "2026-06-01T14:00:38.356Z",
   "status": "frozen_alpha_consumable_surfaces_not_hard_lock",
   "controlling_contracts": [
     "data/product_contracts/app_local_candidate_pool_contract_alpha_v0.md",
@@ -12,18 +12,18 @@
   "approved_source_files": [
     {
       "file": "data/canonical_graph/normalization_pass_2/survey_artist_candidates_v0_2.json",
-      "bytes": 2214388,
-      "sha256": "4d65d3178ea2c303a35bc66af14b733806f9a122d6fc6dff73114b91e821356e"
+      "bytes": 2217172,
+      "sha256": "eb19eb1e460e3ccd65b901d71094e53b31f06aab02af104d61ab0d3083dd9067"
     },
     {
       "file": "data/canonical_graph/normalization_pass_2/survey_album_candidates_v0_2.json",
-      "bytes": 1927430,
-      "sha256": "ccdc69380fcc0342cc63019515503d8b767778e93fef4b6779a26cbea042fcb3"
+      "bytes": 1934490,
+      "sha256": "9fc3de841497f6989bffbffd07acd23e7ac647d97d2b1217775d7f4bc8d60961"
     },
     {
       "file": "data/canonical_graph/normalization_pass_2/survey_song_candidates_v0_2.json",
-      "bytes": 3002522,
-      "sha256": "26c90f4dbe3b5430b1fd32f79041bcd4213cc83ebb61ac01435dc17672cb7391"
+      "bytes": 3017277,
+      "sha256": "7fbbed3b03a1896d9749179d8be70d9f348b61563903b5894f7ceb6c583091a7"
     },
     {
       "file": "data/canonical_graph/normalization_pass_2/family_survey_readiness_v0_2.json",
@@ -42,8 +42,8 @@
     },
     {
       "file": "data/canonical_graph/normalization_pass_2/canonical_recording_versions.json",
-      "bytes": 1100062,
-      "sha256": "bf876dfa5e1e4663de4635ffb67179cd6be432d28db92180df3a57048d7c99a2"
+      "bytes": 1105678,
+      "sha256": "c8aa1629683ae5d13edab15b4427fc8ee6b2873f45229357c53addca7e881707"
     },
     {
       "file": "data/canonical_graph/normalization_pass_2/dead_end_probe_candidates_v0_2.json",
@@ -1276,21 +1276,25 @@
     "alpha_candidate_blocklist": "blocked from survey display, starter Atlas, default Mission Gen, Supabase active rows, OpenAI prompt payloads, and Apple auto-resolution",
     "music_object_ref": "required for app/local candidate and tile payloads; reference-only, never user taste",
     "qa_exception_ledger": "preserve warnings/manual-review rows as QA context; blocked rows do not feed product surfaces",
-    "compact_candidate_pool": "use helper output as curated candidate material only; user Survey/Atlas evidence must select/rank before Mission Generation"
+    "compact_candidate_pool": "use helper output as curated playback-ready sample material only; default playback sample requires canonical song recordings with resolved Apple Music catalog IDs",
+    "apple_music_unmatched_no_id": "canonical rows stay in graph but do_not_use_no_apple_id rows are blocked from Alpha playback, playback-route selection, Supabase active playback candidates, OpenAI playback payloads, and Apple auto-resolution",
+    "canonical_mission_item_universe": "full canonical grid is available as mission material; compact pools are slices/samples, not the universe",
+    "canonical_graph_with_apple_id_survey_eligible": "any canonical graph item with an Apple Music catalog ID is available for Survey consideration unless blocklisted",
+    "approved_survey_surfaces": "survey_*_candidates_v0_2 are approved/default Alpha surfaces, not the outer limit of Survey eligibility"
   },
   "safe_send_gate": {
-    "supabase": "only passing active candidate-pool rows with alpha_v0 contract version",
-    "openai": "only compact curated candidate pools, no raw graph, no hidden truth, no quarantined rows"
+    "supabase": "only passing active playback candidate rows with alpha_v0 contract version and resolved Apple Music catalog IDs for playable tracks",
+    "openai": "compact payloads only: no raw graph dump, no hidden truth, no quarantined rows, no do_not_use_no_apple_id playback rows"
   },
   "alpha_overlay_files": [
     {
       "file": "data/alpha_consumable_layer/alpha_v0/alpha_candidate_blocklist_alpha_v0.json",
-      "row_count": 1,
-      "bytes": 1368,
-      "sha256": "2ecbb8000c9fee3b699fb03e6fef3af828b68064486d57db5429af711fd91c44"
+      "row_count": 2,
+      "bytes": 2429,
+      "sha256": "a39ac8d686f82e5a1b264fe2f667bf744599584f30602999be0e44a78e47e307"
     }
   ],
-  "alpha_candidate_blocklist_count": 1,
+  "alpha_candidate_blocklist_count": 2,
   "alpha_contract_files": [
     {
       "file": "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_alpha_v0.schema.json",
@@ -1299,8 +1303,8 @@
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/graph_to_atlas_music_object_ref_alpha_v0.md",
-      "bytes": 9241,
-      "sha256": "7ebf7eae8e267f813f12ba9bc4ffcd397367659bbee92f4f1a147bd7309b9fbd"
+      "bytes": 9244,
+      "sha256": "311afc9ab44a9b5602d67a064094a8a9f20481faafa1e2c76459134daba26c00"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_examples_alpha_v0.json",
@@ -1324,8 +1328,8 @@
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/resolver_version_policy_sidecar_alpha_v0.md",
-      "bytes": 3738,
-      "sha256": "a85661db8fdb6db29168f2e1306603fb37a062db5c2b4ca56c27520c48983491"
+      "bytes": 3737,
+      "sha256": "fcc9e262d92a13afe6a8b0f05284982ef8fb3b1d66b23396af05a25a53a76f24"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/resolver_policy_machine_fields_alpha_v0.json",
@@ -1359,18 +1363,18 @@
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.json",
-      "bytes": 13683173,
-      "sha256": "ed27eb513208bb8442cd8341b7c7e1e3d37727e407e952ada498f357496db170"
+      "bytes": 14414803,
+      "sha256": "a49207c9bd3135e5f26e6e0fe306b262b0dd8b68e40e1a8bcfcbac5ebad1190a"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.md",
       "bytes": 1047,
-      "sha256": "de1b14de7b28145f75e7b4119ed5d801f60d4206e89c82f34ffffd6d92ee1f2d"
+      "sha256": "101dfcd974cef110fcdeabb9a633c664f021001a8814d063e1651e1d7bf721ed"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/alpha_consumable_layer_guardrails_alpha_v0.md",
-      "bytes": 6124,
-      "sha256": "3f554087f20fe0ea4111994a129ab19587e730ae5e79767b146f020487ec2643"
+      "bytes": 7450,
+      "sha256": "45c67ec5142a831bc0f2b6395c48916ebb03d3a86321fe1f36bab53a1b8cb784"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/alpha1_fixed_survey_intake_graph_support_alpha_v0.json",
@@ -1389,53 +1393,53 @@
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/family_inclusion_recommendation_alpha_v0.md",
-      "bytes": 3484,
-      "sha256": "f72f396c776c7b78129d0fd3a0adac0ad86989b12969052789142e0af1df7642"
+      "bytes": 3483,
+      "sha256": "e3eaebada726bd506e6791fc76e2e3f862db15f34de06b1de3c234a63ece96f6"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/caution_family_playbook_alpha_v0.md",
-      "bytes": 3507,
-      "sha256": "b77d2891d2737078b0f5a22e1ac0145eb93b826eca69d8ddbce03af21b893c1f"
+      "bytes": 3506,
+      "sha256": "8127efb0bbc67621d2678ac8bc67326b7acbe288742132750c2c962e00a8d445"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/canonical_gap_unresolved_object_policy_alpha_v0.md",
-      "bytes": 2906,
-      "sha256": "1a88db4e97a0f2acee2ce7e294fd1350296e729af81198d709877d91357a799b"
+      "bytes": 2905,
+      "sha256": "4e7ffe13cc9fc5a4ea014598d7d66625cddf37d87ed64842e051b46bfc826614"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/compact_candidate_pool_export_format_alpha_v0.md",
-      "bytes": 4865,
-      "sha256": "0ea212826b22c640ebb15aa85d56d2787343f189d9c73e87f5e021c1059e5fb3"
+      "bytes": 5993,
+      "sha256": "7457d95dcb137a47971eb05c9c100e55287c240688bd56ab07865acd7557d942"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/route_ready_candidate_pool_report_alpha_v0.json",
-      "bytes": 3865,
-      "sha256": "6de8a823fe834105b9c277acec74d1c48eec249e2d7b7453045fee6a0e706a17"
+      "bytes": 4343,
+      "sha256": "593508ea6f48f4a2350cafefd645392655192f73ef95613323256c75272b6670"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/route_ready_candidate_pool_report_alpha_v0.md",
-      "bytes": 2950,
-      "sha256": "381c602b7ebfcde7758e5983dfced2575e7b0b2fa76a0802a8d5911dcca398ec"
+      "bytes": 2806,
+      "sha256": "1d737c0df4a267f5f74e9678802338c16bd8dd73fb4ad0a418f77643c86822fb"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json",
-      "bytes": 156669,
-      "sha256": "da06895f94a066d5d6cdd9fc5209854cdaf167baa529cb487a44d064ccaafa1e"
+      "bytes": 179117,
+      "sha256": "47ae179c46dafc4ade6d6dd9e6ca5be5f91066412e6f5d153ca788dfe2047e45"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.md",
-      "bytes": 13943,
-      "sha256": "a47cdaa6c6271e827e503fe64747f84eca5d2b556b7addb68b58b643bcc218aa"
+      "bytes": 13373,
+      "sha256": "55a230ba752fa12bdab8417e7cede9972accac1c3e575526a5a14cd26df86c36"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/alpha1_first_mission_handoff_graph_contract_alpha_v0.json",
-      "bytes": 6368,
-      "sha256": "1e2d8068ed099e8571bb633b32f6474cb9f8d0490657232fe500540a83595aab"
+      "bytes": 7297,
+      "sha256": "79508a094bcb43506c2e81f34490778981ed9d394f1c467c49cd51de99811acf"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/alpha1_first_mission_handoff_graph_contract_alpha_v0.md",
-      "bytes": 7202,
-      "sha256": "cf9173fa8e73367334f95e8057d16d91596d3123eb0cfa5405353eb1d0095667"
+      "bytes": 8225,
+      "sha256": "098bef137bbc2a0a99a3314a09bcc159aee5687101fb691598dcfce77a407ae0"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/alpha1_user_facing_graph_language_guardrails_alpha_v0.md",
@@ -1461,6 +1465,26 @@
       "file": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.md",
       "bytes": 4667,
       "sha256": "15c4e937aac7897a6910a9db826b1828c2bd27725e1a0370820a246014985f31"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json",
+      "bytes": 589825,
+      "sha256": "ea3e21b46b07d5b6883a38619feada8feef2941be6208c3a333b0f6c8373ed0b"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.md",
+      "bytes": 8539,
+      "sha256": "ee86cad0dbab534eb8998713322a7b4740118d7781fe9e72f32c51160ed1b048"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json",
+      "bytes": 25393780,
+      "sha256": "3b0eb5cc48c9080ffd0627be3d12424bcd148b64f80ad3addaf98fed322acf82"
+    },
+    {
+      "file": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.md",
+      "bytes": 1627,
+      "sha256": "d1af2382f1c127ea6c802724379625092f7462d0f3c74ece6d3a4171a9373def"
     }
   ],
   "music_object_ref_alignment": {
@@ -1487,23 +1511,23 @@
   "alpha_support_files": [
     {
       "file": "scripts/validate_alpha_consumable_layer_alpha_v0.mjs",
-      "bytes": 39552,
-      "sha256": "a67eca7f271ed343fb533a8d8296354a3a5e9113015b6db15654e7be7ba33306"
+      "bytes": 48350,
+      "sha256": "48e1f6ff888b98f75207a5639f9a63008dcd03b2b3a482e1ffbdf424e8296521"
     },
     {
       "file": "scripts/build_alpha_compact_candidate_pool_alpha_v0.mjs",
-      "bytes": 20672,
-      "sha256": "ac92943478467fe5be19629fee46469d453b44770f42c3f47c50e640bd44b137"
+      "bytes": 23667,
+      "sha256": "004f701e7615d5aefec5fb001314ac14717262f64c816741319766b7200aa832"
     },
     {
       "file": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
-      "bytes": 512243,
-      "sha256": "d1f1d2a9eb291f1fcef4a17ee614dbb5b5f8ef19c041ce088494b4a7f920fdcd"
+      "bytes": 624340,
+      "sha256": "80929c1ae49695b6e6f46e0ed4bb5478da51614c520abba5b4986069c0758fe3"
     },
     {
       "file": "scripts/build_alpha_live_smoke_recovery_graph_artifacts_alpha_v0.mjs",
-      "bytes": 15585,
-      "sha256": "ed468822d7f45c142cf1c50d1e781760a81ba340a5930c45ca78a2c153d59703"
+      "bytes": 40145,
+      "sha256": "4ab61e70f12384879401c282d4bfa2c1ffb4297abcacd4b9adf13240e2952740"
     }
   ],
   "alpha1_fixed_survey_intake": {
@@ -1526,12 +1550,17 @@
     "status": "ready_for_core_app_integration_with_guardrails",
     "graph_metadata_taste_truth": false,
     "atlas_promotion_created": false,
-    "route_readiness_status": "route_ready_track_album_candidates",
+    "route_readiness_status": "route_ready_canonical_song_candidates",
     "route_ready_candidate_count": 72,
-    "track_candidate_count": 50,
-    "album_candidate_count": 22,
+    "track_candidate_count": 72,
+    "album_candidate_count": 0,
     "artist_level_candidates_in_route_pools": false,
-    "resolves_blocker": "MGN-I004"
+    "resolves_blocker": "MGN-I004",
+    "apple_music_resolved_track_candidate_count": 72,
+    "do_not_use_no_apple_id_candidate_count": 0,
+    "apple_music_catalog_id_required_for_default_playback": true,
+    "mission_item_universe": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json",
+    "compact_pool_is_full_mission_universe": false
   },
   "survey_runtime_ingestion_alignment": {
     "source": "data/alpha_consumable_layer/alpha_v0/survey_runtime_ingestion_alignment_alpha_v0.json",
@@ -1545,22 +1574,75 @@
   },
   "live_alpha_smoke_recovery": {
     "source": "docs/alpha_backlog/alpha_live_smoke_recovery_2026_05_24.md",
-    "status": "canonical_graph_recovery_tasks_complete",
+    "status": "canonical_graph_recovery_tasks_complete_apple_resolved_playback_gate",
     "candidate_review_risk_report": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json",
     "survey_page_selection_audit_refs": "data/alpha_consumable_layer/alpha_v0/survey_page_selection_audit_refs_alpha_v0.json",
     "route_candidates_default_alpha_eligible": 72,
     "route_candidates_hard_blocked": 0,
-    "survey_audit_ref_count": 4228
+    "survey_audit_ref_count": 4228,
+    "track_candidates": 72,
+    "album_candidates": 0,
+    "apple_music_unmatched_do_not_use": "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json",
+    "apple_music_resolved_track_candidates": 72,
+    "canonical_mission_item_universe": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json"
   },
   "live_generation_recovery": {
     "source": "docs/alpha_backlog/live_generation_recovery_dispatch_2026_05_25.md",
-    "status": "canonical_route_identity_contract_complete",
+    "status": "canonical_route_identity_contract_complete_canonical_grid_universe_with_apple_resolved_survey_and_playback_sample",
     "route_identity_contract": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json",
     "route_items_must_come_from_candidate_pool": true,
     "digest_or_strong_region_non_candidate_route_items_allowed": false,
     "route_ready_candidate_count": 72,
     "route_candidate_keys": 72,
     "route_batch_dedupe_keys": 72,
-    "app_route_item_ids": 72
+    "app_route_item_ids": 72,
+    "early_alpha_default_playback_object_type": "track",
+    "album_route_candidates_default_allowed": false,
+    "apple_music_catalog_id_required_for_default_playback": true,
+    "apple_music_resolved_track_candidates": 72,
+    "do_not_use_no_apple_id_candidates": 0,
+    "full_canonical_grid_available_for_mission_items": true,
+    "compact_pool_is_full_mission_universe": false,
+    "canonical_graph_with_apple_id_available_for_survey": true
+  },
+  "apple_music_do_not_use_no_apple_id": {
+    "source": "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json",
+    "status": "do_not_use_no_apple_id_status_applied",
+    "active_graph_song_rows": 7018,
+    "active_graph_song_rows_with_apple_id": 6828,
+    "active_graph_song_rows_do_not_use_no_apple_id": 190,
+    "active_graph_recording_rows": 399,
+    "active_graph_playback_rows": 7417,
+    "active_graph_playback_rows_with_apple_id": 7206,
+    "active_graph_playback_rows_do_not_use_no_apple_id": 211,
+    "active_survey_song_candidates": 1574,
+    "active_survey_song_candidates_with_apple_id": 1500,
+    "active_survey_song_candidates_do_not_use_no_apple_id": 74,
+    "canonical_rows_remain_in_graph": true,
+    "default_playback_allowed": false,
+    "canonical_grid_rows": 11710,
+    "canonical_grid_rows_with_apple_id": 11417,
+    "canonical_grid_rows_do_not_use_no_apple_id": 291
+  },
+  "canonical_mission_item_universe": {
+    "source": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json",
+    "status": "canonical_grid_available_for_mission_items_with_playback_gate",
+    "canonical_grid_items": 11710,
+    "by_candidate_type": {
+      "song": 7018,
+      "album": 2233,
+      "artist_anchor": 2060,
+      "recording": 399
+    },
+    "playback_candidate_rows": 7417,
+    "playback_candidate_rows_with_apple_id": 7206,
+    "playback_candidate_rows_do_not_use_no_apple_id": 211,
+    "compact_pool_is_full_mission_universe": false,
+    "graph_metadata_taste_truth": false,
+    "alpha_blocklisted_grid_rows": 2,
+    "alpha_available_mission_items": 11497,
+    "apple_id_resolved_grid_items": 11417,
+    "alpha_survey_eligible_grid_items": 11417,
+    "alpha_survey_unavailable_no_apple_id": 291
   }
 }

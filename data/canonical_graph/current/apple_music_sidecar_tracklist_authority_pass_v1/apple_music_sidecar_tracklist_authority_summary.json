@@ -1,0 +1,60 @@
+{
+  "run_version": "apple_music_sidecar_tracklist_authority_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-06-01T23:45:08.892Z",
+  "storefront": "us",
+  "dry_run": false,
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "apple_catalog_requests": "album_tracks_sparse_transient_only",
+    "replacement_policy": "Apple Music catalog song tracks replace prior sidecar track rows for albums with accepted Apple album IDs; music-video relationship entries are dropped.",
+    "persisted_catalog_fields": [
+      "apple_track_id",
+      "apple_track_url",
+      "disc_number",
+      "track_number",
+      "title",
+      "artist_name",
+      "duration_ms",
+      "explicitness",
+      "is_streamable"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "counts": {
+    "album_jobs": 2112,
+    "albums_rebuilt_from_apple_tracklists": 2112,
+    "albums_rebuilt_with_zero_song_tracks": 1,
+    "albums_not_rebuilt_by_reason": {},
+    "previous_track_rows_in_scope": 28610,
+    "previous_missing_track_ids_in_scope": 72,
+    "apple_track_rows_written_in_scope": 28538,
+    "sidecar_albums_total": 2167,
+    "sidecar_albums_with_apple_collection_id": 2117,
+    "sidecar_albums_without_apple_collection_id": 50,
+    "sidecar_track_rows_total": 29667,
+    "sidecar_track_rows_with_apple_track_id": 28595,
+    "sidecar_track_rows_missing_apple_track_id": 1072,
+    "missing_track_ids_on_apple_resolved_albums": 0,
+    "missing_track_ids_on_albums_without_apple_id": 1072
+  },
+  "post_freeze_patch": {
+    "run_version": "apple_music_family10_album_sidecar_patch_v1",
+    "generated_at": "2026-06-01T23:45:08.892Z",
+    "albums_added_to_sidecar": 5,
+    "apple_track_rows_added_in_scope": 57,
+    "target_album_keys": [
+      "album|radiohead|bends",
+      "album|radiohead|ok computer",
+      "album|radiohead|kid a",
+      "album|radiohead|in rainbows",
+      "album|oasis|what s the story morning glory"
+    ]
+  }
+}

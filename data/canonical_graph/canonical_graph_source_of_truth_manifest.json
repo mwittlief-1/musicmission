@@ -11,14 +11,33 @@
     "unresolved_rows_excluded_from_v1": 804
   },
   "counts": {
-    "active_inventory_rows": 11697,
+    "active_inventory_rows": 11714,
     "active_baseline_rows": 6872,
     "active_pass_c_rows": 4825,
     "approved_multi_memberships": 13,
-    "tagging_corpus_rows": 7409,
-    "apple_id_resolution_queue_rows": 7409,
-    "album_sidecar_seed_rows": 2231,
-    "graph_linking_node_rows": 11309
+    "tagging_corpus_rows": 7419,
+    "apple_id_resolution_queue_rows": 7419,
+    "album_sidecar_seed_rows": 2234,
+    "album_track_sidecar_album_rows": 2162,
+    "album_track_sidecar_tracks": 28306,
+    "album_track_sidecar_apple_resolved_albums": 340,
+    "album_track_sidecar_musicbrainz_resolved_albums": 1822,
+    "graph_linking_node_rows": 11326
+  },
+  "post_freeze_availability_patch": {
+    "id": "album_graph_availability_updates_v1",
+    "applied_on": "2026-05-27",
+    "status": "applied",
+    "intent": "Post-freeze availability patch for Apple-resolvable album sidecar execution while preserving source-intent aliases in notes.",
+    "actions": [
+      "replace_title_keep_role",
+      "replace_active_album_preserve_historical_original",
+      "demote_to_special_entity_no_album_sidecar",
+      "bad_match_replace_with_swum_2018_album_anchor",
+      "normalize_title_year_catalog_alias",
+      "historical_unavailable_split_replacement",
+      "correct_artist_keep_album"
+    ]
   },
   "current_artifacts": {
     "active_inventory": "data/canonical_graph/current/canonical_graph_active_inventory.json",
@@ -29,6 +48,11 @@
     "apple_id_resolution_queue_csv": "data/canonical_graph/current/apple_id_resolution_queue.csv",
     "album_sidecar_seed_albums": "data/canonical_graph/current/album_sidecar_seed_albums.json",
     "album_sidecar_seed_albums_csv": "data/canonical_graph/current/album_sidecar_seed_albums.csv",
+    "album_track_sidecar": "data/canonical_graph/current/album_track_sidecar.json",
+    "album_track_sidecar_tracks_csv": "data/canonical_graph/current/album_track_sidecar_tracks.csv",
+    "album_track_sidecar_album_resolution_csv": "data/canonical_graph/current/album_track_sidecar_album_resolution.csv",
+    "album_track_sidecar_manual_apple_overrides": "data/canonical_graph/current/album_track_sidecar_manual_apple_overrides.json",
+    "album_track_sidecar_manifest_md": "data/canonical_graph/current/album_track_sidecar_manifest.md",
     "atlas_archetype_profile_targets": "data/canonical_graph/current/atlas_archetype_profile_targets.json",
     "atlas_archetype_profile_targets_csv": "data/canonical_graph/current/atlas_archetype_profile_targets.csv",
     "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
@@ -36,7 +60,10 @@
     "pm_multi_membership_decisions": "data/canonical_graph/current/pm_multi_membership_decisions.json",
     "pm_multi_membership_decisions_csv": "data/canonical_graph/current/pm_multi_membership_decisions.csv",
     "freeze_manifest": "data/canonical_graph/current/canonical_graph_freeze_manifest.json",
-    "freeze_manifest_md": "data/canonical_graph/current/canonical_graph_freeze_manifest.md"
+    "freeze_manifest_md": "data/canonical_graph/current/canonical_graph_freeze_manifest.md",
+    "radiohead_missing_obvious_hotfix": "data/canonical_graph/current/radiohead_missing_obvious_hotfix_v1.json",
+    "oasis_missing_obvious_hotfix": "data/canonical_graph/current/oasis_missing_obvious_hotfix_v1.json",
+    "apple_music_family10_missing_obvious_hotfix_links": "data/canonical_graph/current/apple_music_family10_missing_obvious_hotfix_v1/apple_music_family10_missing_obvious_hotfix_links_v1.jsonl"
   },
   "legacy_inputs": {
     "family_normalized_exports": "data/canonical_graph/family_*/normalized_family_*.json",
@@ -50,5 +77,68 @@
     "Do not use depth_hardening_v0_1 totals or pre-hardening import_dry_run outputs as active source-of-truth inputs.",
     "Family normalized exports remain historical/source-material inputs, not the active mission-effective corpus.",
     "Rows in the v0.2 needs-resolution queue remain excluded until explicitly cleaned and re-promoted."
-  ]
+  ],
+  "post_freeze_radiohead_hotfix": {
+    "id": "radiohead_missing_obvious_hotfix_v1",
+    "applied_on": "2026-05-31",
+    "status": "applied",
+    "intent": "Post-freeze missing-obvious correction for Radiohead coverage in Family 10 while preserving recording/title specificity.",
+    "row_count": 13,
+    "artist_anchor_rows": 1,
+    "album_rows": 4,
+    "song_rows": 8,
+    "profile_target_delta": {
+      "078": {
+        "effective_mission_count_after_pass_d": 9,
+        "playable_songs_after_pass_d": 5,
+        "albums_after_pass_d": 3,
+        "artist_anchors_after_pass_d": 1,
+        "boundary_after_pass_d": 1,
+        "false_nearby_after_pass_d": 0,
+        "context_candidates_after_pass_d": 0
+      },
+      "071": {
+        "effective_mission_count_after_pass_d": 3,
+        "playable_songs_after_pass_d": 2,
+        "albums_after_pass_d": 1,
+        "artist_anchors_after_pass_d": 0,
+        "boundary_after_pass_d": 0,
+        "false_nearby_after_pass_d": 0,
+        "context_candidates_after_pass_d": 0
+      }
+    },
+    "actions": [
+      "add_missing_obvious_artist_anchor",
+      "add_album_world_rows",
+      "add_song_gateway_rows",
+      "preserve_creep_same_title_do_not_merge"
+    ]
+  },
+  "post_freeze_oasis_hotfix": {
+    "id": "oasis_missing_obvious_hotfix_v1",
+    "applied_on": "2026-06-01",
+    "status": "applied",
+    "intent": "Post-freeze missing-obvious correction for Oasis and (What's the Story) Morning Glory? coverage in Family 10.",
+    "row_count": 4,
+    "artist_anchor_rows": 1,
+    "album_rows": 1,
+    "song_rows": 2,
+    "profile_target_delta": {
+      "075": {
+        "effective_mission_count_after_pass_d": 3,
+        "playable_songs_after_pass_d": 2,
+        "albums_after_pass_d": 1,
+        "artist_anchors_after_pass_d": 1,
+        "boundary_after_pass_d": 0,
+        "false_nearby_after_pass_d": 0,
+        "context_candidates_after_pass_d": 0
+      }
+    },
+    "actions": [
+      "add_missing_obvious_artist_anchor",
+      "add_album_world_row",
+      "add_top_song_gateway_rows",
+      "preserve_britpop_vs_generic_nostalgia_guardrail"
+    ]
+  }
 }

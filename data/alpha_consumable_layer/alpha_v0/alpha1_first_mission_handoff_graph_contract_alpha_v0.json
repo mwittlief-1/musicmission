@@ -4,6 +4,8 @@
   "status": "approved_graph_handoff_contract_for_generated_first_missions",
   "source_helper": "scripts/build_alpha_compact_candidate_pool_alpha_v0.mjs",
   "sample_output": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+  "mission_item_universe": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json",
+  "compact_pool_is_full_mission_universe": false,
   "handoff_inputs": [
     "survey_tile_logs",
     "survey_evidence_export_or_signal_packet",
@@ -58,6 +60,11 @@
     "do_not_infer",
     "music_kit_search_hint",
     "music_kit_resolution_status",
+    "apple_music_catalog_status",
+    "apple_music_catalog_id",
+    "apple_music_catalog_url",
+    "apple_music_catalog_match_status",
+    "apple_music_catalog_match_basis",
     "apple_music_resolution_policy",
     "version_risk_note",
     "source_file",
@@ -85,13 +92,17 @@
   ],
   "route_ready_requirements": {
     "candidate_object_type": [
-      "track",
-      "album"
+      "track"
     ],
     "track_ref_rule": "object_type=track must carry music_object_ref.object_type=song_recording",
-    "album_ref_rule": "object_type=album must carry music_object_ref.object_type=album",
+    "album_ref_rule": "object_type=album is blocked from the early Alpha default mission pool; album rows may remain reference/context material until a future album-route contract is approved",
     "artist_level_route_candidates_allowed": false,
     "pseudo_playable_items_allowed": false,
+    "apple_music_catalog_id_required_for_default_playback": true,
+    "no_apple_id_status": "do_not_use_no_apple_id",
+    "no_apple_id_queue": "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json",
+    "full_canonical_grid_available_for_mission_items": true,
+    "compact_pool_is_sample_slice_not_universe": true,
     "resolver_step_required_before_playback": true
   },
   "review_gate_policy": {
@@ -105,7 +116,9 @@
       "suppression_status != active",
       "manual_review_required == true",
       "context_only == true",
-      "object_type not in [track, album]",
+      "object_type != track",
+      "apple_music_catalog_status != resolved",
+      "apple_music_catalog_id is missing",
       "route item candidate_id not present in supplied candidate pool",
       "duplicate route_candidate_key within mission or batch",
       "duplicate route_batch_dedupe_key within mission or batch",
@@ -153,7 +166,9 @@
     "eligible_for_supabase == true",
     "review_status == approved",
     "playable_route_ready == true",
-    "object_type in [track, album]",
+    "object_type == track",
+    "apple_music_catalog_status == resolved",
+    "apple_music_catalog_id is present",
     "music_object_ref validates",
     "no quarantine or blocklist policy applies",
     "tile_log_metadata is preserved"

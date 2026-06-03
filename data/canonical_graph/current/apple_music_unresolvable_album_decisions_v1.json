@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "id": "apple_music_unresolvable_album_decisions_v1",
+    "created_on": "2026-05-28",
+    "status": "active_decision_ledger",
+    "intent": "Distinguish canonical graph albums that are known Apple Music catalog gaps from albums that are merely unresolved. Preserve the original graph target and require an explicit replacement/additional graph node for Apple-resolvable coverage.",
+    "resolution_status_values": [
+      "apple_music_unresolvable",
+      "needs_replacement_node",
+      "replacement_node_pending"
+    ],
+    "policy": {
+      "preserve_original_graph_target": true,
+      "do_not_force_weak_apple_match": true,
+      "replacement_model": "add_new_graph_node_with_relationship_to_original_target",
+      "raw_apple_payloads_persisted": false
+    }
+  },
+  "rows": [
+    {
+      "candidate_identity_key": "album|my bloody valentine|loveless",
+      "candidate_type": "album",
+      "artist_display_name": "My Bloody Valentine",
+      "title": "Loveless",
+      "year": 1991,
+      "apple_music_resolution_status": "apple_music_unresolvable",
+      "availability_reason": "licensing_or_catalog_gap",
+      "decision": "preserve_original_target_and_add_replacement_node_if_needed",
+      "replacement_status": "replacement_node_pending",
+      "replacement_candidate_identity_key": "",
+      "notes": "Manual research found MBV catalog licensing/distribution gaps; closest automated Apple candidate was by Japancakes and is explicitly rejected.",
+      "reviewed_at": "2026-05-28",
+      "raw_payload_persisted": false
+    },
+    {
+      "candidate_identity_key": "album|link wray|link wray and the wraymen",
+      "candidate_type": "album",
+      "artist_display_name": "Link Wray",
+      "title": "Link Wray & the Wraymen",
+      "year": 1960,
+      "apple_music_resolution_status": "apple_music_unresolvable",
+      "availability_reason": "album_not_available_on_apple_music",
+      "decision": "preserve_original_target_and_add_replacement_node",
+      "replacement_status": "needs_replacement_node",
+      "replacement_candidate_identity_key": "",
+      "notes": "Earlier backup match to Slinky! The Epic Sessions '58-'61 was retired as a graph-album match; keep the original target as canonical historical context and choose a new graph node for Apple-resolvable coverage.",
+      "reviewed_at": "2026-05-28",
+      "raw_payload_persisted": false
+    },
+    {
+      "candidate_identity_key": "album|various artists|garden state",
+      "candidate_type": "album",
+      "artist_display_name": "Various Artists",
+      "title": "Garden State",
+      "year": 2004,
+      "apple_music_resolution_status": "apple_music_unresolvable",
+      "availability_reason": "context_only_soundtrack_album_excluded_from_alpha_playback",
+      "decision": "preserve_original_target_as_historical_context_and_block_alpha_surfaces",
+      "replacement_status": "no_replacement_selected",
+      "replacement_candidate_identity_key": "",
+      "notes": "Do not feed Alpha playback, app catalog index, default Mission Generation, OpenAI prompt payloads, starter Atlas, or Apple auto-resolution. Individual canonical song recordings may still appear under their own artist/title rows when separately approved.",
+      "reviewed_at": "2026-06-01",
+      "raw_payload_persisted": false
+    }
+  ]
+}

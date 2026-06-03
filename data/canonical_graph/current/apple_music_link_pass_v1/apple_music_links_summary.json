@@ -1,0 +1,72 @@
+{
+  "run_version": "apple_music_link_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-27T21:45:41.270Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
+    "album_track_sidecar_album_resolution": "data/canonical_graph/current/album_track_sidecar_album_resolution.csv",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv"
+  },
+  "counts": {
+    "graph_nodes_total": 11309,
+    "graph_jobs_selected_current_invocation": 399,
+    "graph_jobs_completed_cumulative": 11309,
+    "graph_jobs_remaining": 0,
+    "sidecar_seed_links": 4560,
+    "links_total": 14156,
+    "review_total": 1713,
+    "links_by_source_type": {
+      "album_sidecar_album": 340,
+      "album_sidecar_track": 4220,
+      "graph_album": 1670,
+      "graph_artist_anchor": 1875,
+      "graph_recording": 281,
+      "graph_song": 5770
+    },
+    "links_by_resource_type": {
+      "album": 2010,
+      "song": 10271,
+      "artist": 1875
+    },
+    "links_by_match_basis": {
+      "existing_sidecar_apple_collection_id_catalog_validation": 340,
+      "existing_sidecar_apple_track_id_catalog_validation": 4220,
+      "graph_album_matched_existing_sidecar_apple_collection_id": 340,
+      "apple_album_search_title_artist_year_auto_match": 1324,
+      "apple_album_search_title_artist_auto_match": 6,
+      "apple_artist_search_top_exact_normalized": 1867,
+      "apple_artist_search_exact_normalized_in_top5": 8,
+      "apple_song_search_title_artist_year_auto_match": 5489,
+      "graph_song_matched_unique_sidecar_track_artist_title_year": 366,
+      "graph_song_matched_unique_sidecar_track_artist_title_without_year": 81,
+      "apple_song_search_title_artist_auto_match": 115
+    },
+    "reviews_by_reason": {
+      "apple_album_search_no_auto_match": 474,
+      "apple_album_search_no_results": 18,
+      "apple_artist_search_no_exact_normalized_result": 19,
+      "apple_artist_search_no_results": 4,
+      "apple_song_search_needs_review_version_risk": 404,
+      "apple_song_search_no_auto_match": 707,
+      "apple_song_search_no_results": 86,
+      "sidecar_track_artist_title_year_ambiguous": 1
+    }
+  }
+}

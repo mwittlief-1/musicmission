@@ -1,18 +1,33 @@
 {
-  "artifact": "route_ready_candidate_pool_report",
+  "artifact": "playback_ready_candidate_pool_report",
+  "legacy_artifact_name": "route_ready_candidate_pool_report",
   "version": "alpha_v0",
-  "generated_at": "2026-05-25T12:52:08.142Z",
-  "status": "live_generation_recovery_route_identity_ready",
+  "generated_at": "2026-06-01T13:58:21.452Z",
+  "status": "live_generation_recovery_playback_identity_ready_canonical_song_only_apple_resolved",
   "input_blocker": "live_generation_duplicate_non_candidate_route_items_2026_05_25",
   "candidate_pool": "data/alpha_consumable_layer/alpha_v0/sample_compact_candidate_pool_alpha_v0.json",
+  "canonical_mission_item_universe": "data/alpha_consumable_layer/alpha_v0/canonical_mission_item_universe_alpha_v0.json",
+  "compact_pool_is_full_mission_universe": false,
   "builder": "scripts/build_alpha_compact_candidate_pool_alpha_v0.mjs",
   "route_identity_contract": "data/alpha_consumable_layer/alpha_v0/alpha_route_identity_contract_alpha_v0.json",
+  "apple_music_catalog_index": "MusicAtlasController/Resources/canonical_apple_music_catalog_index_v1.json",
+  "no_apple_id_queue": "data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json",
   "summary": {
-    "total_candidates": 72,
-    "route_ready_candidates": 72,
+    "canonical_grid_items": 11710,
+    "alpha_available_mission_items": 11497,
+    "alpha_survey_eligible_grid_items": 11417,
+    "alpha_survey_unavailable_no_apple_id": 291,
+    "alpha_blocklisted_grid_rows": 2,
+    "playback_candidate_rows_in_universe": 7417,
+    "playback_candidate_rows_with_apple_id": 7206,
+    "playback_candidate_rows_do_not_use_no_apple_id": 211,
+    "compact_pool_candidates": 72,
+    "playback_ready_sample_candidates": 72,
     "artist_candidates": 0,
-    "track_candidates": 50,
-    "album_candidates": 22,
+    "track_candidates": 72,
+    "album_candidates": 0,
+    "apple_music_resolved_track_candidates": 72,
+    "do_not_use_no_apple_id_candidates": 0,
     "waypoints": 12,
     "dead_end_checks": 12,
     "default_alpha_mission_eligible": 72,
@@ -26,81 +41,62 @@
     "anchors": {
       "total": 12,
       "track": 12,
-      "album": 0
+      "album": 0,
+      "apple_music_resolved": 12
     },
     "bridges": {
       "total": 12,
       "track": 12,
-      "album": 0
+      "album": 0,
+      "apple_music_resolved": 12
     },
     "probes": {
       "total": 12,
-      "track": 3,
-      "album": 9
+      "track": 12,
+      "album": 0,
+      "apple_music_resolved": 12
     },
     "boundary_probes": {
       "total": 12,
       "track": 12,
-      "album": 0
+      "album": 0,
+      "apple_music_resolved": 12
     },
     "dead_end_checks": {
       "total": 12,
-      "track": 11,
-      "album": 1
+      "track": 12,
+      "album": 0,
+      "apple_music_resolved": 12
     },
     "waypoints": {
       "total": 12,
-      "track": 0,
-      "album": 12
+      "track": 12,
+      "album": 0,
+      "apple_music_resolved": 12
     }
   },
-  "route_ready_requirements_enforced": [
-    "candidate object_type is track or album",
+  "enforced_rules": [
+    "full canonical grid is available as the mission-item universe",
+    "any canonical grid item with an Apple Music catalog ID is eligible for Survey consideration unless blocklisted",
+    "compact pool is a playback-ready sample/slice, not the universe",
+    "candidate object_type is track for this early Alpha sample pool",
     "track candidates reference canonical song_recording objects",
-    "album candidates reference canonical album objects",
-    "artist_level_candidate is false",
-    "playable_route_ready is true",
-    "credited_artist is present",
-    "music_kit_search_hint is present",
-    "source_evidence_refs are present",
-    "route_candidate_key is present and unique in the export",
-    "route_batch_dedupe_key is present and unique in the export",
-    "app_route_item_id is present and unique in the export",
-    "route_display_identity_key is present and unique in the export",
-    "route_item carries the same candidate_id, app_route_item_id, route_candidate_key, route_batch_dedupe_key, and route_display_identity_key",
-    "waypoints pool is non-empty",
-    "dead_end_checks pool is non-empty",
-    "quarantined and manual-review rows are excluded"
+    "Apple Music catalog ID is present for every sample playback track",
+    "do_not_use_no_apple_id rows are excluded from sample playback pool",
+    "alpha blocklisted rows are retained in the universe but unavailable for product surfaces"
   ],
   "route_identity_policy": {
-    "candidate_pool_only": true,
-    "digest_or_strong_region_non_candidate_route_items_allowed": false,
+    "candidate_pool_only_for_sample_playback_payload": true,
+    "full_canonical_grid_available_for_mission_items": true,
+    "canonical_graph_with_apple_id_available_for_survey": true,
+    "digest_or_strong_region_non_candidate_playback_items_allowed": false,
     "display_string_identity_is_primary": false,
-    "single_mission_unique_fields": [
-      "item_id",
-      "candidate_id",
-      "route_candidate_key",
-      "route_batch_dedupe_key",
-      "route_display_identity_key"
-    ],
-    "batch_unique_fields": [
-      "app_route_item_id",
-      "candidate_id",
-      "route_candidate_key",
-      "route_batch_dedupe_key",
-      "route_display_identity_key"
-    ]
-  },
-  "review_gate_policy": {
-    "candidate_review_risk_report": "data/alpha_consumable_layer/alpha_v0/candidate_review_risk_report_alpha_v0.json",
-    "alpha_safe_with_review_flags_is_hard_block": false,
-    "hard_blocked_candidates": 0,
-    "recommendation": "Continue generation attempts with review flags stored; app import still requires valid mission.v0.2 and route identity validation."
+    "early_alpha_default_playback_object_type": "track"
   },
   "remaining_boundary": {
-    "music_kit_catalog_resolution": "still required before playback",
-    "atlas_promotion": "not created by graph candidate pool",
-    "mission_generation_status": "Mission Generation must copy candidate identity fields and validate rich mission schema plus Core mission.v0.2 before returning app_import_candidate",
-    "core_handoff_status": "Core must pass these route identity fields from the bundled candidate resource into live candidate_pool.candidates."
+    "survey_selection": "Survey may expand/adapt from canonical grid items with Apple IDs; curated survey files are approved defaults, not the full eligibility ceiling.",
+    "music_kit_catalog_resolution": "catalog IDs are present for sample playback items; app/Core still owns authorization/playback validation against MusicKit runtime responses",
+    "atlas_promotion": "not created by graph candidate pool or mission universe",
+    "no_apple_id_status": "unmatched graph items remain canonical/QA-visible but unavailable for Survey/playback until resolver work clears them"
   }
 }

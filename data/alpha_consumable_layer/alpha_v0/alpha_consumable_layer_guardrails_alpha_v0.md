@@ -12,6 +12,8 @@ Build the Alpha consumable layer, not a hard-locked canonical database.
 
 The consumable layer is a safe, versioned view over the repaired graph surfaces. It exists to ask useful questions and seed careful missions. It is not final canon and does not own user-specific truth.
 
+The full canonical grid is available as the mission-item universe. Any canonical graph item with an Apple Music catalog ID is eligible for Survey consideration unless blocklisted. Playback readiness is a separate Apple Music gate for playable route items.
+
 ## Allowed Uses
 
 The approved Alpha graph surfaces may feed:
@@ -38,6 +40,8 @@ Graph-side support for that fixed shape is defined in:
 data/alpha_consumable_layer/alpha_v0/alpha1_fixed_survey_intake_graph_support_alpha_v0.json
 data/alpha_consumable_layer/alpha_v0/alpha1_fixed_survey_intake_graph_support_alpha_v0.md
 ```
+
+The curated Survey files are approved/default surfaces, not the outer limit of Survey eligibility. Canonical graph items with Apple Music catalog IDs may be considered for Survey expansion/adaptation when they pass quarantine, blocklist, and policy gates.
 
 All product-facing candidates should carry an Atlas-aligned `music_object_ref` using:
 
@@ -83,6 +87,8 @@ Hard blocks:
 - no direct Dead End creation from graph rows
 - no context-only families in default first missions
 - no quarantined or suppressed rows in user-facing product surfaces
+- no song without an Apple Music catalog ID in Alpha playback or playback-route selection
+- no canonical graph item without an Apple Music catalog ID in Survey display
 - no graph metadata treated as user taste
 - no candidate role treated as Atlas role
 - no post-Survey "building your Atlas" language treated as promoted Atlas truth
@@ -106,6 +112,13 @@ A row is blocked if:
 
 Blocked rows may remain visible to QA. They must not appear in Survey, app surfaces, default Mission Generation, starter Atlas, MusicKit auto-resolution, Supabase active candidate tables, or OpenAI prompt payloads.
 
+For Alpha playback and playback-route selection, additionally block:
+
+- song row appears in `apple_music_unmatched_do_not_use_alpha_v0.json`
+- playable route candidate has no `apple_music_catalog_id`
+
+Canonical songs without an Apple Music catalog ID stay in the graph with status `do_not_use_no_apple_id`; resolver work, not Mission Generation, clears that status. They must not appear in playback routes, Supabase active playback candidate tables, OpenAI playback payloads, or Apple Music auto-resolution.
+
 ## Approved Surface Boundary
 
 Approved Alpha graph surfaces:
@@ -126,6 +139,7 @@ These are versioned in:
 data/alpha_consumable_layer/alpha_v0/alpha_graph_surface_manifest.json
 data/alpha_consumable_layer/alpha_v0/alpha_graph_surface_manifest.md
 data/alpha_consumable_layer/alpha_v0/alpha_candidate_blocklist_alpha_v0.json
+data/alpha_consumable_layer/alpha_v0/apple_music_unmatched_do_not_use_alpha_v0.json
 data/alpha_consumable_layer/alpha_v0/atlas_music_object_ref_alpha_v0.schema.json
 data/alpha_consumable_layer/alpha_v0/graph_to_atlas_music_object_ref_alpha_v0.md
 ```
@@ -188,6 +202,7 @@ not quarantined
 not suppressed
 deduped within route/page
 version-checked
+Apple Music catalog ID present for playable tracks
 role-tagged
 risk-tagged
 guardrail-tagged

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "id": "album_graph_availability_updates_v1",
+    "applied_on": "2026-05-27",
+    "status": "applied",
+    "intent": "Post-freeze availability patch for Apple-resolvable album sidecar execution while preserving source-intent aliases in notes.",
+    "actions": [
+      "replace_title_keep_role",
+      "replace_active_album_preserve_historical_original",
+      "demote_to_special_entity_no_album_sidecar",
+      "bad_match_replace_with_swum_2018_album_anchor",
+      "normalize_title_year_catalog_alias",
+      "historical_unavailable_split_replacement",
+      "correct_artist_keep_album"
+    ]
+  },
+  "rows": [
+    {
+      "v1_membership_id": "v1m_00332",
+      "import_action": "replace_title_keep_role",
+      "candidate_identity_key": "album|various artists|essential sun rockabillies vol 1",
+      "candidate_type": "album",
+      "artist_display_name": "Various Artists",
+      "title": "Essential Sun Rockabillies, Vol. 1",
+      "year": 2006
+    },
+    {
+      "v1_membership_id": "v1m_00336",
+      "import_action": "replace_title_keep_role",
+      "candidate_identity_key": "album|five satins|50 best hits 2023 remastered",
+      "candidate_type": "album",
+      "artist_display_name": "The Five Satins",
+      "title": "50 Best Hits (2023 Remastered)",
+      "year": 1965
+    },
+    {
+      "v1_membership_id": "v1m_00342",
+      "import_action": "replace_active_album_preserve_historical_original",
+      "candidate_identity_key": "album|little anthony and the imperials|greatest hits of little anthony and the imperials",
+      "candidate_type": "album",
+      "artist_display_name": "Little Anthony and the Imperials",
+      "title": "The Greatest Hits of Little Anthony and the Imperials",
+      "year": 2005
+    },
+    {
+      "v1_membership_id": "v1m_00365",
+      "import_action": "red_bird_split_replacement_dixie_cups",
+      "candidate_identity_key": "album|dixie cups|very best of the dixie cups chapel of love",
+      "candidate_type": "album",
+      "artist_display_name": "The Dixie Cups",
+      "title": "The Very Best of The Dixie Cups: Chapel of Love",
+      "year": 1999
+    },
+    {
+      "v1_membership_id": "v1m_00368",
+      "import_action": "red_bird_split_replacement_shangri_las",
+      "candidate_identity_key": "album|shangri las|20th century masters the millennium collection the best of the shangri las",
+      "candidate_type": "album",
+      "artist_display_name": "The Shangri-Las",
+      "title": "20th Century Masters - The Millennium Collection: The Best of The Shangri-Las",
+      "year": 2002
+    },
+    {
+      "v1_membership_id": "v1m_00378",
+      "import_action": "historical_unavailable_split_replacement",
+      "candidate_identity_key": "artist_anchor|red bird records|red bird girls",
+      "candidate_type": "artist_anchor",
+      "artist_display_name": "Red Bird Records",
+      "title": "The Red Bird Girls",
+      "year": 1990
+    },
+    {
+      "v1_membership_id": "v1m_00403",
+      "import_action": "correct_artist_keep_album",
+      "candidate_identity_key": "album|jan and dean|ride the wild surf",
+      "candidate_type": "album",
+      "artist_display_name": "Jan & Dean",
+      "title": "Ride the Wild Surf",
+      "year": 1964
+    },
+    {
+      "v1_membership_id": "v1m_04437",
+      "import_action": "normalize_title_year_catalog_alias",
+      "candidate_identity_key": "album|various artists|children s favorites vol 1",
+      "candidate_type": "album",
+      "artist_display_name": "Various Artists",
+      "title": "Children's Favorites, Vol. 1",
+      "year": 2008
+    },
+    {
+      "v1_membership_id": "v1m_04585",
+      "import_action": "demote_to_special_entity_no_album_sidecar",
+      "candidate_identity_key": "artist_anchor|lo fi girl|lofi hip hop radio",
+      "candidate_type": "artist_anchor",
+      "artist_display_name": "Lo-fi Girl",
+      "title": "lofi hip hop radio",
+      "year": 2017
+    },
+    {
+      "v1_membership_id": "v1m_11685",
+      "import_action": "bad_match_replace_with_swum_2018_album_anchor",
+      "candidate_identity_key": "album|swum|swum",
+      "candidate_type": "album",
+      "artist_display_name": "SwuM",
+      "title": "Swum",
+      "year": 2018
+    }
+  ]
+}

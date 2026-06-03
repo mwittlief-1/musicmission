@@ -8,13 +8,13 @@ Pass D is frozen with PM-approved multi-memberships.
 
 - Archetypes ready: 120 / 120
 - Remaining effective gap: 0
-- Active inventory rows: 11697
+- Active inventory rows: 11714
 - Active Pass C rows: 4825
 - Approved multi-memberships: 13
-- Song tagging corpus rows: 7409
-- Album sidecar seed rows: 2231
-- Apple ID resolution queue rows: 7409
-- Graph-linking node rows: 11309
+- Song tagging corpus rows: 7419
+- Album sidecar seed rows: 2234
+- Apple ID resolution queue rows: 7419
+- Graph-linking node rows: 11326
 - Unresolved rows excluded from v1: 804
 
 ## PM Decision
@@ -48,3 +48,34 @@ All 13 current-identity collisions from Pass C are approved as active multi-memb
 ## Exclusions
 
 Rows with `needs_resolution`, `exclude_or_quarantine`, or `risky_unresolved` status remain outside v1 downstream tagging/linking/resolution.
+
+## Post-Freeze Availability Patch
+
+- Patch: `album_graph_availability_updates_v1`
+- Applied on: 2026-05-27
+- Updated rows: 10
+- Album sidecar seed rows after patch: 2229
+
+## Post-Freeze Radiohead Missing-Obvious Hotfix
+
+- Patch: `radiohead_missing_obvious_hotfix_v1`
+- Applied on: 2026-05-31
+- Intent: Post-freeze missing-obvious correction for Radiohead coverage in Family 10 while preserving recording/title specificity.
+- Added rows: 13
+- Active inventory rows after patch: 11710
+- Song tagging corpus rows after patch: 7417
+- Apple ID resolution queue rows after patch: 7417
+- Album sidecar seed rows after patch: 2233
+- Graph-linking node rows after patch: 11322
+
+## Post-Freeze Oasis Missing-Obvious Hotfix
+
+- Patch: `oasis_missing_obvious_hotfix_v1`
+- Applied on: 2026-06-01
+- Intent: Post-freeze missing-obvious correction for Oasis and (What's the Story) Morning Glory? coverage in Family 10.
+- Added rows: 4
+- Active inventory rows after patch: 11714
+- Song tagging corpus rows after patch: 7419
+- Apple ID resolution queue rows after patch: 7419
+- Album sidecar seed rows after patch: 2234
+- Graph-linking node rows after patch: 11326

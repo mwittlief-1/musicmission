@@ -55,12 +55,12 @@
       ]
     },
     "row_counts": {
-      "artists": 98,
-      "albums": 89,
-      "songs": 128,
-      "total": 315,
+      "artists": 100,
+      "albums": 94,
+      "songs": 138,
+      "total": 332,
       "existing_seed": 66,
-      "added_missing_obvious": 249
+      "added_missing_obvious": 266
     },
     "archetypes": {
       "069": "1980s Alternative Source-Code / Pre-Grunge",
@@ -95,8 +95,8 @@
         "archetype_id": "071",
         "archetype_name": "Post-Grunge / Modern Rock Radio",
         "artists": 8,
-        "albums": 7,
-        "songs": 11
+        "albums": 8,
+        "songs": 13
       },
       {
         "archetype_id": "072",
@@ -122,9 +122,9 @@
       {
         "archetype_id": "075",
         "archetype_name": "Power-Pop Revival / Crunchy Alt-Pop",
-        "artists": 8,
-        "albums": 7,
-        "songs": 10
+        "artists": 9,
+        "albums": 8,
+        "songs": 12
       },
       {
         "archetype_id": "076",
@@ -143,9 +143,9 @@
       {
         "archetype_id": "078",
         "archetype_name": "Blog Indie / Prestige Indie / 2000s Indie Rock",
-        "artists": 8,
-        "albums": 8,
-        "songs": 10
+        "artists": 9,
+        "albums": 11,
+        "songs": 16
       },
       {
         "archetype_id": "079",
@@ -2565,6 +2565,60 @@
         "Wolf Like Me"
       ],
       "consolidation_warning": "Art-rock/experimental overlap; do not force as ordinary garage revival."
+    },
+    {
+      "archetype_id": "078",
+      "artist_name": "Radiohead",
+      "proposed_artist_id": "radiohead",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.98,
+      "inclusion_reason": "Missing-obvious alternative/art-rock anchor connecting 90s modern rock, album-world canon, 2000s prestige indie, and electronic-rock boundary tests.",
+      "object_specificity_note": "artist_level",
+      "likely_canonical_albums": [
+        "OK Computer",
+        "Kid A",
+        "In Rainbows",
+        "The Bends"
+      ],
+      "likely_canonical_songs": [
+        "Creep",
+        "Fake Plastic Trees",
+        "Paranoid Android",
+        "Karma Police",
+        "Everything in Its Right Place"
+      ],
+      "consolidation_warning": "Keep Radiohead distinct from Thom Yorke solo and The Smile. Do not infer broad Radiohead appetite from Creep alone."
+    },
+    {
+      "archetype_id": "075",
+      "artist_name": "Oasis",
+      "proposed_artist_id": "oasis",
+      "existing_seed": false,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "anchor",
+        "artist_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Missing-obvious Britpop/UK alternative anchor connecting melodic 90s guitar-pop, mass song recognition, and alt-pop boundary tests.",
+      "object_specificity_note": "artist_level",
+      "likely_canonical_albums": [
+        "(What's the Story) Morning Glory?"
+      ],
+      "likely_canonical_songs": [
+        "Wonderwall",
+        "Champagne Supernova"
+      ],
+      "consolidation_warning": "Use as a Britpop bridge inside Family 10; do not collapse into generic wedding/nostalgia singalong appetite."
     }
   ],
   "albums": [
@@ -4228,6 +4282,97 @@
       "archetype_membership_weight": 0.74,
       "inclusion_reason": "Art-rock/dark-indie bridge album.",
       "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "071",
+      "album_title": "The Bends",
+      "artist_name": "Radiohead",
+      "proposed_album_id": "radiohead-bends",
+      "existing_seed": false,
+      "release_year": 1995,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.91,
+      "inclusion_reason": "90s guitar-song Radiohead album bridge for modern-rock and alternative-radio branching.",
+      "consolidation_warning": "Added as missing-obvious; keep album-world reaction separate from later Radiohead abstraction."
+    },
+    {
+      "archetype_id": "078",
+      "album_title": "OK Computer",
+      "artist_name": "Radiohead",
+      "proposed_album_id": "radiohead-ok-computer",
+      "existing_seed": false,
+      "release_year": 1997,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor"
+      ],
+      "archetype_membership_weight": 0.98,
+      "inclusion_reason": "Core Radiohead album-world anchor for art-rock, alternative canon, and prestige-indie lineage.",
+      "consolidation_warning": "Primary album-world object; do not collapse into single-song Creep recognition."
+    },
+    {
+      "archetype_id": "078",
+      "album_title": "Kid A",
+      "artist_name": "Radiohead",
+      "proposed_album_id": "radiohead-kid-a",
+      "existing_seed": false,
+      "release_year": 2000,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.96,
+      "inclusion_reason": "Boundary-shifting album-world object for electronic-rock, abstraction tolerance, and post-OK Computer branching.",
+      "consolidation_warning": "Do not infer generic guitar-rock appetite from Kid A response."
+    },
+    {
+      "archetype_id": "078",
+      "album_title": "In Rainbows",
+      "artist_name": "Radiohead",
+      "proposed_album_id": "radiohead-in-rainbows",
+      "existing_seed": false,
+      "release_year": 2007,
+      "album_object_type": "studio_album",
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "album_anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.92,
+      "inclusion_reason": "Later Radiohead album-world gateway with warmer songcraft and art-rock accessibility.",
+      "consolidation_warning": "Useful contrast against OK Computer architecture and Kid A abstraction."
+    },
+    {
+      "archetype_id": "075",
+      "album_title": "(What's the Story) Morning Glory?",
+      "artist_name": "Oasis",
+      "proposed_album_id": "oasis-whats-the-story-morning-glory",
+      "existing_seed": false,
+      "release_year": 1995,
+      "album_object_type": "studio_album",
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "album_anchor",
+        "anchor",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Core Oasis album-world object and high-recognition Britpop gateway.",
+      "consolidation_warning": "Prefer original album object when linking; keep remastered/deluxe Apple variants explicit if used."
     }
   ],
   "songs": [
@@ -6614,6 +6759,189 @@
       "inclusion_reason": "Dark prestige-indie song gateway.",
       "artist_survey_status": "artist_survey_worthy",
       "consolidation_warning": ""
+    },
+    {
+      "archetype_id": "071",
+      "song_title": "Creep",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-creep",
+      "existing_seed": false,
+      "release_year": 1992,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.93,
+      "inclusion_reason": "Mass-recognition Radiohead song-first gateway and modern-rock branch point.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Same-title collision with TLC - Creep; distinct composition and recording. Do not merge by title. Do not infer broad Radiohead appetite from Creep alone."
+    },
+    {
+      "archetype_id": "071",
+      "song_title": "Fake Plastic Trees",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-fake-plastic-trees",
+      "existing_seed": false,
+      "release_year": 1995,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "High-recognition melodic bridge from The Bends into vulnerable alternative songcraft.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Useful positive signal for songcraft, but not sufficient evidence for Kid A-style abstraction."
+    },
+    {
+      "archetype_id": "078",
+      "song_title": "Paranoid Android",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-paranoid-android",
+      "existing_seed": false,
+      "release_year": 1997,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.95,
+      "inclusion_reason": "Canonical OK Computer suite and a strong test for art-rock structure tolerance.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Long-form/sectional response should not be collapsed into generic 90s alternative appetite."
+    },
+    {
+      "archetype_id": "078",
+      "song_title": "Karma Police",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-karma-police",
+      "existing_seed": false,
+      "release_year": 1997,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.94,
+      "inclusion_reason": "Recognizable OK Computer song gateway with broad survey branching value.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Keep as song-level bridge even when OK Computer is also an album-world object."
+    },
+    {
+      "archetype_id": "078",
+      "song_title": "No Surprises",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-no-surprises",
+      "existing_seed": false,
+      "release_year": 1997,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "song_first",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Melodic OK Computer entry point that tests quiet dread, beauty, and soft-focus recognition.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Do not over-infer appetite for the band's harsher or more abstract side."
+    },
+    {
+      "archetype_id": "078",
+      "song_title": "Everything in Its Right Place",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-everything-in-its-right-place",
+      "existing_seed": false,
+      "release_year": 2000,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "boundary",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.89,
+      "inclusion_reason": "Kid A entry point for electronic texture, repetition, and post-rock abstraction tolerance.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Positive signal should branch toward electronic/post-rock boundary checks rather than ordinary modern-rock radio by default."
+    },
+    {
+      "archetype_id": "078",
+      "song_title": "Idioteque",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-idioteque",
+      "existing_seed": false,
+      "release_year": 2000,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "boundary"
+      ],
+      "archetype_membership_weight": 0.86,
+      "inclusion_reason": "Sharper Kid A boundary probe for electronic pulse, anxiety, and anti-guitar Radiohead.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Use as a boundary/probe row; do not treat as a standard recommendation unless the route asks that question."
+    },
+    {
+      "archetype_id": "078",
+      "song_title": "Weird Fishes/Arpeggi",
+      "artist_name": "Radiohead",
+      "proposed_song_id": "radiohead-weird-fishes-arpeggi",
+      "existing_seed": false,
+      "release_year": 2007,
+      "recognition_tier": "high",
+      "survey_tier": "standard",
+      "roles": [
+        "deepening",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.84,
+      "inclusion_reason": "In Rainbows song-level bridge for later Radiohead warmth, motion, and fan-recognized album depth.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "More album-world than mass-radio; keep survey use adaptive rather than default Page 1 unless user signals fit."
+    },
+    {
+      "archetype_id": "075",
+      "song_title": "Wonderwall",
+      "artist_name": "Oasis",
+      "proposed_song_id": "oasis-wonderwall",
+      "existing_seed": false,
+      "release_year": 1995,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "gateway",
+        "bridge"
+      ],
+      "archetype_membership_weight": 0.9,
+      "inclusion_reason": "Top Oasis song-recognition gateway and Britpop/alt-pop branch point.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "High singalong familiarity can be noisy; do not infer broad Oasis or Britpop affinity from this song alone."
+    },
+    {
+      "archetype_id": "075",
+      "song_title": "Champagne Supernova",
+      "artist_name": "Oasis",
+      "proposed_song_id": "oasis-champagne-supernova",
+      "existing_seed": false,
+      "release_year": 1995,
+      "recognition_tier": "mass",
+      "survey_tier": "core",
+      "roles": [
+        "song_first",
+        "bridge",
+        "deepening"
+      ],
+      "archetype_membership_weight": 0.88,
+      "inclusion_reason": "Apple top-songs rank #2 Oasis track and useful album-depth bridge beyond Wonderwall.",
+      "artist_survey_status": "artist_survey_worthy",
+      "consolidation_warning": "Use as a stronger Oasis-depth check than a generic 90s nostalgia control."
     }
   ]
 }

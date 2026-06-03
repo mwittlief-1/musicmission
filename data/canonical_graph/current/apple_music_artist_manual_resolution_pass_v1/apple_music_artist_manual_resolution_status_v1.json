@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "run_version": "apple_music_artist_manual_resolution_pass_v1",
+    "status": "complete",
+    "generated_at": "2026-05-29T03:29:25.365Z",
+    "storefront": "us",
+    "policy": {
+      "raw_apple_payloads_persisted": false,
+      "persisted_catalog_fields": [
+        "apple_catalog_id",
+        "apple_resource_type",
+        "storefront",
+        "match/status metadata"
+      ],
+      "excluded_persistent_fields": [
+        "artwork",
+        "previews",
+        "lyrics",
+        "raw_catalog_payload",
+        "music_user_token"
+      ]
+    },
+    "counts": {
+      "accepted_artist_links": 20,
+      "split_nodes": 3,
+      "special_status_rows": 6,
+      "accepted_links_by_confidence": {
+        "high": 18,
+        "medium": 2
+      },
+      "statuses_by_resolution_status": {
+        "special_entity_no_apple_artist_resolver": 1,
+        "cast_entity_resolve_via_album_context": 1,
+        "split_entity_replaced_by_distinct_artist_anchors": 2,
+        "historical_label_scene_special_entity": 1,
+        "do_not_present_for_now": 1
+      }
+    }
+  },
+  "rows": [
+    {
+      "source_ref": "artist_anchor|disney|disney",
+      "resolution_status": "special_entity_no_apple_artist_resolver",
+      "replacement_refs": "",
+      "apple_catalog_id": "",
+      "allowed_surfaces": [
+        "graph_context",
+        "manual_resolver_review"
+      ],
+      "blocked_surfaces": [
+        "apple_music_auto_resolution"
+      ],
+      "notes": "Disney is a family/soundtrack context entity in this graph, not a durable Apple artist anchor.",
+      "raw_payload_persisted": false
+    },
+    {
+      "source_ref": "artist_anchor|original broadway cast of wicked|original broadway cast of wicked",
+      "resolution_status": "cast_entity_resolve_via_album_context",
+      "replacement_refs": "",
+      "apple_catalog_id": "",
+      "allowed_surfaces": [
+        "graph_context",
+        "manual_resolver_review"
+      ],
+      "blocked_surfaces": [
+        "apple_music_auto_resolution"
+      ],
+      "notes": "Treat as cast-recording context; resolve playback through album/song links rather than an Apple artist anchor.",
+      "raw_payload_persisted": false
+    },
+    {
+      "source_ref": "artist_anchor|parliament funkadelic|parliament funkadelic",
+      "resolution_status": "split_entity_replaced_by_distinct_artist_anchors",
+      "replacement_refs": "artist_anchor|parliament|parliament;artist_anchor|funkadelic|funkadelic",
+      "apple_catalog_id": "",
+      "allowed_surfaces": [
+        "graph_context",
+        "manual_resolver_review"
+      ],
+      "blocked_surfaces": [
+        "survey_display",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "notes": "Composite P-Funk anchor split into distinct Parliament and Funkadelic artist nodes.",
+      "raw_payload_persisted": false
+    },
+    {
+      "source_ref": "artist_anchor|sam cooke and the soul stirrers|sam cooke and the soul stirrers",
+      "resolution_status": "split_entity_replaced_by_distinct_artist_anchors",
+      "replacement_refs": "artist_anchor|sam cooke|sam cooke;artist_anchor|soul stirrers|soul stirrers",
+      "apple_catalog_id": "",
+      "allowed_surfaces": [
+        "graph_context",
+        "manual_resolver_review"
+      ],
+      "blocked_surfaces": [
+        "survey_display",
+        "starter_atlas",
+        "default_mission_generation",
+        "apple_music_auto_resolution"
+      ],
+      "notes": "Keep Sam Cooke and The Soul Stirrers as separate artist identities; Sam Cooke already has Apple artist 1195231.",
+      "raw_payload_persisted": false
+    },
+    {
+      "source_ref": "artist_anchor|red bird records|red bird girls",
+      "resolution_status": "historical_label_scene_special_entity",
+      "replacement_refs": "",
+      "apple_catalog_id": "",
+      "allowed_surfaces": [
+        "graph_context",
+        "manual_resolver_review"
+      ],
+      "blocked_surfaces": [
+        "apple_music_auto_resolution"
+      ],
+      "notes": "Historical Red Bird girl-group context; active coverage is via Dixie Cups/Shangri-Las replacements, not an Apple artist.",
+      "raw_payload_persisted": false
+    },
+    {
+      "source_ref": "artist_anchor|comsat angels|comsat angels",
+      "resolution_status": "do_not_present_for_now",
+      "replacement_refs": "263285435",
+      "apple_catalog_id": "263285435",
+      "allowed_surfaces": [
+        "qa_review",
+        "manual_resolver_review"
+      ],
+      "blocked_surfaces": [
+        "survey_display",
+        "starter_atlas",
+        "default_mission_generation",
+        "supabase_active_candidate",
+        "openai_prompt_payload",
+        "apple_music_auto_resolution"
+      ],
+      "notes": "Artist page exists, but usable Apple/Spotify catalog appears absent; keep for QA/manual resolver only.",
+      "raw_payload_persisted": false
+    }
+  ]
+}

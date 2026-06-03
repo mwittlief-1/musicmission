@@ -1,0 +1,54 @@
+{
+  "run_version": "apple_music_semantic_album_hardening_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T12:01:50.654Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "approved_album_count": 35,
+    "held_out_for_manual_check": [
+      "album|my bloody valentine|loveless",
+      "album|link wray|link wray and the wraymen",
+      "album|garden state|garden state_wrong_artist_candidate",
+      "album|various artists|matrix_score_not_soundtrack",
+      "album|bad brains|bad brains_no_self_titled_apple_album_seen",
+      "album|ll cool j|radio_no_album_candidate_seen",
+      "album|ll cool j|bigger and deffer_wrong_artist_candidate"
+    ],
+    "graph_linking_node_set": "data/canonical_graph/current/graph_linking_node_set.json",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv"
+  },
+  "counts": {
+    "new_links_total": 188,
+    "deferred_total": 0,
+    "new_links_by_source_type": {
+      "album_sidecar_album": 35,
+      "album_sidecar_track": 118,
+      "graph_album": 35
+    },
+    "new_links_by_resource_type": {
+      "album": 70,
+      "song": 118
+    },
+    "new_links_by_match_basis": {
+      "semantic_album_hardening_llm_assisted_approved": 70,
+      "semantic_album_hardening_track_auto_match": 118
+    },
+    "deferred_by_reason": {}
+  }
+}

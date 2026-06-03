@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "run_version": "apple_music_artist_manual_resolution_pass_v1",
+    "status": "complete",
+    "generated_at": "2026-05-29T03:29:25.365Z",
+    "storefront": "us",
+    "policy": {
+      "raw_apple_payloads_persisted": false,
+      "persisted_catalog_fields": [
+        "apple_catalog_id",
+        "apple_resource_type",
+        "storefront",
+        "match/status metadata"
+      ],
+      "excluded_persistent_fields": [
+        "artwork",
+        "previews",
+        "lyrics",
+        "raw_catalog_payload",
+        "music_user_token"
+      ]
+    },
+    "counts": {
+      "accepted_artist_links": 20,
+      "split_nodes": 3,
+      "special_status_rows": 6,
+      "accepted_links_by_confidence": {
+        "high": 18,
+        "medium": 2
+      },
+      "statuses_by_resolution_status": {
+        "special_entity_no_apple_artist_resolver": 1,
+        "cast_entity_resolve_via_album_context": 1,
+        "split_entity_replaced_by_distinct_artist_anchors": 2,
+        "historical_label_scene_special_entity": 1,
+        "do_not_present_for_now": 1
+      }
+    }
+  },
+  "rows": [
+    {
+      "candidate_identity_key": "artist_anchor|parliament|parliament",
+      "candidate_type": "artist_anchor",
+      "artist_display_name": "Parliament",
+      "title": "Parliament",
+      "year": null,
+      "archetype_ids": [
+        "039"
+      ],
+      "archetypes": [
+        "Funk / Psychedelic Soul / Groove Canon"
+      ],
+      "source_ref_replaces": "artist_anchor|parliament funkadelic|parliament funkadelic",
+      "replacement_relationship": "manual_split_from_composite_artist_anchor",
+      "apple_catalog_id": "79943",
+      "apple_resource_type": "artist",
+      "storefront": "us",
+      "raw_payload_persisted": false
+    },
+    {
+      "candidate_identity_key": "artist_anchor|funkadelic|funkadelic",
+      "candidate_type": "artist_anchor",
+      "artist_display_name": "Funkadelic",
+      "title": "Funkadelic",
+      "year": null,
+      "archetype_ids": [
+        "039"
+      ],
+      "archetypes": [
+        "Funk / Psychedelic Soul / Groove Canon"
+      ],
+      "source_ref_replaces": "artist_anchor|parliament funkadelic|parliament funkadelic",
+      "replacement_relationship": "manual_split_from_composite_artist_anchor",
+      "apple_catalog_id": "32181103",
+      "apple_resource_type": "artist",
+      "storefront": "us",
+      "raw_payload_persisted": false
+    },
+    {
+      "candidate_identity_key": "artist_anchor|soul stirrers|soul stirrers",
+      "candidate_type": "artist_anchor",
+      "artist_display_name": "The Soul Stirrers",
+      "title": "The Soul Stirrers",
+      "year": null,
+      "archetype_ids": [
+        "108"
+      ],
+      "archetypes": [
+        "Black Gospel / Gospel Soul"
+      ],
+      "source_ref_replaces": "artist_anchor|sam cooke and the soul stirrers|sam cooke and the soul stirrers",
+      "replacement_relationship": "manual_split_from_composite_artist_anchor",
+      "apple_catalog_id": "2133642",
+      "apple_resource_type": "artist",
+      "storefront": "us",
+      "raw_payload_persisted": false
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "run_version": "apple_music_try_harder_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-27T23:17:31.392Z",
+  "storefront": "us",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token"
+    ]
+  },
+  "inputs": {
+    "prior_links": "data/canonical_graph/current/apple_music_link_pass_v1/apple_music_links_v1.jsonl",
+    "prior_review_queue": "data/canonical_graph/current/apple_music_link_pass_v1/apple_music_manual_review_queue.csv",
+    "album_track_sidecar_tracks": "data/canonical_graph/current/album_track_sidecar_tracks.csv"
+  },
+  "counts": {
+    "prior_links_total": 14156,
+    "new_links_total": 19790,
+    "deferred_total": 2687,
+    "album_search_jobs_completed_current_invocation": 8,
+    "album_track_jobs_completed_current_invocation": 4,
+    "album_search_jobs_completed_cumulative": 492,
+    "album_track_jobs_completed_cumulative": 1607,
+    "new_links_by_source_type": {
+      "album_sidecar_album": 1607,
+      "album_sidecar_track": 17906,
+      "graph_album": 277
+    },
+    "new_links_by_resource_type": {
+      "album": 1884,
+      "song": 17906
+    },
+    "new_links_by_match_basis": {
+      "album_sidecar_inherited_graph_album_apple_album_search_title_artist_year_auto_match": 1324,
+      "album_sidecar_try_harder_inherited_graph_album_tracklist_match": 277,
+      "album_sidecar_inherited_graph_album_apple_album_search_title_artist_auto_match": 6,
+      "album_track_try_harder_position_title_duration_auto_match": 15554,
+      "album_track_try_harder_position_duration_auto_match": 1198,
+      "album_track_try_harder_position_title_core_duration_auto_match": 929,
+      "album_track_try_harder_position_title_auto_match": 209,
+      "album_track_try_harder_position_title_core_auto_match": 16,
+      "album_try_harder_search_tracklist_auto_match": 277
+    },
+    "deferred_by_reason": {
+      "album_track_try_harder_no_safe_match": 2472,
+      "album_try_harder_no_safe_tracklist_match": 215
+    }
+  }
+}

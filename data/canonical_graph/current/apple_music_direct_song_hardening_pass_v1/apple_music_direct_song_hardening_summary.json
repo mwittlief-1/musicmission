@@ -1,0 +1,84 @@
+{
+  "run_version": "apple_music_direct_song_hardening_pass_v1",
+  "status": "complete",
+  "generated_at": "2026-05-28T20:38:56.363Z",
+  "storefront": "us",
+  "source_scope": "songs",
+  "policy": {
+    "raw_apple_payloads_persisted": false,
+    "apple_catalog_requests": "song_search_transient_only",
+    "persisted_catalog_fields": [
+      "apple_catalog_id",
+      "apple_resource_type",
+      "storefront",
+      "source refs",
+      "match metadata"
+    ],
+    "excluded_persistent_fields": [
+      "artwork",
+      "previews",
+      "lyrics",
+      "raw_catalog_payload",
+      "music_user_token",
+      "apple_track_title",
+      "apple_track_artist",
+      "apple_album_name"
+    ]
+  },
+  "inputs": {
+    "deferred_queue": "data/canonical_graph/current/apple_music_song_source_album_reconciliation_pass_v1/apple_music_song_source_album_reconciliation_deferred_queue.csv",
+    "link_inputs": {
+      "first_pass_links": "data/canonical_graph/current/apple_music_link_pass_v1/apple_music_links_v1.jsonl",
+      "try_harder_links": "data/canonical_graph/current/apple_music_try_harder_pass_v1/apple_music_try_harder_links_v1.jsonl",
+      "residual_track_links": "data/canonical_graph/current/apple_music_residual_track_pass_v1/apple_music_residual_track_links_v1.jsonl",
+      "album_variant_links": "data/canonical_graph/current/apple_music_album_variant_pass_v1/apple_music_album_variant_links_v1.jsonl",
+      "offline_reconciliation_links": "data/canonical_graph/current/apple_music_offline_reconciliation_pass_v1/apple_music_offline_reconciliation_links_v1.jsonl",
+      "artist_album_resolver_links": "data/canonical_graph/current/apple_music_artist_album_resolver_pass_v1/apple_music_artist_album_resolver_links_v1.jsonl",
+      "high_confidence_album_links": "data/canonical_graph/current/apple_music_high_confidence_album_pass_v1/apple_music_high_confidence_album_links_v1.jsonl",
+      "manual_album_review_links": "data/canonical_graph/current/apple_music_manual_album_review_pass_v1/apple_music_manual_album_review_links_v1.jsonl",
+      "semantic_album_hardening_links": "data/canonical_graph/current/apple_music_semantic_album_hardening_pass_v1/apple_music_semantic_album_hardening_links_v1.jsonl",
+      "album_graph_decision_links": "data/canonical_graph/current/apple_music_album_graph_decision_pass_v1/apple_music_album_graph_decision_links_v1.jsonl",
+      "song_source_album_reconciliation_links": "data/canonical_graph/current/apple_music_song_source_album_reconciliation_pass_v1/apple_music_song_source_album_reconciliation_links_v1.jsonl"
+    }
+  },
+  "counts": {
+    "jobs_considered": 863,
+    "new_links_total": 553,
+    "deferred_total": 310,
+    "new_links_by_source_type": {
+      "graph_song": 553
+    },
+    "new_links_by_confidence": {
+      "medium": 37,
+      "high": 516
+    },
+    "new_links_by_match_basis": {
+      "direct_song_hardening_exact_title_compatible_artist_year_auto_match": 23,
+      "direct_song_hardening_exact_title_artist_auto_match": 470,
+      "direct_song_hardening_core_title_artist_year_auto_match": 46,
+      "direct_song_hardening_core_title_artist_auto_match": 11,
+      "direct_song_hardening_core_title_compatible_artist_year_auto_match": 3
+    },
+    "new_links_by_prior_review_reason": {
+      "apple_song_search_needs_review_version_risk": 168,
+      "apple_song_search_no_auto_match": 348,
+      "sidecar_track_artist_title_year_ambiguous": 1,
+      "apple_song_search_no_results": 36
+    },
+    "deferred_by_reason": {
+      "direct_song_search_no_auto_match": 284,
+      "direct_song_search_version_term_needs_review": 11,
+      "direct_song_search_no_results": 15
+    },
+    "deferred_by_best_reject_reason": {
+      "artist_not_matched": 92,
+      "unknown": 132,
+      "title_not_matched": 35,
+      "compatible_artist_without_tight_year": 27,
+      "title_not_matched;artist_not_matched": 13,
+      "version_term:live": 6,
+      "version_term:remix": 4,
+      "version_term:dub": 1
+    }
+  }
+}

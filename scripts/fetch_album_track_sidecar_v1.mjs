@@ -6,10 +6,11 @@ import path from "node:path";
 const repoRoot = process.cwd();
 const passD = path.join(repoRoot, "data/canonical_graph/depth_hardening_v0_2/pass_d");
 const seedPath = path.join(passD, "album_sidecar_seed_albums_v1.json");
+const manualAppleOverridesPath = path.join(passD, "album_track_sidecar_manual_apple_overrides_v1.json");
 
 const generatedOn = "2026-05-26";
 const sidecarVersion = "album_track_sidecar_v1";
-const userAgent = "WaymarkMusicMission/0.1 (https://github.com/; album-sidecar-build)";
+const userAgent = "CartenzaMusicMission/0.1 (https://github.com/; album-sidecar-build)";
 let lastAppleRequestAt = 0;
 let appleGate = Promise.resolve();
 let appleCircuitOpenUntil = 0;
@@ -19,6 +20,7 @@ let musicBrainzGate = Promise.resolve();
 const args = parseArgs(process.argv.slice(2));
 const seed = readJson(seedPath);
 const albumNodes = buildAlbumNodes(seed.rows);
+const manualAppleOverrideByIdentityKey = readManualAppleOverrides();
 
 if (args.normalizeExisting) {
   const existing = readJson(path.join(passD, "album_track_sidecar_v1.json"));
@@ -38,7 +40,8 @@ let completed = 0;
 
 await runPool(selectedAlbumNodes, args.concurrency, async (album) => {
   const cached = existingByIdentityKey.get(album.candidate_identity_key);
-  if (cached && cached.resolution?.status === "resolved" && Array.isArray(cached.tracks) && cached.tracks.length > 0) {
+  const forceRetry = cached && (shouldRetryResolvedCastReview(album, cached) || shouldRetryManualAppleReview(album, cached));
+  if (cached && !forceRetry && cached.resolution?.status === "resolved" && Array.isArray(cached.tracks) && cached.tracks.length > 0) {
     results.push(rehydrateExistingAlbum(album, cached));
   } else {
     if (args.retryUnresolved) {
@@ -70,6 +73,7 @@ function parseArgs(argv) {
     normalizeExisting: false,
     aggressive: false,
     retryUnresolved: false,
+    retryReviewCast: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -83,6 +87,7 @@ function parseArgs(argv) {
     if (arg === "--normalize-existing") parsed.normalizeExisting = true;
     if (arg === "--aggressive") parsed.aggressive = true;
     if (arg === "--retry-unresolved") parsed.retryUnresolved = true;
+    if (arg === "--retry-review-cast") parsed.retryReviewCast = true;
   }
 
   if (!Number.isFinite(parsed.concurrency) || parsed.concurrency < 1) parsed.concurrency = 1;
@@ -92,13 +97,17 @@ function parseArgs(argv) {
 }
 
 function selectAlbumNodesForRun(nodes, existingByKey) {
-  if (!args.retryUnresolved) {
+  if (!args.retryUnresolved && !args.retryReviewCast) {
     return Number.isFinite(args.limit) ? nodes.slice(0, args.limit) : nodes;
   }
 
   const unresolvedNodes = nodes.filter((node) => {
     const cached = existingByKey.get(node.candidate_identity_key);
-    return cached && cached.resolution?.status !== "resolved";
+    return cached && (
+      cached.resolution?.status !== "resolved" ||
+      shouldRetryResolvedCastReview(node, cached) ||
+      shouldRetryManualAppleReview(node, cached)
+    );
   });
   const selected = Number.isFinite(args.limit) ? unresolvedNodes.slice(0, args.limit) : unresolvedNodes;
   const selectedKeys = new Set(selected.map((node) => node.candidate_identity_key));
@@ -124,6 +133,21 @@ function readExistingSidecar() {
     .map((file) => ({ file, sidecar: readJson(file) }))
     .sort((a, b) => (b.sidecar.albums?.length ?? 0) - (a.sidecar.albums?.length ?? 0));
   return candidates[0]?.sidecar ?? null;
+}
+
+function readManualAppleOverrides() {
+  if (!fs.existsSync(manualAppleOverridesPath)) return new Map();
+  const sidecar = readJson(manualAppleOverridesPath);
+  const overrides = sidecar.overrides ?? [];
+  const byIdentityKey = new Map();
+  for (const override of overrides) {
+    if (!override.candidate_identity_key) continue;
+    if (byIdentityKey.has(override.candidate_identity_key)) {
+      throw new Error(`duplicate manual Apple override for ${override.candidate_identity_key}`);
+    }
+    byIdentityKey.set(override.candidate_identity_key, override);
+  }
+  return byIdentityKey;
 }
 
 function writeJson(file, value) {
@@ -217,6 +241,22 @@ function buildAlbumNodes(rows) {
 }
 
 async function resolveAlbum(album) {
+  const manualAppleOverride = manualAppleOverrideByIdentityKey.get(album.candidate_identity_key);
+  if (manualAppleOverride?.status === "apply") {
+    const manualAppleResult = await safelyResolveCatalog(album, "apple", () => resolveWithManualAppleOverride(album, manualAppleOverride));
+    return { ...album, ...manualAppleResult };
+  }
+  if (manualAppleOverride) {
+    return {
+      ...album,
+      ...unresolvedResult(`manual_apple_override_${manualAppleOverride.status}`, {
+        match_score: 0,
+        collectionName: album.title,
+        artistName: album.artist_display_name,
+      }),
+    };
+  }
+
   if (args.retryUnresolved && isManualReviewFastSkip(album)) {
     return {
       ...album,
@@ -277,6 +317,99 @@ function rehydrateExistingAlbum(album, cached) {
     resolution: cached.resolution,
     catalog_match: cached.catalog_match,
     tracks: cached.tracks,
+  };
+}
+
+function shouldRetryResolvedCastReview(album, cached) {
+  if (!args.retryReviewCast || cached.resolution?.status !== "resolved") return false;
+  return isCastOrSoundtrackSeed(album) && isGenericTitleOnlySeed(album);
+}
+
+function shouldRetryManualAppleReview(album, cached) {
+  if (!args.retryUnresolved || cached.resolution?.status !== "resolved") return false;
+  const override = manualAppleOverrideByIdentityKey.get(album.candidate_identity_key);
+  return Boolean(override && override.status !== "apply");
+}
+
+async function resolveWithManualAppleOverride(album, override) {
+  const lookupUrl = new URL("https://itunes.apple.com/lookup");
+  lookupUrl.searchParams.set("id", String(override.apple_collection_id));
+  lookupUrl.searchParams.set("entity", "song");
+  lookupUrl.searchParams.set("country", String(override.country ?? "US"));
+
+  const lookup = await fetchJson(lookupUrl, { source: "apple" });
+  const collection = (lookup.results ?? []).find(
+    (result) => result.wrapperType === "collection" && Number(result.collectionId) === Number(override.apple_collection_id),
+  );
+  if (!collection) {
+    return unresolvedResult("manual_apple_override_collection_not_found", {
+      match_score: 0,
+      collectionName: album.title,
+      artistName: album.artist_display_name,
+    });
+  }
+
+  const tracks = (lookup.results ?? [])
+    .filter((result) => result.wrapperType === "track" && result.kind === "song")
+    .sort((a, b) => (a.discNumber - b.discNumber) || (a.trackNumber - b.trackNumber))
+    .map((track) => ({
+      source: "apple_itunes_search_api",
+      disc_number: track.discNumber ?? null,
+      track_number: track.trackNumber ?? null,
+      title: track.trackName ?? "",
+      artist_name: track.artistName ?? "",
+      duration_ms: track.trackTimeMillis ?? null,
+      apple_track_id: track.trackId ?? null,
+      apple_track_url: track.trackViewUrl ?? null,
+      explicitness: track.trackExplicitness ?? "",
+      is_streamable: Boolean(track.isStreamable),
+    }));
+
+  if (tracks.length === 0) {
+    return unresolvedResult("manual_apple_override_no_tracks", {
+      match_score: 0,
+      collectionName: collection.collectionName,
+      artistName: collection.artistName,
+    });
+  }
+
+  const warnings = ["manual_apple_override"];
+  if (override.confidence && override.confidence !== "high") {
+    warnings.push(`manual_apple_override_confidence_${override.confidence}`);
+  }
+  if (!titleMatchQuality(album.title, collection.collectionName).exact) {
+    warnings.push("manual_apple_override_title_differs_from_seed");
+  }
+  if (!artistCompatible(album, collection.artistName) && !candidateArtistNamedBySeed(album, collection.artistName)) {
+    warnings.push("manual_apple_override_artist_differs_from_seed");
+  }
+
+  return {
+    resolution: {
+      status: "resolved",
+      selected_source: "apple_itunes_search_api",
+      confidence: override.confidence ?? "medium",
+      match_score: 100,
+      warnings,
+    },
+    catalog_match: {
+      source: "apple_itunes_search_api",
+      apple_artist_id: collection.artistId ?? null,
+      apple_collection_id: collection.collectionId ?? override.apple_collection_id,
+      artist_name: collection.artistName ?? "",
+      collection_name: collection.collectionName ?? "",
+      release_date: dateOnly(collection.releaseDate),
+      release_year: yearFromDate(collection.releaseDate),
+      track_count: collection.trackCount ?? tracks.length,
+      country: collection.country ?? override.country ?? "USA",
+      primary_genre_name: collection.primaryGenreName ?? "",
+      collection_url: collection.collectionViewUrl ?? override.apple_url ?? null,
+      artwork_url_100: collection.artworkUrl100 ?? null,
+      copyright: collection.copyright ?? "",
+      manual_override_url: override.apple_url ?? "",
+      manual_override_notes: override.notes ?? "",
+    },
+    tracks,
   };
 }
 
@@ -604,6 +737,7 @@ function isAcceptableAppleMatch(album, candidate) {
   const distance = releaseYearDistance(album, yearFromDate(candidate.releaseDate));
   const titleStrong = titleQuality.exact || titleQuality.compactExact || titleQuality.overlapRatio >= 0.68;
   const yearUsable = !Number.isFinite(distance) || distance <= 3;
+  if (isBadGenericCastArtistMatch(album, candidate.artistName, candidate)) return false;
   const artistOk = artistCompatible(album, candidate.artistName) || candidateArtistNamedBySeed(album, candidate.artistName);
   const castOrVariousOk =
     candidateHasCastOrSoundtrackSignals(candidate) &&
@@ -732,6 +866,7 @@ function isAcceptableMusicBrainzMatch(album, candidate) {
 
   const titleQuality = titleMatchQuality(album.title, candidate.title);
   const candidateArtistName = artistCreditName(candidate["artist-credit"]);
+  if (isBadGenericCastArtistMatch(album, candidateArtistName, candidate)) return false;
   const artistScore = nameMatchScore(album.artist_display_name, candidateArtistName, 22, 14, 14);
   const candidateYear = yearFromDate(candidate["first-release-date"] ?? candidate.date);
   const distance = releaseYearDistance(album, candidateYear);
@@ -1448,7 +1583,13 @@ function castSeedTitleCompatible(album, candidateRaw) {
   if (targetTokens.length === 1) {
     if (candidateTokens[0] !== targetTokens[0]) return false;
     const next = candidateTokens[1] ?? "";
-    return ["original", "broadway", "london", "cast", "musical", "the"].includes(next);
+    if (["broadway", "london", "cast"].includes(next)) return true;
+    if (next === "the") return candidateTokens[2] === "musical";
+    if (next === "musical") return true;
+    if (next === "original") {
+      return /\b(broadway|london|west end|cast|musical)\b/.test(candidate);
+    }
+    return false;
   }
 
   return containsTokenPhrase(candidateTokens, targetTokens);
@@ -1528,6 +1669,12 @@ function isGenericTitleOnlySeed(album) {
   return /^(hair|cats|six|chicago|company|rent|wicked|hamilton|frozen|encanto|grease|cabaret|carousel|oklahoma)$/.test(title);
 }
 
+function isBadGenericCastArtistMatch(album, candidateArtistRaw, candidate) {
+  if (!isCastOrSoundtrackSeed(album) || !isGenericTitleOnlySeed(album)) return false;
+  if (candidateHasCastOrSoundtrackSignals(candidate)) return false;
+  return normKey(candidateArtistRaw) === normKey(album.title);
+}
+
 function isManualReviewFastSkip(album) {
   const title = normKey(album.title);
   const artist = normKey(album.artist_display_name);
@@ -1605,9 +1752,9 @@ function candidateHasWrongCastLocale(candidate, album) {
   if (hasRequiredKind) return false;
 
   if (kind === "broadway") {
-    return /\b(japanese|japan|london|west end|german|deutsch|dutch|spanish|italian|french|paris|mexican|australian|vienna|wien|swedish|korean|revival|tour|movie|film)\b/.test(text);
+    return /\b(japanese|japan|london|west end|german|deutsch|dutch|spanish|italian|french|paris|mexican|australian|vienna|wien|swedish|korean|revival|tour|movie|film|television|series|soundtrack)\b/.test(text);
   }
-  return /\b(japanese|japan|broadway|german|deutsch|dutch|spanish|italian|french|paris|mexican|australian|vienna|wien|swedish|korean|revival|tour|movie|film)\b/.test(text);
+  return /\b(japanese|japan|broadway|german|deutsch|dutch|spanish|italian|french|paris|mexican|australian|vienna|wien|swedish|korean|revival|tour|movie|film|television|series|soundtrack)\b/.test(text);
 }
 
 function containsNonLatinScript(value) {
