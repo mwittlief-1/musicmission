@@ -1,4 +1,4 @@
-# Waymark User-Facing Screen Spec v0.1
+# Cartenza User-Facing Screen Spec v0.1
 
 Purpose: provide a complete editable inventory of current user-facing screens so Brand, UI, UX, Core, and Product can polish the TestFlight Alpha deliberately.
 
@@ -16,7 +16,7 @@ Approved wireframe reference: Product/Founder approved `docs/app_dev/mockups/alp
 | 2 | Sign in with Apple + Apple Music connection | Required, presented as one guided step even though Apple ID auth and MusicKit authorization are separate capabilities. |
 | 3 | Guided onboarding walkthrough | Required first time; swipable copy pages using founder-provided copy. |
 | 4 | Survey intake | Required after onboarding; fixed 4 artist screens, 2 album screens, 4 song screens. |
-| 5 | Generation status | Show that Waymark is building the user's Atlas and first missions. Preserve provisional language. |
+| 5 | Generation status | Show that Cartenza is building the user's Atlas and first missions. Preserve provisional language. |
 | 6 | Core app IA | Appears after Survey completion and first mission generation/assignment. |
 | 7 | My Account / FAQ | Returning-user FAQ, account/auth status, reset/recovery, and optional Survey revisit/support entry. |
 
@@ -39,7 +39,7 @@ Release initial tab is `Mission`; debug initial tab is `Survey`.
 
 | Decision | Status | Owner | Notes |
 | --- | --- | --- | --- |
-| App name | decided | Founder/Design | Use `Waymark`. Installed display name and TestFlight metadata should be aligned. |
+| App name | decided | Founder/Design | Use `Cartenza`. Installed display name and TestFlight metadata should be aligned. |
 | First-TestFlight Survey visibility | decided | Product/Core | Survey is included and required after onboarding for Alpha 1. |
 | Survey length | decided | Product/Survey/Core | Force 4 artist screens, 2 album screens, and 4 song screens for Alpha intake. |
 | Mission assignment UX | decided direction | Product/Core/Infra | No bundled missions. First mission batch is generated after Survey completion. Paste/import remains support/fallback only. |
@@ -67,7 +67,7 @@ Release initial tab is `Mission`; debug initial tab is `Survey`.
 
 | Field | Spec |
 | --- | --- |
-| Route | `MissionListView`, title `Waymark` |
+| Route | `MissionListView`, title `Cartenza` |
 | Visibility | Release |
 | User intent | See active mission or understand that no mission is assigned yet. |
 | Key components | Loading/error states, Active section, Reviewed Mission Assignments, Import, Recovery, Apple Music, Status. |
@@ -331,7 +331,7 @@ Survey is currently debug-only in the audited code, but Product has decided Surv
 | Route | `SurveyView`, `.advancedSurvey` |
 | Visibility | Debug only currently |
 | User intent | Add lens-specific signals and freeform notes. |
-| Key components | Filter chips, advanced grid, "Anything Waymark should know?" TextEditor, Add Note, bottom Readout. |
+| Key components | Filter chips, advanced grid, "Anything Cartenza should know?" TextEditor, Add Note, bottom Readout. |
 | Primary actions | Select filter; tap/long-press grid items; add note; advance. |
 | States | Selected filter, note draft, freeform saved/empty. |
 | Design questions | Need final list and language for filters; freeform note privacy must be explicit if uploaded/shared. |
@@ -362,7 +362,7 @@ Survey is currently debug-only in the audited code, but Product has decided Surv
 
 | Task | Owner | Dependency | Notes |
 | --- | --- | --- | --- |
-| Decide Alpha app name and in-app naming | Founder/Design | none | Resolve `Music Atlas` vs `Waymark`. |
+| Decide Alpha app name and in-app naming | Founder/Design | none | Cartenza supersedes `Music Atlas` and `Waymark` for user-facing naming. |
 | Define visual tokens | Design/Core | none | Colors, typography scale, radii, icon treatment, list surface style. |
 | Build app icon asset catalog | Design/Core | brand direction | No `.xcassets` discovered in repo. |
 | Simplify Mission empty/import copy | Product/Design/Core | mission assignment decision | Hide JSON language from normal tester path if possible. |

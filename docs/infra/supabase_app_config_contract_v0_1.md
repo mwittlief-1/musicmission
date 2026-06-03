@@ -4,7 +4,7 @@ Generated: 2026-05-22
 
 ## Purpose
 
-This contract tells Core Waymark what configuration the iOS app may receive for the Alpha backend.
+This contract tells Core Cartenza what configuration the iOS app may receive for the Alpha backend.
 
 The app must never receive:
 
@@ -168,4 +168,6 @@ Only after:
 
 Manual Share Evidence / support diagnostics remain the fallback path. Automatic diagnostic upload is blocked until privacy/retention/deletion/support policy is approved.
 
-Core config key: `WaymarkSupabaseDiagnosticFunctionName=submit-alpha-diagnostic`.
+Core config key: `CartenzaSupabaseDiagnosticFunctionName=submit-alpha-diagnostic`.
+
+Legacy builds may still use `WaymarkSupabaseDiagnosticFunctionName`; the app reads both names during the Cartenza transition.

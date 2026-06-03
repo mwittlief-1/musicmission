@@ -1,4 +1,4 @@
-# Waymark Alpha Autonomous Lane Backlog
+# Cartenza Alpha Autonomous Lane Backlog
 
 Generated: 2026-05-21
 
@@ -28,7 +28,7 @@ Prebuilt missions are allowed only as test fixtures, debug fixtures, contract ex
 
 | lane | file | current instruction |
 | --- | --- | --- |
-| Core Waymark Build | `docs/alpha_backlog/core_waymark_build.md` | Build the missionless TestFlight runtime, mission assignment/import boundary, and Atlas-ingestion-ready evidence exports. |
+| Core Cartenza Build | `docs/alpha_backlog/core_waymark_build.md` | Build the missionless TestFlight runtime, mission assignment/import boundary, and Atlas-ingestion-ready evidence exports. |
 | Canonical Music Graph | `docs/alpha_backlog/canonical_music_graph.md` | Freeze Alpha-safe graph surfaces, resolver policy, candidate-role metadata, and Atlas `music_object_ref` alignment. |
 | Survey Simulator | `docs/alpha_backlog/survey_simulator.md` | Produce app-renderable survey packets and validated Survey Evidence Export into Atlas Schema v0.1. |
 | Atlas Schema | `docs/alpha_backlog/atlas_schema.md` | Harden the first-pass contract into ingestion/read-model validators and unblock the other lanes. |
@@ -116,6 +116,8 @@ When blocked, add a row to the lane's "Raised Issues" table using this shape:
 
 Use these as current controlling inputs:
 
+Waymark-named alpha briefs are historical contract artifacts. Cartenza is the current product name; do not rename those filenames without publishing replacement Cartenza contracts.
+
 - `docs/alpha_lane_dispatch_packet_v0_1.md`
 - `docs/alpha_testflight_infrastructure_plan_v0_1.md`
 - `docs/app_dev/alpha_product_decision_addendum_2026_05_22.md`
@@ -153,15 +155,15 @@ Use these as current controlling inputs:
 
 | dependency | owner | consumers | current status | build guidance |
 | --- | --- | --- | --- | --- |
-| Final Survey app packet schema | Survey Simulator | Core Waymark, Atlas | frozen v0.1 | Core can build renderer against `waymark.alpha_survey_page_packet.v0.1`; Atlas should ingest only Survey Evidence Export v0.1. |
+| Final Survey app packet schema | Survey Simulator | Core Cartenza, Atlas | frozen v0.1 | Core can build renderer against `waymark.alpha_survey_page_packet.v0.1`; Atlas should ingest only Survey Evidence Export v0.1. |
 | Final app decision: Survey visible in first TestFlight | Product/Core | Core, Survey | decided_yes | Survey is required first-run intake after onboarding. |
 | Supabase project ref and secrets | Product/Infrastructure | Core, Infrastructure | live_backend_ready | Project `ewuffhezhgyskcfyzkvw` is linked, functions are active, secrets are set, live generation/evidence smokes pass. Core should now wire app auth/function calls. |
 | Promotion/demotion thresholds | Atlas/Product | All lanes | open | Build only provisional/candidate flows now. |
 | Correction/superseding atom policy | Atlas | Survey, Core | open | Preserve append-only evidence and raise issue if amendment is needed. |
 | Release/privacy copy and deletion policy | Release/Product | Core, Atlas, Infra | required | Privacy/terms gate is required before Survey/upload; copy still needed. |
-| Final brand/app name/icon | Design/Release | Core | partially_decided | App name is Waymark; icon candidates still needed. |
+| Final brand/app name/icon | Design/Release | Core | name_decided | App name is Cartenza; icon candidates still needed. |
 | Approved Alpha orientation wireframes | Product/Design | Core | approved_2026_05_22 | Core/UI can implement from `docs/app_dev/mockups/alpha_orientation_flow_v0_1/IMPLEMENTATION_HANDOFF.md`; copy/legal/upload/icon blockers still apply. |
-| App-facing "What Waymark learned" placement | Product/Core/Atlas | Core, Atlas | open | Build `AtlasDelta` substrate and hide from UI until decided. |
+| App-facing "What Cartenza learned" placement | Product/Core/Atlas | Core, Atlas | open | Build `AtlasDelta` substrate and hide from UI until decided. |
 | First-run Sign in with Apple + Apple Music | Product/Core/Infra | Core, Infra | core_live_auth_needed | Present as one guided step; implement as separate Supabase Auth and MusicKit capabilities. Current app is local-only for Apple ID; Core should use `docs/app_dev/core_live_auth_generation_dispatch_2026_05_22.md`. |
 | Fixed Alpha Survey length | Product/Survey/Core | Survey, Core, Atlas | decided | 4 artist pages, 2 album pages, 4 song pages. |
 | First mission batch after Survey | Product/Infra/Mission Generation | Core, Infra, Mission Generation, Atlas | backend_live_smoke_passed | No bundled missions; generate one batch after Survey completion. Backend live smoke returns `app_import_candidate`; Core must call it with the real Supabase session after Survey. |

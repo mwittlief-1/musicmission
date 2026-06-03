@@ -1,6 +1,6 @@
 # TestFlight Non-Code Readiness Checklist v0.1
 
-Purpose: track everything outside the repo that must be ready before Waymark Alpha can be distributed through TestFlight.
+Purpose: track everything outside the repo that must be ready before Cartenza Alpha can be distributed through TestFlight.
 
 Last checked against Apple documentation: 2026-05-22.
 
@@ -19,7 +19,7 @@ Last checked against Apple documentation: 2026-05-22.
 | Item | Owner | Status | Notes |
 | --- | --- | --- | --- |
 | Confirm App Store Connect app record exists for the TestFlight target | Founder/Release | open | Xcode project bundle ID is currently `com.vytisstudios.MusicAtlasController`. App Store Connect bundle ID must match before upload. |
-| Confirm app name/display name | Founder/Design | decided | App name is `Waymark`; update display name/TestFlight metadata before external testers. |
+| Confirm app name/display name | Founder/Design | decided | App name is `Cartenza`; update display name/TestFlight metadata before external testers. |
 | Confirm SKU and primary language | Founder/Release | open | SKU is internal only but cannot be changed after app creation. |
 | Confirm app category | Founder/Release | open | Needed for App Store metadata; invite can optionally hide approved app info. |
 | Set age rating | Founder/Release | open | App-level App Store Connect property. Likely low-risk, but answer music/content questions accurately. |
@@ -68,7 +68,7 @@ Last checked against Apple documentation: 2026-05-22.
 
 | Item | Owner | Status | Notes |
 | --- | --- | --- | --- |
-| Final Alpha app name | Founder/Design | decided | Use `Waymark`. |
+| Final Alpha app name | Founder/Design | decided | Use `Cartenza`. |
 | App icon | Design/Core | open | Repo currently has no `.xcassets` app icon catalog discovered. Needed for a polished TestFlight install and App Store Connect metadata. |
 | Launch screen posture | Design/Core | open | Info.plist currently has an empty `UILaunchScreen`; acceptable for spike, not polished. |
 | Brand color/type/token pass | Design/Core | open | Alpha visual system is dark mode only. Token pass means reusable colors, type scale, spacing, radii, and semantic state colors. |
@@ -103,7 +103,7 @@ Last checked against Apple documentation: 2026-05-22.
 
 ### Beta App Description
 
-Waymark is a private Alpha for testing an Apple Music-powered discovery loop. Testers accept Alpha privacy terms, connect with Apple ID and Apple Music, complete a guided onboarding and Survey intake, then receive a generated first mission batch. The app captures lightweight listening evidence for product calibration. This build does not include prebuilt user missions.
+Cartenza is a private Alpha for testing an Apple Music-powered discovery loop. Testers accept Alpha privacy terms, connect with Apple ID and Apple Music, complete a guided onboarding and Survey intake, then receive a generated first mission batch. The app captures lightweight listening evidence for product calibration. This build does not include prebuilt user missions.
 
 ### What To Test
 

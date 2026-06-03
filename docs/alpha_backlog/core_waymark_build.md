@@ -1,4 +1,4 @@
-# Core Waymark Build Backlog
+# Core Cartenza Build Backlog
 
 Lane goal: TestFlight iOS runtime that does not ship prebuilt missions as user content, can receive/import reviewed missions after install, plays them through MusicKit, and exports Atlas-ingestion-ready evidence.
 
@@ -17,7 +17,7 @@ Lane goal: TestFlight iOS runtime that does not ship prebuilt missions as user c
 
 - [x] CWB-003 Build the missionless first-run empty state.
   - States: no mission assigned, Apple Music not connected, Apple Music connected, survey available, waiting for assignment.
-  - Do not imply Waymark already knows the user's mission.
+  - Do not imply Cartenza already knows the user's mission.
   - Completed: normal app startup can show an empty/no-assigned-mission state instead of a bundled mission library.
 
 - [x] CWB-004 Add reviewed mission assignment/import path.
@@ -118,9 +118,9 @@ Product decisions received 2026-05-22 reopen Core work for the guided first-run 
   - Completed: first-run Survey is release-facing and forced through 4 artist, 2 album, and 4 song pages. Normal Release tabs do not expose Survey; My Account has a support revisit path.
 
 - [x] CWB-023 Add post-Survey generation status surface.
-  - Message that Waymark is building the user's Atlas and first missions.
+  - Message that Cartenza is building the user's Atlas and first missions.
   - Preserve provisional/evidence language; do not imply promoted Atlas truth.
-  - Completed: post-Survey generation surface says Waymark is building the Atlas/first missions while preserving provisional evidence language and no promoted truth claim.
+  - Completed: post-Survey generation surface says Cartenza is building the Atlas/first missions while preserving provisional evidence language and no promoted truth claim.
 
 - [x] CWB-024 Reframe core IA after intake.
   - Normal path: mission batch -> player -> review -> Share Evidence/sync -> My Account.
@@ -128,11 +128,11 @@ Product decisions received 2026-05-22 reopen Core work for the guided first-run 
   - Completed: core tabs appear only after first-run intake and now include Mission, Player, Review, Evidence, and My Account. Manual import remains as support fallback until live remote generation is available.
 
 - [ ] CWB-025 Rename and release-polish shell.
-  - App display name: Waymark.
+  - App display name: Cartenza.
   - Dark mode only for Alpha.
   - Portrait-only for Alpha iPhone builds.
   - Add app icon asset catalog once candidates are approved.
-  - Partially completed: app display name is `Waymark`, Alpha surfaces force dark mode, iPhone/iPad supported orientations are portrait-only with full-screen required, and an Alpha placeholder `AppIcon` asset catalog is bundled for TestFlight packaging. Final app icon art remains blocked on approved candidates.
+  - Partially completed: app display name is `Cartenza`, Alpha surfaces force dark mode, iPhone/iPad supported orientations are portrait-only with full-screen required, and an Alpha placeholder `AppIcon` asset catalog is bundled for TestFlight packaging. Final app icon art remains blocked on approved candidates.
 
 - [x] CWB-026 Reframe Export as Share Evidence.
   - Remove schema/dev/acceptance language from the normal Alpha path.
@@ -336,7 +336,7 @@ Raise an issue when:
 | CWB-I002 | Final privacy, terms, retention, deletion, and support copy is not approved. | Brand / Design / Release | External TestFlight consent gate and any automatic evidence upload. | Placeholder Alpha acknowledgement blocks first-run until accepted; manual Share Evidence remains fallback. | open |
 | CWB-I003 | App-side Supabase Auth is wired and TestFlight build 11 is uploaded, but authenticated on-device smoke still needs to run through Sign in with Apple, generation, evidence upload, and diagnostic upload. | Core / Release QA | Durable account identity, timeout/reauth behavior, authenticated generation, evidence upload identity, diagnostic upload identity, CWB-029/CWB-033 device smoke. | Simulator build/tests pass. Release archive and App Store Connect upload pass. TestFlight build 11 includes fresh-read quarantine, failed-generation escape/reset, full 10-mission unlock gating, and manual support diagnostic upload; install it when processing completes and verify Supabase rows. | open |
 | CWB-I004 | Evidence upload endpoint and app live client are wired, but automatic upload policy is still not approved. Authenticated manual upload needs physical-device smoke. | Release Policy + Core QA | CWB-027 live evidence upload/sync and app-authenticated evidence smoke. | Manual Share Evidence remains fallback. App manual upload sends the Supabase session JWT after device sign-in; automatic upload remains disabled. | open |
-| CWB-I005 | Final Waymark app icon candidates are not approved. | Brand / Design / Release | CWB-025 external polish. | Display name, dark mode, portrait-only restrictions, and an Alpha placeholder AppIcon catalog are implemented. Replace placeholder with approved art before broader external polish. | open |
+| CWB-I005 | Final Cartenza app icon candidates are not approved. | Brand / Design / Release | CWB-025 external polish. | Display name, dark mode, portrait-only restrictions, and an Alpha placeholder AppIcon catalog are implemented. Replace placeholder with approved art before broader external polish. | open |
 | CWB-I006 | TestFlight upload/export was blocked until App Store Connect had an app record for bundle ID `com.vytisstudios.MusicAtlasController`. | Release / Apple Account Owner | TestFlight distribution for CWB-029 smoke. | Resolved 2026-05-23: App Store Connect/TestFlight upload succeeded after app record/account access was available and icon/orientation packaging was fixed. | closed |
 | CWB-I007 | Release Survey was still backed by the legacy fixture provider; Core needed Apple-exposure-biased, canonical-graph-backed, Page N+1 adaptive Survey behavior without fabricated app-side taste guesses. | Survey Simulator + Canonical Music Graph + Core | Replace TestFlight Survey fixtures with Apple-exposure-biased, canonical-graph-backed, Page N+1 adaptive Survey packets. | Resolved by bundled Alpha canonical graph/survey surfaces plus `AlphaDynamicSurveyPageProvider`. The provider uses Apple exposure as prior, falls back to canonical graph, dedupes prior visible items, and adapts from prior responses. Caveat: dynamic ranking currently lives in app code for Alpha; keep a future product/architecture decision open on moving this to a Survey service. | closed_for_alpha |
 | CWB-I008 | Manual app-side diagnostic upload is wired to the Supabase `submit-alpha-diagnostic` endpoint, but authenticated physical-device smoke still needs to prove rows land with `user_id_present=true`. | Core QA / Infra | CWB-031 backend-side PM reconstruction without ShareLink files. | Support diagnostics can still be generated locally from Share Evidence and shared manually. Automatic upload remains blocked by CWB-I002/CWB-I004 policy guardrails. | open |
@@ -426,7 +426,7 @@ Approved wireframe update 2026-05-22: Product/Founder approved the HTML mockups 
   - `xcodebuild test -scheme MusicAtlasController -destination 'platform=iOS Simulator,name=iPhone 17'`
   - `xcodebuild -scheme MusicAtlasController -configuration Release -destination 'platform=iOS Simulator,name=iPhone 17' clean build`
   - Release app bundle scan for `sample_mission*.json` and `waymark_matt_10_personal_missions_v0_1.json` returned no files.
-  - Release app `Info.plist` check confirmed `CFBundleDisplayName=Waymark`, `UIUserInterfaceStyle=Dark`, and portrait-only supported orientations.
+  - Release app `Info.plist` check confirmed `CFBundleDisplayName=Cartenza`, `UIUserInterfaceStyle=Dark`, and portrait-only supported orientations.
 - device QA performed:
   - Not executed in this pass.
 - guardrails enforced in code:
@@ -435,7 +435,7 @@ Approved wireframe update 2026-05-22: Product/Founder approved the HTML mockups 
   - Core IA appears only after first-run Survey reaches generation status.
   - Normal Release path keeps Survey out of the top-level tab shell after intake.
   - Share Evidence hides schema/dev/acceptance language from normal Alpha users.
-  - App display name is `Waymark`.
+  - App display name is `Cartenza`.
   - Alpha runtime is dark-mode-only and portrait-only through Info.plist/root styling.
   - No prebuilt mission Release guardrail remains intact.
 - remaining blockers:

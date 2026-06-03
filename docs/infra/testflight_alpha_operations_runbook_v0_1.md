@@ -27,7 +27,7 @@ Trusted Alpha, small tester group, iPhone-first, Apple Music required for real p
 - `generate-first-mission-batch` deployed.
 - `submit-alpha-evidence` deployed if evidence upload is enabled or being tested.
 - `submit-alpha-diagnostic` deployed if PM/support diagnostics are enabled or being tested.
-- App config includes `WaymarkSupabaseDiagnosticFunctionName=submit-alpha-diagnostic` if diagnostic upload is being tested.
+- App config includes `CartenzaSupabaseDiagnosticFunctionName=submit-alpha-diagnostic` if diagnostic upload is being tested. Legacy `WaymarkSupabaseDiagnosticFunctionName` is still accepted by the app during the Cartenza transition.
 - Supabase Auth Apple provider configured if account auth is enabled.
 - Fixture smoke test passes.
 - Live smoke test records one `alpha_generation_runs` row.
