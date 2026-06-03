@@ -415,14 +415,16 @@ final class SessionExporterTests: XCTestCase {
         let artifactObjects = try package.artifactURLs.map { url in
             try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: url)) as? [String: Any])
         }
-        let missionCatalogArtifact = try XCTUnwrap(artifactObjects.first { artifact in
-            guard artifact["artifact_type"] as? String == ClientDiagnosticArtifactType.missionSelectionAudit.rawValue,
-                  let payload = artifact["payload"] as? [String: Any] else {
+        let clientStateArtifact = try XCTUnwrap(artifactObjects.first { artifact in
+            guard artifact["artifact_type"] as? String == ClientDiagnosticArtifactType.clientStateSnapshot.rawValue,
+                  let payload = artifact["payload"] as? [String: Any],
+                  payload["schema_version"] as? String == "waymark.client_state_snapshot.v0.1" else {
                 return false
             }
-            return payload["schema_version"] as? String == "cartenza.reviewed_mission_catalog_snapshot.v0.1"
+            return payload["reviewed_mission_catalog_snapshot"] is [String: Any]
         })
-        let payload = try XCTUnwrap(missionCatalogArtifact["payload"] as? [String: Any])
+        let clientStatePayload = try XCTUnwrap(clientStateArtifact["payload"] as? [String: Any])
+        let payload = try XCTUnwrap(clientStatePayload["reviewed_mission_catalog_snapshot"] as? [String: Any])
         let surveyLink = try XCTUnwrap(payload["survey_link"] as? [String: Any])
         let missionCatalog = try XCTUnwrap(payload["mission_catalog"] as? [String: Any])
         let appMissions = try XCTUnwrap(payload["app_missions"] as? [[String: Any]])

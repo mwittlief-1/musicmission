@@ -1328,11 +1328,17 @@ final class AppModel: ObservableObject {
             let now = Date()
             var additionalArtifacts: [(type: ClientDiagnosticArtifactType, payload: [String: Any], context: ClientDiagnosticLinkContext)] = []
 
-            let stateSnapshot = makeClientStateSnapshotPayload(
+            var stateSnapshot = makeClientStateSnapshotPayload(
                 rootStateSnapshot: rootStateSnapshot,
                 surveySession: session,
                 now: now
             )
+
+            let reviewedMissionCatalogSnapshot = makeReviewedMissionCatalogSnapshotPayload(
+                surveySession: session,
+                now: now
+            )
+            stateSnapshot["reviewed_mission_catalog_snapshot"] = reviewedMissionCatalogSnapshot
             additionalArtifacts.append((.clientStateSnapshot, stateSnapshot, context))
 
             let applePayload: [String: Any]
@@ -1355,12 +1361,6 @@ final class AppModel: ObservableObject {
                 from: surveyEvidenceBuilder.makeSurveyEvidenceExportData(session: session, now: now)
             ) as? [String: Any] ?? [:]
             additionalArtifacts.append((.surveyEvidenceExport, evidenceExport, context))
-
-            let reviewedMissionCatalogSnapshot = makeReviewedMissionCatalogSnapshotPayload(
-                surveySession: session,
-                now: now
-            )
-            additionalArtifacts.append((.missionSelectionAudit, reviewedMissionCatalogSnapshot, context))
 
             savedSupportDiagnosticsPackage = try clientDiagnosticStore.savePackage(
                 additionalArtifacts: additionalArtifacts,
