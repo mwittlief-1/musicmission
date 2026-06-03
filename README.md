@@ -8,6 +8,7 @@ Start with the current repo map before moving or adding files:
 
 - `AGENTS.md`
 - `docs/repo_map.md`
+- `docs/repo_cleanup_status_2026_06_03.md`
 - `docs/brand_migration_cartenza.md`
 - `docs/repo_cleanup_inventory_2026_05_26.md`
 - `data/README.md`

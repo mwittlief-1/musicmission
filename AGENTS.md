@@ -44,6 +44,15 @@ Run `git status --short` before making changes. If unrelated app/runtime work is
 - Harness code and deterministic fixtures belong in the legacy-named `waymark-ai-tests/` and `waymark-atlas-tests/` directories until those packages are migrated deliberately.
 - Generated run outputs, reports, zips, review packet workspaces, local exports, build products, archives, dSYMs, virtualenvs, and local secrets should stay ignored or external unless explicitly promoted.
 
+## Production Track Separation
+
+- Treat the current TestFlight alpha runtime as the production track, even while the app is pre-release.
+- Keep production-track app code/resources in `MusicAtlasController/`, `MusicAtlasControllerTests/`, and `MusicAtlasController.xcodeproj/`; document app-bundled resource classes in `MusicAtlasController/Resources/README.md`.
+- Keep production-track source manifests, canonical graph inputs, contracts, and promotion notes in `data/` according to `data/README.md`.
+- Keep cleanup/status packets and stewardship notes in `docs/`; do not scatter new status Markdown at repo root.
+- Mark legacy or deprecated product paths in docs before deleting or rewiring them. Old Waymark identifiers, old sample/personal mission fixtures, legacy Survey priors, and superseded mission-generation paths require explicit migration or retirement notes.
+- Do not mix production runtime promotion, generated artifact archival, repo cleanup, and brand/name migration in one commit unless the owner explicitly asks for a combined slice.
+
 ## Data And Artifact Policy
 
 Classify files before acting:
@@ -58,6 +67,14 @@ Classify files before acting:
 Generated artifacts become first-class only when a maintainer promotes a specific file or directory into `docs/`, `data/product_contracts/`, `data/schemas/`, `data/missions/`, `data/alpha_packets/`, a harness `fixtures/` directory, or another documented source path with a short reason.
 
 Prefer tracking a source directory, manifest, or small review note over tracking a zip bundle.
+
+## Survey Candidate Policy
+
+- Survey tiles are not limited to legacy `survey_*_candidates_v*.json` surfaces. Those files can serve as priors, compatibility resources, or debug fixtures, but they are not the product ceiling.
+- Any active canonical graph artist, album, or song may be eligible for Survey display when it has an appropriate usable Apple Music catalog resolution, is not quarantined/suppressed/blocklisted, and matches the object type for the page.
+- For Survey purposes, "active" means the canonical object is present in the current canonical graph/app canonical resources and has a verified Apple Music ID or catalog-index resolution for the object type being displayed.
+- Rows without usable Apple Music resolution may remain in the canonical graph for research, contracts, or future hardening, but they must not feed automatic Survey display or default playback surfaces.
+- When discussing Apple-seeded Survey logic, "top artists" means artists ranked highest by the Apple payload scoring/rollup process, not canonical popularity, recognition tier, or old survey-surface priority.
 
 ## Staging And Commits
 

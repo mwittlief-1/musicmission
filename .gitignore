@@ -27,6 +27,15 @@ __pycache__/
 venv/
 
 # Local secrets
+*.p8
+AuthKey_*.p8
+*.mobileprovision
+*.provisionprofile
+*.developerprofile
+*.certSigningRequest
+private_keys/
+.private_keys/
+.appstoreconnect/private_keys/
 waymark-ai-tests/.env
 waymark-ai-tests/.env.*
 !waymark-ai-tests/.env.example
@@ -39,6 +48,7 @@ supabase/functions/.env.*
 supabase/.temp/
 
 # Local exports
+tmp/
 data/exports/*
 !data/exports/.gitkeep
 !data/exports/dev/
@@ -49,6 +59,7 @@ data/exports/acceptance/*
 !data/exports/acceptance/.gitkeep
 
 # Generated packets and review archives
+MusicAtlasController/Resources/Assets.xcassets/AppIcon.appiconset/* 2.png
 data/*.zip
 data/**/*.zip
 review_packets/*.zip

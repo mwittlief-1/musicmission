@@ -4,6 +4,11 @@ Date: 2026-05-26
 
 This map describes the intended repository shape for the Cartenza alpha. Waymark is the former product name and still appears in legacy technical identifiers. This is a stewardship guide, not a deletion plan. When a directory mixes source-of-truth material and generated artifacts, keep it visible until the owner reviews a more specific move.
 
+Current production-track checkpoint:
+
+- `docs/repo_cleanup_status_2026_06_03.md`
+- `MusicAtlasController/Resources/README.md`
+
 ## Classification Labels
 
 - Runtime source: code, app resources, backend functions, migrations, and project files needed to build or run the alpha.
@@ -29,6 +34,7 @@ This map describes the intended repository shape for the Cartenza alpha. Waymark
 | `waymark-atlas-tests/` | Legacy-named first-class tracked test harness with generated outputs | Track README, `pyproject.toml`, `.env.example` if present, `src/`, and `fixtures/`. Ignore `outputs/`, generated reports, local `.env*`, and zip packets. Do not rename as incidental cleanup. |
 | `build/` | Local build/cache output | Xcode build products, DerivedData, archives, dSYMs, device smoke exports. This directory is ignored and should not be tracked. |
 | `.venv/` | Local build/cache output | Local Python environment. Ignored. |
+| `tmp/` | Local build/cache output | Local scratch space. Ignored. |
 | `tests/` | Test/source fixture | Lightweight test notes and future test space. |
 
 ## `data/` Map
@@ -90,5 +96,6 @@ See `docs/brand_migration_cartenza.md` for the Cartenza rename policy. New produ
 - Do not delete or blanket-ignore mixed `data/` directories. Classify at the subtree or file-pattern level first.
 - Prefer checked-in source directories, manifests, and small review notes over zip bundles.
 - Keep app-shipping resources in `MusicAtlasController/Resources/`, with their upstream generation source or contract documented under `data/`.
+- Keep `MusicAtlasController/Resources/README.md` current when a new app-bundled resource class is introduced, retired, or demoted to fixture/debug-only status.
 - Keep first-class harness code and fixtures visible; keep timestamped harness run outputs ignored.
 - Keep root-level generated review docs under `docs/reviews/` or a dated archive, not at repo root.
