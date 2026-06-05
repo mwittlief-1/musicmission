@@ -274,7 +274,7 @@ struct MissionRegenerationPanel: View {
                     Text("Regenerate missions")
                         .font(.headline)
                         .foregroundStyle(WaymarkTheme.text)
-                    Text("Send the saved Survey evidence through Cartenza generation and replace the mission batch after a new set imports.")
+                    Text("Select the deterministic Survey-derived missions, enrich copy and secondary tags, then replace the mission batch after the enriched set imports.")
                         .font(.callout)
                         .foregroundStyle(WaymarkTheme.mutedText)
                         .fixedSize(horizontal: false, vertical: true)

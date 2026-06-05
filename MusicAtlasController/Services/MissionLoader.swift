@@ -43,6 +43,7 @@ struct SupabaseAlphaConfig: Equatable {
     let projectURL: URL?
     let anonKey: String?
     let generateFirstMissionBatchFunctionName: String
+    let enrichMissionFunctionName: String
     let submitAlphaEvidenceFunctionName: String
     let submitAlphaDiagnosticFunctionName: String
     let testerAlias: String
@@ -51,6 +52,7 @@ struct SupabaseAlphaConfig: Equatable {
         projectURL: nil,
         anonKey: nil,
         generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+        enrichMissionFunctionName: "enrich-mission",
         submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
         submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
         testerAlias: "trusted-alpha-001"
@@ -81,6 +83,12 @@ struct SupabaseAlphaConfig: Equatable {
             legacyKey: "WaymarkSupabaseEvidenceFunctionName"
         )
             ?? "submit-alpha-evidence"
+        let enrichMissionFunctionName = configuredInfoString(
+            info,
+            cartenzaKey: "CartenzaSupabaseEnrichMissionFunctionName",
+            legacyKey: "WaymarkSupabaseEnrichMissionFunctionName"
+        )
+            ?? "enrich-mission"
         let diagnosticFunctionName = configuredInfoString(
             info,
             cartenzaKey: "CartenzaSupabaseDiagnosticFunctionName",
@@ -98,6 +106,7 @@ struct SupabaseAlphaConfig: Equatable {
             projectURL: projectURL,
             anonKey: anonKey,
             generateFirstMissionBatchFunctionName: generateFunctionName,
+            enrichMissionFunctionName: enrichMissionFunctionName,
             submitAlphaEvidenceFunctionName: evidenceFunctionName,
             submitAlphaDiagnosticFunctionName: diagnosticFunctionName,
             testerAlias: testerAlias
@@ -312,6 +321,179 @@ struct LocalSupabaseMissionClientStub: MissionGenerationClient {
 
     func generateFirstMissionBatch(request: MissionGenerationRequest, accessToken: String) async throws -> Data {
         responseData
+    }
+}
+
+struct MissionEnrichmentRequest {
+    let clientRequestID: String
+    let testerAlias: String
+    let mission: Mission
+    let missionIndex: Int
+    let missionTotal: Int
+    let sourceAppVersion: String
+    let sourceAppBuild: String
+}
+
+struct MissionEnrichmentResponse: Codable, Equatable {
+    let schemaVersion: String
+    let status: String
+    let missionID: String
+    let model: String?
+    let latencyMS: Int?
+    let enrichmentOutput: MissionEnrichmentOutput
+
+    enum CodingKeys: String, CodingKey {
+        case schemaVersion = "schema_version"
+        case status
+        case missionID = "mission_id"
+        case model
+        case latencyMS = "latency_ms"
+        case enrichmentOutput = "enrichment_output"
+    }
+}
+
+struct MissionEnrichmentOutput: Codable, Equatable {
+    let schemaVersion: String
+    let missionID: String
+    let missionCopy: MissionEnrichmentCopy
+    let routeItemCopy: [MissionEnrichmentRouteItemCopy]
+    let secondaryReactionTagCandidates: [MissionEnrichmentSecondaryTagSet]
+
+    enum CodingKeys: String, CodingKey {
+        case schemaVersion = "schema_version"
+        case missionID = "mission_id"
+        case missionCopy = "mission_copy"
+        case routeItemCopy = "route_item_copy"
+        case secondaryReactionTagCandidates = "secondary_reaction_tag_candidates"
+    }
+}
+
+struct MissionEnrichmentCopy: Codable, Equatable {
+    let title: String
+    let subtitle: String
+    let shortDescription: String
+    let whyNow: String
+    let listenFor: [String]
+    let missionHypothesisUserFacing: String
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case subtitle
+        case shortDescription = "short_description"
+        case whyNow = "why_now"
+        case listenFor = "listen_for"
+        case missionHypothesisUserFacing = "mission_hypothesis_user_facing"
+    }
+}
+
+struct MissionEnrichmentRouteItemCopy: Codable, Equatable {
+    let itemID: String
+    let prePlayLine: String
+    let whyThisSong: String
+    let listenFor: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case itemID = "item_id"
+        case prePlayLine = "pre_play_line"
+        case whyThisSong = "why_this_song"
+        case listenFor = "listen_for"
+    }
+}
+
+struct MissionEnrichmentSecondaryTagSet: Codable, Equatable {
+    let itemID: String
+    let tags: [MissionEnrichmentSecondaryTagCandidate]
+
+    enum CodingKeys: String, CodingKey {
+        case itemID = "item_id"
+        case tags
+    }
+}
+
+struct MissionEnrichmentSecondaryTagCandidate: Codable, Equatable {
+    let tagID: String
+    let rank: Int
+    let displayLabel: String
+    let validPrimaryReactions: [String]
+    let whyThisTagIsRelevant: String
+
+    enum CodingKeys: String, CodingKey {
+        case tagID = "tag_id"
+        case rank
+        case displayLabel = "display_label"
+        case validPrimaryReactions = "valid_primary_reactions"
+        case whyThisTagIsRelevant = "why_this_tag_is_relevant"
+    }
+}
+
+protocol MissionEnrichmentClient {
+    func enrichMission(request: MissionEnrichmentRequest, accessToken: String) async throws -> MissionEnrichmentResponse
+}
+
+struct MissionEnrichmentDisabledClient: MissionEnrichmentClient {
+    func enrichMission(request: MissionEnrichmentRequest, accessToken: String) async throws -> MissionEnrichmentResponse {
+        throw SupabaseClientError.missingConfiguration
+    }
+}
+
+struct LocalMissionEnrichmentClientStub: MissionEnrichmentClient {
+    let enrich: (MissionEnrichmentRequest) throws -> MissionEnrichmentResponse
+
+    func enrichMission(request: MissionEnrichmentRequest, accessToken: String) async throws -> MissionEnrichmentResponse {
+        try enrich(request)
+    }
+}
+
+struct LiveSupabaseMissionEnrichmentClient: MissionEnrichmentClient {
+    let config: SupabaseAlphaConfig
+    var urlSession: URLSession = Self.defaultEnrichmentURLSession
+
+    private static let defaultEnrichmentURLSession: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 180
+        configuration.timeoutIntervalForResource = 300
+        return URLSession(configuration: configuration)
+    }()
+
+    func enrichMission(request: MissionEnrichmentRequest, accessToken: String) async throws -> MissionEnrichmentResponse {
+        let urlRequest = try makeURLRequest(request: request, accessToken: accessToken)
+        let (data, response) = try await urlSession.data(for: urlRequest)
+        try SupabaseHTTP.validate(response: response, data: data)
+        let decoder = JSONDecoder()
+        return try decoder.decode(MissionEnrichmentResponse.self, from: data)
+    }
+
+    func makeURLRequest(request: MissionEnrichmentRequest, accessToken: String) throws -> URLRequest {
+        guard let projectURL = config.projectURL,
+              let anonKey = config.anonKey,
+              !anonKey.isEmpty else {
+            throw SupabaseClientError.missingConfiguration
+        }
+
+        let url = projectURL
+            .appendingPathComponent("functions")
+            .appendingPathComponent("v1")
+            .appendingPathComponent(config.enrichMissionFunctionName)
+
+        let payload: [String: Any] = [
+            "schema_version": "cartenza.mission_enrichment_runtime_request.v0.1",
+            "client_request_id": request.clientRequestID,
+            "tester_alias": request.testerAlias,
+            "mission_index": request.missionIndex,
+            "mission_total": request.missionTotal,
+            "source_app_version": request.sourceAppVersion,
+            "source_app_build": request.sourceAppBuild,
+            "mission": try SupabaseJSON.object(from: request.mission)
+        ]
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.timeoutInterval = 180
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue(anonKey, forHTTPHeaderField: "apikey")
+        urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = try JSONSerialization.data(withJSONObject: payload, options: [.sortedKeys])
+        return urlRequest
     }
 }
 

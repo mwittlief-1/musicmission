@@ -684,6 +684,7 @@ final class SessionExporterTests: XCTestCase {
             projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
             anonKey: "sb_publishable_test",
             generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            enrichMissionFunctionName: "enrich-mission",
             submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
             submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
             testerAlias: "trusted-alpha-test"
@@ -736,6 +737,7 @@ final class SessionExporterTests: XCTestCase {
             projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
             anonKey: "sb_publishable_test",
             generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            enrichMissionFunctionName: "enrich-mission",
             submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
             submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
             testerAlias: "trusted-alpha-test"
@@ -786,6 +788,7 @@ final class SessionExporterTests: XCTestCase {
             projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
             anonKey: "sb_publishable_test",
             generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            enrichMissionFunctionName: "enrich-mission",
             submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
             submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
             testerAlias: "trusted-alpha-test"
@@ -860,6 +863,7 @@ final class SessionExporterTests: XCTestCase {
             projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
             anonKey: "sb_publishable_test",
             generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            enrichMissionFunctionName: "enrich-mission",
             submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
             submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
             testerAlias: "trusted-alpha-test"

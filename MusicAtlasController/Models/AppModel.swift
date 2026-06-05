@@ -45,6 +45,7 @@ enum AlphaMissionGenerationError: LocalizedError {
     case localStarterPackResponseDisallowed
     case emptyLiveGenerationImport
     case missingSurveyEvidence
+    case enrichmentResponseInvalid(String)
     case noImportableMissionsAfterAttempts(attempts: Int, lastIssue: String?)
 
     var errorDescription: String? {
@@ -55,6 +56,8 @@ enum AlphaMissionGenerationError: LocalizedError {
             return "Mission construction returned no importable app missions."
         case .missingSurveyEvidence:
             return "No saved Survey responses were found. Revisit Survey before regenerating missions."
+        case .enrichmentResponseInvalid(let reason):
+            return "Mission enrichment returned an invalid overlay: \(reason)"
         case .noImportableMissionsAfterAttempts(let attempts, let lastIssue):
             let suffix = lastIssue.map { " Last issue: \($0)" } ?? ""
             return "Mission construction did not return enough app-importable missions after \(attempts) build attempt\(attempts == 1 ? "" : "s").\(suffix)"
@@ -209,6 +212,7 @@ final class AppModel: ObservableObject {
 
     private let supabaseConfig: SupabaseAlphaConfig
     private let missionGenerationClient: any MissionGenerationClient
+    private let missionEnrichmentClient: any MissionEnrichmentClient
     private let evidenceUploadClient: any EvidenceUploadClient
     private let diagnosticUploadClient: any DiagnosticUploadClient
     private let surveyEvidenceBuilder: SurveyEvidenceExportBuilder
@@ -242,6 +246,7 @@ final class AppModel: ObservableObject {
         supabaseConfig: SupabaseAlphaConfig = .fromBundle(),
         supabaseAuthService: SupabaseAuthService? = nil,
         missionGenerationClient: (any MissionGenerationClient)? = nil,
+        missionEnrichmentClient: (any MissionEnrichmentClient)? = nil,
         evidenceUploadClient: (any EvidenceUploadClient)? = nil,
         diagnosticUploadClient: (any DiagnosticUploadClient)? = nil,
         surveyEvidenceBuilder: SurveyEvidenceExportBuilder = SurveyEvidenceExportBuilder(),
@@ -267,6 +272,7 @@ final class AppModel: ObservableObject {
         self.supabaseAuth = resolvedAuthService
         self.supabaseAuthSnapshot = resolvedAuthService.snapshot
         self.missionGenerationClient = missionGenerationClient ?? LiveSupabaseMissionGenerationClient(config: supabaseConfig)
+        self.missionEnrichmentClient = missionEnrichmentClient ?? LiveSupabaseMissionEnrichmentClient(config: supabaseConfig)
         self.evidenceUploadClient = evidenceUploadClient ?? LiveEvidenceUploadClient(config: supabaseConfig)
         self.diagnosticUploadClient = diagnosticUploadClient ?? LiveDiagnosticUploadClient(config: supabaseConfig)
         self.surveyEvidenceBuilder = surveyEvidenceBuilder
@@ -650,14 +656,15 @@ final class AppModel: ObservableObject {
         }
 
         let targetMissionCount = AlphaMissionGenerationConfig.requiredMissionCount
+        let progressTargetCount = targetMissionCount * 2
         firstMissionGenerationProgress = MissionGenerationProgress(
             completedCount: 0,
-            targetCount: targetMissionCount,
+            targetCount: progressTargetCount,
             activeMissionNumber: nil,
             detail: "Selecting deterministic Alpha missions from saved Survey evidence and canonical Apple Music refs."
         )
         firstMissionGenerationState = .loading
-        lastActionMessage = "Regenerating missions from current Survey evidence with the deterministic Atlas selector..."
+        lastActionMessage = "Regenerating missions from current Survey evidence with the deterministic Atlas selector, then enriching copy and tags..."
 
         do {
             let session = surveyEvidenceBuilder.loadPersistedSurveySession()
@@ -668,22 +675,34 @@ final class AppModel: ObservableObject {
             let generatedBatch = try makeLocalSurveyOpportunityMissionBatchFromCurrentSurvey(
                 targetMissionCount: targetMissionCount
             )
-            let importedAssignments = try replaceReviewedMissionBatch(with: generatedBatch.responseData)
+            firstMissionGenerationProgress = MissionGenerationProgress(
+                completedCount: targetMissionCount,
+                targetCount: progressTargetCount,
+                activeMissionNumber: nil,
+                detail: "Selected \(generatedBatch.assignments.count) deterministic Alpha missions. Enriching copy and secondary tags..."
+            )
+
+            let enrichedResponseData = try await makeEnrichedMissionBatchResponseData(
+                from: generatedBatch.assignments,
+                baseCompletedCount: targetMissionCount,
+                progressTargetCount: progressTargetCount
+            )
+            let importedAssignments = try replaceReviewedMissionBatch(with: [enrichedResponseData])
 
             firstMissionGenerationProgress = MissionGenerationProgress(
-                completedCount: importedAssignments.count,
-                targetCount: targetMissionCount,
+                completedCount: progressTargetCount,
+                targetCount: progressTargetCount,
                 activeMissionNumber: nil,
-                detail: "Loaded \(importedAssignments.count) survey-derived Alpha missions with resolved Apple Music metadata."
+                detail: "Loaded \(importedAssignments.count) survey-derived Alpha missions with enriched copy and secondary tags."
             )
             firstMissionGenerationState = .loaded
-            lastActionMessage = "Regenerated \(importedAssignments.count) survey-derived Alpha missions. Prior mission sessions were cleared after the new deterministic batch imported."
+            lastActionMessage = "Regenerated \(importedAssignments.count) survey-derived Alpha missions with OpenAI enrichment. Prior mission sessions were cleared after the enriched deterministic batch imported."
             return true
         } catch {
             firstMissionGenerationState = .failed(error.localizedDescription)
             firstMissionGenerationProgress = MissionGenerationProgress(
-                completedCount: min(reviewedMissionAssignmentCount, targetMissionCount),
-                targetCount: targetMissionCount,
+                completedCount: min(reviewedMissionAssignmentCount, progressTargetCount),
+                targetCount: progressTargetCount,
                 activeMissionNumber: nil,
                 detail: "Mission regeneration failed before replacing the current batch."
             )
@@ -1698,6 +1717,225 @@ final class AppModel: ObservableObject {
             responseData: responseData,
             assignments: importedAssignments
         )
+    }
+
+    private struct EnrichedMissionBatchResponse: Encodable {
+        let runID: String
+        let status: String
+        let appMissions: [Mission]
+
+        enum CodingKeys: String, CodingKey {
+            case runID = "run_id"
+            case status
+            case appMissions = "app_missions"
+        }
+    }
+
+    private func makeEnrichedMissionBatchResponseData(
+        from assignments: [MissionAssignment],
+        baseCompletedCount: Int,
+        progressTargetCount: Int
+    ) async throws -> Data {
+        guard assignments.count >= AlphaMissionGenerationConfig.minimumUsableMissionCount else {
+            throw AlphaMissionGenerationError.noImportableMissionsAfterAttempts(
+                attempts: 1,
+                lastIssue: "Survey opportunity selector prepared \(assignments.count) missions before enrichment."
+            )
+        }
+
+        let accessToken = try await missionGenerationAccessToken()
+        var enrichedMissions = [Mission]()
+
+        for (index, assignment) in assignments.enumerated() {
+            let missionNumber = index + 1
+            firstMissionGenerationProgress = MissionGenerationProgress(
+                completedCount: baseCompletedCount + index,
+                targetCount: progressTargetCount,
+                activeMissionNumber: missionNumber,
+                detail: "Enriching mission \(missionNumber) of \(assignments.count): copy and secondary tags."
+            )
+
+            let response = try await missionEnrichmentClient.enrichMission(
+                request: MissionEnrichmentRequest(
+                    clientRequestID: "ios_mission_enrichment_\(UUID().uuidString)",
+                    testerAlias: supabaseConfig.testerAlias,
+                    mission: assignment.mission,
+                    missionIndex: missionNumber,
+                    missionTotal: assignments.count,
+                    sourceAppVersion: Self.appVersion,
+                    sourceAppBuild: Self.appBuild
+                ),
+                accessToken: accessToken
+            )
+            let enrichedMission = try missionByApplyingEnrichment(
+                response.enrichmentOutput,
+                to: assignment.mission
+            )
+            try MissionImportGate.validateAppImportCandidate(enrichedMission)
+            enrichedMissions.append(enrichedMission)
+
+            firstMissionGenerationProgress = MissionGenerationProgress(
+                completedCount: baseCompletedCount + missionNumber,
+                targetCount: progressTargetCount,
+                activeMissionNumber: missionNumber,
+                detail: "Enriched mission \(missionNumber) of \(assignments.count)."
+            )
+        }
+
+        let payload = EnrichedMissionBatchResponse(
+            runID: "local_survey_opportunity_selection_enriched_\(UUID().uuidString)",
+            status: "app_import_candidate",
+            appMissions: enrichedMissions
+        )
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        encoder.outputFormatting = [.sortedKeys]
+        return try encoder.encode(payload)
+    }
+
+    private func missionByApplyingEnrichment(
+        _ enrichment: MissionEnrichmentOutput,
+        to mission: Mission
+    ) throws -> Mission {
+        guard enrichment.schemaVersion == "mission_enrichment_output_v0_2" else {
+            throw AlphaMissionGenerationError.enrichmentResponseInvalid("schema_version must be mission_enrichment_output_v0_2.")
+        }
+        guard enrichment.missionID == mission.missionID else {
+            throw AlphaMissionGenerationError.enrichmentResponseInvalid("mission_id changed from \(mission.missionID) to \(enrichment.missionID).")
+        }
+
+        let routeCopyByItemID = Dictionary(uniqueKeysWithValues: enrichment.routeItemCopy.map { ($0.itemID, $0) })
+        let tagSetsByItemID = Dictionary(uniqueKeysWithValues: enrichment.secondaryReactionTagCandidates.map { ($0.itemID, $0) })
+        let itemIDs = Set(mission.items.map(\.itemID))
+        guard Set(routeCopyByItemID.keys) == itemIDs else {
+            throw AlphaMissionGenerationError.enrichmentResponseInvalid("route_item_copy item_ids must exactly match the deterministic mission.")
+        }
+        guard Set(tagSetsByItemID.keys) == itemIDs else {
+            throw AlphaMissionGenerationError.enrichmentResponseInvalid("secondary tag item_ids must exactly match the deterministic mission.")
+        }
+
+        var enrichedMission = Mission(
+            schemaVersion: mission.schemaVersion,
+            missionID: mission.missionID,
+            missionTitle: enrichment.missionCopy.title,
+            missionVersion: mission.missionVersion,
+            createdAt: mission.createdAt,
+            missionType: mission.missionType,
+            recommendedFormat: mission.recommendedFormat,
+            hypothesis: enrichment.missionCopy.missionHypothesisUserFacing,
+            inflationWarning: mission.inflationWarning,
+            successBar: mission.successBar,
+            runInstructions: mission.runInstructions,
+            postRunInferenceRules: mission.postRunInferenceRules,
+            items: try mission.items.map { item in
+                guard let routeCopy = routeCopyByItemID[item.itemID],
+                      let tagSet = tagSetsByItemID[item.itemID] else {
+                    throw AlphaMissionGenerationError.enrichmentResponseInvalid("Missing enrichment for \(item.itemID).")
+                }
+                return try itemByApplyingEnrichment(routeCopy: routeCopy, tagSet: tagSet, to: item)
+            },
+            alphaAppImportStatus: mission.alphaAppImportStatus,
+            alphaMissionArchetype: mission.alphaMissionArchetype,
+            brief: enrichment.missionCopy.shortDescription,
+            whyThisMissionNow: enrichment.missionCopy.whyNow,
+            riskLevel: mission.riskLevel,
+            sourceTraceSummary: enrichedSourceTraceSummary(from: mission.sourceTraceSummary)
+        )
+        enrichedMission.brief = enrichment.missionCopy.shortDescription
+        enrichedMission.whyThisMissionNow = enrichment.missionCopy.whyNow
+        enrichedMission.sourceTraceSummary = enrichedSourceTraceSummary(from: mission.sourceTraceSummary)
+        return enrichedMission
+    }
+
+    private func itemByApplyingEnrichment(
+        routeCopy: MissionEnrichmentRouteItemCopy,
+        tagSet: MissionEnrichmentSecondaryTagSet,
+        to item: MissionItem
+    ) throws -> MissionItem {
+        let feedbackChipSets = try feedbackChipSets(from: tagSet)
+        return MissionItem(
+            itemID: item.itemID,
+            sequence: item.sequence,
+            itemType: item.itemType,
+            artist: item.artist,
+            title: item.title,
+            album: item.album,
+            year: item.year,
+            whyIncluded: routeCopy.whyThisSong,
+            expectedTestSignal: routeCopy.listenFor.joined(separator: " "),
+            playerCard: MissionPlayerCard(
+                flipSide: MissionPlayerCardFlipSide(
+                    songHypothesis: routeCopy.prePlayLine,
+                    detail: routeCopy.whyThisSong
+                )
+            ),
+            feedbackChipSets: feedbackChipSets,
+            appleMusicResolution: item.appleMusicResolution,
+            candidateID: item.candidateID,
+            routeCandidateKey: item.routeCandidateKey,
+            routeBatchDedupeKey: item.routeBatchDedupeKey,
+            routeDisplayIdentityKey: item.routeDisplayIdentityKey,
+            notes: item.notes,
+            alphaRouteRole: item.alphaRouteRole,
+            alphaResolutionStatus: item.alphaResolutionStatus,
+            alphaSourceOpportunityID: item.alphaSourceOpportunityID,
+            alphaSourceMissionType: item.alphaSourceMissionType,
+            alphaTargetObjectIDs: item.alphaTargetObjectIDs,
+            alphaGraphContextRefs: item.alphaGraphContextRefs
+        )
+    }
+
+    private func feedbackChipSets(from tagSet: MissionEnrichmentSecondaryTagSet) throws -> [String: [FeedbackChipOption]] {
+        var chipSets: [String: [FeedbackChipOption]] = Dictionary(
+            uniqueKeysWithValues: ReactionValue.primarySignalValues.map { ($0.rawValue, []) }
+        )
+
+        for tag in tagSet.tags.sorted(by: { $0.rank < $1.rank }) {
+            let chip = FeedbackChipOption(
+                tagID: tag.tagID,
+                label: tag.displayLabel,
+                description: tag.whyThisTagIsRelevant
+            )
+            for primaryReaction in tag.validPrimaryReactions {
+                guard let reactionValue = reactionValue(forMissionEnrichmentPrimaryReaction: primaryReaction) else {
+                    throw AlphaMissionGenerationError.enrichmentResponseInvalid("Unsupported primary reaction \(primaryReaction) for \(tag.tagID).")
+                }
+                chipSets[reactionValue.rawValue, default: []].append(chip)
+            }
+        }
+
+        for reactionValue in ReactionValue.primarySignalValues where chipSets[reactionValue.rawValue]?.isEmpty != false {
+            throw AlphaMissionGenerationError.enrichmentResponseInvalid("\(tagSet.itemID) is missing secondary tags for \(reactionValue.rawValue).")
+        }
+
+        return chipSets
+    }
+
+    private func reactionValue(forMissionEnrichmentPrimaryReaction primaryReaction: String) -> ReactionValue? {
+        switch primaryReaction {
+        case "love":
+            return .hit
+        case "like":
+            return .partial
+        case "ok":
+            return .okShelf
+        case "dislike":
+            return .miss
+        default:
+            return nil
+        }
+    }
+
+    private func enrichedSourceTraceSummary(from existingSummary: String?) -> String {
+        let suffix = "mission_enrichment_v0_2"
+        guard let existingSummary,
+              !existingSummary.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return suffix
+        }
+        guard !existingSummary.contains(suffix) else {
+            return existingSummary
+        }
+        return "\(existingSummary); \(suffix)"
     }
 
     @discardableResult

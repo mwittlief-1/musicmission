@@ -871,11 +871,22 @@ final class MissionDecodingTests: XCTestCase {
         )
 
         let client = RecordingMissionGenerationClient(responses: [])
+        let enrichmentClient = RecordingMissionEnrichmentClient()
+        let config = SupabaseAlphaConfig(
+            projectURL: nil,
+            anonKey: "test-token",
+            generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+            enrichMissionFunctionName: "enrich-mission",
+            submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+            submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
+            testerAlias: "trusted-alpha-test"
+        )
         let appModel = AppModel(
             sessionPersistenceStore: sessionPersistenceStore,
             missionProvider: provider,
-            supabaseConfig: .unconfigured,
+            supabaseConfig: config,
             missionGenerationClient: client,
+            missionEnrichmentClient: enrichmentClient,
             surveyEvidenceBuilder: SurveyEvidenceExportBuilder(persistenceStore: surveyPersistenceStore)
         )
         appModel.loadMissionLibrary()
@@ -885,13 +896,20 @@ final class MissionDecodingTests: XCTestCase {
 
         XCTAssertTrue(didRegenerate)
         XCTAssertTrue(client.requests.isEmpty)
+        XCTAssertEqual(enrichmentClient.requests.count, AlphaMissionGenerationConfig.requiredMissionCount)
         XCTAssertEqual(appModel.reviewedMissionAssignmentCount, AlphaMissionGenerationConfig.requiredMissionCount)
         XCTAssertFalse(appModel.availableMissions.contains { $0.missionID == oldMission.missionID })
         XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.missionID.hasPrefix("MIS_ALPHA_SURVEY_OPPORTUNITY_") })
         XCTAssertTrue(appModel.availableMissions.allSatisfy(\.isPlaybackReady))
+        XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.missionTitle.hasPrefix("Enriched ") })
+        let firstEnrichedItem = try XCTUnwrap(appModel.availableMissions.first?.items.first)
+        XCTAssertEqual(firstEnrichedItem.feedbackChips(for: .hit).first?.tagID, "HOOK_WORKED")
+        XCTAssertEqual(firstEnrichedItem.feedbackChips(for: .partial).first?.tagID, "GOOD_NOT_CORE")
+        XCTAssertEqual(firstEnrichedItem.feedbackChips(for: .okShelf).first?.tagID, "WOULD_TRY_MORE_NEARBY")
+        XCTAssertEqual(firstEnrichedItem.feedbackChips(for: .miss).first?.tagID, "GOOD_NOT_FOR_ME")
         XCTAssertTrue(appModel.reviewedMissionAssignments.allSatisfy { $0.sourceRunID?.hasPrefix("local_survey_opportunity_selection_") == true })
         XCTAssertEqual(appModel.firstMissionGenerationState, .loaded)
-        XCTAssertEqual(appModel.firstMissionGenerationProgress.completedCount, AlphaMissionGenerationConfig.requiredMissionCount)
+        XCTAssertEqual(appModel.firstMissionGenerationProgress.completedCount, AlphaMissionGenerationConfig.requiredMissionCount * 2)
         XCTAssertNotNil(sessionPersistenceStore.load().activeMissionID)
     }
 
@@ -1142,6 +1160,78 @@ private final class RecordingMissionGenerationClient: MissionGenerationClient {
             throw TestResourceError.missingGenerationResponse
         }
         return responses.removeFirst()
+    }
+}
+
+private final class RecordingMissionEnrichmentClient: MissionEnrichmentClient {
+    private(set) var requests: [MissionEnrichmentRequest] = []
+
+    func enrichMission(request: MissionEnrichmentRequest, accessToken: String) async throws -> MissionEnrichmentResponse {
+        requests.append(request)
+        let output = MissionEnrichmentOutput(
+            schemaVersion: "mission_enrichment_output_v0_2",
+            missionID: request.mission.missionID,
+            missionCopy: MissionEnrichmentCopy(
+                title: "Enriched \(request.mission.missionTitle)",
+                subtitle: "A sharper setup for this mission.",
+                shortDescription: "Use this enriched mission to test the same deterministic route with clearer language.",
+                whyNow: "The deterministic selector found a playback-ready opportunity, so enrichment adds copy and reaction tags.",
+                listenFor: ["What immediately works", "Where the boundary appears"],
+                missionHypothesisUserFacing: "This mission checks whether the selected route clarifies a real preference signal."
+            ),
+            routeItemCopy: request.mission.items.map { item in
+                MissionEnrichmentRouteItemCopy(
+                    itemID: item.itemID,
+                    prePlayLine: "Listen for what \(item.title) clarifies.",
+                    whyThisSong: "\(item.title) is included to test a specific deterministic opportunity.",
+                    listenFor: ["first pull", "later resistance"]
+                )
+            },
+            secondaryReactionTagCandidates: request.mission.items.map { item in
+                MissionEnrichmentSecondaryTagSet(
+                    itemID: item.itemID,
+                    tags: [
+                        MissionEnrichmentSecondaryTagCandidate(
+                            tagID: "HOOK_WORKED",
+                            rank: 1,
+                            displayLabel: "The hook worked",
+                            validPrimaryReactions: ["love"],
+                            whyThisTagIsRelevant: "Captures a strong positive songcraft signal."
+                        ),
+                        MissionEnrichmentSecondaryTagCandidate(
+                            tagID: "GOOD_NOT_CORE",
+                            rank: 2,
+                            displayLabel: "Good, not core",
+                            validPrimaryReactions: ["like"],
+                            whyThisTagIsRelevant: "Captures a qualified positive waypoint."
+                        ),
+                        MissionEnrichmentSecondaryTagCandidate(
+                            tagID: "WOULD_TRY_MORE_NEARBY",
+                            rank: 3,
+                            displayLabel: "I'd try more nearby",
+                            validPrimaryReactions: ["ok"],
+                            whyThisTagIsRelevant: "Captures openness without a strong hit."
+                        ),
+                        MissionEnrichmentSecondaryTagCandidate(
+                            tagID: "GOOD_NOT_FOR_ME",
+                            rank: 4,
+                            displayLabel: "Good, not for me",
+                            validPrimaryReactions: ["dislike"],
+                            whyThisTagIsRelevant: "Captures respect without appetite."
+                        )
+                    ]
+                )
+            }
+        )
+
+        return MissionEnrichmentResponse(
+            schemaVersion: "cartenza.mission_enrichment_runtime_response.v0.1",
+            status: "enriched",
+            missionID: request.mission.missionID,
+            model: "test",
+            latencyMS: 1,
+            enrichmentOutput: output
+        )
     }
 }
 
