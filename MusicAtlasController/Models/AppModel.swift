@@ -654,36 +654,30 @@ final class AppModel: ObservableObject {
             completedCount: 0,
             targetCount: targetMissionCount,
             activeMissionNumber: nil,
-            detail: "Sending saved Survey evidence through Cartenza mission generation."
+            detail: "Selecting deterministic Alpha missions from saved Survey evidence and canonical Apple Music refs."
         )
         firstMissionGenerationState = .loading
-        lastActionMessage = "Regenerating missions from current Survey evidence..."
+        lastActionMessage = "Regenerating missions from current Survey evidence with the deterministic Atlas selector..."
 
         do {
-            guard supabaseConfig.isConfiguredForRemoteCalls else {
-                throw SupabaseClientError.missingConfiguration
-            }
-
             let session = surveyEvidenceBuilder.loadPersistedSurveySession()
             guard !session.responses.isEmpty else {
                 throw AlphaMissionGenerationError.missingSurveyEvidence
             }
 
-            let accessToken = try await missionGenerationAccessToken()
-            let generatedBatch = try await makeRemoteMissionBatchFromCurrentSurvey(
-                accessToken: accessToken,
+            let generatedBatch = try makeLocalSurveyOpportunityMissionBatchFromCurrentSurvey(
                 targetMissionCount: targetMissionCount
             )
-            try replaceReviewedMissionBatch(with: generatedBatch.responseData)
+            let importedAssignments = try replaceReviewedMissionBatch(with: generatedBatch.responseData)
 
             firstMissionGenerationProgress = MissionGenerationProgress(
-                completedCount: generatedBatch.assignments.count,
+                completedCount: importedAssignments.count,
                 targetCount: targetMissionCount,
                 activeMissionNumber: nil,
-                detail: "Regenerated \(generatedBatch.assignments.count) missions from saved Survey evidence."
+                detail: "Loaded \(importedAssignments.count) survey-derived Alpha missions with resolved Apple Music metadata."
             )
             firstMissionGenerationState = .loaded
-            lastActionMessage = "Regenerated \(generatedBatch.assignments.count) missions from current Survey evidence. Prior mission sessions were cleared after the new batch imported."
+            lastActionMessage = "Regenerated \(importedAssignments.count) survey-derived Alpha missions. Prior mission sessions were cleared after the new deterministic batch imported."
             return true
         } catch {
             firstMissionGenerationState = .failed(error.localizedDescription)
@@ -1511,9 +1505,66 @@ final class AppModel: ObservableObject {
         }
     }
 
-    private struct RemoteMissionBatch {
+    private struct MissionBatchImportPreview {
         let responseData: [Data]
         let assignments: [MissionAssignment]
+    }
+
+    private func makeLocalSurveyOpportunityMissionBatchFromCurrentSurvey(targetMissionCount: Int) throws -> MissionBatchImportPreview {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("cartenza_local_mission_regeneration", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let tempProvider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+        var generatedDataForDiagnostics: Data?
+        var recordedSelectionAudit = false
+
+        do {
+            let generatedData = try surveyEvidenceBuilder.makeSurveyOpportunityMissionBatchResponseData(
+                testerAlias: supabaseConfig.testerAlias,
+                requestedMissionCount: targetMissionCount,
+                sourceAppVersion: Self.appVersion,
+                sourceAppBuild: Self.appBuild
+            )
+            generatedDataForDiagnostics = generatedData
+            let assignments = try tempProvider.importSupabaseMissionBatchResponseData(
+                generatedData,
+                importedAt: Date()
+            )
+            let localImportStatus = assignments.count >= AlphaMissionGenerationConfig.minimumUsableMissionCount
+                ? "imported"
+                : "too_few_imported"
+            recordLocalMissionSelectionAuditDiagnostic(
+                responseData: generatedData,
+                importedAssignments: assignments,
+                localImportStatus: localImportStatus
+            )
+            recordedSelectionAudit = true
+
+            guard assignments.count >= AlphaMissionGenerationConfig.minimumUsableMissionCount else {
+                throw AlphaMissionGenerationError.noImportableMissionsAfterAttempts(
+                    attempts: 1,
+                    lastIssue: "Survey opportunity selector imported \(assignments.count) missions."
+                )
+            }
+
+            return MissionBatchImportPreview(responseData: [generatedData], assignments: assignments)
+        } catch {
+            if !recordedSelectionAudit, let generatedDataForDiagnostics {
+                recordLocalMissionSelectionAuditDiagnostic(
+                    responseData: generatedDataForDiagnostics,
+                    importedAssignments: [],
+                    localImportStatus: "failed",
+                    importError: error
+                )
+            }
+            throw error
+        }
     }
 
     private func missionGenerationAccessToken() async throws -> String {
@@ -1531,7 +1582,7 @@ final class AppModel: ObservableObject {
     private func makeRemoteMissionBatchFromCurrentSurvey(
         accessToken: String,
         targetMissionCount: Int
-    ) async throws -> RemoteMissionBatch {
+    ) async throws -> MissionBatchImportPreview {
         let tempDirectory = FileManager.default.temporaryDirectory
             .appendingPathComponent("cartenza_remote_mission_regeneration", isDirectory: true)
             .appendingPathComponent(UUID().uuidString, isDirectory: true)
@@ -1643,13 +1694,14 @@ final class AppModel: ObservableObject {
             )
         }
 
-        return RemoteMissionBatch(
+        return MissionBatchImportPreview(
             responseData: responseData,
             assignments: importedAssignments
         )
     }
 
-    private func replaceReviewedMissionBatch(with responseData: [Data]) throws {
+    @discardableResult
+    private func replaceReviewedMissionBatch(with responseData: [Data]) throws -> [MissionAssignment] {
         try missionProvider.resetReviewedAssignments()
         try sessionPersistenceStore.reset()
         persistedSessionLibrary = .empty
@@ -1670,6 +1722,7 @@ final class AppModel: ObservableObject {
 
         reloadMissionCatalog(selectMissionID: importedAssignments.first?.mission.missionID)
         persistCurrentSession()
+        return importedAssignments
     }
 
     func switchToLiveMusicKitForPlayback() async {

@@ -814,7 +814,7 @@ final class MissionDecodingTests: XCTestCase {
     }
 
     @MainActor
-    func testAppModelRegeneratesMissionsFromCurrentSurveyThroughMissionClient() async throws {
+    func testAppModelRegeneratesMissionsFromCurrentSurveyWithLocalSelector() async throws {
         let tempDirectory = FileManager.default.temporaryDirectory
             .appendingPathComponent("cartenza_manual_regeneration_tests", isDirectory: true)
             .appendingPathComponent(UUID().uuidString, isDirectory: true)
@@ -825,9 +825,40 @@ final class MissionDecodingTests: XCTestCase {
         let surveyPersistenceStore = SurveyPersistenceStore(baseDirectoryURL: tempDirectory)
         let surveyStore = SurveyStore(persistenceStore: surveyPersistenceStore)
         surveyStore.prepareRequiredAlphaIntake()
-        surveyStore.goTo(.artistPage1)
-        let surveyItem = try XCTUnwrap(surveyStore.currentPage?.items.first)
-        surveyStore.setState(.favorite, for: surveyItem)
+
+        let requiredSteps: [SurveyStep] = [
+            .artistPage1,
+            .artistPage2,
+            .artistPage3,
+            .artistPage4,
+            .albumPage1,
+            .albumPage2,
+            .songPage1,
+            .songPage2,
+            .songPage3,
+            .songPage4
+        ]
+
+        for step in requiredSteps {
+            surveyStore.goTo(step)
+            let page = try XCTUnwrap(surveyStore.currentPage)
+            for (index, item) in page.items.enumerated() {
+                let state: SurveySignalState
+                switch index % 6 {
+                case 0:
+                    state = .favorite
+                case 1:
+                    state = .like
+                case 2:
+                    state = .fine
+                case 3, 4:
+                    state = .notForMe
+                default:
+                    state = .dontKnow
+                }
+                surveyStore.setState(state, for: item)
+            }
+        }
 
         let provider = LocalMissionProvider(
             reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
@@ -839,33 +870,11 @@ final class MissionDecodingTests: XCTestCase {
             source: .manualReviewed
         )
 
-        let regeneratedResponses = try (1...AlphaMissionGenerationConfig.requiredMissionCount).map { index in
-            let mission = try loadMissionFromData(
-                try makeMissionDataWithIdentitySuffix(
-                    oldMission,
-                    suffix: String(format: "%02d", index)
-                )
-            )
-            return try JSONEncoder.missionTestEncoder.encode(
-                TestGenerationResponse(
-                    run_id: "run_regenerated_\(index)",
-                    status: "app_import_candidate",
-                    app_missions: [mission]
-                )
-            )
-        }
-        let client = RecordingMissionGenerationClient(responses: regeneratedResponses)
+        let client = RecordingMissionGenerationClient(responses: [])
         let appModel = AppModel(
             sessionPersistenceStore: sessionPersistenceStore,
             missionProvider: provider,
-            supabaseConfig: SupabaseAlphaConfig(
-                projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
-                anonKey: "anon.jwt",
-                generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
-                submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
-                submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
-                testerAlias: "trusted-alpha-test"
-            ),
+            supabaseConfig: .unconfigured,
             missionGenerationClient: client,
             surveyEvidenceBuilder: SurveyEvidenceExportBuilder(persistenceStore: surveyPersistenceStore)
         )
@@ -875,14 +884,14 @@ final class MissionDecodingTests: XCTestCase {
         let didRegenerate = await appModel.regenerateMissionBatchFromCurrentSurvey()
 
         XCTAssertTrue(didRegenerate)
-        XCTAssertEqual(client.requests.count, AlphaMissionGenerationConfig.requiredMissionCount)
+        XCTAssertTrue(client.requests.isEmpty)
         XCTAssertEqual(appModel.reviewedMissionAssignmentCount, AlphaMissionGenerationConfig.requiredMissionCount)
         XCTAssertFalse(appModel.availableMissions.contains { $0.missionID == oldMission.missionID })
-        XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.missionID.hasPrefix("MIS_REGENERATED_ALPHA_") })
+        XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.missionID.hasPrefix("MIS_ALPHA_SURVEY_OPPORTUNITY_") })
+        XCTAssertTrue(appModel.availableMissions.allSatisfy(\.isPlaybackReady))
+        XCTAssertTrue(appModel.reviewedMissionAssignments.allSatisfy { $0.sourceRunID?.hasPrefix("local_survey_opportunity_selection_") == true })
         XCTAssertEqual(appModel.firstMissionGenerationState, .loaded)
         XCTAssertEqual(appModel.firstMissionGenerationProgress.completedCount, AlphaMissionGenerationConfig.requiredMissionCount)
-        XCTAssertEqual(client.requests[1].alreadySelectedRouteItemIDs.count, oldMission.items.count)
-        XCTAssertEqual(client.requests[1].promptContext.alreadySelectedDisplayKeys.count, oldMission.items.count)
         XCTAssertNotNil(sessionPersistenceStore.load().activeMissionID)
     }
 
