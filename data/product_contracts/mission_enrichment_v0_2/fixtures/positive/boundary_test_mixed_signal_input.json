@@ -1,0 +1,289 @@
+{
+  "schema_version": "mission_enrichment_input_v0_2",
+  "runtime_context": {
+    "surface": "mission_card_and_feedback_chips",
+    "mission_ordinal_for_user": 12,
+    "max_secondary_tags_per_song": 6,
+    "copy_mode": "external_alpha",
+    "language_style": "clear_warm_music_literate",
+    "avoid_founder_vocabulary": true
+  },
+  "user_atlas_context_brief": {
+    "confirmed_positive_patterns": [
+      {
+        "pattern_id": "PATTERN_001",
+        "label": "rhythmic drive can work",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "open_questions": [
+      {
+        "question_id": "QUESTION_001",
+        "label": "Where does intensity stop helping?",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "known_boundaries": [
+      {
+        "boundary_id": "BOUNDARY_001",
+        "label": "Dense arrangements have underperformed.",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "recent_learning_summary": [],
+    "coverage_notes": []
+  },
+  "mission_context": {
+    "mission_id": "MIS_ENRICH_BOUNDARY_MIXED",
+    "mission_type": "boundary_test",
+    "risk_level": "high",
+    "mission_hypothesis": "Check whether density and intensity are the problem rather than the whole region.",
+    "why_this_mission_now": "Prior reactions suggest the nearby area may work only below a certain pressure level.",
+    "success_definition": "The mission is useful if reactions identify a specific boundary instead of rejecting the region."
+  },
+  "route_items": [
+    {
+      "item_id": "ITEM_BOUNDARY_01",
+      "canonical_song_recording_id": "song_boundary_001",
+      "sequence": 1,
+      "title": "Crowded Signal",
+      "artist": "Briar Atlas",
+      "year": 2016,
+      "route_role": "boundary",
+      "why_included": "Selected to test density and intensity as possible boundaries.",
+      "song_affinity_tags": [
+        {
+          "tag": "arrangement:dense_layers",
+          "facet": "arrangement"
+        },
+        {
+          "tag": "energy_profile:high_intensity",
+          "facet": "energy_profile"
+        },
+        {
+          "tag": "rhythm_body:driving_pulse",
+          "facet": "rhythm_body"
+        },
+        {
+          "tag": "production:compressed_density",
+          "facet": "production"
+        }
+      ],
+      "user_alignment_hints": [
+        {
+          "tag": "arrangement:dense_layers",
+          "alignment": "tests_boundary"
+        },
+        {
+          "tag": "energy_profile:high_intensity",
+          "alignment": "matches_known_negative"
+        }
+      ],
+      "prefiltered_secondary_tag_ids": [
+        "ARRANGEMENT_WORKED",
+        "BUILD_WORKED",
+        "ENERGY_WORKED",
+        "PRODUCTION_WORKED",
+        "SOUND_WORKED",
+        "GROOVE_WORKED",
+        "BEAT_WORKED",
+        "SURPRISED_ME",
+        "WOULD_TRY_MORE_NEARBY",
+        "GOOD_NOT_CORE",
+        "KEEP_AS_WAYPOINT",
+        "UNSURE_BUT_CURIOUS",
+        "NEEDS_ANOTHER_LISTEN",
+        "INTERESTING_NOT_MINE"
+      ],
+      "applicability_flags": {
+        "has_vocals": true,
+        "has_lyrics": true,
+        "lyrics_language_known": true,
+        "is_instrumental": false,
+        "is_live_or_alt_version": false,
+        "album_context_relevant": false,
+        "long_form_context_relevant": false
+      },
+      "artist_context_available": false
+    }
+  ],
+  "allowed_secondary_reaction_tags": {
+    "ARRANGEMENT_WORKED": {
+      "tag_id": "ARRANGEMENT_WORKED",
+      "display_label": "The arrangement worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_arrangement_signal",
+      "allowed_facets": [
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "BEAT_WORKED": {
+      "tag_id": "BEAT_WORKED",
+      "display_label": "The beat worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_beat_or_rhythm_signal",
+      "allowed_facets": [
+        "rhythm_body",
+        "production"
+      ]
+    },
+    "BUILD_WORKED": {
+      "tag_id": "BUILD_WORKED",
+      "display_label": "The build worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_dynamic_shape_signal",
+      "allowed_facets": [
+        "dynamic_shape",
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "ENERGY_WORKED": {
+      "tag_id": "ENERGY_WORKED",
+      "display_label": "The energy worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_energy_signal",
+      "allowed_facets": [
+        "energy_profile",
+        "rhythm_body"
+      ]
+    },
+    "GOOD_NOT_CORE": {
+      "tag_id": "GOOD_NOT_CORE",
+      "display_label": "Good, not core",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_waypoint_not_landmark",
+      "allowed_facets": []
+    },
+    "GROOVE_WORKED": {
+      "tag_id": "GROOVE_WORKED",
+      "display_label": "The groove worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_rhythm_body_signal",
+      "allowed_facets": [
+        "rhythm_body"
+      ]
+    },
+    "INTERESTING_NOT_MINE": {
+      "tag_id": "INTERESTING_NOT_MINE",
+      "display_label": "Interesting, not mine",
+      "valid_primary_reactions": [
+        "ok",
+        "dislike"
+      ],
+      "atlas_effect": "mark_boundary_or_low_appetite",
+      "allowed_facets": []
+    },
+    "KEEP_AS_WAYPOINT": {
+      "tag_id": "KEEP_AS_WAYPOINT",
+      "display_label": "Keep as waypoint",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "preserve_as_navigation_reference",
+      "allowed_facets": []
+    },
+    "NEEDS_ANOTHER_LISTEN": {
+      "tag_id": "NEEDS_ANOTHER_LISTEN",
+      "display_label": "Needs another listen",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_uncertain_repeat_test",
+      "allowed_facets": []
+    },
+    "PRODUCTION_WORKED": {
+      "tag_id": "PRODUCTION_WORKED",
+      "display_label": "The production worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_production_signal",
+      "allowed_facets": [
+        "production",
+        "sonic_texture"
+      ]
+    },
+    "SOUND_WORKED": {
+      "tag_id": "SOUND_WORKED",
+      "display_label": "The sound worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_sound_or_texture_signal",
+      "allowed_facets": [
+        "sonic_texture",
+        "production"
+      ]
+    },
+    "SURPRISED_ME": {
+      "tag_id": "SURPRISED_ME",
+      "display_label": "This surprised me",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_or_strengthen_novelty_signal",
+      "allowed_facets": []
+    },
+    "UNSURE_BUT_CURIOUS": {
+      "tag_id": "UNSURE_BUT_CURIOUS",
+      "display_label": "Unsure, but curious",
+      "valid_primary_reactions": [
+        "ok",
+        "like"
+      ],
+      "atlas_effect": "open_frontier_with_uncertainty",
+      "allowed_facets": []
+    },
+    "WOULD_TRY_MORE_NEARBY": {
+      "tag_id": "WOULD_TRY_MORE_NEARBY",
+      "display_label": "I'd try more nearby",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_nearby_exploration",
+      "allowed_facets": []
+    }
+  },
+  "copy_guardrails": [
+    "Do not change mission or song list.",
+    "Use only allowed secondary tag IDs.",
+    "Do not invent artists, songs, genres, user history, tags, or affinity facts.",
+    "Do not use raw graph IDs in display copy.",
+    "Do not expose raw affinity tags as chip labels.",
+    "Do not claim final taste truth.",
+    "Do not use founder-specific language.",
+    "Do not assume rock, guitar music, vocals, lyrics, albums, English-language music, or advanced music knowledge.",
+    "Treat all context as provisional."
+  ]
+}

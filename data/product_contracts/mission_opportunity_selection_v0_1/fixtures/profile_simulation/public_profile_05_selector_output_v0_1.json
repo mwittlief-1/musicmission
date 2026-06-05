@@ -1,0 +1,5588 @@
+{
+  "contract_version": "selector_output_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "selector_run_id": "profile_phase1_selector_public_profile_05_v0_1",
+  "created_at": "2026-05-29T03:11:47Z",
+  "runtime_allowed": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "opportunity_only": true,
+  "source_registry_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/mission_type_registry_sample_v0_1.json",
+  "source_evidence_rollup_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/visible_profile_selector_inputs_v0_1.json#/profiles/1/synthetic_selector_scenarios",
+  "global_top_k_opportunities": 25,
+  "selector_audit": {
+    "selection_mode": "offline_synthetic_fixture",
+    "mission_types_considered": [
+      "boundary_test",
+      "bridge_test",
+      "evidence_repair_test",
+      "exception_scope_test",
+      "context_dependence_test",
+      "album_container_test",
+      "archetype_depth_test",
+      "false_nearby_test",
+      "artist_depth_test",
+      "song_to_archetype_test",
+      "archetype_survey",
+      "gateway_test",
+      "family_survey"
+    ],
+    "mission_types_skipped_by_early_stop": [
+      "initial_profile_survey"
+    ],
+    "mission_types_sorted_by_descending_ceiling": true,
+    "global_heap_maintained": true,
+    "heap_max_size": 25,
+    "candidate_blobs_generated": 83,
+    "candidate_blobs_floor_passed": 67,
+    "candidate_blobs_scored": 67,
+    "candidate_blobs_pruned": 42,
+    "final_heap_size": 25,
+    "early_stop_applied": true,
+    "early_stop_reason": "25th best score 0.5290 exceeded remaining ceiling 0.4200",
+    "remaining_ceiling_at_stop": 0.42,
+    "cutoff_score": 0.529,
+    "floor_failure_examples": [
+      {
+        "mission_type": "boundary_test",
+        "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.7400 is below 0.8200"
+        ]
+      },
+      {
+        "mission_type": "bridge_test",
+        "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_04",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.7974 is below 0.8000"
+        ]
+      },
+      {
+        "mission_type": "bridge_test",
+        "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.7200 is below 0.8000"
+        ]
+      },
+      {
+        "mission_type": "evidence_repair_test",
+        "opportunity_id": "opp_profile-05_evidence_repair_test_recent_surprise_signal_eligible_04",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.8158 is below 0.8200"
+        ]
+      },
+      {
+        "mission_type": "evidence_repair_test",
+        "opportunity_id": "opp_profile-05_evidence_repair_test_recent_surprise_signal_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.7400 is below 0.8200"
+        ]
+      },
+      {
+        "mission_type": "exception_scope_test",
+        "opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_04",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.6908 is below 0.7000"
+        ]
+      },
+      {
+        "mission_type": "exception_scope_test",
+        "opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.6200 is below 0.7000"
+        ]
+      },
+      {
+        "mission_type": "context_dependence_test",
+        "opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.6400 is below 0.7200"
+        ]
+      },
+      {
+        "mission_type": "album_container_test",
+        "opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_eligible_04",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.6637 is below 0.6700"
+        ]
+      },
+      {
+        "mission_type": "album_container_test",
+        "opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.5900 is below 0.6700"
+        ]
+      },
+      {
+        "mission_type": "archetype_depth_test",
+        "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.6000 is below 0.6800"
+        ]
+      },
+      {
+        "mission_type": "false_nearby_test",
+        "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.6200 is below 0.7000"
+        ]
+      },
+      {
+        "mission_type": "artist_depth_test",
+        "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.5700 is below 0.6500"
+        ]
+      },
+      {
+        "mission_type": "song_to_archetype_test",
+        "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.4400 is below 0.5200"
+        ]
+      },
+      {
+        "mission_type": "gateway_test",
+        "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_floor_fail_05",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.4200 is below 0.5000"
+        ]
+      },
+      {
+        "mission_type": "family_survey",
+        "opportunity_id": "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_floor_fail_04",
+        "failed_requirements": [
+          "mission_type_score_floor"
+        ],
+        "fail_reasons": [
+          "computed floor score 0.2800 is below 0.3600"
+        ]
+      }
+    ],
+    "non_generation_reasons": [
+      {
+        "mission_type": "archetype_survey",
+        "reason": "archetype survey floor needs low direct evidence plus nearby signal",
+        "evidence_refs": [
+          "visible_rollup:archetype:044:family_positive_weak_archetype_clarity"
+        ]
+      },
+      {
+        "mission_type": "initial_profile_survey",
+        "reason": "sparse-profile floor not met by visible survey evidence",
+        "evidence_refs": [
+          "visible_rollup:family:family_6:sparse_post_intake_survey_ok"
+        ]
+      }
+    ],
+    "candidate_generation_summaries": [
+      {
+        "mission_type": "boundary_test",
+        "generator_id": "synthetic_boundary_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 4,
+        "cap_applied": false,
+        "cap_value": 240
+      },
+      {
+        "mission_type": "bridge_test",
+        "generator_id": "synthetic_bridge_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "floor_failed_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "cap_applied": false,
+        "cap_value": 600
+      },
+      {
+        "mission_type": "evidence_repair_test",
+        "generator_id": "synthetic_evidence_repair_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 0,
+        "floor_failed_candidate_count": 2,
+        "pruned_candidate_count": 5,
+        "cap_applied": false,
+        "cap_value": 150
+      },
+      {
+        "mission_type": "exception_scope_test",
+        "generator_id": "synthetic_exception_scope_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "floor_failed_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "cap_applied": false,
+        "cap_value": 160
+      },
+      {
+        "mission_type": "context_dependence_test",
+        "generator_id": "synthetic_context_dependence_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 5,
+        "cap_applied": false,
+        "cap_value": 150
+      },
+      {
+        "mission_type": "album_container_test",
+        "generator_id": "synthetic_album_container_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "floor_failed_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "cap_applied": false,
+        "cap_value": 175
+      },
+      {
+        "mission_type": "archetype_depth_test",
+        "generator_id": "synthetic_archetype_depth_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 175
+      },
+      {
+        "mission_type": "false_nearby_test",
+        "generator_id": "synthetic_false_nearby_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 4,
+        "cap_applied": false,
+        "cap_value": 240
+      },
+      {
+        "mission_type": "artist_depth_test",
+        "generator_id": "synthetic_artist_depth_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 200
+      },
+      {
+        "mission_type": "song_to_archetype_test",
+        "generator_id": "synthetic_song_to_archetype_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 160
+      },
+      {
+        "mission_type": "archetype_survey",
+        "generator_id": "synthetic_archetype_survey_selector_generator_v0_1",
+        "eligible_candidate_count": 0,
+        "emitted_candidate_count": 0,
+        "floor_failed_candidate_count": 0,
+        "pruned_candidate_count": 0,
+        "cap_applied": false,
+        "cap_value": 150
+      },
+      {
+        "mission_type": "gateway_test",
+        "generator_id": "synthetic_gateway_test_selector_generator_v0_1",
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 250
+      },
+      {
+        "mission_type": "family_survey",
+        "generator_id": "synthetic_family_survey_selector_generator_v0_1",
+        "eligible_candidate_count": 6,
+        "emitted_candidate_count": 3,
+        "floor_failed_candidate_count": 1,
+        "pruned_candidate_count": 4,
+        "cap_applied": false,
+        "cap_value": 72
+      }
+    ],
+    "duplicate_control_summary": {
+      "exact_duplicate_mission_type_target_count": 0,
+      "duplicate_target_object_count": 3,
+      "mission_type_concentration": [
+        {
+          "mission_type": "archetype_depth_test",
+          "count": 4,
+          "share": 0.16
+        },
+        {
+          "mission_type": "artist_depth_test",
+          "count": 4,
+          "share": 0.16
+        },
+        {
+          "mission_type": "song_to_archetype_test",
+          "count": 4,
+          "share": 0.16
+        },
+        {
+          "mission_type": "gateway_test",
+          "count": 4,
+          "share": 0.16
+        },
+        {
+          "mission_type": "boundary_test",
+          "count": 2,
+          "share": 0.08
+        },
+        {
+          "mission_type": "false_nearby_test",
+          "count": 2,
+          "share": 0.08
+        },
+        {
+          "mission_type": "bridge_test",
+          "count": 1,
+          "share": 0.04
+        },
+        {
+          "mission_type": "context_dependence_test",
+          "count": 1,
+          "share": 0.04
+        },
+        {
+          "mission_type": "exception_scope_test",
+          "count": 1,
+          "share": 0.04
+        },
+        {
+          "mission_type": "album_container_test",
+          "count": 1,
+          "share": 0.04
+        },
+        {
+          "mission_type": "family_survey",
+          "count": 1,
+          "share": 0.04
+        }
+      ],
+      "suppressed_exact_duplicate_count": 11,
+      "suppressed_duplicate_examples": [
+        {
+          "mission_type": "boundary_test",
+          "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+          "target_object_ids": [
+            "044",
+            "006"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "bridge_test",
+          "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00",
+          "target_object_ids": [
+            "family_6",
+            "family_1"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "exception_scope_test",
+          "opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_00",
+          "target_object_ids": [
+            "sza-kill-bill"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "context_dependence_test",
+          "opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00",
+          "target_object_ids": [
+            "sza-kill-bill->006"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "album_container_test",
+          "opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_eligible_00",
+          "target_object_ids": [
+            "sza-ctrl"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "archetype_depth_test",
+          "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "target_object_ids": [
+            "044"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "false_nearby_test",
+          "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00",
+          "target_object_ids": [
+            "sza-kill-bill->006"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "artist_depth_test",
+          "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00",
+          "target_object_ids": [
+            "kendrick-lamar"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "song_to_archetype_test",
+          "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00",
+          "target_object_ids": [
+            "sza-kill-bill"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "gateway_test",
+          "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_00",
+          "target_object_ids": [
+            "family_6"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        },
+        {
+          "mission_type": "family_survey",
+          "opportunity_id": "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_01",
+          "duplicate_of_opportunity_id": "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_00",
+          "target_object_ids": [
+            "family_6"
+          ],
+          "reason": "exact mission_type + target_object_ids duplicate suppressed"
+        }
+      ]
+    },
+    "audit_notes": [
+      "Offline synthetic selector prototype output.",
+      "Scoring uses score floors as a mission-type prior; target fit/readiness/learning are weighted more heavily than mission type value.",
+      "Survey ok is ignored; mission/song-review ok is weak non-failure only.",
+      "Conditional generation suppresses mission types whose visible target rollups do not plausibly support floors.",
+      "No final mission content, playback plan, catalog resolution, app storage, or canonical graph mutation is present.",
+      "Profile phase-1 run used visible selector input only; hidden oracle file was not read by selector."
+    ]
+  },
+  "ranked_opportunities": [
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+      "mission_type": "boundary_test",
+      "target_object_type": "archetype_pair",
+      "target_object_ids": [
+        "044",
+        "006"
+      ],
+      "target_object_ref": {
+        "object_type": "archetype_pair",
+        "object_ids": [
+          "044",
+          "006"
+        ],
+        "display_name": "Visible Archetype 044 -> Visible Archetype 006"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.82,
+        "mission_type_score_ceiling": 0.98,
+        "computed_floor_score": 0.877,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "archetype_pair",
+            "object_ids": [
+              "044",
+              "006"
+            ],
+            "display_name": "Visible Archetype 044 -> Visible Archetype 006"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "044",
+          "006"
+        ],
+        "target_display_name": "Visible Archetype 044 -> Visible Archetype 006",
+        "positive_signal_count": 9,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.8461,
+        "conflict_score": 1.0,
+        "recency_score": 0.2026
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype_pair",
+              "object_ids": [
+                "044",
+                "006"
+              ],
+              "display_name": "Visible Archetype 044 -> Visible Archetype 006"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044",
+              "006"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_mixed_nearby_boundary"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_boundary_context"
+            ],
+            "risk_flags": [
+              "requires_framing"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "mixed_nearby_boundary",
+                "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+                "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype_pair",
+              "object_ids": [
+                "044",
+                "006"
+              ],
+              "display_name": "Visible Archetype 044 -> Visible Archetype 006"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044",
+              "006"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_mixed_nearby_boundary"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_boundary_context"
+            ],
+            "risk_flags": [
+              "requires_framing"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "mixed_nearby_boundary",
+                "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+                "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.64,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.36
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:mixed_nearby_boundary",
+          "mission_type:boundary_test",
+          "target_rollup:archetype_pair"
+        ],
+        "context_overlays": [
+          "visible_boundary_context"
+        ],
+        "bridge_readiness_score": 0.6399,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:mixed_nearby_boundary:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.9031
+        },
+        "context_variability_score": 0.4159,
+        "context_skew_score": 0.2994
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "requires_framing"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "requires_framing"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_boundary_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:boundary_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 240,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.3264,
+        "mission_fit_score": 0.2476,
+        "readiness_score": 0.1822,
+        "learning_value_score": 0.1848,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0312,
+        "complexity_penalty": 0.0074,
+        "raw_score": 0.8924,
+        "final_opportunity_score": 0.8924
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible survey has mixed nearby positive and negative reactions.",
+        "boundary_test candidate generated from offline rollup fixture",
+        "nearby visible reactions are mixed enough for a boundary test"
+      ],
+      "risk_reasons": [
+        "requires_framing"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+      "mission_type": "archetype_depth_test",
+      "target_object_type": "archetype",
+      "target_object_ids": [
+        "044"
+      ],
+      "target_object_ref": {
+        "object_type": "archetype",
+        "object_ids": [
+          "044"
+        ],
+        "display_name": "Visible Archetype 044"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.68,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.7376,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "archetype",
+            "object_ids": [
+              "044"
+            ],
+            "display_name": "Visible Archetype 044"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+        "target_object_type": "archetype",
+        "target_object_ids": [
+          "044"
+        ],
+        "target_display_name": "Visible Archetype 044",
+        "positive_signal_count": 9,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 3,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6923,
+        "conflict_score": 0.1905,
+        "recency_score": 0.2026
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype",
+              "object_ids": [
+                "044"
+              ],
+              "display_name": "Visible Archetype 044"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_strong_archetype_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_depth_probe"
+            ],
+            "risk_flags": [],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "strong_archetype_shallow_depth",
+                "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+                "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.4569,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.5431
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:strong_archetype_shallow_depth",
+          "mission_type:archetype_depth_test",
+          "target_rollup:archetype"
+        ],
+        "context_overlays": [
+          "visible_depth_probe"
+        ],
+        "bridge_readiness_score": 0.6977,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:strong_archetype_shallow_depth:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.9262
+        },
+        "context_variability_score": 0.0933,
+        "context_skew_score": 0.0672
+      },
+      "risk_context_summary": {
+        "risk_flags": [],
+        "identity_flags": [],
+        "risk_penalty_basis": [],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_archetype_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:archetype_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 175,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2751,
+        "mission_fit_score": 0.2539,
+        "readiness_score": 0.1843,
+        "learning_value_score": 0.1882,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0251,
+        "complexity_penalty": 0.0048,
+        "raw_score": 0.8716,
+        "final_opportunity_score": 0.86
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible archetype signal is strong but depth coverage is shallow.",
+        "archetype_depth_test candidate generated from offline rollup fixture",
+        "positive archetype signal has shallow depth coverage"
+      ],
+      "risk_reasons": [],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00",
+      "mission_type": "artist_depth_test",
+      "target_object_type": "artist",
+      "target_object_ids": [
+        "kendrick-lamar"
+      ],
+      "target_object_ref": {
+        "object_type": "artist",
+        "object_ids": [
+          "kendrick-lamar"
+        ],
+        "display_name": "Kendrick Lamar"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.65,
+        "mission_type_score_ceiling": 0.84,
+        "computed_floor_score": 0.7141,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "artist",
+            "object_ids": [
+              "kendrick-lamar"
+            ],
+            "display_name": "Kendrick Lamar"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+        "target_object_type": "artist",
+        "target_object_ids": [
+          "kendrick-lamar"
+        ],
+        "target_display_name": "Kendrick Lamar",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2286,
+        "recency_score": 0.967
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "artist",
+              "object_ids": [
+                "kendrick-lamar"
+              ],
+              "display_name": "Kendrick Lamar"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "kendrick-lamar"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_artist_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "artist_anchor",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_artist_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_artist_shallow_depth",
+                "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+                "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7708,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.2292,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_artist_shallow_depth",
+          "mission_type:artist_depth_test",
+          "target_rollup:artist"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_artist_shallow_depth:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0664,
+        "context_skew_score": 0.0478
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_artist_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:artist_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 200,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.265,
+        "mission_fit_score": 0.2497,
+        "readiness_score": 0.1766,
+        "learning_value_score": 0.2215,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0368,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.8602,
+        "final_opportunity_score": 0.84
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible artist-level anchor has limited depth proof.",
+        "artist_depth_test candidate generated from offline rollup fixture",
+        "artist positive evidence has shallow depth coverage"
+      ],
+      "risk_reasons": [
+        "one_artist_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00",
+      "mission_type": "bridge_test",
+      "target_object_type": "family_pair",
+      "target_object_ids": [
+        "family_6",
+        "family_1"
+      ],
+      "target_object_ref": {
+        "object_type": "family_pair",
+        "object_ids": [
+          "family_6",
+          "family_1"
+        ],
+        "display_name": "Visible Family 6 -> Visible Family 1"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.8,
+        "mission_type_score_ceiling": 0.96,
+        "computed_floor_score": 0.8512,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:family_pair:family_6->family_1:bridge_source_positive_target_gap",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:family_pair:family_6->family_1:bridge_source_positive_target_gap"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "family_pair",
+            "object_ids": [
+              "family_6",
+              "family_1"
+            ],
+            "display_name": "Visible Family 6 -> Visible Family 1"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:family_pair:family_6->family_1:bridge_source_positive_target_gap",
+        "target_object_type": "family_pair",
+        "target_object_ids": [
+          "family_6",
+          "family_1"
+        ],
+        "target_display_name": "Visible Family 6 -> Visible Family 1",
+        "positive_signal_count": 15,
+        "negative_signal_count": 2,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 2,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6667,
+        "conflict_score": 0.3,
+        "recency_score": 0.1098
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family_pair",
+              "object_ids": [
+                "family_6",
+                "family_1"
+              ],
+              "display_name": "Visible Family 6 -> Visible Family 1"
+            },
+            "family_ids": [
+              "family_6",
+              "family_1"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_bridge_source_positive_target_gap"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "bridge",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_bridge_context"
+            ],
+            "risk_flags": [
+              "safe_gateway"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "bridge_source_positive_target_gap",
+                "visible_rollup:family_pair:family_6->family_1:bridge_source_positive_target_gap",
+                "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family_pair",
+              "object_ids": [
+                "family_6",
+                "family_1"
+              ],
+              "display_name": "Visible Family 6 -> Visible Family 1"
+            },
+            "family_ids": [
+              "family_6",
+              "family_1"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_bridge_source_positive_target_gap"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "bridge",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_bridge_context"
+            ],
+            "risk_flags": [
+              "safe_gateway"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "bridge_source_positive_target_gap",
+                "visible_rollup:family_pair:family_6->family_1:bridge_source_positive_target_gap",
+                "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "tier_coverage_score": 0.7083,
+        "tier_depth_score": 0.6199,
+        "coverage_gap_score": 0.2917,
+        "depth_gap_score": 0.3801
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:bridge_source_positive_target_gap",
+          "mission_type:bridge_test",
+          "target_rollup:family_pair"
+        ],
+        "context_overlays": [
+          "visible_bridge_context"
+        ],
+        "bridge_readiness_score": 0.6732,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:bridge_source_positive_target_gap:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.875
+        },
+        "context_variability_score": 0.1706,
+        "context_skew_score": 0.1228
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "safe_gateway"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_bridge_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:bridge_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 600,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.3131,
+        "mission_fit_score": 0.2376,
+        "readiness_score": 0.1566,
+        "learning_value_score": 0.1558,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0226,
+        "complexity_penalty": 0.0064,
+        "raw_score": 0.8341,
+        "final_opportunity_score": 0.8341
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible positive source area plus under-tested adjacent target.",
+        "bridge_test candidate generated from offline rollup fixture",
+        "positive source and under-tested target have bridge readiness"
+      ],
+      "risk_reasons": [
+        "safe_gateway"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_02",
+      "mission_type": "boundary_test",
+      "target_object_type": "archetype_pair",
+      "target_object_ids": [
+        "044_candidate_02",
+        "006_candidate_02"
+      ],
+      "target_object_ref": {
+        "object_type": "archetype_pair",
+        "object_ids": [
+          "044_candidate_02",
+          "006_candidate_02"
+        ],
+        "display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.82,
+        "mission_type_score_ceiling": 0.98,
+        "computed_floor_score": 0.859,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+          "synthetic_candidate:eligible:02"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "archetype_pair",
+            "object_ids": [
+              "044_candidate_02",
+              "006_candidate_02"
+            ],
+            "display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_02"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "044_candidate_02",
+          "006_candidate_02"
+        ],
+        "target_display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)",
+        "positive_signal_count": 9,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.8461,
+        "conflict_score": 1.0,
+        "recency_score": 0.2026
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype_pair",
+              "object_ids": [
+                "044_candidate_02",
+                "006_candidate_02"
+              ],
+              "display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044",
+              "006"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_mixed_nearby_boundary"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_boundary_context"
+            ],
+            "risk_flags": [
+              "requires_framing"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "mixed_nearby_boundary",
+                "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+                "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype_pair",
+              "object_ids": [
+                "044_candidate_02",
+                "006_candidate_02"
+              ],
+              "display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044",
+              "006"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_mixed_nearby_boundary"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_boundary_context"
+            ],
+            "risk_flags": [
+              "requires_framing"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "mixed_nearby_boundary",
+                "visible_rollup:archetype_pair:044->006:mixed_nearby_boundary",
+                "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.64,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.36
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:mixed_nearby_boundary",
+          "mission_type:boundary_test",
+          "target_rollup:archetype_pair"
+        ],
+        "context_overlays": [
+          "visible_boundary_context"
+        ],
+        "bridge_readiness_score": 0.6399,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:mixed_nearby_boundary:02"
+          ],
+          "gateway_to_representative_coherence_score": 0.9031
+        },
+        "context_variability_score": 0.4159,
+        "context_skew_score": 0.2994
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "requires_framing"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "requires_framing"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_boundary_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:boundary_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 240,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.3167,
+        "mission_fit_score": 0.2221,
+        "readiness_score": 0.1709,
+        "learning_value_score": 0.1702,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0312,
+        "complexity_penalty": 0.0074,
+        "raw_score": 0.8313,
+        "final_opportunity_score": 0.8313
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible survey has mixed nearby positive and negative reactions.",
+        "boundary_test candidate generated from offline rollup fixture",
+        "nearby visible reactions are mixed enough for a boundary test"
+      ],
+      "risk_reasons": [
+        "requires_framing"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00",
+      "mission_type": "false_nearby_test",
+      "target_object_type": "song_cluster",
+      "target_object_ids": [
+        "sza-kill-bill->006"
+      ],
+      "target_object_ref": {
+        "object_type": "song_cluster",
+        "object_ids": [
+          "sza-kill-bill->006"
+        ],
+        "display_name": "Kill Bill Context Cluster"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.7,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.7585,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song_cluster",
+            "object_ids": [
+              "sza-kill-bill->006"
+            ],
+            "display_name": "Kill Bill Context Cluster"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary",
+        "target_object_type": "song_cluster",
+        "target_object_ids": [
+          "sza-kill-bill->006"
+        ],
+        "target_display_name": "Kill Bill Context Cluster",
+        "positive_signal_count": 1,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 1.0,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song_cluster",
+              "object_ids": [
+                "sza-kill-bill->006"
+              ],
+              "display_name": "Kill Bill Context Cluster"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_mixed_nearby_boundary"
+            ],
+            "song_ids": [
+              "sza-kill-bill->006"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_boundary_context"
+            ],
+            "risk_flags": [
+              "requires_framing"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "mixed_nearby_boundary",
+                "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary",
+                "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.52,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.48
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:mixed_nearby_boundary",
+          "mission_type:false_nearby_test",
+          "target_rollup:song_cluster"
+        ],
+        "context_overlays": [
+          "visible_boundary_context"
+        ],
+        "bridge_readiness_score": 0.6984,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:mixed_nearby_boundary:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.892
+        },
+        "context_variability_score": 0.4159,
+        "context_skew_score": 0.2994
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "requires_framing"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "requires_framing"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_false_nearby_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:false_nearby_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 240,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2796,
+        "mission_fit_score": 0.2457,
+        "readiness_score": 0.1502,
+        "learning_value_score": 0.1927,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0374,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.815,
+        "final_opportunity_score": 0.815
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible survey has mixed nearby positive and negative reactions.",
+        "false_nearby_test candidate generated from offline rollup fixture",
+        "nearby positive and negative evidence can test misleading similarity"
+      ],
+      "risk_reasons": [
+        "requires_framing"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+      "mission_type": "archetype_depth_test",
+      "target_object_type": "archetype",
+      "target_object_ids": [
+        "044_candidate_02"
+      ],
+      "target_object_ref": {
+        "object_type": "archetype",
+        "object_ids": [
+          "044_candidate_02"
+        ],
+        "display_name": "Visible Archetype 044 (candidate 02)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.68,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.7197,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+          "synthetic_candidate:eligible:02"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "archetype",
+            "object_ids": [
+              "044_candidate_02"
+            ],
+            "display_name": "Visible Archetype 044 (candidate 02)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_02"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+        "target_object_type": "archetype",
+        "target_object_ids": [
+          "044_candidate_02"
+        ],
+        "target_display_name": "Visible Archetype 044 (candidate 02)",
+        "positive_signal_count": 9,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 3,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6923,
+        "conflict_score": 0.1905,
+        "recency_score": 0.2026
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype",
+              "object_ids": [
+                "044_candidate_02"
+              ],
+              "display_name": "Visible Archetype 044 (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_strong_archetype_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_depth_probe"
+            ],
+            "risk_flags": [],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "strong_archetype_shallow_depth",
+                "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+                "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.4569,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.5431
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:strong_archetype_shallow_depth",
+          "mission_type:archetype_depth_test",
+          "target_rollup:archetype"
+        ],
+        "context_overlays": [
+          "visible_depth_probe"
+        ],
+        "bridge_readiness_score": 0.6977,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:strong_archetype_shallow_depth:02"
+          ],
+          "gateway_to_representative_coherence_score": 0.9262
+        },
+        "context_variability_score": 0.0933,
+        "context_skew_score": 0.0672
+      },
+      "risk_context_summary": {
+        "risk_flags": [],
+        "identity_flags": [],
+        "risk_penalty_basis": [],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_archetype_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:archetype_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 175,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2671,
+        "mission_fit_score": 0.2284,
+        "readiness_score": 0.173,
+        "learning_value_score": 0.1736,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0251,
+        "complexity_penalty": 0.0048,
+        "raw_score": 0.8122,
+        "final_opportunity_score": 0.8122
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible archetype signal is strong but depth coverage is shallow.",
+        "archetype_depth_test candidate generated from offline rollup fixture",
+        "positive archetype signal has shallow depth coverage"
+      ],
+      "risk_reasons": [],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_02",
+      "mission_type": "artist_depth_test",
+      "target_object_type": "artist",
+      "target_object_ids": [
+        "kendrick-lamar_candidate_02"
+      ],
+      "target_object_ref": {
+        "object_type": "artist",
+        "object_ids": [
+          "kendrick-lamar_candidate_02"
+        ],
+        "display_name": "Kendrick Lamar (candidate 02)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.65,
+        "mission_type_score_ceiling": 0.84,
+        "computed_floor_score": 0.6946,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+          "synthetic_candidate:eligible:02"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "artist",
+            "object_ids": [
+              "kendrick-lamar_candidate_02"
+            ],
+            "display_name": "Kendrick Lamar (candidate 02)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_02"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+        "target_object_type": "artist",
+        "target_object_ids": [
+          "kendrick-lamar_candidate_02"
+        ],
+        "target_display_name": "Kendrick Lamar (candidate 02)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2286,
+        "recency_score": 0.967
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "artist",
+              "object_ids": [
+                "kendrick-lamar_candidate_02"
+              ],
+              "display_name": "Kendrick Lamar (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "kendrick-lamar"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_artist_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "artist_anchor",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_artist_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_artist_shallow_depth",
+                "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+                "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7708,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.2292,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_artist_shallow_depth",
+          "mission_type:artist_depth_test",
+          "target_rollup:artist"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_artist_shallow_depth:02"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0664,
+        "context_skew_score": 0.0478
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_artist_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:artist_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 200,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2573,
+        "mission_fit_score": 0.2242,
+        "readiness_score": 0.1653,
+        "learning_value_score": 0.2069,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0368,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.8011,
+        "final_opportunity_score": 0.8011
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible artist-level anchor has limited depth proof.",
+        "artist_depth_test candidate generated from offline rollup fixture",
+        "artist positive evidence has shallow depth coverage"
+      ],
+      "risk_reasons": [
+        "one_artist_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00",
+      "mission_type": "context_dependence_test",
+      "target_object_type": "song_cluster",
+      "target_object_ids": [
+        "sza-kill-bill->006"
+      ],
+      "target_object_ref": {
+        "object_type": "song_cluster",
+        "object_ids": [
+          "sza-kill-bill->006"
+        ],
+        "display_name": "Kill Bill Context Cluster"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.72,
+        "mission_type_score_ceiling": 0.88,
+        "computed_floor_score": 0.7769,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song_cluster:sza-kill-bill->006:context_heavy_signals",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song_cluster:sza-kill-bill->006:context_heavy_signals"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song_cluster",
+            "object_ids": [
+              "sza-kill-bill->006"
+            ],
+            "display_name": "Kill Bill Context Cluster"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song_cluster:sza-kill-bill->006:context_heavy_signals",
+        "target_object_type": "song_cluster",
+        "target_object_ids": [
+          "sza-kill-bill->006"
+        ],
+        "target_display_name": "Kill Bill Context Cluster",
+        "positive_signal_count": 1,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.65,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song_cluster",
+              "object_ids": [
+                "sza-kill-bill->006"
+              ],
+              "display_name": "Kill Bill Context Cluster"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_context_heavy_signals"
+            ],
+            "song_ids": [
+              "sza-kill-bill->006"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "contextual_object",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_context_heavy",
+              "visible_comparator_needed"
+            ],
+            "risk_flags": [
+              "context_only_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "context_heavy_signals",
+                "visible_rollup:song_cluster:sza-kill-bill->006:context_heavy_signals",
+                "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7917,
+        "tier_depth_score": 0.48,
+        "coverage_gap_score": 0.2083,
+        "depth_gap_score": 0.52
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:context_heavy_signals",
+          "mission_type:context_dependence_test",
+          "target_rollup:song_cluster"
+        ],
+        "context_overlays": [
+          "visible_context_heavy",
+          "visible_comparator_needed"
+        ],
+        "bridge_readiness_score": 0.6984,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:context_heavy_signals:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.892
+        },
+        "context_variability_score": 0.5637,
+        "context_skew_score": 0.4059
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "context_only_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "context_only_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_context_dependence_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:context_dependence_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "pruned_candidate_count": 5,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 150,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2812,
+        "mission_fit_score": 0.2246,
+        "readiness_score": 0.1328,
+        "learning_value_score": 0.1843,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0371,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.77,
+        "final_opportunity_score": 0.77
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible survey suggests context may explain inconsistent reactions.",
+        "context_dependence_test candidate generated from offline rollup fixture",
+        "visible context variability leaves an unresolved context question"
+      ],
+      "risk_reasons": [
+        "context_only_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_02",
+      "mission_type": "false_nearby_test",
+      "target_object_type": "song_cluster",
+      "target_object_ids": [
+        "sza-kill-bill->006_candidate_02"
+      ],
+      "target_object_ref": {
+        "object_type": "song_cluster",
+        "object_ids": [
+          "sza-kill-bill->006_candidate_02"
+        ],
+        "display_name": "Kill Bill Context Cluster (candidate 02)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.7,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.7406,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary",
+          "synthetic_candidate:eligible:02"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song_cluster",
+            "object_ids": [
+              "sza-kill-bill->006_candidate_02"
+            ],
+            "display_name": "Kill Bill Context Cluster (candidate 02)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_02"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary",
+        "target_object_type": "song_cluster",
+        "target_object_ids": [
+          "sza-kill-bill->006_candidate_02"
+        ],
+        "target_display_name": "Kill Bill Context Cluster (candidate 02)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 1.0,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song_cluster",
+              "object_ids": [
+                "sza-kill-bill->006_candidate_02"
+              ],
+              "display_name": "Kill Bill Context Cluster (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_mixed_nearby_boundary"
+            ],
+            "song_ids": [
+              "sza-kill-bill->006"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_boundary_context"
+            ],
+            "risk_flags": [
+              "requires_framing"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "mixed_nearby_boundary",
+                "visible_rollup:song_cluster:sza-kill-bill->006:mixed_nearby_boundary",
+                "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.52,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.48
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:mixed_nearby_boundary",
+          "mission_type:false_nearby_test",
+          "target_rollup:song_cluster"
+        ],
+        "context_overlays": [
+          "visible_boundary_context"
+        ],
+        "bridge_readiness_score": 0.6984,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:mixed_nearby_boundary:02"
+          ],
+          "gateway_to_representative_coherence_score": 0.892
+        },
+        "context_variability_score": 0.4159,
+        "context_skew_score": 0.2994
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "requires_framing"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "requires_framing"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_false_nearby_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:false_nearby_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 2,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 240,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2713,
+        "mission_fit_score": 0.2202,
+        "readiness_score": 0.139,
+        "learning_value_score": 0.1781,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0374,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.7554,
+        "final_opportunity_score": 0.7554
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible survey has mixed nearby positive and negative reactions.",
+        "false_nearby_test candidate generated from offline rollup fixture",
+        "nearby positive and negative evidence can test misleading similarity"
+      ],
+      "risk_reasons": [
+        "requires_framing"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_03",
+      "mission_type": "archetype_depth_test",
+      "target_object_type": "archetype",
+      "target_object_ids": [
+        "044_candidate_03"
+      ],
+      "target_object_ref": {
+        "object_type": "archetype",
+        "object_ids": [
+          "044_candidate_03"
+        ],
+        "display_name": "Visible Archetype 044 (candidate 03)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.68,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.7018,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+          "synthetic_candidate:eligible:03"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "archetype",
+            "object_ids": [
+              "044_candidate_03"
+            ],
+            "display_name": "Visible Archetype 044 (candidate 03)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_03"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+        "target_object_type": "archetype",
+        "target_object_ids": [
+          "044_candidate_03"
+        ],
+        "target_display_name": "Visible Archetype 044 (candidate 03)",
+        "positive_signal_count": 9,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 3,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6923,
+        "conflict_score": 0.1905,
+        "recency_score": 0.2026
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype",
+              "object_ids": [
+                "044_candidate_03"
+              ],
+              "display_name": "Visible Archetype 044 (candidate 03)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_strong_archetype_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_depth_probe"
+            ],
+            "risk_flags": [],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "strong_archetype_shallow_depth",
+                "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+                "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_03"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.4569,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.5431
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:strong_archetype_shallow_depth",
+          "mission_type:archetype_depth_test",
+          "target_rollup:archetype"
+        ],
+        "context_overlays": [
+          "visible_depth_probe"
+        ],
+        "bridge_readiness_score": 0.6977,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:strong_archetype_shallow_depth:03"
+          ],
+          "gateway_to_representative_coherence_score": 0.9262
+        },
+        "context_variability_score": 0.0933,
+        "context_skew_score": 0.0672
+      },
+      "risk_context_summary": {
+        "risk_flags": [],
+        "identity_flags": [],
+        "risk_penalty_basis": [],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_archetype_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:archetype_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 175,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.259,
+        "mission_fit_score": 0.2029,
+        "readiness_score": 0.1618,
+        "learning_value_score": 0.1589,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0251,
+        "complexity_penalty": 0.0048,
+        "raw_score": 0.7527,
+        "final_opportunity_score": 0.7527
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible archetype signal is strong but depth coverage is shallow.",
+        "archetype_depth_test candidate generated from offline rollup fixture",
+        "positive archetype signal has shallow depth coverage"
+      ],
+      "risk_reasons": [],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_03",
+      "mission_type": "artist_depth_test",
+      "target_object_type": "artist",
+      "target_object_ids": [
+        "kendrick-lamar_candidate_03"
+      ],
+      "target_object_ref": {
+        "object_type": "artist",
+        "object_ids": [
+          "kendrick-lamar_candidate_03"
+        ],
+        "display_name": "Kendrick Lamar (candidate 03)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.65,
+        "mission_type_score_ceiling": 0.84,
+        "computed_floor_score": 0.6751,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+          "synthetic_candidate:eligible:03"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "artist",
+            "object_ids": [
+              "kendrick-lamar_candidate_03"
+            ],
+            "display_name": "Kendrick Lamar (candidate 03)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_03"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+        "target_object_type": "artist",
+        "target_object_ids": [
+          "kendrick-lamar_candidate_03"
+        ],
+        "target_display_name": "Kendrick Lamar (candidate 03)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2286,
+        "recency_score": 0.967
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "artist",
+              "object_ids": [
+                "kendrick-lamar_candidate_03"
+              ],
+              "display_name": "Kendrick Lamar (candidate 03)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "kendrick-lamar"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_artist_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "artist_anchor",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_artist_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_artist_shallow_depth",
+                "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+                "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_03"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7708,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.2292,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_artist_shallow_depth",
+          "mission_type:artist_depth_test",
+          "target_rollup:artist"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_artist_shallow_depth:03"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0664,
+        "context_skew_score": 0.0478
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_artist_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:artist_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 200,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2496,
+        "mission_fit_score": 0.1987,
+        "readiness_score": 0.1541,
+        "learning_value_score": 0.1923,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0368,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.7421,
+        "final_opportunity_score": 0.7421
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible artist-level anchor has limited depth proof.",
+        "artist_depth_test candidate generated from offline rollup fixture",
+        "artist positive evidence has shallow depth coverage"
+      ],
+      "risk_reasons": [
+        "one_artist_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_00",
+      "mission_type": "exception_scope_test",
+      "target_object_type": "song",
+      "target_object_ids": [
+        "sza-kill-bill"
+      ],
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": [
+          "sza-kill-bill"
+        ],
+        "display_name": "Kill Bill"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.7,
+        "mission_type_score_ceiling": 0.88,
+        "computed_floor_score": 0.7446,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song:sza-kill-bill:recent_surprise_signal",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song:sza-kill-bill:recent_surprise_signal"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song",
+            "object_ids": [
+              "sza-kill-bill"
+            ],
+            "display_name": "Kill Bill"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song:sza-kill-bill:recent_surprise_signal",
+        "target_object_type": "song",
+        "target_object_ids": [
+          "sza-kill-bill"
+        ],
+        "target_display_name": "Kill Bill",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.6095,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song",
+              "object_ids": [
+                "sza-kill-bill"
+              ],
+              "display_name": "Kill Bill"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_recent_surprise_signal"
+            ],
+            "song_ids": [
+              "sza-kill-bill"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_recent_learning"
+            ],
+            "risk_flags": [
+              "recent_contradiction"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "recent_surprise_signal",
+                "visible_rollup:song:sza-kill-bill:recent_surprise_signal",
+                "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7917,
+        "tier_depth_score": 0.4,
+        "coverage_gap_score": 0.2083,
+        "depth_gap_score": 0.6
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:recent_surprise_signal",
+          "mission_type:exception_scope_test",
+          "target_rollup:song"
+        ],
+        "context_overlays": [
+          "visible_recent_learning"
+        ],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:recent_surprise_signal:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.2707,
+        "context_skew_score": 0.1949
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "recent_contradiction"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "recent_contradiction"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_exception_scope_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:exception_scope_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 160,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2616,
+        "mission_fit_score": 0.2191,
+        "readiness_score": 0.1777,
+        "learning_value_score": 0.1231,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0371,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.7286,
+        "final_opportunity_score": 0.7286
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible evidence includes a recent surprising love/dislike pattern.",
+        "exception_scope_test candidate generated from offline rollup fixture",
+        "strong seed object has uncertain generalization scope"
+      ],
+      "risk_reasons": [
+        "recent_contradiction"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00",
+      "mission_type": "song_to_archetype_test",
+      "target_object_type": "song",
+      "target_object_ids": [
+        "sza-kill-bill"
+      ],
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": [
+          "sza-kill-bill"
+        ],
+        "display_name": "Kill Bill"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.52,
+        "mission_type_score_ceiling": 0.72,
+        "computed_floor_score": 0.5787,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song",
+            "object_ids": [
+              "sza-kill-bill"
+            ],
+            "display_name": "Kill Bill"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+        "target_object_type": "song",
+        "target_object_ids": [
+          "sza-kill-bill"
+        ],
+        "target_display_name": "Kill Bill",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2667,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song",
+              "object_ids": [
+                "sza-kill-bill"
+              ],
+              "display_name": "Kill Bill"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_strong_song_weak_archetype"
+            ],
+            "song_ids": [
+              "sza-kill-bill"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_object_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_strong_song_weak_archetype",
+                "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+                "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.6875,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.3125,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_strong_song_weak_archetype",
+          "mission_type:song_to_archetype_test",
+          "target_rollup:song"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_strong_song_weak_archetype:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0882,
+        "context_skew_score": 0.0635
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_object_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_object_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_song_to_archetype_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:song_to_archetype_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 160,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.208,
+        "mission_fit_score": 0.247,
+        "readiness_score": 0.169,
+        "learning_value_score": 0.1936,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0356,
+        "complexity_penalty": 0.0042,
+        "raw_score": 0.7678,
+        "final_opportunity_score": 0.72
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible evidence has one strong song/artist/album anchor and weak surrounding detail.",
+        "song_to_archetype_test candidate generated from offline rollup fixture",
+        "strong song seed has weak surrounding archetype evidence"
+      ],
+      "risk_reasons": [
+        "one_object_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_02",
+      "mission_type": "song_to_archetype_test",
+      "target_object_type": "song",
+      "target_object_ids": [
+        "sza-kill-bill_candidate_02"
+      ],
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": [
+          "sza-kill-bill_candidate_02"
+        ],
+        "display_name": "Kill Bill (candidate 02)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.52,
+        "mission_type_score_ceiling": 0.72,
+        "computed_floor_score": 0.5608,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+          "synthetic_candidate:eligible:02"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song",
+            "object_ids": [
+              "sza-kill-bill_candidate_02"
+            ],
+            "display_name": "Kill Bill (candidate 02)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_02"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+        "target_object_type": "song",
+        "target_object_ids": [
+          "sza-kill-bill_candidate_02"
+        ],
+        "target_display_name": "Kill Bill (candidate 02)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2667,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song",
+              "object_ids": [
+                "sza-kill-bill_candidate_02"
+              ],
+              "display_name": "Kill Bill (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_strong_song_weak_archetype"
+            ],
+            "song_ids": [
+              "sza-kill-bill"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_object_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_strong_song_weak_archetype",
+                "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+                "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.6875,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.3125,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_strong_song_weak_archetype",
+          "mission_type:song_to_archetype_test",
+          "target_rollup:song"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_strong_song_weak_archetype:02"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0882,
+        "context_skew_score": 0.0635
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_object_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_object_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_song_to_archetype_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:song_to_archetype_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 160,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2018,
+        "mission_fit_score": 0.2215,
+        "readiness_score": 0.1577,
+        "learning_value_score": 0.1789,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0356,
+        "complexity_penalty": 0.0042,
+        "raw_score": 0.7101,
+        "final_opportunity_score": 0.7101
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible evidence has one strong song/artist/album anchor and weak surrounding detail.",
+        "song_to_archetype_test candidate generated from offline rollup fixture",
+        "strong song seed has weak surrounding archetype evidence"
+      ],
+      "risk_reasons": [
+        "one_object_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_eligible_00",
+      "mission_type": "album_container_test",
+      "target_object_type": "album",
+      "target_object_ids": [
+        "sza-ctrl"
+      ],
+      "target_object_ref": {
+        "object_type": "album",
+        "object_ids": [
+          "sza-ctrl"
+        ],
+        "display_name": "Ctrl"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.67,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.7174,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:album:sza-ctrl:one_album_container_signal",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:album:sza-ctrl:one_album_container_signal"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "album",
+            "object_ids": [
+              "sza-ctrl"
+            ],
+            "display_name": "Ctrl"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_album_container_test_one_album_container_signal_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:album:sza-ctrl:one_album_container_signal",
+        "target_object_type": "album",
+        "target_object_ids": [
+          "sza-ctrl"
+        ],
+        "target_display_name": "Ctrl",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2667,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "album",
+              "object_ids": [
+                "sza-ctrl"
+              ],
+              "display_name": "Ctrl"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "sza-ctrl"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "supporting",
+            "graph_item_role": "album_world",
+            "track_tier_within_archetype": "supporting",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_album_context"
+            ],
+            "risk_flags": [
+              "single_hit_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_album_container_signal",
+                "visible_rollup:album:sza-ctrl:one_album_container_signal",
+                "opp_profile-05_album_container_test_one_album_container_signal_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7708,
+        "tier_depth_score": 0.32,
+        "coverage_gap_score": 0.2292,
+        "depth_gap_score": 0.68
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_album_container_signal",
+          "mission_type:album_container_test",
+          "target_rollup:album"
+        ],
+        "context_overlays": [
+          "visible_album_context"
+        ],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_album_container_signal:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.1588,
+        "context_skew_score": 0.1143
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "single_hit_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "single_hit_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_album_container_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:album_container_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 1,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 2,
+        "cap_applied": false,
+        "cap_value": 175,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2537,
+        "mission_fit_score": 0.2237,
+        "readiness_score": 0.147,
+        "learning_value_score": 0.1372,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0368,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.709,
+        "final_opportunity_score": 0.709
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible album signal suggests possible container learning.",
+        "album_container_test candidate generated from offline rollup fixture",
+        "visible signal can test album/container context"
+      ],
+      "risk_reasons": [
+        "single_hit_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_04",
+      "mission_type": "archetype_depth_test",
+      "target_object_type": "archetype",
+      "target_object_ids": [
+        "044_candidate_04"
+      ],
+      "target_object_ref": {
+        "object_type": "archetype",
+        "object_ids": [
+          "044_candidate_04"
+        ],
+        "display_name": "Visible Archetype 044 (candidate 04)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.68,
+        "mission_type_score_ceiling": 0.86,
+        "computed_floor_score": 0.6839,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+          "synthetic_candidate:eligible:04"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:archetype:044:strong_archetype_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "archetype",
+            "object_ids": [
+              "044_candidate_04"
+            ],
+            "display_name": "Visible Archetype 044 (candidate 04)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_04"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+        "target_object_type": "archetype",
+        "target_object_ids": [
+          "044_candidate_04"
+        ],
+        "target_display_name": "Visible Archetype 044 (candidate 04)",
+        "positive_signal_count": 9,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 3,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6923,
+        "conflict_score": 0.1905,
+        "recency_score": 0.2026
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "archetype",
+              "object_ids": [
+                "044_candidate_04"
+              ],
+              "display_name": "Visible Archetype 044 (candidate 04)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_strong_archetype_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_depth_probe"
+            ],
+            "risk_flags": [],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "strong_archetype_shallow_depth",
+                "visible_rollup:archetype:044:strong_archetype_shallow_depth",
+                "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_04"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.8125,
+        "tier_depth_score": 0.4569,
+        "coverage_gap_score": 0.1875,
+        "depth_gap_score": 0.5431
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:strong_archetype_shallow_depth",
+          "mission_type:archetype_depth_test",
+          "target_rollup:archetype"
+        ],
+        "context_overlays": [
+          "visible_depth_probe"
+        ],
+        "bridge_readiness_score": 0.6977,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:strong_archetype_shallow_depth:04"
+          ],
+          "gateway_to_representative_coherence_score": 0.9262
+        },
+        "context_variability_score": 0.0933,
+        "context_skew_score": 0.0672
+      },
+      "risk_context_summary": {
+        "risk_flags": [],
+        "identity_flags": [],
+        "risk_penalty_basis": [],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_archetype_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:archetype_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 175,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2509,
+        "mission_fit_score": 0.1774,
+        "readiness_score": 0.1505,
+        "learning_value_score": 0.1443,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0251,
+        "complexity_penalty": 0.0048,
+        "raw_score": 0.6932,
+        "final_opportunity_score": 0.6932
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible archetype signal is strong but depth coverage is shallow.",
+        "archetype_depth_test candidate generated from offline rollup fixture",
+        "positive archetype signal has shallow depth coverage"
+      ],
+      "risk_reasons": [],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_04",
+      "mission_type": "artist_depth_test",
+      "target_object_type": "artist",
+      "target_object_ids": [
+        "kendrick-lamar_candidate_04"
+      ],
+      "target_object_ref": {
+        "object_type": "artist",
+        "object_ids": [
+          "kendrick-lamar_candidate_04"
+        ],
+        "display_name": "Kendrick Lamar (candidate 04)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.65,
+        "mission_type_score_ceiling": 0.84,
+        "computed_floor_score": 0.6556,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+          "synthetic_candidate:eligible:04"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "artist",
+            "object_ids": [
+              "kendrick-lamar_candidate_04"
+            ],
+            "display_name": "Kendrick Lamar (candidate 04)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_04"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+        "target_object_type": "artist",
+        "target_object_ids": [
+          "kendrick-lamar_candidate_04"
+        ],
+        "target_display_name": "Kendrick Lamar (candidate 04)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2286,
+        "recency_score": 0.967
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "artist",
+              "object_ids": [
+                "kendrick-lamar_candidate_04"
+              ],
+              "display_name": "Kendrick Lamar (candidate 04)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "kendrick-lamar"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_artist_shallow_depth"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "artist_anchor",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_artist_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_artist_shallow_depth",
+                "visible_rollup:artist:kendrick-lamar:one_artist_shallow_depth",
+                "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_04"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7708,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.2292,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_artist_shallow_depth",
+          "mission_type:artist_depth_test",
+          "target_rollup:artist"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_artist_shallow_depth:04"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0664,
+        "context_skew_score": 0.0478
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_artist_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_artist_depth_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:artist_depth_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 200,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.2419,
+        "mission_fit_score": 0.1732,
+        "readiness_score": 0.1428,
+        "learning_value_score": 0.1777,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0368,
+        "complexity_penalty": 0.0058,
+        "raw_score": 0.683,
+        "final_opportunity_score": 0.683
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible artist-level anchor has limited depth proof.",
+        "artist_depth_test candidate generated from offline rollup fixture",
+        "artist positive evidence has shallow depth coverage"
+      ],
+      "risk_reasons": [
+        "one_artist_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_00",
+      "mission_type": "gateway_test",
+      "target_object_type": "family",
+      "target_object_ids": [
+        "family_6"
+      ],
+      "target_object_ref": {
+        "object_type": "family",
+        "object_ids": [
+          "family_6"
+        ],
+        "display_name": "Visible Family 6"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.5,
+        "mission_type_score_ceiling": 0.68,
+        "computed_floor_score": 0.5552,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "family",
+            "object_ids": [
+              "family_6"
+            ],
+            "display_name": "Visible Family 6"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+        "target_object_type": "family",
+        "target_object_ids": [
+          "family_6"
+        ],
+        "target_display_name": "Visible Family 6",
+        "positive_signal_count": 15,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 7,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6667,
+        "conflict_score": 0.2286,
+        "recency_score": 0.1098
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family",
+              "object_ids": [
+                "family_6"
+              ],
+              "display_name": "Visible Family 6"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_bridge_source_positive_target_gap"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "bridge",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_bridge_context"
+            ],
+            "risk_flags": [
+              "safe_gateway"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "bridge_source_positive_target_gap",
+                "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+                "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7083,
+        "tier_depth_score": 0.6199,
+        "coverage_gap_score": 0.2917,
+        "depth_gap_score": 0.3801
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:bridge_source_positive_target_gap",
+          "mission_type:gateway_test",
+          "target_rollup:family"
+        ],
+        "context_overlays": [
+          "visible_bridge_context"
+        ],
+        "bridge_readiness_score": 0.6758,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:bridge_source_positive_target_gap:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.91
+        },
+        "context_variability_score": 0.1162,
+        "context_skew_score": 0.0907
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "safe_gateway"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_gateway_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:gateway_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 250,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.1965,
+        "mission_fit_score": 0.2277,
+        "readiness_score": 0.175,
+        "learning_value_score": 0.1759,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0226,
+        "complexity_penalty": 0.0032,
+        "raw_score": 0.7493,
+        "final_opportunity_score": 0.68
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible positive source area plus under-tested adjacent target.",
+        "gateway_test candidate generated from offline rollup fixture",
+        "under-tested target has a visible gateway path"
+      ],
+      "risk_reasons": [
+        "safe_gateway"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_02",
+      "mission_type": "gateway_test",
+      "target_object_type": "family",
+      "target_object_ids": [
+        "family_6_candidate_02"
+      ],
+      "target_object_ref": {
+        "object_type": "family",
+        "object_ids": [
+          "family_6_candidate_02"
+        ],
+        "display_name": "Visible Family 6 (candidate 02)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.5,
+        "mission_type_score_ceiling": 0.68,
+        "computed_floor_score": 0.5373,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+          "synthetic_candidate:eligible:02"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "family",
+            "object_ids": [
+              "family_6_candidate_02"
+            ],
+            "display_name": "Visible Family 6 (candidate 02)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_02"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+        "target_object_type": "family",
+        "target_object_ids": [
+          "family_6_candidate_02"
+        ],
+        "target_display_name": "Visible Family 6 (candidate 02)",
+        "positive_signal_count": 15,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 7,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6667,
+        "conflict_score": 0.2286,
+        "recency_score": 0.1098
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family",
+              "object_ids": [
+                "family_6_candidate_02"
+              ],
+              "display_name": "Visible Family 6 (candidate 02)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_bridge_source_positive_target_gap"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "bridge",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_bridge_context"
+            ],
+            "risk_flags": [
+              "safe_gateway"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "bridge_source_positive_target_gap",
+                "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+                "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_02"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7083,
+        "tier_depth_score": 0.6199,
+        "coverage_gap_score": 0.2917,
+        "depth_gap_score": 0.3801
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:bridge_source_positive_target_gap",
+          "mission_type:gateway_test",
+          "target_rollup:family"
+        ],
+        "context_overlays": [
+          "visible_bridge_context"
+        ],
+        "bridge_readiness_score": 0.6758,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:bridge_source_positive_target_gap:02"
+          ],
+          "gateway_to_representative_coherence_score": 0.91
+        },
+        "context_variability_score": 0.1162,
+        "context_skew_score": 0.0907
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "safe_gateway"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_gateway_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:gateway_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 250,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.1906,
+        "mission_fit_score": 0.2022,
+        "readiness_score": 0.1638,
+        "learning_value_score": 0.1613,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0226,
+        "complexity_penalty": 0.0032,
+        "raw_score": 0.6921,
+        "final_opportunity_score": 0.68
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible positive source area plus under-tested adjacent target.",
+        "gateway_test candidate generated from offline rollup fixture",
+        "under-tested target has a visible gateway path"
+      ],
+      "risk_reasons": [
+        "safe_gateway"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_03",
+      "mission_type": "song_to_archetype_test",
+      "target_object_type": "song",
+      "target_object_ids": [
+        "sza-kill-bill_candidate_03"
+      ],
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": [
+          "sza-kill-bill_candidate_03"
+        ],
+        "display_name": "Kill Bill (candidate 03)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.52,
+        "mission_type_score_ceiling": 0.72,
+        "computed_floor_score": 0.5429,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+          "synthetic_candidate:eligible:03"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song",
+            "object_ids": [
+              "sza-kill-bill_candidate_03"
+            ],
+            "display_name": "Kill Bill (candidate 03)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_03"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+        "target_object_type": "song",
+        "target_object_ids": [
+          "sza-kill-bill_candidate_03"
+        ],
+        "target_display_name": "Kill Bill (candidate 03)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2667,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song",
+              "object_ids": [
+                "sza-kill-bill_candidate_03"
+              ],
+              "display_name": "Kill Bill (candidate 03)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_strong_song_weak_archetype"
+            ],
+            "song_ids": [
+              "sza-kill-bill"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_object_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_strong_song_weak_archetype",
+                "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+                "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_03"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.6875,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.3125,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_strong_song_weak_archetype",
+          "mission_type:song_to_archetype_test",
+          "target_rollup:song"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_strong_song_weak_archetype:03"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0882,
+        "context_skew_score": 0.0635
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_object_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_object_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_song_to_archetype_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:song_to_archetype_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 160,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.1957,
+        "mission_fit_score": 0.196,
+        "readiness_score": 0.1465,
+        "learning_value_score": 0.1643,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0356,
+        "complexity_penalty": 0.0042,
+        "raw_score": 0.6527,
+        "final_opportunity_score": 0.6527
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible evidence has one strong song/artist/album anchor and weak surrounding detail.",
+        "song_to_archetype_test candidate generated from offline rollup fixture",
+        "strong song seed has weak surrounding archetype evidence"
+      ],
+      "risk_reasons": [
+        "one_object_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_03",
+      "mission_type": "gateway_test",
+      "target_object_type": "family",
+      "target_object_ids": [
+        "family_6_candidate_03"
+      ],
+      "target_object_ref": {
+        "object_type": "family",
+        "object_ids": [
+          "family_6_candidate_03"
+        ],
+        "display_name": "Visible Family 6 (candidate 03)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.5,
+        "mission_type_score_ceiling": 0.68,
+        "computed_floor_score": 0.5193,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+          "synthetic_candidate:eligible:03"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "family",
+            "object_ids": [
+              "family_6_candidate_03"
+            ],
+            "display_name": "Visible Family 6 (candidate 03)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_03"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+        "target_object_type": "family",
+        "target_object_ids": [
+          "family_6_candidate_03"
+        ],
+        "target_display_name": "Visible Family 6 (candidate 03)",
+        "positive_signal_count": 15,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 7,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6667,
+        "conflict_score": 0.2286,
+        "recency_score": 0.1098
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family",
+              "object_ids": [
+                "family_6_candidate_03"
+              ],
+              "display_name": "Visible Family 6 (candidate 03)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_bridge_source_positive_target_gap"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "bridge",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_bridge_context"
+            ],
+            "risk_flags": [
+              "safe_gateway"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "bridge_source_positive_target_gap",
+                "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+                "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_03"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7083,
+        "tier_depth_score": 0.6199,
+        "coverage_gap_score": 0.2917,
+        "depth_gap_score": 0.3801
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:bridge_source_positive_target_gap",
+          "mission_type:gateway_test",
+          "target_rollup:family"
+        ],
+        "context_overlays": [
+          "visible_bridge_context"
+        ],
+        "bridge_readiness_score": 0.6758,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:bridge_source_positive_target_gap:03"
+          ],
+          "gateway_to_representative_coherence_score": 0.91
+        },
+        "context_variability_score": 0.1162,
+        "context_skew_score": 0.0907
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "safe_gateway"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_gateway_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:gateway_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 250,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.1847,
+        "mission_fit_score": 0.1767,
+        "readiness_score": 0.1525,
+        "learning_value_score": 0.1467,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0226,
+        "complexity_penalty": 0.0032,
+        "raw_score": 0.6348,
+        "final_opportunity_score": 0.6348
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible positive source area plus under-tested adjacent target.",
+        "gateway_test candidate generated from offline rollup fixture",
+        "under-tested target has a visible gateway path"
+      ],
+      "risk_reasons": [
+        "safe_gateway"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_04",
+      "mission_type": "song_to_archetype_test",
+      "target_object_type": "song",
+      "target_object_ids": [
+        "sza-kill-bill_candidate_04"
+      ],
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": [
+          "sza-kill-bill_candidate_04"
+        ],
+        "display_name": "Kill Bill (candidate 04)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.52,
+        "mission_type_score_ceiling": 0.72,
+        "computed_floor_score": 0.5249,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+          "synthetic_candidate:eligible:04"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song",
+            "object_ids": [
+              "sza-kill-bill_candidate_04"
+            ],
+            "display_name": "Kill Bill (candidate 04)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_04"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+        "target_object_type": "song",
+        "target_object_ids": [
+          "sza-kill-bill_candidate_04"
+        ],
+        "target_display_name": "Kill Bill (candidate 04)",
+        "positive_signal_count": 1,
+        "negative_signal_count": 0,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 0,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 1.0,
+        "conflict_score": 0.2667,
+        "recency_score": 0.0
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song",
+              "object_ids": [
+                "sza-kill-bill_candidate_04"
+              ],
+              "display_name": "Kill Bill (candidate 04)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_one_strong_song_weak_archetype"
+            ],
+            "song_ids": [
+              "sza-kill-bill"
+            ],
+            "node_tier": "primary",
+            "graph_item_role": "canonical_anchor",
+            "track_tier_within_archetype": "primary",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [
+              "one_object_overfit_risk"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "one_strong_song_weak_archetype",
+                "visible_rollup:song:sza-kill-bill:one_strong_song_weak_archetype",
+                "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_04"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.6875,
+        "tier_depth_score": 0.2,
+        "coverage_gap_score": 0.3125,
+        "depth_gap_score": 0.8
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:one_strong_song_weak_archetype",
+          "mission_type:song_to_archetype_test",
+          "target_rollup:song"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.75,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:one_strong_song_weak_archetype:04"
+          ],
+          "gateway_to_representative_coherence_score": 0.904
+        },
+        "context_variability_score": 0.0882,
+        "context_skew_score": 0.0635
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "one_object_overfit_risk"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "one_object_overfit_risk"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_song_to_archetype_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:song_to_archetype_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 160,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.1895,
+        "mission_fit_score": 0.1705,
+        "readiness_score": 0.1353,
+        "learning_value_score": 0.1497,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.0356,
+        "complexity_penalty": 0.0042,
+        "raw_score": 0.5952,
+        "final_opportunity_score": 0.5952
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible evidence has one strong song/artist/album anchor and weak surrounding detail.",
+        "song_to_archetype_test candidate generated from offline rollup fixture",
+        "strong song seed has weak surrounding archetype evidence"
+      ],
+      "risk_reasons": [
+        "one_object_overfit_risk"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_04",
+      "mission_type": "gateway_test",
+      "target_object_type": "family",
+      "target_object_ids": [
+        "family_6_candidate_04"
+      ],
+      "target_object_ref": {
+        "object_type": "family",
+        "object_ids": [
+          "family_6_candidate_04"
+        ],
+        "display_name": "Visible Family 6 (candidate 04)"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.5,
+        "mission_type_score_ceiling": 0.68,
+        "computed_floor_score": 0.5014,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+          "synthetic_candidate:eligible:04"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:family:family_6:bridge_source_positive_target_gap"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "family",
+            "object_ids": [
+              "family_6_candidate_04"
+            ],
+            "display_name": "Visible Family 6 (candidate 04)"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_04"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+        "target_object_type": "family",
+        "target_object_ids": [
+          "family_6_candidate_04"
+        ],
+        "target_display_name": "Visible Family 6 (candidate 04)",
+        "positive_signal_count": 15,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 7,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6667,
+        "conflict_score": 0.2286,
+        "recency_score": 0.1098
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family",
+              "object_ids": [
+                "family_6_candidate_04"
+              ],
+              "display_name": "Visible Family 6 (candidate 04)"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_bridge_source_positive_target_gap"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "bridge",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [
+              "visible_bridge_context"
+            ],
+            "risk_flags": [
+              "safe_gateway"
+            ],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "bridge_source_positive_target_gap",
+                "visible_rollup:family:family_6:bridge_source_positive_target_gap",
+                "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_04"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7083,
+        "tier_depth_score": 0.6199,
+        "coverage_gap_score": 0.2917,
+        "depth_gap_score": 0.3801
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:bridge_source_positive_target_gap",
+          "mission_type:gateway_test",
+          "target_rollup:family"
+        ],
+        "context_overlays": [
+          "visible_bridge_context"
+        ],
+        "bridge_readiness_score": 0.6758,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:bridge_source_positive_target_gap:04"
+          ],
+          "gateway_to_representative_coherence_score": 0.91
+        },
+        "context_variability_score": 0.1162,
+        "context_skew_score": 0.0907
+      },
+      "risk_context_summary": {
+        "risk_flags": [
+          "safe_gateway"
+        ],
+        "identity_flags": [],
+        "risk_penalty_basis": [
+          "safe_gateway"
+        ],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_gateway_test_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:gateway_test"
+        ],
+        "eligible_candidate_count": 7,
+        "emitted_candidate_count": 4,
+        "pruned_candidate_count": 2,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 250,
+        "batch_size": 7,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.1787,
+        "mission_fit_score": 0.1512,
+        "readiness_score": 0.1413,
+        "learning_value_score": 0.1321,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0226,
+        "complexity_penalty": 0.0032,
+        "raw_score": 0.5775,
+        "final_opportunity_score": 0.5775
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible positive source area plus under-tested adjacent target.",
+        "gateway_test candidate generated from offline rollup fixture",
+        "under-tested target has a visible gateway path"
+      ],
+      "risk_reasons": [
+        "safe_gateway"
+      ],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    },
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_00",
+      "mission_type": "family_survey",
+      "target_object_type": "family",
+      "target_object_ids": [
+        "family_6"
+      ],
+      "target_object_ref": {
+        "object_type": "family",
+        "object_ids": [
+          "family_6"
+        ],
+        "display_name": "Visible Family 6"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.36,
+        "mission_type_score_ceiling": 0.56,
+        "computed_floor_score": 0.398,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "visible_rollup:family:family_6:family_positive_weak_archetype_clarity",
+          "synthetic_candidate:eligible:00"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "visible_rollup:family:family_6:family_positive_weak_archetype_clarity"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "family",
+            "object_ids": [
+              "family_6"
+            ],
+            "display_name": "Visible Family 6"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_candidate:opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_00"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "visible_rollup:family:family_6:family_positive_weak_archetype_clarity",
+        "target_object_type": "family",
+        "target_object_ids": [
+          "family_6"
+        ],
+        "target_display_name": "Visible Family 6",
+        "positive_signal_count": 15,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 0,
+        "survey_ok_ignored_count": 7,
+        "mission_ok_weak_count": 0,
+        "evidence_density": 0.6667,
+        "conflict_score": 0.2286,
+        "recency_score": 0.1098
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "family",
+              "object_ids": [
+                "family_6"
+              ],
+              "display_name": "Visible Family 6"
+            },
+            "family_ids": [
+              "family_6"
+            ],
+            "family_names": [
+              "Visible Family 6"
+            ],
+            "archetype_ids": [
+              "044"
+            ],
+            "archetype_names": [
+              "Visible Archetype 044"
+            ],
+            "artist_ids": [
+              "visible_artist_public_profile_05"
+            ],
+            "album_ids": [
+              "visible_album_public_profile_05_family_positive_weak_archetype_clarity"
+            ],
+            "song_ids": [
+              "kendrick-lamar"
+            ],
+            "node_tier": "major",
+            "graph_item_role": "major_representative",
+            "track_tier_within_archetype": "major",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": [],
+            "risk_flags": [],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_selector_scenarios_v0_1",
+              "source_refs": [
+                "family_positive_weak_archetype_clarity",
+                "visible_rollup:family:family_6:family_positive_weak_archetype_clarity",
+                "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_00"
+              ],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.7291,
+        "tier_depth_score": 0.5384,
+        "coverage_gap_score": 0.2709,
+        "depth_gap_score": 0.4616
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "synthetic_scenario:family_positive_weak_archetype_clarity",
+          "mission_type:family_survey",
+          "target_rollup:family"
+        ],
+        "context_overlays": [],
+        "bridge_readiness_score": 0.6758,
+        "gateway_availability": {
+          "available": true,
+          "gateway_candidate_refs": [
+            "synthetic_gateway:family_positive_weak_archetype_clarity:00"
+          ],
+          "gateway_to_representative_coherence_score": 0.91
+        },
+        "context_variability_score": 0.0664,
+        "context_skew_score": 0.0518
+      },
+      "risk_context_summary": {
+        "risk_flags": [],
+        "identity_flags": [],
+        "risk_penalty_basis": [],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_family_survey_selector_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": [
+          "synthetic_generator:family_survey"
+        ],
+        "eligible_candidate_count": 6,
+        "emitted_candidate_count": 3,
+        "pruned_candidate_count": 4,
+        "floor_failed_candidate_count": 1,
+        "cap_applied": false,
+        "cap_value": 72,
+        "batch_size": 6,
+        "generation_notes": [
+          "Offline synthetic selector prototype only.",
+          "No runtime evidence, catalog, playback, or canonical graph authority was read."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.127,
+        "mission_fit_score": 0.1686,
+        "readiness_score": 0.1686,
+        "learning_value_score": 0.0901,
+        "risk_penalty": 0.0,
+        "repetition_penalty": 0.0229,
+        "complexity_penalty": 0.0024,
+        "raw_score": 0.529,
+        "final_opportunity_score": 0.529
+      },
+      "activation_reasons": [
+        "synthetic scenario: public_profile_05: Visible family-level signal has several positives but archetype detail remains uneven.",
+        "family_survey candidate generated from offline rollup fixture",
+        "family has usable but uneven visible evidence"
+      ],
+      "risk_reasons": [],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    }
+  ]
+}

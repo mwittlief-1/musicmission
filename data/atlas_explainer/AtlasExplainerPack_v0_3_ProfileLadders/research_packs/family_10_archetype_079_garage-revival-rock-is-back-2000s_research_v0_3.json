@@ -1,0 +1,1321 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_10_archetype_079_garage-revival-rock-is-back-2000s_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_10/normalized_family_10.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 10,
+    "family_slug": "alternative-indie-grunge-emo",
+    "family_name": "Alternative, Indie, Grunge, Emo",
+    "archetype_id": "079",
+    "archetype_slug": "garage-revival-rock-is-back-2000s",
+    "canonical_graph_ref": "family_10/archetype_079",
+    "existing_graph_label_name": "Garage Revival / Rock-Is-Back 2000s",
+    "editorial_display_title": "Garage Revival and Rock-Is-Back 2000s",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:the-white-stripes",
+        "object_id": "the-white-stripes",
+        "display_label": "The White Stripes",
+        "source_membership_id": "family-10-artist-079-the-white-stripes",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Garage-blues revival mass anchor with both song and album recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-strokes",
+        "object_id": "the-strokes",
+        "display_label": "The Strokes",
+        "source_membership_id": "family-10-artist-079-the-strokes",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Rock-is-back / garage revival anchor and early-2000s style reset.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-black-keys",
+        "object_id": "the-black-keys",
+        "display_label": "The Black Keys",
+        "source_membership_id": "family-10-artist-079-the-black-keys",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blues-garage revival bridge into later mainstream rock success.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:arctic-monkeys",
+        "object_id": "arctic-monkeys",
+        "display_label": "Arctic Monkeys",
+        "source_membership_id": "family-10-artist-079-arctic-monkeys",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious UK post-garage revival to modern indie-rock mass bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-libertines",
+        "object_id": "the-libertines",
+        "display_label": "The Libertines",
+        "source_membership_id": "family-10-artist-079-the-libertines",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "UK garage-revival/indie-sleaze bridge with high scene value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-hives",
+        "object_id": "the-hives",
+        "display_label": "The Hives",
+        "source_membership_id": "family-10-artist-079-the-hives",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Garage revival normal-user song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-vines",
+        "object_id": "the-vines",
+        "display_label": "The Vines",
+        "source_membership_id": "family-10-artist-079-the-vines",
+        "roles": [
+          "gateway",
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Rock-is-back moment object with narrow but recognizable hit footprint.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:the-white-stripes-elephant",
+        "object_id": "the-white-stripes-elephant",
+        "display_label": "Elephant - The White Stripes",
+        "source_membership_id": "family-10-album-079-the-white-stripes-elephant",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass garage-blues revival album with universal song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-strokes-is-this-it",
+        "object_id": "the-strokes-is-this-it",
+        "display_label": "Is This It - The Strokes",
+        "source_membership_id": "family-10-album-079-the-strokes-is-this-it",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Garage revival / rock-is-back album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-white-stripes-white-blood-cells",
+        "object_id": "the-white-stripes-white-blood-cells",
+        "display_label": "White Blood Cells - The White Stripes",
+        "source_membership_id": "family-10-album-079-the-white-stripes-white-blood-cells",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "White Stripes garage revival breakthrough album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-black-keys-brothers",
+        "object_id": "the-black-keys-brothers",
+        "display_label": "Brothers - The Black Keys",
+        "source_membership_id": "family-10-album-079-the-black-keys-brothers",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blues-garage revival mainstream bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-hives-veni-vidi-vicious",
+        "object_id": "the-hives-veni-vidi-vicious",
+        "display_label": "Veni Vidi Vicious - The Hives",
+        "source_membership_id": "family-10-album-079-the-hives-veni-vidi-vicious",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Garage-punk revival gateway album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:arctic-monkeys-whatever-people-say-i-am-thats-what-im-not",
+        "object_id": "arctic-monkeys-whatever-people-say-i-am-thats-what-im-not",
+        "display_label": "Whatever People Say I Am, That's What I'm Not - Arctic Monkeys",
+        "source_membership_id": "family-10-album-079-arctic-monkeys-whatever-people-say-i-am-thats-what-im-not",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "UK post-garage revival album with large normal-user reach.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-libertines-up-the-bracket",
+        "object_id": "the-libertines-up-the-bracket",
+        "display_label": "Up the Bracket - The Libertines",
+        "source_membership_id": "family-10-album-079-the-libertines-up-the-bracket",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "UK garage-revival scene album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:the-white-stripes-seven-nation-army",
+        "object_id": "the-white-stripes-seven-nation-army",
+        "display_label": "Seven Nation Army - The White Stripes",
+        "source_membership_id": "family-10-song-079-the-white-stripes-seven-nation-army",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Universal White Stripes and garage-blues revival song anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-strokes-last-nite",
+        "object_id": "the-strokes-last-nite",
+        "display_label": "Last Nite - The Strokes",
+        "source_membership_id": "family-10-song-079-the-strokes-last-nite",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "The Strokes' main garage-revival song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-black-keys-lonely-boy",
+        "object_id": "the-black-keys-lonely-boy",
+        "display_label": "Lonely Boy - The Black Keys",
+        "source_membership_id": "family-10-song-079-the-black-keys-lonely-boy",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Black Keys mainstream blues-garage gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-strokes-someday",
+        "object_id": "the-strokes-someday",
+        "display_label": "Someday - The Strokes",
+        "source_membership_id": "family-10-song-079-the-strokes-someday",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Melodic Strokes gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-white-stripes-fell-in-love-with-a-girl",
+        "object_id": "the-white-stripes-fell-in-love-with-a-girl",
+        "display_label": "Fell in Love with a Girl - The White Stripes",
+        "source_membership_id": "family-10-song-079-the-white-stripes-fell-in-love-with-a-girl",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "White Stripes garage-punk gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-white-stripes-the-hardest-button-to-button",
+        "object_id": "the-white-stripes-the-hardest-button-to-button",
+        "display_label": "The Hardest Button to Button - The White Stripes",
+        "source_membership_id": "family-10-song-079-the-white-stripes-the-hardest-button-to-button",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Second Elephant-era song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-hives-hate-to-say-i-told-you-so",
+        "object_id": "the-hives-hate-to-say-i-told-you-so",
+        "display_label": "Hate to Say I Told You So - The Hives",
+        "source_membership_id": "family-10-song-079-the-hives-hate-to-say-i-told-you-so",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Garage-punk revival song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-black-keys-gold-on-the-ceiling",
+        "object_id": "the-black-keys-gold-on-the-ceiling",
+        "display_label": "Gold on the Ceiling - The Black Keys",
+        "source_membership_id": "family-10-song-079-the-black-keys-gold-on-the-ceiling",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Second Black Keys mainstream rock gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:arctic-monkeys-i-bet-you-look-good-on-the-dancefloor",
+        "object_id": "arctic-monkeys-i-bet-you-look-good-on-the-dancefloor",
+        "display_label": "I Bet You Look Good on the Dancefloor - Arctic Monkeys",
+        "source_membership_id": "family-10-song-079-arctic-monkeys-i-bet-you-look-good-on-the-dancefloor",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "UK garage-revival breakout song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-vines-get-free",
+        "object_id": "the-vines-get-free",
+        "display_label": "Get Free - The Vines",
+        "source_membership_id": "family-10-song-079-the-vines-get-free",
+        "roles": [
+          "song_first",
+          "gateway",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Short-lived garage-revival hype song object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-white-stripes-079",
+        "candidate_id": "survey-f10-artist-the-white-stripes-079",
+        "object_type": "artist",
+        "display_label": "The White Stripes",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-strokes-079",
+        "candidate_id": "survey-f10-artist-the-strokes-079",
+        "object_type": "artist",
+        "display_label": "The Strokes",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-arctic-monkeys-079",
+        "candidate_id": "survey-f10-artist-arctic-monkeys-079",
+        "object_type": "artist",
+        "display_label": "Arctic Monkeys",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-black-keys-079",
+        "candidate_id": "survey-f10-artist-the-black-keys-079",
+        "object_type": "artist",
+        "display_label": "The Black Keys",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-libertines-079",
+        "candidate_id": "survey-f10-artist-the-libertines-079",
+        "object_type": "artist",
+        "display_label": "The Libertines",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-hives-079",
+        "candidate_id": "survey-f10-artist-the-hives-079",
+        "object_type": "artist",
+        "display_label": "The Hives",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-vines-079",
+        "candidate_id": "survey-f10-artist-the-vines-079",
+        "object_type": "artist",
+        "display_label": "The Vines",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-white-stripes-elephant-079",
+        "candidate_id": "survey-f10-album-the-white-stripes-elephant-079",
+        "object_type": "album",
+        "display_label": "Elephant",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-strokes-is-this-it-079",
+        "candidate_id": "survey-f10-album-the-strokes-is-this-it-079",
+        "object_type": "album",
+        "display_label": "Is This It",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-white-stripes-white-blood-cells-079",
+        "candidate_id": "survey-f10-album-the-white-stripes-white-blood-cells-079",
+        "object_type": "album",
+        "display_label": "White Blood Cells",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-black-keys-brothers-079",
+        "candidate_id": "survey-f10-album-the-black-keys-brothers-079",
+        "object_type": "album",
+        "display_label": "Brothers",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-arctic-monkeys-whatever-people-say-i-am-thats-what-im-not-079",
+        "candidate_id": "survey-f10-album-arctic-monkeys-whatever-people-say-i-am-thats-what-im-not-079",
+        "object_type": "album",
+        "display_label": "Whatever People Say I Am, That's What I'm Not",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-hives-veni-vidi-vicious-079",
+        "candidate_id": "survey-f10-album-the-hives-veni-vidi-vicious-079",
+        "object_type": "album",
+        "display_label": "Veni Vidi Vicious",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-libertines-up-the-bracket-079",
+        "candidate_id": "survey-f10-album-the-libertines-up-the-bracket-079",
+        "object_type": "album",
+        "display_label": "Up the Bracket",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-the-strokes-last-nite-079",
+        "candidate_id": "survey-f10-song_recording-the-strokes-last-nite-079",
+        "object_type": "song_recording",
+        "display_label": "Last Nite",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-the-white-stripes-seven-nation-army-079",
+        "candidate_id": "survey-f10-song_recording-the-white-stripes-seven-nation-army-079",
+        "object_type": "song_recording",
+        "display_label": "Seven Nation Army",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-the-white-stripes-fell-in-love-with-a-girl-079",
+        "candidate_id": "survey-f10-song_recording-the-white-stripes-fell-in-love-with-a-girl-079",
+        "object_type": "song_recording",
+        "display_label": "Fell in Love with a Girl",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-the-hives-hate-to-say-i-told-you-so-079",
+        "candidate_id": "survey-f10-song_recording-the-hives-hate-to-say-i-told-you-so-079",
+        "object_type": "song_recording",
+        "display_label": "Hate to Say I Told You So",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-arctic-monkeys-i-bet-you-look-good-on-the-dancefloor-079",
+        "candidate_id": "survey-f10-song_recording-arctic-monkeys-i-bet-you-look-good-on-the-dancefloor-079",
+        "object_type": "song_recording",
+        "display_label": "I Bet You Look Good on the Dancefloor",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-the-strokes-someday-079",
+        "candidate_id": "survey-f10-song_recording-the-strokes-someday-079",
+        "object_type": "song_recording",
+        "display_label": "Someday",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f10-artist-the-vines-079",
+        "question_id": "boundary-survey-f10-artist-the-vines-079",
+        "display_label": "The Vines",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f10-song_recording-the-vines-get-free-079",
+        "question_id": "boundary-survey-f10-song_recording-the-vines-get-free-079",
+        "display_label": "Get Free",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f10-artist-the-vines-079",
+        "probe_id": "probe-survey-f10-artist-the-vines-079",
+        "entity_type": "artist",
+        "display_label": "The Vines",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f10-song_recording-the-vines-get-free-079",
+        "probe_id": "probe-survey-f10-song_recording-the-vines-get-free-079",
+        "entity_type": "song_recording",
+        "display_label": "Get Free",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_10/archetype_078",
+      "family_10/archetype_080"
+    ],
+    "before_archetype_refs": [
+      "family_10/archetype_078"
+    ],
+    "after_archetype_refs": [
+      "family_10/archetype_080"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_10": {
+      "title": "Normalized canonical graph export, Family 10",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_10/normalized_family_10.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "079_allmusic_garage_revival": {
+      "title": "Garage Rock Revival",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/garage-rock-revival",
+      "source_type": "genre_overview",
+      "audit_use": "Direct support for the early-2000s stripped-down garage-rock revival.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct support for the early-2000s stripped-down garage-rock revival."
+    },
+    "079_rockhall_whitestripes": {
+      "title": "The White Stripes",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-white-stripes/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports The White Stripes as the raw blues/garage two-piece anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports The White Stripes as the raw blues/garage two-piece anchor."
+    },
+    "079_strokes_official": {
+      "title": "The Strokes",
+      "publisher": "The Strokes",
+      "url": "https://www.thestrokes.com/",
+      "source_type": "official_artist",
+      "audit_use": "Object support for The Strokes and Is This It as New York cool/garage revival anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Object support for The Strokes and Is This It as New York cool/garage revival anchor."
+    },
+    "079_pitchfork_isthisit": {
+      "title": "The Strokes: Is This It",
+      "publisher": "Pitchfork",
+      "url": "https://pitchfork.com/reviews/albums/7537-is-this-it/",
+      "source_type": "music_criticism_archive",
+      "audit_use": "Period criticism context for Is This It as a defining 2000s indie-rock event.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Period criticism context for Is This It as a defining 2000s indie-rock event."
+    },
+    "britannica_strokes": {
+      "title": "The Strokes",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Strokes",
+      "source_type": "reference",
+      "audit_use": "The Strokes and early-2000s garage-rock revival framing.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "The Strokes and early-2000s garage-rock revival framing."
+    },
+    "rockhall_white_stripes": {
+      "title": "The White Stripes",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/white-stripes/",
+      "source_type": "museum_reference",
+      "audit_use": "White Stripes as minimal, blues-rooted rock revival and Rock Hall context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "White Stripes as minimal, blues-rooted rock revival and Rock Hall context."
+    },
+    "allmusic_garage_revival": {
+      "title": "Garage Rock Revival",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/garage-rock-revival-ma0000012343",
+      "source_type": "music_reference",
+      "audit_use": "Supplemental style markers for garage-rock revival.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supplemental style markers for garage-rock revival."
+    },
+    "britannica_white_stripes": {
+      "title": "The White Stripes",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/White-Stripes",
+      "source_type": "reference",
+      "audit_use": "White Stripes biography and 2000s rock context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "White Stripes biography and 2000s rock context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "079-claim-01",
+      "claim_text": "The garage revival reacted against late-1990s rock polish with short songs, wiry guitar tones, vintage cool, and a back-to-basics myth.",
+      "source_ref_ids": [
+        "079_allmusic_garage_revival",
+        "079_pitchfork_isthisit"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_10/archetype_079"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "079-claim-02",
+      "claim_text": "The Strokes' Is This It anchors the New York side through dry vocals, clipped riffs, compressed cool, and songs that sound casual but are tightly designed.",
+      "source_ref_ids": [
+        "079_strokes_official",
+        "079_pitchfork_isthisit"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_079",
+        "artist:the-strokes",
+        "album:the-strokes-is-this-it"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "079-claim-03",
+      "claim_text": "The White Stripes anchor the raw blues-garage branch, proving the revival could feel primitive, theatrical, and massive with minimal instrumentation.",
+      "source_ref_ids": [
+        "079_rockhall_whitestripes",
+        "079_allmusic_garage_revival"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_10/archetype_079",
+        "artist:the-white-stripes",
+        "album:the-white-stripes-elephant"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "079-claim-04",
+      "claim_text": "Yeah Yeah Yeahs and The Hives sit near the boundary with post-punk revival and punk showmanship, so the garage signal should stay tied to stripped riff economy.",
+      "source_ref_ids": [
+        "079_allmusic_garage_revival"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "caution",
+        "related_roads_lineage_module"
+      ],
+      "graph_refs": [
+        "family_10/archetype_079",
+        "artist:yeah-yeah-yeahs",
+        "family_10/archetype_080"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "079-garage_revival_rock_is_back_2000s-boundary",
+      "claim_text": "Garage Revival and Rock-Is-Back 2000s's boundary is clearest when dry vocal cool and clipped garage riff appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "079_allmusic_garage_revival",
+        "079_rockhall_whitestripes"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_079",
+        "artist:the-white-stripes",
+        "artist:the-strokes"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "The early-2000s 'rock is back' lane: lean guitars, vintage attitude, and controlled rawness.",
+    "history_capsule": "Garage revival made small, sharp guitar bands feel urgent again after nu-metal, post-grunge, and electronic gloss dominated the edges of rock culture.",
+    "why_it_mattered": "It reset indie-rock style for the 2000s and gave guitar minimalism a new mass memory.",
+    "what_made_it_distinct": "The signal is deliberate reduction: fewer parts, cooler surfaces, tighter riffs, and retro electricity.",
+    "what_to_listen_for": [
+      "dry vocal cool",
+      "clipped garage riff",
+      "minimal arrangement",
+      "vintage amp tone",
+      "short hooky songs"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:the-white-stripes",
+        "example_type": "artist",
+        "display_label": "The White Stripes",
+        "why_this_example_matters": "The White Stripes is a graph-validated anchor for Garage Revival and Rock-Is-Back 2000s; use it to hear dry vocal cool.",
+        "what_to_listen_for": [
+          "dry vocal cool",
+          "clipped garage riff"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:the-strokes",
+        "example_type": "artist",
+        "display_label": "The Strokes",
+        "why_this_example_matters": "The Strokes is a graph-validated anchor for Garage Revival and Rock-Is-Back 2000s; use it to hear clipped garage riff.",
+        "what_to_listen_for": [
+          "clipped garage riff",
+          "minimal arrangement"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-white-stripes-elephant",
+        "example_type": "album",
+        "display_label": "Elephant - The White Stripes",
+        "why_this_example_matters": "Elephant - The White Stripes is a graph-validated anchor for Garage Revival and Rock-Is-Back 2000s; use it to hear minimal arrangement.",
+        "what_to_listen_for": [
+          "minimal arrangement",
+          "vintage amp tone"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-strokes-is-this-it",
+        "example_type": "album",
+        "display_label": "Is This It - The Strokes",
+        "why_this_example_matters": "Is This It - The Strokes is a graph-validated anchor for Garage Revival and Rock-Is-Back 2000s; use it to hear vintage amp tone.",
+        "what_to_listen_for": [
+          "vintage amp tone",
+          "short hooky songs"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-white-stripes-seven-nation-army",
+        "example_type": "song_recording",
+        "display_label": "Seven Nation Army - The White Stripes",
+        "why_this_example_matters": "Seven Nation Army - The White Stripes is a graph-validated anchor for Garage Revival and Rock-Is-Back 2000s; use it to hear short hooky songs.",
+        "what_to_listen_for": [
+          "short hooky songs"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-strokes-last-nite",
+        "example_type": "song_recording",
+        "display_label": "Last Nite - The Strokes",
+        "why_this_example_matters": "Last Nite - The Strokes is a graph-validated anchor for Garage Revival and Rock-Is-Back 2000s; use it to hear dry vocal cool.",
+        "what_to_listen_for": [
+          "dry vocal cool",
+          "clipped garage riff"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_10/archetype_078"
+      ],
+      "after": [
+        "family_10/archetype_080"
+      ],
+      "related": [
+        "family_10/archetype_078",
+        "family_10/archetype_080"
+      ],
+      "copy": "Use Garage Revival and Rock-Is-Back 2000s as a contextual road inside Alternative, Indie, Grunge, Emo; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "079-dyk-1",
+        "copy": "The Strokes and White Stripes are complementary rather than identical anchors.",
+        "source_ref_ids": [
+          "079_allmusic_garage_revival",
+          "079_pitchfork_isthisit"
+        ]
+      },
+      {
+        "card_id": "079-dyk-2",
+        "copy": "The phrase 'rock is back' was media shorthand for a broader early-2000s guitar revival.",
+        "source_ref_ids": [
+          "079_strokes_official",
+          "079_pitchfork_isthisit"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether garage revival and rock-is-back 2000s is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "The early-2000s 'rock is back' lane: lean guitars, vintage attitude, and controlled rawness.",
+      "It reset indie-rock style for the 2000s and gave guitar minimalism a new mass memory.",
+      "The signal is deliberate reduction: fewer parts, cooler surfaces, tighter riffs, and retro electricity."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use garage revival for every 2000s indie band; keep the stripped retro guitar language central.",
+    "personalization_hooks": [
+      {
+        "hook_id": "079-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[079]",
+          "atlas_state.family_affinity[10]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[079] >= 0.65 || atlas_state.family_affinity[10] >= 0.65",
+        "copy_variant": "Your Atlas signals make Garage Revival and Rock-Is-Back 2000s useful as a contextual landmark.",
+        "fallback_copy": "Use Garage Revival and Rock-Is-Back 2000s as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "079-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_10/archetype_079 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_10/archetype_079",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Garage Revival and Rock-Is-Back 2000s before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "079-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_10/archetype_079 || atlas_state.boundary_question_results has boundary_negative for family_10/archetype_079",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Garage Revival and Rock-Is-Back 2000s.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "079-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_10/archetype_079 || atlas_state.related_mission_ids references family_10/archetype_079",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "079-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_10/archetype_079 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_10/archetype_079 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_10/archetype_079",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Garage Revival and Rock-Is-Back 2000s.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_10": {
+        "title": "Normalized canonical graph export, Family 10",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_10/normalized_family_10.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "079_allmusic_garage_revival": {
+        "title": "Garage Rock Revival",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/garage-rock-revival",
+        "source_type": "genre_overview",
+        "audit_use": "Direct support for the early-2000s stripped-down garage-rock revival.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for the early-2000s stripped-down garage-rock revival."
+      },
+      "079_rockhall_whitestripes": {
+        "title": "The White Stripes",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-white-stripes/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports The White Stripes as the raw blues/garage two-piece anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports The White Stripes as the raw blues/garage two-piece anchor."
+      },
+      "079_strokes_official": {
+        "title": "The Strokes",
+        "publisher": "The Strokes",
+        "url": "https://www.thestrokes.com/",
+        "source_type": "official_artist",
+        "audit_use": "Object support for The Strokes and Is This It as New York cool/garage revival anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for The Strokes and Is This It as New York cool/garage revival anchor."
+      },
+      "079_pitchfork_isthisit": {
+        "title": "The Strokes: Is This It",
+        "publisher": "Pitchfork",
+        "url": "https://pitchfork.com/reviews/albums/7537-is-this-it/",
+        "source_type": "music_criticism_archive",
+        "audit_use": "Period criticism context for Is This It as a defining 2000s indie-rock event.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Period criticism context for Is This It as a defining 2000s indie-rock event."
+      },
+      "britannica_strokes": {
+        "title": "The Strokes",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Strokes",
+        "source_type": "reference",
+        "audit_use": "The Strokes and early-2000s garage-rock revival framing.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The Strokes and early-2000s garage-rock revival framing."
+      },
+      "rockhall_white_stripes": {
+        "title": "The White Stripes",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/white-stripes/",
+        "source_type": "museum_reference",
+        "audit_use": "White Stripes as minimal, blues-rooted rock revival and Rock Hall context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "White Stripes as minimal, blues-rooted rock revival and Rock Hall context."
+      },
+      "allmusic_garage_revival": {
+        "title": "Garage Rock Revival",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/garage-rock-revival-ma0000012343",
+        "source_type": "music_reference",
+        "audit_use": "Supplemental style markers for garage-rock revival.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental style markers for garage-rock revival."
+      },
+      "britannica_white_stripes": {
+        "title": "The White Stripes",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/White-Stripes",
+        "source_type": "reference",
+        "audit_use": "White Stripes biography and 2000s rock context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "White Stripes biography and 2000s rock context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "079-claim-01",
+        "claim_text": "The garage revival reacted against late-1990s rock polish with short songs, wiry guitar tones, vintage cool, and a back-to-basics myth.",
+        "source_ref_ids": [
+          "079_allmusic_garage_revival",
+          "079_pitchfork_isthisit"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_10/archetype_079"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "079-claim-02",
+        "claim_text": "The Strokes' Is This It anchors the New York side through dry vocals, clipped riffs, compressed cool, and songs that sound casual but are tightly designed.",
+        "source_ref_ids": [
+          "079_strokes_official",
+          "079_pitchfork_isthisit"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_079",
+          "artist:the-strokes",
+          "album:the-strokes-is-this-it"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "079-claim-03",
+        "claim_text": "The White Stripes anchor the raw blues-garage branch, proving the revival could feel primitive, theatrical, and massive with minimal instrumentation.",
+        "source_ref_ids": [
+          "079_rockhall_whitestripes",
+          "079_allmusic_garage_revival"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_10/archetype_079",
+          "artist:the-white-stripes",
+          "album:the-white-stripes-elephant"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "079-claim-04",
+        "claim_text": "Yeah Yeah Yeahs and The Hives sit near the boundary with post-punk revival and punk showmanship, so the garage signal should stay tied to stripped riff economy.",
+        "source_ref_ids": [
+          "079_allmusic_garage_revival"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "caution",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_10/archetype_079",
+          "artist:yeah-yeah-yeahs",
+          "family_10/archetype_080"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "079-garage_revival_rock_is_back_2000s-boundary",
+        "claim_text": "Garage Revival and Rock-Is-Back 2000s's boundary is clearest when dry vocal cool and clipped garage riff appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "079_allmusic_garage_revival",
+          "079_rockhall_whitestripes"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_079",
+          "artist:the-white-stripes",
+          "artist:the-strokes"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Garage Revival / Rock-Is-Back 2000s: The Strokes, The White Stripes, The Hives, The Vines, Yeah Yeah Yeahs boundary, retro minimal guitar-rock after late-1990s polish.",
+    "selected_sources": [
+      {
+        "source_ref_id": "079_allmusic_garage_revival",
+        "title": "Garage Rock Revival",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/garage-rock-revival",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for the early-2000s stripped-down garage-rock revival."
+      },
+      {
+        "source_ref_id": "079_rockhall_whitestripes",
+        "title": "The White Stripes",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-white-stripes/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports The White Stripes as the raw blues/garage two-piece anchor."
+      },
+      {
+        "source_ref_id": "079_strokes_official",
+        "title": "The Strokes",
+        "publisher": "The Strokes",
+        "url": "https://www.thestrokes.com/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for The Strokes and Is This It as New York cool/garage revival anchor."
+      },
+      {
+        "source_ref_id": "079_pitchfork_isthisit",
+        "title": "The Strokes: Is This It",
+        "publisher": "Pitchfork",
+        "url": "https://pitchfork.com/reviews/albums/7537-is-this-it/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Period criticism context for Is This It as a defining 2000s indie-rock event."
+      },
+      {
+        "source_ref_id": "britannica_strokes",
+        "title": "The Strokes",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Strokes",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The Strokes and early-2000s garage-rock revival framing."
+      },
+      {
+        "source_ref_id": "rockhall_white_stripes",
+        "title": "The White Stripes",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/white-stripes/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "White Stripes as minimal, blues-rooted rock revival and Rock Hall context."
+      },
+      {
+        "source_ref_id": "allmusic_garage_revival",
+        "title": "Garage Rock Revival",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/garage-rock-revival-ma0000012343",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental style markers for garage-rock revival."
+      },
+      {
+        "source_ref_id": "britannica_white_stripes",
+        "title": "The White Stripes",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/White-Stripes",
+        "source_relevance": "example_object_support",
+        "why_fit": "White Stripes biography and 2000s rock context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "079_reject_cbgb",
+        "title": "CBGB: The Unique History",
+        "publisher": "CBGB",
+        "url": "https://www.cbgb.com/about",
+        "source_type": "official_venue",
+        "source_relevance": "weak_context",
+        "why_rejected": "CBGB is lineage/background for New York guitar cool, but not the source-specific 2000s garage revival evidence."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources support the garage revival style directly and ground the two key poles: White Stripes rawness and Strokes urban cool."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 93,
+    "scene_anchor_refs": [
+      "song|white stripes|dead leaves and the dirty ground",
+      "song|strokes|hard to explain",
+      "artist_anchor|raconteurs|raconteurs",
+      "song|hives|hate to say i told you so"
+    ],
+    "ladder_example_refs": [
+      "song|donnas|take it off",
+      "song|arctic monkeys|i bet you look good on the dancefloor",
+      "song|black keys|gold on the ceiling",
+      "album|jet|get born",
+      "artist_anchor|kills|kills",
+      "artist_anchor|greenhornes|greenhornes",
+      "artist_anchor|mooney suzuki|mooney suzuki",
+      "artist_anchor|von bondies|von bondies"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

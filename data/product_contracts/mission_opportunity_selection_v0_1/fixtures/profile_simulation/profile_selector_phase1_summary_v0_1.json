@@ -1,0 +1,692 @@
+{
+  "contract_version": "mission_opportunity_profile_simulation_phase1_summary_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "created_at": "2026-05-29T03:11:47Z",
+  "phase": "selector_only_visible_evidence",
+  "visible_selector_input_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/visible_profile_selector_inputs_v0_1.json",
+  "hidden_oracle_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json",
+  "guardrail": "Selectors may read only visible_selector_input_ref. Hidden oracle is reserved for post-selection evaluation.",
+  "profiles": [
+    {
+      "profile_id": "public_profile_01",
+      "expected_selector_behavior": {
+        "likely_top_mission_types": [
+          "bridge_test",
+          "boundary_test",
+          "evidence_repair_test",
+          "album_container_test"
+        ],
+        "mission_types_that_should_fail_floors": [
+          "artist_depth_test",
+          "song_to_archetype_test"
+        ],
+        "mission_types_that_should_be_suppressed": [
+          "initial_profile_survey"
+        ]
+      }
+    },
+    {
+      "profile_id": "public_profile_05",
+      "expected_selector_behavior": {
+        "likely_top_mission_types": [
+          "boundary_test",
+          "evidence_repair_test",
+          "context_dependence_test",
+          "song_to_archetype_test"
+        ],
+        "mission_types_that_should_fail_floors": [
+          "family_survey"
+        ],
+        "mission_types_that_should_be_suppressed": [
+          "initial_profile_survey"
+        ]
+      }
+    },
+    {
+      "profile_id": "public_profile_06",
+      "expected_selector_behavior": {
+        "likely_top_mission_types": [
+          "context_dependence_test",
+          "boundary_test",
+          "evidence_repair_test",
+          "album_container_test"
+        ],
+        "mission_types_that_should_fail_floors": [
+          "false_nearby_test"
+        ],
+        "mission_types_that_should_be_suppressed": [
+          "initial_profile_survey"
+        ]
+      }
+    }
+  ],
+  "selector_runs": [
+    {
+      "profile_id": "public_profile_01",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_01_selector_output_v0_1.json",
+      "top_5_mission_types": [
+        "boundary_test",
+        "archetype_depth_test",
+        "boundary_test",
+        "artist_depth_test",
+        "false_nearby_test"
+      ],
+      "top_10_mission_types": [
+        "boundary_test",
+        "archetype_depth_test",
+        "boundary_test",
+        "artist_depth_test",
+        "false_nearby_test",
+        "bridge_test",
+        "artist_depth_test",
+        "archetype_depth_test",
+        "context_dependence_test",
+        "false_nearby_test"
+      ],
+      "top_10_target_objects": [
+        "Visible Archetype 016 -> Visible Archetype 106",
+        "Visible Archetype 016",
+        "Visible Archetype 016 -> Visible Archetype 106 (candidate 02)",
+        "Fleetwood Mac",
+        "Hotel California Context Cluster",
+        "Visible Family 3 -> Visible Family 15",
+        "Fleetwood Mac (candidate 02)",
+        "Visible Archetype 016 (candidate 02)",
+        "Hotel California Context Cluster",
+        "Hotel California Context Cluster (candidate 02)"
+      ],
+      "final_heap_size": 25,
+      "candidate_blobs_generated": 83,
+      "candidate_blobs_scored": 67,
+      "candidate_blobs_pruned": 42,
+      "non_generation_mission_types": [
+        "archetype_survey",
+        "initial_profile_survey"
+      ],
+      "duplicate_control_summary": {
+        "exact_duplicate_mission_type_target_count": 0,
+        "duplicate_target_object_count": 4,
+        "mission_type_concentration": [
+          {
+            "mission_type": "artist_depth_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "song_to_archetype_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "gateway_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "archetype_depth_test",
+            "count": 3,
+            "share": 0.12
+          },
+          {
+            "mission_type": "boundary_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "false_nearby_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "family_survey",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "bridge_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "context_dependence_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "exception_scope_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "album_container_test",
+            "count": 1,
+            "share": 0.04
+          }
+        ],
+        "suppressed_exact_duplicate_count": 11,
+        "suppressed_duplicate_examples": [
+          {
+            "mission_type": "boundary_test",
+            "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_00",
+            "target_object_ids": [
+              "016",
+              "106"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "bridge_test",
+            "opportunity_id": "opp_profile-01_bridge_test_bridge_source_positive_target_gap_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_bridge_test_bridge_source_positive_target_gap_eligible_00",
+            "target_object_ids": [
+              "family_3",
+              "family_15"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "exception_scope_test",
+            "opportunity_id": "opp_profile-01_exception_scope_test_recent_surprise_signal_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_exception_scope_test_recent_surprise_signal_eligible_00",
+            "target_object_ids": [
+              "song-hotel-california-1977"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "context_dependence_test",
+            "opportunity_id": "opp_profile-01_context_dependence_test_context_heavy_signals_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_context_dependence_test_context_heavy_signals_eligible_00",
+            "target_object_ids": [
+              "song-hotel-california-1977->106"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "album_container_test",
+            "opportunity_id": "opp_profile-01_album_container_test_one_album_container_signal_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_album_container_test_one_album_container_signal_eligible_00",
+            "target_object_ids": [
+              "album-hotel-california-1976"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "archetype_depth_test",
+            "opportunity_id": "opp_profile-01_archetype_depth_test_strong_archetype_shallow_depth_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+            "target_object_ids": [
+              "016"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "false_nearby_test",
+            "opportunity_id": "opp_profile-01_false_nearby_test_mixed_nearby_boundary_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_false_nearby_test_mixed_nearby_boundary_eligible_00",
+            "target_object_ids": [
+              "song-hotel-california-1977->106"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "artist_depth_test",
+            "opportunity_id": "opp_profile-01_artist_depth_test_one_artist_shallow_depth_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_artist_depth_test_one_artist_shallow_depth_eligible_00",
+            "target_object_ids": [
+              "artist-fleetwood-mac"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "song_to_archetype_test",
+            "opportunity_id": "opp_profile-01_song_to_archetype_test_one_strong_song_weak_archetype_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00",
+            "target_object_ids": [
+              "song-hotel-california-1977"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "gateway_test",
+            "opportunity_id": "opp_profile-01_gateway_test_bridge_source_positive_target_gap_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_gateway_test_bridge_source_positive_target_gap_eligible_00",
+            "target_object_ids": [
+              "family_3"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "family_survey",
+            "opportunity_id": "opp_profile-01_family_survey_family_positive_weak_archetype_clarity_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-01_family_survey_family_positive_weak_archetype_clarity_eligible_00",
+            "target_object_ids": [
+              "family_3"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          }
+        ]
+      },
+      "floor_failure_count": 16
+    },
+    {
+      "profile_id": "public_profile_05",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_05_selector_output_v0_1.json",
+      "top_5_mission_types": [
+        "boundary_test",
+        "archetype_depth_test",
+        "artist_depth_test",
+        "bridge_test",
+        "boundary_test"
+      ],
+      "top_10_mission_types": [
+        "boundary_test",
+        "archetype_depth_test",
+        "artist_depth_test",
+        "bridge_test",
+        "boundary_test",
+        "false_nearby_test",
+        "archetype_depth_test",
+        "artist_depth_test",
+        "context_dependence_test",
+        "false_nearby_test"
+      ],
+      "top_10_target_objects": [
+        "Visible Archetype 044 -> Visible Archetype 006",
+        "Visible Archetype 044",
+        "Kendrick Lamar",
+        "Visible Family 6 -> Visible Family 1",
+        "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)",
+        "Kill Bill Context Cluster",
+        "Visible Archetype 044 (candidate 02)",
+        "Kendrick Lamar (candidate 02)",
+        "Kill Bill Context Cluster",
+        "Kill Bill Context Cluster (candidate 02)"
+      ],
+      "final_heap_size": 25,
+      "candidate_blobs_generated": 83,
+      "candidate_blobs_scored": 67,
+      "candidate_blobs_pruned": 42,
+      "non_generation_mission_types": [
+        "archetype_survey",
+        "initial_profile_survey"
+      ],
+      "duplicate_control_summary": {
+        "exact_duplicate_mission_type_target_count": 0,
+        "duplicate_target_object_count": 3,
+        "mission_type_concentration": [
+          {
+            "mission_type": "archetype_depth_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "artist_depth_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "song_to_archetype_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "gateway_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "boundary_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "false_nearby_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "bridge_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "context_dependence_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "exception_scope_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "album_container_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "family_survey",
+            "count": 1,
+            "share": 0.04
+          }
+        ],
+        "suppressed_exact_duplicate_count": 11,
+        "suppressed_duplicate_examples": [
+          {
+            "mission_type": "boundary_test",
+            "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+            "target_object_ids": [
+              "044",
+              "006"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "bridge_test",
+            "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00",
+            "target_object_ids": [
+              "family_6",
+              "family_1"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "exception_scope_test",
+            "opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_exception_scope_test_recent_surprise_signal_eligible_00",
+            "target_object_ids": [
+              "sza-kill-bill"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "context_dependence_test",
+            "opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00",
+            "target_object_ids": [
+              "sza-kill-bill->006"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "album_container_test",
+            "opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_album_container_test_one_album_container_signal_eligible_00",
+            "target_object_ids": [
+              "sza-ctrl"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "archetype_depth_test",
+            "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+            "target_object_ids": [
+              "044"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "false_nearby_test",
+            "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00",
+            "target_object_ids": [
+              "sza-kill-bill->006"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "artist_depth_test",
+            "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00",
+            "target_object_ids": [
+              "kendrick-lamar"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "song_to_archetype_test",
+            "opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00",
+            "target_object_ids": [
+              "sza-kill-bill"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "gateway_test",
+            "opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_gateway_test_bridge_source_positive_target_gap_eligible_00",
+            "target_object_ids": [
+              "family_6"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "family_survey",
+            "opportunity_id": "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-05_family_survey_family_positive_weak_archetype_clarity_eligible_00",
+            "target_object_ids": [
+              "family_6"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          }
+        ]
+      },
+      "floor_failure_count": 16
+    },
+    {
+      "profile_id": "public_profile_06",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_06_selector_output_v0_1.json",
+      "top_5_mission_types": [
+        "bridge_test",
+        "artist_depth_test",
+        "boundary_test",
+        "bridge_test",
+        "context_dependence_test"
+      ],
+      "top_10_mission_types": [
+        "bridge_test",
+        "artist_depth_test",
+        "boundary_test",
+        "bridge_test",
+        "context_dependence_test",
+        "artist_depth_test",
+        "exception_scope_test",
+        "archetype_depth_test",
+        "album_container_test",
+        "context_dependence_test"
+      ],
+      "top_10_target_objects": [
+        "Visible Family 15 -> Visible Family 12",
+        "Lin-Manuel Miranda",
+        "Visible Archetype 106 -> Visible Archetype 016",
+        "Visible Family 15 -> Visible Family 12 (candidate 02)",
+        "Bohemian Rhapsody Context Cluster",
+        "Lin-Manuel Miranda (candidate 02)",
+        "Bohemian Rhapsody",
+        "Visible Archetype 106",
+        "Bohemian Rhapsody Album Context",
+        "Bohemian Rhapsody Context Cluster (candidate 02)"
+      ],
+      "final_heap_size": 25,
+      "candidate_blobs_generated": 84,
+      "candidate_blobs_scored": 65,
+      "candidate_blobs_pruned": 40,
+      "non_generation_mission_types": [
+        "archetype_survey",
+        "initial_profile_survey"
+      ],
+      "duplicate_control_summary": {
+        "exact_duplicate_mission_type_target_count": 0,
+        "duplicate_target_object_count": 4,
+        "mission_type_concentration": [
+          {
+            "mission_type": "artist_depth_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "song_to_archetype_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "gateway_test",
+            "count": 4,
+            "share": 0.16
+          },
+          {
+            "mission_type": "bridge_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "context_dependence_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "exception_scope_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "archetype_depth_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "album_container_test",
+            "count": 2,
+            "share": 0.08
+          },
+          {
+            "mission_type": "boundary_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "false_nearby_test",
+            "count": 1,
+            "share": 0.04
+          },
+          {
+            "mission_type": "family_survey",
+            "count": 1,
+            "share": 0.04
+          }
+        ],
+        "suppressed_exact_duplicate_count": 11,
+        "suppressed_duplicate_examples": [
+          {
+            "mission_type": "boundary_test",
+            "opportunity_id": "opp_profile-06_boundary_test_mixed_nearby_boundary_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_boundary_test_mixed_nearby_boundary_eligible_00",
+            "target_object_ids": [
+              "106",
+              "016"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "bridge_test",
+            "opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_00",
+            "target_object_ids": [
+              "family_15",
+              "family_12"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "exception_scope_test",
+            "opportunity_id": "opp_profile-06_exception_scope_test_recent_surprise_signal_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_exception_scope_test_recent_surprise_signal_eligible_00",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "context_dependence_test",
+            "opportunity_id": "opp_profile-06_context_dependence_test_context_heavy_signals_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_context_dependence_test_context_heavy_signals_eligible_00",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975->016"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "album_container_test",
+            "opportunity_id": "opp_profile-06_album_container_test_one_album_container_signal_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_album_container_test_one_album_container_signal_eligible_00",
+            "target_object_ids": [
+              "album_sidecar_song-bohemian-rhapsody-1975"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "archetype_depth_test",
+            "opportunity_id": "opp_profile-06_archetype_depth_test_strong_archetype_shallow_depth_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+            "target_object_ids": [
+              "106"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "false_nearby_test",
+            "opportunity_id": "opp_profile-06_false_nearby_test_mixed_nearby_boundary_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_false_nearby_test_mixed_nearby_boundary_eligible_00",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975->016"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "artist_depth_test",
+            "opportunity_id": "opp_profile-06_artist_depth_test_one_artist_shallow_depth_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_artist_depth_test_one_artist_shallow_depth_eligible_00",
+            "target_object_ids": [
+              "lin-manuel-miranda"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "song_to_archetype_test",
+            "opportunity_id": "opp_profile-06_song_to_archetype_test_one_strong_song_weak_archetype_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_song_to_archetype_test_one_strong_song_weak_archetype_eligible_00",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "gateway_test",
+            "opportunity_id": "opp_profile-06_gateway_test_bridge_source_positive_target_gap_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_gateway_test_bridge_source_positive_target_gap_eligible_00",
+            "target_object_ids": [
+              "family_15"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          },
+          {
+            "mission_type": "family_survey",
+            "opportunity_id": "opp_profile-06_family_survey_family_positive_weak_archetype_clarity_eligible_01",
+            "duplicate_of_opportunity_id": "opp_profile-06_family_survey_family_positive_weak_archetype_clarity_eligible_00",
+            "target_object_ids": [
+              "family_15"
+            ],
+            "reason": "exact mission_type + target_object_ids duplicate suppressed"
+          }
+        ]
+      },
+      "floor_failure_count": 19
+    }
+  ]
+}

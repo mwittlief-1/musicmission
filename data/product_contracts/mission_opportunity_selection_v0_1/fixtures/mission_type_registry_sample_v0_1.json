@@ -1,0 +1,543 @@
+{
+  "contract_version": "mission_type_registry_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "runtime_allowed": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "global_top_k_opportunities": 25,
+  "mission_types": [
+    {
+      "mission_type": "initial_profile_survey",
+      "value_band": "low",
+      "score_floor": 0.22,
+      "score_ceiling": 0.42,
+      "floor_summary": "Low usable signal or low family/archetype coverage with low-risk representative material.",
+      "ceiling_summary": "Low-value early calibration, dominated once richer evidence opportunities exist.",
+      "required_blob_shape": {
+        "target_object_types": ["family", "archetype"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": false,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": true
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.22,
+        "mission_fit_score": 0.22,
+        "readiness_score": 0.2,
+        "learning_value_score": 0.24,
+        "risk_penalty": 0.06,
+        "repetition_penalty": 0.03,
+        "complexity_penalty": 0.03
+      },
+      "candidate_generation_caps": {
+        "max_targets": 12,
+        "max_candidates_per_target": 3,
+        "batch_size": 12,
+        "max_candidates_total": 36,
+        "cap_reason": "Synthetic readiness cap for low-value survey opportunities."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "family_survey",
+      "value_band": "lower_medium",
+      "score_floor": 0.36,
+      "score_ceiling": 0.56,
+      "floor_summary": "Target family has uneven evidence and enough representative archetypes for breadth.",
+      "ceiling_summary": "Breadth-first family learning; useful but capped below focused medium opportunities.",
+      "required_blob_shape": {
+        "target_object_types": ["family"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": false,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": true
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.36,
+        "mission_fit_score": 0.22,
+        "readiness_score": 0.18,
+        "learning_value_score": 0.18,
+        "risk_penalty": 0.03,
+        "repetition_penalty": 0.02,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 18,
+        "max_candidates_per_target": 4,
+        "batch_size": 18,
+        "max_candidates_total": 72,
+        "cap_reason": "Family survey expands by archetype spread and needs a hard target cap."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "archetype_survey",
+      "value_band": "medium",
+      "score_floor": 0.5,
+      "score_ceiling": 0.7,
+      "floor_summary": "Target archetype has low direct evidence and enough representative candidates.",
+      "ceiling_summary": "Focused archetype learning with moderate upside.",
+      "required_blob_shape": {
+        "target_object_types": ["archetype"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": true
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.5,
+        "mission_fit_score": 0.2,
+        "readiness_score": 0.14,
+        "learning_value_score": 0.12,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 30,
+        "max_candidates_per_target": 5,
+        "batch_size": 20,
+        "max_candidates_total": 150,
+        "cap_reason": "Archetype survey is target-scoped and representative-candidate bounded."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "gateway_test",
+      "value_band": "medium",
+      "score_floor": 0.5,
+      "score_ceiling": 0.68,
+      "floor_summary": "Under-tested target has an accessible gateway and representative follow-up.",
+      "ceiling_summary": "Path-first discovery with moderate upside.",
+      "required_blob_shape": {
+        "target_object_types": ["family", "archetype"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": true
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.5,
+        "mission_fit_score": 0.18,
+        "readiness_score": 0.18,
+        "learning_value_score": 0.1,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 50,
+        "max_candidates_per_target": 5,
+        "batch_size": 25,
+        "max_candidates_total": 250,
+        "cap_reason": "Gateway search can expand quickly across under-tested targets."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "song_to_archetype_test",
+      "value_band": "medium",
+      "score_floor": 0.52,
+      "score_ceiling": 0.72,
+      "floor_summary": "One positive seed song has low surrounding archetype evidence and same-archetype candidates.",
+      "ceiling_summary": "Useful scope test from song-level signal to archetype-level fit.",
+      "required_blob_shape": {
+        "target_object_types": ["song", "archetype"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.52,
+        "mission_fit_score": 0.2,
+        "readiness_score": 0.12,
+        "learning_value_score": 0.12,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 40,
+        "max_candidates_per_target": 4,
+        "batch_size": 20,
+        "max_candidates_total": 160,
+        "cap_reason": "Seed-song expansion is bounded by same-archetype comparators."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "artist_depth_test",
+      "value_band": "high",
+      "score_floor": 0.65,
+      "score_ceiling": 0.84,
+      "floor_summary": "Artist has positive evidence and enough catalog candidates for depth.",
+      "ceiling_summary": "High-value artist scope learning.",
+      "required_blob_shape": {
+        "target_object_types": ["artist"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.65,
+        "mission_fit_score": 0.15,
+        "readiness_score": 0.08,
+        "learning_value_score": 0.08,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 40,
+        "max_candidates_per_target": 5,
+        "batch_size": 20,
+        "max_candidates_total": 200,
+        "cap_reason": "Artist catalog expansion needs per-artist depth caps."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "album_container_test",
+      "value_band": "high",
+      "score_floor": 0.67,
+      "score_ceiling": 0.86,
+      "floor_summary": "Album has enough song nodes and listener or graph-sidecar reason to test container value.",
+      "ceiling_summary": "High-value album-context learning.",
+      "required_blob_shape": {
+        "target_object_types": ["album"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.67,
+        "mission_fit_score": 0.14,
+        "readiness_score": 0.08,
+        "learning_value_score": 0.07,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 35,
+        "max_candidates_per_target": 5,
+        "batch_size": 20,
+        "max_candidates_total": 175,
+        "cap_reason": "Album-sidecar candidates should be capped before track expansion."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "archetype_depth_test",
+      "value_band": "high",
+      "score_floor": 0.68,
+      "score_ceiling": 0.86,
+      "floor_summary": "Promising archetype has positive signal and supporting/deep/contextual candidates.",
+      "ceiling_summary": "High-value tier-depth learning.",
+      "required_blob_shape": {
+        "target_object_types": ["archetype"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.68,
+        "mission_fit_score": 0.14,
+        "readiness_score": 0.07,
+        "learning_value_score": 0.07,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 35,
+        "max_candidates_per_target": 5,
+        "batch_size": 20,
+        "max_candidates_total": 175,
+        "cap_reason": "Depth candidates are generated from tier gaps, not all archetype members."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "exception_scope_test",
+      "value_band": "high",
+      "score_floor": 0.7,
+      "score_ceiling": 0.88,
+      "floor_summary": "One strong object signal has weak, mixed, or risky surrounding evidence.",
+      "ceiling_summary": "High-value overgeneralization guard.",
+      "required_blob_shape": {
+        "target_object_types": ["song", "album", "artist"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.7,
+        "mission_fit_score": 0.13,
+        "readiness_score": 0.06,
+        "learning_value_score": 0.07,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 40,
+        "max_candidates_per_target": 4,
+        "batch_size": 20,
+        "max_candidates_total": 160,
+        "cap_reason": "Exception scope tests expand around seed objects."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "false_nearby_test",
+      "value_band": "high",
+      "score_floor": 0.7,
+      "score_ceiling": 0.86,
+      "floor_summary": "Known or probable positive area has risky similar candidate and clean control.",
+      "ceiling_summary": "High-value diagnostic similarity test with user-experience risk cap.",
+      "required_blob_shape": {
+        "target_object_types": ["song", "archetype", "song_cluster"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.7,
+        "mission_fit_score": 0.13,
+        "readiness_score": 0.06,
+        "learning_value_score": 0.07,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 30,
+        "max_candidates_per_target": 8,
+        "batch_size": 20,
+        "max_candidates_total": 240,
+        "cap_reason": "False-nearby generation multiplies risky candidates by controls."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "context_dependence_test",
+      "value_band": "high",
+      "score_floor": 0.72,
+      "score_ceiling": 0.88,
+      "floor_summary": "Target has at least four usable mission/song-review signals across context overlays.",
+      "ceiling_summary": "High-value context-vs-music clarification.",
+      "required_blob_shape": {
+        "target_object_types": ["archetype", "artist", "album", "song_cluster"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.72,
+        "mission_fit_score": 0.12,
+        "readiness_score": 0.06,
+        "learning_value_score": 0.06,
+        "risk_penalty": 0.02,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 25,
+        "max_candidates_per_target": 6,
+        "batch_size": 15,
+        "max_candidates_total": 150,
+        "cap_reason": "Context dependence is evidence-rollup gated before candidate expansion."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "bridge_test",
+      "value_band": "very_high",
+      "score_floor": 0.8,
+      "score_ceiling": 0.96,
+      "floor_summary": "Positive source, under-tested target, clean bridge candidates, and endpoint context are available.",
+      "ceiling_summary": "Very high-value graph-area transfer test.",
+      "required_blob_shape": {
+        "target_object_types": ["family_pair", "archetype_pair"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": true,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.8,
+        "mission_fit_score": 0.08,
+        "readiness_score": 0.05,
+        "learning_value_score": 0.04,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 60,
+        "max_candidates_per_target": 10,
+        "batch_size": 25,
+        "max_candidates_total": 600,
+        "cap_reason": "Bridge candidate space is naturally pairwise and must be capped aggressively."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "boundary_test",
+      "value_band": "very_high",
+      "score_floor": 0.82,
+      "score_ceiling": 0.98,
+      "floor_summary": "Nearby objects show mixed reactions and a clear comparison basis.",
+      "ceiling_summary": "Very high-value boundary clarification.",
+      "required_blob_shape": {
+        "target_object_types": ["archetype_pair", "family_pair", "song_cluster"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.82,
+        "mission_fit_score": 0.07,
+        "readiness_score": 0.04,
+        "learning_value_score": 0.04,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 30,
+        "max_candidates_per_target": 8,
+        "batch_size": 15,
+        "max_candidates_total": 240,
+        "cap_reason": "Boundary comparison sets are high value but pairwise."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    },
+    {
+      "mission_type": "evidence_repair_test",
+      "value_band": "very_high",
+      "score_floor": 0.82,
+      "score_ceiling": 0.96,
+      "floor_summary": "Conflict, low confidence, contamination, stale signal, or recent contradiction has clean comparators.",
+      "ceiling_summary": "Very high-value evidence correction.",
+      "required_blob_shape": {
+        "target_object_types": ["family", "archetype", "artist", "album", "song_cluster"],
+        "requires_graph_context": true,
+        "requires_evidence_rollup": true,
+        "requires_affinity_context": true,
+        "requires_risk_context": true,
+        "requires_candidate_generation_summary": true,
+        "requires_floor_details": true,
+        "requires_score_components": true,
+        "requires_bridge_readiness": false,
+        "requires_gateway_availability": false
+      },
+      "scoring_weights": {
+        "mission_type_value": 0.82,
+        "mission_fit_score": 0.07,
+        "readiness_score": 0.04,
+        "learning_value_score": 0.04,
+        "risk_penalty": 0.01,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.01
+      },
+      "candidate_generation_caps": {
+        "max_targets": 25,
+        "max_candidates_per_target": 6,
+        "batch_size": 15,
+        "max_candidates_total": 150,
+        "cap_reason": "Evidence repair should be generated from explicit evidence issues only."
+      },
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false
+    }
+  ]
+}

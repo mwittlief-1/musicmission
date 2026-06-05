@@ -1,0 +1,953 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_02_archetype_009_jangle-pop-folk-rock-precursor_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_2/normalized_family_2.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 2,
+    "family_slug": "beatles-british-invasion-60s-pop-rock",
+    "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+    "archetype_id": "009",
+    "archetype_slug": "jangle-pop-folk-rock-precursor",
+    "canonical_graph_ref": "family_02/archetype_009",
+    "existing_graph_label_name": "Jangle Pop / Folk-Rock Precursor",
+    "editorial_display_title": "Jangle Pop / Folk-Rock Precursor",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:the-byrds",
+        "object_id": "the-byrds",
+        "display_label": "The Byrds",
+        "source_membership_id": "family-2-artist-009-the-byrds",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Key American jangle and folk-rock bridge from British Invasion textures into psych and country-rock.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-hollies",
+        "object_id": "the-hollies",
+        "display_label": "The Hollies",
+        "source_membership_id": "family-2-artist-009-the-hollies",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Harmony/jangle act connecting British Invasion pop to folk-rock textures.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-searchers",
+        "object_id": "the-searchers",
+        "display_label": "The Searchers",
+        "source_membership_id": "family-2-artist-009-the-searchers",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Best artist-level entry for Merseybeat and jangle lane.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:the-searchers-needles-and-pins",
+        "object_id": "the-searchers-needles-and-pins",
+        "display_label": "Needles and Pins - The Searchers",
+        "source_membership_id": "family-2-song-009-the-searchers-needles-and-pins",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Clean Searchers/jangle lane object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-byrds-mr-tambourine-man",
+        "object_id": "the-byrds-mr-tambourine-man",
+        "display_label": "Mr. Tambourine Man - The Byrds",
+        "source_membership_id": "family-2-song-009-the-byrds-mr-tambourine-man",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Key American jangle/folk-rock single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-hollies-bus-stop",
+        "object_id": "the-hollies-bus-stop",
+        "display_label": "Bus Stop - The Hollies",
+        "source_membership_id": "family-2-song-009-the-hollies-bus-stop",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "British harmony-pop and folk-jangle crossover single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-byrds-009",
+        "candidate_id": "survey-f2-artist-the-byrds-009",
+        "object_type": "artist",
+        "display_label": "The Byrds",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-hollies-009",
+        "candidate_id": "survey-f2-artist-the-hollies-009",
+        "object_type": "artist",
+        "display_label": "The Hollies",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-searchers-009",
+        "candidate_id": "survey-f2-artist-the-searchers-009",
+        "object_type": "artist",
+        "display_label": "The Searchers",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-byrds-mr-tambourine-man-009",
+        "candidate_id": "survey-f2-song_recording-the-byrds-mr-tambourine-man-009",
+        "object_type": "song_recording",
+        "display_label": "Mr. Tambourine Man",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-searchers-needles-and-pins-009",
+        "candidate_id": "survey-f2-song_recording-the-searchers-needles-and-pins-009",
+        "object_type": "song_recording",
+        "display_label": "Needles and Pins",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-hollies-bus-stop-009",
+        "candidate_id": "survey-f2-song_recording-the-hollies-bus-stop-009",
+        "object_type": "song_recording",
+        "display_label": "Bus Stop",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_02/archetype_008",
+      "family_02/archetype_010"
+    ],
+    "before_archetype_refs": [
+      "family_02/archetype_008"
+    ],
+    "after_archetype_refs": [
+      "family_02/archetype_010"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_2": {
+      "title": "Normalized canonical graph export, Family 2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_2/normalized_family_2.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "009_rockhall_byrds": {
+      "title": "The Byrds",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-byrds/",
+      "source_type": "museum_reference",
+      "audit_use": "Directly supports the Byrds as the electric 12-string and folk-rock jangle anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Directly supports the Byrds as the electric 12-string and folk-rock jangle anchor."
+    },
+    "009_britannica_folk_rock": {
+      "title": "Folk rock",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/folk-rock",
+      "source_type": "reference",
+      "audit_use": "Frames the electric folk-rock context that jangle pop precedes and overlaps.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Frames the electric folk-rock context that jangle pop precedes and overlaps."
+    },
+    "009_rickenbacker_12_string": {
+      "title": "The 12-String Rickenbacker and the Sound of the Sixties",
+      "publisher": "Rickenbacker",
+      "url": "https://www.rickenbacker.com/history/",
+      "source_type": "instrument_maker_history",
+      "audit_use": "Gives instrument-context support for the chiming 12-string guitar tone central to jangle identity.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Gives instrument-context support for the chiming 12-string guitar tone central to jangle identity."
+    },
+    "009_britannica_beatles": {
+      "title": "The Beatles",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beatles",
+      "source_type": "reference",
+      "audit_use": "Useful context for the British beat-group guitar pop that fed the Searchers/Hollies/Byrds jangle chain.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Useful context for the British beat-group guitar pop that fed the Searchers/Hollies/Byrds jangle chain."
+    },
+    "rockhall_byrds": {
+      "title": "The Byrds",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-byrds/",
+      "source_type": "museum_reference",
+      "audit_use": "Jangle, folk-rock, and electric Dylan-era influence.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Jangle, folk-rock, and electric Dylan-era influence."
+    },
+    "britannica_bob_dylan": {
+      "title": "Bob Dylan",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+      "source_type": "reference",
+      "audit_use": "Dylan biography, folk revival, electric folk-rock, and songwriter influence.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Dylan biography, folk revival, electric folk-rock, and songwriter influence."
+    },
+    "britannica_rock_1960s": {
+      "title": "Rock in the 1960s",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+      "source_type": "reference",
+      "audit_use": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+    },
+    "britannica_beatles": {
+      "title": "The Beatles",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beatles",
+      "source_type": "reference",
+      "audit_use": "Beatles biography, British Invasion, songwriting, and album-era expansion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "009-claim-01-chime-as-identity",
+      "claim_text": "Jangle pop turns bright, ringing guitar tone into the main identity marker, especially through electric 12-string textures.",
+      "source_ref_ids": [
+        "009_rockhall_byrds",
+        "009_rickenbacker_12_string"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_02/archetype_009",
+        "artist:the-byrds"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "009-claim-02-byrds-dylan-conversion",
+      "claim_text": "The Byrds' treatment of Dylan material helped convert folk songcraft into electric band pop without abandoning literate lyric focus.",
+      "source_ref_ids": [
+        "009_rockhall_byrds",
+        "009_britannica_folk_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_02/archetype_009",
+        "song_recording:the-byrds-mr-tambourine-man",
+        "artist:bob-dylan"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "009-claim-03-searchers-hollies-precursor",
+      "claim_text": "The Searchers and Hollies side of the lane supplies harmony-forward British guitar pop before folk-rock fully hardens into a named style.",
+      "source_ref_ids": [
+        "009_britannica_beatles",
+        "009_britannica_folk_rock"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_02/archetype_009",
+        "artist:the-searchers",
+        "artist:the-hollies"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "009-claim-04-indie-afterlife",
+      "claim_text": "Because the key signal is clean melodic guitar shimmer rather than heaviness, this road becomes a source code for later college rock and indie pop.",
+      "source_ref_ids": [
+        "009_rockhall_byrds"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_02/archetype_009",
+        "family_08/archetype_059",
+        "family_10/archetype_072"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "009-jangle_pop_folk_rock_precursor-boundary",
+      "claim_text": "Jangle Pop / Folk-Rock Precursor's boundary is clearest when Ringing 12-string or treble-heavy guitar and High vocal harmonies appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "009_rockhall_byrds",
+        "009_britannica_folk_rock"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_009",
+        "artist:the-byrds",
+        "artist:the-hollies"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "009-jangle_pop_folk_rock_precursor-examples",
+      "claim_text": "The Byrds, The Hollies, Needles and Pins - The Searchers gives Jangle Pop / Folk-Rock Precursor concrete anchors because the examples expose Folk-like lyric shapes over a rock beat inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "009_britannica_folk_rock",
+        "009_rickenbacker_12_string"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_009",
+        "artist:the-byrds",
+        "artist:the-hollies"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A chiming guitar-pop road where 12-string brightness, harmony, and folk-song clarity prepare the ground for folk-rock and later indie jangle.",
+    "history_capsule": "The Searchers and Hollies show the British guitar-pop side; The Byrds turn the sound into a Los Angeles folk-rock engine. The shared thread is sparkle, not weight: ringing guitars, close harmonies, and songs that seem to float even when the beat is firm.",
+    "why_it_mattered": "It makes guitar tone gentle but decisive. Later power pop, college rock, indie pop, and alt-country all return to this kind of chime when they want melody with motion.",
+    "what_made_it_distinct": "The archetype sits between beat groups and folk-rock: less raw than garage, less orchestral than baroque pop, and more guitar-texture-driven than harmony pop alone.",
+    "what_to_listen_for": [
+      "Ringing 12-string or treble-heavy guitar",
+      "High vocal harmonies",
+      "Folk-like lyric shapes over a rock beat",
+      "A feeling of lift rather than punch",
+      "Concise melodic guitar hooks"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:the-byrds",
+        "example_type": "artist",
+        "display_label": "The Byrds",
+        "why_this_example_matters": "The Byrds anchors Jangle Pop / Folk-Rock Precursor by making lyric-centered phrasing and acoustic or piano-led space easier to hear.",
+        "what_to_listen_for": [
+          "Ringing 12-string or treble-heavy guitar",
+          "High vocal harmonies"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:the-hollies",
+        "example_type": "artist",
+        "display_label": "The Hollies",
+        "why_this_example_matters": "The Hollies anchors Jangle Pop / Folk-Rock Precursor by making acoustic or piano-led space and intimate vocal presence easier to hear.",
+        "what_to_listen_for": [
+          "High vocal harmonies",
+          "Folk-like lyric shapes over a rock beat"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-searchers-needles-and-pins",
+        "example_type": "song_recording",
+        "display_label": "Needles and Pins - The Searchers",
+        "why_this_example_matters": "Needles and Pins - The Searchers anchors Jangle Pop / Folk-Rock Precursor by making intimate vocal presence and narrative detail easier to hear.",
+        "what_to_listen_for": [
+          "Folk-like lyric shapes over a rock beat",
+          "A feeling of lift rather than punch"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-byrds-mr-tambourine-man",
+        "example_type": "song_recording",
+        "display_label": "Mr. Tambourine Man - The Byrds",
+        "why_this_example_matters": "Mr. Tambourine Man - The Byrds anchors Jangle Pop / Folk-Rock Precursor by making narrative detail and roots sources carried by personal authorship easier to hear.",
+        "what_to_listen_for": [
+          "A feeling of lift rather than punch",
+          "Concise melodic guitar hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-hollies-bus-stop",
+        "example_type": "song_recording",
+        "display_label": "Bus Stop - The Hollies",
+        "why_this_example_matters": "Bus Stop - The Hollies anchors Jangle Pop / Folk-Rock Precursor by making roots sources carried by personal authorship and lyric-centered phrasing easier to hear.",
+        "what_to_listen_for": [
+          "Concise melodic guitar hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_02/archetype_008"
+      ],
+      "after": [
+        "family_02/archetype_010"
+      ],
+      "related": [
+        "family_02/archetype_008",
+        "family_02/archetype_010"
+      ],
+      "copy": "Use Jangle Pop / Folk-Rock Precursor as a contextual road inside Beatles, British Invasion, 60s Pop-Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "009-dyk-1",
+        "copy": "The word 'jangle' is as much about texture as genre.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_rickenbacker_12_string"
+        ]
+      },
+      {
+        "card_id": "009-dyk-2",
+        "copy": "A quiet record can still be guitar-defined if the chime leads your ear.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_britannica_folk_rock"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether jangle pop / folk-rock precursor is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A chiming guitar-pop road where 12-string brightness, harmony, and folk-song clarity prepare the ground for folk-rock and later indie jangle.",
+      "It makes guitar tone gentle but decisive. Later power pop, college rock, indie pop, and alt-country all return to this kind of chime when they want melody with motion.",
+      "The archetype sits between beat groups and folk-rock: less raw than garage, less orchestral than baroque pop, and more guitar-texture-driven than harmony pop alone."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not fold all folk-rock into jangle; the guitar shimmer has to be doing real explanatory work.",
+    "personalization_hooks": [
+      {
+        "hook_id": "009-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[009]",
+          "atlas_state.family_affinity[2]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[009] >= 0.65 || atlas_state.family_affinity[2] >= 0.65",
+        "copy_variant": "Your Atlas signals make Jangle Pop / Folk-Rock Precursor useful as a contextual landmark.",
+        "fallback_copy": "Use Jangle Pop / Folk-Rock Precursor as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "009-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_02/archetype_009 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_02/archetype_009",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Jangle Pop / Folk-Rock Precursor before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "009-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_02/archetype_009 || atlas_state.boundary_question_results has boundary_negative for family_02/archetype_009",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Jangle Pop / Folk-Rock Precursor.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "009-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_02/archetype_009 || atlas_state.related_mission_ids references family_02/archetype_009",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "009-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_02/archetype_009 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_02/archetype_009 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_02/archetype_009",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Jangle Pop / Folk-Rock Precursor.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_2": {
+        "title": "Normalized canonical graph export, Family 2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_2/normalized_family_2.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "009_rockhall_byrds": {
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_type": "museum_reference",
+        "audit_use": "Directly supports the Byrds as the electric 12-string and folk-rock jangle anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Directly supports the Byrds as the electric 12-string and folk-rock jangle anchor."
+      },
+      "009_britannica_folk_rock": {
+        "title": "Folk rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-rock",
+        "source_type": "reference",
+        "audit_use": "Frames the electric folk-rock context that jangle pop precedes and overlaps.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Frames the electric folk-rock context that jangle pop precedes and overlaps."
+      },
+      "009_rickenbacker_12_string": {
+        "title": "The 12-String Rickenbacker and the Sound of the Sixties",
+        "publisher": "Rickenbacker",
+        "url": "https://www.rickenbacker.com/history/",
+        "source_type": "instrument_maker_history",
+        "audit_use": "Gives instrument-context support for the chiming 12-string guitar tone central to jangle identity.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives instrument-context support for the chiming 12-string guitar tone central to jangle identity."
+      },
+      "009_britannica_beatles": {
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_type": "reference",
+        "audit_use": "Useful context for the British beat-group guitar pop that fed the Searchers/Hollies/Byrds jangle chain.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful context for the British beat-group guitar pop that fed the Searchers/Hollies/Byrds jangle chain."
+      },
+      "rockhall_byrds": {
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_type": "museum_reference",
+        "audit_use": "Jangle, folk-rock, and electric Dylan-era influence.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jangle, folk-rock, and electric Dylan-era influence."
+      },
+      "britannica_bob_dylan": {
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_type": "reference",
+        "audit_use": "Dylan biography, folk revival, electric folk-rock, and songwriter influence.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dylan biography, folk revival, electric folk-rock, and songwriter influence."
+      },
+      "britannica_rock_1960s": {
+        "title": "Rock in the 1960s",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+        "source_type": "reference",
+        "audit_use": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+      },
+      "britannica_beatles": {
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_type": "reference",
+        "audit_use": "Beatles biography, British Invasion, songwriting, and album-era expansion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "009-claim-01-chime-as-identity",
+        "claim_text": "Jangle pop turns bright, ringing guitar tone into the main identity marker, especially through electric 12-string textures.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_rickenbacker_12_string"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "artist:the-byrds"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009-claim-02-byrds-dylan-conversion",
+        "claim_text": "The Byrds' treatment of Dylan material helped convert folk songcraft into electric band pop without abandoning literate lyric focus.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_britannica_folk_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "song_recording:the-byrds-mr-tambourine-man",
+          "artist:bob-dylan"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009-claim-03-searchers-hollies-precursor",
+        "claim_text": "The Searchers and Hollies side of the lane supplies harmony-forward British guitar pop before folk-rock fully hardens into a named style.",
+        "source_ref_ids": [
+          "009_britannica_beatles",
+          "009_britannica_folk_rock"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "artist:the-searchers",
+          "artist:the-hollies"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009-claim-04-indie-afterlife",
+        "claim_text": "Because the key signal is clean melodic guitar shimmer rather than heaviness, this road becomes a source code for later college rock and indie pop.",
+        "source_ref_ids": [
+          "009_rockhall_byrds"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "family_08/archetype_059",
+          "family_10/archetype_072"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009-jangle_pop_folk_rock_precursor-boundary",
+        "claim_text": "Jangle Pop / Folk-Rock Precursor's boundary is clearest when Ringing 12-string or treble-heavy guitar and High vocal harmonies appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "009_rockhall_byrds",
+          "009_britannica_folk_rock"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "artist:the-byrds",
+          "artist:the-hollies"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "009-jangle_pop_folk_rock_precursor-examples",
+        "claim_text": "The Byrds, The Hollies, Needles and Pins - The Searchers gives Jangle Pop / Folk-Rock Precursor concrete anchors because the examples expose Folk-like lyric shapes over a rock beat inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "009_britannica_folk_rock",
+          "009_rickenbacker_12_string"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_009",
+          "artist:the-byrds",
+          "artist:the-hollies"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Jangle Pop / Folk-Rock Precursor: Byrds, Searchers, Hollies, Rickenbacker 12-string, chiming guitars, harmony pop, bridge to folk-rock and indie guitar pop.",
+    "selected_sources": [
+      {
+        "source_ref_id": "009_rockhall_byrds",
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Directly supports the Byrds as the electric 12-string and folk-rock jangle anchor."
+      },
+      {
+        "source_ref_id": "009_britannica_folk_rock",
+        "title": "Folk rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Frames the electric folk-rock context that jangle pop precedes and overlaps."
+      },
+      {
+        "source_ref_id": "009_rickenbacker_12_string",
+        "title": "The 12-String Rickenbacker and the Sound of the Sixties",
+        "publisher": "Rickenbacker",
+        "url": "https://www.rickenbacker.com/history/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Gives instrument-context support for the chiming 12-string guitar tone central to jangle identity."
+      },
+      {
+        "source_ref_id": "009_britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful context for the British beat-group guitar pop that fed the Searchers/Hollies/Byrds jangle chain."
+      },
+      {
+        "source_ref_id": "rockhall_byrds",
+        "title": "The Byrds",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-byrds/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jangle, folk-rock, and electric Dylan-era influence."
+      },
+      {
+        "source_ref_id": "britannica_bob_dylan",
+        "title": "Bob Dylan",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Bob-Dylan-American-musician",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Dylan biography, folk revival, electric folk-rock, and songwriter influence."
+      },
+      {
+        "source_ref_id": "britannica_rock_1960s",
+        "title": "Rock in the 1960s",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+      },
+      {
+        "source_ref_id": "britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "example_object_support",
+        "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "009_reject_country_rock",
+        "title": "Country rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-rock-ma0000002536",
+        "why_rejected": "It is relevant to the Byrds later, but this archetype is about pre-country-rock chime, harmony, and folk-rock setup.",
+        "source_type": "music_reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 009_britannica_folk_rock anchors the named archetype rather than only its family. Example support: 009_rockhall_byrds, 009_rickenbacker_12_string ties claims to canonical artists, songs, albums, or scene objects. Context support: 009_britannica_beatles is used only for boundary or lineage framing."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 94,
+    "scene_anchor_refs": [
+      "song|byrds|i ll feel a whole lot better",
+      "song|we five|you were on my mind",
+      "song|cyrkle|red rubber ball",
+      "song|beatles|i feel fine"
+    ],
+    "ladder_example_refs": [
+      "song|hollies|bus stop",
+      "song|association|cherish",
+      "song|lovin spoonful|daydream",
+      "song|seekers|georgy girl",
+      "song|beau brummels|laugh laugh",
+      "album|merry go round|merry go round",
+      "song|turtles|outside chance",
+      "song|mojo men|sit down i think i love you"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

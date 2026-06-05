@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/atlas_readout_evidence_brief_v0_1.schema.json",
+  "title": "AtlasReadoutEvidenceBrief v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "atlas_readout_evidence_brief_version",
+    "session_summary",
+    "strong_signal_clusters",
+    "positive_song_affinity_rollup",
+    "tensions_and_questions",
+    "first_mission_batch_summary",
+    "copy_guardrails",
+    "forbidden_claims"
+  ],
+  "properties": {
+    "atlas_readout_evidence_brief_version": {
+      "const": "0.1"
+    },
+    "session_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "survey_response_count",
+        "positive_count",
+        "waypoint_count",
+        "negative_count",
+        "unknown_count",
+        "positive_song_count",
+        "tagged_positive_song_count"
+      ],
+      "properties": {
+        "survey_response_count": {"type": "integer", "minimum": 0},
+        "positive_count": {"type": "integer", "minimum": 0},
+        "waypoint_count": {"type": "integer", "minimum": 0},
+        "negative_count": {"type": "integer", "minimum": 0},
+        "unknown_count": {"type": "integer", "minimum": 0},
+        "positive_song_count": {"type": "integer", "minimum": 0},
+        "tagged_positive_song_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "strong_signal_clusters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/signal_cluster"
+      }
+    },
+    "positive_song_affinity_rollup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "included_reactions",
+        "weighting",
+        "positive_song_count",
+        "tagged_positive_song_count",
+        "missing_affinity_tag_count",
+        "top_affinity_tags"
+      ],
+      "properties": {
+        "source": {"type": "string", "minLength": 1},
+        "included_reactions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "weighting": {
+          "type": "object",
+          "additionalProperties": {"type": "number"}
+        },
+        "positive_song_count": {"type": "integer", "minimum": 0},
+        "tagged_positive_song_count": {"type": "integer", "minimum": 0},
+        "missing_affinity_tag_count": {"type": "integer", "minimum": 0},
+        "top_affinity_tags": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/affinity_tag_rollup"
+          }
+        }
+      }
+    },
+    "tensions_and_questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/tension"
+      }
+    },
+    "first_mission_batch_summary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/mission_summary"
+      }
+    },
+    "copy_guardrails": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "forbidden_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "signal_cluster": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cluster_id",
+        "plain_label",
+        "confidence",
+        "supporting_examples",
+        "scope_note"
+      ],
+      "properties": {
+        "cluster_id": {"type": "string", "minLength": 1},
+        "plain_label": {"type": "string", "minLength": 1},
+        "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+        "supporting_examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "scope_note": {"type": "string", "minLength": 1}
+      }
+    },
+    "affinity_tag_rollup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tag",
+        "facet",
+        "song_count",
+        "weighted_score",
+        "favorite_count",
+        "like_count",
+        "supporting_examples",
+        "safe_interpretation"
+      ],
+      "properties": {
+        "tag": {"type": "string", "minLength": 1},
+        "facet": {"type": "string", "minLength": 1},
+        "song_count": {"type": "integer", "minimum": 0},
+        "weighted_score": {"type": "number", "minimum": 0},
+        "favorite_count": {"type": "integer", "minimum": 0},
+        "like_count": {"type": "integer", "minimum": 0},
+        "supporting_examples": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "safe_interpretation": {"type": "string", "minLength": 1}
+      }
+    },
+    "tension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question_id", "plain_label", "evidence", "readout_instruction"],
+      "properties": {
+        "question_id": {"type": "string", "minLength": 1},
+        "plain_label": {"type": "string", "minLength": 1},
+        "evidence": {"type": "string", "minLength": 1},
+        "readout_instruction": {"type": "string", "minLength": 1}
+      }
+    },
+    "mission_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_id",
+        "mission_type",
+        "readout_label",
+        "risk_level",
+        "test_focus"
+      ],
+      "properties": {
+        "mission_id": {"type": "string", "minLength": 1},
+        "mission_type": {"type": "string", "minLength": 1},
+        "readout_label": {"type": "string", "minLength": 1},
+        "risk_level": {"type": "string", "enum": ["low", "medium", "high"]},
+        "test_focus": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

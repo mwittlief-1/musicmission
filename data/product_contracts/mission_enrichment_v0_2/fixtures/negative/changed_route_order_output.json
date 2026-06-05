@@ -1,0 +1,353 @@
+{
+  "schema_version": "mission_enrichment_output_v0_2",
+  "mission_id": "MIS_ENRICH_BUILD45_RUNTIME_CANDIDATE",
+  "mission_copy": {
+    "title": "Check This Route",
+    "subtitle": "A short test to clarify one part of your map.",
+    "short_description": "This mission uses a fixed route to test whether the current pattern holds when you listen all the way through.",
+    "why_now": "This starts near a strong early region while avoiding already-rated survey songs.",
+    "listen_for": [
+      "Which songs feel immediately useful.",
+      "Which details help or get in the way."
+    ],
+    "mission_hypothesis_user_facing": "If several songs land, this area may deserve more testing. If they split, Cartenza can refine the edge."
+  },
+  "route_item_copy": [
+    {
+      "item_id": "ITEM_BUILD45_02",
+      "pre_play_line": "Use this track to check one part of the mission question.",
+      "why_this_song": "Selected to stretch the same energy pattern into a different sound shape.",
+      "listen_for": [
+        "Whether the main feel pulls you in.",
+        "Whether the details support or distract from the song."
+      ]
+    },
+    {
+      "item_id": "ITEM_BUILD45_01",
+      "pre_play_line": "Use this track to check one part of the mission question.",
+      "why_this_song": "Selected as a nearby test of the current high-energy pattern.",
+      "listen_for": [
+        "Whether the main feel pulls you in.",
+        "Whether the details support or distract from the song."
+      ]
+    }
+  ],
+  "secondary_reaction_tag_candidates": [
+    {
+      "item_id": "ITEM_BUILD45_02",
+      "tags": [
+        {
+          "tag_id": "MOOD_WORKED",
+          "rank": 1,
+          "display_label": "The mood worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "production:rough_mix"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_mood_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "HOOK_WORKED",
+          "rank": 2,
+          "display_label": "The hook worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "production:rough_mix"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_songcraft_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "BUILD_WORKED",
+          "rank": 3,
+          "display_label": "The build worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "production:rough_mix"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_dynamic_shape_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "PRODUCTION_WORKED",
+          "rank": 4,
+          "display_label": "The production worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "production:rough_mix"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_production_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "SOUND_WORKED",
+          "rank": 5,
+          "display_label": "The sound worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "production:rough_mix"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_sound_or_texture_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "GROOVE_WORKED",
+          "rank": 6,
+          "display_label": "The groove worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "production:rough_mix"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_rhythm_body_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "item_id": "ITEM_BUILD45_01",
+      "tags": [
+        {
+          "tag_id": "MOOD_WORKED",
+          "rank": 1,
+          "display_label": "The mood worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "sonic_texture:distorted_guitar"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_mood_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "ENERGY_WORKED",
+          "rank": 2,
+          "display_label": "The energy worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "sonic_texture:distorted_guitar"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_energy_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "HOOK_WORKED",
+          "rank": 3,
+          "display_label": "The hook worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "sonic_texture:distorted_guitar"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_songcraft_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "BUILD_WORKED",
+          "rank": 4,
+          "display_label": "The build worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "sonic_texture:distorted_guitar"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_dynamic_shape_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "SOUND_WORKED",
+          "rank": 5,
+          "display_label": "The sound worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "sonic_texture:distorted_guitar"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_sound_or_texture_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "PRODUCTION_WORKED",
+          "rank": 6,
+          "display_label": "The production worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "sonic_texture:distorted_guitar"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_production_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "post_completion_interpretation_seeds": [
+    {
+      "condition": "mostly_positive",
+      "readout_seed": "This route produced a useful positive signal.",
+      "atlas_inference_hint": "Strengthen supported patterns, but keep the result provisional."
+    },
+    {
+      "condition": "mixed",
+      "readout_seed": "The route split in a useful way.",
+      "atlas_inference_hint": "Separate song, context, and trait-level signals."
+    },
+    {
+      "condition": "mostly_negative",
+      "readout_seed": "This route may mark a boundary.",
+      "atlas_inference_hint": "Weaken nearby assumptions without overgeneralizing."
+    }
+  ],
+  "internal_quality_notes": {
+    "used_song_affinity_tags": [
+      "production:rough_mix",
+      "sonic_texture:distorted_guitar"
+    ],
+    "used_alignment_hints": [
+      "matches_known_positive"
+    ],
+    "avoided_overclaims": [
+      "No final taste claim made."
+    ],
+    "risk_flags": []
+  }
+}

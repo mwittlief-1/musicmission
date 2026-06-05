@@ -1,0 +1,1828 @@
+{
+  "contract_version": "hidden_oracle_evaluation_design_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "created_at": "2026-05-29T03:43:23Z",
+  "phase": "post_selection_oracle_evaluation_design",
+  "runtime_allowed": false,
+  "runtime_listener_evidence_connected": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "opportunity_only": true,
+  "selector_may_read_hidden_oracle": false,
+  "evaluator_may_read_hidden_oracle_after_selection": true,
+  "selector_visible_input_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/visible_profile_selector_inputs_v0_1.json",
+  "hidden_oracle_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json",
+  "selector_output_refs": [
+    "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_01_selector_output_v0_1.json",
+    "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_05_selector_output_v0_1.json",
+    "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_06_selector_output_v0_1.json"
+  ],
+  "evaluation_scope": {
+    "evaluation_subject": "selected_opportunity_blobs_only",
+    "opportunities_per_profile": 10,
+    "construction_simulation_status": "not_implemented",
+    "candidate_song_selection_status": "not_in_scope",
+    "hidden_oracle_use": "post_selection_evaluator_only",
+    "selector_input_rule": "visible_evidence_only",
+    "allowed_outputs": [
+      "opportunity_refs",
+      "oracle_match_summaries",
+      "expected_metric_scores",
+      "aggregate_profile_scores",
+      "evaluation_notes"
+    ]
+  },
+  "metric_definitions": [
+    {
+      "metric_name": "opportunity_relevance",
+      "meaning": "Whether the selected opportunity matches the visible evidence state that the selector was allowed to see.",
+      "uses_hidden_oracle": false,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "hidden_hit_rate_proxy",
+      "meaning": "Post-selection estimate that constructed candidates would include love/like or weak non-failure outcomes.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": false
+    },
+    {
+      "metric_name": "diagnostic_value",
+      "meaning": "Expected chance that the opportunity clarifies an unknown, conflict, boundary, context, or overfit question.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "boundary_discovery_potential",
+      "meaning": "Expected ability to reveal a true like/dislike or like/unknown boundary.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "false_nearby_detection_potential",
+      "meaning": "Expected ability to test misleading graph-near or tag-near similarities.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "context_detection_potential",
+      "meaning": "Expected ability to identify context-heavy or context-only preference behavior.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "overfit_prevention_score",
+      "meaning": "Expected ability to avoid overgeneralizing from one song, artist, album, or context.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "survey_decay_score",
+      "meaning": "Whether low-value survey opportunities disappear when better evidence-driven opportunities exist.",
+      "uses_hidden_oracle": false,
+      "visible_selector_input": true
+    },
+    {
+      "metric_name": "learning_usefulness_score",
+      "meaning": "Composite review score for whether the selected opportunity would likely produce useful learning later.",
+      "uses_hidden_oracle": true,
+      "visible_selector_input": true
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "public_profile_01",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_01_selector_output_v0_1.json",
+      "visible_evidence_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/visible_profile_selector_inputs_v0_1.json#public_profile_01",
+      "hidden_oracle_profile_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01",
+      "visible_expected_top_mission_types": [
+        "bridge_test",
+        "boundary_test",
+        "evidence_repair_test",
+        "album_container_test"
+      ],
+      "oracle_summary": {
+        "primary_archetype_ids": [
+          "016",
+          "022"
+        ],
+        "secondary_archetype_ids": [
+          "071",
+          "113"
+        ],
+        "anti_archetype_ids": [
+          "119",
+          "062"
+        ],
+        "false_nearby_lane_id": "arena_sheen_without_songcraft",
+        "false_nearby_archetype_id": "020",
+        "context_lane_id": "family_car_cd_binder"
+      },
+      "top_opportunity_evaluations": [
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_00",
+            "rank": 1,
+            "mission_type": "boundary_test",
+            "target_object_type": "archetype_pair",
+            "target_object_ids": [
+              "016",
+              "106"
+            ],
+            "target_display_name": "Visible Archetype 016 -> Visible Archetype 106",
+            "final_opportunity_score": 0.9098
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "016"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "106"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.7427,
+            "hidden_hit_rate_proxy": 0.6022,
+            "diagnostic_value": 0.7897,
+            "boundary_discovery_potential": 0.7236,
+            "false_nearby_detection_potential": 0.22,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.7537
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+            "rank": 2,
+            "mission_type": "archetype_depth_test",
+            "target_object_type": "archetype",
+            "target_object_ids": [
+              "016"
+            ],
+            "target_display_name": "Visible Archetype 016",
+            "final_opportunity_score": 0.8561
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "016"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4965,
+            "hidden_hit_rate_proxy": 0.6022,
+            "diagnostic_value": 0.5397,
+            "boundary_discovery_potential": 0.1696,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.28,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5292
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_02",
+            "rank": 3,
+            "mission_type": "boundary_test",
+            "target_object_type": "archetype_pair",
+            "target_object_ids": [
+              "016_candidate_02",
+              "106_candidate_02"
+            ],
+            "target_display_name": "Visible Archetype 016 -> Visible Archetype 106 (candidate 02)",
+            "final_opportunity_score": 0.8487
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "016"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "106"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.7072,
+            "hidden_hit_rate_proxy": 0.6022,
+            "diagnostic_value": 0.7726,
+            "boundary_discovery_potential": 0.7236,
+            "false_nearby_detection_potential": 0.22,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.7421
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_artist_depth_test_one_artist_shallow_depth_eligible_00",
+            "rank": 4,
+            "mission_type": "artist_depth_test",
+            "target_object_type": "artist",
+            "target_object_ids": [
+              "artist-fleetwood-mac"
+            ],
+            "target_display_name": "Fleetwood Mac",
+            "final_opportunity_score": 0.84
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "artist-fleetwood-mac"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5222,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5902,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5382
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_false_nearby_test_mixed_nearby_boundary_eligible_00",
+            "rank": 5,
+            "mission_type": "false_nearby_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "song-hotel-california-1977->106"
+            ],
+            "target_display_name": "Hotel California Context Cluster",
+            "final_opportunity_score": 0.8179
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "106"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 1
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5094,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.724,
+            "boundary_discovery_potential": 0.314,
+            "false_nearby_detection_potential": 0.54,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.435,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5713
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_bridge_test_bridge_source_positive_target_gap_eligible_00",
+            "rank": 6,
+            "mission_type": "bridge_test",
+            "target_object_type": "family_pair",
+            "target_object_ids": [
+              "family_3",
+              "family_15"
+            ],
+            "target_display_name": "Visible Family 3 -> Visible Family 15",
+            "final_opportunity_score": 0.8137
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "family_15"
+            ],
+            "false_nearby_lane_match": true,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6869,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.6828,
+            "boundary_discovery_potential": 0.314,
+            "false_nearby_detection_potential": 0.36,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.475,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5844
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_artist_depth_test_one_artist_shallow_depth_eligible_02",
+            "rank": 7,
+            "mission_type": "artist_depth_test",
+            "target_object_type": "artist",
+            "target_object_ids": [
+              "artist-fleetwood-mac_candidate_02"
+            ],
+            "target_display_name": "Fleetwood Mac (candidate 02)",
+            "final_opportunity_score": 0.8015
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "artist-fleetwood-mac"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4999,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5794,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5309
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+            "rank": 8,
+            "mission_type": "archetype_depth_test",
+            "target_object_type": "archetype",
+            "target_object_ids": [
+              "016_candidate_02"
+            ],
+            "target_display_name": "Visible Archetype 016 (candidate 02)",
+            "final_opportunity_score": 0.7968
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "016"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4621,
+            "hidden_hit_rate_proxy": 0.6022,
+            "diagnostic_value": 0.5231,
+            "boundary_discovery_potential": 0.1696,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.28,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5179
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_context_dependence_test_context_heavy_signals_eligible_00",
+            "rank": 9,
+            "mission_type": "context_dependence_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "song-hotel-california-1977->106"
+            ],
+            "target_display_name": "Hotel California Context Cluster",
+            "final_opportunity_score": 0.7604
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "106"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": true,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 1
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.476,
+            "hidden_hit_rate_proxy": 0.28,
+            "diagnostic_value": 0.7079,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.82,
+            "overfit_prevention_score": 0.395,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.6441
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-01_false_nearby_test_mixed_nearby_boundary_eligible_02",
+            "rank": 10,
+            "mission_type": "false_nearby_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "song-hotel-california-1977->106_candidate_02"
+            ],
+            "target_display_name": "Hotel California Context Cluster (candidate 02)",
+            "final_opportunity_score": 0.7582
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "106"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 1
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4748,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.7073,
+            "boundary_discovery_potential": 0.314,
+            "false_nearby_detection_potential": 0.54,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.435,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5601
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_01"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        }
+      ],
+      "aggregate_metrics": {
+        "opportunity_relevance": 0.5578,
+        "hidden_hit_rate_proxy": 0.3789,
+        "diagnostic_value": 0.6617,
+        "boundary_discovery_potential": 0.301,
+        "false_nearby_detection_potential": 0.228,
+        "context_detection_potential": 0.154,
+        "overfit_prevention_score": 0.436,
+        "survey_decay_score": 1.0,
+        "learning_usefulness_score": 0.5972
+      },
+      "expected_useful_top_mission_types": [
+        "boundary_test",
+        "context_dependence_test",
+        "bridge_test"
+      ],
+      "notes": [
+        "This profile-level evaluation may read the hidden oracle only after selector outputs already exist.",
+        "Hidden oracle summaries are evaluator inputs and remain forbidden as selector inputs."
+      ]
+    },
+    {
+      "profile_id": "public_profile_05",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_05_selector_output_v0_1.json",
+      "visible_evidence_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/visible_profile_selector_inputs_v0_1.json#public_profile_05",
+      "hidden_oracle_profile_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05",
+      "visible_expected_top_mission_types": [
+        "boundary_test",
+        "evidence_repair_test",
+        "context_dependence_test",
+        "song_to_archetype_test"
+      ],
+      "oracle_summary": {
+        "primary_archetype_ids": [
+          "052",
+          "044"
+        ],
+        "secondary_archetype_ids": [
+          "050",
+          "043"
+        ],
+        "anti_archetype_ids": [
+          "016",
+          "061"
+        ],
+        "false_nearby_lane_id": "party_rap_as_total_profile",
+        "false_nearby_archetype_id": "050",
+        "context_lane_id": "late_night_headphones"
+      },
+      "top_opportunity_evaluations": [
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+            "rank": 1,
+            "mission_type": "boundary_test",
+            "target_object_type": "archetype_pair",
+            "target_object_ids": [
+              "044",
+              "006"
+            ],
+            "target_display_name": "Visible Archetype 044 -> Visible Archetype 006",
+            "final_opportunity_score": 0.8924
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "044"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "006"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.7326,
+            "hidden_hit_rate_proxy": 0.5644,
+            "diagnostic_value": 0.7849,
+            "boundary_discovery_potential": 0.7236,
+            "false_nearby_detection_potential": 0.22,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.7436
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+            "rank": 2,
+            "mission_type": "archetype_depth_test",
+            "target_object_type": "archetype",
+            "target_object_ids": [
+              "044"
+            ],
+            "target_display_name": "Visible Archetype 044",
+            "final_opportunity_score": 0.86
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "044"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4988,
+            "hidden_hit_rate_proxy": 0.5644,
+            "diagnostic_value": 0.5408,
+            "boundary_discovery_potential": 0.1696,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.28,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5231
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00",
+            "rank": 3,
+            "mission_type": "artist_depth_test",
+            "target_object_type": "artist",
+            "target_object_ids": [
+              "kendrick-lamar"
+            ],
+            "target_display_name": "Kendrick Lamar",
+            "final_opportunity_score": 0.84
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "kendrick-lamar"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5222,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5902,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5382
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00",
+            "rank": 4,
+            "mission_type": "bridge_test",
+            "target_object_type": "family_pair",
+            "target_object_ids": [
+              "family_6",
+              "family_1"
+            ],
+            "target_display_name": "Visible Family 6 -> Visible Family 1",
+            "final_opportunity_score": 0.8341
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "family_6",
+              "family_1"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5538,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.7235,
+            "boundary_discovery_potential": 0.328,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.41,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5472
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_02",
+            "rank": 5,
+            "mission_type": "boundary_test",
+            "target_object_type": "archetype_pair",
+            "target_object_ids": [
+              "044_candidate_02",
+              "006_candidate_02"
+            ],
+            "target_display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)",
+            "final_opportunity_score": 0.8313
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "044"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "006"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6972,
+            "hidden_hit_rate_proxy": 0.5644,
+            "diagnostic_value": 0.7678,
+            "boundary_discovery_potential": 0.7236,
+            "false_nearby_detection_potential": 0.22,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.732
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00",
+            "rank": 6,
+            "mission_type": "false_nearby_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "sza-kill-bill->006"
+            ],
+            "target_display_name": "Kill Bill Context Cluster",
+            "final_opportunity_score": 0.815
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "sza-kill-bill",
+              "006"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5427,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.7582,
+            "boundary_discovery_potential": 0.328,
+            "false_nearby_detection_potential": 0.54,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.47,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5862
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+            "rank": 7,
+            "mission_type": "archetype_depth_test",
+            "target_object_type": "archetype",
+            "target_object_ids": [
+              "044_candidate_02"
+            ],
+            "target_display_name": "Visible Archetype 044 (candidate 02)",
+            "final_opportunity_score": 0.8122
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [
+              "044"
+            ],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4711,
+            "hidden_hit_rate_proxy": 0.5644,
+            "diagnostic_value": 0.5274,
+            "boundary_discovery_potential": 0.1696,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.28,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5141
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_02",
+            "rank": 8,
+            "mission_type": "artist_depth_test",
+            "target_object_type": "artist",
+            "target_object_ids": [
+              "kendrick-lamar_candidate_02"
+            ],
+            "target_display_name": "Kendrick Lamar (candidate 02)",
+            "final_opportunity_score": 0.8011
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "kendrick-lamar"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4996,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5793,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5309
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00",
+            "rank": 9,
+            "mission_type": "context_dependence_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "sza-kill-bill->006"
+            ],
+            "target_display_name": "Kill Bill Context Cluster",
+            "final_opportunity_score": 0.77
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "sza-kill-bill",
+              "006"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": true,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6966,
+            "hidden_hit_rate_proxy": 0.28,
+            "diagnostic_value": 0.7456,
+            "boundary_discovery_potential": 0.108,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.82,
+            "overfit_prevention_score": 0.53,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.7009
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_02",
+            "rank": 10,
+            "mission_type": "false_nearby_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "sza-kill-bill->006_candidate_02"
+            ],
+            "target_display_name": "Kill Bill Context Cluster (candidate 02)",
+            "final_opportunity_score": 0.7554
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "sza-kill-bill",
+              "006"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5081,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.7415,
+            "boundary_discovery_potential": 0.328,
+            "false_nearby_detection_potential": 0.54,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.47,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5749
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_05"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        }
+      ],
+      "aggregate_metrics": {
+        "opportunity_relevance": 0.5723,
+        "hidden_hit_rate_proxy": 0.3638,
+        "diagnostic_value": 0.6759,
+        "boundary_discovery_potential": 0.3066,
+        "false_nearby_detection_potential": 0.2,
+        "context_detection_potential": 0.154,
+        "overfit_prevention_score": 0.45,
+        "survey_decay_score": 1.0,
+        "learning_usefulness_score": 0.5991
+      },
+      "expected_useful_top_mission_types": [
+        "boundary_test",
+        "context_dependence_test",
+        "false_nearby_test"
+      ],
+      "notes": [
+        "This profile-level evaluation may read the hidden oracle only after selector outputs already exist.",
+        "Hidden oracle summaries are evaluator inputs and remain forbidden as selector inputs."
+      ]
+    },
+    {
+      "profile_id": "public_profile_06",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_06_selector_output_v0_1.json",
+      "visible_evidence_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/visible_profile_selector_inputs_v0_1.json#public_profile_06",
+      "hidden_oracle_profile_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06",
+      "visible_expected_top_mission_types": [
+        "context_dependence_test",
+        "boundary_test",
+        "evidence_repair_test",
+        "album_container_test"
+      ],
+      "oracle_summary": {
+        "primary_archetype_ids": [
+          "104",
+          "114"
+        ],
+        "secondary_archetype_ids": [
+          "106",
+          "088"
+        ],
+        "anti_archetype_ids": [
+          "062",
+          "119"
+        ],
+        "false_nearby_lane_id": "soundtrack_means_everything",
+        "false_nearby_archetype_id": "106",
+        "context_lane_id": "living_room_singalong"
+      },
+      "top_opportunity_evaluations": [
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_00",
+            "rank": 1,
+            "mission_type": "bridge_test",
+            "target_object_type": "family_pair",
+            "target_object_ids": [
+              "family_15",
+              "family_12"
+            ],
+            "target_display_name": "Visible Family 15 -> Visible Family 12",
+            "final_opportunity_score": 0.87
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "family_12"
+            ],
+            "false_nearby_lane_match": true,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5396,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.6986,
+            "boundary_discovery_potential": 0.314,
+            "false_nearby_detection_potential": 0.36,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.375,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5295
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_artist_depth_test_one_artist_shallow_depth_eligible_00",
+            "rank": 2,
+            "mission_type": "artist_depth_test",
+            "target_object_type": "artist",
+            "target_object_ids": [
+              "lin-manuel-miranda"
+            ],
+            "target_display_name": "Lin-Manuel Miranda",
+            "final_opportunity_score": 0.84
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "lin-manuel-miranda"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5222,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5902,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5382
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_boundary_test_mixed_nearby_boundary_eligible_00",
+            "rank": 3,
+            "mission_type": "boundary_test",
+            "target_object_type": "archetype_pair",
+            "target_object_ids": [
+              "106",
+              "016"
+            ],
+            "target_display_name": "Visible Archetype 106 -> Visible Archetype 016",
+            "final_opportunity_score": 0.8298
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [
+              "106"
+            ],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "016"
+            ],
+            "false_nearby_lane_match": true,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6963,
+            "hidden_hit_rate_proxy": 0.3685,
+            "diagnostic_value": 0.7673,
+            "boundary_discovery_potential": 0.7236,
+            "false_nearby_detection_potential": 0.5,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.6965
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_02",
+            "rank": 4,
+            "mission_type": "bridge_test",
+            "target_object_type": "family_pair",
+            "target_object_ids": [
+              "family_15_candidate_02",
+              "family_12_candidate_02"
+            ],
+            "target_display_name": "Visible Family 15 -> Visible Family 12 (candidate 02)",
+            "final_opportunity_score": 0.8091
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "family_12"
+            ],
+            "false_nearby_lane_match": true,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5043,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.6815,
+            "boundary_discovery_potential": 0.314,
+            "false_nearby_detection_potential": 0.36,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.375,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.518
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_context_dependence_test_context_heavy_signals_eligible_00",
+            "rank": 5,
+            "mission_type": "context_dependence_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975->016"
+            ],
+            "target_display_name": "Bohemian Rhapsody Context Cluster",
+            "final_opportunity_score": 0.8073
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "016"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": true,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 1
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6832,
+            "hidden_hit_rate_proxy": 0.28,
+            "diagnostic_value": 0.721,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.82,
+            "overfit_prevention_score": 0.495,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.6925
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_artist_depth_test_one_artist_shallow_depth_eligible_02",
+            "rank": 6,
+            "mission_type": "artist_depth_test",
+            "target_object_type": "artist",
+            "target_object_ids": [
+              "lin-manuel-miranda_candidate_02"
+            ],
+            "target_display_name": "Lin-Manuel Miranda (candidate 02)",
+            "final_opportunity_score": 0.8059
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "lin-manuel-miranda"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.5024,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5807,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.515,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5318
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_exception_scope_test_recent_surprise_signal_eligible_00",
+            "rank": 7,
+            "mission_type": "exception_scope_test",
+            "target_object_type": "song",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975"
+            ],
+            "target_display_name": "Bohemian Rhapsody",
+            "final_opportunity_score": 0.7808
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [],
+            "false_nearby_lane_match": false,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 1
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4529,
+            "hidden_hit_rate_proxy": 0.22,
+            "diagnostic_value": 0.5986,
+            "boundary_discovery_potential": 0.08,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.58,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5417
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+            "rank": 8,
+            "mission_type": "archetype_depth_test",
+            "target_object_type": "archetype",
+            "target_object_ids": [
+              "106"
+            ],
+            "target_display_name": "Visible Archetype 106",
+            "final_opportunity_score": 0.7637
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [
+              "106"
+            ],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [],
+            "false_nearby_lane_match": true,
+            "context_lane_match": false,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.4429,
+            "hidden_hit_rate_proxy": 0.3685,
+            "diagnostic_value": 0.5138,
+            "boundary_discovery_potential": 0.1696,
+            "false_nearby_detection_potential": 0.36,
+            "context_detection_potential": 0.08,
+            "overfit_prevention_score": 0.28,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.4904
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_album_container_test_one_album_container_signal_eligible_00",
+            "rank": 9,
+            "mission_type": "album_container_test",
+            "target_object_type": "album",
+            "target_object_ids": [
+              "album_sidecar_song-bohemian-rhapsody-1975"
+            ],
+            "target_display_name": "Bohemian Rhapsody Album Context",
+            "final_opportunity_score": 0.7504
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "album_sidecar_song-bohemian-rhapsody-1975"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": true,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 0
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6502,
+            "hidden_hit_rate_proxy": 0.28,
+            "diagnostic_value": 0.5651,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.5,
+            "overfit_prevention_score": 0.595,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.5925
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        },
+        {
+          "selected_opportunity_ref": {
+            "opportunity_id": "opp_profile-06_context_dependence_test_context_heavy_signals_eligible_02",
+            "rank": 10,
+            "mission_type": "context_dependence_test",
+            "target_object_type": "song_cluster",
+            "target_object_ids": [
+              "song-bohemian-rhapsody-1975->016_candidate_02"
+            ],
+            "target_display_name": "Bohemian Rhapsody Context Cluster (candidate 02)",
+            "final_opportunity_score": 0.7475
+          },
+          "construction_status": "not_constructed",
+          "production_generation_allowed": false,
+          "candidate_song_selection_status": "not_in_scope",
+          "no_candidate_song_list": true,
+          "oracle_match_summary": {
+            "matched_primary_archetype_ids": [],
+            "matched_secondary_archetype_ids": [],
+            "matched_anti_archetype_ids": [],
+            "matched_unknown_target_ids": [
+              "016"
+            ],
+            "false_nearby_lane_match": false,
+            "context_lane_match": true,
+            "direct_song_reaction_counts": {
+              "love": 0,
+              "like": 0,
+              "ok": 0,
+              "dont_like": 0,
+              "unknown": 1
+            }
+          },
+          "expected_metrics": {
+            "opportunity_relevance": 0.6486,
+            "hidden_hit_rate_proxy": 0.28,
+            "diagnostic_value": 0.7043,
+            "boundary_discovery_potential": 0.094,
+            "false_nearby_detection_potential": 0.08,
+            "context_detection_potential": 0.82,
+            "overfit_prevention_score": 0.495,
+            "survey_decay_score": 1.0,
+            "learning_usefulness_score": 0.6812
+          },
+          "evaluator_use_only_hidden_refs": [
+            "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_profile_oracles_v0_1.json#public_profile_06"
+          ],
+          "notes": [
+            "Post-selection oracle design only.",
+            "No candidate songs or final mission contents are emitted."
+          ]
+        }
+      ],
+      "aggregate_metrics": {
+        "opportunity_relevance": 0.5643,
+        "hidden_hit_rate_proxy": 0.2677,
+        "diagnostic_value": 0.6421,
+        "boundary_discovery_potential": 0.2071,
+        "false_nearby_detection_potential": 0.206,
+        "context_detection_potential": 0.27,
+        "overfit_prevention_score": 0.474,
+        "survey_decay_score": 1.0,
+        "learning_usefulness_score": 0.5812
+      },
+      "expected_useful_top_mission_types": [
+        "boundary_test",
+        "context_dependence_test",
+        "album_container_test"
+      ],
+      "notes": [
+        "This profile-level evaluation may read the hidden oracle only after selector outputs already exist.",
+        "Hidden oracle summaries are evaluator inputs and remain forbidden as selector inputs."
+      ]
+    }
+  ]
+}

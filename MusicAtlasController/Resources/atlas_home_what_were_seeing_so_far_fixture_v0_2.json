@@ -1,0 +1,100 @@
+{
+  "schema_version": "cartenza.atlas_home_what_were_seeing_so_far.v0.2",
+  "source_fixture_id": "synthetic_atlas_home_readout_v0_2",
+  "display_model": {
+    "module_name": "What We're Seeing So Far",
+    "opening_insight": "A first shape is emerging: pressure, motion, and emotional bite are landing more clearly than polish. The map also has a few small pockets worth testing.",
+    "insight_cards": [
+      {
+        "signal_role": "strongest_center",
+        "title": "Guitar-heavy alternative is leading",
+        "body": "The strongest early region is guitar-forward alternative with distortion, urgency, and emotional pressure. Treat this as the center to test first, not a finished identity, and keep the claim focused on sound.",
+        "evidence_examples": ["Nirvana", "Soundgarden", "Pixies"]
+      },
+      {
+        "signal_role": "sound_shape",
+        "title": "The sound shape is converging",
+        "body": "The clearest musical clues are texture and movement: guitar pressure, purposeful distortion, urgent vocal delivery, compact songcraft, and anthems with bite. This layer should stay central.",
+        "evidence_examples": ["Smells Like Teen Spirit", "Waiting Room", "Say It Ain't So"]
+      },
+      {
+        "signal_role": "secondary_branch",
+        "title": "Older alt may be a bridge",
+        "body": "Earlier alternative and post-punk seem connected to the main signal, but not settled. This may become a bridge into the center, or a clean boundary where the map stops stretching.",
+        "evidence_examples": ["Joy Division", "Fugazi", "R.E.M."]
+      },
+      {
+        "signal_role": "sparse_clean_signal",
+        "title": "Small but clean heavy-rock signal",
+        "body": "A few body-and-scale rock examples are landing cleanly, without enough volume to call this a center. The pocket is too coherent to ignore, so it needs more evidence.",
+        "evidence_examples": ["Led Zeppelin", "The Who", "Black Sabbath"]
+      },
+      {
+        "signal_role": "open_question_boundary",
+        "title": "Some fits depend on context",
+        "body": "A few signals may work by song, album, or era rather than as blanket matches. Unknowns stay open; negative evidence stays cautious until future listening narrows the edge.",
+        "evidence_examples": ["Pixies", "R.E.M.", "Wipers"]
+      }
+    ],
+    "setup_line": null
+  },
+  "sparse_signal_debug": {
+    "candidates": [
+      {
+        "label": "classic/heavy rock",
+        "positive_examples": ["Led Zeppelin", "The Who", "Black Sabbath"],
+        "negative_examples": [],
+        "neutral_examples": [],
+        "neutral_evidence_note": "No ok/fine evidence is present in the synthetic fixture for this pocket.",
+        "has_meaningful_graph_coherence": true,
+        "has_future_test_value": true,
+        "eligible": true,
+        "decision": "surface",
+        "surfaced_card_title": "Small but clean heavy-rock signal"
+      },
+      {
+        "label": "older alternative and post-punk",
+        "positive_examples": ["Joy Division", "Fugazi", "R.E.M."],
+        "negative_examples": [],
+        "neutral_examples": ["Murmur"],
+        "neutral_evidence_note": "R.E.M. has mixed artist/album context, so this branch should be framed as unsettled rather than sparse-clean.",
+        "has_meaningful_graph_coherence": true,
+        "has_future_test_value": true,
+        "eligible": false,
+        "decision": "surface_as_secondary_branch",
+        "surfaced_card_title": "Older alt may be a bridge"
+      },
+      {
+        "label": "theatrical/literary indie caution",
+        "positive_examples": [],
+        "negative_examples": ["The Decemberists"],
+        "neutral_examples": [],
+        "neutral_evidence_note": "Negative evidence is treated as caution, not permanent exclusion.",
+        "has_meaningful_graph_coherence": true,
+        "has_future_test_value": false,
+        "eligible": false,
+        "decision": "do_not_surface_as_sparse_clean",
+        "surfaced_card_title": null
+      }
+    ]
+  },
+  "acceptance_audit": {
+    "module_word_count": 236,
+    "opening_word_count": 26,
+    "card_count": 5,
+    "card_roles": [
+      "strongest_center",
+      "sound_shape",
+      "secondary_branch",
+      "sparse_clean_signal",
+      "open_question_boundary"
+    ],
+    "card_title_word_counts": [5, 5, 6, 6, 5],
+    "card_body_word_counts": [33, 26, 31, 30, 28],
+    "evidence_examples_per_card": [3, 3, 3, 3, 3],
+    "sparse_clean_signal_present": true,
+    "forbidden_patterns_present": [],
+    "uses_synthetic_fixture_state_only": true,
+    "runtime_generation_required": false
+  }
+}

@@ -1,0 +1,1395 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_12_archetype_089_90s-pop-teen-pop-trl-monoculture_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_12/normalized_family_12.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 12,
+    "family_slug": "pop-monoculture-and-persona-pop",
+    "family_name": "Pop Monoculture and Persona Pop",
+    "archetype_id": "089",
+    "archetype_slug": "90s-pop-teen-pop-trl-monoculture",
+    "canonical_graph_ref": "family_12/archetype_089",
+    "existing_graph_label_name": "90s Pop / Teen Pop / TRL Monoculture",
+    "editorial_display_title": "90s Pop / Teen Pop / TRL Monoculture",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:mariah-carey",
+        "object_id": "mariah-carey",
+        "display_label": "Mariah Carey",
+        "source_membership_id": "family-12-artist-089-mariah-carey",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "90s vocal-pop monoculture seed with adult-pop and holiday boundary risk.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:britney-spears",
+        "object_id": "britney-spears",
+        "display_label": "Britney Spears",
+        "source_membership_id": "family-12-artist-089-britney-spears",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TRL-era teen-pop and 2000s club-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:backstreet-boys",
+        "object_id": "backstreet-boys",
+        "display_label": "Backstreet Boys",
+        "source_membership_id": "family-12-artist-089-backstreet-boys",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band mass-recognition anchor and karaoke/nostalgia bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:spice-girls",
+        "object_id": "spice-girls",
+        "display_label": "Spice Girls",
+        "source_membership_id": "family-12-artist-089-spice-girls",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Girl-group monoculture anchor with song-first survey value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:christina-aguilera",
+        "object_id": "christina-aguilera",
+        "display_label": "Christina Aguilera",
+        "source_membership_id": "family-12-artist-089-christina-aguilera",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TRL-era vocal-pop anchor with adult-pop ballad spillover.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:celine-dion",
+        "object_id": "celine-dion",
+        "display_label": "Celine Dion",
+        "source_membership_id": "family-12-artist-089-celine-dion",
+        "roles": [
+          "boundary",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing-obvious adult-pop and soundtrack-pop anchor needed for survey balance.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nsync",
+        "object_id": "nsync",
+        "display_label": "NSYNC",
+        "source_membership_id": "family-12-artist-089-nsync",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band monoculture seed; songs overperform catalog depth.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:kelly-clarkson",
+        "object_id": "kelly-clarkson",
+        "display_label": "Kelly Clarkson",
+        "source_membership_id": "family-12-artist-089-kelly-clarkson",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "TV-era pop breakthrough and adult-pop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:pink",
+        "object_id": "pink",
+        "display_label": "Pink",
+        "source_membership_id": "family-12-artist-089-pink",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Durable radio-pop artist with adult-pop and empowerment-song reach.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:justin-timberlake",
+        "object_id": "justin-timberlake",
+        "display_label": "Justin Timberlake",
+        "source_membership_id": "family-12-artist-089-justin-timberlake",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band-to-solo bridge into 2000s club-pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:justin-bieber",
+        "object_id": "justin-bieber",
+        "display_label": "Justin Bieber",
+        "source_membership_id": "family-12-artist-089-justin-bieber",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious teen-idol-to-streaming transition artist.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:one-direction",
+        "object_id": "one-direction",
+        "display_label": "One Direction",
+        "source_membership_id": "family-12-artist-089-one-direction",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious post-TRL boy-band object for teen-pop continuity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:britney-spears-baby-one-more-time",
+        "object_id": "britney-spears-baby-one-more-time",
+        "display_label": "...Baby One More Time - Britney Spears",
+        "source_membership_id": "family-12-album-089-britney-spears-baby-one-more-time",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TRL teen-pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:backstreet-boys-millennium",
+        "object_id": "backstreet-boys-millennium",
+        "display_label": "Millennium - Backstreet Boys",
+        "source_membership_id": "family-12-album-089-backstreet-boys-millennium",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Strongest Backstreet Boys album prompt.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:spice-girls-spice",
+        "object_id": "spice-girls-spice",
+        "display_label": "Spice - Spice Girls",
+        "source_membership_id": "family-12-album-089-spice-girls-spice",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Girl-group monoculture album prompt.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:mariah-carey-daydream",
+        "object_id": "mariah-carey-daydream",
+        "display_label": "Daydream - Mariah Carey",
+        "source_membership_id": "family-12-album-089-mariah-carey-daydream",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "90s Mariah monoculture LP object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:christina-aguilera-christina-aguilera",
+        "object_id": "christina-aguilera-christina-aguilera",
+        "display_label": "Christina Aguilera - Christina Aguilera",
+        "source_membership_id": "family-12-album-089-christina-aguilera-christina-aguilera",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Debut-era vocal teen-pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nsync-no-strings-attached",
+        "object_id": "nsync-no-strings-attached",
+        "display_label": "No Strings Attached - NSYNC",
+        "source_membership_id": "family-12-album-089-nsync-no-strings-attached",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band monoculture album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:mariah-carey-fantasy",
+        "object_id": "mariah-carey-fantasy",
+        "display_label": "Fantasy - Mariah Carey",
+        "source_membership_id": "family-12-song-089-mariah-carey-fantasy",
+        "roles": [
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "90s vocal-pop and hip-hop-pop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:britney-spears-baby-one-more-time",
+        "object_id": "britney-spears-baby-one-more-time",
+        "display_label": "...Baby One More Time - Britney Spears",
+        "source_membership_id": "family-12-song-089-britney-spears-baby-one-more-time",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TRL teen-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:backstreet-boys-i-want-it-that-way",
+        "object_id": "backstreet-boys-i-want-it-that-way",
+        "display_label": "I Want It That Way - Backstreet Boys",
+        "source_membership_id": "family-12-song-089-backstreet-boys-i-want-it-that-way",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band mass-recognition anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:spice-girls-wannabe",
+        "object_id": "spice-girls-wannabe",
+        "display_label": "Wannabe - Spice Girls",
+        "source_membership_id": "family-12-song-089-spice-girls-wannabe",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Girl-group monoculture anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:christina-aguilera-genie-in-a-bottle",
+        "object_id": "christina-aguilera-genie-in-a-bottle",
+        "display_label": "Genie in a Bottle - Christina Aguilera",
+        "source_membership_id": "family-12-song-089-christina-aguilera-genie-in-a-bottle",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TRL vocal teen-pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nsync-bye-bye-bye",
+        "object_id": "nsync-bye-bye-bye",
+        "display_label": "Bye Bye Bye - NSYNC",
+        "source_membership_id": "family-12-song-089-nsync-bye-bye-bye",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band monoculture song prompt.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:kelly-clarkson-since-u-been-gone",
+        "object_id": "kelly-clarkson-since-u-been-gone",
+        "display_label": "Since U Been Gone - Kelly Clarkson",
+        "source_membership_id": "family-12-song-089-kelly-clarkson-since-u-been-gone",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "TV-era pop-rock and adult-pop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:celine-dion-my-heart-will-go-on",
+        "object_id": "celine-dion-my-heart-will-go-on",
+        "display_label": "My Heart Will Go On - Celine Dion",
+        "source_membership_id": "family-12-song-089-celine-dion-my-heart-will-go-on",
+        "roles": [
+          "boundary",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing-obvious adult/soundtrack-pop song anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f12-artist-backstreet-boys-089",
+        "candidate_id": "survey-f12-artist-backstreet-boys-089",
+        "object_type": "artist",
+        "display_label": "Backstreet Boys",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-britney-spears-089",
+        "candidate_id": "survey-f12-artist-britney-spears-089",
+        "object_type": "artist",
+        "display_label": "Britney Spears",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-mariah-carey-089",
+        "candidate_id": "survey-f12-artist-mariah-carey-089",
+        "object_type": "artist",
+        "display_label": "Mariah Carey",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-celine-dion-089",
+        "candidate_id": "survey-f12-artist-celine-dion-089",
+        "object_type": "artist",
+        "display_label": "Celine Dion",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-christina-aguilera-089",
+        "candidate_id": "survey-f12-artist-christina-aguilera-089",
+        "object_type": "artist",
+        "display_label": "Christina Aguilera",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-justin-bieber-089",
+        "candidate_id": "survey-f12-artist-justin-bieber-089",
+        "object_type": "artist",
+        "display_label": "Justin Bieber",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-justin-timberlake-089",
+        "candidate_id": "survey-f12-artist-justin-timberlake-089",
+        "object_type": "artist",
+        "display_label": "Justin Timberlake",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-kelly-clarkson-089",
+        "candidate_id": "survey-f12-artist-kelly-clarkson-089",
+        "object_type": "artist",
+        "display_label": "Kelly Clarkson",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-nsync-089",
+        "candidate_id": "survey-f12-artist-nsync-089",
+        "object_type": "artist",
+        "display_label": "NSYNC",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-pink-089",
+        "candidate_id": "survey-f12-artist-pink-089",
+        "object_type": "artist",
+        "display_label": "Pink",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-spice-girls-089",
+        "candidate_id": "survey-f12-artist-spice-girls-089",
+        "object_type": "artist",
+        "display_label": "Spice Girls",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-one-direction-089",
+        "candidate_id": "survey-f12-artist-one-direction-089",
+        "object_type": "artist",
+        "display_label": "One Direction",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-britney-spears-baby-one-more-time-089",
+        "candidate_id": "survey-f12-album-britney-spears-baby-one-more-time-089",
+        "object_type": "album",
+        "display_label": "...Baby One More Time",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-mariah-carey-daydream-089",
+        "candidate_id": "survey-f12-album-mariah-carey-daydream-089",
+        "object_type": "album",
+        "display_label": "Daydream",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-backstreet-boys-millennium-089",
+        "candidate_id": "survey-f12-album-backstreet-boys-millennium-089",
+        "object_type": "album",
+        "display_label": "Millennium",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-christina-aguilera-christina-aguilera-089",
+        "candidate_id": "survey-f12-album-christina-aguilera-christina-aguilera-089",
+        "object_type": "album",
+        "display_label": "Christina Aguilera",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-nsync-no-strings-attached-089",
+        "candidate_id": "survey-f12-album-nsync-no-strings-attached-089",
+        "object_type": "album",
+        "display_label": "No Strings Attached",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-spice-girls-spice-089",
+        "candidate_id": "survey-f12-album-spice-girls-spice-089",
+        "object_type": "album",
+        "display_label": "Spice",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-britney-spears-baby-one-more-time-089",
+        "candidate_id": "survey-f12-song_recording-britney-spears-baby-one-more-time-089",
+        "object_type": "song_recording",
+        "display_label": "...Baby One More Time",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-backstreet-boys-i-want-it-that-way-089",
+        "candidate_id": "survey-f12-song_recording-backstreet-boys-i-want-it-that-way-089",
+        "object_type": "song_recording",
+        "display_label": "I Want It That Way",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-celine-dion-089",
+        "question_id": "boundary-survey-f12-artist-celine-dion-089",
+        "display_label": "Celine Dion",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-celine-dion-my-heart-will-go-on-089",
+        "question_id": "boundary-survey-f12-song_recording-celine-dion-my-heart-will-go-on-089",
+        "display_label": "My Heart Will Go On",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-celine-dion-089",
+        "probe_id": "probe-survey-f12-artist-celine-dion-089",
+        "entity_type": "artist",
+        "display_label": "Celine Dion",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-celine-dion-my-heart-will-go-on-089",
+        "probe_id": "probe-survey-f12-song_recording-celine-dion-my-heart-will-go-on-089",
+        "entity_type": "song_recording",
+        "display_label": "My Heart Will Go On",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_12/archetype_088",
+      "family_12/archetype_090"
+    ],
+    "before_archetype_refs": [
+      "family_12/archetype_088"
+    ],
+    "after_archetype_refs": [
+      "family_12/archetype_090"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_12": {
+      "title": "Normalized canonical graph export, Family 12",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_12/normalized_family_12.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "allmusic_teen_pop": {
+      "title": "Teen Pop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/teen-pop-ma0000002895",
+      "source_type": "reference",
+      "audit_use": "Defines the youth-market pop lane that supports boy-band and teen-idol listening cues.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Defines the youth-market pop lane that supports boy-band and teen-idol listening cues."
+    },
+    "britannica_britney_spears": {
+      "title": "Britney Spears",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Britney-Spears",
+      "source_type": "reference",
+      "audit_use": "Supports Britney Spears as a core late-1990s teen-pop anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Britney Spears as a core late-1990s teen-pop anchor."
+    },
+    "britannica_mariah_carey": {
+      "title": "Mariah Carey",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Mariah-Carey",
+      "source_type": "reference",
+      "audit_use": "Supports the vocal-pop and R&B crossover side of the 1990s pop monoculture lane.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the vocal-pop and R&B crossover side of the 1990s pop monoculture lane."
+    },
+    "britannica_mtv": {
+      "title": "MTV",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/MTV",
+      "source_type": "reference",
+      "audit_use": "Provides broadcast and video-channel context for the TRL-era monoculture frame.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Provides broadcast and video-channel context for the TRL-era monoculture frame."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "rockhall_whitney_houston": {
+      "title": "Whitney Houston",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/whitney-houston/",
+      "source_type": "museum_reference",
+      "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+    },
+    "rockhall_michael_jackson": {
+      "title": "Michael Jackson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/michael-jackson/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop sovereignty, dance, video, and global star image.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Pop sovereignty, dance, video, and global star image."
+    },
+    "britannica_taylor_swift": {
+      "title": "Taylor Swift",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Taylor-Swift",
+      "source_type": "reference",
+      "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "089-d-01",
+      "claim_text": "This route is about the late-1990s and early-2000s pop ecosystem where teen idols, boy bands, vocal divas, and music-video television amplified one another.",
+      "source_ref_ids": [
+        "allmusic_teen_pop",
+        "britannica_mtv",
+        "britannica_britney_spears"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_12/archetype_089",
+        "artist:britney-spears",
+        "artist:backstreet-boys"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "089-d-02",
+      "claim_text": "Britney Spears makes the teen-pop side concrete: choreographed performance, producer-polished hooks, and a clearly legible adolescent-star image.",
+      "source_ref_ids": [
+        "britannica_britney_spears",
+        "allmusic_teen_pop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:britney-spears",
+        "song_recording:britney-spears-baby-one-more-time"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "089-d-03",
+      "claim_text": "Mariah Carey keeps the route from becoming only teen idol pop, because 1990s monoculture also included virtuosic vocal-pop and R&B crossover records.",
+      "source_ref_ids": [
+        "britannica_mariah_carey",
+        "britannica_mtv"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "caution"
+      ],
+      "graph_refs": [
+        "artist:mariah-carey",
+        "song_recording:mariah-carey-fantasy"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "089-d-04",
+      "claim_text": "Listen for compressed radio brightness, choreographed-group presentation, melismatic vocal display, and songs built for repeated video countdown exposure.",
+      "source_ref_ids": [
+        "allmusic_teen_pop",
+        "britannica_mtv"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_12/archetype_089"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "089-90s_pop_teen_pop_trl_monoculture-boundary",
+      "claim_text": "90s Pop / Teen Pop / TRL Monoculture's boundary is clearest when teen-idol vocal framing and boy-band harmony blocks appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "allmusic_teen_pop",
+        "britannica_britney_spears"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_089",
+        "artist:mariah-carey",
+        "artist:britney-spears"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "089-90s_pop_teen_pop_trl_monoculture-examples",
+      "claim_text": "Mariah Carey, Britney Spears, ...Baby One More Time - Britney Spears gives 90s Pop / Teen Pop / TRL Monoculture concrete anchors because the examples expose bright programmed drums inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "britannica_britney_spears",
+        "britannica_mariah_carey"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_089",
+        "artist:mariah-carey",
+        "artist:britney-spears"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "TRL-era pop where teen idols, boy bands, and vocal divas converged in video-countdown monoculture.",
+    "history_capsule": "The lane covers the late-1990s moment when MTV visibility, mall-pop marketing, R&B vocal style, and producer-led hooks made pop feel unavoidable.",
+    "why_it_mattered": "It maps the last pre-streaming monoculture where youth fandom, television, radio, and CD-era albums reinforced the same stars.",
+    "what_made_it_distinct": "The sound is glossy and direct, but the presentation is equally important: choreography, video identity, and highly repeatable choruses carry the signal.",
+    "what_to_listen_for": [
+      "teen-idol vocal framing",
+      "boy-band harmony blocks",
+      "bright programmed drums",
+      "TRL-ready video hooks",
+      "big R&B-pop vocal peaks"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:mariah-carey",
+        "example_type": "artist",
+        "display_label": "Mariah Carey",
+        "why_this_example_matters": "Mariah Carey anchors 90s Pop / Teen Pop / TRL Monoculture by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "teen-idol vocal framing",
+          "boy-band harmony blocks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:britney-spears",
+        "example_type": "artist",
+        "display_label": "Britney Spears",
+        "why_this_example_matters": "Britney Spears anchors 90s Pop / Teen Pop / TRL Monoculture by making vocal persona and high-definition production easier to hear.",
+        "what_to_listen_for": [
+          "boy-band harmony blocks",
+          "bright programmed drums"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:britney-spears-baby-one-more-time",
+        "example_type": "album",
+        "display_label": "...Baby One More Time - Britney Spears",
+        "why_this_example_matters": "...Baby One More Time - Britney Spears anchors 90s Pop / Teen Pop / TRL Monoculture by making high-definition production and dance or video-ready structure easier to hear.",
+        "what_to_listen_for": [
+          "bright programmed drums",
+          "TRL-ready video hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:backstreet-boys-millennium",
+        "example_type": "album",
+        "display_label": "Millennium - Backstreet Boys",
+        "why_this_example_matters": "Millennium - Backstreet Boys anchors 90s Pop / Teen Pop / TRL Monoculture by making dance or video-ready structure and direct emotional address easier to hear.",
+        "what_to_listen_for": [
+          "TRL-ready video hooks",
+          "big R&B-pop vocal peaks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:mariah-carey-fantasy",
+        "example_type": "song_recording",
+        "display_label": "Fantasy - Mariah Carey",
+        "why_this_example_matters": "Fantasy - Mariah Carey anchors 90s Pop / Teen Pop / TRL Monoculture by making direct emotional address and instant chorus recognition easier to hear.",
+        "what_to_listen_for": [
+          "big R&B-pop vocal peaks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:britney-spears-baby-one-more-time",
+        "example_type": "song_recording",
+        "display_label": "...Baby One More Time - Britney Spears",
+        "why_this_example_matters": "...Baby One More Time - Britney Spears anchors 90s Pop / Teen Pop / TRL Monoculture by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "teen-idol vocal framing",
+          "boy-band harmony blocks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_12/archetype_088"
+      ],
+      "after": [
+        "family_12/archetype_090"
+      ],
+      "related": [
+        "family_12/archetype_088",
+        "family_12/archetype_090"
+      ],
+      "copy": "Use 90s Pop / Teen Pop / TRL Monoculture as a contextual road inside Pop Monoculture and Persona Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "089-dyk-1",
+        "copy": "Mariah Carey is a boundary anchor because she connects 1990s pop monoculture to R&B vocal virtuosity.",
+        "source_ref_ids": [
+          "allmusic_teen_pop",
+          "britannica_mtv",
+          "britannica_britney_spears"
+        ]
+      },
+      {
+        "card_id": "089-dyk-2",
+        "copy": "A song can belong here even if it is not teen pop, as long as it lived in the same countdown/radio ecosystem.",
+        "source_ref_ids": [
+          "britannica_britney_spears",
+          "allmusic_teen_pop"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether 90s pop / teen pop / trl monoculture is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "TRL-era pop where teen idols, boy bands, and vocal divas converged in video-countdown monoculture.",
+      "It maps the last pre-streaming monoculture where youth fandom, television, radio, and CD-era albums reinforced the same stars.",
+      "The sound is glossy and direct, but the presentation is equally important: choreography, video identity, and highly repeatable choruses carry the signal."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not flatten the route into all 1990s pop; adult alternative, hip-hop, and rock radio had separate monocultures.",
+    "personalization_hooks": [
+      {
+        "hook_id": "089-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[089]",
+          "atlas_state.family_affinity[12]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[089] >= 0.65 || atlas_state.family_affinity[12] >= 0.65",
+        "copy_variant": "Your Atlas signals make 90s Pop / Teen Pop / TRL Monoculture useful as a contextual landmark.",
+        "fallback_copy": "Use 90s Pop / Teen Pop / TRL Monoculture as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "089-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_12/archetype_089 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_12/archetype_089",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient 90s Pop / Teen Pop / TRL Monoculture before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "089-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_12/archetype_089 || atlas_state.boundary_question_results has boundary_negative for family_12/archetype_089",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for 90s Pop / Teen Pop / TRL Monoculture.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "089-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_12/archetype_089 || atlas_state.related_mission_ids references family_12/archetype_089",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "089-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_12/archetype_089 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_12/archetype_089 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_12/archetype_089",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for 90s Pop / Teen Pop / TRL Monoculture.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_12": {
+        "title": "Normalized canonical graph export, Family 12",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_12/normalized_family_12.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "allmusic_teen_pop": {
+        "title": "Teen Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/teen-pop-ma0000002895",
+        "source_type": "reference",
+        "audit_use": "Defines the youth-market pop lane that supports boy-band and teen-idol listening cues.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines the youth-market pop lane that supports boy-band and teen-idol listening cues."
+      },
+      "britannica_britney_spears": {
+        "title": "Britney Spears",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Britney-Spears",
+        "source_type": "reference",
+        "audit_use": "Supports Britney Spears as a core late-1990s teen-pop anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Britney Spears as a core late-1990s teen-pop anchor."
+      },
+      "britannica_mariah_carey": {
+        "title": "Mariah Carey",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Mariah-Carey",
+        "source_type": "reference",
+        "audit_use": "Supports the vocal-pop and R&B crossover side of the 1990s pop monoculture lane.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-pop and R&B crossover side of the 1990s pop monoculture lane."
+      },
+      "britannica_mtv": {
+        "title": "MTV",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/MTV",
+        "source_type": "reference",
+        "audit_use": "Provides broadcast and video-channel context for the TRL-era monoculture frame.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides broadcast and video-channel context for the TRL-era monoculture frame."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "rockhall_whitney_houston": {
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_type": "museum_reference",
+        "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      },
+      "rockhall_michael_jackson": {
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop sovereignty, dance, video, and global star image.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      },
+      "britannica_taylor_swift": {
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_type": "reference",
+        "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "089-d-01",
+        "claim_text": "This route is about the late-1990s and early-2000s pop ecosystem where teen idols, boy bands, vocal divas, and music-video television amplified one another.",
+        "source_ref_ids": [
+          "allmusic_teen_pop",
+          "britannica_mtv",
+          "britannica_britney_spears"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_12/archetype_089",
+          "artist:britney-spears",
+          "artist:backstreet-boys"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "089-d-02",
+        "claim_text": "Britney Spears makes the teen-pop side concrete: choreographed performance, producer-polished hooks, and a clearly legible adolescent-star image.",
+        "source_ref_ids": [
+          "britannica_britney_spears",
+          "allmusic_teen_pop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:britney-spears",
+          "song_recording:britney-spears-baby-one-more-time"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "089-d-03",
+        "claim_text": "Mariah Carey keeps the route from becoming only teen idol pop, because 1990s monoculture also included virtuosic vocal-pop and R&B crossover records.",
+        "source_ref_ids": [
+          "britannica_mariah_carey",
+          "britannica_mtv"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "caution"
+        ],
+        "graph_refs": [
+          "artist:mariah-carey",
+          "song_recording:mariah-carey-fantasy"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "089-d-04",
+        "claim_text": "Listen for compressed radio brightness, choreographed-group presentation, melismatic vocal display, and songs built for repeated video countdown exposure.",
+        "source_ref_ids": [
+          "allmusic_teen_pop",
+          "britannica_mtv"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_12/archetype_089"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "089-90s_pop_teen_pop_trl_monoculture-boundary",
+        "claim_text": "90s Pop / Teen Pop / TRL Monoculture's boundary is clearest when teen-idol vocal framing and boy-band harmony blocks appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "allmusic_teen_pop",
+          "britannica_britney_spears"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_089",
+          "artist:mariah-carey",
+          "artist:britney-spears"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "089-90s_pop_teen_pop_trl_monoculture-examples",
+        "claim_text": "Mariah Carey, Britney Spears, ...Baby One More Time - Britney Spears gives 90s Pop / Teen Pop / TRL Monoculture concrete anchors because the examples expose bright programmed drums inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "britannica_britney_spears",
+          "britannica_mariah_carey"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_089",
+          "artist:mariah-carey",
+          "artist:britney-spears"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "90s teen pop TRL monoculture Britney Spears Backstreet Boys Mariah Carey Max Martin MTV",
+    "selected_sources": [
+      {
+        "source_ref_id": "allmusic_teen_pop",
+        "title": "Teen Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/teen-pop-ma0000002895",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines the youth-market pop lane that supports boy-band and teen-idol listening cues."
+      },
+      {
+        "source_ref_id": "britannica_britney_spears",
+        "title": "Britney Spears",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Britney-Spears",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Britney Spears as a core late-1990s teen-pop anchor."
+      },
+      {
+        "source_ref_id": "britannica_mariah_carey",
+        "title": "Mariah Carey",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Mariah-Carey",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the vocal-pop and R&B crossover side of the 1990s pop monoculture lane."
+      },
+      {
+        "source_ref_id": "britannica_mtv",
+        "title": "MTV",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/MTV",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides broadcast and video-channel context for the TRL-era monoculture frame."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "rockhall_whitney_houston",
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      },
+      {
+        "source_ref_id": "rockhall_michael_jackson",
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      },
+      {
+        "source_ref_id": "britannica_taylor_swift",
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_relevance": "example_object_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Heavy-metal history would misframe the archetype and its example objects."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Broad popular-music industry, audience, and stylistic context. Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context. Pop sovereignty, dance, video, and global star image. Modern pop authorship, country-pop crossover, and streaming-era scale."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 112,
+    "scene_anchor_refs": [
+      "song|mariah carey|vision of love",
+      "song|spice girls|2 become 1",
+      "song|backstreet boys|quit playing games with my heart",
+      "song|aqua|barbie girl"
+    ],
+    "ladder_example_refs": [
+      "song|nsync|tearin up my heart",
+      "song|natalie imbruglia|torn",
+      "song|britney spears|baby one more time",
+      "song|98 degrees|because of you",
+      "song|b witched|c est la vie",
+      "song|brandy and monica|boy is mine",
+      "song|smash mouth|all star",
+      "song|destiny s child|bills bills bills"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

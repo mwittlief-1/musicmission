@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/atlas_readout_prompt_test_result_v0_1.schema.json",
+  "title": "AtlasReadoutPromptTestResult v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "model_id",
+    "prompt_format_id",
+    "variant_id",
+    "input_sha256",
+    "prompt_sha256",
+    "output",
+    "automated_validation",
+    "telemetry",
+    "rubric_score_status",
+    "rubric_scores",
+    "gate_decision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cartenza.atlas_readout_prompt_test_result.v0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[A-E]0[1-5]$"
+    },
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_format_id": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "variant_id": {
+      "type": "string",
+      "enum": ["01", "02", "03", "04", "05"]
+    },
+    "input_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "output": {
+      "$ref": "atlas_readout_output_v0_1.schema.json"
+    },
+    "automated_validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_valid", "auto_fail", "fail_reasons", "warnings"],
+      "properties": {
+        "schema_valid": {
+          "type": "boolean"
+        },
+        "auto_fail": {
+          "type": "boolean"
+        },
+        "fail_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "telemetry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["latency_seconds", "attempt_count", "usage", "cost_estimate_usd"],
+      "properties": {
+        "latency_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "attempt_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "usage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "input_tokens",
+            "cached_input_tokens",
+            "output_tokens",
+            "reasoning_output_tokens",
+            "total_tokens"
+          ],
+          "properties": {
+            "input_tokens": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "cached_input_tokens": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "output_tokens": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "reasoning_output_tokens": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "total_tokens": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            }
+          }
+        },
+        "cost_estimate_usd": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["input_usd", "cached_input_usd", "output_usd", "total_usd"],
+          "properties": {
+            "input_usd": {
+              "type": ["number", "null"],
+              "minimum": 0
+            },
+            "cached_input_usd": {
+              "type": ["number", "null"],
+              "minimum": 0
+            },
+            "output_usd": {
+              "type": ["number", "null"],
+              "minimum": 0
+            },
+            "total_usd": {
+              "type": ["number", "null"],
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "rubric_score_status": {
+      "type": "string",
+      "enum": ["not_scored", "human_scored", "evaluator_scored"]
+    },
+    "rubric_scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_faithfulness",
+        "specificity",
+        "cartenza_voice",
+        "humility",
+        "affinity_usefulness",
+        "mission_bridge_quality",
+        "ui_readiness",
+        "brevity",
+        "false_claim_risk",
+        "overall_alpha_readiness"
+      ],
+      "properties": {
+        "evidence_faithfulness": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "specificity": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "cartenza_voice": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "humility": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "affinity_usefulness": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "mission_bridge_quality": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "ui_readiness": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "brevity": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "false_claim_risk": {
+          "$ref": "#/$defs/rubric_score"
+        },
+        "overall_alpha_readiness": {
+          "$ref": "#/$defs/rubric_score"
+        }
+      }
+    },
+    "gate_decision": {
+      "type": "string",
+      "enum": ["pass", "review", "fail"]
+    }
+  },
+  "$defs": {
+    "rubric_score": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "maximum": 5
+    }
+  }
+}

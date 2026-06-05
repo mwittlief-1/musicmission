@@ -1,0 +1,1680 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_01_archetype_004_teen-idol-early-pop-rock-radio_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_1/normalized_family_1.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 1,
+    "family_slug": "early-rock-oldies-doo-wop-pre-beatles-pop",
+    "family_name": "Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop",
+    "archetype_id": "004",
+    "archetype_slug": "teen-idol-early-pop-rock-radio",
+    "canonical_graph_ref": "family_01/archetype_004",
+    "existing_graph_label_name": "Teen Idol / Early Pop-Rock Radio",
+    "editorial_display_title": "Teen Idol and Early Pop-Rock Radio",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:neil-sedaka",
+        "object_id": "neil-sedaka",
+        "display_label": "Neil Sedaka",
+        "source_membership_id": "family-1-artist-004-neil-sedaka",
+        "roles": [
+          "anchor",
+          "bridge",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "He is essential for the songwriter-solo-idol side.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:paul-anka",
+        "object_id": "paul-anka",
+        "display_label": "Paul Anka",
+        "source_membership_id": "family-1-artist-004-paul-anka",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "He is a core early-idol recognition node.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ricky-nelson",
+        "object_id": "ricky-nelson",
+        "display_label": "Ricky Nelson",
+        "source_membership_id": "family-1-artist-004-ricky-nelson",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "He is the prototype TV teen-pop-rock anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bobby-rydell",
+        "object_id": "bobby-rydell",
+        "display_label": "Bobby Rydell",
+        "source_membership_id": "family-1-artist-004-bobby-rydell",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "He is highly useful for *American Bandstand*-style survey logic.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bobby-vee",
+        "object_id": "bobby-vee",
+        "display_label": "Bobby Vee",
+        "source_membership_id": "family-1-artist-004-bobby-vee",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "He is one of the strongest \"classic early-radio pop\" tests.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:frankie-avalon",
+        "object_id": "frankie-avalon",
+        "display_label": "Frankie Avalon",
+        "source_membership_id": "family-1-artist-004-frankie-avalon",
+        "roles": [
+          "anchor",
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "He captures the clean teen-idol / beach-movie side well.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:brenda-lee",
+        "object_id": "brenda-lee",
+        "display_label": "Brenda Lee",
+        "source_membership_id": "family-1-artist-004-brenda-lee",
+        "roles": [
+          "bridge",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "She sits between teen-pop radio, oldies, and early crossover.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:connie-francis",
+        "object_id": "connie-francis",
+        "display_label": "Connie Francis",
+        "source_membership_id": "family-1-artist-004-connie-francis",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "She widens the archetype beyond male idols without leaving the radio lane.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lesley-gore",
+        "object_id": "lesley-gore",
+        "display_label": "Lesley Gore",
+        "source_membership_id": "family-1-artist-004-lesley-gore",
+        "roles": [
+          "bridge",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "She overlaps with 005 but is too central to early-radio pop to ignore here.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:johnny-mathis",
+        "object_id": "johnny-mathis",
+        "display_label": "Johnny Mathis",
+        "source_membership_id": "family-1-artist-004-johnny-mathis",
+        "roles": [
+          "gateway",
+          "contrast"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adult-pop boundary object for users who prefer polished balladry.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bobby-darin",
+        "object_id": "bobby-darin",
+        "display_label": "Bobby Darin",
+        "source_membership_id": "family-1-artist-004-bobby-darin",
+        "roles": [
+          "bridge",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "He helps test slick crossover pop-rock within this lane.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:gene-pitney",
+        "object_id": "gene-pitney",
+        "display_label": "Gene Pitney",
+        "source_membership_id": "family-1-artist-004-gene-pitney",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "He adds dramatic early-60s radio-pop tension.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:johnny-mathis-johnnys-greatest-hits",
+        "object_id": "johnny-mathis-johnnys-greatest-hits",
+        "display_label": "Johnny's Greatest Hits - Johnny Mathis",
+        "source_membership_id": "family-1-album-004-johnny-mathis-johnnys-greatest-hits",
+        "roles": [
+          "compilation_gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Historically important greatest-hits object; adult-pop boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:brenda-lee-brenda-lee",
+        "object_id": "brenda-lee-brenda-lee",
+        "display_label": "Brenda Lee - Brenda Lee",
+        "source_membership_id": "family-1-album-004-brenda-lee-brenda-lee",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Stronger album object than many idol peers have.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lesley-gore-ill-cry-if-i-want-to",
+        "object_id": "lesley-gore-ill-cry-if-i-want-to",
+        "display_label": "I'll Cry If I Want To - Lesley Gore",
+        "source_membership_id": "family-1-album-004-lesley-gore-ill-cry-if-i-want-to",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Sits between 004 and 005.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:neil-sedaka-sings-little-devil-and-his-other-hits",
+        "object_id": "neil-sedaka-sings-little-devil-and-his-other-hits",
+        "display_label": "Neil Sedaka Sings Little Devil and His Other Hits - Neil Sedaka",
+        "source_membership_id": "family-1-album-004-neil-sedaka-sings-little-devil-and-his-other-hits",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Strong LP entry to Sedaka's early run.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ricky-nelson-ricky-sings-again",
+        "object_id": "ricky-nelson-ricky-sings-again",
+        "display_label": "Ricky Sings Again - Ricky Nelson",
+        "source_membership_id": "family-1-album-004-ricky-nelson-ricky-sings-again",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Best straight teen-idol LP anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bobby-vee-take-good-care-of-my-baby",
+        "object_id": "bobby-vee-take-good-care-of-my-baby",
+        "display_label": "Take Good Care of My Baby - Bobby Vee",
+        "source_membership_id": "family-1-album-004-bobby-vee-take-good-care-of-my-baby",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Highly survey-useful idol-pop LP.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bobby-vee-meets-the-crickets",
+        "object_id": "bobby-vee-meets-the-crickets",
+        "display_label": "Bobby Vee Meets the Crickets - Bobby Vee",
+        "source_membership_id": "family-1-album-004-bobby-vee-meets-the-crickets",
+        "roles": [
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Great handoff LP for Buddy/Crickets-adjacent taste.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:paul-anka-paul-anka-sings-his-big-15",
+        "object_id": "paul-anka-paul-anka-sings-his-big-15",
+        "display_label": "Paul Anka Sings His Big 15 - Paul Anka",
+        "source_membership_id": "family-1-album-004-paul-anka-paul-anka-sings-his-big-15",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Better survey gateway than deeper catalog picks.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ricky-nelson-more-songs-by-ricky",
+        "object_id": "ricky-nelson-more-songs-by-ricky",
+        "display_label": "More Songs by Ricky - Ricky Nelson",
+        "source_membership_id": "family-1-album-004-ricky-nelson-more-songs-by-ricky",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Strong second-step Ricky object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:gene-pitney-only-love-can-break-a-heart",
+        "object_id": "gene-pitney-only-love-can-break-a-heart",
+        "display_label": "Only Love Can Break a Heart - Gene Pitney",
+        "source_membership_id": "family-1-album-004-gene-pitney-only-love-can-break-a-heart",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Good dramatic-radio LP object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:neil-sedaka-breaking-up-is-hard-to-do",
+        "object_id": "neil-sedaka-breaking-up-is-hard-to-do",
+        "display_label": "Breaking Up Is Hard to Do - Neil Sedaka",
+        "source_membership_id": "family-1-song-004-neil-sedaka-breaking-up-is-hard-to-do",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "One of the lane's safest prompts.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:paul-anka-diana",
+        "object_id": "paul-anka-diana",
+        "display_label": "Diana - Paul Anka",
+        "source_membership_id": "family-1-song-004-paul-anka-diana",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Massive early-idol anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ricky-nelson-poor-little-fool",
+        "object_id": "ricky-nelson-poor-little-fool",
+        "display_label": "Poor Little Fool - Ricky Nelson",
+        "source_membership_id": "family-1-song-004-ricky-nelson-poor-little-fool",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central teen-idol breakthrough test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ricky-nelson-travelin-man",
+        "object_id": "ricky-nelson-travelin-man",
+        "display_label": "Travelin' Man - Ricky Nelson",
+        "source_membership_id": "family-1-song-004-ricky-nelson-travelin-man",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Huge common-denominator prompt.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:neil-sedaka-calendar-girl",
+        "object_id": "neil-sedaka-calendar-girl",
+        "display_label": "Calendar Girl - Neil Sedaka",
+        "source_membership_id": "family-1-song-004-neil-sedaka-calendar-girl",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pure early-radio-pop test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ricky-nelson-hello-mary-lou",
+        "object_id": "ricky-nelson-hello-mary-lou",
+        "display_label": "Hello Mary Lou - Ricky Nelson",
+        "source_membership_id": "family-1-song-004-ricky-nelson-hello-mary-lou",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "One of the strongest Page 2 songs in the lane.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:brenda-lee-im-sorry",
+        "object_id": "brenda-lee-im-sorry",
+        "display_label": "I'm Sorry - Brenda Lee",
+        "source_membership_id": "family-1-song-004-brenda-lee-im-sorry",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Huge ballad-recognition object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lesley-gore-its-my-party",
+        "object_id": "lesley-gore-its-my-party",
+        "display_label": "It's My Party - Lesley Gore",
+        "source_membership_id": "family-1-song-004-lesley-gore-its-my-party",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Shared 004/005 cornerstone.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:chris-montez-lets-dance",
+        "object_id": "chris-montez-lets-dance",
+        "display_label": "Let's Dance - Chris Montez",
+        "source_membership_id": "family-1-song-004-chris-montez-lets-dance",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "High-recognition hook record.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:johnny-tillotson-poetry-in-motion",
+        "object_id": "johnny-tillotson-poetry-in-motion",
+        "display_label": "Poetry in Motion - Johnny Tillotson",
+        "source_membership_id": "family-1-song-004-johnny-tillotson-poetry-in-motion",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Classic jukebox-radio object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:paul-anka-put-your-head-on-my-shoulder",
+        "object_id": "paul-anka-put-your-head-on-my-shoulder",
+        "display_label": "Put Your Head on My Shoulder - Paul Anka",
+        "source_membership_id": "family-1-song-004-paul-anka-put-your-head-on-my-shoulder",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Soft-pop evergreen.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:brian-hyland-sealed-with-a-kiss",
+        "object_id": "brian-hyland-sealed-with-a-kiss",
+        "display_label": "Sealed with a Kiss - Brian Hyland",
+        "source_membership_id": "family-1-song-004-brian-hyland-sealed-with-a-kiss",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Summer-pop staple.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:tommy-roe-sheila",
+        "object_id": "tommy-roe-sheila",
+        "display_label": "Sheila - Tommy Roe",
+        "source_membership_id": "family-1-song-004-tommy-roe-sheila",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Youth-pop / early pop-rock hinge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:connie-francis-stupid-cupid",
+        "object_id": "connie-francis-stupid-cupid",
+        "display_label": "Stupid Cupid - Connie Francis",
+        "source_membership_id": "family-1-song-004-connie-francis-stupid-cupid",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Adds female teen-pop center.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f1-artist-bobby-rydell-004",
+        "candidate_id": "survey-f1-artist-bobby-rydell-004",
+        "object_type": "artist",
+        "display_label": "Bobby Rydell",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-bobby-vee-004",
+        "candidate_id": "survey-f1-artist-bobby-vee-004",
+        "object_type": "artist",
+        "display_label": "Bobby Vee",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-frankie-avalon-004",
+        "candidate_id": "survey-f1-artist-frankie-avalon-004",
+        "object_type": "artist",
+        "display_label": "Frankie Avalon",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-neil-sedaka-004",
+        "candidate_id": "survey-f1-artist-neil-sedaka-004",
+        "object_type": "artist",
+        "display_label": "Neil Sedaka",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-paul-anka-004",
+        "candidate_id": "survey-f1-artist-paul-anka-004",
+        "object_type": "artist",
+        "display_label": "Paul Anka",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-ricky-nelson-004",
+        "candidate_id": "survey-f1-artist-ricky-nelson-004",
+        "object_type": "artist",
+        "display_label": "Ricky Nelson",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-brenda-lee-004",
+        "candidate_id": "survey-f1-artist-brenda-lee-004",
+        "object_type": "artist",
+        "display_label": "Brenda Lee",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-connie-francis-004",
+        "candidate_id": "survey-f1-artist-connie-francis-004",
+        "object_type": "artist",
+        "display_label": "Connie Francis",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-gene-pitney-004",
+        "candidate_id": "survey-f1-artist-gene-pitney-004",
+        "object_type": "artist",
+        "display_label": "Gene Pitney",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-bobby-darin-004",
+        "candidate_id": "survey-f1-artist-bobby-darin-004",
+        "object_type": "artist",
+        "display_label": "Bobby Darin",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-johnny-mathis-004",
+        "candidate_id": "survey-f1-artist-johnny-mathis-004",
+        "object_type": "artist",
+        "display_label": "Johnny Mathis",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-brian-hyland-004",
+        "candidate_id": "survey-f1-artist-brian-hyland-004",
+        "object_type": "artist",
+        "display_label": "Brian Hyland",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-johnny-tillotson-004",
+        "candidate_id": "survey-f1-artist-johnny-tillotson-004",
+        "object_type": "artist",
+        "display_label": "Johnny Tillotson",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-tommy-roe-004",
+        "candidate_id": "survey-f1-artist-tommy-roe-004",
+        "object_type": "artist",
+        "display_label": "Tommy Roe",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-chris-montez-004",
+        "candidate_id": "survey-f1-artist-chris-montez-004",
+        "object_type": "artist",
+        "display_label": "Chris Montez",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-jimmy-jones-004",
+        "candidate_id": "survey-f1-artist-jimmy-jones-004",
+        "object_type": "artist",
+        "display_label": "Jimmy Jones",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-shelley-fabares-004",
+        "candidate_id": "survey-f1-artist-shelley-fabares-004",
+        "object_type": "artist",
+        "display_label": "Shelley Fabares",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-annette-funicello-004",
+        "candidate_id": "survey-f1-artist-annette-funicello-004",
+        "object_type": "artist",
+        "display_label": "Annette Funicello",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-mark-dinning-004",
+        "candidate_id": "survey-f1-artist-mark-dinning-004",
+        "object_type": "artist",
+        "display_label": "Mark Dinning",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f1-artist-ray-peterson-004",
+        "candidate_id": "survey-f1-artist-ray-peterson-004",
+        "object_type": "artist",
+        "display_label": "Ray Peterson",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f1-artist-johnny-mathis-004",
+        "question_id": "boundary-survey-f1-artist-johnny-mathis-004",
+        "display_label": "Johnny Mathis",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-artist-fabian-004",
+        "question_id": "boundary-survey-f1-artist-fabian-004",
+        "display_label": "Fabian",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-artist-pat-boone-004",
+        "question_id": "boundary-survey-f1-artist-pat-boone-004",
+        "display_label": "Pat Boone",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-mark-dinning-teen-angel-004",
+        "question_id": "boundary-survey-f1-song_recording-mark-dinning-teen-angel-004",
+        "display_label": "Teen Angel",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-ray-peterson-tell-laura-i-love-her-004",
+        "question_id": "boundary-survey-f1-song_recording-ray-peterson-tell-laura-i-love-her-004",
+        "display_label": "Tell Laura I Love Her",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-johnny-mathis-chances-are-004",
+        "question_id": "boundary-survey-f1-song_recording-johnny-mathis-chances-are-004",
+        "display_label": "Chances Are",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-johnny-burnette-solo-dreamin-004",
+        "question_id": "boundary-survey-f1-song_recording-johnny-burnette-solo-dreamin-004",
+        "display_label": "Dreamin'",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-pat-boone-love-letters-in-the-sand-004",
+        "question_id": "boundary-survey-f1-song_recording-pat-boone-love-letters-in-the-sand-004",
+        "display_label": "Love Letters in the Sand",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-fabian-tiger-004",
+        "question_id": "boundary-survey-f1-song_recording-fabian-tiger-004",
+        "display_label": "Tiger",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f1-song_recording-fabian-turn-me-loose-004",
+        "question_id": "boundary-survey-f1-song_recording-fabian-turn-me-loose-004",
+        "display_label": "Turn Me Loose",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f1-artist-johnny-mathis-004",
+        "probe_id": "probe-survey-f1-artist-johnny-mathis-004",
+        "entity_type": "artist",
+        "display_label": "Johnny Mathis",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-artist-fabian-004",
+        "probe_id": "probe-survey-f1-artist-fabian-004",
+        "entity_type": "artist",
+        "display_label": "Fabian",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-artist-pat-boone-004",
+        "probe_id": "probe-survey-f1-artist-pat-boone-004",
+        "entity_type": "artist",
+        "display_label": "Pat Boone",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-mark-dinning-teen-angel-004",
+        "probe_id": "probe-survey-f1-song_recording-mark-dinning-teen-angel-004",
+        "entity_type": "song_recording",
+        "display_label": "Teen Angel",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-ray-peterson-tell-laura-i-love-her-004",
+        "probe_id": "probe-survey-f1-song_recording-ray-peterson-tell-laura-i-love-her-004",
+        "entity_type": "song_recording",
+        "display_label": "Tell Laura I Love Her",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-johnny-mathis-chances-are-004",
+        "probe_id": "probe-survey-f1-song_recording-johnny-mathis-chances-are-004",
+        "entity_type": "song_recording",
+        "display_label": "Chances Are",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-johnny-burnette-solo-dreamin-004",
+        "probe_id": "probe-survey-f1-song_recording-johnny-burnette-solo-dreamin-004",
+        "entity_type": "song_recording",
+        "display_label": "Dreamin'",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-pat-boone-love-letters-in-the-sand-004",
+        "probe_id": "probe-survey-f1-song_recording-pat-boone-love-letters-in-the-sand-004",
+        "entity_type": "song_recording",
+        "display_label": "Love Letters in the Sand",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-fabian-tiger-004",
+        "probe_id": "probe-survey-f1-song_recording-fabian-tiger-004",
+        "entity_type": "song_recording",
+        "display_label": "Tiger",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f1-song_recording-fabian-turn-me-loose-004",
+        "probe_id": "probe-survey-f1-song_recording-fabian-turn-me-loose-004",
+        "entity_type": "song_recording",
+        "display_label": "Turn Me Loose",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_01/archetype_003",
+      "family_01/archetype_005"
+    ],
+    "before_archetype_refs": [
+      "family_01/archetype_003"
+    ],
+    "after_archetype_refs": [
+      "family_01/archetype_005"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_1": {
+      "title": "Normalized canonical graph export, Family 1",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_1/normalized_family_1.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "004_teachrock_dion_teen_idols": {
+      "title": "Dion and the Teen Idols",
+      "publisher": "TeachRock",
+      "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+      "source_type": "educational",
+      "audit_use": "Directly addresses the teen-idol role in mainstreaming rock and roll for young radio and TV audiences.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly addresses the teen-idol role in mainstreaming rock and roll for young radio and TV audiences."
+    },
+    "004_rockhall_ricky_nelson": {
+      "title": "Ricky Nelson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/ricky-nelson/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Ricky Nelson as a TV-mediated teen idol whose records also connect to credible early rock musicianship.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Ricky Nelson as a TV-mediated teen idol whose records also connect to credible early rock musicianship."
+    },
+    "004_britannica_rock_and_roll": {
+      "title": "Rock and roll",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+      "source_type": "reference",
+      "audit_use": "Frames the teen market, radio, and pop-industry forces that softened and spread early rock and roll.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Frames the teen market, radio, and pop-industry forces that softened and spread early rock and roll."
+    },
+    "004_songhall_neil_sedaka": {
+      "title": "Neil Sedaka profile",
+      "publisher": "Songwriters Hall of Fame",
+      "url": "https://www.songhall.org/profile/neil_sedaka",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the songwriter-performer craft side of teen-idol pop through Sedaka's early hits and durable writing career.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the songwriter-performer craft side of teen-idol pop through Sedaka's early hits and durable writing career."
+    },
+    "teachrock_dion_teen_idols": {
+      "title": "Dion and the Teen Idols",
+      "publisher": "TeachRock",
+      "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+      "source_type": "educational",
+      "audit_use": "Teen-idol role in bringing rock and roll into mainstream culture.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Teen-idol role in bringing rock and roll into mainstream culture."
+    },
+    "teachrock_rock_roll_becomes_pop": {
+      "title": "Rock and Roll Becomes Pop",
+      "publisher": "TeachRock",
+      "url": "https://teachrock.org/chapter/rock-and-roll-becomes-pop/",
+      "source_type": "educational",
+      "audit_use": "Late-1950s mainstream pop smoothing of rock and roll.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Late-1950s mainstream pop smoothing of rock and roll."
+    },
+    "rockhall_ricky_nelson": {
+      "title": "Ricky Nelson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/ricky-nelson/",
+      "source_type": "museum_reference",
+      "audit_use": "Teen-idol image balanced with rockabilly/pop craft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Teen-idol image balanced with rockabilly/pop craft."
+    },
+    "britannica_rock_1960s": {
+      "title": "Rock in the 1960s",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+      "source_type": "reference",
+      "audit_use": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "004-claim-01-pop-taming",
+      "claim_text": "Teen-idol pop softened early rock and roll's rough edges into clean, photogenic, parent-tolerable records for TV and radio circulation.",
+      "source_ref_ids": [
+        "004_teachrock_dion_teen_idols",
+        "004_britannica_rock_and_roll"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "004-claim-02-ricky-nelson-tv-bridge",
+      "claim_text": "Ricky Nelson is a key bridge because his television celebrity converted family-sitcom visibility into credible early pop-rock hits.",
+      "source_ref_ids": [
+        "004_rockhall_ricky_nelson"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004",
+        "artist:ricky-nelson",
+        "song_recording:ricky-nelson-poor-little-fool"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "004-claim-03-songwriter-idols",
+      "claim_text": "Paul Anka and Neil Sedaka show that teen idols were not only faces; the lane also depended on disciplined early pop songwriting.",
+      "source_ref_ids": [
+        "004_songhall_neil_sedaka",
+        "004_teachrock_dion_teen_idols"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004",
+        "artist:paul-anka",
+        "artist:neil-sedaka"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "004-claim-04-radio-signature",
+      "claim_text": "The sound favors bright hooks, clear diction, modest tempos, and romantic premises that can sit between rock and traditional pop programming.",
+      "source_ref_ids": [
+        "004_teachrock_dion_teen_idols",
+        "004_britannica_rock_and_roll"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004",
+        "song_recording:paul-anka-diana",
+        "song_recording:neil-sedaka-calendar-girl"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "004-teen_idol_early_pop_rock_radio-boundary",
+      "claim_text": "Teen Idol and Early Pop-Rock Radio's boundary is clearest when A clean lead vocal placed upfront and Simple romantic hooks appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "004_teachrock_dion_teen_idols",
+        "004_rockhall_ricky_nelson"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004",
+        "artist:neil-sedaka",
+        "artist:paul-anka"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "004-teen_idol_early_pop_rock_radio-examples",
+      "claim_text": "Neil Sedaka, Paul Anka, Johnny's Greatest Hits - Johnny Mathis gives Teen Idol and Early Pop-Rock Radio concrete anchors because the examples expose Arrangements that nod to rock without sounding dangerous inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "004_rockhall_ricky_nelson",
+        "004_songhall_neil_sedaka"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004",
+        "artist:neil-sedaka",
+        "artist:paul-anka"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "004-teen_idol_early_pop_rock_radio-distinct",
+      "claim_text": "The key musical distinction in Teen Idol and Early Pop-Rock Radio is The records are lighter than rockabilly and less group-centered than doo-wop: the face, voice, melody, and romantic scenario are the selling points, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "004_teachrock_dion_teen_idols",
+        "004_songhall_neil_sedaka"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_01/archetype_004",
+        "artist:neil-sedaka",
+        "artist:paul-anka"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A clean early pop-rock radio lane built around youthful singers, TV visibility, polished hooks, and romance-first singles.",
+    "history_capsule": "After rock and roll's first shock, labels, television, and radio learned to package youth music through approachable stars. Ricky Nelson, Paul Anka, Neil Sedaka, Dion, Brenda Lee, and related figures made rock gestures palatable without fully returning to pre-rock pop manners.",
+    "why_it_mattered": "It helped establish the pop star as an image-and-song package. The road leads toward teen pop, Brill craft, TV-driven music fandom, and the softer side of rock radio.",
+    "what_made_it_distinct": "The records are lighter than rockabilly and less group-centered than doo-wop: the face, voice, melody, and romantic scenario are the selling points.",
+    "what_to_listen_for": [
+      "A clean lead vocal placed upfront",
+      "Simple romantic hooks",
+      "Arrangements that nod to rock without sounding dangerous",
+      "TV-friendly charisma",
+      "Songwriter polish under a youthful surface"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:neil-sedaka",
+        "example_type": "artist",
+        "display_label": "Neil Sedaka",
+        "why_this_example_matters": "Neil Sedaka is a graph-validated anchor for Teen Idol and Early Pop-Rock Radio; use it to hear A clean lead vocal placed upfront.",
+        "what_to_listen_for": [
+          "A clean lead vocal placed upfront",
+          "Simple romantic hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:paul-anka",
+        "example_type": "artist",
+        "display_label": "Paul Anka",
+        "why_this_example_matters": "Paul Anka is a graph-validated anchor for Teen Idol and Early Pop-Rock Radio; use it to hear Simple romantic hooks.",
+        "what_to_listen_for": [
+          "Simple romantic hooks",
+          "Arrangements that nod to rock without sounding dangerous"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:johnny-mathis-johnnys-greatest-hits",
+        "example_type": "album",
+        "display_label": "Johnny's Greatest Hits - Johnny Mathis",
+        "why_this_example_matters": "Johnny's Greatest Hits - Johnny Mathis is a graph-validated anchor for Teen Idol and Early Pop-Rock Radio; use it to hear Arrangements that nod to rock without sounding dangerous.",
+        "what_to_listen_for": [
+          "Arrangements that nod to rock without sounding dangerous",
+          "TV-friendly charisma"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:brenda-lee-brenda-lee",
+        "example_type": "album",
+        "display_label": "Brenda Lee - Brenda Lee",
+        "why_this_example_matters": "Brenda Lee - Brenda Lee is a graph-validated anchor for Teen Idol and Early Pop-Rock Radio; use it to hear TV-friendly charisma.",
+        "what_to_listen_for": [
+          "TV-friendly charisma",
+          "Songwriter polish under a youthful surface"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:neil-sedaka-breaking-up-is-hard-to-do",
+        "example_type": "song_recording",
+        "display_label": "Breaking Up Is Hard to Do - Neil Sedaka",
+        "why_this_example_matters": "Breaking Up Is Hard to Do - Neil Sedaka is a graph-validated anchor for Teen Idol and Early Pop-Rock Radio; use it to hear Songwriter polish under a youthful surface.",
+        "what_to_listen_for": [
+          "Songwriter polish under a youthful surface"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:paul-anka-diana",
+        "example_type": "song_recording",
+        "display_label": "Diana - Paul Anka",
+        "why_this_example_matters": "Diana - Paul Anka is a graph-validated anchor for Teen Idol and Early Pop-Rock Radio; use it to hear A clean lead vocal placed upfront.",
+        "what_to_listen_for": [
+          "A clean lead vocal placed upfront",
+          "Simple romantic hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_01/archetype_003"
+      ],
+      "after": [
+        "family_01/archetype_005"
+      ],
+      "related": [
+        "family_01/archetype_003",
+        "family_01/archetype_005"
+      ],
+      "copy": "Use Teen Idol and Early Pop-Rock Radio as a contextual road inside Early Rock, Oldies, Doo-Wop, Pre-Beatles Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "004-dyk-1",
+        "copy": "Ricky Nelson's lane is not merely manufactured; his records often used serious rock musicianship.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_britannica_rock_and_roll"
+        ]
+      },
+      {
+        "card_id": "004-dyk-2",
+        "copy": "Teen-idol pop is one root of later fan culture, not just a detour from rock.",
+        "source_ref_ids": [
+          "004_rockhall_ricky_nelson"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether teen idol and early pop-rock radio is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A clean early pop-rock radio lane built around youthful singers, TV visibility, polished hooks, and romance-first singles.",
+      "It helped establish the pop star as an image-and-song package. The road leads toward teen pop, Brill craft, TV-driven music fandom, and the softer side of rock radio.",
+      "The records are lighter than rockabilly and less group-centered than doo-wop: the face, voice, melody, and romantic scenario are the selling points."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not confuse soft presentation with lack of importance; this road explains how early rock became household pop.",
+    "personalization_hooks": [
+      {
+        "hook_id": "004-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[004]",
+          "atlas_state.family_affinity[1]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[004] >= 0.65 || atlas_state.family_affinity[1] >= 0.65",
+        "copy_variant": "Your Atlas signals make Teen Idol and Early Pop-Rock Radio useful as a contextual landmark.",
+        "fallback_copy": "Use Teen Idol and Early Pop-Rock Radio as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "004-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_01/archetype_004 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_01/archetype_004",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Teen Idol and Early Pop-Rock Radio before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "004-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_01/archetype_004 || atlas_state.boundary_question_results has boundary_negative for family_01/archetype_004",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Teen Idol and Early Pop-Rock Radio.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "004-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_01/archetype_004 || atlas_state.related_mission_ids references family_01/archetype_004",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "004-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_01/archetype_004 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_01/archetype_004 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_01/archetype_004",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Teen Idol and Early Pop-Rock Radio.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_1": {
+        "title": "Normalized canonical graph export, Family 1",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_1/normalized_family_1.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "004_teachrock_dion_teen_idols": {
+        "title": "Dion and the Teen Idols",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+        "source_type": "educational",
+        "audit_use": "Directly addresses the teen-idol role in mainstreaming rock and roll for young radio and TV audiences.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly addresses the teen-idol role in mainstreaming rock and roll for young radio and TV audiences."
+      },
+      "004_rockhall_ricky_nelson": {
+        "title": "Ricky Nelson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/ricky-nelson/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Ricky Nelson as a TV-mediated teen idol whose records also connect to credible early rock musicianship.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ricky Nelson as a TV-mediated teen idol whose records also connect to credible early rock musicianship."
+      },
+      "004_britannica_rock_and_roll": {
+        "title": "Rock and roll",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+        "source_type": "reference",
+        "audit_use": "Frames the teen market, radio, and pop-industry forces that softened and spread early rock and roll.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames the teen market, radio, and pop-industry forces that softened and spread early rock and roll."
+      },
+      "004_songhall_neil_sedaka": {
+        "title": "Neil Sedaka profile",
+        "publisher": "Songwriters Hall of Fame",
+        "url": "https://www.songhall.org/profile/neil_sedaka",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the songwriter-performer craft side of teen-idol pop through Sedaka's early hits and durable writing career.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the songwriter-performer craft side of teen-idol pop through Sedaka's early hits and durable writing career."
+      },
+      "teachrock_dion_teen_idols": {
+        "title": "Dion and the Teen Idols",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+        "source_type": "educational",
+        "audit_use": "Teen-idol role in bringing rock and roll into mainstream culture.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Teen-idol role in bringing rock and roll into mainstream culture."
+      },
+      "teachrock_rock_roll_becomes_pop": {
+        "title": "Rock and Roll Becomes Pop",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/chapter/rock-and-roll-becomes-pop/",
+        "source_type": "educational",
+        "audit_use": "Late-1950s mainstream pop smoothing of rock and roll.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Late-1950s mainstream pop smoothing of rock and roll."
+      },
+      "rockhall_ricky_nelson": {
+        "title": "Ricky Nelson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/ricky-nelson/",
+        "source_type": "museum_reference",
+        "audit_use": "Teen-idol image balanced with rockabilly/pop craft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Teen-idol image balanced with rockabilly/pop craft."
+      },
+      "britannica_rock_1960s": {
+        "title": "Rock in the 1960s",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+        "source_type": "reference",
+        "audit_use": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "004-claim-01-pop-taming",
+        "claim_text": "Teen-idol pop softened early rock and roll's rough edges into clean, photogenic, parent-tolerable records for TV and radio circulation.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_britannica_rock_and_roll"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004-claim-02-ricky-nelson-tv-bridge",
+        "claim_text": "Ricky Nelson is a key bridge because his television celebrity converted family-sitcom visibility into credible early pop-rock hits.",
+        "source_ref_ids": [
+          "004_rockhall_ricky_nelson"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:ricky-nelson",
+          "song_recording:ricky-nelson-poor-little-fool"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004-claim-03-songwriter-idols",
+        "claim_text": "Paul Anka and Neil Sedaka show that teen idols were not only faces; the lane also depended on disciplined early pop songwriting.",
+        "source_ref_ids": [
+          "004_songhall_neil_sedaka",
+          "004_teachrock_dion_teen_idols"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:paul-anka",
+          "artist:neil-sedaka"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004-claim-04-radio-signature",
+        "claim_text": "The sound favors bright hooks, clear diction, modest tempos, and romantic premises that can sit between rock and traditional pop programming.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_britannica_rock_and_roll"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "song_recording:paul-anka-diana",
+          "song_recording:neil-sedaka-calendar-girl"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004-teen_idol_early_pop_rock_radio-boundary",
+        "claim_text": "Teen Idol and Early Pop-Rock Radio's boundary is clearest when A clean lead vocal placed upfront and Simple romantic hooks appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_rockhall_ricky_nelson"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:neil-sedaka",
+          "artist:paul-anka"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004-teen_idol_early_pop_rock_radio-examples",
+        "claim_text": "Neil Sedaka, Paul Anka, Johnny's Greatest Hits - Johnny Mathis gives Teen Idol and Early Pop-Rock Radio concrete anchors because the examples expose Arrangements that nod to rock without sounding dangerous inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "004_rockhall_ricky_nelson",
+          "004_songhall_neil_sedaka"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:neil-sedaka",
+          "artist:paul-anka"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "004-teen_idol_early_pop_rock_radio-distinct",
+        "claim_text": "The key musical distinction in Teen Idol and Early Pop-Rock Radio is The records are lighter than rockabilly and less group-centered than doo-wop: the face, voice, melody, and romantic scenario are the selling points, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "004_teachrock_dion_teen_idols",
+          "004_songhall_neil_sedaka"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_01/archetype_004",
+          "artist:neil-sedaka",
+          "artist:paul-anka"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Teen Idol / Early Pop-Rock Radio: Ricky Nelson, Paul Anka, Neil Sedaka, Dion, American Bandstand, clean-cut teen image, early pop-rock songwriting.",
+    "selected_sources": [
+      {
+        "source_ref_id": "004_teachrock_dion_teen_idols",
+        "title": "Dion and the Teen Idols",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly addresses the teen-idol role in mainstreaming rock and roll for young radio and TV audiences."
+      },
+      {
+        "source_ref_id": "004_rockhall_ricky_nelson",
+        "title": "Ricky Nelson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/ricky-nelson/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Ricky Nelson as a TV-mediated teen idol whose records also connect to credible early rock musicianship."
+      },
+      {
+        "source_ref_id": "004_britannica_rock_and_roll",
+        "title": "Rock and roll",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-and-roll-early-style-of-rock-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames the teen market, radio, and pop-industry forces that softened and spread early rock and roll."
+      },
+      {
+        "source_ref_id": "004_songhall_neil_sedaka",
+        "title": "Neil Sedaka profile",
+        "publisher": "Songwriters Hall of Fame",
+        "url": "https://www.songhall.org/profile/neil_sedaka",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the songwriter-performer craft side of teen-idol pop through Sedaka's early hits and durable writing career."
+      },
+      {
+        "source_ref_id": "teachrock_dion_teen_idols",
+        "title": "Dion and the Teen Idols",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/lesson/dion-and-the-teen-idols/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Teen-idol role in bringing rock and roll into mainstream culture."
+      },
+      {
+        "source_ref_id": "teachrock_rock_roll_becomes_pop",
+        "title": "Rock and Roll Becomes Pop",
+        "publisher": "TeachRock",
+        "url": "https://teachrock.org/chapter/rock-and-roll-becomes-pop/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Late-1950s mainstream pop smoothing of rock and roll."
+      },
+      {
+        "source_ref_id": "rockhall_ricky_nelson",
+        "title": "Ricky Nelson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/ricky-nelson/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Teen-idol image balanced with rockabilly/pop craft."
+      },
+      {
+        "source_ref_id": "britannica_rock_1960s",
+        "title": "Rock in the 1960s",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music/Rock-in-the-1960s",
+        "source_relevance": "example_object_support",
+        "why_fit": "1960s rock, British Invasion, folk-rock, psychedelic, and album-era transitions."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "004_reject_boy_bands_1990s",
+        "title": "Boy bands",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/boy-band",
+        "why_rejected": "Later teen-pop machinery is a useful descendant, but it does not document the 1950s-early 1960s pop-rock radio formation.",
+        "source_type": "reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 004_teachrock_dion_teen_idols anchors the named archetype rather than only its family. Example support: 004_rockhall_ricky_nelson, 004_songhall_neil_sedaka ties claims to canonical artists, songs, albums, or scene objects. Context support: 004_britannica_rock_and_roll is used only for boundary or lineage framing."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 95,
+    "scene_anchor_refs": [
+      "song|paul anka|diana",
+      "song|jimmy clanton|just a dream",
+      "song|ricky nelson|poor little fool",
+      "song|connie francis|stupid cupid"
+    ],
+    "ladder_example_refs": [
+      "song|teddy bears|to know him is to love him",
+      "song|fleetwoods|come softly to me",
+      "song|bobby darin|dream lover",
+      "song|frankie avalon|venus",
+      "song|jimmy jones|handy man",
+      "artist_anchor|robin luke|robin luke",
+      "song|bobby vinton|roses are red my love",
+      "album|kathy young and the innocents|a thousand stars"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

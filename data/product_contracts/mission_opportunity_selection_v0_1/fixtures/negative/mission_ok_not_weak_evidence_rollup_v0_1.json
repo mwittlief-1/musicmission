@@ -1,0 +1,66 @@
+{
+  "contract_version": "evidence_rollup_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "listener_state_id": "negative_mission_ok_not_weak_v0_1",
+  "created_at": "2026-05-28T12:11:00Z",
+  "runtime_listener_evidence_connected": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "reaction_semantics": {
+    "survey_ok_signal_class": "no_signal",
+    "mission_ok_signal_class": "weak_non_failure",
+    "mission_ok_is_positive_preference": false
+  },
+  "evidence_signals": [
+    {
+      "evidence_id": "ev_negative_mission_ok_not_weak",
+      "source_type": "mission_review",
+      "raw_signal": "ok",
+      "signal_class": "no_signal",
+      "signal_weight": 0,
+      "contributes_to_preference": false,
+      "can_support_non_failure": false,
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": ["song|negative|mission ok"],
+        "display_name": "Negative Mission Ok Song"
+      },
+      "graph_context": {
+        "target_object_ref": {
+          "object_type": "song",
+          "object_ids": ["song|negative|mission ok"],
+          "display_name": "Negative Mission Ok Song"
+        },
+        "family_ids": ["family_negative"],
+        "family_names": ["Negative Synthetic Family"],
+        "archetype_ids": ["negative_archetype"],
+        "archetype_names": ["Negative Synthetic Archetype"],
+        "artist_ids": ["artist-negative-mission-ok"],
+        "album_ids": ["album-negative-mission-ok"],
+        "song_ids": ["song|negative|mission ok"],
+        "node_tier": "supporting",
+        "graph_item_role": "contextual_object",
+        "track_tier_within_archetype": "supporting",
+        "album_tier_within_archetype": "supporting",
+        "artist_tier_within_archetype": "supporting",
+        "context_overlays": [],
+        "risk_flags": [],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_negative_fixture",
+          "source_refs": ["negative:mission_ok_not_weak"],
+          "synthetic_only": true
+        }
+      },
+      "occurred_at": "2026-05-28T12:11:00Z",
+      "notes": "Invalid by design: mission ok must be weak non-failure evidence."
+    }
+  ],
+  "rollups": {
+    "by_family": [],
+    "by_archetype": [],
+    "by_artist": [],
+    "by_album": [],
+    "by_song": []
+  }
+}

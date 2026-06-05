@@ -1,0 +1,1324 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_02_archetype_012_baroque-pop-chamber-pop-artful-60s-pop_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_2/normalized_family_2.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 2,
+    "family_slug": "beatles-british-invasion-60s-pop-rock",
+    "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+    "archetype_id": "012",
+    "archetype_slug": "baroque-pop-chamber-pop-artful-60s-pop",
+    "canonical_graph_ref": "family_02/archetype_012",
+    "existing_graph_label_name": "Baroque Pop / Chamber Pop / Artful 60s Pop",
+    "editorial_display_title": "Baroque Pop / Chamber Pop / Artful 60s Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:the-zombies",
+        "object_id": "the-zombies",
+        "display_label": "The Zombies",
+        "source_membership_id": "family-2-artist-012-the-zombies",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious artist bridge between British Invasion singles and baroque/psych album canon.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:love",
+        "object_id": "love",
+        "display_label": "Love",
+        "source_membership_id": "family-2-artist-012-love",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing artist entity for seeded `Forever Changes` and Los Angeles psych/baroque bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:procol-harum",
+        "object_id": "procol-harum",
+        "display_label": "Procol Harum",
+        "source_membership_id": "family-2-artist-012-procol-harum",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "A Whiter Shade of Pale needs artist context without forcing full artist scale.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-moody-blues-early",
+        "object_id": "the-moody-blues-early",
+        "display_label": "The Moody Blues (early)",
+        "source_membership_id": "family-2-artist-012-the-moody-blues-early",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Orchestral-pop bridge into symphonic rock and Family 3 prog.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bee-gees-early",
+        "object_id": "bee-gees-early",
+        "display_label": "Bee Gees (early)",
+        "source_membership_id": "family-2-artist-012-bee-gees-early",
+        "roles": [
+          "bridge",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Early orchestral/baroque-pop phase matters separately from later disco identity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:the-zombies-odessey-and-oracle",
+        "object_id": "the-zombies-odessey-and-oracle",
+        "display_label": "Odessey and Oracle - The Zombies",
+        "source_membership_id": "family-2-album-012-the-zombies-odessey-and-oracle",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Key baroque/psych album object and correct album-scale Zombies row.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:love-forever-changes",
+        "object_id": "love-forever-changes",
+        "display_label": "Forever Changes - Love",
+        "source_membership_id": "family-2-album-012-love-forever-changes",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Crucial baroque, psych, and late-60s album bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bee-gees-bee-gees-1st",
+        "object_id": "bee-gees-bee-gees-1st",
+        "display_label": "Bee Gees' 1st - Bee Gees",
+        "source_membership_id": "family-2-album-012-bee-gees-bee-gees-1st",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Early Bee Gees orchestral-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-moody-blues-days-of-future-passed",
+        "object_id": "the-moody-blues-days-of-future-passed",
+        "display_label": "Days of Future Passed - The Moody Blues",
+        "source_membership_id": "family-2-album-012-the-moody-blues-days-of-future-passed",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Orchestral bridge from baroque pop toward symphonic rock.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-millennium-begin",
+        "object_id": "the-millennium-begin",
+        "display_label": "Begin - The Millennium",
+        "source_membership_id": "family-2-album-012-the-millennium-begin",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Curt Boettcher sunshine-baroque studio-pop deepening object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:the-beach-boys-god-only-knows",
+        "object_id": "the-beach-boys-god-only-knows",
+        "display_label": "God Only Knows - The Beach Boys",
+        "source_membership_id": "family-2-song-012-the-beach-boys-god-only-knows",
+        "roles": [
+          "song_first",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential Pet Sounds song object, not just album evidence.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-zombies-time-of-the-season",
+        "object_id": "the-zombies-time-of-the-season",
+        "display_label": "Time of the Season - The Zombies",
+        "source_membership_id": "family-2-song-012-the-zombies-time-of-the-season",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing mass psych-pop Zombies hit tied to `Odessey and Oracle`.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-association-never-my-love",
+        "object_id": "the-association-never-my-love",
+        "display_label": "Never My Love - The Association",
+        "source_membership_id": "family-2-song-012-the-association-never-my-love",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Durable harmony/baroque-pop single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:procol-harum-a-whiter-shade-of-pale",
+        "object_id": "procol-harum-a-whiter-shade-of-pale",
+        "display_label": "A Whiter Shade of Pale - Procol Harum",
+        "source_membership_id": "family-2-song-012-procol-harum-a-whiter-shade-of-pale",
+        "roles": [
+          "song_first",
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing baroque/proto-prog pop single at Family 2 boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beach-boys-wouldnt-it-be-nice",
+        "object_id": "the-beach-boys-wouldnt-it-be-nice",
+        "display_label": "Wouldn't It Be Nice - The Beach Boys",
+        "source_membership_id": "family-2-song-012-the-beach-boys-wouldnt-it-be-nice",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Second indispensable Pet Sounds hook.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-left-banke-walk-away-renee",
+        "object_id": "the-left-banke-walk-away-renee",
+        "display_label": "Walk Away Renee - The Left Banke",
+        "source_membership_id": "family-2-song-012-the-left-banke-walk-away-renee",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Quintessential baroque-pop song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-left-banke-pretty-ballerina",
+        "object_id": "the-left-banke-pretty-ballerina",
+        "display_label": "Pretty Ballerina - The Left Banke",
+        "source_membership_id": "family-2-song-012-the-left-banke-pretty-ballerina",
+        "roles": [
+          "song_first",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Essential companion Left Banke baroque-pop object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sagittarius-my-world-fell-down",
+        "object_id": "sagittarius-my-world-fell-down",
+        "display_label": "My World Fell Down - Sagittarius",
+        "source_membership_id": "family-2-song-012-sagittarius-my-world-fell-down",
+        "roles": [
+          "song_first",
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Studio-pop/baroque-psych object with graph value above public recall.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-zombies-012",
+        "candidate_id": "survey-f2-artist-the-zombies-012",
+        "object_type": "artist",
+        "display_label": "The Zombies",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-moody-blues-early-012",
+        "candidate_id": "survey-f2-artist-the-moody-blues-early-012",
+        "object_type": "artist",
+        "display_label": "The Moody Blues (early)",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-procol-harum-012",
+        "candidate_id": "survey-f2-artist-procol-harum-012",
+        "object_type": "artist",
+        "display_label": "Procol Harum",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-love-012",
+        "candidate_id": "survey-f2-artist-love-012",
+        "object_type": "artist",
+        "display_label": "Love",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-bee-gees-early-012",
+        "candidate_id": "survey-f2-artist-bee-gees-early-012",
+        "object_type": "artist",
+        "display_label": "Bee Gees (early)",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-love-forever-changes-012",
+        "candidate_id": "survey-f2-album-love-forever-changes-012",
+        "object_type": "album",
+        "display_label": "Forever Changes",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-zombies-odessey-and-oracle-012",
+        "candidate_id": "survey-f2-album-the-zombies-odessey-and-oracle-012",
+        "object_type": "album",
+        "display_label": "Odessey and Oracle",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-bee-gees-bee-gees-1st-012",
+        "candidate_id": "survey-f2-album-bee-gees-bee-gees-1st-012",
+        "object_type": "album",
+        "display_label": "Bee Gees' 1st",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-moody-blues-days-of-future-passed-012",
+        "candidate_id": "survey-f2-album-the-moody-blues-days-of-future-passed-012",
+        "object_type": "album",
+        "display_label": "Days of Future Passed",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-millennium-begin-012",
+        "candidate_id": "survey-f2-album-the-millennium-begin-012",
+        "object_type": "album",
+        "display_label": "Begin",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-beach-boys-god-only-knows-012",
+        "candidate_id": "survey-f2-song_recording-the-beach-boys-god-only-knows-012",
+        "object_type": "song_recording",
+        "display_label": "God Only Knows",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-zombies-time-of-the-season-012",
+        "candidate_id": "survey-f2-song_recording-the-zombies-time-of-the-season-012",
+        "object_type": "song_recording",
+        "display_label": "Time of the Season",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-beach-boys-wouldnt-it-be-nice-012",
+        "candidate_id": "survey-f2-song_recording-the-beach-boys-wouldnt-it-be-nice-012",
+        "object_type": "song_recording",
+        "display_label": "Wouldn't It Be Nice",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-association-never-my-love-012",
+        "candidate_id": "survey-f2-song_recording-the-association-never-my-love-012",
+        "object_type": "song_recording",
+        "display_label": "Never My Love",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-procol-harum-a-whiter-shade-of-pale-012",
+        "candidate_id": "survey-f2-song_recording-procol-harum-a-whiter-shade-of-pale-012",
+        "object_type": "song_recording",
+        "display_label": "A Whiter Shade of Pale",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-left-banke-walk-away-renee-012",
+        "candidate_id": "survey-f2-song_recording-the-left-banke-walk-away-renee-012",
+        "object_type": "song_recording",
+        "display_label": "Walk Away Renee",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-left-banke-pretty-ballerina-012",
+        "candidate_id": "survey-f2-song_recording-the-left-banke-pretty-ballerina-012",
+        "object_type": "song_recording",
+        "display_label": "Pretty Ballerina",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-sagittarius-my-world-fell-down-012",
+        "candidate_id": "survey-f2-song_recording-sagittarius-my-world-fell-down-012",
+        "object_type": "song_recording",
+        "display_label": "My World Fell Down",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f2-artist-love-012",
+        "question_id": "boundary-survey-f2-artist-love-012",
+        "display_label": "Love",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f2-artist-bee-gees-early-012",
+        "question_id": "boundary-survey-f2-artist-bee-gees-early-012",
+        "display_label": "Bee Gees (early)",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f2-song_recording-procol-harum-a-whiter-shade-of-pale-012",
+        "question_id": "boundary-survey-f2-song_recording-procol-harum-a-whiter-shade-of-pale-012",
+        "display_label": "A Whiter Shade of Pale",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f2-artist-love-012",
+        "probe_id": "probe-survey-f2-artist-love-012",
+        "entity_type": "artist",
+        "display_label": "Love",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f2-artist-bee-gees-early-012",
+        "probe_id": "probe-survey-f2-artist-bee-gees-early-012",
+        "entity_type": "artist",
+        "display_label": "Bee Gees (early)",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f2-song_recording-procol-harum-a-whiter-shade-of-pale-012",
+        "probe_id": "probe-survey-f2-song_recording-procol-harum-a-whiter-shade-of-pale-012",
+        "entity_type": "song_recording",
+        "display_label": "A Whiter Shade of Pale",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_02/archetype_011",
+      "family_02/archetype_013"
+    ],
+    "before_archetype_refs": [
+      "family_02/archetype_011"
+    ],
+    "after_archetype_refs": [
+      "family_02/archetype_013"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_2": {
+      "title": "Normalized canonical graph export, Family 2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_2/normalized_family_2.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "012_allmusic_baroque_pop": {
+      "title": "Baroque Pop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/baroque-pop-ma0000012109",
+      "source_type": "music_reference",
+      "audit_use": "Directly defines baroque pop around classical/chamber instrumentation and ornate 1960s pop arrangements.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly defines baroque pop around classical/chamber instrumentation and ornate 1960s pop arrangements."
+    },
+    "012_rockhall_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/beach-boys/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the Brian Wilson/Pet Sounds side of artful harmony pop and studio ambition.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the Brian Wilson/Pet Sounds side of artful harmony pop and studio ambition."
+    },
+    "012_britannica_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beach-Boys",
+      "source_type": "reference",
+      "audit_use": "Adds reference support for Beach Boys evolution from surf pop into sophisticated studio work.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Adds reference support for Beach Boys evolution from surf pop into sophisticated studio work."
+    },
+    "012_britannica_progressive_rock": {
+      "title": "Progressive rock",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/progressive-rock",
+      "source_type": "reference",
+      "audit_use": "Useful for the boundary where orchestral 1960s pop starts pointing toward art-rock and prog ambition.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Useful for the boundary where orchestral 1960s pop starts pointing toward art-rock and prog ambition."
+    },
+    "britannica_brill_building": {
+      "title": "The Brill Building: Assembly-Line Pop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/The-Brill-Building-Assembly-Line-Pop-1688332",
+      "source_type": "reference",
+      "audit_use": "Professional songwriting, publishing, and girl-group pop craft ecosystem.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Professional songwriting, publishing, and girl-group pop craft ecosystem."
+    },
+    "allmusic_sunshine_pop": {
+      "title": "Sunshine Pop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/sunshine-pop-ma0000012203",
+      "source_type": "music_reference",
+      "audit_use": "Style markers for sunshine pop and late-1960s harmony-rich pop.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Style markers for sunshine pop and late-1960s harmony-rich pop."
+    },
+    "rockhall_beach_boys": {
+      "title": "The Beach Boys",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/beach-boys/",
+      "source_type": "museum_reference",
+      "audit_use": "Beach Boys as surf-rock and harmony-pop gateway.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+    },
+    "britannica_beatles": {
+      "title": "The Beatles",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beatles",
+      "source_type": "reference",
+      "audit_use": "Beatles biography, British Invasion, songwriting, and album-era expansion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "012-claim-01-chamber-instruments",
+      "claim_text": "Baroque pop brings strings, harpsichord-like timbres, chamber arranging, and classical gestures into concise pop songs.",
+      "source_ref_ids": [
+        "012_allmusic_baroque_pop"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "012-claim-02-pet-sounds-model",
+      "claim_text": "The Beach Boys' mid-1960s studio work marks the lane's emotional high point, where harmony pop, unusual instruments, and adolescent vulnerability become artful architecture.",
+      "source_ref_ids": [
+        "012_rockhall_beach_boys",
+        "012_britannica_beach_boys"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012",
+        "song_recording:the-beach-boys-god-only-knows",
+        "song_recording:the-beach-boys-wouldnt-it-be-nice"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "012-claim-03-zombies-love-album-bridge",
+      "claim_text": "The Zombies' Odessey and Oracle and Love's Forever Changes show baroque pop crossing into psychedelic album craft without losing melodic delicacy.",
+      "source_ref_ids": [
+        "012_allmusic_baroque_pop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012",
+        "album:the-zombies-odessey-and-oracle",
+        "album:love-forever-changes"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "012-claim-04-prog-boundary",
+      "claim_text": "Procol Harum and early Moody Blues material create a boundary where ornate pop starts leaning toward symphonic rock and progressive scale.",
+      "source_ref_ids": [
+        "012_britannica_progressive_rock",
+        "012_allmusic_baroque_pop"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012",
+        "family_03/archetype_018",
+        "artist:procol-harum",
+        "artist:the-moody-blues-early"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "012-baroque_pop_chamber_pop_artful_60s_pop-boundary",
+      "claim_text": "Baroque Pop / Chamber Pop / Artful 60s Pop's boundary is clearest when Strings or harpsichord-like keyboard color and Chords that feel more theatrical than blues-based appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "012_allmusic_baroque_pop",
+        "012_rockhall_beach_boys"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012",
+        "artist:the-zombies",
+        "artist:love"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "012-baroque_pop_chamber_pop_artful_60s_pop-examples",
+      "claim_text": "The Zombies, Love, Odessey and Oracle - The Zombies gives Baroque Pop / Chamber Pop / Artful 60s Pop concrete anchors because the examples expose Close harmonies with melancholy under the brightness inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "012_rockhall_beach_boys",
+        "012_britannica_beach_boys"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012",
+        "artist:the-zombies",
+        "artist:love"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "012-baroque_pop_chamber_pop_artful_60s_pop-distinct",
+      "claim_text": "The key musical distinction in Baroque Pop / Chamber Pop / Artful 60s Pop is The lane is polished but fragile: orchestration, harmony, and bittersweet melody matter more than volume or jam energy, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "012_allmusic_baroque_pop",
+        "012_britannica_beach_boys"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_012",
+        "artist:the-zombies",
+        "artist:love"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A 1960s ornate-pop road where chamber instruments, studio craft, close harmony, and emotional precision make pop feel miniature and grand at once.",
+    "history_capsule": "Baroque pop does not mean classical music pasted onto rock. It means pop writers and producers using strings, harpsichord colors, unusual chord movement, and careful arrangements to give short songs a chamber-world glow. The Beach Boys, Left Banke, Zombies, Love, Procol Harum, and early Bee Gees each approach that glow differently.",
+    "why_it_mattered": "It made studio arrangement a form of pop authorship and helped prepare the way for progressive rock, chamber pop, sophisticated indie, and artful singer-songwriter studio craft.",
+    "what_made_it_distinct": "The lane is polished but fragile: orchestration, harmony, and bittersweet melody matter more than volume or jam energy.",
+    "what_to_listen_for": [
+      "Strings or harpsichord-like keyboard color",
+      "Chords that feel more theatrical than blues-based",
+      "Close harmonies with melancholy under the brightness",
+      "Arrangements that change scene quickly",
+      "A song that feels like a small room with ornate wallpaper"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:the-zombies",
+        "example_type": "artist",
+        "display_label": "The Zombies",
+        "why_this_example_matters": "The Zombies is a graph-validated anchor for Baroque Pop / Chamber Pop / Artful 60s Pop; use it to hear Strings or harpsichord-like keyboard color.",
+        "what_to_listen_for": [
+          "Strings or harpsichord-like keyboard color",
+          "Chords that feel more theatrical than blues-based"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:love",
+        "example_type": "artist",
+        "display_label": "Love",
+        "why_this_example_matters": "Love is a graph-validated anchor for Baroque Pop / Chamber Pop / Artful 60s Pop; use it to hear Chords that feel more theatrical than blues-based.",
+        "what_to_listen_for": [
+          "Chords that feel more theatrical than blues-based",
+          "Close harmonies with melancholy under the brightness"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-zombies-odessey-and-oracle",
+        "example_type": "album",
+        "display_label": "Odessey and Oracle - The Zombies",
+        "why_this_example_matters": "Odessey and Oracle - The Zombies is a graph-validated anchor for Baroque Pop / Chamber Pop / Artful 60s Pop; use it to hear Close harmonies with melancholy under the brightness.",
+        "what_to_listen_for": [
+          "Close harmonies with melancholy under the brightness",
+          "Arrangements that change scene quickly"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:love-forever-changes",
+        "example_type": "album",
+        "display_label": "Forever Changes - Love",
+        "why_this_example_matters": "Forever Changes - Love is a graph-validated anchor for Baroque Pop / Chamber Pop / Artful 60s Pop; use it to hear Arrangements that change scene quickly.",
+        "what_to_listen_for": [
+          "Arrangements that change scene quickly",
+          "A song that feels like a small room with ornate wallpaper"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-beach-boys-god-only-knows",
+        "example_type": "song_recording",
+        "display_label": "God Only Knows - The Beach Boys",
+        "why_this_example_matters": "God Only Knows - The Beach Boys is a graph-validated anchor for Baroque Pop / Chamber Pop / Artful 60s Pop; use it to hear A song that feels like a small room with ornate wallpaper.",
+        "what_to_listen_for": [
+          "A song that feels like a small room with ornate wallpaper"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-zombies-time-of-the-season",
+        "example_type": "song_recording",
+        "display_label": "Time of the Season - The Zombies",
+        "why_this_example_matters": "Time of the Season - The Zombies is a graph-validated anchor for Baroque Pop / Chamber Pop / Artful 60s Pop; use it to hear Strings or harpsichord-like keyboard color.",
+        "what_to_listen_for": [
+          "Strings or harpsichord-like keyboard color",
+          "Chords that feel more theatrical than blues-based"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_02/archetype_011"
+      ],
+      "after": [
+        "family_02/archetype_013"
+      ],
+      "related": [
+        "family_02/archetype_011",
+        "family_02/archetype_013"
+      ],
+      "copy": "Use Baroque Pop / Chamber Pop / Artful 60s Pop as a contextual road inside Beatles, British Invasion, 60s Pop-Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "012-dyk-1",
+        "copy": "A record can be psychedelic and baroque at the same time if the arrangement is doing the dreaming.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop"
+        ]
+      },
+      {
+        "card_id": "012-dyk-2",
+        "copy": "The Left Banke is a song-first anchor even when casual listeners know the tune better than the band.",
+        "source_ref_ids": [
+          "012_rockhall_beach_boys",
+          "012_britannica_beach_boys"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether baroque pop / chamber pop / artful 60s pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A 1960s ornate-pop road where chamber instruments, studio craft, close harmony, and emotional precision make pop feel miniature and grand at once.",
+      "It made studio arrangement a form of pop authorship and helped prepare the way for progressive rock, chamber pop, sophisticated indie, and artful singer-songwriter studio craft.",
+      "The lane is polished but fragile: orchestration, harmony, and bittersweet melody matter more than volume or jam energy."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not confuse every orchestral rock record with baroque pop; the chamber-pop scale and melodic delicacy need to be audible.",
+    "personalization_hooks": [
+      {
+        "hook_id": "012-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[012]",
+          "atlas_state.family_affinity[2]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[012] >= 0.65 || atlas_state.family_affinity[2] >= 0.65",
+        "copy_variant": "Your Atlas signals make Baroque Pop / Chamber Pop / Artful 60s Pop useful as a contextual landmark.",
+        "fallback_copy": "Use Baroque Pop / Chamber Pop / Artful 60s Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "012-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_02/archetype_012 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_02/archetype_012",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Baroque Pop / Chamber Pop / Artful 60s Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "012-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_02/archetype_012 || atlas_state.boundary_question_results has boundary_negative for family_02/archetype_012",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Baroque Pop / Chamber Pop / Artful 60s Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "012-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_02/archetype_012 || atlas_state.related_mission_ids references family_02/archetype_012",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "012-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_02/archetype_012 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_02/archetype_012 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_02/archetype_012",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Baroque Pop / Chamber Pop / Artful 60s Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_2": {
+        "title": "Normalized canonical graph export, Family 2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_2/normalized_family_2.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "012_allmusic_baroque_pop": {
+        "title": "Baroque Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/baroque-pop-ma0000012109",
+        "source_type": "music_reference",
+        "audit_use": "Directly defines baroque pop around classical/chamber instrumentation and ornate 1960s pop arrangements.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines baroque pop around classical/chamber instrumentation and ornate 1960s pop arrangements."
+      },
+      "012_rockhall_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the Brian Wilson/Pet Sounds side of artful harmony pop and studio ambition.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Brian Wilson/Pet Sounds side of artful harmony pop and studio ambition."
+      },
+      "012_britannica_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_type": "reference",
+        "audit_use": "Adds reference support for Beach Boys evolution from surf pop into sophisticated studio work.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Adds reference support for Beach Boys evolution from surf pop into sophisticated studio work."
+      },
+      "012_britannica_progressive_rock": {
+        "title": "Progressive rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/progressive-rock",
+        "source_type": "reference",
+        "audit_use": "Useful for the boundary where orchestral 1960s pop starts pointing toward art-rock and prog ambition.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for the boundary where orchestral 1960s pop starts pointing toward art-rock and prog ambition."
+      },
+      "britannica_brill_building": {
+        "title": "The Brill Building: Assembly-Line Pop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/The-Brill-Building-Assembly-Line-Pop-1688332",
+        "source_type": "reference",
+        "audit_use": "Professional songwriting, publishing, and girl-group pop craft ecosystem.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Professional songwriting, publishing, and girl-group pop craft ecosystem."
+      },
+      "allmusic_sunshine_pop": {
+        "title": "Sunshine Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/sunshine-pop-ma0000012203",
+        "source_type": "music_reference",
+        "audit_use": "Style markers for sunshine pop and late-1960s harmony-rich pop.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Style markers for sunshine pop and late-1960s harmony-rich pop."
+      },
+      "rockhall_beach_boys": {
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_type": "museum_reference",
+        "audit_use": "Beach Boys as surf-rock and harmony-pop gateway.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+      },
+      "britannica_beatles": {
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_type": "reference",
+        "audit_use": "Beatles biography, British Invasion, songwriting, and album-era expansion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "012-claim-01-chamber-instruments",
+        "claim_text": "Baroque pop brings strings, harpsichord-like timbres, chamber arranging, and classical gestures into concise pop songs.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012-claim-02-pet-sounds-model",
+        "claim_text": "The Beach Boys' mid-1960s studio work marks the lane's emotional high point, where harmony pop, unusual instruments, and adolescent vulnerability become artful architecture.",
+        "source_ref_ids": [
+          "012_rockhall_beach_boys",
+          "012_britannica_beach_boys"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "song_recording:the-beach-boys-god-only-knows",
+          "song_recording:the-beach-boys-wouldnt-it-be-nice"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012-claim-03-zombies-love-album-bridge",
+        "claim_text": "The Zombies' Odessey and Oracle and Love's Forever Changes show baroque pop crossing into psychedelic album craft without losing melodic delicacy.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "album:the-zombies-odessey-and-oracle",
+          "album:love-forever-changes"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012-claim-04-prog-boundary",
+        "claim_text": "Procol Harum and early Moody Blues material create a boundary where ornate pop starts leaning toward symphonic rock and progressive scale.",
+        "source_ref_ids": [
+          "012_britannica_progressive_rock",
+          "012_allmusic_baroque_pop"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "family_03/archetype_018",
+          "artist:procol-harum",
+          "artist:the-moody-blues-early"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012-baroque_pop_chamber_pop_artful_60s_pop-boundary",
+        "claim_text": "Baroque Pop / Chamber Pop / Artful 60s Pop's boundary is clearest when Strings or harpsichord-like keyboard color and Chords that feel more theatrical than blues-based appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop",
+          "012_rockhall_beach_boys"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "artist:the-zombies",
+          "artist:love"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012-baroque_pop_chamber_pop_artful_60s_pop-examples",
+        "claim_text": "The Zombies, Love, Odessey and Oracle - The Zombies gives Baroque Pop / Chamber Pop / Artful 60s Pop concrete anchors because the examples expose Close harmonies with melancholy under the brightness inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "012_rockhall_beach_boys",
+          "012_britannica_beach_boys"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "artist:the-zombies",
+          "artist:love"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "012-baroque_pop_chamber_pop_artful_60s_pop-distinct",
+        "claim_text": "The key musical distinction in Baroque Pop / Chamber Pop / Artful 60s Pop is The lane is polished but fragile: orchestration, harmony, and bittersweet melody matter more than volume or jam energy, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "012_allmusic_baroque_pop",
+          "012_britannica_beach_boys"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_012",
+          "artist:the-zombies",
+          "artist:love"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Baroque Pop / Chamber Pop / Artful 60s Pop: Beach Boys, Zombies, Left Banke, Procol Harum, Love, strings, harpsichord, chamber arrangements, Pet Sounds.",
+    "selected_sources": [
+      {
+        "source_ref_id": "012_allmusic_baroque_pop",
+        "title": "Baroque Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/baroque-pop-ma0000012109",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines baroque pop around classical/chamber instrumentation and ornate 1960s pop arrangements."
+      },
+      {
+        "source_ref_id": "012_rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Brian Wilson/Pet Sounds side of artful harmony pop and studio ambition."
+      },
+      {
+        "source_ref_id": "012_britannica_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beach-Boys",
+        "source_relevance": "example_object_support",
+        "why_fit": "Adds reference support for Beach Boys evolution from surf pop into sophisticated studio work."
+      },
+      {
+        "source_ref_id": "012_britannica_progressive_rock",
+        "title": "Progressive rock",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/progressive-rock",
+        "source_relevance": "family_context_only",
+        "why_fit": "Useful for the boundary where orchestral 1960s pop starts pointing toward art-rock and prog ambition."
+      },
+      {
+        "source_ref_id": "britannica_brill_building",
+        "title": "The Brill Building: Assembly-Line Pop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/The-Brill-Building-Assembly-Line-Pop-1688332",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Professional songwriting, publishing, and girl-group pop craft ecosystem."
+      },
+      {
+        "source_ref_id": "allmusic_sunshine_pop",
+        "title": "Sunshine Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/sunshine-pop-ma0000012203",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Style markers for sunshine pop and late-1960s harmony-rich pop."
+      },
+      {
+        "source_ref_id": "rockhall_beach_boys",
+        "title": "The Beach Boys",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/beach-boys/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beach Boys as surf-rock and harmony-pop gateway."
+      },
+      {
+        "source_ref_id": "britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "example_object_support",
+        "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "012_reject_classical_baroque",
+        "title": "Baroque period",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/Baroque-period",
+        "why_rejected": "It explains the historical art-music term, but not its 1960s pop adaptation or rock-recording context.",
+        "source_type": "reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 012_allmusic_baroque_pop anchors the named archetype rather than only its family. Example support: 012_rockhall_beach_boys, 012_britannica_beach_boys ties claims to canonical artists, songs, albums, or scene objects. Context support: 012_britannica_progressive_rock is used only for boundary or lineage framing."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 91,
+    "scene_anchor_refs": [
+      "song|beach boys|caroline no",
+      "song|beatles|eleanor rigby",
+      "song|love|alone again or",
+      "song|bee gees|words"
+    ],
+    "ladder_example_refs": [
+      "song|left banke|walk away renee",
+      "song|association|never my love",
+      "song|zombies|time of the season",
+      "album|moody blues|days of future passed",
+      "artist_anchor|moody blues early|moody blues early",
+      "album|nirvana uk|story of simon simopath",
+      "album|scott walker|scott 2",
+      "song|move|flowers in the rain"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

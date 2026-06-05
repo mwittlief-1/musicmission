@@ -1,0 +1,1368 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_14_archetype_101_jazz-foundations-bebop-hard-bop-gateway_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_14/normalized_family_14.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 14,
+    "family_slug": "jazz-standards-vocal-classical-adjacent",
+    "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+    "archetype_id": "101",
+    "archetype_slug": "jazz-foundations-bebop-hard-bop-gateway",
+    "canonical_graph_ref": "family_14/archetype_101",
+    "existing_graph_label_name": "Jazz Foundations / Bebop / Hard Bop Gateway",
+    "editorial_display_title": "Jazz Foundations / Bebop / Hard Bop Gateway",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:miles-davis",
+        "object_id": "miles-davis",
+        "display_label": "Miles Davis",
+        "source_membership_id": "family-14-artist-101-miles-davis",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Miles Davis provides a recognizable survey branch for 101 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:john-coltrane",
+        "object_id": "john-coltrane",
+        "display_label": "John Coltrane",
+        "source_membership_id": "family-14-artist-101-john-coltrane",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "John Coltrane provides a recognizable survey branch for 101 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:dave-brubeck-quartet",
+        "object_id": "dave-brubeck-quartet",
+        "display_label": "Dave Brubeck Quartet",
+        "source_membership_id": "family-14-artist-101-dave-brubeck-quartet",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dave Brubeck Quartet provides a recognizable survey branch for 101 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:thelonious-monk",
+        "object_id": "thelonious-monk",
+        "display_label": "Thelonious Monk",
+        "source_membership_id": "family-14-artist-101-thelonious-monk",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Thelonious Monk provides a recognizable survey branch for 101 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:charlie-parker",
+        "object_id": "charlie-parker",
+        "display_label": "Charlie Parker",
+        "source_membership_id": "family-14-artist-101-charlie-parker",
+        "roles": [
+          "anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Charlie Parker provides a recognizable survey branch for 101 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:herbie-hancock",
+        "object_id": "herbie-hancock",
+        "display_label": "Herbie Hancock",
+        "source_membership_id": "family-14-artist-101-herbie-hancock",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Herbie Hancock provides a recognizable survey branch for 101 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nina-simone",
+        "object_id": "nina-simone",
+        "display_label": "Nina Simone",
+        "source_membership_id": "family-14-artist-101-nina-simone",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Nina Simone adds a concrete 101 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:charles-mingus",
+        "object_id": "charles-mingus",
+        "display_label": "Charles Mingus",
+        "source_membership_id": "family-14-artist-101-charles-mingus",
+        "roles": [
+          "deepening",
+          "album_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Charles Mingus adds a concrete 101 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:chet-baker",
+        "object_id": "chet-baker",
+        "display_label": "Chet Baker",
+        "source_membership_id": "family-14-artist-101-chet-baker",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Chet Baker adds a concrete 101 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:stan-getz",
+        "object_id": "stan-getz",
+        "display_label": "Stan Getz",
+        "source_membership_id": "family-14-artist-101-stan-getz",
+        "roles": [
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Stan Getz adds a concrete 101 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:art-blakey-and-the-jazz-messengers",
+        "object_id": "art-blakey-and-the-jazz-messengers",
+        "display_label": "Art Blakey and the Jazz Messengers",
+        "source_membership_id": "family-14-artist-101-art-blakey-and-the-jazz-messengers",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Art Blakey and the Jazz Messengers adds a concrete 101 branch for survey recognition, bridge routing, or boundary testing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:miles-davis-kind-of-blue",
+        "object_id": "miles-davis-kind-of-blue",
+        "display_label": "Kind of Blue - Miles Davis",
+        "source_membership_id": "family-14-album-101-miles-davis-kind-of-blue",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Kind of Blue is a useful album-level gateway for 101.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:john-coltrane-a-love-supreme",
+        "object_id": "john-coltrane-a-love-supreme",
+        "display_label": "A Love Supreme - John Coltrane",
+        "source_membership_id": "family-14-album-101-john-coltrane-a-love-supreme",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "A Love Supreme is a useful album-level gateway for 101.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:dave-brubeck-quartet-time-out",
+        "object_id": "dave-brubeck-quartet-time-out",
+        "display_label": "Time Out - Dave Brubeck Quartet",
+        "source_membership_id": "family-14-album-101-dave-brubeck-quartet-time-out",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Time Out is a useful album-level gateway for 101.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:herbie-hancock-head-hunters",
+        "object_id": "herbie-hancock-head-hunters",
+        "display_label": "Head Hunters - Herbie Hancock",
+        "source_membership_id": "family-14-album-101-herbie-hancock-head-hunters",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Head Hunters is a useful album-level gateway for 101.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:stan-getz-and-joao-gilberto-getz-gilberto",
+        "object_id": "stan-getz-and-joao-gilberto-getz-gilberto",
+        "display_label": "Getz/Gilberto - Stan Getz and Joao Gilberto",
+        "source_membership_id": "family-14-album-101-stan-getz-and-joao-gilberto-getz-gilberto",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Getz/Gilberto gives archetype 101 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:charles-mingus-mingus-ah-um",
+        "object_id": "charles-mingus-mingus-ah-um",
+        "display_label": "Mingus Ah Um - Charles Mingus",
+        "source_membership_id": "family-14-album-101-charles-mingus-mingus-ah-um",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Mingus Ah Um gives archetype 101 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nina-simone-pastel-blues",
+        "object_id": "nina-simone-pastel-blues",
+        "display_label": "Pastel Blues - Nina Simone",
+        "source_membership_id": "family-14-album-101-nina-simone-pastel-blues",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Pastel Blues gives archetype 101 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:art-blakey-and-the-jazz-messengers-moanin",
+        "object_id": "art-blakey-and-the-jazz-messengers-moanin",
+        "display_label": "Moanin - Art Blakey and the Jazz Messengers",
+        "source_membership_id": "family-14-album-101-art-blakey-and-the-jazz-messengers-moanin",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Moanin gives archetype 101 a useful album, cast, soundtrack, live, or compilation gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:miles-davis-so-what",
+        "object_id": "miles-davis-so-what",
+        "display_label": "So What - Miles Davis",
+        "source_membership_id": "family-14-song-101-miles-davis-so-what",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "So What gives 101 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:john-coltrane-my-favorite-things",
+        "object_id": "john-coltrane-my-favorite-things",
+        "display_label": "My Favorite Things - John Coltrane",
+        "source_membership_id": "family-14-song-101-john-coltrane-my-favorite-things",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "My Favorite Things gives 101 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dave-brubeck-quartet-take-five",
+        "object_id": "dave-brubeck-quartet-take-five",
+        "display_label": "Take Five - Dave Brubeck Quartet",
+        "source_membership_id": "family-14-song-101-dave-brubeck-quartet-take-five",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Take Five gives 101 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:stan-getz-and-astrud-gilberto-the-girl-from-ipanema",
+        "object_id": "stan-getz-and-astrud-gilberto-the-girl-from-ipanema",
+        "display_label": "The Girl from Ipanema - Stan Getz and Astrud Gilberto",
+        "source_membership_id": "family-14-song-101-stan-getz-and-astrud-gilberto-the-girl-from-ipanema",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "The Girl from Ipanema gives archetype 101 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:herbie-hancock-cantaloupe-island",
+        "object_id": "herbie-hancock-cantaloupe-island",
+        "display_label": "Cantaloupe Island - Herbie Hancock",
+        "source_membership_id": "family-14-song-101-herbie-hancock-cantaloupe-island",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Cantaloupe Island gives 101 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:chet-baker-my-funny-valentine",
+        "object_id": "chet-baker-my-funny-valentine",
+        "display_label": "My Funny Valentine - Chet Baker",
+        "source_membership_id": "family-14-song-101-chet-baker-my-funny-valentine",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "My Funny Valentine gives archetype 101 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:miles-davis-blue-in-green",
+        "object_id": "miles-davis-blue-in-green",
+        "display_label": "Blue in Green - Miles Davis",
+        "source_membership_id": "family-14-song-101-miles-davis-blue-in-green",
+        "roles": [
+          "deepening",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blue in Green gives archetype 101 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:thelonious-monk-round-midnight",
+        "object_id": "thelonious-monk-round-midnight",
+        "display_label": "Round Midnight - Thelonious Monk",
+        "source_membership_id": "family-14-song-101-thelonious-monk-round-midnight",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Round Midnight gives 101 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:charles-mingus-goodbye-pork-pie-hat",
+        "object_id": "charles-mingus-goodbye-pork-pie-hat",
+        "display_label": "Goodbye Pork Pie Hat - Charles Mingus",
+        "source_membership_id": "family-14-song-101-charles-mingus-goodbye-pork-pie-hat",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Goodbye Pork Pie Hat gives archetype 101 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:charlie-parker-ko-ko",
+        "object_id": "charlie-parker-ko-ko",
+        "display_label": "Ko-Ko - Charlie Parker",
+        "source_membership_id": "family-14-song-101-charlie-parker-ko-ko",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Ko-Ko gives 101 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:art-blakey-and-the-jazz-messengers-moanin",
+        "object_id": "art-blakey-and-the-jazz-messengers-moanin",
+        "display_label": "Moanin - Art Blakey and the Jazz Messengers",
+        "source_membership_id": "family-14-song-101-art-blakey-and-the-jazz-messengers-moanin",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Moanin gives archetype 101 a clear song-level recognition, bridge, contrast, or boundary test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f14-artist-miles-davis-101",
+        "candidate_id": "survey-f14-artist-miles-davis-101",
+        "object_type": "artist",
+        "display_label": "Miles Davis",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-john-coltrane-101",
+        "candidate_id": "survey-f14-artist-john-coltrane-101",
+        "object_type": "artist",
+        "display_label": "John Coltrane",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-herbie-hancock-101",
+        "candidate_id": "survey-f14-artist-herbie-hancock-101",
+        "object_type": "artist",
+        "display_label": "Herbie Hancock",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-dave-brubeck-quartet-101",
+        "candidate_id": "survey-f14-artist-dave-brubeck-quartet-101",
+        "object_type": "artist",
+        "display_label": "Dave Brubeck Quartet",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-nina-simone-101",
+        "candidate_id": "survey-f14-artist-nina-simone-101",
+        "object_type": "artist",
+        "display_label": "Nina Simone",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-thelonious-monk-101",
+        "candidate_id": "survey-f14-artist-thelonious-monk-101",
+        "object_type": "artist",
+        "display_label": "Thelonious Monk",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-charlie-parker-101",
+        "candidate_id": "survey-f14-artist-charlie-parker-101",
+        "object_type": "artist",
+        "display_label": "Charlie Parker",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-charles-mingus-101",
+        "candidate_id": "survey-f14-artist-charles-mingus-101",
+        "object_type": "artist",
+        "display_label": "Charles Mingus",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-chet-baker-101",
+        "candidate_id": "survey-f14-artist-chet-baker-101",
+        "object_type": "artist",
+        "display_label": "Chet Baker",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-stan-getz-101",
+        "candidate_id": "survey-f14-artist-stan-getz-101",
+        "object_type": "artist",
+        "display_label": "Stan Getz",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-artist-art-blakey-and-the-jazz-messengers-101",
+        "candidate_id": "survey-f14-artist-art-blakey-and-the-jazz-messengers-101",
+        "object_type": "artist",
+        "display_label": "Art Blakey and the Jazz Messengers",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-dave-brubeck-quartet-time-out-101",
+        "candidate_id": "survey-f14-album-dave-brubeck-quartet-time-out-101",
+        "object_type": "album",
+        "display_label": "Time Out",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-john-coltrane-a-love-supreme-101",
+        "candidate_id": "survey-f14-album-john-coltrane-a-love-supreme-101",
+        "object_type": "album",
+        "display_label": "A Love Supreme",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-miles-davis-kind-of-blue-101",
+        "candidate_id": "survey-f14-album-miles-davis-kind-of-blue-101",
+        "object_type": "album",
+        "display_label": "Kind of Blue",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-herbie-hancock-head-hunters-101",
+        "candidate_id": "survey-f14-album-herbie-hancock-head-hunters-101",
+        "object_type": "album",
+        "display_label": "Head Hunters",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-stan-getz-and-joao-gilberto-getz-gilberto-101",
+        "candidate_id": "survey-f14-album-stan-getz-and-joao-gilberto-getz-gilberto-101",
+        "object_type": "album",
+        "display_label": "Getz/Gilberto",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-charles-mingus-mingus-ah-um-101",
+        "candidate_id": "survey-f14-album-charles-mingus-mingus-ah-um-101",
+        "object_type": "album",
+        "display_label": "Mingus Ah Um",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-nina-simone-pastel-blues-101",
+        "candidate_id": "survey-f14-album-nina-simone-pastel-blues-101",
+        "object_type": "album",
+        "display_label": "Pastel Blues",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-album-art-blakey-and-the-jazz-messengers-moanin-101",
+        "candidate_id": "survey-f14-album-art-blakey-and-the-jazz-messengers-moanin-101",
+        "object_type": "album",
+        "display_label": "Moanin",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f14-song_recording-dave-brubeck-quartet-take-five-101",
+        "candidate_id": "survey-f14-song_recording-dave-brubeck-quartet-take-five-101",
+        "object_type": "song_recording",
+        "display_label": "Take Five",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f14-song_recording-miles-davis-blue-in-green-101",
+        "question_id": "boundary-survey-f14-song_recording-miles-davis-blue-in-green-101",
+        "display_label": "Blue in Green",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f14-song_recording-miles-davis-blue-in-green-101",
+        "probe_id": "probe-survey-f14-song_recording-miles-davis-blue-in-green-101",
+        "entity_type": "song_recording",
+        "display_label": "Blue in Green",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_14/archetype_100",
+      "family_14/archetype_102"
+    ],
+    "before_archetype_refs": [
+      "family_14/archetype_100"
+    ],
+    "after_archetype_refs": [
+      "family_14/archetype_102"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_14": {
+      "title": "Normalized canonical graph export, Family 14",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_14/normalized_family_14.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "britannica_jazz": {
+      "title": "Jazz",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/jazz",
+      "source_type": "reference",
+      "audit_use": "Defines jazz history, improvisation, swing, and stylistic development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Defines jazz history, improvisation, swing, and stylistic development."
+    },
+    "britannica_bebop": {
+      "title": "Bebop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/bebop",
+      "source_type": "reference",
+      "audit_use": "Supports bebop as a technical and harmonic foundation for the route.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supports bebop as a technical and harmonic foundation for the route."
+    },
+    "loc_jazz_history": {
+      "title": "History of Jazz",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/collections/jazz-on-the-screen-filmography/articles-and-essays/history-of-jazz/",
+      "source_type": "reference",
+      "audit_use": "Provides archival jazz-history context for foundations and major stylistic turns.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Provides archival jazz-history context for foundations and major stylistic turns."
+    },
+    "smithsonian_jazz": {
+      "title": "Smithsonian Jazz",
+      "publisher": "Smithsonian National Museum of American History",
+      "url": "https://americanhistory.si.edu/smithsonian-jazz",
+      "source_type": "reference",
+      "audit_use": "Provides museum-level jazz education context for major artists and recordings.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Provides museum-level jazz education context for major artists and recordings."
+    },
+    "jazz_at_lincoln_center": {
+      "title": "Jazz Academy",
+      "publisher": "Jazz at Lincoln Center",
+      "url": "https://academy.jazz.org/",
+      "source_type": "educational_archive",
+      "audit_use": "Jazz education source for swing, improvisation, form, and listening context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Jazz education source for swing, improvisation, form, and listening context."
+    },
+    "loc_jazz": {
+      "title": "Jazz",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/collections/jazz-on-the-screen-filmography/articles-and-essays/history-of-jazz/",
+      "source_type": "archive_reference",
+      "audit_use": "Library of Congress jazz history and preservation context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Library of Congress jazz history and preservation context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "101-d-01",
+      "claim_text": "This archetype is the jazz gateway where improvisation, harmonic language, small-group interaction, and canon albums matter more than vocal-song familiarity.",
+      "source_ref_ids": [
+        "britannica_jazz",
+        "loc_jazz_history",
+        "smithsonian_jazz"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_14/archetype_101",
+        "artist:miles-davis",
+        "artist:john-coltrane"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "101-d-02",
+      "claim_text": "Bebop support is necessary because the route depends on post-swing harmonic velocity and soloist language, even when the example is later hard bop or modal jazz.",
+      "source_ref_ids": [
+        "britannica_bebop",
+        "britannica_jazz"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:charlie-parker",
+        "artist:thelonious-monk"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "101-d-03",
+      "claim_text": "Kind of Blue and A Love Supreme make two different gateway paths audible: modal spaciousness through Miles Davis and spiritual intensity through John Coltrane.",
+      "source_ref_ids": [
+        "britannica_jazz",
+        "smithsonian_jazz"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "did_you_know",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "album:miles-davis-kind-of-blue",
+        "album:john-coltrane-a-love-supreme"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "101-d-04",
+      "claim_text": "Listen for improvisational conversation, walking or elastic time, altered harmony, and solos that develop ideas rather than simply decorate a tune.",
+      "source_ref_ids": [
+        "britannica_jazz",
+        "britannica_bebop",
+        "loc_jazz_history"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_14/archetype_101"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "101-jazz_foundations_bebop_hard_bop_gateway-boundary",
+      "claim_text": "Jazz Foundations / Bebop / Hard Bop Gateway's boundary is clearest when improvised solo development and swing or elastic time appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "britannica_jazz",
+        "britannica_bebop"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_14/archetype_101",
+        "artist:miles-davis",
+        "artist:john-coltrane"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "101-jazz_foundations_bebop_hard_bop_gateway-examples",
+      "claim_text": "Miles Davis, John Coltrane, Kind of Blue - Miles Davis gives Jazz Foundations / Bebop / Hard Bop Gateway concrete anchors because the examples expose modal or bebop harmony inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "britannica_bebop",
+        "loc_jazz_history"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_14/archetype_101",
+        "artist:miles-davis",
+        "artist:john-coltrane"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Core jazz gateway built around improvisation, harmonic language, and canon album listening.",
+    "history_capsule": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening.",
+    "why_it_mattered": "It teaches listeners how jazz routes operate: through players, ensembles, versions, and improvisational decisions.",
+    "what_made_it_distinct": "The song form is often a launchpad; the route signal comes from how musicians move through it.",
+    "what_to_listen_for": [
+      "improvised solo development",
+      "swing or elastic time",
+      "modal or bebop harmony",
+      "ensemble call-and-response",
+      "album-side pacing"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:miles-davis",
+        "example_type": "artist",
+        "display_label": "Miles Davis",
+        "why_this_example_matters": "Miles Davis anchors Jazz Foundations / Bebop / Hard Bop Gateway by making phrasing and time feel and harmonic color easier to hear.",
+        "what_to_listen_for": [
+          "improvised solo development",
+          "swing or elastic time"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:john-coltrane",
+        "example_type": "artist",
+        "display_label": "John Coltrane",
+        "why_this_example_matters": "John Coltrane anchors Jazz Foundations / Bebop / Hard Bop Gateway by making harmonic color and improvised response easier to hear.",
+        "what_to_listen_for": [
+          "swing or elastic time",
+          "modal or bebop harmony"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:miles-davis-kind-of-blue",
+        "example_type": "album",
+        "display_label": "Kind of Blue - Miles Davis",
+        "why_this_example_matters": "Kind of Blue - Miles Davis anchors Jazz Foundations / Bebop / Hard Bop Gateway by making improvised response and ensemble interplay easier to hear.",
+        "what_to_listen_for": [
+          "modal or bebop harmony",
+          "ensemble call-and-response"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:john-coltrane-a-love-supreme",
+        "example_type": "album",
+        "display_label": "A Love Supreme - John Coltrane",
+        "why_this_example_matters": "A Love Supreme - John Coltrane anchors Jazz Foundations / Bebop / Hard Bop Gateway by making ensemble interplay and interpretive timing easier to hear.",
+        "what_to_listen_for": [
+          "ensemble call-and-response",
+          "album-side pacing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:miles-davis-so-what",
+        "example_type": "song_recording",
+        "display_label": "So What - Miles Davis",
+        "why_this_example_matters": "So What - Miles Davis anchors Jazz Foundations / Bebop / Hard Bop Gateway by making interpretive timing and phrasing and time feel easier to hear.",
+        "what_to_listen_for": [
+          "album-side pacing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:john-coltrane-my-favorite-things",
+        "example_type": "song_recording",
+        "display_label": "My Favorite Things - John Coltrane",
+        "why_this_example_matters": "My Favorite Things - John Coltrane anchors Jazz Foundations / Bebop / Hard Bop Gateway by making phrasing and time feel and harmonic color easier to hear.",
+        "what_to_listen_for": [
+          "improvised solo development",
+          "swing or elastic time"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_14/archetype_100"
+      ],
+      "after": [
+        "family_14/archetype_102"
+      ],
+      "related": [
+        "family_14/archetype_100",
+        "family_14/archetype_102"
+      ],
+      "copy": "Use Jazz Foundations / Bebop / Hard Bop Gateway as a contextual road inside Jazz, Standards, Vocal, Classical-Adjacent; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "101-dyk-1",
+        "copy": "So What and My Favorite Things are gateway recordings because they make jazz form audible without needing deep theory.",
+        "source_ref_ids": [
+          "britannica_jazz",
+          "loc_jazz_history",
+          "smithsonian_jazz"
+        ]
+      },
+      {
+        "card_id": "101-dyk-2",
+        "copy": "Hard bop often keeps blues/gospel feel closer to the surface than bebop.",
+        "source_ref_ids": [
+          "britannica_bebop",
+          "britannica_jazz"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether jazz foundations / bebop / hard bop gateway is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Core jazz gateway built around improvisation, harmonic language, and canon album listening.",
+      "It teaches listeners how jazz routes operate: through players, ensembles, versions, and improvisational decisions.",
+      "The song form is often a launchpad; the route signal comes from how musicians move through it."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use smooth-jazz or crooner sources as primary support; this lane needs improvisational jazz evidence.",
+    "personalization_hooks": [
+      {
+        "hook_id": "101-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[101]",
+          "atlas_state.family_affinity[14]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[101] >= 0.65 || atlas_state.family_affinity[14] >= 0.65",
+        "copy_variant": "Your Atlas signals make Jazz Foundations / Bebop / Hard Bop Gateway useful as a contextual landmark.",
+        "fallback_copy": "Use Jazz Foundations / Bebop / Hard Bop Gateway as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "101-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_14/archetype_101 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_14/archetype_101",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Jazz Foundations / Bebop / Hard Bop Gateway before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "101-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_14/archetype_101 || atlas_state.boundary_question_results has boundary_negative for family_14/archetype_101",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Jazz Foundations / Bebop / Hard Bop Gateway.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "101-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_14/archetype_101 || atlas_state.related_mission_ids references family_14/archetype_101",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "101-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_14/archetype_101 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_14/archetype_101 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_14/archetype_101",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Jazz Foundations / Bebop / Hard Bop Gateway.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_14": {
+        "title": "Normalized canonical graph export, Family 14",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_14/normalized_family_14.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "britannica_jazz": {
+        "title": "Jazz",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/jazz",
+        "source_type": "reference",
+        "audit_use": "Defines jazz history, improvisation, swing, and stylistic development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines jazz history, improvisation, swing, and stylistic development."
+      },
+      "britannica_bebop": {
+        "title": "Bebop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/bebop",
+        "source_type": "reference",
+        "audit_use": "Supports bebop as a technical and harmonic foundation for the route.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports bebop as a technical and harmonic foundation for the route."
+      },
+      "loc_jazz_history": {
+        "title": "History of Jazz",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/jazz-on-the-screen-filmography/articles-and-essays/history-of-jazz/",
+        "source_type": "reference",
+        "audit_use": "Provides archival jazz-history context for foundations and major stylistic turns.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides archival jazz-history context for foundations and major stylistic turns."
+      },
+      "smithsonian_jazz": {
+        "title": "Smithsonian Jazz",
+        "publisher": "Smithsonian National Museum of American History",
+        "url": "https://americanhistory.si.edu/smithsonian-jazz",
+        "source_type": "reference",
+        "audit_use": "Provides museum-level jazz education context for major artists and recordings.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides museum-level jazz education context for major artists and recordings."
+      },
+      "jazz_at_lincoln_center": {
+        "title": "Jazz Academy",
+        "publisher": "Jazz at Lincoln Center",
+        "url": "https://academy.jazz.org/",
+        "source_type": "educational_archive",
+        "audit_use": "Jazz education source for swing, improvisation, form, and listening context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jazz education source for swing, improvisation, form, and listening context."
+      },
+      "loc_jazz": {
+        "title": "Jazz",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/jazz-on-the-screen-filmography/articles-and-essays/history-of-jazz/",
+        "source_type": "archive_reference",
+        "audit_use": "Library of Congress jazz history and preservation context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Library of Congress jazz history and preservation context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "101-d-01",
+        "claim_text": "This archetype is the jazz gateway where improvisation, harmonic language, small-group interaction, and canon albums matter more than vocal-song familiarity.",
+        "source_ref_ids": [
+          "britannica_jazz",
+          "loc_jazz_history",
+          "smithsonian_jazz"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_14/archetype_101",
+          "artist:miles-davis",
+          "artist:john-coltrane"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "101-d-02",
+        "claim_text": "Bebop support is necessary because the route depends on post-swing harmonic velocity and soloist language, even when the example is later hard bop or modal jazz.",
+        "source_ref_ids": [
+          "britannica_bebop",
+          "britannica_jazz"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:charlie-parker",
+          "artist:thelonious-monk"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "101-d-03",
+        "claim_text": "Kind of Blue and A Love Supreme make two different gateway paths audible: modal spaciousness through Miles Davis and spiritual intensity through John Coltrane.",
+        "source_ref_ids": [
+          "britannica_jazz",
+          "smithsonian_jazz"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "did_you_know",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "album:miles-davis-kind-of-blue",
+          "album:john-coltrane-a-love-supreme"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "101-d-04",
+        "claim_text": "Listen for improvisational conversation, walking or elastic time, altered harmony, and solos that develop ideas rather than simply decorate a tune.",
+        "source_ref_ids": [
+          "britannica_jazz",
+          "britannica_bebop",
+          "loc_jazz_history"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_14/archetype_101"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "101-jazz_foundations_bebop_hard_bop_gateway-boundary",
+        "claim_text": "Jazz Foundations / Bebop / Hard Bop Gateway's boundary is clearest when improvised solo development and swing or elastic time appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "britannica_jazz",
+          "britannica_bebop"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_14/archetype_101",
+          "artist:miles-davis",
+          "artist:john-coltrane"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "101-jazz_foundations_bebop_hard_bop_gateway-examples",
+        "claim_text": "Miles Davis, John Coltrane, Kind of Blue - Miles Davis gives Jazz Foundations / Bebop / Hard Bop Gateway concrete anchors because the examples expose modal or bebop harmony inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "britannica_bebop",
+          "loc_jazz_history"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_14/archetype_101",
+          "artist:miles-davis",
+          "artist:john-coltrane"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "Jazz foundations bebop hard bop Miles Davis John Coltrane Kind of Blue A Love Supreme Charlie Parker",
+    "selected_sources": [
+      {
+        "source_ref_id": "britannica_jazz",
+        "title": "Jazz",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/jazz",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Defines jazz history, improvisation, swing, and stylistic development."
+      },
+      {
+        "source_ref_id": "britannica_bebop",
+        "title": "Bebop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/bebop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports bebop as a technical and harmonic foundation for the route."
+      },
+      {
+        "source_ref_id": "loc_jazz_history",
+        "title": "History of Jazz",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/jazz-on-the-screen-filmography/articles-and-essays/history-of-jazz/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides archival jazz-history context for foundations and major stylistic turns."
+      },
+      {
+        "source_ref_id": "smithsonian_jazz",
+        "title": "Smithsonian Jazz",
+        "publisher": "Smithsonian National Museum of American History",
+        "url": "https://americanhistory.si.edu/smithsonian-jazz",
+        "source_relevance": "family_context_only",
+        "why_fit": "Provides museum-level jazz education context for major artists and recordings."
+      },
+      {
+        "source_ref_id": "jazz_at_lincoln_center",
+        "title": "Jazz Academy",
+        "publisher": "Jazz at Lincoln Center",
+        "url": "https://academy.jazz.org/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Jazz education source for swing, improvisation, form, and listening context."
+      },
+      {
+        "source_ref_id": "loc_jazz",
+        "title": "Jazz",
+        "publisher": "Library of Congress",
+        "url": "https://www.loc.gov/collections/jazz-on-the-screen-filmography/articles-and-essays/history-of-jazz/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Library of Congress jazz history and preservation context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_christmas_carol",
+        "title": "Christmas carol",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/Christmas-carol",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Seasonal-song context belongs to holiday canon, not this archetype."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Jazz origins, improvisation, swing, bebop, and later styles. Jazz preservation, education, and historical context. Jazz education source for swing, improvisation, form, and listening context. Bebop harmony, rhythm, virtuosity, and modern jazz context. Library of Congress jazz history and preservation context."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 5,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 90,
+    "scene_anchor_refs": [
+      "song|duke ellington|take the a train",
+      "recording|john coltrane|blue train",
+      "recording|miles davis|all blues",
+      "recording|lee morgan|sidewinder"
+    ],
+    "ladder_example_refs": [
+      "recording|horace silver|song for my father",
+      "recording|cannonball adderley|autumn leaves",
+      "song|dave brubeck quartet|take five",
+      "song|herbie hancock|cantaloupe island",
+      "album|stan getz and joao gilberto|getz gilberto",
+      "recording|eric dolphy|hat and beard",
+      "recording|pharoah sanders|creator has a master plan",
+      "song|sonny rollins|st thomas"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

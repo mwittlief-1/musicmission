@@ -1,0 +1,784 @@
+{
+  "contract_version": "hidden_oracle_rank_usefulness_analysis_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "created_at": "2026-05-29T11:13:51Z",
+  "phase": "hidden_oracle_rank_usefulness_analysis",
+  "runtime_allowed": false,
+  "runtime_listener_evidence_connected": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "opportunity_only": true,
+  "selector_may_read_hidden_oracle": false,
+  "evaluator_may_read_hidden_oracle_after_selection": true,
+  "source_hidden_oracle_evaluation_design_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_oracle_evaluation_design_v0_1.json",
+  "analysis_scope": {
+    "analysis_subject": "selected_opportunity_rank_order",
+    "rank_window": 10,
+    "rank_score_field": "selected_opportunity_ref.final_opportunity_score",
+    "usefulness_score_field": "expected_metrics.learning_usefulness_score",
+    "hidden_oracle_use": "post_selection_metrics_only",
+    "selector_input_rule": "visible_evidence_only",
+    "construction_simulation_status": "not_implemented",
+    "candidate_song_selection_status": "not_in_scope",
+    "allowed_outputs": [
+      "rank_rows",
+      "rank_usefulness_metrics",
+      "mission_type_usefulness_summary",
+      "aggregate_rank_alignment",
+      "review_notes"
+    ]
+  },
+  "aggregate_summary": {
+    "profile_count": 3,
+    "mean_top1_learning_usefulness_score": 0.6756,
+    "mean_best_learning_usefulness_score": 0.7313,
+    "mean_rank_regret": 0.0557,
+    "top1_is_best_count": 2,
+    "best_in_top3_count": 3,
+    "best_in_top5_count": 3,
+    "mean_spearman_rank_correlation": 0.0747,
+    "mean_ndcg_at_3": 0.8778,
+    "mean_ndcg_at_5": 0.9152,
+    "mean_ndcg_at_10": 0.9631,
+    "alignment_label": "mixed",
+    "aggregate_findings": [
+      "Oracle-usefulness best item is in top 3 for 3/3 profiles.",
+      "Oracle-usefulness best item is in top 5 for 3/3 profiles.",
+      "Selector top rank is not always oracle-best; later portfolio selection should preserve the top window.",
+      "Mean rank regret is modest in the accepted synthetic profile set."
+    ]
+  },
+  "profiles": [
+    {
+      "profile_id": "public_profile_01",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_01_selector_output_v0_1.json",
+      "evaluation_design_profile_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_oracle_evaluation_design_v0_1.json#public_profile_01",
+      "rank_window": 10,
+      "top_selector_opportunity": {
+        "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_00",
+        "rank": 1,
+        "mission_type": "boundary_test",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "016",
+          "106"
+        ],
+        "target_display_name": "Visible Archetype 016 -> Visible Archetype 106",
+        "selector_score": 0.9098,
+        "learning_usefulness_score": 0.7537
+      },
+      "best_oracle_usefulness_opportunity": {
+        "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_00",
+        "rank": 1,
+        "mission_type": "boundary_test",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "016",
+          "106"
+        ],
+        "target_display_name": "Visible Archetype 016 -> Visible Archetype 106",
+        "selector_score": 0.9098,
+        "learning_usefulness_score": 0.7537
+      },
+      "top1_learning_usefulness_score": 0.7537,
+      "best_learning_usefulness_score": 0.7537,
+      "rank_regret": 0.0,
+      "best_usefulness_rank": 1,
+      "top1_is_best": true,
+      "best_in_top3": true,
+      "best_in_top5": true,
+      "spearman_rank_correlation": 0.2727,
+      "ndcg_at_3": 0.9447,
+      "ndcg_at_5": 0.9478,
+      "ndcg_at_10": 0.9804,
+      "rank_rows": [
+        {
+          "rank": 1,
+          "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 016 -> Visible Archetype 106",
+          "selector_score": 0.9098,
+          "learning_usefulness_score": 0.7537,
+          "usefulness_rank": 1,
+          "usefulness_delta_from_top1": 0.0,
+          "oracle_match_tags": [
+            "primary_archetype:016",
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 2,
+          "opportunity_id": "opp_profile-01_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 016",
+          "selector_score": 0.8561,
+          "learning_usefulness_score": 0.5292,
+          "usefulness_rank": 9,
+          "usefulness_delta_from_top1": -0.2245,
+          "oracle_match_tags": [
+            "primary_archetype:016"
+          ]
+        },
+        {
+          "rank": 3,
+          "opportunity_id": "opp_profile-01_boundary_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 016 -> Visible Archetype 106 (candidate 02)",
+          "selector_score": 0.8487,
+          "learning_usefulness_score": 0.7421,
+          "usefulness_rank": 2,
+          "usefulness_delta_from_top1": -0.0116,
+          "oracle_match_tags": [
+            "primary_archetype:016",
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 4,
+          "opportunity_id": "opp_profile-01_artist_depth_test_one_artist_shallow_depth_eligible_00",
+          "mission_type": "artist_depth_test",
+          "target_display_name": "Fleetwood Mac",
+          "selector_score": 0.84,
+          "learning_usefulness_score": 0.5382,
+          "usefulness_rank": 7,
+          "usefulness_delta_from_top1": -0.2155,
+          "oracle_match_tags": [
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 5,
+          "opportunity_id": "opp_profile-01_false_nearby_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "false_nearby_test",
+          "target_display_name": "Hotel California Context Cluster",
+          "selector_score": 0.8179,
+          "learning_usefulness_score": 0.5713,
+          "usefulness_rank": 5,
+          "usefulness_delta_from_top1": -0.1824,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "direct_song_unknown:1"
+          ]
+        },
+        {
+          "rank": 6,
+          "opportunity_id": "opp_profile-01_bridge_test_bridge_source_positive_target_gap_eligible_00",
+          "mission_type": "bridge_test",
+          "target_display_name": "Visible Family 3 -> Visible Family 15",
+          "selector_score": 0.8137,
+          "learning_usefulness_score": 0.5844,
+          "usefulness_rank": 4,
+          "usefulness_delta_from_top1": -0.1693,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "false_nearby_lane_match"
+          ]
+        },
+        {
+          "rank": 7,
+          "opportunity_id": "opp_profile-01_artist_depth_test_one_artist_shallow_depth_eligible_02",
+          "mission_type": "artist_depth_test",
+          "target_display_name": "Fleetwood Mac (candidate 02)",
+          "selector_score": 0.8015,
+          "learning_usefulness_score": 0.5309,
+          "usefulness_rank": 8,
+          "usefulness_delta_from_top1": -0.2228,
+          "oracle_match_tags": [
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 8,
+          "opportunity_id": "opp_profile-01_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 016 (candidate 02)",
+          "selector_score": 0.7968,
+          "learning_usefulness_score": 0.5179,
+          "usefulness_rank": 10,
+          "usefulness_delta_from_top1": -0.2358,
+          "oracle_match_tags": [
+            "primary_archetype:016"
+          ]
+        },
+        {
+          "rank": 9,
+          "opportunity_id": "opp_profile-01_context_dependence_test_context_heavy_signals_eligible_00",
+          "mission_type": "context_dependence_test",
+          "target_display_name": "Hotel California Context Cluster",
+          "selector_score": 0.7604,
+          "learning_usefulness_score": 0.6441,
+          "usefulness_rank": 3,
+          "usefulness_delta_from_top1": -0.1096,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "context_lane_match",
+            "direct_song_unknown:1"
+          ]
+        },
+        {
+          "rank": 10,
+          "opportunity_id": "opp_profile-01_false_nearby_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "false_nearby_test",
+          "target_display_name": "Hotel California Context Cluster (candidate 02)",
+          "selector_score": 0.7582,
+          "learning_usefulness_score": 0.5601,
+          "usefulness_rank": 6,
+          "usefulness_delta_from_top1": -0.1936,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "direct_song_unknown:1"
+          ]
+        }
+      ],
+      "mission_type_usefulness_summary": [
+        {
+          "mission_type": "boundary_test",
+          "count": 2,
+          "best_selector_rank": 1,
+          "best_usefulness_rank": 1,
+          "mean_learning_usefulness_score": 0.7479,
+          "max_learning_usefulness_score": 0.7537
+        },
+        {
+          "mission_type": "context_dependence_test",
+          "count": 1,
+          "best_selector_rank": 9,
+          "best_usefulness_rank": 3,
+          "mean_learning_usefulness_score": 0.6441,
+          "max_learning_usefulness_score": 0.6441
+        },
+        {
+          "mission_type": "bridge_test",
+          "count": 1,
+          "best_selector_rank": 6,
+          "best_usefulness_rank": 4,
+          "mean_learning_usefulness_score": 0.5844,
+          "max_learning_usefulness_score": 0.5844
+        },
+        {
+          "mission_type": "false_nearby_test",
+          "count": 2,
+          "best_selector_rank": 5,
+          "best_usefulness_rank": 5,
+          "mean_learning_usefulness_score": 0.5657,
+          "max_learning_usefulness_score": 0.5713
+        },
+        {
+          "mission_type": "artist_depth_test",
+          "count": 2,
+          "best_selector_rank": 4,
+          "best_usefulness_rank": 7,
+          "mean_learning_usefulness_score": 0.5346,
+          "max_learning_usefulness_score": 0.5382
+        },
+        {
+          "mission_type": "archetype_depth_test",
+          "count": 2,
+          "best_selector_rank": 2,
+          "best_usefulness_rank": 9,
+          "mean_learning_usefulness_score": 0.5235,
+          "max_learning_usefulness_score": 0.5292
+        }
+      ],
+      "diagnostic_findings": [
+        "Selector rank 1 is also the oracle-usefulness best item in the analysis window.",
+        "The oracle-usefulness best item remains recoverable by a top-3 portfolio selector.",
+        "Selector rank order has mixed monotonic alignment with oracle usefulness."
+      ],
+      "recommended_selector_tuning_notes": [
+        "Diagnostic mission types are carrying high oracle usefulness; preserve them for later portfolio selection."
+      ]
+    },
+    {
+      "profile_id": "public_profile_05",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_05_selector_output_v0_1.json",
+      "evaluation_design_profile_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_oracle_evaluation_design_v0_1.json#public_profile_05",
+      "rank_window": 10,
+      "top_selector_opportunity": {
+        "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+        "rank": 1,
+        "mission_type": "boundary_test",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "044",
+          "006"
+        ],
+        "target_display_name": "Visible Archetype 044 -> Visible Archetype 006",
+        "selector_score": 0.8924,
+        "learning_usefulness_score": 0.7436
+      },
+      "best_oracle_usefulness_opportunity": {
+        "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+        "rank": 1,
+        "mission_type": "boundary_test",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "044",
+          "006"
+        ],
+        "target_display_name": "Visible Archetype 044 -> Visible Archetype 006",
+        "selector_score": 0.8924,
+        "learning_usefulness_score": 0.7436
+      },
+      "top1_learning_usefulness_score": 0.7436,
+      "best_learning_usefulness_score": 0.7436,
+      "rank_regret": 0.0,
+      "best_usefulness_rank": 1,
+      "top1_is_best": true,
+      "best_in_top3": true,
+      "best_in_top5": true,
+      "spearman_rank_correlation": 0.0788,
+      "ndcg_at_3": 0.863,
+      "ndcg_at_5": 0.9167,
+      "ndcg_at_10": 0.968,
+      "rank_rows": [
+        {
+          "rank": 1,
+          "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 044 -> Visible Archetype 006",
+          "selector_score": 0.8924,
+          "learning_usefulness_score": 0.7436,
+          "usefulness_rank": 1,
+          "usefulness_delta_from_top1": 0.0,
+          "oracle_match_tags": [
+            "primary_archetype:044",
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 2,
+          "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 044",
+          "selector_score": 0.86,
+          "learning_usefulness_score": 0.5231,
+          "usefulness_rank": 9,
+          "usefulness_delta_from_top1": -0.2205,
+          "oracle_match_tags": [
+            "primary_archetype:044"
+          ]
+        },
+        {
+          "rank": 3,
+          "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_00",
+          "mission_type": "artist_depth_test",
+          "target_display_name": "Kendrick Lamar",
+          "selector_score": 0.84,
+          "learning_usefulness_score": 0.5382,
+          "usefulness_rank": 7,
+          "usefulness_delta_from_top1": -0.2054,
+          "oracle_match_tags": [
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 4,
+          "opportunity_id": "opp_profile-05_bridge_test_bridge_source_positive_target_gap_eligible_00",
+          "mission_type": "bridge_test",
+          "target_display_name": "Visible Family 6 -> Visible Family 1",
+          "selector_score": 0.8341,
+          "learning_usefulness_score": 0.5472,
+          "usefulness_rank": 6,
+          "usefulness_delta_from_top1": -0.1964,
+          "oracle_match_tags": [
+            "unknown_targets:2"
+          ]
+        },
+        {
+          "rank": 5,
+          "opportunity_id": "opp_profile-05_boundary_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 044 -> Visible Archetype 006 (candidate 02)",
+          "selector_score": 0.8313,
+          "learning_usefulness_score": 0.732,
+          "usefulness_rank": 2,
+          "usefulness_delta_from_top1": -0.0116,
+          "oracle_match_tags": [
+            "primary_archetype:044",
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 6,
+          "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "false_nearby_test",
+          "target_display_name": "Kill Bill Context Cluster",
+          "selector_score": 0.815,
+          "learning_usefulness_score": 0.5862,
+          "usefulness_rank": 4,
+          "usefulness_delta_from_top1": -0.1574,
+          "oracle_match_tags": [
+            "unknown_targets:2"
+          ]
+        },
+        {
+          "rank": 7,
+          "opportunity_id": "opp_profile-05_archetype_depth_test_strong_archetype_shallow_depth_eligible_02",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 044 (candidate 02)",
+          "selector_score": 0.8122,
+          "learning_usefulness_score": 0.5141,
+          "usefulness_rank": 10,
+          "usefulness_delta_from_top1": -0.2295,
+          "oracle_match_tags": [
+            "primary_archetype:044"
+          ]
+        },
+        {
+          "rank": 8,
+          "opportunity_id": "opp_profile-05_artist_depth_test_one_artist_shallow_depth_eligible_02",
+          "mission_type": "artist_depth_test",
+          "target_display_name": "Kendrick Lamar (candidate 02)",
+          "selector_score": 0.8011,
+          "learning_usefulness_score": 0.5309,
+          "usefulness_rank": 8,
+          "usefulness_delta_from_top1": -0.2127,
+          "oracle_match_tags": [
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 9,
+          "opportunity_id": "opp_profile-05_context_dependence_test_context_heavy_signals_eligible_00",
+          "mission_type": "context_dependence_test",
+          "target_display_name": "Kill Bill Context Cluster",
+          "selector_score": 0.77,
+          "learning_usefulness_score": 0.7009,
+          "usefulness_rank": 3,
+          "usefulness_delta_from_top1": -0.0427,
+          "oracle_match_tags": [
+            "unknown_targets:2",
+            "context_lane_match"
+          ]
+        },
+        {
+          "rank": 10,
+          "opportunity_id": "opp_profile-05_false_nearby_test_mixed_nearby_boundary_eligible_02",
+          "mission_type": "false_nearby_test",
+          "target_display_name": "Kill Bill Context Cluster (candidate 02)",
+          "selector_score": 0.7554,
+          "learning_usefulness_score": 0.5749,
+          "usefulness_rank": 5,
+          "usefulness_delta_from_top1": -0.1687,
+          "oracle_match_tags": [
+            "unknown_targets:2"
+          ]
+        }
+      ],
+      "mission_type_usefulness_summary": [
+        {
+          "mission_type": "boundary_test",
+          "count": 2,
+          "best_selector_rank": 1,
+          "best_usefulness_rank": 1,
+          "mean_learning_usefulness_score": 0.7378,
+          "max_learning_usefulness_score": 0.7436
+        },
+        {
+          "mission_type": "context_dependence_test",
+          "count": 1,
+          "best_selector_rank": 9,
+          "best_usefulness_rank": 3,
+          "mean_learning_usefulness_score": 0.7009,
+          "max_learning_usefulness_score": 0.7009
+        },
+        {
+          "mission_type": "false_nearby_test",
+          "count": 2,
+          "best_selector_rank": 6,
+          "best_usefulness_rank": 4,
+          "mean_learning_usefulness_score": 0.5806,
+          "max_learning_usefulness_score": 0.5862
+        },
+        {
+          "mission_type": "bridge_test",
+          "count": 1,
+          "best_selector_rank": 4,
+          "best_usefulness_rank": 6,
+          "mean_learning_usefulness_score": 0.5472,
+          "max_learning_usefulness_score": 0.5472
+        },
+        {
+          "mission_type": "artist_depth_test",
+          "count": 2,
+          "best_selector_rank": 3,
+          "best_usefulness_rank": 7,
+          "mean_learning_usefulness_score": 0.5346,
+          "max_learning_usefulness_score": 0.5382
+        },
+        {
+          "mission_type": "archetype_depth_test",
+          "count": 2,
+          "best_selector_rank": 2,
+          "best_usefulness_rank": 9,
+          "mean_learning_usefulness_score": 0.5186,
+          "max_learning_usefulness_score": 0.5231
+        }
+      ],
+      "diagnostic_findings": [
+        "Selector rank 1 is also the oracle-usefulness best item in the analysis window.",
+        "The oracle-usefulness best item remains recoverable by a top-3 portfolio selector.",
+        "Selector rank order has weak monotonic alignment with oracle usefulness."
+      ],
+      "recommended_selector_tuning_notes": [
+        "Inspect target-fit and learning-value weights for rank inversions in the top window.",
+        "Diagnostic mission types are carrying high oracle usefulness; preserve them for later portfolio selection."
+      ]
+    },
+    {
+      "profile_id": "public_profile_06",
+      "selector_output_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/public_profile_06_selector_output_v0_1.json",
+      "evaluation_design_profile_ref": "data/product_contracts/mission_opportunity_selection_v0_1/fixtures/profile_simulation/hidden_oracle_evaluation_design_v0_1.json#public_profile_06",
+      "rank_window": 10,
+      "top_selector_opportunity": {
+        "opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_00",
+        "rank": 1,
+        "mission_type": "bridge_test",
+        "target_object_type": "family_pair",
+        "target_object_ids": [
+          "family_15",
+          "family_12"
+        ],
+        "target_display_name": "Visible Family 15 -> Visible Family 12",
+        "selector_score": 0.87,
+        "learning_usefulness_score": 0.5295
+      },
+      "best_oracle_usefulness_opportunity": {
+        "opportunity_id": "opp_profile-06_boundary_test_mixed_nearby_boundary_eligible_00",
+        "rank": 3,
+        "mission_type": "boundary_test",
+        "target_object_type": "archetype_pair",
+        "target_object_ids": [
+          "106",
+          "016"
+        ],
+        "target_display_name": "Visible Archetype 106 -> Visible Archetype 016",
+        "selector_score": 0.8298,
+        "learning_usefulness_score": 0.6965
+      },
+      "top1_learning_usefulness_score": 0.5295,
+      "best_learning_usefulness_score": 0.6965,
+      "rank_regret": 0.167,
+      "best_usefulness_rank": 3,
+      "top1_is_best": false,
+      "best_in_top3": true,
+      "best_in_top5": true,
+      "spearman_rank_correlation": -0.1273,
+      "ndcg_at_3": 0.8258,
+      "ndcg_at_5": 0.8811,
+      "ndcg_at_10": 0.9408,
+      "rank_rows": [
+        {
+          "rank": 1,
+          "opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_00",
+          "mission_type": "bridge_test",
+          "target_display_name": "Visible Family 15 -> Visible Family 12",
+          "selector_score": 0.87,
+          "learning_usefulness_score": 0.5295,
+          "usefulness_rank": 8,
+          "usefulness_delta_from_top1": 0.0,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "false_nearby_lane_match"
+          ]
+        },
+        {
+          "rank": 2,
+          "opportunity_id": "opp_profile-06_artist_depth_test_one_artist_shallow_depth_eligible_00",
+          "mission_type": "artist_depth_test",
+          "target_display_name": "Lin-Manuel Miranda",
+          "selector_score": 0.84,
+          "learning_usefulness_score": 0.5382,
+          "usefulness_rank": 6,
+          "usefulness_delta_from_top1": 0.0087,
+          "oracle_match_tags": [
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 3,
+          "opportunity_id": "opp_profile-06_boundary_test_mixed_nearby_boundary_eligible_00",
+          "mission_type": "boundary_test",
+          "target_display_name": "Visible Archetype 106 -> Visible Archetype 016",
+          "selector_score": 0.8298,
+          "learning_usefulness_score": 0.6965,
+          "usefulness_rank": 1,
+          "usefulness_delta_from_top1": 0.167,
+          "oracle_match_tags": [
+            "secondary_archetype:106",
+            "unknown_targets:1",
+            "false_nearby_lane_match"
+          ]
+        },
+        {
+          "rank": 4,
+          "opportunity_id": "opp_profile-06_bridge_test_bridge_source_positive_target_gap_eligible_02",
+          "mission_type": "bridge_test",
+          "target_display_name": "Visible Family 15 -> Visible Family 12 (candidate 02)",
+          "selector_score": 0.8091,
+          "learning_usefulness_score": 0.518,
+          "usefulness_rank": 9,
+          "usefulness_delta_from_top1": -0.0115,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "false_nearby_lane_match"
+          ]
+        },
+        {
+          "rank": 5,
+          "opportunity_id": "opp_profile-06_context_dependence_test_context_heavy_signals_eligible_00",
+          "mission_type": "context_dependence_test",
+          "target_display_name": "Bohemian Rhapsody Context Cluster",
+          "selector_score": 0.8073,
+          "learning_usefulness_score": 0.6925,
+          "usefulness_rank": 2,
+          "usefulness_delta_from_top1": 0.163,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "context_lane_match",
+            "direct_song_unknown:1"
+          ]
+        },
+        {
+          "rank": 6,
+          "opportunity_id": "opp_profile-06_artist_depth_test_one_artist_shallow_depth_eligible_02",
+          "mission_type": "artist_depth_test",
+          "target_display_name": "Lin-Manuel Miranda (candidate 02)",
+          "selector_score": 0.8059,
+          "learning_usefulness_score": 0.5318,
+          "usefulness_rank": 7,
+          "usefulness_delta_from_top1": 0.0023,
+          "oracle_match_tags": [
+            "unknown_targets:1"
+          ]
+        },
+        {
+          "rank": 7,
+          "opportunity_id": "opp_profile-06_exception_scope_test_recent_surprise_signal_eligible_00",
+          "mission_type": "exception_scope_test",
+          "target_display_name": "Bohemian Rhapsody",
+          "selector_score": 0.7808,
+          "learning_usefulness_score": 0.5417,
+          "usefulness_rank": 5,
+          "usefulness_delta_from_top1": 0.0122,
+          "oracle_match_tags": [
+            "direct_song_unknown:1"
+          ]
+        },
+        {
+          "rank": 8,
+          "opportunity_id": "opp_profile-06_archetype_depth_test_strong_archetype_shallow_depth_eligible_00",
+          "mission_type": "archetype_depth_test",
+          "target_display_name": "Visible Archetype 106",
+          "selector_score": 0.7637,
+          "learning_usefulness_score": 0.4904,
+          "usefulness_rank": 10,
+          "usefulness_delta_from_top1": -0.0391,
+          "oracle_match_tags": [
+            "secondary_archetype:106",
+            "false_nearby_lane_match"
+          ]
+        },
+        {
+          "rank": 9,
+          "opportunity_id": "opp_profile-06_album_container_test_one_album_container_signal_eligible_00",
+          "mission_type": "album_container_test",
+          "target_display_name": "Bohemian Rhapsody Album Context",
+          "selector_score": 0.7504,
+          "learning_usefulness_score": 0.5925,
+          "usefulness_rank": 4,
+          "usefulness_delta_from_top1": 0.063,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "context_lane_match"
+          ]
+        },
+        {
+          "rank": 10,
+          "opportunity_id": "opp_profile-06_context_dependence_test_context_heavy_signals_eligible_02",
+          "mission_type": "context_dependence_test",
+          "target_display_name": "Bohemian Rhapsody Context Cluster (candidate 02)",
+          "selector_score": 0.7475,
+          "learning_usefulness_score": 0.6812,
+          "usefulness_rank": 3,
+          "usefulness_delta_from_top1": 0.1517,
+          "oracle_match_tags": [
+            "unknown_targets:1",
+            "context_lane_match",
+            "direct_song_unknown:1"
+          ]
+        }
+      ],
+      "mission_type_usefulness_summary": [
+        {
+          "mission_type": "boundary_test",
+          "count": 1,
+          "best_selector_rank": 3,
+          "best_usefulness_rank": 1,
+          "mean_learning_usefulness_score": 0.6965,
+          "max_learning_usefulness_score": 0.6965
+        },
+        {
+          "mission_type": "context_dependence_test",
+          "count": 2,
+          "best_selector_rank": 5,
+          "best_usefulness_rank": 2,
+          "mean_learning_usefulness_score": 0.6868,
+          "max_learning_usefulness_score": 0.6925
+        },
+        {
+          "mission_type": "album_container_test",
+          "count": 1,
+          "best_selector_rank": 9,
+          "best_usefulness_rank": 4,
+          "mean_learning_usefulness_score": 0.5925,
+          "max_learning_usefulness_score": 0.5925
+        },
+        {
+          "mission_type": "exception_scope_test",
+          "count": 1,
+          "best_selector_rank": 7,
+          "best_usefulness_rank": 5,
+          "mean_learning_usefulness_score": 0.5417,
+          "max_learning_usefulness_score": 0.5417
+        },
+        {
+          "mission_type": "artist_depth_test",
+          "count": 2,
+          "best_selector_rank": 2,
+          "best_usefulness_rank": 6,
+          "mean_learning_usefulness_score": 0.535,
+          "max_learning_usefulness_score": 0.5382
+        },
+        {
+          "mission_type": "bridge_test",
+          "count": 2,
+          "best_selector_rank": 1,
+          "best_usefulness_rank": 8,
+          "mean_learning_usefulness_score": 0.5237,
+          "max_learning_usefulness_score": 0.5295
+        },
+        {
+          "mission_type": "archetype_depth_test",
+          "count": 1,
+          "best_selector_rank": 8,
+          "best_usefulness_rank": 10,
+          "mean_learning_usefulness_score": 0.4904,
+          "max_learning_usefulness_score": 0.4904
+        }
+      ],
+      "diagnostic_findings": [
+        "Oracle-usefulness best item appears at selector rank 3, with rank regret 0.1670.",
+        "The oracle-usefulness best item remains recoverable by a top-3 portfolio selector.",
+        "Selector rank order has weak monotonic alignment with oracle usefulness."
+      ],
+      "recommended_selector_tuning_notes": [
+        "Review whether boundary_test hidden-learning proxies should influence offline scoring more strongly.",
+        "Inspect target-fit and learning-value weights for rank inversions in the top window.",
+        "Diagnostic mission types are carrying high oracle usefulness; preserve them for later portfolio selection."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1590 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_03_archetype_023_yacht-rock-smooth-studio-pop_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_3/normalized_family_3.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 3,
+    "family_slug": "classic-rock-album-rock-progressive-rock",
+    "family_name": "Classic Rock, Album Rock, Progressive Rock",
+    "archetype_id": "023",
+    "archetype_slug": "yacht-rock-smooth-studio-pop",
+    "canonical_graph_ref": "family_03/archetype_023",
+    "existing_graph_label_name": "Yacht Rock / Smooth Studio Pop",
+    "editorial_display_title": "Yacht Rock / Smooth Studio Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:artist-steely-dan",
+        "object_id": "artist-steely-dan",
+        "display_label": "Steely Dan",
+        "source_membership_id": "family-3-artist-023-artist-steely-dan",
+        "roles": [
+          "anchor",
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "central studio-sophistication anchor",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-the-doobie-brothers",
+        "object_id": "artist-the-doobie-brothers",
+        "display_label": "The Doobie Brothers",
+        "source_membership_id": "family-3-artist-023-artist-the-doobie-brothers",
+        "roles": [
+          "anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "McDonald-era core yacht object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-christopher-cross",
+        "object_id": "artist-christopher-cross",
+        "display_label": "Christopher Cross",
+        "source_membership_id": "family-3-artist-023-artist-christopher-cross",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "pure soft-smooth yacht signal",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-toto",
+        "object_id": "artist-toto",
+        "display_label": "Toto",
+        "source_membership_id": "family-3-artist-023-artist-toto",
+        "roles": [
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "core polished-session-band object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-boz-scaggs",
+        "object_id": "artist-boz-scaggs",
+        "display_label": "Boz Scaggs",
+        "source_membership_id": "family-3-artist-023-artist-boz-scaggs",
+        "roles": [
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "crucial bridge into sophisticated smooth-pop",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-michael-mcdonald",
+        "object_id": "artist-michael-mcdonald",
+        "display_label": "Michael McDonald",
+        "source_membership_id": "family-3-artist-023-artist-michael-mcdonald",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "defining voice of the lane",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-kenny-loggins",
+        "object_id": "artist-kenny-loggins",
+        "display_label": "Kenny Loggins",
+        "source_membership_id": "family-3-artist-023-artist-kenny-loggins",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "soft-rock to yacht hinge artist",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-robbie-dupree",
+        "object_id": "artist-robbie-dupree",
+        "display_label": "Robbie Dupree",
+        "source_membership_id": "family-3-artist-023-artist-robbie-dupree",
+        "roles": [
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "one-song yacht signifier with survey utility",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-ned-doheny",
+        "object_id": "artist-ned-doheny",
+        "display_label": "Ned Doheny",
+        "source_membership_id": "family-3-artist-023-artist-ned-doheny",
+        "roles": [
+          "deepening",
+          "album_anchor"
+        ],
+        "recognition_tier": "cult",
+        "survey_tier": "edge",
+        "inclusion_reason": "Cult yacht essential despite low mass fame.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-ambrosia",
+        "object_id": "artist-ambrosia",
+        "display_label": "Ambrosia",
+        "source_membership_id": "family-3-artist-023-artist-ambrosia",
+        "roles": [
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "genuine lane depth with recognizable hits",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-player",
+        "object_id": "artist-player",
+        "display_label": "Player",
+        "source_membership_id": "family-3-artist-023-artist-player",
+        "roles": [
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "source bridge act; one-song smooth-pop/yacht-adjacent import test",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-pablo-cruise",
+        "object_id": "artist-pablo-cruise",
+        "display_label": "Pablo Cruise",
+        "source_membership_id": "family-3-artist-023-artist-pablo-cruise",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "West Coast smooth-pop boundary case.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:album-aja-1977",
+        "object_id": "album-aja-1977",
+        "display_label": "Aja - Steely Dan",
+        "source_membership_id": "family-3-album-023-album-aja-1977",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "premier yacht/studio-pop LP object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-minute-by-minute-1978",
+        "object_id": "album-minute-by-minute-1978",
+        "display_label": "Minute by Minute - The Doobie Brothers",
+        "source_membership_id": "family-3-album-023-album-minute-by-minute-1978",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "clearest Doobies yacht LP",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-toto-iv-1982",
+        "object_id": "album-toto-iv-1982",
+        "display_label": "Toto IV - Toto",
+        "source_membership_id": "family-3-album-023-album-toto-iv-1982",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "core Toto survey LP",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-christopher-cross-1979",
+        "object_id": "album-christopher-cross-1979",
+        "display_label": "Christopher Cross - Christopher Cross",
+        "source_membership_id": "family-3-album-023-album-christopher-cross-1979",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "pure lane-defining debut",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-gaucho-1980",
+        "object_id": "album-gaucho-1980",
+        "display_label": "Gaucho - Steely Dan",
+        "source_membership_id": "family-3-album-023-album-gaucho-1980",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "slicker late-lane Dan object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-silk-degrees-1976",
+        "object_id": "album-silk-degrees-1976",
+        "display_label": "Silk Degrees - Boz Scaggs",
+        "source_membership_id": "family-3-album-023-album-silk-degrees-1976",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "soft/yacht hinge LP",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-brother-to-brother-1978",
+        "object_id": "album-brother-to-brother-1978",
+        "display_label": "Brother to Brother - Gino Vannelli",
+        "source_membership_id": "family-3-album-023-album-brother-to-brother-1978",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Smooth artful boundary LP.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-hard-candy-1976",
+        "object_id": "album-hard-candy-1976",
+        "display_label": "Hard Candy - Ned Doheny",
+        "source_membership_id": "family-3-album-023-album-hard-candy-1976",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "cult",
+        "survey_tier": "edge",
+        "inclusion_reason": "Important yacht-cult depth object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-nightwatch-1978",
+        "object_id": "album-nightwatch-1978",
+        "display_label": "Nightwatch - Kenny Loggins",
+        "source_membership_id": "family-3-album-023-album-nightwatch-1978",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "strong Loggins yacht entry",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-player-1977",
+        "object_id": "album-player-1977",
+        "display_label": "Player - Player",
+        "source_membership_id": "family-3-album-023-album-player-1977",
+        "roles": [
+          "gateway",
+          "false_nearby"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "one-song smooth-pop/yacht-adjacent object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:song-what-a-fool-believes-1979",
+        "object_id": "song-what-a-fool-believes-1979",
+        "display_label": "What a Fool Believes - The Doobie Brothers",
+        "source_membership_id": "family-3-song-023-song-what-a-fool-believes-1979",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "one of the cleanest lane-defining songs",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-sailing-1980",
+        "object_id": "song-sailing-1980",
+        "display_label": "Sailing - Christopher Cross",
+        "source_membership_id": "family-3-song-023-song-sailing-1980",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "literal and sonic lane signifier",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-africa-1982",
+        "object_id": "song-africa-1982",
+        "display_label": "Africa - Toto",
+        "source_membership_id": "family-3-song-023-song-africa-1982",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "huge recognition, though broader than strict yacht",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-peg-1977",
+        "object_id": "song-peg-1977",
+        "display_label": "Peg - Steely Dan",
+        "source_membership_id": "family-3-song-023-song-peg-1977",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "best quick-entry Dan cut for this lane",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-ride-like-the-wind-1980",
+        "object_id": "song-ride-like-the-wind-1980",
+        "display_label": "Ride Like the Wind - Christopher Cross",
+        "source_membership_id": "family-3-song-023-song-ride-like-the-wind-1980",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "ideal motion-and-polish yacht signifier",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-rosanna-1982",
+        "object_id": "song-rosanna-1982",
+        "display_label": "Rosanna - Toto",
+        "source_membership_id": "family-3-song-023-song-rosanna-1982",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "groove-and-session-player yacht object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-minute-by-minute-1978",
+        "object_id": "song-minute-by-minute-1978",
+        "display_label": "Minute by Minute - The Doobie Brothers",
+        "source_membership_id": "family-3-song-023-song-minute-by-minute-1978",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "core polished Doobies entry",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-lowdown-1976",
+        "object_id": "song-lowdown-1976",
+        "display_label": "Lowdown - Boz Scaggs",
+        "source_membership_id": "family-3-song-023-song-lowdown-1976",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "central soft/yacht hinge song",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-i-keep-forgettin-1982",
+        "object_id": "song-i-keep-forgettin-1982",
+        "display_label": "I Keep Forgettin' - Michael McDonald",
+        "source_membership_id": "family-3-song-023-song-i-keep-forgettin-1982",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "signature solo-McDonald object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-this-is-it-1979",
+        "object_id": "song-this-is-it-1979",
+        "display_label": "This Is It - Kenny Loggins",
+        "source_membership_id": "family-3-song-023-song-this-is-it-1979",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "strong Loggins lane identifier",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-reelin-in-the-years-1972",
+        "object_id": "song-reelin-in-the-years-1972",
+        "display_label": "Reelin' in the Years - Steely Dan",
+        "source_membership_id": "family-3-song-023-song-reelin-in-the-years-1972",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "early Dan can pull classic-rock users too",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-steal-away-1980",
+        "object_id": "song-steal-away-1980",
+        "display_label": "Steal Away - Robbie Dupree",
+        "source_membership_id": "family-3-song-023-song-steal-away-1980",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "one-song yacht test object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-biggest-part-of-me-1980",
+        "object_id": "song-biggest-part-of-me-1980",
+        "display_label": "Biggest Part of Me - Ambrosia",
+        "source_membership_id": "family-3-song-023-song-biggest-part-of-me-1980",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "underrated core lane signal",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-baby-come-back-1977",
+        "object_id": "song-baby-come-back-1977",
+        "display_label": "Baby Come Back - Player",
+        "source_membership_id": "family-3-song-023-song-baby-come-back-1977",
+        "roles": [
+          "gateway",
+          "song_first",
+          "false_nearby"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "one-song smooth-pop/yacht-adjacent test",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-steely-dan-023",
+        "candidate_id": "survey-f3-artist-artist-steely-dan-023",
+        "object_type": "artist",
+        "display_label": "Steely Dan",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-the-doobie-brothers-023",
+        "candidate_id": "survey-f3-artist-artist-the-doobie-brothers-023",
+        "object_type": "artist",
+        "display_label": "The Doobie Brothers",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-christopher-cross-023",
+        "candidate_id": "survey-f3-artist-artist-christopher-cross-023",
+        "object_type": "artist",
+        "display_label": "Christopher Cross",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-toto-023",
+        "candidate_id": "survey-f3-artist-artist-toto-023",
+        "object_type": "artist",
+        "display_label": "Toto",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-boz-scaggs-023",
+        "candidate_id": "survey-f3-artist-artist-boz-scaggs-023",
+        "object_type": "artist",
+        "display_label": "Boz Scaggs",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-michael-mcdonald-023",
+        "candidate_id": "survey-f3-artist-artist-michael-mcdonald-023",
+        "object_type": "artist",
+        "display_label": "Michael McDonald",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-kenny-loggins-023",
+        "candidate_id": "survey-f3-artist-artist-kenny-loggins-023",
+        "object_type": "artist",
+        "display_label": "Kenny Loggins",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-robbie-dupree-023",
+        "candidate_id": "survey-f3-artist-artist-robbie-dupree-023",
+        "object_type": "artist",
+        "display_label": "Robbie Dupree",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-ambrosia-023",
+        "candidate_id": "survey-f3-artist-artist-ambrosia-023",
+        "object_type": "artist",
+        "display_label": "Ambrosia",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-pablo-cruise-023",
+        "candidate_id": "survey-f3-artist-artist-pablo-cruise-023",
+        "object_type": "artist",
+        "display_label": "Pablo Cruise",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-gino-vannelli-023",
+        "candidate_id": "survey-f3-artist-artist-gino-vannelli-023",
+        "object_type": "artist",
+        "display_label": "Gino Vannelli",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-player-023",
+        "candidate_id": "survey-f3-artist-artist-player-023",
+        "object_type": "artist",
+        "display_label": "Player",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-ned-doheny-023",
+        "candidate_id": "survey-f3-artist-artist-ned-doheny-023",
+        "object_type": "artist",
+        "display_label": "Ned Doheny",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-pages-023",
+        "candidate_id": "survey-f3-artist-artist-pages-023",
+        "object_type": "artist",
+        "display_label": "Pages",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-aja-1977-023",
+        "candidate_id": "survey-f3-album-album-aja-1977-023",
+        "object_type": "album",
+        "display_label": "Aja",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-minute-by-minute-1978-023",
+        "candidate_id": "survey-f3-album-album-minute-by-minute-1978-023",
+        "object_type": "album",
+        "display_label": "Minute by Minute",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-toto-iv-1982-023",
+        "candidate_id": "survey-f3-album-album-toto-iv-1982-023",
+        "object_type": "album",
+        "display_label": "Toto IV",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-christopher-cross-1979-023",
+        "candidate_id": "survey-f3-album-album-christopher-cross-1979-023",
+        "object_type": "album",
+        "display_label": "Christopher Cross",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-gaucho-1980-023",
+        "candidate_id": "survey-f3-album-album-gaucho-1980-023",
+        "object_type": "album",
+        "display_label": "Gaucho",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-silk-degrees-1976-023",
+        "candidate_id": "survey-f3-album-album-silk-degrees-1976-023",
+        "object_type": "album",
+        "display_label": "Silk Degrees",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-robbie-dupree-023",
+        "question_id": "boundary-survey-f3-artist-artist-robbie-dupree-023",
+        "display_label": "Robbie Dupree",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-player-023",
+        "question_id": "boundary-survey-f3-artist-artist-player-023",
+        "display_label": "Player",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-album-album-player-1977-023",
+        "question_id": "boundary-survey-f3-album-album-player-1977-023",
+        "display_label": "Player",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-lowdown-1976-023",
+        "question_id": "boundary-survey-f3-song_recording-song-lowdown-1976-023",
+        "display_label": "Lowdown",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-reelin-in-the-years-1972-023",
+        "question_id": "boundary-survey-f3-song_recording-song-reelin-in-the-years-1972-023",
+        "display_label": "Reelin' in the Years",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-baby-come-back-1977-023",
+        "question_id": "boundary-survey-f3-song_recording-song-baby-come-back-1977-023",
+        "display_label": "Baby Come Back",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-deacon-blues-1977-023",
+        "question_id": "boundary-survey-f3-song_recording-song-deacon-blues-1977-023",
+        "display_label": "Deacon Blues",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-robbie-dupree-023",
+        "probe_id": "probe-survey-f3-artist-artist-robbie-dupree-023",
+        "entity_type": "artist",
+        "display_label": "Robbie Dupree",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-player-023",
+        "probe_id": "probe-survey-f3-artist-artist-player-023",
+        "entity_type": "artist",
+        "display_label": "Player",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-album-album-player-1977-023",
+        "probe_id": "probe-survey-f3-album-album-player-1977-023",
+        "entity_type": "album",
+        "display_label": "Player",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-lowdown-1976-023",
+        "probe_id": "probe-survey-f3-song_recording-song-lowdown-1976-023",
+        "entity_type": "song_recording",
+        "display_label": "Lowdown",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-reelin-in-the-years-1972-023",
+        "probe_id": "probe-survey-f3-song_recording-song-reelin-in-the-years-1972-023",
+        "entity_type": "song_recording",
+        "display_label": "Reelin' in the Years",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-baby-come-back-1977-023",
+        "probe_id": "probe-survey-f3-song_recording-song-baby-come-back-1977-023",
+        "entity_type": "song_recording",
+        "display_label": "Baby Come Back",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-deacon-blues-1977-023",
+        "probe_id": "probe-survey-f3-song_recording-song-deacon-blues-1977-023",
+        "entity_type": "song_recording",
+        "display_label": "Deacon Blues",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_03/archetype_022"
+    ],
+    "before_archetype_refs": [
+      "family_03/archetype_022"
+    ],
+    "after_archetype_refs": []
+  },
+  "source_references": {
+    "canonical_graph_family_3": {
+      "title": "Normalized canonical graph export, Family 3",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_3/normalized_family_3.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "023_allmusic_yacht_rock": {
+      "title": "Yacht Rock",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/yacht-rock-ma0000012268",
+      "source_type": "music_reference",
+      "audit_use": "Directly defines yacht rock around smooth late-1970s/early-1980s studio pop, jazz/R&B traces, and soft-rock polish.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly defines yacht rock around smooth late-1970s/early-1980s studio pop, jazz/R&B traces, and soft-rock polish."
+    },
+    "023_rockhall_steely_dan": {
+      "title": "Steely Dan",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/steely-dan/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the sophisticated harmony, studio perfectionism, and session-musician side through Steely Dan.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the sophisticated harmony, studio perfectionism, and session-musician side through Steely Dan."
+    },
+    "023_rockhall_doobie_brothers": {
+      "title": "The Doobie Brothers",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-doobie-brothers/",
+      "source_type": "museum_reference",
+      "audit_use": "Documents the Michael McDonald-era smooth R&B-pop bridge.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Documents the Michael McDonald-era smooth R&B-pop bridge."
+    },
+    "023_grammy_christopher_cross": {
+      "title": "Christopher Cross Artist Profile",
+      "publisher": "The Recording Academy / GRAMMY.com",
+      "url": "https://www.grammy.com/artists/christopher-cross/10261",
+      "source_type": "industry_reference",
+      "audit_use": "Supports Christopher Cross as a canonical smooth-pop example through Grammy-recognized early-1980s success.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Christopher Cross as a canonical smooth-pop example through Grammy-recognized early-1980s success."
+    },
+    "rockhall_elton_john": {
+      "title": "Elton John",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/elton-john/",
+      "source_type": "museum_reference",
+      "audit_use": "Piano-led pop-rock, AM gold, and album-era adult pop craft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Piano-led pop-rock, AM gold, and album-era adult pop craft."
+    },
+    "rockhall_michael_jackson": {
+      "title": "Michael Jackson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/michael-jackson/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop sovereignty, dance, video, and global star image.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Pop sovereignty, dance, video, and global star image."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "rockhall_carole_king": {
+      "title": "Carole King",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/carole-king/",
+      "source_type": "museum_reference",
+      "audit_use": "Songwriter-to-performer transition and adult pop songcraft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "023-claim-01-smooth-studio-category",
+      "claim_text": "Yacht rock is a retrospective label for smooth, highly produced late-1970s and early-1980s pop-rock with jazz, R&B, and soft-rock polish.",
+      "source_ref_ids": [
+        "023_allmusic_yacht_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_03/archetype_023"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "023-claim-02-steely-dan-precision",
+      "claim_text": "Steely Dan anchors the sophisticated side: dense chords, exacting studio work, dry lyrical irony, and elite session-player execution.",
+      "source_ref_ids": [
+        "023_rockhall_steely_dan"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_03/archetype_023",
+        "artist:steely-dan",
+        "album:steely-dan-aja",
+        "song_recording:steely-dan-peg"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "023-claim-03-mcdonald-bridge",
+      "claim_text": "The Michael McDonald-era Doobie Brothers show the R&B-inflected branch where blue-eyed soul harmony, electric piano, and soft-rock groove meet.",
+      "source_ref_ids": [
+        "023_rockhall_doobie_brothers",
+        "023_allmusic_yacht_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_03/archetype_023",
+        "artist:the-doobie-brothers",
+        "song_recording:the-doobie-brothers-what-a-fool-believes"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "023-claim-04-cross-toto-gateway",
+      "claim_text": "Christopher Cross and Toto make the lane's pop gateway obvious: polished rhythm tracks, clean guitar, high-gloss vocals, and choruses built for adult contemporary radio.",
+      "source_ref_ids": [
+        "023_grammy_christopher_cross",
+        "023_allmusic_yacht_rock"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_03/archetype_023",
+        "artist:christopher-cross",
+        "artist:toto",
+        "song_recording:christopher-cross-sailing",
+        "song_recording:toto-africa"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "023-yacht_rock_smooth_studio_pop-boundary",
+      "claim_text": "Yacht Rock / Smooth Studio Pop's boundary is clearest when Electric piano and clean guitar textures and Jazz-influenced chord changes appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "023_allmusic_yacht_rock",
+        "023_rockhall_steely_dan"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_03/archetype_023",
+        "artist:artist-steely-dan",
+        "artist:artist-the-doobie-brothers"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "023-yacht_rock_smooth_studio_pop-examples",
+      "claim_text": "Steely Dan, The Doobie Brothers, Aja - Steely Dan gives Yacht Rock / Smooth Studio Pop concrete anchors because the examples expose Smooth backing vocals and blue-eyed soul phrasing inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "023_rockhall_steely_dan",
+        "023_rockhall_doobie_brothers"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_03/archetype_023",
+        "artist:artist-steely-dan",
+        "artist:artist-the-doobie-brothers"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A smooth late-1970s/early-1980s studio-pop road of jazz chords, R&B-schooled vocals, elite session playing, and immaculate adult-radio polish.",
+    "history_capsule": "Yacht rock is a later name for a very specific smooth studio sound. Steely Dan, Michael McDonald-era Doobie Brothers, Christopher Cross, Toto, Kenny Loggins, and related artists make rock feel sleek, harmonically expensive, and rhythmically relaxed.",
+    "why_it_mattered": "It turns professionalism into a vibe. The lane is a masterclass in session-player precision, adult-contemporary crossover, blue-eyed soul influence, and pop arrangements where nothing sounds accidental.",
+    "what_made_it_distinct": "The groove is clean, the chords are richer than standard soft rock, and the musicianship is almost invisible because it is so controlled.",
+    "what_to_listen_for": [
+      "Electric piano and clean guitar textures",
+      "Jazz-influenced chord changes",
+      "Smooth backing vocals and blue-eyed soul phrasing",
+      "A relaxed but exact drum groove",
+      "Studio polish that feels expensive rather than loud"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:artist-steely-dan",
+        "example_type": "artist",
+        "display_label": "Steely Dan",
+        "why_this_example_matters": "Steely Dan is a graph-validated anchor for Yacht Rock / Smooth Studio Pop; use it to hear Electric piano and clean guitar textures.",
+        "what_to_listen_for": [
+          "Electric piano and clean guitar textures",
+          "Jazz-influenced chord changes"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:artist-the-doobie-brothers",
+        "example_type": "artist",
+        "display_label": "The Doobie Brothers",
+        "why_this_example_matters": "The Doobie Brothers is a graph-validated anchor for Yacht Rock / Smooth Studio Pop; use it to hear Jazz-influenced chord changes.",
+        "what_to_listen_for": [
+          "Jazz-influenced chord changes",
+          "Smooth backing vocals and blue-eyed soul phrasing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:album-aja-1977",
+        "example_type": "album",
+        "display_label": "Aja - Steely Dan",
+        "why_this_example_matters": "Aja - Steely Dan is a graph-validated anchor for Yacht Rock / Smooth Studio Pop; use it to hear Smooth backing vocals and blue-eyed soul phrasing.",
+        "what_to_listen_for": [
+          "Smooth backing vocals and blue-eyed soul phrasing",
+          "A relaxed but exact drum groove"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:album-minute-by-minute-1978",
+        "example_type": "album",
+        "display_label": "Minute by Minute - The Doobie Brothers",
+        "why_this_example_matters": "Minute by Minute - The Doobie Brothers is a graph-validated anchor for Yacht Rock / Smooth Studio Pop; use it to hear A relaxed but exact drum groove.",
+        "what_to_listen_for": [
+          "A relaxed but exact drum groove",
+          "Studio polish that feels expensive rather than loud"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:song-what-a-fool-believes-1979",
+        "example_type": "song_recording",
+        "display_label": "What a Fool Believes - The Doobie Brothers",
+        "why_this_example_matters": "What a Fool Believes - The Doobie Brothers is a graph-validated anchor for Yacht Rock / Smooth Studio Pop; use it to hear Studio polish that feels expensive rather than loud.",
+        "what_to_listen_for": [
+          "Studio polish that feels expensive rather than loud"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:song-sailing-1980",
+        "example_type": "song_recording",
+        "display_label": "Sailing - Christopher Cross",
+        "why_this_example_matters": "Sailing - Christopher Cross is a graph-validated anchor for Yacht Rock / Smooth Studio Pop; use it to hear Electric piano and clean guitar textures.",
+        "what_to_listen_for": [
+          "Electric piano and clean guitar textures",
+          "Jazz-influenced chord changes"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_03/archetype_022"
+      ],
+      "after": [],
+      "related": [
+        "family_03/archetype_022"
+      ],
+      "copy": "Use Yacht Rock / Smooth Studio Pop as a contextual road inside Classic Rock, Album Rock, Progressive Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "023-dyk-1",
+        "copy": "The term is retrospective, so older records did not market themselves as yacht rock at release.",
+        "source_ref_ids": [
+          "023_allmusic_yacht_rock"
+        ]
+      },
+      {
+        "card_id": "023-dyk-2",
+        "copy": "A literal nautical lyric is optional; smooth studio behavior is the real evidence.",
+        "source_ref_ids": [
+          "023_rockhall_steely_dan"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether yacht rock / smooth studio pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A smooth late-1970s/early-1980s studio-pop road of jazz chords, R&B-schooled vocals, elite session playing, and immaculate adult-radio polish.",
+      "It turns professionalism into a vibe. The lane is a masterclass in session-player precision, adult-contemporary crossover, blue-eyed soul influence, and pop arrangements where nothing sounds accidental.",
+      "The groove is clean, the chords are richer than standard soft rock, and the musicianship is almost invisible because it is so controlled."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not classify by boat imagery alone; yacht rock is about feel, personnel, harmony, and studio craft polish.",
+    "personalization_hooks": [
+      {
+        "hook_id": "023-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[023]",
+          "atlas_state.family_affinity[3]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[023] >= 0.65 || atlas_state.family_affinity[3] >= 0.65",
+        "copy_variant": "Your Atlas signals make Yacht Rock / Smooth Studio Pop useful as a contextual landmark.",
+        "fallback_copy": "Use Yacht Rock / Smooth Studio Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "023-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_03/archetype_023 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_03/archetype_023",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Yacht Rock / Smooth Studio Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "023-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_03/archetype_023 || atlas_state.boundary_question_results has boundary_negative for family_03/archetype_023",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Yacht Rock / Smooth Studio Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "023-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_03/archetype_023 || atlas_state.related_mission_ids references family_03/archetype_023",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "023-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_03/archetype_023 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_03/archetype_023 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_03/archetype_023",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Yacht Rock / Smooth Studio Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_3": {
+        "title": "Normalized canonical graph export, Family 3",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_3/normalized_family_3.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "023_allmusic_yacht_rock": {
+        "title": "Yacht Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/yacht-rock-ma0000012268",
+        "source_type": "music_reference",
+        "audit_use": "Directly defines yacht rock around smooth late-1970s/early-1980s studio pop, jazz/R&B traces, and soft-rock polish.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines yacht rock around smooth late-1970s/early-1980s studio pop, jazz/R&B traces, and soft-rock polish."
+      },
+      "023_rockhall_steely_dan": {
+        "title": "Steely Dan",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/steely-dan/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the sophisticated harmony, studio perfectionism, and session-musician side through Steely Dan.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the sophisticated harmony, studio perfectionism, and session-musician side through Steely Dan."
+      },
+      "023_rockhall_doobie_brothers": {
+        "title": "The Doobie Brothers",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-doobie-brothers/",
+        "source_type": "museum_reference",
+        "audit_use": "Documents the Michael McDonald-era smooth R&B-pop bridge.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the Michael McDonald-era smooth R&B-pop bridge."
+      },
+      "023_grammy_christopher_cross": {
+        "title": "Christopher Cross Artist Profile",
+        "publisher": "The Recording Academy / GRAMMY.com",
+        "url": "https://www.grammy.com/artists/christopher-cross/10261",
+        "source_type": "industry_reference",
+        "audit_use": "Supports Christopher Cross as a canonical smooth-pop example through Grammy-recognized early-1980s success.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Christopher Cross as a canonical smooth-pop example through Grammy-recognized early-1980s success."
+      },
+      "rockhall_elton_john": {
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_type": "museum_reference",
+        "audit_use": "Piano-led pop-rock, AM gold, and album-era adult pop craft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Piano-led pop-rock, AM gold, and album-era adult pop craft."
+      },
+      "rockhall_michael_jackson": {
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop sovereignty, dance, video, and global star image.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "rockhall_carole_king": {
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_type": "museum_reference",
+        "audit_use": "Songwriter-to-performer transition and adult pop songcraft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "023-claim-01-smooth-studio-category",
+        "claim_text": "Yacht rock is a retrospective label for smooth, highly produced late-1970s and early-1980s pop-rock with jazz, R&B, and soft-rock polish.",
+        "source_ref_ids": [
+          "023_allmusic_yacht_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023-claim-02-steely-dan-precision",
+        "claim_text": "Steely Dan anchors the sophisticated side: dense chords, exacting studio work, dry lyrical irony, and elite session-player execution.",
+        "source_ref_ids": [
+          "023_rockhall_steely_dan"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:steely-dan",
+          "album:steely-dan-aja",
+          "song_recording:steely-dan-peg"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023-claim-03-mcdonald-bridge",
+        "claim_text": "The Michael McDonald-era Doobie Brothers show the R&B-inflected branch where blue-eyed soul harmony, electric piano, and soft-rock groove meet.",
+        "source_ref_ids": [
+          "023_rockhall_doobie_brothers",
+          "023_allmusic_yacht_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:the-doobie-brothers",
+          "song_recording:the-doobie-brothers-what-a-fool-believes"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023-claim-04-cross-toto-gateway",
+        "claim_text": "Christopher Cross and Toto make the lane's pop gateway obvious: polished rhythm tracks, clean guitar, high-gloss vocals, and choruses built for adult contemporary radio.",
+        "source_ref_ids": [
+          "023_grammy_christopher_cross",
+          "023_allmusic_yacht_rock"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:christopher-cross",
+          "artist:toto",
+          "song_recording:christopher-cross-sailing",
+          "song_recording:toto-africa"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023-yacht_rock_smooth_studio_pop-boundary",
+        "claim_text": "Yacht Rock / Smooth Studio Pop's boundary is clearest when Electric piano and clean guitar textures and Jazz-influenced chord changes appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "023_allmusic_yacht_rock",
+          "023_rockhall_steely_dan"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:artist-steely-dan",
+          "artist:artist-the-doobie-brothers"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "023-yacht_rock_smooth_studio_pop-examples",
+        "claim_text": "Steely Dan, The Doobie Brothers, Aja - Steely Dan gives Yacht Rock / Smooth Studio Pop concrete anchors because the examples expose Smooth backing vocals and blue-eyed soul phrasing inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "023_rockhall_steely_dan",
+          "023_rockhall_doobie_brothers"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_03/archetype_023",
+          "artist:artist-steely-dan",
+          "artist:artist-the-doobie-brothers"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Yacht Rock / Smooth Studio Pop: Steely Dan, Doobie Brothers, Christopher Cross, Toto, Michael McDonald, LA session players, jazz chords, smooth grooves, late-70s/early-80s polish.",
+    "selected_sources": [
+      {
+        "source_ref_id": "023_allmusic_yacht_rock",
+        "title": "Yacht Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/yacht-rock-ma0000012268",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines yacht rock around smooth late-1970s/early-1980s studio pop, jazz/R&B traces, and soft-rock polish."
+      },
+      {
+        "source_ref_id": "023_rockhall_steely_dan",
+        "title": "Steely Dan",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/steely-dan/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the sophisticated harmony, studio perfectionism, and session-musician side through Steely Dan."
+      },
+      {
+        "source_ref_id": "023_rockhall_doobie_brothers",
+        "title": "The Doobie Brothers",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-doobie-brothers/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the Michael McDonald-era smooth R&B-pop bridge."
+      },
+      {
+        "source_ref_id": "023_grammy_christopher_cross",
+        "title": "Christopher Cross Artist Profile",
+        "publisher": "The Recording Academy / GRAMMY.com",
+        "url": "https://www.grammy.com/artists/christopher-cross/10261",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Christopher Cross as a canonical smooth-pop example through Grammy-recognized early-1980s success."
+      },
+      {
+        "source_ref_id": "rockhall_elton_john",
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Piano-led pop-rock, AM gold, and album-era adult pop craft."
+      },
+      {
+        "source_ref_id": "rockhall_michael_jackson",
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "rockhall_carole_king",
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "023_reject_sailing_songs",
+        "title": "Songs about sailing",
+        "publisher": "General playlist/list source",
+        "url": "https://en.wikipedia.org/wiki/Category:Songs_about_sailing",
+        "why_rejected": "Yacht rock is not literally songs about boats; it is a retrospective smooth-studio-pop style category.",
+        "source_type": "reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 023_allmusic_yacht_rock anchors the named archetype rather than only its family. Example support: 023_rockhall_steely_dan, 023_rockhall_doobie_brothers, 023_grammy_christopher_cross ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 86,
+    "scene_anchor_refs": [
+      "song|steely dan|hey nineteen",
+      "song|doobie brothers|minute by minute",
+      "song|kenny loggins|this is it",
+      "song|ambrosia|biggest part of me"
+    ],
+    "ladder_example_refs": [
+      "song|robbie dupree|steal away",
+      "album|boz scaggs|silk degrees",
+      "song|george benson|turn your love around",
+      "song|pablo cruise|whatcha gonna do",
+      "song|gino vannelli|i just wanna stop",
+      "artist_anchor|airplay|airplay",
+      "album|marc jordan|mannequin",
+      "song|jay ferguson|thunder island"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

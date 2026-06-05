@@ -1,0 +1,200 @@
+{
+  "schema_version": "mission_enrichment_output_v0_2",
+  "mission_id": "MIS_ENRICH_JAZZ_CLASSICAL",
+  "mission_copy": {
+    "title": "Check This Route",
+    "subtitle": "A short test to clarify one part of your map.",
+    "short_description": "This mission uses a fixed route to test whether the current pattern holds when you listen all the way through.",
+    "why_now": "This route needs context-aware language because the material may unfold over time.",
+    "listen_for": [
+      "Which songs feel immediately useful.",
+      "Which details help or get in the way."
+    ],
+    "mission_hypothesis_user_facing": "If several songs land, this area may deserve more testing. If they split, Cartenza can refine the edge."
+  },
+  "route_item_copy": [
+    {
+      "item_id": "ITEM_JC_01",
+      "pre_play_line": "Use this track to check one part of the mission question.",
+      "why_this_song": "Selected to test instrumental performance and long-form context.",
+      "listen_for": [
+        "Whether the main feel pulls you in.",
+        "Whether the details support or distract from the song."
+      ]
+    }
+  ],
+  "secondary_reaction_tag_candidates": [
+    {
+      "item_id": "ITEM_JC_01",
+      "tags": [
+        {
+          "tag_id": "LYRICS_WORKED",
+          "rank": 1,
+          "display_label": "The words worked",
+          "valid_primary_reactions": [
+            "love"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "instrumental_performance:expressive_lead"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_lyric_or_story_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "BUILD_WORKED",
+          "rank": 2,
+          "display_label": "The build worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "instrumental_performance:expressive_lead"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_dynamic_shape_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "CONTEXT_DEPENDENT",
+          "rank": 3,
+          "display_label": "Context-dependent",
+          "valid_primary_reactions": [
+            "like",
+            "ok"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "instrumental_performance:expressive_lead"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "mark_context_dependence",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "MOOD_DEPENDENT",
+          "rank": 4,
+          "display_label": "Mood-dependent",
+          "valid_primary_reactions": [
+            "like",
+            "ok"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "instrumental_performance:expressive_lead"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "mark_mood_dependence",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "PERFORMANCE_WORKED",
+          "rank": 5,
+          "display_label": "The performance worked",
+          "valid_primary_reactions": [
+            "love",
+            "like"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "instrumental_performance:expressive_lead"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "strengthen_performance_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        },
+        {
+          "tag_id": "SURPRISED_ME",
+          "rank": 6,
+          "display_label": "This surprised me",
+          "valid_primary_reactions": [
+            "love",
+            "like",
+            "ok"
+          ],
+          "why_this_tag_is_relevant": "This chip is included because it gives Atlas a focused way to interpret the primary reaction.",
+          "linked_song_affinity_tags": [
+            "instrumental_performance:expressive_lead"
+          ],
+          "linked_user_alignment_hints": [
+            "matches_known_positive"
+          ],
+          "atlas_effect": "open_or_strengthen_novelty_signal",
+          "atlas_signal_target": {
+            "target_type": "mission_hypothesis",
+            "target_labels": [
+              "current mission question"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "post_completion_interpretation_seeds": [
+    {
+      "condition": "mostly_positive",
+      "readout_seed": "This route produced a useful positive signal.",
+      "atlas_inference_hint": "Strengthen supported patterns, but keep the result provisional."
+    },
+    {
+      "condition": "mixed",
+      "readout_seed": "The route split in a useful way.",
+      "atlas_inference_hint": "Separate song, context, and trait-level signals."
+    },
+    {
+      "condition": "mostly_negative",
+      "readout_seed": "This route may mark a boundary.",
+      "atlas_inference_hint": "Weaken nearby assumptions without overgeneralizing."
+    }
+  ],
+  "internal_quality_notes": {
+    "used_song_affinity_tags": [
+      "instrumental_performance:expressive_lead"
+    ],
+    "used_alignment_hints": [
+      "matches_known_positive"
+    ],
+    "avoided_overclaims": [
+      "No final taste claim made."
+    ],
+    "risk_flags": []
+  }
+}

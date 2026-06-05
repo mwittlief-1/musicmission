@@ -1,0 +1,285 @@
+{
+  "schema_version": "mission_enrichment_input_v0_2",
+  "runtime_context": {
+    "surface": "mission_card_and_feedback_chips",
+    "mission_ordinal_for_user": 3,
+    "max_secondary_tags_per_song": 6,
+    "copy_mode": "external_alpha",
+    "language_style": "clear_warm_music_literate",
+    "avoid_founder_vocabulary": true
+  },
+  "user_atlas_context_brief": {
+    "confirmed_positive_patterns": [
+      {
+        "pattern_id": "PATTERN_001",
+        "label": "motion-led tracks with clean production",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "open_questions": [
+      {
+        "question_id": "QUESTION_001",
+        "label": "Does repetition become satisfying or tiring?",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "known_boundaries": [],
+    "recent_learning_summary": [],
+    "coverage_notes": []
+  },
+  "mission_context": {
+    "mission_id": "MIS_ENRICH_ELECTRONIC_DANCE",
+    "mission_type": "archetype_depth_test",
+    "risk_level": "low",
+    "mission_hypothesis": "Check whether motion-led production is a reliable positive signal.",
+    "why_this_mission_now": "The route follows early evidence for rhythmic momentum without assuming vocals or lyrics.",
+    "success_definition": "The mission is useful if reactions clarify beat, sound, and repetition tolerance."
+  },
+  "route_items": [
+    {
+      "item_id": "ITEM_ED_01",
+      "canonical_song_recording_id": "song_ed_001",
+      "sequence": 1,
+      "title": "Night Grid",
+      "artist": "Luma Circuit",
+      "year": 2020,
+      "route_role": "probe",
+      "why_included": "Selected to test beat, sound, and repetition tolerance.",
+      "song_affinity_tags": [
+        {
+          "tag": "rhythm_body:four_on_floor_drive",
+          "facet": "rhythm_body"
+        },
+        {
+          "tag": "production:clean_electronic",
+          "facet": "production"
+        },
+        {
+          "tag": "dynamic_shape:slow_build",
+          "facet": "dynamic_shape"
+        },
+        {
+          "tag": "form_container:loop_based",
+          "facet": "form_container"
+        }
+      ],
+      "user_alignment_hints": [
+        {
+          "tag": "rhythm_body:four_on_floor_drive",
+          "alignment": "matches_known_positive"
+        },
+        {
+          "tag": "form_container:loop_based",
+          "alignment": "tests_open_question"
+        }
+      ],
+      "prefiltered_secondary_tag_ids": [
+        "BUILD_WORKED",
+        "ARRANGEMENT_WORKED",
+        "HOOK_WORKED",
+        "PRODUCTION_WORKED",
+        "SOUND_WORKED",
+        "GROOVE_WORKED",
+        "BEAT_WORKED",
+        "ENERGY_WORKED",
+        "SURPRISED_ME",
+        "WOULD_TRY_MORE_NEARBY",
+        "GOOD_NOT_CORE",
+        "KEEP_AS_WAYPOINT",
+        "UNSURE_BUT_CURIOUS",
+        "NEEDS_ANOTHER_LISTEN"
+      ],
+      "applicability_flags": {
+        "has_vocals": false,
+        "has_lyrics": false,
+        "lyrics_language_known": false,
+        "is_instrumental": true,
+        "is_live_or_alt_version": false,
+        "album_context_relevant": false,
+        "long_form_context_relevant": false
+      },
+      "artist_context_available": false
+    }
+  ],
+  "allowed_secondary_reaction_tags": {
+    "ARRANGEMENT_WORKED": {
+      "tag_id": "ARRANGEMENT_WORKED",
+      "display_label": "The arrangement worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_arrangement_signal",
+      "allowed_facets": [
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "BEAT_WORKED": {
+      "tag_id": "BEAT_WORKED",
+      "display_label": "The beat worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_beat_or_rhythm_signal",
+      "allowed_facets": [
+        "rhythm_body",
+        "production"
+      ]
+    },
+    "BUILD_WORKED": {
+      "tag_id": "BUILD_WORKED",
+      "display_label": "The build worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_dynamic_shape_signal",
+      "allowed_facets": [
+        "dynamic_shape",
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "ENERGY_WORKED": {
+      "tag_id": "ENERGY_WORKED",
+      "display_label": "The energy worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_energy_signal",
+      "allowed_facets": [
+        "energy_profile",
+        "rhythm_body"
+      ]
+    },
+    "GOOD_NOT_CORE": {
+      "tag_id": "GOOD_NOT_CORE",
+      "display_label": "Good, not core",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_waypoint_not_landmark",
+      "allowed_facets": []
+    },
+    "GROOVE_WORKED": {
+      "tag_id": "GROOVE_WORKED",
+      "display_label": "The groove worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_rhythm_body_signal",
+      "allowed_facets": [
+        "rhythm_body"
+      ]
+    },
+    "HOOK_WORKED": {
+      "tag_id": "HOOK_WORKED",
+      "display_label": "The hook worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_songcraft_signal",
+      "allowed_facets": [
+        "form_container",
+        "melody_harmony"
+      ]
+    },
+    "KEEP_AS_WAYPOINT": {
+      "tag_id": "KEEP_AS_WAYPOINT",
+      "display_label": "Keep as waypoint",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "preserve_as_navigation_reference",
+      "allowed_facets": []
+    },
+    "NEEDS_ANOTHER_LISTEN": {
+      "tag_id": "NEEDS_ANOTHER_LISTEN",
+      "display_label": "Needs another listen",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_uncertain_repeat_test",
+      "allowed_facets": []
+    },
+    "PRODUCTION_WORKED": {
+      "tag_id": "PRODUCTION_WORKED",
+      "display_label": "The production worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_production_signal",
+      "allowed_facets": [
+        "production",
+        "sonic_texture"
+      ]
+    },
+    "SOUND_WORKED": {
+      "tag_id": "SOUND_WORKED",
+      "display_label": "The sound worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_sound_or_texture_signal",
+      "allowed_facets": [
+        "sonic_texture",
+        "production"
+      ]
+    },
+    "SURPRISED_ME": {
+      "tag_id": "SURPRISED_ME",
+      "display_label": "This surprised me",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_or_strengthen_novelty_signal",
+      "allowed_facets": []
+    },
+    "UNSURE_BUT_CURIOUS": {
+      "tag_id": "UNSURE_BUT_CURIOUS",
+      "display_label": "Unsure, but curious",
+      "valid_primary_reactions": [
+        "ok",
+        "like"
+      ],
+      "atlas_effect": "open_frontier_with_uncertainty",
+      "allowed_facets": []
+    },
+    "WOULD_TRY_MORE_NEARBY": {
+      "tag_id": "WOULD_TRY_MORE_NEARBY",
+      "display_label": "I'd try more nearby",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_nearby_exploration",
+      "allowed_facets": []
+    }
+  },
+  "copy_guardrails": [
+    "Do not change mission or song list.",
+    "Use only allowed secondary tag IDs.",
+    "Do not invent artists, songs, genres, user history, tags, or affinity facts.",
+    "Do not use raw graph IDs in display copy.",
+    "Do not expose raw affinity tags as chip labels.",
+    "Do not claim final taste truth.",
+    "Do not use founder-specific language.",
+    "Do not assume rock, guitar music, vocals, lyrics, albums, English-language music, or advanced music knowledge.",
+    "Treat all context as provisional."
+  ]
+}

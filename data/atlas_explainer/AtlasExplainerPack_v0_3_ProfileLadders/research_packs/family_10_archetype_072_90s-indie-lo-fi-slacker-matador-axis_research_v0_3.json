@@ -1,0 +1,1308 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_10_archetype_072_90s-indie-lo-fi-slacker-matador-axis_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_10/normalized_family_10.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 10,
+    "family_slug": "alternative-indie-grunge-emo",
+    "family_name": "Alternative, Indie, Grunge, Emo",
+    "archetype_id": "072",
+    "archetype_slug": "90s-indie-lo-fi-slacker-matador-axis",
+    "canonical_graph_ref": "family_10/archetype_072",
+    "existing_graph_label_name": "90s Indie / Lo-Fi / Slacker / Matador Axis",
+    "editorial_display_title": "90s Indie / Lo-Fi / Slacker / Matador Axis",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:pavement",
+        "object_id": "pavement",
+        "display_label": "Pavement",
+        "source_membership_id": "family-10-artist-072-pavement",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Central 90s indie/lo-fi/slacker anchor and Matador-axis object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:neutral-milk-hotel",
+        "object_id": "neutral-milk-hotel",
+        "display_label": "Neutral Milk Hotel",
+        "source_membership_id": "family-10-artist-072-neutral-milk-hotel",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing-obvious indie canon object; the album is the main public/canon signal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:guided-by-voices",
+        "object_id": "guided-by-voices",
+        "display_label": "Guided by Voices",
+        "source_membership_id": "family-10-artist-072-guided-by-voices",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lo-fi indie abundance and 90s underground songwriting anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:elliott-smith",
+        "object_id": "elliott-smith",
+        "display_label": "Elliott Smith",
+        "source_membership_id": "family-10-artist-072-elliott-smith",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious indie songwriter bridge from lo-fi intimacy to broader 2000s indie prestige.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:yo-la-tengo",
+        "object_id": "yo-la-tengo",
+        "display_label": "Yo La Tengo",
+        "source_membership_id": "family-10-artist-072-yo-la-tengo",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Indie durability and critic-canon bridge across noise, folk, pop, and long-form listening.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:built-to-spill",
+        "object_id": "built-to-spill",
+        "display_label": "Built to Spill",
+        "source_membership_id": "family-10-artist-072-built-to-spill",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Guitar-indie and Pacific Northwest indie anchor with album-world value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sebadoh",
+        "object_id": "sebadoh",
+        "display_label": "Sebadoh",
+        "source_membership_id": "family-10-artist-072-sebadoh",
+        "roles": [
+          "deepening",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Lo-fi and home-recording indie source-code tied to slacker intimacy.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:pavement-slanted-and-enchanted",
+        "object_id": "pavement-slanted-and-enchanted",
+        "display_label": "Slanted and Enchanted - Pavement",
+        "source_membership_id": "family-10-album-072-pavement-slanted-and-enchanted",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Primary 90s indie/slacker album-world anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "object_id": "neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "display_label": "In the Aeroplane Over the Sea - Neutral Milk Hotel",
+        "source_membership_id": "family-10-album-072-neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Indie canon album whose recognition exceeds the broader catalog.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:pavement-crooked-rain-crooked-rain",
+        "object_id": "pavement-crooked-rain-crooked-rain",
+        "display_label": "Crooked Rain, Crooked Rain - Pavement",
+        "source_membership_id": "family-10-album-072-pavement-crooked-rain-crooked-rain",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "More accessible Pavement album and indie gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:guided-by-voices-bee-thousand",
+        "object_id": "guided-by-voices-bee-thousand",
+        "display_label": "Bee Thousand - Guided by Voices",
+        "source_membership_id": "family-10-album-072-guided-by-voices-bee-thousand",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lo-fi indie canon album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:yo-la-tengo-i-can-hear-the-heart-beating-as-one",
+        "object_id": "yo-la-tengo-i-can-hear-the-heart-beating-as-one",
+        "display_label": "I Can Hear the Heart Beating as One - Yo La Tengo",
+        "source_membership_id": "family-10-album-072-yo-la-tengo-i-can-hear-the-heart-beating-as-one",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Yo La Tengo's broadest indie-canon album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:built-to-spill-perfect-from-now-on",
+        "object_id": "built-to-spill-perfect-from-now-on",
+        "display_label": "Perfect from Now On - Built to Spill",
+        "source_membership_id": "family-10-album-072-built-to-spill-perfect-from-now-on",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Guitar-indie album-world anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sebadoh-bakesale",
+        "object_id": "sebadoh-bakesale",
+        "display_label": "Bakesale - Sebadoh",
+        "source_membership_id": "family-10-album-072-sebadoh-bakesale",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Lo-fi/slacker indie deepening album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:pavement-gold-soundz",
+        "object_id": "pavement-gold-soundz",
+        "display_label": "Gold Soundz - Pavement",
+        "source_membership_id": "family-10-song-072-pavement-gold-soundz",
+        "roles": [
+          "song_first",
+          "anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Indie/slacker canon song object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "object_id": "neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "display_label": "In the Aeroplane Over the Sea - Neutral Milk Hotel",
+        "source_membership_id": "family-10-song-072-neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Title-track indie-canon song object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:pavement-cut-your-hair",
+        "object_id": "pavement-cut-your-hair",
+        "display_label": "Cut Your Hair - Pavement",
+        "source_membership_id": "family-10-song-072-pavement-cut-your-hair",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Most accessible Pavement song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:neutral-milk-hotel-holland-1945",
+        "object_id": "neutral-milk-hotel-holland-1945",
+        "display_label": "Holland, 1945 - Neutral Milk Hotel",
+        "source_membership_id": "family-10-song-072-neutral-milk-hotel-holland-1945",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Most direct song gateway into the Neutral Milk Hotel album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:elliott-smith-between-the-bars",
+        "object_id": "elliott-smith-between-the-bars",
+        "display_label": "Between the Bars - Elliott Smith",
+        "source_membership_id": "family-10-song-072-elliott-smith-between-the-bars",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Elliott Smith's widely recognized indie-songwriter gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:pavement-summer-babe",
+        "object_id": "pavement-summer-babe",
+        "display_label": "Summer Babe - Pavement",
+        "source_membership_id": "family-10-song-072-pavement-summer-babe",
+        "roles": [
+          "song_first",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lo-fi Pavement source-code song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:guided-by-voices-game-of-pricks",
+        "object_id": "guided-by-voices-game-of-pricks",
+        "display_label": "Game of Pricks - Guided by Voices",
+        "source_membership_id": "family-10-song-072-guided-by-voices-game-of-pricks",
+        "roles": [
+          "song_first",
+          "gateway",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "GBV lo-fi indie song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:guided-by-voices-i-am-a-scientist",
+        "object_id": "guided-by-voices-i-am-a-scientist",
+        "display_label": "I Am a Scientist - Guided by Voices",
+        "source_membership_id": "family-10-song-072-guided-by-voices-i-am-a-scientist",
+        "roles": [
+          "song_first",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "GBV compact songwriting signal.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:yo-la-tengo-sugarcube",
+        "object_id": "yo-la-tengo-sugarcube",
+        "display_label": "Sugarcube - Yo La Tengo",
+        "source_membership_id": "family-10-song-072-yo-la-tengo-sugarcube",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Yo La Tengo's most direct indie-rock song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:built-to-spill-the-plan",
+        "object_id": "built-to-spill-the-plan",
+        "display_label": "The Plan - Built to Spill",
+        "source_membership_id": "family-10-song-072-built-to-spill-the-plan",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Built to Spill guitar-indie song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f10-artist-neutral-milk-hotel-072",
+        "candidate_id": "survey-f10-artist-neutral-milk-hotel-072",
+        "object_type": "artist",
+        "display_label": "Neutral Milk Hotel",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-pavement-072",
+        "candidate_id": "survey-f10-artist-pavement-072",
+        "object_type": "artist",
+        "display_label": "Pavement",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-elliott-smith-072",
+        "candidate_id": "survey-f10-artist-elliott-smith-072",
+        "object_type": "artist",
+        "display_label": "Elliott Smith",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-built-to-spill-072",
+        "candidate_id": "survey-f10-artist-built-to-spill-072",
+        "object_type": "artist",
+        "display_label": "Built to Spill",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-yo-la-tengo-072",
+        "candidate_id": "survey-f10-artist-yo-la-tengo-072",
+        "object_type": "artist",
+        "display_label": "Yo La Tengo",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-guided-by-voices-072",
+        "candidate_id": "survey-f10-artist-guided-by-voices-072",
+        "object_type": "artist",
+        "display_label": "Guided by Voices",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-sebadoh-072",
+        "candidate_id": "survey-f10-artist-sebadoh-072",
+        "object_type": "artist",
+        "display_label": "Sebadoh",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-pavement-crooked-rain-crooked-rain-072",
+        "candidate_id": "survey-f10-album-pavement-crooked-rain-crooked-rain-072",
+        "object_type": "album",
+        "display_label": "Crooked Rain, Crooked Rain",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-neutral-milk-hotel-in-the-aeroplane-over-the-sea-072",
+        "candidate_id": "survey-f10-album-neutral-milk-hotel-in-the-aeroplane-over-the-sea-072",
+        "object_type": "album",
+        "display_label": "In the Aeroplane Over the Sea",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-pavement-slanted-and-enchanted-072",
+        "candidate_id": "survey-f10-album-pavement-slanted-and-enchanted-072",
+        "object_type": "album",
+        "display_label": "Slanted and Enchanted",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-yo-la-tengo-i-can-hear-the-heart-beating-as-one-072",
+        "candidate_id": "survey-f10-album-yo-la-tengo-i-can-hear-the-heart-beating-as-one-072",
+        "object_type": "album",
+        "display_label": "I Can Hear the Heart Beating as One",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-built-to-spill-perfect-from-now-on-072",
+        "candidate_id": "survey-f10-album-built-to-spill-perfect-from-now-on-072",
+        "object_type": "album",
+        "display_label": "Perfect from Now On",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-guided-by-voices-bee-thousand-072",
+        "candidate_id": "survey-f10-album-guided-by-voices-bee-thousand-072",
+        "object_type": "album",
+        "display_label": "Bee Thousand",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-sebadoh-bakesale-072",
+        "candidate_id": "survey-f10-album-sebadoh-bakesale-072",
+        "object_type": "album",
+        "display_label": "Bakesale",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-pavement-gold-soundz-072",
+        "candidate_id": "survey-f10-song_recording-pavement-gold-soundz-072",
+        "object_type": "song_recording",
+        "display_label": "Gold Soundz",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-neutral-milk-hotel-in-the-aeroplane-over-the-sea-072",
+        "candidate_id": "survey-f10-song_recording-neutral-milk-hotel-in-the-aeroplane-over-the-sea-072",
+        "object_type": "song_recording",
+        "display_label": "In the Aeroplane Over the Sea",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-pavement-cut-your-hair-072",
+        "candidate_id": "survey-f10-song_recording-pavement-cut-your-hair-072",
+        "object_type": "song_recording",
+        "display_label": "Cut Your Hair",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-neutral-milk-hotel-holland-1945-072",
+        "candidate_id": "survey-f10-song_recording-neutral-milk-hotel-holland-1945-072",
+        "object_type": "song_recording",
+        "display_label": "Holland, 1945",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-elliott-smith-between-the-bars-072",
+        "candidate_id": "survey-f10-song_recording-elliott-smith-between-the-bars-072",
+        "object_type": "song_recording",
+        "display_label": "Between the Bars",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-guided-by-voices-game-of-pricks-072",
+        "candidate_id": "survey-f10-song_recording-guided-by-voices-game-of-pricks-072",
+        "object_type": "song_recording",
+        "display_label": "Game of Pricks",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_10/archetype_071",
+      "family_10/archetype_073"
+    ],
+    "before_archetype_refs": [
+      "family_10/archetype_071"
+    ],
+    "after_archetype_refs": [
+      "family_10/archetype_073"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_10": {
+      "title": "Normalized canonical graph export, Family 10",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_10/normalized_family_10.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "072_allmusic_indie": {
+      "title": "Indie Rock",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/indie-rock",
+      "source_type": "genre_overview",
+      "audit_use": "Broad style support for independent guitar rock's 1990s forms.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad style support for independent guitar rock's 1990s forms."
+    },
+    "072_allmusic_lofi": {
+      "title": "Lo-Fi",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/lo-fi",
+      "source_type": "genre_overview",
+      "audit_use": "Direct support for low-fidelity recording, home-tape aesthetics, and anti-polish values.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct support for low-fidelity recording, home-tape aesthetics, and anti-polish values."
+    },
+    "072_matador_pavement": {
+      "title": "Pavement",
+      "publisher": "Matador Records",
+      "url": "https://matadorrecords.com/pavement",
+      "source_type": "official_label",
+      "audit_use": "Label-side object support for Pavement and the Matador slacker indie axis.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Label-side object support for Pavement and the Matador slacker indie axis."
+    },
+    "072_merge_nmh": {
+      "title": "Neutral Milk Hotel",
+      "publisher": "Merge Records",
+      "url": "https://www.mergerecords.com/neutral-milk-hotel",
+      "source_type": "official_label",
+      "audit_use": "Label-side object support for Neutral Milk Hotel's cult indie album-world branch.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Label-side object support for Neutral Milk Hotel's cult indie album-world branch."
+    },
+    "allmusic_indie_rock": {
+      "title": "Indie Rock",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/indie-rock-ma0000004453",
+      "source_type": "music_reference",
+      "audit_use": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches."
+    },
+    "matador_history": {
+      "title": "Matador Records",
+      "publisher": "Matador Records",
+      "url": "https://matadorrecords.com/",
+      "source_type": "official_label",
+      "audit_use": "Independent-label context for 1990s and 2000s indie rock.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Independent-label context for 1990s and 2000s indie rock."
+    },
+    "rockhall_rem": {
+      "title": "R.E.M.",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/rem/",
+      "source_type": "museum_reference",
+      "audit_use": "College rock, jangly alternative, and pre-mainstream indie lineage.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "College rock, jangly alternative, and pre-mainstream indie lineage."
+    },
+    "britannica_radiohead": {
+      "title": "Radiohead",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Radiohead",
+      "source_type": "reference",
+      "audit_use": "Alternative rock, art-rock, and 2000s experimental-rock context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Alternative rock, art-rock, and 2000s experimental-rock context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "072-claim-01",
+      "claim_text": "1990s indie/lo-fi made imperfection part of the appeal: slack timing, dry wit, home-recorded texture, and anti-mainstream understatement.",
+      "source_ref_ids": [
+        "072_allmusic_indie",
+        "072_allmusic_lofi"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_10/archetype_072"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "072-claim-02",
+      "claim_text": "Pavement anchor the Matador slacker side through crooked guitar hooks, conversational vocals, and deliberate looseness.",
+      "source_ref_ids": [
+        "072_matador_pavement",
+        "072_allmusic_indie"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_072",
+        "artist:pavement",
+        "album:pavement-slanted-and-enchanted"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "072-claim-03",
+      "claim_text": "Neutral Milk Hotel shows the album-world branch where lo-fi indie becomes surreal, communal, and emotionally intense rather than merely casual.",
+      "source_ref_ids": [
+        "072_merge_nmh",
+        "072_allmusic_lofi"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_10/archetype_072",
+        "artist:neutral-milk-hotel",
+        "album:neutral-milk-hotel-in-the-aeroplane-over-the-sea"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "072-claim-04",
+      "claim_text": "This road differs from grunge and post-grunge by lowering the scale: small rooms, small labels, odd hooks, and intentionally unheroic performance.",
+      "source_ref_ids": [
+        "072_allmusic_indie",
+        "072_allmusic_lofi"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "caution",
+        "related_roads_lineage_module"
+      ],
+      "graph_refs": [
+        "family_10/archetype_072",
+        "family_10/archetype_070",
+        "family_10/archetype_071"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "072-90s_indie_lo_fi_slacker_matador_axis-boundary",
+      "claim_text": "90s Indie / Lo-Fi / Slacker / Matador Axis's boundary is clearest when lo-fi texture and crooked guitar hooks appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "072_allmusic_indie",
+        "072_allmusic_lofi"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_072",
+        "artist:pavement",
+        "artist:neutral-milk-hotel"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "1990s indie where looseness, small labels, and odd hooks become the point.",
+    "history_capsule": "This road runs through lo-fi recording, slacker charisma, Matador guitar bands, and cult album worlds that resisted major-label rock scale.",
+    "why_it_mattered": "It gave indie a durable anti-polish vocabulary and a model for cult devotion.",
+    "what_made_it_distinct": "The sound often feels casual on purpose, but the melodic and lyrical fingerprints are specific.",
+    "what_to_listen_for": [
+      "lo-fi texture",
+      "crooked guitar hooks",
+      "understated vocals",
+      "offhand humor",
+      "small-room feel"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:pavement",
+        "example_type": "artist",
+        "display_label": "Pavement",
+        "why_this_example_matters": "Pavement is a graph-validated anchor for 90s Indie / Lo-Fi / Slacker / Matador Axis; use it to hear lo-fi texture.",
+        "what_to_listen_for": [
+          "lo-fi texture",
+          "crooked guitar hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:neutral-milk-hotel",
+        "example_type": "artist",
+        "display_label": "Neutral Milk Hotel",
+        "why_this_example_matters": "Neutral Milk Hotel is a graph-validated anchor for 90s Indie / Lo-Fi / Slacker / Matador Axis; use it to hear crooked guitar hooks.",
+        "what_to_listen_for": [
+          "crooked guitar hooks",
+          "understated vocals"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:pavement-slanted-and-enchanted",
+        "example_type": "album",
+        "display_label": "Slanted and Enchanted - Pavement",
+        "why_this_example_matters": "Slanted and Enchanted - Pavement is a graph-validated anchor for 90s Indie / Lo-Fi / Slacker / Matador Axis; use it to hear understated vocals.",
+        "what_to_listen_for": [
+          "understated vocals",
+          "offhand humor"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "example_type": "album",
+        "display_label": "In the Aeroplane Over the Sea - Neutral Milk Hotel",
+        "why_this_example_matters": "In the Aeroplane Over the Sea - Neutral Milk Hotel is a graph-validated anchor for 90s Indie / Lo-Fi / Slacker / Matador Axis; use it to hear offhand humor.",
+        "what_to_listen_for": [
+          "offhand humor",
+          "small-room feel"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:pavement-gold-soundz",
+        "example_type": "song_recording",
+        "display_label": "Gold Soundz - Pavement",
+        "why_this_example_matters": "Gold Soundz - Pavement is a graph-validated anchor for 90s Indie / Lo-Fi / Slacker / Matador Axis; use it to hear small-room feel.",
+        "what_to_listen_for": [
+          "small-room feel"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:neutral-milk-hotel-in-the-aeroplane-over-the-sea",
+        "example_type": "song_recording",
+        "display_label": "In the Aeroplane Over the Sea - Neutral Milk Hotel",
+        "why_this_example_matters": "In the Aeroplane Over the Sea - Neutral Milk Hotel is a graph-validated anchor for 90s Indie / Lo-Fi / Slacker / Matador Axis; use it to hear lo-fi texture.",
+        "what_to_listen_for": [
+          "lo-fi texture",
+          "crooked guitar hooks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_10/archetype_071"
+      ],
+      "after": [
+        "family_10/archetype_073"
+      ],
+      "related": [
+        "family_10/archetype_071",
+        "family_10/archetype_073"
+      ],
+      "copy": "Use 90s Indie / Lo-Fi / Slacker / Matador Axis as a contextual road inside Alternative, Indie, Grunge, Emo; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "072-dyk-1",
+        "copy": "Pavement's looseness is a style, not just lack of skill.",
+        "source_ref_ids": [
+          "072_allmusic_indie",
+          "072_allmusic_lofi"
+        ]
+      },
+      {
+        "card_id": "072-dyk-2",
+        "copy": "Neutral Milk Hotel shows how lo-fi can feel mythic rather than detached.",
+        "source_ref_ids": [
+          "072_matador_pavement",
+          "072_allmusic_indie"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether 90s indie / lo-fi / slacker / matador axis is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "1990s indie where looseness, small labels, and odd hooks become the point.",
+      "It gave indie a durable anti-polish vocabulary and a model for cult devotion.",
+      "The sound often feels casual on purpose, but the melodic and lyrical fingerprints are specific."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not equate lo-fi with low quality; the recording texture is part of the expressive design.",
+    "personalization_hooks": [
+      {
+        "hook_id": "072-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[072]",
+          "atlas_state.family_affinity[10]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[072] >= 0.65 || atlas_state.family_affinity[10] >= 0.65",
+        "copy_variant": "Your Atlas signals make 90s Indie / Lo-Fi / Slacker / Matador Axis useful as a contextual landmark.",
+        "fallback_copy": "Use 90s Indie / Lo-Fi / Slacker / Matador Axis as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "072-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_10/archetype_072 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_10/archetype_072",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient 90s Indie / Lo-Fi / Slacker / Matador Axis before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "072-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_10/archetype_072 || atlas_state.boundary_question_results has boundary_negative for family_10/archetype_072",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for 90s Indie / Lo-Fi / Slacker / Matador Axis.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "072-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_10/archetype_072 || atlas_state.related_mission_ids references family_10/archetype_072",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "072-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_10/archetype_072 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_10/archetype_072 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_10/archetype_072",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for 90s Indie / Lo-Fi / Slacker / Matador Axis.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_10": {
+        "title": "Normalized canonical graph export, Family 10",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_10/normalized_family_10.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "072_allmusic_indie": {
+        "title": "Indie Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-rock",
+        "source_type": "genre_overview",
+        "audit_use": "Broad style support for independent guitar rock's 1990s forms.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad style support for independent guitar rock's 1990s forms."
+      },
+      "072_allmusic_lofi": {
+        "title": "Lo-Fi",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/lo-fi",
+        "source_type": "genre_overview",
+        "audit_use": "Direct support for low-fidelity recording, home-tape aesthetics, and anti-polish values.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for low-fidelity recording, home-tape aesthetics, and anti-polish values."
+      },
+      "072_matador_pavement": {
+        "title": "Pavement",
+        "publisher": "Matador Records",
+        "url": "https://matadorrecords.com/pavement",
+        "source_type": "official_label",
+        "audit_use": "Label-side object support for Pavement and the Matador slacker indie axis.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Label-side object support for Pavement and the Matador slacker indie axis."
+      },
+      "072_merge_nmh": {
+        "title": "Neutral Milk Hotel",
+        "publisher": "Merge Records",
+        "url": "https://www.mergerecords.com/neutral-milk-hotel",
+        "source_type": "official_label",
+        "audit_use": "Label-side object support for Neutral Milk Hotel's cult indie album-world branch.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Label-side object support for Neutral Milk Hotel's cult indie album-world branch."
+      },
+      "allmusic_indie_rock": {
+        "title": "Indie Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-rock-ma0000004453",
+        "source_type": "music_reference",
+        "audit_use": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches."
+      },
+      "matador_history": {
+        "title": "Matador Records",
+        "publisher": "Matador Records",
+        "url": "https://matadorrecords.com/",
+        "source_type": "official_label",
+        "audit_use": "Independent-label context for 1990s and 2000s indie rock.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Independent-label context for 1990s and 2000s indie rock."
+      },
+      "rockhall_rem": {
+        "title": "R.E.M.",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/rem/",
+        "source_type": "museum_reference",
+        "audit_use": "College rock, jangly alternative, and pre-mainstream indie lineage.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "College rock, jangly alternative, and pre-mainstream indie lineage."
+      },
+      "britannica_radiohead": {
+        "title": "Radiohead",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Radiohead",
+        "source_type": "reference",
+        "audit_use": "Alternative rock, art-rock, and 2000s experimental-rock context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Alternative rock, art-rock, and 2000s experimental-rock context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "072-claim-01",
+        "claim_text": "1990s indie/lo-fi made imperfection part of the appeal: slack timing, dry wit, home-recorded texture, and anti-mainstream understatement.",
+        "source_ref_ids": [
+          "072_allmusic_indie",
+          "072_allmusic_lofi"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_10/archetype_072"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "072-claim-02",
+        "claim_text": "Pavement anchor the Matador slacker side through crooked guitar hooks, conversational vocals, and deliberate looseness.",
+        "source_ref_ids": [
+          "072_matador_pavement",
+          "072_allmusic_indie"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_072",
+          "artist:pavement",
+          "album:pavement-slanted-and-enchanted"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "072-claim-03",
+        "claim_text": "Neutral Milk Hotel shows the album-world branch where lo-fi indie becomes surreal, communal, and emotionally intense rather than merely casual.",
+        "source_ref_ids": [
+          "072_merge_nmh",
+          "072_allmusic_lofi"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_10/archetype_072",
+          "artist:neutral-milk-hotel",
+          "album:neutral-milk-hotel-in-the-aeroplane-over-the-sea"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "072-claim-04",
+        "claim_text": "This road differs from grunge and post-grunge by lowering the scale: small rooms, small labels, odd hooks, and intentionally unheroic performance.",
+        "source_ref_ids": [
+          "072_allmusic_indie",
+          "072_allmusic_lofi"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "caution",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_10/archetype_072",
+          "family_10/archetype_070",
+          "family_10/archetype_071"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "072-90s_indie_lo_fi_slacker_matador_axis-boundary",
+        "claim_text": "90s Indie / Lo-Fi / Slacker / Matador Axis's boundary is clearest when lo-fi texture and crooked guitar hooks appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "072_allmusic_indie",
+          "072_allmusic_lofi"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_072",
+          "artist:pavement",
+          "artist:neutral-milk-hotel"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "90s Indie / Lo-Fi / Slacker / Matador Axis: Pavement, Neutral Milk Hotel, Guided by Voices, Sebadoh, Built to Spill, Matador/Merge lo-fi guitar indie.",
+    "selected_sources": [
+      {
+        "source_ref_id": "072_allmusic_indie",
+        "title": "Indie Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-rock",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad style support for independent guitar rock's 1990s forms."
+      },
+      {
+        "source_ref_id": "072_allmusic_lofi",
+        "title": "Lo-Fi",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/lo-fi",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for low-fidelity recording, home-tape aesthetics, and anti-polish values."
+      },
+      {
+        "source_ref_id": "072_matador_pavement",
+        "title": "Pavement",
+        "publisher": "Matador Records",
+        "url": "https://matadorrecords.com/pavement",
+        "source_relevance": "example_object_support",
+        "why_fit": "Label-side object support for Pavement and the Matador slacker indie axis."
+      },
+      {
+        "source_ref_id": "072_merge_nmh",
+        "title": "Neutral Milk Hotel",
+        "publisher": "Merge Records",
+        "url": "https://www.mergerecords.com/neutral-milk-hotel",
+        "source_relevance": "example_object_support",
+        "why_fit": "Label-side object support for Neutral Milk Hotel's cult indie album-world branch."
+      },
+      {
+        "source_ref_id": "allmusic_indie_rock",
+        "title": "Indie Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-rock-ma0000004453",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches."
+      },
+      {
+        "source_ref_id": "matador_history",
+        "title": "Matador Records",
+        "publisher": "Matador Records",
+        "url": "https://matadorrecords.com/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Independent-label context for 1990s and 2000s indie rock."
+      },
+      {
+        "source_ref_id": "rockhall_rem",
+        "title": "R.E.M.",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/rem/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "College rock, jangly alternative, and pre-mainstream indie lineage."
+      },
+      {
+        "source_ref_id": "britannica_radiohead",
+        "title": "Radiohead",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/Radiohead",
+        "source_relevance": "example_object_support",
+        "why_fit": "Alternative rock, art-rock, and 2000s experimental-rock context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "072_reject_britpop",
+        "title": "Britpop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/britpop",
+        "source_type": "genre_overview",
+        "source_relevance": "weak_context",
+        "why_rejected": "Britpop is a neighboring 1990s guitar-pop phenomenon, but not the US lo-fi/slacker/Matador axis requested here."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources directly support indie rock, lo-fi aesthetics, Pavement/Matador, and Neutral Milk Hotel/Merge rather than generic alternative rock."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 94,
+    "scene_anchor_refs": [
+      "song|pavement|trigger cut",
+      "song|guided by voices|tractor rape chain",
+      "song|elliott smith|between the bars",
+      "song|neutral milk hotel|holland 1945"
+    ],
+    "ladder_example_refs": [
+      "album|sebadoh|iii",
+      "artist_anchor|archers of loaf|archers of loaf",
+      "artist_anchor|cat power|cat power",
+      "artist_anchor|magnetic fields|magnetic fields",
+      "artist_anchor|mountain goats|mountain goats",
+      "artist_anchor|beat happening|beat happening",
+      "artist_anchor|silver jews|silver jews",
+      "song|superchunk|slack motherfucker"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

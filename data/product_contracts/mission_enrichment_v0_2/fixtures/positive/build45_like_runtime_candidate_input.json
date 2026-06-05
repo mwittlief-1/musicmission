@@ -1,0 +1,384 @@
+{
+  "schema_version": "mission_enrichment_input_v0_2",
+  "runtime_context": {
+    "surface": "mission_card_and_feedback_chips",
+    "mission_ordinal_for_user": 1,
+    "max_secondary_tags_per_song": 6,
+    "copy_mode": "external_alpha",
+    "language_style": "clear_warm_music_literate",
+    "avoid_founder_vocabulary": true
+  },
+  "user_atlas_context_brief": {
+    "confirmed_positive_patterns": [
+      {
+        "pattern_id": "PATTERN_001",
+        "label": "direct songs with pressure and band energy",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "open_questions": [
+      {
+        "question_id": "QUESTION_001",
+        "label": "Does intensity help only when the song remains clear?",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "known_boundaries": [],
+    "recent_learning_summary": [],
+    "coverage_notes": [
+      "First listening mission; keep language cautious."
+    ]
+  },
+  "mission_context": {
+    "mission_id": "MIS_ENRICH_BUILD45_RUNTIME_CANDIDATE",
+    "mission_type": "archetype_depth_test",
+    "risk_level": "low",
+    "mission_hypothesis": "Check whether an early high-energy band signal holds across adjacent route items.",
+    "why_this_mission_now": "This starts near a strong early region while avoiding already-rated survey songs.",
+    "success_definition": "Useful reactions will clarify whether the region is a durable center, a waypoint, or a narrower pocket."
+  },
+  "route_items": [
+    {
+      "item_id": "ITEM_BUILD45_01",
+      "canonical_song_recording_id": "song_build45_001",
+      "sequence": 1,
+      "title": "Signal Test One",
+      "artist": "North Arcade",
+      "year": 1994,
+      "route_role": "probe",
+      "why_included": "Selected as a nearby test of the current high-energy pattern.",
+      "song_affinity_tags": [
+        {
+          "tag": "sonic_texture:distorted_guitar",
+          "facet": "sonic_texture"
+        },
+        {
+          "tag": "emotion_theme:pressure",
+          "facet": "emotion_theme"
+        },
+        {
+          "tag": "vocal_performance:urgent_delivery",
+          "facet": "vocal_performance"
+        },
+        {
+          "tag": "form_container:hook_centered",
+          "facet": "form_container"
+        },
+        {
+          "tag": "energy_profile:high_drive",
+          "facet": "energy_profile"
+        }
+      ],
+      "user_alignment_hints": [
+        {
+          "tag": "sonic_texture:distorted_guitar",
+          "alignment": "matches_known_positive"
+        },
+        {
+          "tag": "energy_profile:high_drive",
+          "alignment": "stretches_known_positive"
+        },
+        {
+          "tag": "vocal_performance:urgent_delivery",
+          "alignment": "tests_open_question"
+        }
+      ],
+      "prefiltered_secondary_tag_ids": [
+        "MOOD_WORKED",
+        "ENERGY_WORKED",
+        "HOOK_WORKED",
+        "BUILD_WORKED",
+        "SOUND_WORKED",
+        "PRODUCTION_WORKED",
+        "VOICE_WORKED",
+        "PERFORMANCE_WORKED",
+        "SURPRISED_ME",
+        "WOULD_TRY_MORE_NEARBY",
+        "GOOD_NOT_CORE",
+        "KEEP_AS_WAYPOINT",
+        "UNSURE_BUT_CURIOUS",
+        "NEEDS_ANOTHER_LISTEN"
+      ],
+      "applicability_flags": {
+        "has_vocals": true,
+        "has_lyrics": true,
+        "lyrics_language_known": true,
+        "is_instrumental": false,
+        "is_live_or_alt_version": false,
+        "album_context_relevant": false,
+        "long_form_context_relevant": false
+      },
+      "artist_context_available": false
+    },
+    {
+      "item_id": "ITEM_BUILD45_02",
+      "canonical_song_recording_id": "song_build45_002",
+      "sequence": 2,
+      "title": "Edge Check Two",
+      "artist": "Harbor Static",
+      "year": 1996,
+      "route_role": "stretch",
+      "why_included": "Selected to stretch the same energy pattern into a different sound shape.",
+      "song_affinity_tags": [
+        {
+          "tag": "production:rough_mix",
+          "facet": "production"
+        },
+        {
+          "tag": "rhythm_body:steady_drive",
+          "facet": "rhythm_body"
+        },
+        {
+          "tag": "emotion_theme:restless",
+          "facet": "emotion_theme"
+        },
+        {
+          "tag": "form_container:single_craft",
+          "facet": "form_container"
+        }
+      ],
+      "user_alignment_hints": [
+        {
+          "tag": "rhythm_body:steady_drive",
+          "alignment": "matches_known_positive"
+        },
+        {
+          "tag": "production:rough_mix",
+          "alignment": "tests_open_question"
+        }
+      ],
+      "prefiltered_secondary_tag_ids": [
+        "MOOD_WORKED",
+        "HOOK_WORKED",
+        "BUILD_WORKED",
+        "PRODUCTION_WORKED",
+        "SOUND_WORKED",
+        "GROOVE_WORKED",
+        "BEAT_WORKED",
+        "ENERGY_WORKED",
+        "SURPRISED_ME",
+        "WOULD_TRY_MORE_NEARBY",
+        "GOOD_NOT_CORE",
+        "KEEP_AS_WAYPOINT",
+        "UNSURE_BUT_CURIOUS",
+        "NEEDS_ANOTHER_LISTEN"
+      ],
+      "applicability_flags": {
+        "has_vocals": true,
+        "has_lyrics": true,
+        "lyrics_language_known": true,
+        "is_instrumental": false,
+        "is_live_or_alt_version": false,
+        "album_context_relevant": false,
+        "long_form_context_relevant": false
+      },
+      "artist_context_available": false
+    }
+  ],
+  "allowed_secondary_reaction_tags": {
+    "BEAT_WORKED": {
+      "tag_id": "BEAT_WORKED",
+      "display_label": "The beat worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_beat_or_rhythm_signal",
+      "allowed_facets": [
+        "rhythm_body",
+        "production"
+      ]
+    },
+    "BUILD_WORKED": {
+      "tag_id": "BUILD_WORKED",
+      "display_label": "The build worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_dynamic_shape_signal",
+      "allowed_facets": [
+        "dynamic_shape",
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "ENERGY_WORKED": {
+      "tag_id": "ENERGY_WORKED",
+      "display_label": "The energy worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_energy_signal",
+      "allowed_facets": [
+        "energy_profile",
+        "rhythm_body"
+      ]
+    },
+    "GOOD_NOT_CORE": {
+      "tag_id": "GOOD_NOT_CORE",
+      "display_label": "Good, not core",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_waypoint_not_landmark",
+      "allowed_facets": []
+    },
+    "GROOVE_WORKED": {
+      "tag_id": "GROOVE_WORKED",
+      "display_label": "The groove worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_rhythm_body_signal",
+      "allowed_facets": [
+        "rhythm_body"
+      ]
+    },
+    "HOOK_WORKED": {
+      "tag_id": "HOOK_WORKED",
+      "display_label": "The hook worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_songcraft_signal",
+      "allowed_facets": [
+        "form_container",
+        "melody_harmony"
+      ]
+    },
+    "KEEP_AS_WAYPOINT": {
+      "tag_id": "KEEP_AS_WAYPOINT",
+      "display_label": "Keep as waypoint",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "preserve_as_navigation_reference",
+      "allowed_facets": []
+    },
+    "MOOD_WORKED": {
+      "tag_id": "MOOD_WORKED",
+      "display_label": "The mood worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_mood_signal",
+      "allowed_facets": [
+        "emotion_theme",
+        "atmosphere"
+      ]
+    },
+    "NEEDS_ANOTHER_LISTEN": {
+      "tag_id": "NEEDS_ANOTHER_LISTEN",
+      "display_label": "Needs another listen",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_uncertain_repeat_test",
+      "allowed_facets": []
+    },
+    "PERFORMANCE_WORKED": {
+      "tag_id": "PERFORMANCE_WORKED",
+      "display_label": "The performance worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_performance_signal",
+      "allowed_facets": [
+        "vocal_performance",
+        "instrumental_performance"
+      ]
+    },
+    "PRODUCTION_WORKED": {
+      "tag_id": "PRODUCTION_WORKED",
+      "display_label": "The production worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_production_signal",
+      "allowed_facets": [
+        "production",
+        "sonic_texture"
+      ]
+    },
+    "SOUND_WORKED": {
+      "tag_id": "SOUND_WORKED",
+      "display_label": "The sound worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_sound_or_texture_signal",
+      "allowed_facets": [
+        "sonic_texture",
+        "production"
+      ]
+    },
+    "SURPRISED_ME": {
+      "tag_id": "SURPRISED_ME",
+      "display_label": "This surprised me",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_or_strengthen_novelty_signal",
+      "allowed_facets": []
+    },
+    "UNSURE_BUT_CURIOUS": {
+      "tag_id": "UNSURE_BUT_CURIOUS",
+      "display_label": "Unsure, but curious",
+      "valid_primary_reactions": [
+        "ok",
+        "like"
+      ],
+      "atlas_effect": "open_frontier_with_uncertainty",
+      "allowed_facets": []
+    },
+    "VOICE_WORKED": {
+      "tag_id": "VOICE_WORKED",
+      "display_label": "The voice worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_vocal_signal",
+      "allowed_facets": [
+        "vocal_performance"
+      ]
+    },
+    "WOULD_TRY_MORE_NEARBY": {
+      "tag_id": "WOULD_TRY_MORE_NEARBY",
+      "display_label": "I'd try more nearby",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_nearby_exploration",
+      "allowed_facets": []
+    }
+  },
+  "copy_guardrails": [
+    "Do not change mission or song list.",
+    "Use only allowed secondary tag IDs.",
+    "Do not invent artists, songs, genres, user history, tags, or affinity facts.",
+    "Do not use raw graph IDs in display copy.",
+    "Do not expose raw affinity tags as chip labels.",
+    "Do not claim final taste truth.",
+    "Do not use founder-specific language.",
+    "Do not assume rock, guitar music, vocals, lyrics, albums, English-language music, or advanced music knowledge.",
+    "Treat all context as provisional."
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/contracts/mission_opportunity_selection/selector_output_v0_1.schema.json",
+  "title": "Cartenza Selector Output v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "fixture_status",
+    "selector_run_id",
+    "created_at",
+    "runtime_allowed",
+    "production_mission_generation_allowed",
+    "canonical_graph_mutation_allowed",
+    "listener_preference_inference_from_affinity_allowed",
+    "opportunity_only",
+    "source_registry_ref",
+    "source_evidence_rollup_ref",
+    "global_top_k_opportunities",
+    "selector_audit",
+    "ranked_opportunities"
+  ],
+  "properties": {
+    "contract_version": { "const": "selector_output_v0_1" },
+    "fixture_status": { "const": "synthetic_contract_fixture" },
+    "selector_run_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "runtime_allowed": { "const": false },
+    "production_mission_generation_allowed": { "const": false },
+    "canonical_graph_mutation_allowed": { "const": false },
+    "listener_preference_inference_from_affinity_allowed": { "const": false },
+    "opportunity_only": { "const": true },
+    "source_registry_ref": { "type": "string", "minLength": 1 },
+    "source_evidence_rollup_ref": { "type": "string", "minLength": 1 },
+    "global_top_k_opportunities": { "const": 25 },
+    "selector_audit": { "$ref": "#/$defs/selector_audit" },
+    "ranked_opportunities": {
+      "type": "array",
+      "maxItems": 25,
+      "items": {
+        "$ref": "https://cartenza.local/contracts/mission_opportunity_selection/mission_opportunity_blob_v0_1.schema.json"
+      }
+    }
+  },
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "candidate_generation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_type",
+        "generator_id",
+        "eligible_candidate_count",
+        "emitted_candidate_count",
+        "floor_failed_candidate_count",
+        "pruned_candidate_count",
+        "cap_applied",
+        "cap_value"
+      ],
+      "properties": {
+        "mission_type": {
+          "enum": [
+            "initial_profile_survey",
+            "family_survey",
+            "archetype_survey",
+            "gateway_test",
+            "song_to_archetype_test",
+            "artist_depth_test",
+            "album_container_test",
+            "archetype_depth_test",
+            "exception_scope_test",
+            "false_nearby_test",
+            "context_dependence_test",
+            "bridge_test",
+            "boundary_test",
+            "evidence_repair_test"
+          ]
+        },
+        "generator_id": { "type": "string", "minLength": 1 },
+        "eligible_candidate_count": { "type": "integer", "minimum": 0 },
+        "emitted_candidate_count": { "type": "integer", "minimum": 0 },
+        "floor_failed_candidate_count": { "type": "integer", "minimum": 0 },
+        "pruned_candidate_count": { "type": "integer", "minimum": 0 },
+        "cap_applied": { "type": "boolean" },
+        "cap_value": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "selector_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selection_mode",
+        "mission_types_considered",
+        "mission_types_skipped_by_early_stop",
+        "mission_types_sorted_by_descending_ceiling",
+        "global_heap_maintained",
+        "heap_max_size",
+        "candidate_blobs_generated",
+        "candidate_blobs_floor_passed",
+        "candidate_blobs_scored",
+        "candidate_blobs_pruned",
+        "final_heap_size",
+        "early_stop_applied",
+        "early_stop_reason",
+        "remaining_ceiling_at_stop",
+        "cutoff_score",
+        "floor_failure_examples",
+        "non_generation_reasons",
+        "candidate_generation_summaries",
+        "duplicate_control_summary",
+        "audit_notes"
+      ],
+      "properties": {
+        "selection_mode": { "const": "offline_synthetic_fixture" },
+        "mission_types_considered": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/candidate_generation_summary/properties/mission_type" }
+        },
+        "mission_types_skipped_by_early_stop": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/candidate_generation_summary/properties/mission_type" }
+        },
+        "mission_types_sorted_by_descending_ceiling": { "type": "boolean" },
+        "global_heap_maintained": { "type": "boolean" },
+        "heap_max_size": { "const": 25 },
+        "candidate_blobs_generated": { "type": "integer", "minimum": 0 },
+        "candidate_blobs_floor_passed": { "type": "integer", "minimum": 0 },
+        "candidate_blobs_scored": { "type": "integer", "minimum": 0 },
+        "candidate_blobs_pruned": { "type": "integer", "minimum": 0 },
+        "final_heap_size": { "type": "integer", "minimum": 0, "maximum": 25 },
+        "early_stop_applied": { "type": "boolean" },
+        "early_stop_reason": { "type": ["string", "null"] },
+        "remaining_ceiling_at_stop": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "cutoff_score": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "floor_failure_examples": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/floor_failure_example" }
+        },
+        "non_generation_reasons": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/non_generation_reason" }
+        },
+        "candidate_generation_summaries": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/candidate_generation_summary" }
+        },
+        "duplicate_control_summary": { "$ref": "#/$defs/duplicate_control_summary" },
+        "audit_notes": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "floor_failure_example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mission_type", "opportunity_id", "failed_requirements", "fail_reasons"],
+      "properties": {
+        "mission_type": { "$ref": "#/$defs/candidate_generation_summary/properties/mission_type" },
+        "opportunity_id": { "type": "string", "minLength": 1 },
+        "failed_requirements": { "$ref": "#/$defs/string_array" },
+        "fail_reasons": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "non_generation_reason": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mission_type", "reason", "evidence_refs"],
+      "properties": {
+        "mission_type": { "$ref": "#/$defs/candidate_generation_summary/properties/mission_type" },
+        "reason": { "type": "string", "minLength": 1 },
+        "evidence_refs": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "mission_type_concentration_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mission_type", "count", "share"],
+      "properties": {
+        "mission_type": { "$ref": "#/$defs/candidate_generation_summary/properties/mission_type" },
+        "count": { "type": "integer", "minimum": 0 },
+        "share": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "suppressed_duplicate_example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_type",
+        "opportunity_id",
+        "duplicate_of_opportunity_id",
+        "target_object_ids",
+        "reason"
+      ],
+      "properties": {
+        "mission_type": { "$ref": "#/$defs/candidate_generation_summary/properties/mission_type" },
+        "opportunity_id": { "type": "string", "minLength": 1 },
+        "duplicate_of_opportunity_id": { "type": "string", "minLength": 1 },
+        "target_object_ids": { "$ref": "#/$defs/string_array" },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "duplicate_control_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exact_duplicate_mission_type_target_count",
+        "duplicate_target_object_count",
+        "mission_type_concentration",
+        "suppressed_exact_duplicate_count",
+        "suppressed_duplicate_examples"
+      ],
+      "properties": {
+        "exact_duplicate_mission_type_target_count": { "type": "integer", "minimum": 0 },
+        "duplicate_target_object_count": { "type": "integer", "minimum": 0 },
+        "mission_type_concentration": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mission_type_concentration_entry" }
+        },
+        "suppressed_exact_duplicate_count": { "type": "integer", "minimum": 0 },
+        "suppressed_duplicate_examples": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/suppressed_duplicate_example" }
+        }
+      }
+    }
+  }
+}

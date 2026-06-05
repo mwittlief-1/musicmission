@@ -1,0 +1,768 @@
+{
+  "schema_version": "0.3",
+  "render_pack_id": "family_14_archetype_101_jazz-foundations-bebop-hard-bop-gateway_render_v0_3",
+  "generated_at": "2026-06-04",
+  "source_research_pack_id": "family_14_archetype_101_jazz-foundations-bebop-hard-bop-gateway_research_v0_3",
+  "identity": {
+    "family_id": 14,
+    "family_slug": "jazz-standards-vocal-classical-adjacent",
+    "family_name": "Jazz, Standards, Vocal, Classical-Adjacent",
+    "archetype_id": "101",
+    "archetype_slug": "jazz-foundations-bebop-hard-bop-gateway",
+    "canonical_graph_ref": "family_14/archetype_101",
+    "existing_graph_label_name": "Jazz Foundations / Bebop / Hard Bop Gateway",
+    "editorial_display_title": "Jazz Foundations / Bebop / Hard Bop Gateway",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_graph_ref": "family_14/archetype_101",
+    "canonical_example_refs": [
+      "recording|horace silver|song for my father",
+      "recording|cannonball adderley|autumn leaves",
+      "song|dave brubeck quartet|take five",
+      "song|herbie hancock|cantaloupe island",
+      "album|stan getz and joao gilberto|getz gilberto",
+      "recording|eric dolphy|hat and beard",
+      "recording|pharoah sanders|creator has a master plan",
+      "song|sonny rollins|st thomas",
+      "song|duke ellington|take the a train",
+      "recording|john coltrane|blue train",
+      "recording|miles davis|all blues",
+      "recording|lee morgan|sidewinder",
+      "artist:miles-davis",
+      "artist:john-coltrane",
+      "album:miles-davis-kind-of-blue",
+      "album:john-coltrane-a-love-supreme",
+      "song_recording:miles-davis-so-what",
+      "song_recording:john-coltrane-my-favorite-things"
+    ],
+    "survey_candidate_refs": [
+      "survey_candidate:survey-f14-artist-miles-davis-101",
+      "survey_candidate:survey-f14-artist-john-coltrane-101",
+      "survey_candidate:survey-f14-artist-herbie-hancock-101",
+      "survey_candidate:survey-f14-artist-dave-brubeck-quartet-101",
+      "survey_candidate:survey-f14-artist-nina-simone-101",
+      "survey_candidate:survey-f14-artist-thelonious-monk-101",
+      "survey_candidate:survey-f14-artist-charlie-parker-101",
+      "survey_candidate:survey-f14-artist-charles-mingus-101",
+      "survey_candidate:survey-f14-artist-chet-baker-101",
+      "survey_candidate:survey-f14-artist-stan-getz-101",
+      "survey_candidate:survey-f14-artist-art-blakey-and-the-jazz-messengers-101",
+      "survey_candidate:survey-f14-album-dave-brubeck-quartet-time-out-101",
+      "survey_candidate:survey-f14-album-john-coltrane-a-love-supreme-101",
+      "survey_candidate:survey-f14-album-miles-davis-kind-of-blue-101",
+      "survey_candidate:survey-f14-album-herbie-hancock-head-hunters-101",
+      "survey_candidate:survey-f14-album-stan-getz-and-joao-gilberto-getz-gilberto-101",
+      "survey_candidate:survey-f14-album-charles-mingus-mingus-ah-um-101",
+      "survey_candidate:survey-f14-album-nina-simone-pastel-blues-101",
+      "survey_candidate:survey-f14-album-art-blakey-and-the-jazz-messengers-moanin-101",
+      "survey_candidate:survey-f14-song_recording-dave-brubeck-quartet-take-five-101"
+    ],
+    "related_archetype_refs": [
+      "family_14/archetype_100",
+      "family_14/archetype_102"
+    ],
+    "current_graph_candidate_identity_keys": [
+      "song|miles davis|so what",
+      "song|dave brubeck quartet|take five",
+      "song|thelonious monk|round midnight",
+      "song|herbie hancock|cantaloupe island",
+      "song|charlie parker|ko ko",
+      "song|charles mingus|goodbye pork pie hat",
+      "song|art blakey and the jazz messengers|moanin",
+      "album|miles davis|kind of blue",
+      "album|john coltrane|a love supreme",
+      "album|dave brubeck quartet|time out",
+      "album|herbie hancock|head hunters",
+      "album|charles mingus|mingus ah um",
+      "album|stan getz and joao gilberto|getz gilberto",
+      "album|art blakey and the jazz messengers|moanin",
+      "album|nina simone|pastel blues",
+      "artist_anchor|miles davis|miles davis",
+      "artist_anchor|john coltrane|john coltrane",
+      "artist_anchor|charlie parker|charlie parker",
+      "artist_anchor|thelonious monk|thelonious monk",
+      "artist_anchor|dave brubeck quartet|dave brubeck quartet",
+      "artist_anchor|herbie hancock|herbie hancock",
+      "artist_anchor|charles mingus|charles mingus",
+      "artist_anchor|chet baker|chet baker",
+      "artist_anchor|stan getz|stan getz",
+      "artist_anchor|art blakey and the jazz messengers|art blakey and the jazz messengers",
+      "artist_anchor|nina simone|nina simone",
+      "artist_anchor|duke ellington|duke ellington",
+      "song|duke ellington|take the a train",
+      "album|duke ellington|ellington at newport",
+      "artist_anchor|count basie|count basie",
+      "song|count basie|april in paris",
+      "artist_anchor|sonny rollins|sonny rollins",
+      "song|sonny rollins|st thomas",
+      "album|sonny rollins|saxophone colossus",
+      "artist_anchor|ornette coleman|ornette coleman",
+      "album|ornette coleman|shape of jazz to come",
+      "artist_anchor|cannonball adderley|cannonball adderley",
+      "song|cannonball adderley|mercy mercy mercy",
+      "artist_anchor|bill evans|bill evans",
+      "album|bill evans trio|waltz for debby",
+      "artist_anchor|wayne shorter|wayne shorter",
+      "song|wayne shorter|footprints",
+      "artist_anchor|wes montgomery|wes montgomery",
+      "song|wes montgomery|west coast blues",
+      "artist_anchor|clifford brown|clifford brown",
+      "song|clifford brown and max roach|joy spring",
+      "artist_anchor|freddie hubbard|freddie hubbard",
+      "song|freddie hubbard|red clay",
+      "artist_anchor|mccoy tyner|mccoy tyner",
+      "album|mccoy tyner|real mccoy",
+      "artist_anchor|ahmad jamal|ahmad jamal",
+      "song|ahmad jamal|poinciana",
+      "artist_anchor|dizzy gillespie|dizzy gillespie",
+      "song|dizzy gillespie|a night in tunisia",
+      "song|john coltrane|giant steps",
+      "song|miles davis|freddie freeloader",
+      "song|nina simone|i put a spell on you",
+      "recording|miles davis|all blues",
+      "recording|miles davis|milestones",
+      "recording|miles davis|in a silent way",
+      "recording|john coltrane|naima",
+      "recording|john coltrane|blue train",
+      "recording|thelonious monk|blue monk",
+      "recording|thelonious monk|straight no chaser",
+      "recording|charlie parker|ornithology",
+      "recording|dizzy gillespie and charlie parker|salt peanuts",
+      "recording|duke ellington|mood indigo",
+      "recording|duke ellington and john coltrane|in a sentimental mood",
+      "recording|count basie|one o clock jump",
+      "recording|sonny rollins|blue 7",
+      "recording|sonny rollins|tenor madness",
+      "recording|cannonball adderley|autumn leaves",
+      "recording|bill evans trio|my foolish heart",
+      "recording|bill evans|peace piece",
+      "recording|wes montgomery|four on six",
+      "recording|wes montgomery|bumpin on sunset",
+      "recording|art blakey and the jazz messengers|blues march",
+      "recording|horace silver|song for my father",
+      "recording|lee morgan|sidewinder",
+      "recording|oliver nelson|stolen moments",
+      "recording|jimmy smith|back at the chicken shack",
+      "recording|grant green|idle moments",
+      "recording|dexter gordon|cheese cake",
+      "recording|eric dolphy|hat and beard",
+      "recording|ornette coleman|lonely woman",
+      "recording|pharoah sanders|creator has a master plan",
+      "album|john coltrane|blue train",
+      "album|miles davis|birth of the cool",
+      "album|thelonious monk|brilliant corners",
+      "album|horace silver|song for my father"
+    ],
+    "current_graph_candidate_counts": {
+      "song": 20,
+      "album": 17,
+      "artist_anchor": 24,
+      "recording": 29
+    },
+    "current_graph_recognition_counts": {
+      "obvious": 28,
+      "medium": 60,
+      "deep": 2
+    }
+  },
+  "modules": {
+    "atlas_home_region_card": {
+      "compact": "Core jazz gateway built around improvisation, harmonic language, and canon album listening.",
+      "standard": "It teaches listeners how jazz routes operate: through players, ensembles, versions, and improvisational decisions.",
+      "deep": "Core jazz gateway built around improvisation, harmonic language, and canon album listening. It teaches listeners how jazz routes operate: through players, ensembles, versions, and improvisational decisions."
+    },
+    "region_scene_page": {
+      "compact": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening.",
+      "standard": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening. Duke Ellington's Take the A Train, John Coltrane's Blue Train, Miles Davis' All Blues, and Lee Morgan's The Sidewinder give the scene its high-recognition landmarks.",
+      "deep": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening. The song form is often a launchpad; the route signal comes from how musicians move through it. Duke Ellington's Take the A Train, John Coltrane's Blue Train, Miles Davis' All Blues, and Lee Morgan's The Sidewinder give the scene its high-recognition landmarks. From there, the examples move from quick recognition toward medium and deeper scene signals."
+    },
+    "mission_detail_history_module": {
+      "compact": "What this route tests: Core jazz gateway built around improvisation, harmonic language, and canon album listening.",
+      "standard": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening. It helps place this road in a broader music-history context.",
+      "deep": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening. It teaches listeners how jazz routes operate: through players, ensembles, versions, and improvisational decisions."
+    },
+    "did_you_know_card": {
+      "compact": "So What and My Favorite Things are gateway recordings because they make jazz form audible without needing deep theory.",
+      "standard": "So What and My Favorite Things are gateway recordings because they make jazz form audible without needing deep theory.\n\nHard bop often keeps blues/gospel feel closer to the surface than bebop.",
+      "deep": "So What and My Favorite Things are gateway recordings because they make jazz form audible without needing deep theory.\n\nHard bop often keeps blues/gospel feel closer to the surface than bebop."
+    },
+    "what_to_listen_for_prompt": {
+      "compact": "Listen for improvised solo development and swing or elastic time.",
+      "standard": "Listen for improvised solo development, swing or elastic time, modal or bebop harmony, and ensemble call-and-response.",
+      "deep": "Listen for improvised solo development, swing or elastic time, modal or bebop harmony, ensemble call-and-response, and album-side pacing."
+    },
+    "personalized_atlas_overlay": {
+      "compact": "Jazz Foundations / Bebop / Hard Bop Gateway becomes more useful when your Atlas evidence repeats across concrete listening objects.",
+      "standard": "If repeated positive evidence appears here, use Jazz Foundations / Bebop / Hard Bop Gateway as a contextual landmark while preserving boundary cautions.",
+      "deep": "When survey, mission, saved-object, and known-song evidence all point here, Jazz Foundations / Bebop / Hard Bop Gateway can explain why the examples feel connected without turning recognition into a claim of taste."
+    },
+    "canonical_examples_block": {
+      "compact": "Start Here: Song for My Father - Horace Silver and Autumn Leaves - Cannonball Adderley. Next Level: Take Five - Dave Brubeck Quartet and Cantaloupe Island - Herbie Hancock. Go Deep: Hat and Beard - Eric Dolphy and The Creator Has a Master Plan - Pharoah Sanders.",
+      "standard": "Start Here: Song for My Father - Horace Silver and Autumn Leaves - Cannonball Adderley. Next Level: Take Five - Dave Brubeck Quartet, Cantaloupe Island - Herbie Hancock, and Getz/Gilberto - Stan Getz and Joao Gilberto. Go Deep: Hat and Beard - Eric Dolphy, The Creator Has a Master Plan - Pharoah Sanders, and St. Thomas - Sonny Rollins.",
+      "deep": "Start Here uses quick landmarks: Song for My Father - Horace Silver and Autumn Leaves - Cannonball Adderley. Next Level widens the road with Take Five - Dave Brubeck Quartet, Cantaloupe Island - Herbie Hancock, and Getz/Gilberto - Stan Getz and Joao Gilberto. Go Deep opens boundary and lineage texture through Hat and Beard - Eric Dolphy, The Creator Has a Master Plan - Pharoah Sanders, and St. Thomas - Sonny Rollins."
+    },
+    "related_roads_lineage_module": {
+      "compact": "Related roads: Vocal Standards / Crooners / Great American Songbook and Smooth Jazz / Jazz-Pop / Adult Instrumental.",
+      "standard": "Jazz Foundations / Bebop / Hard Bop Gateway sits near Vocal Standards / Crooners / Great American Songbook and Smooth Jazz / Jazz-Pop / Adult Instrumental. The song form is often a launchpad; the route signal comes from how musicians move through it.",
+      "deep": "Jazz Foundations / Bebop / Hard Bop Gateway sits near Vocal Standards / Crooners / Great American Songbook and Smooth Jazz / Jazz-Pop / Adult Instrumental. The song form is often a launchpad; the route signal comes from how musicians move through it."
+    },
+    "dead_end_false_nearby_caution_module": {
+      "compact": "",
+      "standard": "",
+      "deep": ""
+    }
+  },
+  "canonical_examples": [
+    {
+      "example_ref": "recording|horace silver|song for my father",
+      "example_type": "song_recording",
+      "display_label": "Song for My Father - Horace Silver",
+      "artist_display_name": "Horace Silver",
+      "title": "Song for My Father",
+      "year": 1965,
+      "recognition_band": "obvious",
+      "mission_role": "anchor",
+      "import_class": "core_graph_playable",
+      "current_graph_candidate_identity_key": "recording|horace silver|song for my father",
+      "current_graph_membership_id": "v1m_10827",
+      "legacy_display_ref": "song_recording:horace-silver-song-for-my-father",
+      "ladder_section": "start_here",
+      "current_graph_why_it_belongs": "Song for My Father is a hummable hard-bop gateway with strong recognition for jazz-curious users.",
+      "why_this_example_matters": "This recording gives the road an accessible reference point beyond the headline landmarks.",
+      "what_to_listen_for": [
+        "improvised solo development",
+        "swing or elastic time",
+        "modal or bebop harmony"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "recording|cannonball adderley|autumn leaves",
+      "example_type": "song_recording",
+      "display_label": "Autumn Leaves - Cannonball Adderley",
+      "artist_display_name": "Cannonball Adderley",
+      "title": "Autumn Leaves",
+      "year": 1958,
+      "recognition_band": "obvious",
+      "mission_role": "bridge",
+      "import_class": "core_graph_playable",
+      "current_graph_candidate_identity_key": "recording|cannonball adderley|autumn leaves",
+      "current_graph_membership_id": "v1m_10821",
+      "legacy_display_ref": "song_recording:cannonball-adderley-autumn-leaves",
+      "ladder_section": "start_here",
+      "current_graph_why_it_belongs": "Cannonball Adderley’s Autumn Leaves gives a highly accessible standard-in-jazz recording for gateway routing.",
+      "why_this_example_matters": "This recording is a nearby doorway into the road: accessible enough to enter quickly, but shaped by an adjacent sound.",
+      "what_to_listen_for": [
+        "swing or elastic time",
+        "modal or bebop harmony",
+        "ensemble call-and-response"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "song|dave brubeck quartet|take five",
+      "example_type": "song_recording",
+      "display_label": "Take Five - Dave Brubeck Quartet",
+      "artist_display_name": "Dave Brubeck Quartet",
+      "title": "Take Five",
+      "year": 1959,
+      "recognition_band": "obvious",
+      "mission_role": "bridge",
+      "import_class": "core_graph_playable",
+      "current_graph_candidate_identity_key": "song|dave brubeck quartet|take five",
+      "current_graph_membership_id": "v1m_04049",
+      "legacy_display_ref": "song_recording:dave-brubeck-quartet-take-five",
+      "ladder_section": "next_level",
+      "current_graph_why_it_belongs": "Take Five gives 101 a clear song-level tap for recognition, contrast, or branching.",
+      "why_this_example_matters": "This recording widens the road without losing the signal, showing how the sound continues into adjacent territory.",
+      "what_to_listen_for": [
+        "modal or bebop harmony",
+        "ensemble call-and-response",
+        "album-side pacing"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "song|herbie hancock|cantaloupe island",
+      "example_type": "song_recording",
+      "display_label": "Cantaloupe Island - Herbie Hancock",
+      "artist_display_name": "Herbie Hancock",
+      "title": "Cantaloupe Island",
+      "year": 1964,
+      "recognition_band": "obvious",
+      "mission_role": "bridge",
+      "import_class": "core_graph_playable",
+      "current_graph_candidate_identity_key": "song|herbie hancock|cantaloupe island",
+      "current_graph_membership_id": "v1m_04051",
+      "legacy_display_ref": "song_recording:herbie-hancock-cantaloupe-island",
+      "ladder_section": "next_level",
+      "current_graph_why_it_belongs": "Cantaloupe Island gives 101 a clear song-level tap for recognition, contrast, or branching.",
+      "why_this_example_matters": "This recording widens the road without losing the signal, showing how the sound continues into adjacent territory.",
+      "what_to_listen_for": [
+        "ensemble call-and-response",
+        "album-side pacing",
+        "arrangement detail"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "album|stan getz and joao gilberto|getz gilberto",
+      "example_type": "album",
+      "display_label": "Getz/Gilberto - Stan Getz and Joao Gilberto",
+      "artist_display_name": "Stan Getz and Joao Gilberto",
+      "title": "Getz/Gilberto",
+      "year": 1964,
+      "recognition_band": "obvious",
+      "mission_role": "album_world",
+      "import_class": "core_graph_album",
+      "current_graph_candidate_identity_key": "album|stan getz and joao gilberto|getz gilberto",
+      "current_graph_membership_id": "v1m_04097",
+      "legacy_display_ref": "album:stan-getz-and-joao-gilberto-getzgilberto",
+      "ladder_section": "next_level",
+      "current_graph_why_it_belongs": "Getz/Gilberto gives archetype 101 a useful album, cast, soundtrack, live, or compilation gateway.",
+      "why_this_example_matters": "This release tests the road at album scale, broadening the signal beyond the easiest landmarks.",
+      "what_to_listen_for": [
+        "ensemble call-and-response",
+        "album-side pacing",
+        "album-length arc"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "recording|eric dolphy|hat and beard",
+      "example_type": "song_recording",
+      "display_label": "Hat and Beard - Eric Dolphy",
+      "artist_display_name": "Eric Dolphy",
+      "title": "Hat and Beard",
+      "year": 1964,
+      "recognition_band": "deep",
+      "mission_role": "false_nearby",
+      "import_class": "false_nearby_candidate",
+      "current_graph_candidate_identity_key": "recording|eric dolphy|hat and beard",
+      "current_graph_membership_id": "v1m_10833",
+      "legacy_display_ref": "song_recording:eric-dolphy-hat-and-beard",
+      "ladder_section": "go_deep",
+      "current_graph_why_it_belongs": "Hat and Beard is a useful false-nearby marker for inaccessible virtuosity and avant-garde pressure.",
+      "why_this_example_matters": "This recording is a more specialized reference point, useful for testing context rather than calling the center.",
+      "what_to_listen_for": [
+        "album-side pacing",
+        "arrangement detail",
+        "era placement"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "recording|pharoah sanders|creator has a master plan",
+      "example_type": "song_recording",
+      "display_label": "The Creator Has a Master Plan - Pharoah Sanders",
+      "artist_display_name": "Pharoah Sanders",
+      "title": "The Creator Has a Master Plan",
+      "year": 1969,
+      "recognition_band": "deep",
+      "mission_role": "false_nearby",
+      "import_class": "false_nearby_candidate",
+      "current_graph_candidate_identity_key": "recording|pharoah sanders|creator has a master plan",
+      "current_graph_membership_id": "v1m_10835",
+      "legacy_display_ref": "song_recording:pharoah-sanders-the-creator-has-a-master-plan",
+      "ladder_section": "go_deep",
+      "current_graph_why_it_belongs": "The Creator Has a Master Plan tests spiritual-jazz sprawl versus gateway jazz patience.",
+      "why_this_example_matters": "This recording is a more specialized reference point, useful for testing context rather than calling the center.",
+      "what_to_listen_for": [
+        "arrangement detail",
+        "era placement",
+        "improvised solo development"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    },
+    {
+      "example_ref": "song|sonny rollins|st thomas",
+      "example_type": "song_recording",
+      "display_label": "St. Thomas - Sonny Rollins",
+      "artist_display_name": "Sonny Rollins",
+      "title": "St. Thomas",
+      "year": 1956,
+      "recognition_band": "medium",
+      "mission_role": "anchor",
+      "import_class": "core_graph_playable",
+      "current_graph_candidate_identity_key": "song|sonny rollins|st thomas",
+      "current_graph_membership_id": "v1m_05932",
+      "legacy_display_ref": "song_recording:sonny-rollins-st-thomas",
+      "ladder_section": "go_deep",
+      "current_graph_why_it_belongs": "Sonny Rollins - St. Thomas gives the archetype a high-signal recognition point for Jazz Foundations / Bebop / Hard Bop Gateway; Jazz standard based on Caribbean folk material; composition lineage matters.",
+      "why_this_example_matters": "This recording gives the road a broader test point, where texture and scene context matter more than instant recognition.",
+      "what_to_listen_for": [
+        "album-side pacing",
+        "arrangement detail",
+        "core sound"
+      ],
+      "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+    }
+  ],
+  "personalization_hooks": [
+    {
+      "hook_id": "101-affinity-positive",
+      "required_state_fields": [
+        "atlas_state.archetype_affinity[101]",
+        "atlas_state.family_affinity[14]"
+      ],
+      "predicate": "atlas_state.archetype_affinity[101] >= 0.65 || atlas_state.family_affinity[14] >= 0.65",
+      "copy_variant": "Your Atlas signals make Jazz Foundations / Bebop / Hard Bop Gateway useful as a contextual landmark.",
+      "fallback_copy": "Use Jazz Foundations / Bebop / Hard Bop Gateway as context until repeated evidence makes it a stronger personal lane.",
+      "state_field_status": "proposed"
+    },
+    {
+      "hook_id": "101-known-song",
+      "required_state_fields": [
+        "atlas_state.user_known_song_refs",
+        "atlas_state.survey_positive_candidate_refs"
+      ],
+      "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_14/archetype_101 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_14/archetype_101",
+      "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+      "fallback_copy": "Use the canonical examples to orient Jazz Foundations / Bebop / Hard Bop Gateway before personalizing it.",
+      "state_field_status": "proposed"
+    },
+    {
+      "hook_id": "101-false-nearby-caution",
+      "required_state_fields": [
+        "atlas_state.dead_end_probe_results",
+        "atlas_state.boundary_question_results",
+        "atlas_state.survey_negative_candidate_refs"
+      ],
+      "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_14/archetype_101 || atlas_state.boundary_question_results has boundary_negative for family_14/archetype_101",
+      "copy_variant": "",
+      "fallback_copy": "",
+      "state_field_status": "proposed",
+      "deferred_in_v0_3": true,
+      "defer_reason": "False-nearby caution copy is intentionally deferred in v0.3 pending PM language polish."
+    },
+    {
+      "hook_id": "101-alpha-context",
+      "required_state_fields": [
+        "atlas_state.completed_mission_ids",
+        "atlas_state.active_mission_id",
+        "atlas_state.first_batch_mission_ids",
+        "atlas_state.related_mission_ids"
+      ],
+      "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_14/archetype_101 || atlas_state.related_mission_ids references family_14/archetype_101",
+      "copy_variant": "This road can explain why the active Alpha route points nearby.",
+      "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+      "state_field_status": "proposed"
+    },
+    {
+      "hook_id": "101-saved-or-skipped-object",
+      "required_state_fields": [
+        "atlas_state.user_saved_artist_refs",
+        "atlas_state.user_skipped_artist_refs",
+        "atlas_state.user_disliked_song_refs"
+      ],
+      "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_14/archetype_101 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_14/archetype_101 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_14/archetype_101",
+      "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+      "fallback_copy": "No saved, skipped, or disliked object signal is active for Jazz Foundations / Bebop / Hard Bop Gateway.",
+      "state_field_status": "proposed"
+    }
+  ],
+  "source_claim_refs": [
+    "101-d-01",
+    "101-d-02",
+    "101-d-03",
+    "101-d-04",
+    "101-jazz_foundations_bebop_hard_bop_gateway-boundary",
+    "101-jazz_foundations_bebop_hard_bop_gateway-examples"
+  ],
+  "rights_status": "pass",
+  "rights_notes": "Original Cartenza Atlas educational render copy; no lyrics, long quotations, album art, artist photos, or proprietary third-party prose.",
+  "editorial_status": "visualization_candidate",
+  "non_mutation_assertion": "Render pack is a runtime sidecar only; it does not mutate canonical graph identity.",
+  "alpha_v0_mission_boundary": {
+    "status": "pass",
+    "allowed_terms_used": [
+      "related mission",
+      "what this route tests",
+      "why this region explains the batch",
+      "not in Alpha batch yet",
+      "you may encounter this road later"
+    ],
+    "forbidden_dynamic_mission_language_present": false
+  },
+  "example_ladder": {
+    "framework_version": "0.3",
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "selection_policy": {
+      "scene_description_uses_high_recognition_examples": true,
+      "exact_scene_objects_reused_as_cards": false,
+      "artist_repeat_soft_cap_across_scene_and_cards": 2,
+      "artist_repeat_selection_policy": "Prefer one use per artist across scene and ladder; relax only when a road is too thin to fill Start Here, Next Level, or Go Deep.",
+      "start_here": "additional obvious or high-access anchors after the scene description",
+      "next_level": "obvious stragglers and medium-recognition examples that widen the road",
+      "go_deep": "medium and deep examples that show boundary, lineage, or texture"
+    },
+    "scene_anchor_examples": [
+      {
+        "example_ref": "song|duke ellington|take the a train",
+        "example_type": "song_recording",
+        "display_label": "Take the A Train - Duke Ellington",
+        "artist_display_name": "Duke Ellington",
+        "title": "Take the A Train",
+        "year": 1941,
+        "recognition_band": "obvious",
+        "mission_role": "anchor",
+        "current_graph_candidate_identity_key": "song|duke ellington|take the a train",
+        "current_graph_membership_id": "v1m_05927",
+        "legacy_display_ref": "song_recording:duke-ellington-take-the-a-train",
+        "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+      },
+      {
+        "example_ref": "recording|john coltrane|blue train",
+        "example_type": "song_recording",
+        "display_label": "Blue Train - John Coltrane",
+        "artist_display_name": "John Coltrane",
+        "title": "Blue Train",
+        "year": 1958,
+        "recognition_band": "obvious",
+        "mission_role": "anchor",
+        "current_graph_candidate_identity_key": "recording|john coltrane|blue train",
+        "current_graph_membership_id": "v1m_10811",
+        "legacy_display_ref": "song_recording:john-coltrane-blue-train",
+        "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+      },
+      {
+        "example_ref": "recording|miles davis|all blues",
+        "example_type": "song_recording",
+        "display_label": "All Blues - Miles Davis",
+        "artist_display_name": "Miles Davis",
+        "title": "All Blues",
+        "year": 1959,
+        "recognition_band": "obvious",
+        "mission_role": "anchor",
+        "current_graph_candidate_identity_key": "recording|miles davis|all blues",
+        "current_graph_membership_id": "v1m_10807",
+        "legacy_display_ref": "song_recording:miles-davis-all-blues",
+        "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+      },
+      {
+        "example_ref": "recording|lee morgan|sidewinder",
+        "example_type": "song_recording",
+        "display_label": "The Sidewinder - Lee Morgan",
+        "artist_display_name": "Lee Morgan",
+        "title": "The Sidewinder",
+        "year": 1964,
+        "recognition_band": "obvious",
+        "mission_role": "anchor",
+        "current_graph_candidate_identity_key": "recording|lee morgan|sidewinder",
+        "current_graph_membership_id": "v1m_10828",
+        "legacy_display_ref": "song_recording:lee-morgan-the-sidewinder",
+        "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+      }
+    ],
+    "sections": {
+      "start_here": {
+        "title": "Start Here",
+        "intent": "additional obvious or high-access anchors after the scene description",
+        "items": [
+          {
+            "example_ref": "recording|horace silver|song for my father",
+            "example_type": "song_recording",
+            "display_label": "Song for My Father - Horace Silver",
+            "artist_display_name": "Horace Silver",
+            "title": "Song for My Father",
+            "year": 1965,
+            "recognition_band": "obvious",
+            "mission_role": "anchor",
+            "import_class": "core_graph_playable",
+            "current_graph_candidate_identity_key": "recording|horace silver|song for my father",
+            "current_graph_membership_id": "v1m_10827",
+            "legacy_display_ref": "song_recording:horace-silver-song-for-my-father",
+            "ladder_section": "start_here",
+            "current_graph_why_it_belongs": "Song for My Father is a hummable hard-bop gateway with strong recognition for jazz-curious users.",
+            "why_this_example_matters": "This recording gives the road an accessible reference point beyond the headline landmarks.",
+            "what_to_listen_for": [
+              "improvised solo development",
+              "swing or elastic time",
+              "modal or bebop harmony"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          },
+          {
+            "example_ref": "recording|cannonball adderley|autumn leaves",
+            "example_type": "song_recording",
+            "display_label": "Autumn Leaves - Cannonball Adderley",
+            "artist_display_name": "Cannonball Adderley",
+            "title": "Autumn Leaves",
+            "year": 1958,
+            "recognition_band": "obvious",
+            "mission_role": "bridge",
+            "import_class": "core_graph_playable",
+            "current_graph_candidate_identity_key": "recording|cannonball adderley|autumn leaves",
+            "current_graph_membership_id": "v1m_10821",
+            "legacy_display_ref": "song_recording:cannonball-adderley-autumn-leaves",
+            "ladder_section": "start_here",
+            "current_graph_why_it_belongs": "Cannonball Adderley’s Autumn Leaves gives a highly accessible standard-in-jazz recording for gateway routing.",
+            "why_this_example_matters": "This recording is a nearby doorway into the road: accessible enough to enter quickly, but shaped by an adjacent sound.",
+            "what_to_listen_for": [
+              "swing or elastic time",
+              "modal or bebop harmony",
+              "ensemble call-and-response"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          }
+        ]
+      },
+      "next_level": {
+        "title": "Next Level",
+        "intent": "obvious stragglers and medium-recognition examples that widen the road",
+        "items": [
+          {
+            "example_ref": "song|dave brubeck quartet|take five",
+            "example_type": "song_recording",
+            "display_label": "Take Five - Dave Brubeck Quartet",
+            "artist_display_name": "Dave Brubeck Quartet",
+            "title": "Take Five",
+            "year": 1959,
+            "recognition_band": "obvious",
+            "mission_role": "bridge",
+            "import_class": "core_graph_playable",
+            "current_graph_candidate_identity_key": "song|dave brubeck quartet|take five",
+            "current_graph_membership_id": "v1m_04049",
+            "legacy_display_ref": "song_recording:dave-brubeck-quartet-take-five",
+            "ladder_section": "next_level",
+            "current_graph_why_it_belongs": "Take Five gives 101 a clear song-level tap for recognition, contrast, or branching.",
+            "why_this_example_matters": "This recording widens the road without losing the signal, showing how the sound continues into adjacent territory.",
+            "what_to_listen_for": [
+              "modal or bebop harmony",
+              "ensemble call-and-response",
+              "album-side pacing"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          },
+          {
+            "example_ref": "song|herbie hancock|cantaloupe island",
+            "example_type": "song_recording",
+            "display_label": "Cantaloupe Island - Herbie Hancock",
+            "artist_display_name": "Herbie Hancock",
+            "title": "Cantaloupe Island",
+            "year": 1964,
+            "recognition_band": "obvious",
+            "mission_role": "bridge",
+            "import_class": "core_graph_playable",
+            "current_graph_candidate_identity_key": "song|herbie hancock|cantaloupe island",
+            "current_graph_membership_id": "v1m_04051",
+            "legacy_display_ref": "song_recording:herbie-hancock-cantaloupe-island",
+            "ladder_section": "next_level",
+            "current_graph_why_it_belongs": "Cantaloupe Island gives 101 a clear song-level tap for recognition, contrast, or branching.",
+            "why_this_example_matters": "This recording widens the road without losing the signal, showing how the sound continues into adjacent territory.",
+            "what_to_listen_for": [
+              "ensemble call-and-response",
+              "album-side pacing",
+              "arrangement detail"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          },
+          {
+            "example_ref": "album|stan getz and joao gilberto|getz gilberto",
+            "example_type": "album",
+            "display_label": "Getz/Gilberto - Stan Getz and Joao Gilberto",
+            "artist_display_name": "Stan Getz and Joao Gilberto",
+            "title": "Getz/Gilberto",
+            "year": 1964,
+            "recognition_band": "obvious",
+            "mission_role": "album_world",
+            "import_class": "core_graph_album",
+            "current_graph_candidate_identity_key": "album|stan getz and joao gilberto|getz gilberto",
+            "current_graph_membership_id": "v1m_04097",
+            "legacy_display_ref": "album:stan-getz-and-joao-gilberto-getzgilberto",
+            "ladder_section": "next_level",
+            "current_graph_why_it_belongs": "Getz/Gilberto gives archetype 101 a useful album, cast, soundtrack, live, or compilation gateway.",
+            "why_this_example_matters": "This release tests the road at album scale, broadening the signal beyond the easiest landmarks.",
+            "what_to_listen_for": [
+              "ensemble call-and-response",
+              "album-side pacing",
+              "album-length arc"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          }
+        ]
+      },
+      "go_deep": {
+        "title": "Go Deep",
+        "intent": "medium and deep examples that show boundary, lineage, or texture",
+        "items": [
+          {
+            "example_ref": "recording|eric dolphy|hat and beard",
+            "example_type": "song_recording",
+            "display_label": "Hat and Beard - Eric Dolphy",
+            "artist_display_name": "Eric Dolphy",
+            "title": "Hat and Beard",
+            "year": 1964,
+            "recognition_band": "deep",
+            "mission_role": "false_nearby",
+            "import_class": "false_nearby_candidate",
+            "current_graph_candidate_identity_key": "recording|eric dolphy|hat and beard",
+            "current_graph_membership_id": "v1m_10833",
+            "legacy_display_ref": "song_recording:eric-dolphy-hat-and-beard",
+            "ladder_section": "go_deep",
+            "current_graph_why_it_belongs": "Hat and Beard is a useful false-nearby marker for inaccessible virtuosity and avant-garde pressure.",
+            "why_this_example_matters": "This recording is a more specialized reference point, useful for testing context rather than calling the center.",
+            "what_to_listen_for": [
+              "album-side pacing",
+              "arrangement detail",
+              "era placement"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          },
+          {
+            "example_ref": "recording|pharoah sanders|creator has a master plan",
+            "example_type": "song_recording",
+            "display_label": "The Creator Has a Master Plan - Pharoah Sanders",
+            "artist_display_name": "Pharoah Sanders",
+            "title": "The Creator Has a Master Plan",
+            "year": 1969,
+            "recognition_band": "deep",
+            "mission_role": "false_nearby",
+            "import_class": "false_nearby_candidate",
+            "current_graph_candidate_identity_key": "recording|pharoah sanders|creator has a master plan",
+            "current_graph_membership_id": "v1m_10835",
+            "legacy_display_ref": "song_recording:pharoah-sanders-the-creator-has-a-master-plan",
+            "ladder_section": "go_deep",
+            "current_graph_why_it_belongs": "The Creator Has a Master Plan tests spiritual-jazz sprawl versus gateway jazz patience.",
+            "why_this_example_matters": "This recording is a more specialized reference point, useful for testing context rather than calling the center.",
+            "what_to_listen_for": [
+              "arrangement detail",
+              "era placement",
+              "improvised solo development"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          },
+          {
+            "example_ref": "song|sonny rollins|st thomas",
+            "example_type": "song_recording",
+            "display_label": "St. Thomas - Sonny Rollins",
+            "artist_display_name": "Sonny Rollins",
+            "title": "St. Thomas",
+            "year": 1956,
+            "recognition_band": "medium",
+            "mission_role": "anchor",
+            "import_class": "core_graph_playable",
+            "current_graph_candidate_identity_key": "song|sonny rollins|st thomas",
+            "current_graph_membership_id": "v1m_05932",
+            "legacy_display_ref": "song_recording:sonny-rollins-st-thomas",
+            "ladder_section": "go_deep",
+            "current_graph_why_it_belongs": "Sonny Rollins - St. Thomas gives the archetype a high-signal recognition point for Jazz Foundations / Bebop / Hard Bop Gateway; Jazz standard based on Caribbean folk material; composition lineage matters.",
+            "why_this_example_matters": "This recording gives the road a broader test point, where texture and scene context matter more than instant recognition.",
+            "what_to_listen_for": [
+              "album-side pacing",
+              "arrangement detail",
+              "core sound"
+            ],
+            "graph_ref_validation_status": "validated_in_current_canonical_graph_active_inventory_v1"
+          }
+        ]
+      }
+    },
+    "scene_description": {
+      "compact": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening.",
+      "standard": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening. Duke Ellington's Take the A Train, John Coltrane's Blue Train, Miles Davis' All Blues, and Lee Morgan's The Sidewinder give the scene its high-recognition landmarks.",
+      "deep": "Miles Davis, John Coltrane, Charlie Parker, Thelonious Monk, and peers map jazz from bebop language into hard bop, modal, and album-canon listening. The song form is often a launchpad; the route signal comes from how musicians move through it. Duke Ellington's Take the A Train, John Coltrane's Blue Train, Miles Davis' All Blues, and Lee Morgan's The Sidewinder give the scene its high-recognition landmarks. From there, the examples move from quick recognition toward medium and deeper scene signals."
+    }
+  }
+}

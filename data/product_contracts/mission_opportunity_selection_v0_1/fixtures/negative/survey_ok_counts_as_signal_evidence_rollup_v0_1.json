@@ -1,0 +1,66 @@
+{
+  "contract_version": "evidence_rollup_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "listener_state_id": "negative_survey_ok_counts_as_signal_v0_1",
+  "created_at": "2026-05-28T12:10:00Z",
+  "runtime_listener_evidence_connected": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "reaction_semantics": {
+    "survey_ok_signal_class": "no_signal",
+    "mission_ok_signal_class": "weak_non_failure",
+    "mission_ok_is_positive_preference": false
+  },
+  "evidence_signals": [
+    {
+      "evidence_id": "ev_negative_survey_ok_counts",
+      "source_type": "survey",
+      "raw_signal": "ok",
+      "signal_class": "weak_non_failure",
+      "signal_weight": 0.12,
+      "contributes_to_preference": false,
+      "can_support_non_failure": true,
+      "target_object_ref": {
+        "object_type": "artist",
+        "object_ids": ["artist-negative-survey-ok"],
+        "display_name": "Negative Survey Ok Artist"
+      },
+      "graph_context": {
+        "target_object_ref": {
+          "object_type": "artist",
+          "object_ids": ["artist-negative-survey-ok"],
+          "display_name": "Negative Survey Ok Artist"
+        },
+        "family_ids": ["family_negative"],
+        "family_names": ["Negative Synthetic Family"],
+        "archetype_ids": ["negative_archetype"],
+        "archetype_names": ["Negative Synthetic Archetype"],
+        "artist_ids": ["artist-negative-survey-ok"],
+        "album_ids": [],
+        "song_ids": [],
+        "node_tier": "unknown",
+        "graph_item_role": "unknown",
+        "track_tier_within_archetype": "unknown",
+        "album_tier_within_archetype": "unknown",
+        "artist_tier_within_archetype": "unknown",
+        "context_overlays": [],
+        "risk_flags": [],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_negative_fixture",
+          "source_refs": ["negative:survey_ok_counts"],
+          "synthetic_only": true
+        }
+      },
+      "occurred_at": "2026-05-28T12:10:00Z",
+      "notes": "Invalid by design: survey ok must be ignored."
+    }
+  ],
+  "rollups": {
+    "by_family": [],
+    "by_archetype": [],
+    "by_artist": [],
+    "by_album": [],
+    "by_song": []
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "schema_version": "mission_enrichment_input_v0_2",
+  "runtime_context": {
+    "surface": "mission_card_and_feedback_chips",
+    "mission_ordinal_for_user": 1,
+    "max_secondary_tags_per_song": 6,
+    "copy_mode": "external_alpha",
+    "language_style": "clear_warm_music_literate",
+    "avoid_founder_vocabulary": true
+  },
+  "user_atlas_context_brief": {
+    "confirmed_positive_patterns": [],
+    "open_questions": [
+      {
+        "question_id": "QUESTION_001",
+        "label": "Which basic song traits create the first useful signal?",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "known_boundaries": [],
+    "recent_learning_summary": [],
+    "coverage_notes": [
+      "Low information; keep all language provisional."
+    ]
+  },
+  "mission_context": {
+    "mission_id": "MIS_ENRICH_LOW_INFO_FIRST",
+    "mission_type": "frontier_test",
+    "risk_level": "low",
+    "mission_hypothesis": "Run a cautious first test with broad evidence and no strong assumptions.",
+    "why_this_mission_now": "The user has limited signal, so this route should explore without overclaiming.",
+    "success_definition": "The mission is useful if it produces any clear first boundary or positive pattern."
+  },
+  "route_items": [
+    {
+      "item_id": "ITEM_LOW_01",
+      "canonical_song_recording_id": "song_low_001",
+      "sequence": 1,
+      "title": "First Lantern",
+      "artist": "Open Vale",
+      "year": 2024,
+      "route_role": "probe",
+      "why_included": "Selected as a low-risk first signal check.",
+      "song_affinity_tags": [
+        {
+          "tag": "form_container:clear_shape",
+          "facet": "form_container"
+        },
+        {
+          "tag": "melody_harmony:simple_motif",
+          "facet": "melody_harmony"
+        },
+        {
+          "tag": "energy_profile:moderate_lift",
+          "facet": "energy_profile"
+        }
+      ],
+      "user_alignment_hints": [
+        {
+          "tag": "form_container:clear_shape",
+          "alignment": "tests_open_question"
+        },
+        {
+          "tag": "energy_profile:moderate_lift",
+          "alignment": "frontier_probe"
+        }
+      ],
+      "prefiltered_secondary_tag_ids": [
+        "ENERGY_WORKED",
+        "HOOK_WORKED",
+        "BUILD_WORKED",
+        "MELODY_WORKED",
+        "SURPRISED_ME",
+        "WOULD_TRY_MORE_NEARBY",
+        "GOOD_NOT_CORE",
+        "KEEP_AS_WAYPOINT",
+        "UNSURE_BUT_CURIOUS",
+        "NEEDS_ANOTHER_LISTEN",
+        "INTERESTING_NOT_MINE"
+      ],
+      "applicability_flags": {
+        "has_vocals": true,
+        "has_lyrics": true,
+        "lyrics_language_known": true,
+        "is_instrumental": false,
+        "is_live_or_alt_version": false,
+        "album_context_relevant": false,
+        "long_form_context_relevant": false
+      },
+      "artist_context_available": false
+    }
+  ],
+  "allowed_secondary_reaction_tags": {
+    "BUILD_WORKED": {
+      "tag_id": "BUILD_WORKED",
+      "display_label": "The build worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_dynamic_shape_signal",
+      "allowed_facets": [
+        "dynamic_shape",
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "ENERGY_WORKED": {
+      "tag_id": "ENERGY_WORKED",
+      "display_label": "The energy worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_energy_signal",
+      "allowed_facets": [
+        "energy_profile",
+        "rhythm_body"
+      ]
+    },
+    "GOOD_NOT_CORE": {
+      "tag_id": "GOOD_NOT_CORE",
+      "display_label": "Good, not core",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_waypoint_not_landmark",
+      "allowed_facets": []
+    },
+    "HOOK_WORKED": {
+      "tag_id": "HOOK_WORKED",
+      "display_label": "The hook worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_songcraft_signal",
+      "allowed_facets": [
+        "form_container",
+        "melody_harmony"
+      ]
+    },
+    "INTERESTING_NOT_MINE": {
+      "tag_id": "INTERESTING_NOT_MINE",
+      "display_label": "Interesting, not mine",
+      "valid_primary_reactions": [
+        "ok",
+        "dislike"
+      ],
+      "atlas_effect": "mark_boundary_or_low_appetite",
+      "allowed_facets": []
+    },
+    "KEEP_AS_WAYPOINT": {
+      "tag_id": "KEEP_AS_WAYPOINT",
+      "display_label": "Keep as waypoint",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "preserve_as_navigation_reference",
+      "allowed_facets": []
+    },
+    "MELODY_WORKED": {
+      "tag_id": "MELODY_WORKED",
+      "display_label": "The melody worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_melody_signal",
+      "allowed_facets": [
+        "melody_harmony"
+      ]
+    },
+    "NEEDS_ANOTHER_LISTEN": {
+      "tag_id": "NEEDS_ANOTHER_LISTEN",
+      "display_label": "Needs another listen",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_uncertain_repeat_test",
+      "allowed_facets": []
+    },
+    "SURPRISED_ME": {
+      "tag_id": "SURPRISED_ME",
+      "display_label": "This surprised me",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_or_strengthen_novelty_signal",
+      "allowed_facets": []
+    },
+    "UNSURE_BUT_CURIOUS": {
+      "tag_id": "UNSURE_BUT_CURIOUS",
+      "display_label": "Unsure, but curious",
+      "valid_primary_reactions": [
+        "ok",
+        "like"
+      ],
+      "atlas_effect": "open_frontier_with_uncertainty",
+      "allowed_facets": []
+    },
+    "WOULD_TRY_MORE_NEARBY": {
+      "tag_id": "WOULD_TRY_MORE_NEARBY",
+      "display_label": "I'd try more nearby",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_nearby_exploration",
+      "allowed_facets": []
+    }
+  },
+  "copy_guardrails": [
+    "Do not change mission or song list.",
+    "Use only allowed secondary tag IDs.",
+    "Do not invent artists, songs, genres, user history, tags, or affinity facts.",
+    "Do not use raw graph IDs in display copy.",
+    "Do not expose raw affinity tags as chip labels.",
+    "Do not claim final taste truth.",
+    "Do not use founder-specific language.",
+    "Do not assume rock, guitar music, vocals, lyrics, albums, English-language music, or advanced music knowledge.",
+    "Treat all context as provisional."
+  ]
+}

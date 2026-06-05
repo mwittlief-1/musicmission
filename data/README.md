@@ -19,7 +19,8 @@ These paths are repo source-of-truth and should be tracked when changed intentio
 | `data/atlas_schema/alpha_hardening/` | Active alpha hardening contracts and acceptance material. |
 | `data/atlas_explainer/atlas_explainer_render_pack_runtime_schema_v0_1_1.*` | Runtime schema contract for app-facing Atlas explainer render packs. |
 | `data/atlas_explainer/source_recovery_research_notes/` | Curated source-recovery provenance used by the Atlas explainer builder chain. |
-| `data/atlas_explainer/AtlasExplainerPack_v0_2_3_RenderHardened/` | Latest alpha render-hardened Atlas explainer candidate handoff. Track as first-class product data while PM approval is pending. |
+| `data/atlas_explainer/AtlasExplainerPack_v0_2_3_RenderHardened/` | Source predecessor for the approved v0.3 Atlas explainer package. Keep tracked for lineage and rebuildability. |
+| `data/atlas_explainer/AtlasExplainerPack_v0_3_ProfileLadders/` | PM-approved Alpha production Atlas explainer package. Track as first-class product data; app-bundled export is `MusicAtlasController/Resources/atlas_explainer_render_packs_v0_3.json`. |
 | `data/alpha_consumable_layer/alpha_v0/*contract*`, `*policy*`, `*guardrail*`, `*manifest*`, `*.schema.json`, and paired `*.md` contract docs | Alpha graph surface contracts, guardrails, resolver policy, and manifests. |
 | `data/canonical_graph/family_*/` | Canonical graph family source material. |
 | `data/canonical_graph/current/` | Active Canonical Graph v1 source-of-truth corpus for mission engine, tagging, linking, Atlas targets, Apple ID resolution, album sidecar planning, and album track sidecar resources. |

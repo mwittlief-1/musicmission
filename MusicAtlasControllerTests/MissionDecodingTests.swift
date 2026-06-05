@@ -813,6 +813,79 @@ final class MissionDecodingTests: XCTestCase {
         XCTAssertNotNil(persistedLibrary.sessionsByMissionID[selectedMissionID])
     }
 
+    @MainActor
+    func testAppModelRegeneratesMissionsFromCurrentSurveyThroughMissionClient() async throws {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("cartenza_manual_regeneration_tests", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let surveyPersistenceStore = SurveyPersistenceStore(baseDirectoryURL: tempDirectory)
+        let surveyStore = SurveyStore(persistenceStore: surveyPersistenceStore)
+        surveyStore.prepareRequiredAlphaIntake()
+        surveyStore.goTo(.artistPage1)
+        let surveyItem = try XCTUnwrap(surveyStore.currentPage?.items.first)
+        surveyStore.setState(.favorite, for: surveyItem)
+
+        let provider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+        let sessionPersistenceStore = SessionPersistenceStore(baseDirectoryURL: tempDirectory)
+        let oldMission = try loadSampleMission()
+        try provider.importReviewedMissionData(
+            try JSONEncoder.missionTestEncoder.encode(oldMission),
+            source: .manualReviewed
+        )
+
+        let regeneratedResponses = try (1...AlphaMissionGenerationConfig.requiredMissionCount).map { index in
+            let mission = try loadMissionFromData(
+                try makeMissionDataWithIdentitySuffix(
+                    oldMission,
+                    suffix: String(format: "%02d", index)
+                )
+            )
+            return try JSONEncoder.missionTestEncoder.encode(
+                TestGenerationResponse(
+                    run_id: "run_regenerated_\(index)",
+                    status: "app_import_candidate",
+                    app_missions: [mission]
+                )
+            )
+        }
+        let client = RecordingMissionGenerationClient(responses: regeneratedResponses)
+        let appModel = AppModel(
+            sessionPersistenceStore: sessionPersistenceStore,
+            missionProvider: provider,
+            supabaseConfig: SupabaseAlphaConfig(
+                projectURL: try XCTUnwrap(URL(string: "https://example.supabase.co")),
+                anonKey: "anon.jwt",
+                generateFirstMissionBatchFunctionName: "generate-first-mission-batch",
+                submitAlphaEvidenceFunctionName: "submit-alpha-evidence",
+                submitAlphaDiagnosticFunctionName: "submit-alpha-diagnostic",
+                testerAlias: "trusted-alpha-test"
+            ),
+            missionGenerationClient: client,
+            surveyEvidenceBuilder: SurveyEvidenceExportBuilder(persistenceStore: surveyPersistenceStore)
+        )
+        appModel.loadMissionLibrary()
+        XCTAssertEqual(appModel.availableMissions.map(\.missionID), [oldMission.missionID])
+
+        let didRegenerate = await appModel.regenerateMissionBatchFromCurrentSurvey()
+
+        XCTAssertTrue(didRegenerate)
+        XCTAssertEqual(client.requests.count, AlphaMissionGenerationConfig.requiredMissionCount)
+        XCTAssertEqual(appModel.reviewedMissionAssignmentCount, AlphaMissionGenerationConfig.requiredMissionCount)
+        XCTAssertFalse(appModel.availableMissions.contains { $0.missionID == oldMission.missionID })
+        XCTAssertTrue(appModel.availableMissions.allSatisfy { $0.missionID.hasPrefix("MIS_REGENERATED_ALPHA_") })
+        XCTAssertEqual(appModel.firstMissionGenerationState, .loaded)
+        XCTAssertEqual(appModel.firstMissionGenerationProgress.completedCount, AlphaMissionGenerationConfig.requiredMissionCount)
+        XCTAssertEqual(client.requests[1].alreadySelectedRouteItemIDs.count, oldMission.items.count)
+        XCTAssertEqual(client.requests[1].promptContext.alreadySelectedDisplayKeys.count, oldMission.items.count)
+        XCTAssertNotNil(sessionPersistenceStore.load().activeMissionID)
+    }
+
     func testBlockedAlphaFixtureItemCannotImportAsPlaybackReady() throws {
         let candidateData = try loadAlphaMissionDeliveryFixture("approved_app_import_candidates_v0_2")
         let blockedData = try makeBlockedAlphaFixtureData(from: candidateData)
@@ -983,6 +1056,35 @@ private func makeMissionDataWithFirstItemRouteIdentity(
     return try JSONSerialization.data(withJSONObject: object)
 }
 
+private func makeMissionDataWithIdentitySuffix(_ mission: Mission, suffix: String) throws -> Data {
+    let data = try JSONEncoder.missionTestEncoder.encode(mission)
+    guard var object = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+          var items = object["items"] as? [[String: Any]] else {
+        throw TestResourceError.malformedMissionJSON
+    }
+
+    let normalizedSuffix = suffix
+        .uppercased()
+        .components(separatedBy: CharacterSet.alphanumerics.inverted)
+        .filter { !$0.isEmpty }
+        .joined(separator: "_")
+    object["mission_id"] = "MIS_REGENERATED_ALPHA_\(normalizedSuffix)"
+    object["mission_title"] = "Regenerated Alpha \(normalizedSuffix)"
+
+    for index in items.indices {
+        let itemNumber = index + 1
+        items[index]["item_id"] = "ITEM_REGENERATED_ALPHA_\(normalizedSuffix)_\(itemNumber)"
+        items[index]["title"] = "\(items[index]["title"] as? String ?? "Route Item") \(normalizedSuffix)"
+        items[index]["candidate_id"] = "candidate_regenerated_alpha_\(suffix)_\(itemNumber)"
+        items[index]["route_candidate_key"] = "route:regenerated:\(suffix):\(itemNumber)"
+        items[index]["route_batch_dedupe_key"] = "song_recording:regenerated:\(suffix):\(itemNumber)"
+        items[index]["route_display_identity_key"] = "track:regenerated-\(suffix)-\(itemNumber)"
+    }
+
+    object["items"] = items
+    return try JSONSerialization.data(withJSONObject: object)
+}
+
 private func makeMissionDataWithDuplicateDisplayIdentity(_ mission: Mission) throws -> Data {
     let data = try JSONEncoder.missionTestEncoder.encode(mission)
     guard var object = try JSONSerialization.jsonObject(with: data) as? [String: Any],
@@ -1015,6 +1117,23 @@ private struct TestGenerationResponse: Encodable {
     let run_id: String?
     let status: String
     let app_missions: [Mission]
+}
+
+private final class RecordingMissionGenerationClient: MissionGenerationClient {
+    private var responses: [Data]
+    private(set) var requests: [MissionGenerationRequest] = []
+
+    init(responses: [Data]) {
+        self.responses = responses
+    }
+
+    func generateFirstMissionBatch(request: MissionGenerationRequest, accessToken: String) async throws -> Data {
+        requests.append(request)
+        guard !responses.isEmpty else {
+            throw TestResourceError.missingGenerationResponse
+        }
+        return responses.removeFirst()
+    }
 }
 
 private extension JSONEncoder {
@@ -1070,4 +1189,5 @@ private final class TestBundleMarker {}
 private enum TestResourceError: Error {
     case missingSampleMission
     case malformedMissionJSON
+    case missingGenerationResponse
 }

@@ -206,6 +206,11 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
         var usedDisplayKeys = Set<String>()
         var familyCounts: [Int: Int] = [:]
         var archetypeCounts: [String: Int] = [:]
+        var repetitionGovernor = AlphaSurveyRepetitionGovernor(
+            kind: descriptor.kind,
+            priorCandidates: priorCandidates,
+            candidatesByItemID: candidatesByItemID
+        )
         let limit = SurveyFixtureLibrary.gridPageItemLimit
 
         func canAdd(_ scored: AlphaScoredSurveyCandidate, strict: Bool) -> Bool {
@@ -213,6 +218,9 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
             guard selected.count < limit,
                   !usedItemIDs.contains(candidate.itemID),
                   !usedDisplayKeys.contains(candidate.displayKey) else {
+                return false
+            }
+            guard repetitionGovernor.canAdd(candidate) else {
                 return false
             }
             guard strict else {
@@ -237,6 +245,7 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
             for archetypeID in scored.candidate.archetypeIDs {
                 archetypeCounts[archetypeID, default: 0] += 1
             }
+            repetitionGovernor.record(scored.candidate)
         }
 
         for scored in reservedCandidates(for: descriptor, scored: scored) where canAdd(scored, strict: false) {
@@ -317,7 +326,16 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
             return policyPageSlice(batch: batch, fallback: availableScored, priorCandidates: priorCandidates)
         case (.album, 1), (.album, 2):
             let batch = albumPolicyBatch(scored: baseScored, responses: responses, displayedPages: displayedPages)
-            return policyPageSlice(batch: batch, fallback: availableScored, priorCandidates: priorCandidates)
+            return policyPageSlice(
+                batch: batch,
+                fallback: availableScored,
+                priorCandidates: priorCandidates,
+                repetitionGovernor: AlphaSurveyRepetitionGovernor(
+                    kind: descriptor.kind,
+                    priorCandidates: priorCandidates,
+                    candidatesByItemID: candidatesByItemID
+                )
+            )
         case (.song, _):
             return songPolicyPage(
                 descriptor: descriptor,
@@ -335,17 +353,20 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
     private func policyPageSlice(
         batch: [AlphaScoredSurveyCandidate],
         fallback: [AlphaScoredSurveyCandidate],
-        priorCandidates: AlphaPriorVisibleCandidates
+        priorCandidates: AlphaPriorVisibleCandidates,
+        repetitionGovernor: AlphaSurveyRepetitionGovernor? = nil
     ) -> [AlphaScoredSurveyCandidate] {
         var selected = [AlphaScoredSurveyCandidate]()
         var usedItemIDs = Set<String>()
         var usedDisplayKeys = Set<String>()
+        var repetitionGovernor = repetitionGovernor
 
         func canUse(_ scored: AlphaScoredSurveyCandidate) -> Bool {
             !priorCandidates.itemIDs.contains(scored.candidate.itemID) &&
                 !priorCandidates.displayKeys.contains(scored.candidate.displayKey) &&
                 !usedItemIDs.contains(scored.candidate.itemID) &&
-                !usedDisplayKeys.contains(scored.candidate.displayKey)
+                !usedDisplayKeys.contains(scored.candidate.displayKey) &&
+                (repetitionGovernor?.canAdd(scored.candidate) ?? true)
         }
 
         func append(_ candidates: [AlphaScoredSurveyCandidate]) {
@@ -353,6 +374,7 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
                 selected.append(scored)
                 usedItemIDs.insert(scored.candidate.itemID)
                 usedDisplayKeys.insert(scored.candidate.displayKey)
+                repetitionGovernor?.record(scored.candidate)
             }
         }
 
@@ -687,6 +709,18 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
             }
         }
 
+        let directAppleAlbums = albumScored
+            .filter { appleEvidence.topDirectStrength(for: $0.candidate) > 0 }
+            .sorted { lhs, rhs in
+                let lhsStrength = appleEvidence.topDirectStrength(for: lhs.candidate)
+                let rhsStrength = appleEvidence.topDirectStrength(for: rhs.candidate)
+                if lhsStrength != rhsStrength {
+                    return lhsStrength > rhsStrength
+                }
+                return canonicalRecognitionSort(lhs, rhs)
+            }
+        appendUnique(directAppleAlbums, limit: 6)
+
         let positiveAlbums = albumScored
             .filter { !$0.candidate.artistNames.isDisjoint(with: positiveArtistKeys) }
             .sorted { lhs, rhs in
@@ -761,7 +795,22 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
             appendUnique(fallback, limit: 24 - result.count)
         }
 
-        return stableShuffle(result.prefix(24).map { $0 }, seed: "album-policy-v0-3")
+        let cappedResult = result.prefix(24).map { $0 }
+        let directAlbums = cappedResult
+            .filter { appleEvidence.topDirectStrength(for: $0.candidate) > 0 }
+            .sorted { lhs, rhs in
+                let lhsStrength = appleEvidence.topDirectStrength(for: lhs.candidate)
+                let rhsStrength = appleEvidence.topDirectStrength(for: rhs.candidate)
+                if lhsStrength != rhsStrength {
+                    return lhsStrength > rhsStrength
+                }
+                return canonicalRecognitionSort(lhs, rhs)
+            }
+        let indirectAlbums = stableShuffle(
+            cappedResult.filter { appleEvidence.topDirectStrength(for: $0.candidate) <= 0 },
+            seed: "album-policy-v0-3"
+        )
+        return directAlbums + indirectAlbums
     }
 
     private func songPolicyPage(
@@ -806,11 +855,17 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
         var selected = [AlphaScoredSurveyCandidate]()
         var usedItemIDs = Set<String>()
         var usedDisplayKeys = Set<String>()
+        var repetitionGovernor = AlphaSurveyRepetitionGovernor(
+            kind: descriptor.kind,
+            priorCandidates: priorCandidates,
+            candidatesByItemID: candidatesByItemID
+        )
 
         func allowed(_ candidate: AlphaSurveyRuntimeCandidate, tiers: Set<String>?) -> Bool {
             guard !candidate.archetypeIDs.isDisjoint(with: allowedArchetypes),
                   usedItemIDs.contains(candidate.itemID) == false,
-                  usedDisplayKeys.contains(candidate.displayKey) == false else {
+                  usedDisplayKeys.contains(candidate.displayKey) == false,
+                  repetitionGovernor.canAdd(candidate) else {
                 return false
             }
             if descriptor.pageNumber == 3,
@@ -825,11 +880,16 @@ final class AlphaDynamicSurveyPageProvider: SurveyPageProviding {
 
         func appendUnique(_ candidates: [AlphaScoredSurveyCandidate], targetCount: Int) {
             for scored in candidates where selected.count < targetCount {
-                guard usedItemIDs.insert(scored.candidate.itemID).inserted,
-                      usedDisplayKeys.insert(scored.candidate.displayKey).inserted else {
+                let candidate = scored.candidate
+                guard !usedItemIDs.contains(candidate.itemID),
+                      !usedDisplayKeys.contains(candidate.displayKey),
+                      repetitionGovernor.canAdd(candidate) else {
                     continue
                 }
+                usedItemIDs.insert(candidate.itemID)
+                usedDisplayKeys.insert(candidate.displayKey)
                 selected.append(scored)
+                repetitionGovernor.record(candidate)
             }
         }
 
@@ -1912,6 +1972,71 @@ private struct AlphaScoredSurveyCandidate: Comparable {
 private struct AlphaPriorVisibleCandidates {
     var itemIDs = Set<String>()
     var displayKeys = Set<String>()
+}
+
+private struct AlphaSurveyRepetitionGovernor {
+    private var artistCounts = [String: Int]()
+    private var archetypeCounts = [String: Int]()
+    private let kind: SurveyItemKind
+    private let maxArtistCount: Int?
+    private let maxArchetypeCount: Int?
+
+    init(
+        kind: SurveyItemKind,
+        priorCandidates: AlphaPriorVisibleCandidates,
+        candidatesByItemID: [String: AlphaSurveyRuntimeCandidate]
+    ) {
+        self.kind = kind
+        switch kind {
+        case .album:
+            maxArtistCount = 2
+            maxArchetypeCount = nil
+        case .song:
+            maxArtistCount = 3
+            maxArchetypeCount = 6
+        case .artist:
+            maxArtistCount = nil
+            maxArchetypeCount = nil
+        }
+
+        for itemID in priorCandidates.itemIDs.sorted() {
+            guard let candidate = candidatesByItemID[itemID] else {
+                continue
+            }
+            record(candidate)
+        }
+    }
+
+    func canAdd(_ candidate: AlphaSurveyRuntimeCandidate) -> Bool {
+        guard candidate.kind == kind else {
+            return false
+        }
+        if let maxArtistCount,
+           candidate.artistNames.contains(where: { (artistCounts[$0] ?? 0) >= maxArtistCount }) {
+            return false
+        }
+        if let maxArchetypeCount,
+           candidate.archetypeIDs.contains(where: { (archetypeCounts[$0] ?? 0) >= maxArchetypeCount }) {
+            return false
+        }
+        return true
+    }
+
+    mutating func record(_ candidate: AlphaSurveyRuntimeCandidate) {
+        guard candidate.kind == kind else {
+            return
+        }
+        if maxArtistCount != nil {
+            for artistName in candidate.artistNames {
+                artistCounts[artistName, default: 0] += 1
+            }
+        }
+        if maxArchetypeCount != nil {
+            for archetypeID in candidate.archetypeIDs {
+                archetypeCounts[archetypeID, default: 0] += 1
+            }
+        }
+    }
 }
 
 private struct AlphaResponseRelevance {

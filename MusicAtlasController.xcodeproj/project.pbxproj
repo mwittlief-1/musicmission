@@ -75,6 +75,14 @@
 		10000000000000000000004A /* app_import_ready_alpha_uat_fixtures_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000013E /* app_import_ready_alpha_uat_fixtures_v0_2.json */; };
 		10000000000000000000004B /* canonical_song_affinity_tags_v0_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000013F /* canonical_song_affinity_tags_v0_1.json */; };
 		10000000000000000000004C /* canonical_song_affinity_tags_v0_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000013F /* canonical_song_affinity_tags_v0_1.json */; };
+		10000000000000000000004D /* AtlasHomeReadout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000140 /* AtlasHomeReadout.swift */; };
+		10000000000000000000004E /* AtlasHomeReadoutStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000141 /* AtlasHomeReadoutStore.swift */; };
+		10000000000000000000004F /* AtlasHomeReadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000142 /* AtlasHomeReadoutView.swift */; };
+		100000000000000000000050 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000143 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json */; };
+		100000000000000000000051 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000143 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json */; };
+		100000000000000000000052 /* AtlasHomeReadoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000144 /* AtlasHomeReadoutTests.swift */; };
+		100000000000000000000053 /* atlas_explainer_render_packs_v0_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000145 /* atlas_explainer_render_packs_v0_3.json */; };
+		100000000000000000000054 /* atlas_explainer_render_packs_v0_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000145 /* atlas_explainer_render_packs_v0_3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +155,12 @@
 		10000000000000000000013D /* approved_alpha_app_import_candidates_v0_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = approved_alpha_app_import_candidates_v0_2.json; sourceTree = "<group>"; };
 		10000000000000000000013E /* app_import_ready_alpha_uat_fixtures_v0_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = app_import_ready_alpha_uat_fixtures_v0_2.json; sourceTree = "<group>"; };
 		10000000000000000000013F /* canonical_song_affinity_tags_v0_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = canonical_song_affinity_tags_v0_1.json; sourceTree = "<group>"; };
+		100000000000000000000140 /* AtlasHomeReadout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasHomeReadout.swift; sourceTree = "<group>"; };
+		100000000000000000000141 /* AtlasHomeReadoutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasHomeReadoutStore.swift; sourceTree = "<group>"; };
+		100000000000000000000142 /* AtlasHomeReadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasHomeReadoutView.swift; sourceTree = "<group>"; };
+		100000000000000000000143 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = atlas_home_what_were_seeing_so_far_fixture_v0_2.json; sourceTree = "<group>"; };
+		100000000000000000000144 /* AtlasHomeReadoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasHomeReadoutTests.swift; sourceTree = "<group>"; };
+		100000000000000000000145 /* atlas_explainer_render_packs_v0_3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = atlas_explainer_render_packs_v0_3.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +220,7 @@
 				100000000000000000000104 /* ReactionSession.swift */,
 				10000000000000000000011F /* Survey.swift */,
 				100000000000000000000124 /* AppleMusicSignalPayload.swift */,
+				100000000000000000000140 /* AtlasHomeReadout.swift */,
 				100000000000000000000137 /* AtlasExplainerModels.swift */,
 				10000000000000000000013C /* AlphaAppImportMissionPayload.swift */,
 			);
@@ -219,6 +234,7 @@
 				100000000000000000000106 /* MusicAuthorizationService.swift */,
 				100000000000000000000114 /* MusicSearchService.swift */,
 				100000000000000000000135 /* CanonicalAppleMusicCatalogIndex.swift */,
+				100000000000000000000141 /* AtlasHomeReadoutStore.swift */,
 				100000000000000000000138 /* AtlasExplainerStore.swift */,
 				10000000000000000000011A /* MusicPlaybackService.swift */,
 				100000000000000000000115 /* ReactionStore.swift */,
@@ -238,6 +254,7 @@
 			children = (
 				100000000000000000000107 /* RootView.swift */,
 				100000000000000000000134 /* CartenzaBrandMark.swift */,
+				100000000000000000000142 /* AtlasHomeReadoutView.swift */,
 				100000000000000000000139 /* AtlasExplainerView.swift */,
 				100000000000000000000108 /* MissionListView.swift */,
 				100000000000000000000109 /* MissionDetailView.swift */,
@@ -264,6 +281,8 @@
 				100000000000000000000132 /* canonical_song_recordings.json */,
 				10000000000000000000013F /* canonical_song_affinity_tags_v0_1.json */,
 				100000000000000000000136 /* canonical_apple_music_catalog_index_v1.json */,
+				100000000000000000000143 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json */,
+				100000000000000000000145 /* atlas_explainer_render_packs_v0_3.json */,
 				10000000000000000000013A /* atlas_explainer_render_packs_v0_2_3.json */,
 				10000000000000000000013D /* approved_alpha_app_import_candidates_v0_2.json */,
 				10000000000000000000013E /* app_import_ready_alpha_uat_fixtures_v0_2.json */,
@@ -291,6 +310,7 @@
 				100000000000000000000118 /* SessionExporterTests.swift */,
 				100000000000000000000123 /* SurveyTests.swift */,
 				10000000000000000000013B /* AtlasExplainerTests.swift */,
+				100000000000000000000144 /* AtlasHomeReadoutTests.swift */,
 				10000000000000000000030A /* Fixtures */,
 			);
 			path = MusicAtlasControllerTests;
@@ -314,6 +334,7 @@
 				100000000000000000000501 /* Sources */,
 				100000000000000000000201 /* Frameworks */,
 				100000000000000000000502 /* Resources */,
+				100000000000000000000505 /* Strip App Bundle Extended Attributes */,
 			);
 			buildRules = (
 			);
@@ -394,6 +415,8 @@
 				100000000000000000000033 /* canonical_song_recordings.json in Resources */,
 				10000000000000000000004B /* canonical_song_affinity_tags_v0_1.json in Resources */,
 				10000000000000000000003E /* canonical_apple_music_catalog_index_v1.json in Resources */,
+				100000000000000000000050 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json in Resources */,
+				100000000000000000000053 /* atlas_explainer_render_packs_v0_3.json in Resources */,
 				100000000000000000000043 /* atlas_explainer_render_packs_v0_2_3.json in Resources */,
 				100000000000000000000047 /* approved_alpha_app_import_candidates_v0_2.json in Resources */,
 				100000000000000000000049 /* app_import_ready_alpha_uat_fixtures_v0_2.json in Resources */,
@@ -418,6 +441,8 @@
 				100000000000000000000039 /* canonical_song_recordings.json in Resources */,
 				10000000000000000000004C /* canonical_song_affinity_tags_v0_1.json in Resources */,
 				10000000000000000000003F /* canonical_apple_music_catalog_index_v1.json in Resources */,
+				100000000000000000000051 /* atlas_home_what_were_seeing_so_far_fixture_v0_2.json in Resources */,
+				100000000000000000000054 /* atlas_explainer_render_packs_v0_3.json in Resources */,
 				100000000000000000000044 /* atlas_explainer_render_packs_v0_2_3.json in Resources */,
 				100000000000000000000048 /* approved_alpha_app_import_candidates_v0_2.json in Resources */,
 				10000000000000000000004A /* app_import_ready_alpha_uat_fixtures_v0_2.json in Resources */,
@@ -427,6 +452,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		100000000000000000000505 /* Strip App Bundle Extended Attributes */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(WRAPPER_NAME)",
+			);
+			name = "Strip App Bundle Extended Attributes";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "app_bundle=\"${CODESIGNING_FOLDER_PATH:-${TARGET_BUILD_DIR}/${WRAPPER_NAME}}\"\nif [ -d \"${app_bundle}\" ]; then\n  /usr/bin/xattr -cr \"${app_bundle}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		100000000000000000000501 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -434,6 +482,7 @@
 			files = (
 				100000000000000000000001 /* MusicAtlasControllerApp.swift in Sources */,
 				100000000000000000000002 /* AppModel.swift in Sources */,
+				10000000000000000000004D /* AtlasHomeReadout.swift in Sources */,
 				100000000000000000000040 /* AtlasExplainerModels.swift in Sources */,
 				100000000000000000000046 /* AlphaAppImportMissionPayload.swift in Sources */,
 				100000000000000000000003 /* Mission.swift in Sources */,
@@ -452,6 +501,7 @@
 				10000000000000000000000D /* ExportPreviewView.swift in Sources */,
 				100000000000000000000011 /* MusicSearchService.swift in Sources */,
 				10000000000000000000003D /* CanonicalAppleMusicCatalogIndex.swift in Sources */,
+				10000000000000000000004E /* AtlasHomeReadoutStore.swift in Sources */,
 				100000000000000000000041 /* AtlasExplainerStore.swift in Sources */,
 				100000000000000000000017 /* MusicPlaybackService.swift in Sources */,
 				100000000000000000000012 /* ReactionStore.swift in Sources */,
@@ -465,6 +515,7 @@
 				100000000000000000000023 /* AppleMusicSignalPayload.swift in Sources */,
 				100000000000000000000024 /* AppleMusicSignalProbeService.swift in Sources */,
 				100000000000000000000025 /* AppleMusicSignalProbeView.swift in Sources */,
+				10000000000000000000004F /* AtlasHomeReadoutView.swift in Sources */,
 				100000000000000000000026 /* SurveyArtworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +528,7 @@
 				100000000000000000000015 /* SessionExporterTests.swift in Sources */,
 				100000000000000000000022 /* SurveyTests.swift in Sources */,
 				100000000000000000000045 /* AtlasExplainerTests.swift in Sources */,
+				100000000000000000000052 /* AtlasHomeReadoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,9 +667,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CARTENZA_SUPABASE_ANON_KEY = "$(WAYMARK_SUPABASE_ANON_KEY)";
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7XQQ46X8QQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MusicAtlasController/Support/Info.plist;
@@ -645,9 +698,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CARTENZA_SUPABASE_ANON_KEY = "$(WAYMARK_SUPABASE_ANON_KEY)";
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7XQQ46X8QQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MusicAtlasController/Support/Info.plist;
@@ -672,7 +726,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 53;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -695,7 +749,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 53;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

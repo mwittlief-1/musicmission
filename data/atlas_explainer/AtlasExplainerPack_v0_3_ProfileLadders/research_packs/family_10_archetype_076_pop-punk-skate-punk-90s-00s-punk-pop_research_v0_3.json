@@ -1,0 +1,1436 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_10_archetype_076_pop-punk-skate-punk-90s-00s-punk-pop_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_10/normalized_family_10.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 10,
+    "family_slug": "alternative-indie-grunge-emo",
+    "family_name": "Alternative, Indie, Grunge, Emo",
+    "archetype_id": "076",
+    "archetype_slug": "pop-punk-skate-punk-90s-00s-punk-pop",
+    "canonical_graph_ref": "family_10/archetype_076",
+    "existing_graph_label_name": "Pop-Punk / Skate Punk / 90s-00s Punk Pop",
+    "editorial_display_title": "Pop-Punk / Skate Punk / 90s-00s Punk Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:green-day",
+        "object_id": "green-day",
+        "display_label": "Green Day",
+        "source_membership_id": "family-10-artist-076-green-day",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Primary pop-punk/skate-punk-to-mainstream anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:blink-182",
+        "object_id": "blink-182",
+        "display_label": "Blink-182",
+        "source_membership_id": "family-10-artist-076-blink-182",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-90s/00s pop-punk mass anchor and mall-punk grammar object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-offspring",
+        "object_id": "the-offspring",
+        "display_label": "The Offspring",
+        "source_membership_id": "family-10-artist-076-the-offspring",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Major 90s punk-pop radio gateway and normal-user anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:rancid",
+        "object_id": "rancid",
+        "display_label": "Rancid",
+        "source_membership_id": "family-10-artist-076-rancid",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious punk revival/skate-adjacent bridge from underground credibility to alt recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:new-found-glory",
+        "object_id": "new-found-glory",
+        "display_label": "New Found Glory",
+        "source_membership_id": "family-10-artist-076-new-found-glory",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious 00s pop-punk bridge into mall emo and Warped Tour listening.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nofx",
+        "object_id": "nofx",
+        "display_label": "NOFX",
+        "source_membership_id": "family-10-artist-076-nofx",
+        "roles": [
+          "bridge",
+          "deepening",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Skate-punk scene anchor with credibility beyond mainstream radio.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:sum-41",
+        "object_id": "sum-41",
+        "display_label": "Sum 41",
+        "source_membership_id": "family-10-artist-076-sum-41",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "00s punk-pop/alt-metal teen gateway with strong song memory.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:green-day-dookie",
+        "object_id": "green-day-dookie",
+        "display_label": "Dookie - Green Day",
+        "source_membership_id": "family-10-album-076-green-day-dookie",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-punk mainstream-break album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:green-day-american-idiot",
+        "object_id": "green-day-american-idiot",
+        "display_label": "American Idiot - Green Day",
+        "source_membership_id": "family-10-album-076-green-day-american-idiot",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "2000s rock-opera pop-punk/alt-rock album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:blink-182-enema-of-the-state",
+        "object_id": "blink-182-enema-of-the-state",
+        "display_label": "Enema of the State - Blink-182",
+        "source_membership_id": "family-10-album-076-blink-182-enema-of-the-state",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-90s pop-punk mass anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-offspring-smash",
+        "object_id": "the-offspring-smash",
+        "display_label": "Smash - The Offspring",
+        "source_membership_id": "family-10-album-076-the-offspring-smash",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Independent-label pop-punk/alt breakthrough album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sum-41-all-killer-no-filler",
+        "object_id": "sum-41-all-killer-no-filler",
+        "display_label": "All Killer No Filler - Sum 41",
+        "source_membership_id": "family-10-album-076-sum-41-all-killer-no-filler",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "00s mall/skate-punk gateway album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:rancid-and-out-come-the-wolves",
+        "object_id": "rancid-and-out-come-the-wolves",
+        "display_label": "...And Out Come the Wolves - Rancid",
+        "source_membership_id": "family-10-album-076-rancid-and-out-come-the-wolves",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Punk revival/ska-punk bridge album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:nofx-punk-in-drublic",
+        "object_id": "nofx-punk-in-drublic",
+        "display_label": "Punk in Drublic - NOFX",
+        "source_membership_id": "family-10-album-076-nofx-punk-in-drublic",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Skate-punk scene album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:green-day-basket-case",
+        "object_id": "green-day-basket-case",
+        "display_label": "Basket Case - Green Day",
+        "source_membership_id": "family-10-song-076-green-day-basket-case",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-punk mainstream-break song anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:green-day-american-idiot",
+        "object_id": "green-day-american-idiot",
+        "display_label": "American Idiot - Green Day",
+        "source_membership_id": "family-10-song-076-green-day-american-idiot",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "2000s Green Day rock-opera/punk-pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:blink-182-all-the-small-things",
+        "object_id": "blink-182-all-the-small-things",
+        "display_label": "All the Small Things - Blink-182",
+        "source_membership_id": "family-10-song-076-blink-182-all-the-small-things",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Blink-182 mass pop-punk song anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:green-day-when-i-come-around",
+        "object_id": "green-day-when-i-come-around",
+        "display_label": "When I Come Around - Green Day",
+        "source_membership_id": "family-10-song-076-green-day-when-i-come-around",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Green Day melodic pop-punk radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-offspring-self-esteem",
+        "object_id": "the-offspring-self-esteem",
+        "display_label": "Self Esteem - The Offspring",
+        "source_membership_id": "family-10-song-076-the-offspring-self-esteem",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Offspring's biggest pop-punk/alt song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:blink-182-whats-my-age-again",
+        "object_id": "blink-182-whats-my-age-again",
+        "display_label": "What's My Age Again? - Blink-182",
+        "source_membership_id": "family-10-song-076-blink-182-whats-my-age-again",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Blink-182 teen-pop-punk gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:green-day-good-riddance-time-of-your-life",
+        "object_id": "green-day-good-riddance-time-of-your-life",
+        "display_label": "Good Riddance (Time of Your Life) - Green Day",
+        "source_membership_id": "family-10-song-076-green-day-good-riddance-time-of-your-life",
+        "roles": [
+          "song_first",
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Acoustic Green Day mass song with broad context use.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-offspring-come-out-and-play",
+        "object_id": "the-offspring-come-out-and-play",
+        "display_label": "Come Out and Play - The Offspring",
+        "source_membership_id": "family-10-song-076-the-offspring-come-out-and-play",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Skate-punk radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:blink-182-the-rock-show",
+        "object_id": "blink-182-the-rock-show",
+        "display_label": "The Rock Show - Blink-182",
+        "source_membership_id": "family-10-song-076-blink-182-the-rock-show",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "00s Blink pop-punk radio object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sum-41-fat-lip",
+        "object_id": "sum-41-fat-lip",
+        "display_label": "Fat Lip - Sum 41",
+        "source_membership_id": "family-10-song-076-sum-41-fat-lip",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Sum 41 punk-pop/rap-rock boundary gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:rancid-time-bomb",
+        "object_id": "rancid-time-bomb",
+        "display_label": "Time Bomb - Rancid",
+        "source_membership_id": "family-10-song-076-rancid-time-bomb",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Punk revival/ska-punk gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:nofx-linoleum",
+        "object_id": "nofx-linoleum",
+        "display_label": "Linoleum - NOFX",
+        "source_membership_id": "family-10-song-076-nofx-linoleum",
+        "roles": [
+          "song_first",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Skate-punk scene anchor song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f10-artist-blink-182-076",
+        "candidate_id": "survey-f10-artist-blink-182-076",
+        "object_type": "artist",
+        "display_label": "Blink-182",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-green-day-076",
+        "candidate_id": "survey-f10-artist-green-day-076",
+        "object_type": "artist",
+        "display_label": "Green Day",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-the-offspring-076",
+        "candidate_id": "survey-f10-artist-the-offspring-076",
+        "object_type": "artist",
+        "display_label": "The Offspring",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-rancid-076",
+        "candidate_id": "survey-f10-artist-rancid-076",
+        "object_type": "artist",
+        "display_label": "Rancid",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-new-found-glory-076",
+        "candidate_id": "survey-f10-artist-new-found-glory-076",
+        "object_type": "artist",
+        "display_label": "New Found Glory",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-nofx-076",
+        "candidate_id": "survey-f10-artist-nofx-076",
+        "object_type": "artist",
+        "display_label": "NOFX",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-artist-sum-41-076",
+        "candidate_id": "survey-f10-artist-sum-41-076",
+        "object_type": "artist",
+        "display_label": "Sum 41",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-green-day-american-idiot-076",
+        "candidate_id": "survey-f10-album-green-day-american-idiot-076",
+        "object_type": "album",
+        "display_label": "American Idiot",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-green-day-dookie-076",
+        "candidate_id": "survey-f10-album-green-day-dookie-076",
+        "object_type": "album",
+        "display_label": "Dookie",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-blink-182-enema-of-the-state-076",
+        "candidate_id": "survey-f10-album-blink-182-enema-of-the-state-076",
+        "object_type": "album",
+        "display_label": "Enema of the State",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-the-offspring-smash-076",
+        "candidate_id": "survey-f10-album-the-offspring-smash-076",
+        "object_type": "album",
+        "display_label": "Smash",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-rancid-and-out-come-the-wolves-076",
+        "candidate_id": "survey-f10-album-rancid-and-out-come-the-wolves-076",
+        "object_type": "album",
+        "display_label": "...And Out Come the Wolves",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-sum-41-all-killer-no-filler-076",
+        "candidate_id": "survey-f10-album-sum-41-all-killer-no-filler-076",
+        "object_type": "album",
+        "display_label": "All Killer No Filler",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-album-nofx-punk-in-drublic-076",
+        "candidate_id": "survey-f10-album-nofx-punk-in-drublic-076",
+        "object_type": "album",
+        "display_label": "Punk in Drublic",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-blink-182-all-the-small-things-076",
+        "candidate_id": "survey-f10-song_recording-blink-182-all-the-small-things-076",
+        "object_type": "song_recording",
+        "display_label": "All the Small Things",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-green-day-american-idiot-076",
+        "candidate_id": "survey-f10-song_recording-green-day-american-idiot-076",
+        "object_type": "song_recording",
+        "display_label": "American Idiot",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-green-day-basket-case-076",
+        "candidate_id": "survey-f10-song_recording-green-day-basket-case-076",
+        "object_type": "song_recording",
+        "display_label": "Basket Case",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-the-offspring-self-esteem-076",
+        "candidate_id": "survey-f10-song_recording-the-offspring-self-esteem-076",
+        "object_type": "song_recording",
+        "display_label": "Self Esteem",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-blink-182-whats-my-age-again-076",
+        "candidate_id": "survey-f10-song_recording-blink-182-whats-my-age-again-076",
+        "object_type": "song_recording",
+        "display_label": "What's My Age Again?",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f10-song_recording-green-day-when-i-come-around-076",
+        "candidate_id": "survey-f10-song_recording-green-day-when-i-come-around-076",
+        "object_type": "song_recording",
+        "display_label": "When I Come Around",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f10-song_recording-green-day-good-riddance-time-of-your-life-076",
+        "question_id": "boundary-survey-f10-song_recording-green-day-good-riddance-time-of-your-life-076",
+        "display_label": "Good Riddance (Time of Your Life)",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f10-song_recording-green-day-good-riddance-time-of-your-life-076",
+        "probe_id": "probe-survey-f10-song_recording-green-day-good-riddance-time-of-your-life-076",
+        "entity_type": "song_recording",
+        "display_label": "Good Riddance (Time of Your Life)",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_10/archetype_075",
+      "family_10/archetype_077"
+    ],
+    "before_archetype_refs": [
+      "family_10/archetype_075"
+    ],
+    "after_archetype_refs": [
+      "family_10/archetype_077"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_10": {
+      "title": "Normalized canonical graph export, Family 10",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_10/normalized_family_10.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "076_allmusic_punkpop": {
+      "title": "Punk-Pop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/punk-pop",
+      "source_type": "genre_overview",
+      "audit_use": "Direct support for melodic, fast punk adapted to pop hooks and mainstream youth culture.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct support for melodic, fast punk adapted to pop hooks and mainstream youth culture."
+    },
+    "076_rockhall_greenday": {
+      "title": "Green Day",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/green-day/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Green Day as the mass-recognized pop-punk anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Green Day as the mass-recognized pop-punk anchor."
+    },
+    "076_blink_official": {
+      "title": "blink-182",
+      "publisher": "blink-182",
+      "url": "https://blink182.com/",
+      "source_type": "official_artist",
+      "audit_use": "Object support for the 1999-2000s skate/pop-punk branch.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Object support for the 1999-2000s skate/pop-punk branch."
+    },
+    "076_epitaph": {
+      "title": "Epitaph Records",
+      "publisher": "Epitaph Records",
+      "url": "https://www.epitaph.com/",
+      "source_type": "official_label",
+      "audit_use": "Label context for skate-punk and melodic punk infrastructure around Offspring, Rancid, NOFX adjacency.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Label context for skate-punk and melodic punk infrastructure around Offspring, Rancid, NOFX adjacency."
+    },
+    "rockhall_green_day": {
+      "title": "Green Day",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/green-day/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop-punk, punk revival, and mainstream 1990s punk-pop context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Pop-punk, punk revival, and mainstream 1990s punk-pop context."
+    },
+    "britannica_punk": {
+      "title": "Punk",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/punk",
+      "source_type": "reference",
+      "audit_use": "Punk's minimalist rock language, scenes, and social context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Punk's minimalist rock language, scenes, and social context."
+    },
+    "allmusic_hardcore_punk": {
+      "title": "Hardcore Punk",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/hardcore-punk-ma0000002641",
+      "source_type": "music_reference",
+      "audit_use": "Supplemental style markers for hardcore punk speed and DIY intensity.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supplemental style markers for hardcore punk speed and DIY intensity."
+    },
+    "allmusic_indie_rock": {
+      "title": "Indie Rock",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/indie-rock-ma0000004453",
+      "source_type": "music_reference",
+      "audit_use": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "076-claim-01",
+      "claim_text": "Pop-punk keeps punk tempo and guitar economy but foregrounds bright choruses, adolescent perspective, and repeatable radio hooks.",
+      "source_ref_ids": [
+        "076_allmusic_punkpop",
+        "076_rockhall_greenday"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "076-claim-02",
+      "claim_text": "Green Day's Dookie anchors the 1990s breakthrough because it made bratty speed, tight songwriting, and suburban boredom feel like mainstream pop-rock.",
+      "source_ref_ids": [
+        "076_rockhall_greenday",
+        "076_allmusic_punkpop"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076",
+        "artist:green-day",
+        "album:green-day-dookie"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "076-claim-03",
+      "claim_text": "blink-182 marks the late-1990s/2000s skate-punk pop branch with nasal harmonies, clean production, and teenage comedy/sincerity whiplash.",
+      "source_ref_ids": [
+        "076_blink_official",
+        "076_allmusic_punkpop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for_prompt",
+        "region_scene_page"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076",
+        "artist:blink-182"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "076-claim-04",
+      "claim_text": "Epitaph and skate-punk infrastructure matter because this road grew through labels, compilations, tours, and youth scenes before and alongside radio.",
+      "source_ref_ids": [
+        "076_epitaph",
+        "076_allmusic_punkpop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "why_it_mattered",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "076-pop_punk_skate_punk_90s_00s_punk_pop-boundary",
+      "claim_text": "Pop-Punk / Skate Punk / 90s-00s Punk Pop's boundary is clearest when fast downstrokes and nasal harmonies appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "076_allmusic_punkpop",
+        "076_rockhall_greenday"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076",
+        "artist:green-day",
+        "artist:blink-182"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "076-pop_punk_skate_punk_90s_00s_punk_pop-examples",
+      "claim_text": "Green Day, Blink-182, Dookie - Green Day gives Pop-Punk / Skate Punk / 90s-00s Punk Pop concrete anchors because the examples expose big simple chorus inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "076_rockhall_greenday",
+        "076_blink_official"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076",
+        "artist:green-day",
+        "artist:blink-182"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "076-pop_punk_skate_punk_90s_00s_punk_pop-distinct",
+      "claim_text": "The key musical distinction in Pop-Punk / Skate Punk / 90s-00s Punk Pop is The sound is faster and simpler than power-pop revival, but more polished and chorus-first than first-wave punk, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "076_allmusic_punkpop",
+        "076_blink_official"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_10/archetype_076",
+        "artist:green-day",
+        "artist:blink-182"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Fast melodic punk streamlined for hooks, youth culture, and skate-era radio.",
+    "history_capsule": "Pop-punk turned punk's short songs and speed into bright, repeatable, emotionally direct guitar pop for the 1990s and 2000s.",
+    "why_it_mattered": "It became one of the main ways punk vocabulary entered mainstream teen memory.",
+    "what_made_it_distinct": "The sound is faster and simpler than power-pop revival, but more polished and chorus-first than first-wave punk.",
+    "what_to_listen_for": [
+      "fast downstrokes",
+      "nasal harmonies",
+      "big simple chorus",
+      "teenage lyric angle",
+      "tight drum drive"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:green-day",
+        "example_type": "artist",
+        "display_label": "Green Day",
+        "why_this_example_matters": "Green Day anchors Pop-Punk / Skate Punk / 90s-00s Punk Pop by making short-form urgency and angular guitar or synth lines easier to hear.",
+        "what_to_listen_for": [
+          "fast downstrokes",
+          "nasal harmonies"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:blink-182",
+        "example_type": "artist",
+        "display_label": "Blink-182",
+        "why_this_example_matters": "Blink-182 anchors Pop-Punk / Skate Punk / 90s-00s Punk Pop by making angular guitar or synth lines and dry scene energy easier to hear.",
+        "what_to_listen_for": [
+          "nasal harmonies",
+          "big simple chorus"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:green-day-dookie",
+        "example_type": "album",
+        "display_label": "Dookie - Green Day",
+        "why_this_example_matters": "Dookie - Green Day anchors Pop-Punk / Skate Punk / 90s-00s Punk Pop by making dry scene energy and DIY economy easier to hear.",
+        "what_to_listen_for": [
+          "big simple chorus",
+          "teenage lyric angle"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:green-day-american-idiot",
+        "example_type": "album",
+        "display_label": "American Idiot - Green Day",
+        "why_this_example_matters": "American Idiot - Green Day anchors Pop-Punk / Skate Punk / 90s-00s Punk Pop by making DIY economy and pop hooks under tension easier to hear.",
+        "what_to_listen_for": [
+          "teenage lyric angle",
+          "tight drum drive"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:green-day-basket-case",
+        "example_type": "song_recording",
+        "display_label": "Basket Case - Green Day",
+        "why_this_example_matters": "Basket Case - Green Day anchors Pop-Punk / Skate Punk / 90s-00s Punk Pop by making pop hooks under tension and short-form urgency easier to hear.",
+        "what_to_listen_for": [
+          "tight drum drive"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:green-day-american-idiot",
+        "example_type": "song_recording",
+        "display_label": "American Idiot - Green Day",
+        "why_this_example_matters": "American Idiot - Green Day anchors Pop-Punk / Skate Punk / 90s-00s Punk Pop by making short-form urgency and angular guitar or synth lines easier to hear.",
+        "what_to_listen_for": [
+          "fast downstrokes",
+          "nasal harmonies"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_10/archetype_075"
+      ],
+      "after": [
+        "family_10/archetype_077"
+      ],
+      "related": [
+        "family_10/archetype_075",
+        "family_10/archetype_077"
+      ],
+      "copy": "Use Pop-Punk / Skate Punk / 90s-00s Punk Pop as a contextual road inside Alternative, Indie, Grunge, Emo; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "076-dyk-1",
+        "copy": "Green Day and blink-182 represent different pop-punk eras and tones.",
+        "source_ref_ids": [
+          "076_allmusic_punkpop",
+          "076_rockhall_greenday"
+        ]
+      },
+      {
+        "card_id": "076-dyk-2",
+        "copy": "Skate-punk labels and tours are part of the genre's transmission system.",
+        "source_ref_ids": [
+          "076_rockhall_greenday",
+          "076_allmusic_punkpop"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether pop-punk / skate punk / 90s-00s punk pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Fast melodic punk streamlined for hooks, youth culture, and skate-era radio.",
+      "It became one of the main ways punk vocabulary entered mainstream teen memory.",
+      "The sound is faster and simpler than power-pop revival, but more polished and chorus-first than first-wave punk."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not mistake all punk with melody for pop-punk; the youth-radio and 1990s/2000s production frame matters.",
+    "personalization_hooks": [
+      {
+        "hook_id": "076-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[076]",
+          "atlas_state.family_affinity[10]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[076] >= 0.65 || atlas_state.family_affinity[10] >= 0.65",
+        "copy_variant": "Your Atlas signals make Pop-Punk / Skate Punk / 90s-00s Punk Pop useful as a contextual landmark.",
+        "fallback_copy": "Use Pop-Punk / Skate Punk / 90s-00s Punk Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "076-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_10/archetype_076 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_10/archetype_076",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Pop-Punk / Skate Punk / 90s-00s Punk Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "076-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_10/archetype_076 || atlas_state.boundary_question_results has boundary_negative for family_10/archetype_076",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Pop-Punk / Skate Punk / 90s-00s Punk Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "076-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_10/archetype_076 || atlas_state.related_mission_ids references family_10/archetype_076",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "076-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_10/archetype_076 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_10/archetype_076 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_10/archetype_076",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Pop-Punk / Skate Punk / 90s-00s Punk Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_10": {
+        "title": "Normalized canonical graph export, Family 10",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_10/normalized_family_10.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "076_allmusic_punkpop": {
+        "title": "Punk-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/punk-pop",
+        "source_type": "genre_overview",
+        "audit_use": "Direct support for melodic, fast punk adapted to pop hooks and mainstream youth culture.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for melodic, fast punk adapted to pop hooks and mainstream youth culture."
+      },
+      "076_rockhall_greenday": {
+        "title": "Green Day",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/green-day/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Green Day as the mass-recognized pop-punk anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Green Day as the mass-recognized pop-punk anchor."
+      },
+      "076_blink_official": {
+        "title": "blink-182",
+        "publisher": "blink-182",
+        "url": "https://blink182.com/",
+        "source_type": "official_artist",
+        "audit_use": "Object support for the 1999-2000s skate/pop-punk branch.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for the 1999-2000s skate/pop-punk branch."
+      },
+      "076_epitaph": {
+        "title": "Epitaph Records",
+        "publisher": "Epitaph Records",
+        "url": "https://www.epitaph.com/",
+        "source_type": "official_label",
+        "audit_use": "Label context for skate-punk and melodic punk infrastructure around Offspring, Rancid, NOFX adjacency.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Label context for skate-punk and melodic punk infrastructure around Offspring, Rancid, NOFX adjacency."
+      },
+      "rockhall_green_day": {
+        "title": "Green Day",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/green-day/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop-punk, punk revival, and mainstream 1990s punk-pop context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop-punk, punk revival, and mainstream 1990s punk-pop context."
+      },
+      "britannica_punk": {
+        "title": "Punk",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/punk",
+        "source_type": "reference",
+        "audit_use": "Punk's minimalist rock language, scenes, and social context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Punk's minimalist rock language, scenes, and social context."
+      },
+      "allmusic_hardcore_punk": {
+        "title": "Hardcore Punk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/hardcore-punk-ma0000002641",
+        "source_type": "music_reference",
+        "audit_use": "Supplemental style markers for hardcore punk speed and DIY intensity.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental style markers for hardcore punk speed and DIY intensity."
+      },
+      "allmusic_indie_rock": {
+        "title": "Indie Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-rock-ma0000004453",
+        "source_type": "music_reference",
+        "audit_use": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "076-claim-01",
+        "claim_text": "Pop-punk keeps punk tempo and guitar economy but foregrounds bright choruses, adolescent perspective, and repeatable radio hooks.",
+        "source_ref_ids": [
+          "076_allmusic_punkpop",
+          "076_rockhall_greenday"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "076-claim-02",
+        "claim_text": "Green Day's Dookie anchors the 1990s breakthrough because it made bratty speed, tight songwriting, and suburban boredom feel like mainstream pop-rock.",
+        "source_ref_ids": [
+          "076_rockhall_greenday",
+          "076_allmusic_punkpop"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076",
+          "artist:green-day",
+          "album:green-day-dookie"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "076-claim-03",
+        "claim_text": "blink-182 marks the late-1990s/2000s skate-punk pop branch with nasal harmonies, clean production, and teenage comedy/sincerity whiplash.",
+        "source_ref_ids": [
+          "076_blink_official",
+          "076_allmusic_punkpop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for_prompt",
+          "region_scene_page"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076",
+          "artist:blink-182"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "076-claim-04",
+        "claim_text": "Epitaph and skate-punk infrastructure matter because this road grew through labels, compilations, tours, and youth scenes before and alongside radio.",
+        "source_ref_ids": [
+          "076_epitaph",
+          "076_allmusic_punkpop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "why_it_mattered",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "076-pop_punk_skate_punk_90s_00s_punk_pop-boundary",
+        "claim_text": "Pop-Punk / Skate Punk / 90s-00s Punk Pop's boundary is clearest when fast downstrokes and nasal harmonies appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "076_allmusic_punkpop",
+          "076_rockhall_greenday"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076",
+          "artist:green-day",
+          "artist:blink-182"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "076-pop_punk_skate_punk_90s_00s_punk_pop-examples",
+        "claim_text": "Green Day, Blink-182, Dookie - Green Day gives Pop-Punk / Skate Punk / 90s-00s Punk Pop concrete anchors because the examples expose big simple chorus inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "076_rockhall_greenday",
+          "076_blink_official"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076",
+          "artist:green-day",
+          "artist:blink-182"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "076-pop_punk_skate_punk_90s_00s_punk_pop-distinct",
+        "claim_text": "The key musical distinction in Pop-Punk / Skate Punk / 90s-00s Punk Pop is The sound is faster and simpler than power-pop revival, but more polished and chorus-first than first-wave punk, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "076_allmusic_punkpop",
+          "076_blink_official"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_10/archetype_076",
+          "artist:green-day",
+          "artist:blink-182"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Pop-Punk / Skate Punk / 90s-00s Punk Pop: Green Day, Blink-182, The Offspring, Sum 41, NOFX, Rancid, Warped Tour, melodic punk with youth-radio hooks.",
+    "selected_sources": [
+      {
+        "source_ref_id": "076_allmusic_punkpop",
+        "title": "Punk-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/punk-pop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for melodic, fast punk adapted to pop hooks and mainstream youth culture."
+      },
+      {
+        "source_ref_id": "076_rockhall_greenday",
+        "title": "Green Day",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/green-day/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Green Day as the mass-recognized pop-punk anchor."
+      },
+      {
+        "source_ref_id": "076_blink_official",
+        "title": "blink-182",
+        "publisher": "blink-182",
+        "url": "https://blink182.com/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for the 1999-2000s skate/pop-punk branch."
+      },
+      {
+        "source_ref_id": "076_epitaph",
+        "title": "Epitaph Records",
+        "publisher": "Epitaph Records",
+        "url": "https://www.epitaph.com/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Label context for skate-punk and melodic punk infrastructure around Offspring, Rancid, NOFX adjacency."
+      },
+      {
+        "source_ref_id": "rockhall_green_day",
+        "title": "Green Day",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/green-day/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop-punk, punk revival, and mainstream 1990s punk-pop context."
+      },
+      {
+        "source_ref_id": "britannica_punk",
+        "title": "Punk",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/punk",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Punk's minimalist rock language, scenes, and social context."
+      },
+      {
+        "source_ref_id": "allmusic_hardcore_punk",
+        "title": "Hardcore Punk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/hardcore-punk-ma0000002641",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supplemental style markers for hardcore punk speed and DIY intensity."
+      },
+      {
+        "source_ref_id": "allmusic_indie_rock",
+        "title": "Indie Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-rock-ma0000004453",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supplemental style markers for indie rock, lo-fi, and guitar-pop branches."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "076_reject_firstwave",
+        "title": "Anarchy in the Archives: Punk Arrives",
+        "publisher": "Cornell University Library",
+        "url": "https://rmc.library.cornell.edu/punkfest/exhibition/punkarrives/newyork.html",
+        "source_type": "university_archive",
+        "source_relevance": "weak_context",
+        "why_rejected": "First-wave New York punk is ancestry, but not enough for 1990s/2000s pop-punk and skate-punk specificity."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The set covers style, Green Day's mainstream breakthrough, blink-182's skate/pop branch, and Epitaph's label infrastructure."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 115,
+    "scene_anchor_refs": [
+      "song|green day|longview",
+      "song|offspring|pretty fly for a white guy",
+      "artist_anchor|bad religion|bad religion",
+      "artist_anchor|bowling for soup|bowling for soup"
+    ],
+    "ladder_example_refs": [
+      "song|rancid|time bomb",
+      "song|blink 182|dammit",
+      "artist_anchor|good charlotte|good charlotte",
+      "artist_anchor|simple plan|simple plan",
+      "artist_anchor|yellowcard|yellowcard",
+      "song|queers|punk rock girls",
+      "song|lagwagon|may 16",
+      "artist_anchor|alkaline trio|alkaline trio"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

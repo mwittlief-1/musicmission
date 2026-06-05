@@ -7,8 +7,10 @@ This folder contains app-bundled resources for the Cartenza iOS alpha. A file be
 - Canonical graph app exports: `canonical_artists.json`, `canonical_albums.json`, and `canonical_song_recordings.json`.
 - Apple Music resolution support: `canonical_apple_music_catalog_index_v1.json`.
 - Survey support: `canonical_song_affinity_tags_v0_1.json`, `survey_artist_candidates_v0_2.json`, `survey_album_candidates_v0_2.json`, and `survey_song_candidates_v0_2.json`.
-- Alpha candidate support: `alpha_compact_candidate_pool_alpha_v0.json`, `alpha_candidate_blocklist_alpha_v0.json`, and related approved alpha candidate payloads.
-- Atlas Explainer support: `atlas_explainer_render_packs_v0_2_3.json`.
+- Alpha candidate support: `alpha_compact_candidate_pool_alpha_v0.json`, `alpha_candidate_blocklist_alpha_v0.json`, `approved_alpha_app_import_candidates_v0_2.json`, and related approved alpha candidate payloads.
+- Alpha UAT support fixture: `app_import_ready_alpha_uat_fixtures_v0_2.json`, kept for guarded playback-smoke/support paths. Release builds do not expose fixture loading unless `CartenzaAlphaUATFixturesEnabled` is explicitly enabled.
+- Atlas Explainer support: `atlas_explainer_render_packs_v0_3.json`, generated from `data/atlas_explainer/AtlasExplainerPack_v0_3_ProfileLadders/render_packs` as the Alpha production copy. The bundled export retains v0.2.3 canonical route refs as non-user-facing compatibility keys for existing mission/detail matching.
+- Atlas Home readout fixture: `atlas_home_what_were_seeing_so_far_fixture_v0_2.json`, a synthetic v0.2 post-Survey readout used by the Atlas Home module without runtime model generation.
 - Compatibility schemas: `schema_mission_v0_2.json` and `schema_reaction_session_v0_2.json`.
 - Runtime assets referenced by asset catalogs, such as the app icon set.
 

@@ -1,0 +1,545 @@
+{
+  "contract_version": "evidence_rollup_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "listener_state_id": "synthetic_listener_sparse_bridge_ready_v0_1",
+  "created_at": "2026-05-28T12:00:00Z",
+  "runtime_listener_evidence_connected": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "reaction_semantics": {
+    "survey_ok_signal_class": "no_signal",
+    "mission_ok_signal_class": "weak_non_failure",
+    "mission_ok_is_positive_preference": false
+  },
+  "evidence_signals": [
+    {
+      "evidence_id": "ev_survey_song_love_source_archetype",
+      "source_type": "survey",
+      "raw_signal": "love",
+      "signal_class": "strong_positive",
+      "signal_weight": 0.9,
+      "contributes_to_preference": true,
+      "can_support_non_failure": true,
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": ["song|synthetic source|bright bridge seed"],
+        "display_name": "Bright Bridge Seed"
+      },
+      "graph_context": {
+        "target_object_ref": {
+          "object_type": "song",
+          "object_ids": ["song|synthetic source|bright bridge seed"],
+          "display_name": "Bright Bridge Seed"
+        },
+        "family_ids": ["family_10"],
+        "family_names": ["Synthetic Source Family"],
+        "archetype_ids": ["071"],
+        "archetype_names": ["Synthetic Source Archetype"],
+        "artist_ids": ["artist-synthetic-source"],
+        "album_ids": ["album-synthetic-source-collection"],
+        "song_ids": ["song|synthetic source|bright bridge seed"],
+        "node_tier": "primary",
+        "graph_item_role": "canonical_anchor",
+        "track_tier_within_archetype": "primary",
+        "album_tier_within_archetype": "major",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": [],
+        "risk_flags": [],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_graph:song_source_seed"],
+          "synthetic_only": true
+        }
+      },
+      "occurred_at": "2026-05-28T12:00:00Z",
+      "notes": "Strong synthetic survey signal for source archetype."
+    },
+    {
+      "evidence_id": "ev_survey_artist_ok_ignored",
+      "source_type": "survey",
+      "raw_signal": "ok",
+      "signal_class": "no_signal",
+      "signal_weight": 0,
+      "contributes_to_preference": false,
+      "can_support_non_failure": false,
+      "target_object_ref": {
+        "object_type": "artist",
+        "object_ids": ["artist-synthetic-target"],
+        "display_name": "Synthetic Target Artist"
+      },
+      "graph_context": {
+        "target_object_ref": {
+          "object_type": "artist",
+          "object_ids": ["artist-synthetic-target"],
+          "display_name": "Synthetic Target Artist"
+        },
+        "family_ids": ["family_8"],
+        "family_names": ["Synthetic Target Family"],
+        "archetype_ids": ["058"],
+        "archetype_names": ["Synthetic Target Archetype"],
+        "artist_ids": ["artist-synthetic-target"],
+        "album_ids": [],
+        "song_ids": [],
+        "node_tier": "gateway",
+        "graph_item_role": "gateway",
+        "track_tier_within_archetype": "unknown",
+        "album_tier_within_archetype": "unknown",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": ["nostalgia_context"],
+        "risk_flags": ["safe_gateway"],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_graph:artist_target_gateway"],
+          "synthetic_only": true
+        }
+      },
+      "occurred_at": "2026-05-28T12:01:00Z",
+      "notes": "Survey ok is intentionally ignored by selector evidence semantics."
+    },
+    {
+      "evidence_id": "ev_mission_song_ok_weak",
+      "source_type": "mission_review",
+      "raw_signal": "ok",
+      "signal_class": "weak_non_failure",
+      "signal_weight": 0.12,
+      "contributes_to_preference": false,
+      "can_support_non_failure": true,
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": ["song|synthetic target|gateway step"],
+        "display_name": "Gateway Step"
+      },
+      "graph_context": {
+        "target_object_ref": {
+          "object_type": "song",
+          "object_ids": ["song|synthetic target|gateway step"],
+          "display_name": "Gateway Step"
+        },
+        "family_ids": ["family_8"],
+        "family_names": ["Synthetic Target Family"],
+        "archetype_ids": ["058"],
+        "archetype_names": ["Synthetic Target Archetype"],
+        "artist_ids": ["artist-synthetic-target"],
+        "album_ids": ["album-synthetic-target"],
+        "song_ids": ["song|synthetic target|gateway step"],
+        "node_tier": "gateway",
+        "graph_item_role": "gateway",
+        "track_tier_within_archetype": "gateway",
+        "album_tier_within_archetype": "supporting",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": ["nostalgia_context"],
+        "risk_flags": ["safe_gateway"],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_graph:song_gateway_step"],
+          "synthetic_only": true
+        }
+      },
+      "occurred_at": "2026-05-28T12:02:00Z",
+      "notes": "Mission ok supports non-failure only, not positive preference."
+    },
+    {
+      "evidence_id": "ev_song_review_dislike_boundary",
+      "source_type": "song_review",
+      "raw_signal": "dislike",
+      "signal_class": "negative",
+      "signal_weight": 0.7,
+      "contributes_to_preference": true,
+      "can_support_non_failure": false,
+      "target_object_ref": {
+        "object_type": "song",
+        "object_ids": ["song|synthetic target|false nearby edge"],
+        "display_name": "False Nearby Edge"
+      },
+      "graph_context": {
+        "target_object_ref": {
+          "object_type": "song",
+          "object_ids": ["song|synthetic target|false nearby edge"],
+          "display_name": "False Nearby Edge"
+        },
+        "family_ids": ["family_8"],
+        "family_names": ["Synthetic Target Family"],
+        "archetype_ids": ["058"],
+        "archetype_names": ["Synthetic Target Archetype"],
+        "artist_ids": ["artist-synthetic-target"],
+        "album_ids": ["album-synthetic-target"],
+        "song_ids": ["song|synthetic target|false nearby edge"],
+        "node_tier": "contextual",
+        "graph_item_role": "false_nearby",
+        "track_tier_within_archetype": "contextual",
+        "album_tier_within_archetype": "supporting",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": ["novelty_context"],
+        "risk_flags": ["false_nearby_risk", "requires_framing"],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_graph:song_false_nearby_edge"],
+          "synthetic_only": true
+        }
+      },
+      "occurred_at": "2026-05-28T12:03:00Z",
+      "notes": "Synthetic negative signal creates a boundary/repair fixture."
+    }
+  ],
+  "rollups": {
+    "by_family": [
+      {
+        "rollup_id": "rollup_family_family_10",
+        "target_object_ref": {
+          "object_type": "family",
+          "object_ids": ["family_10"],
+          "display_name": "Synthetic Source Family"
+        },
+        "graph_context": {
+          "target_object_ref": {
+            "object_type": "family",
+            "object_ids": ["family_10"],
+            "display_name": "Synthetic Source Family"
+          },
+          "family_ids": ["family_10"],
+          "family_names": ["Synthetic Source Family"],
+          "archetype_ids": ["071"],
+          "archetype_names": ["Synthetic Source Archetype"],
+          "artist_ids": [],
+          "album_ids": [],
+          "song_ids": [],
+          "node_tier": "major",
+          "graph_item_role": "bridge",
+          "track_tier_within_archetype": "unknown",
+          "album_tier_within_archetype": "unknown",
+          "artist_tier_within_archetype": "unknown",
+          "context_overlays": [],
+          "risk_flags": [],
+          "identity_flags": [],
+          "provenance": {
+            "source": "synthetic_fixture",
+            "source_refs": ["synthetic_graph:family_source"],
+            "synthetic_only": true
+          }
+        },
+        "signal_counts": {
+          "survey_love": 1,
+          "survey_like": 0,
+          "survey_ok_ignored": 0,
+          "survey_dislike": 0,
+          "mission_love": 0,
+          "mission_like": 0,
+          "mission_ok_weak": 0,
+          "mission_dislike": 0,
+          "song_review_love": 0,
+          "song_review_like": 0,
+          "song_review_ok_weak": 0,
+          "song_review_dislike": 0,
+          "unknown": 0,
+          "total_preference_signals": 1,
+          "total_non_failure_signals": 1
+        },
+        "computed_fields": {
+          "evidence_density": 0.42,
+          "positive_signal_strength": 0.9,
+          "negative_signal_strength": 0,
+          "weak_non_failure_strength": 0,
+          "conflict_score": 0,
+          "context_variability_score": 0.1,
+          "context_skew_score": 0,
+          "tier_coverage_score": 0.4,
+          "tier_depth_score": 0.2,
+          "coverage_gap_score": 0.55,
+          "depth_gap_score": 0.8,
+          "recency_score": 0.9,
+          "recent_surprise_score": 0,
+          "repetition_count": 1
+        },
+        "supporting_evidence_ids": ["ev_survey_song_love_source_archetype"]
+      }
+    ],
+    "by_archetype": [
+      {
+        "rollup_id": "rollup_archetype_071",
+        "target_object_ref": {
+          "object_type": "archetype",
+          "object_ids": ["071"],
+          "display_name": "Synthetic Source Archetype"
+        },
+        "graph_context": {
+          "target_object_ref": {
+            "object_type": "archetype",
+            "object_ids": ["071"],
+            "display_name": "Synthetic Source Archetype"
+          },
+          "family_ids": ["family_10"],
+          "family_names": ["Synthetic Source Family"],
+          "archetype_ids": ["071"],
+          "archetype_names": ["Synthetic Source Archetype"],
+          "artist_ids": [],
+          "album_ids": [],
+          "song_ids": [],
+          "node_tier": "primary",
+          "graph_item_role": "canonical_anchor",
+          "track_tier_within_archetype": "primary",
+          "album_tier_within_archetype": "major",
+          "artist_tier_within_archetype": "major",
+          "context_overlays": [],
+          "risk_flags": [],
+          "identity_flags": [],
+          "provenance": {
+            "source": "synthetic_fixture",
+            "source_refs": ["synthetic_graph:archetype_source"],
+            "synthetic_only": true
+          }
+        },
+        "signal_counts": {
+          "survey_love": 1,
+          "survey_like": 0,
+          "survey_ok_ignored": 0,
+          "survey_dislike": 0,
+          "mission_love": 0,
+          "mission_like": 0,
+          "mission_ok_weak": 0,
+          "mission_dislike": 0,
+          "song_review_love": 0,
+          "song_review_like": 0,
+          "song_review_ok_weak": 0,
+          "song_review_dislike": 0,
+          "unknown": 0,
+          "total_preference_signals": 1,
+          "total_non_failure_signals": 1
+        },
+        "computed_fields": {
+          "evidence_density": 0.36,
+          "positive_signal_strength": 0.9,
+          "negative_signal_strength": 0,
+          "weak_non_failure_strength": 0,
+          "conflict_score": 0,
+          "context_variability_score": 0.1,
+          "context_skew_score": 0,
+          "tier_coverage_score": 0.45,
+          "tier_depth_score": 0.25,
+          "coverage_gap_score": 0.6,
+          "depth_gap_score": 0.72,
+          "recency_score": 0.9,
+          "recent_surprise_score": 0,
+          "repetition_count": 1
+        },
+        "supporting_evidence_ids": ["ev_survey_song_love_source_archetype"]
+      }
+    ],
+    "by_artist": [
+      {
+        "rollup_id": "rollup_artist_synthetic_target",
+        "target_object_ref": {
+          "object_type": "artist",
+          "object_ids": ["artist-synthetic-target"],
+          "display_name": "Synthetic Target Artist"
+        },
+        "graph_context": {
+          "target_object_ref": {
+            "object_type": "artist",
+            "object_ids": ["artist-synthetic-target"],
+            "display_name": "Synthetic Target Artist"
+          },
+          "family_ids": ["family_8"],
+          "family_names": ["Synthetic Target Family"],
+          "archetype_ids": ["058"],
+          "archetype_names": ["Synthetic Target Archetype"],
+          "artist_ids": ["artist-synthetic-target"],
+          "album_ids": [],
+          "song_ids": [],
+          "node_tier": "gateway",
+          "graph_item_role": "gateway",
+          "track_tier_within_archetype": "unknown",
+          "album_tier_within_archetype": "unknown",
+          "artist_tier_within_archetype": "major",
+          "context_overlays": ["nostalgia_context"],
+          "risk_flags": ["safe_gateway"],
+          "identity_flags": [],
+          "provenance": {
+            "source": "synthetic_fixture",
+            "source_refs": ["synthetic_graph:artist_target_gateway"],
+            "synthetic_only": true
+          }
+        },
+        "signal_counts": {
+          "survey_love": 0,
+          "survey_like": 0,
+          "survey_ok_ignored": 1,
+          "survey_dislike": 0,
+          "mission_love": 0,
+          "mission_like": 0,
+          "mission_ok_weak": 0,
+          "mission_dislike": 0,
+          "song_review_love": 0,
+          "song_review_like": 0,
+          "song_review_ok_weak": 0,
+          "song_review_dislike": 0,
+          "unknown": 0,
+          "total_preference_signals": 0,
+          "total_non_failure_signals": 0
+        },
+        "computed_fields": {
+          "evidence_density": 0.08,
+          "positive_signal_strength": 0,
+          "negative_signal_strength": 0,
+          "weak_non_failure_strength": 0,
+          "conflict_score": 0,
+          "context_variability_score": 0.2,
+          "context_skew_score": 0.15,
+          "tier_coverage_score": 0.2,
+          "tier_depth_score": 0.1,
+          "coverage_gap_score": 0.9,
+          "depth_gap_score": 0.95,
+          "recency_score": 0.8,
+          "recent_surprise_score": 0,
+          "repetition_count": 0
+        },
+        "supporting_evidence_ids": ["ev_survey_artist_ok_ignored"]
+      }
+    ],
+    "by_album": [
+      {
+        "rollup_id": "rollup_album_synthetic_target",
+        "target_object_ref": {
+          "object_type": "album",
+          "object_ids": ["album-synthetic-target"],
+          "display_name": "Synthetic Target Album"
+        },
+        "graph_context": {
+          "target_object_ref": {
+            "object_type": "album",
+            "object_ids": ["album-synthetic-target"],
+            "display_name": "Synthetic Target Album"
+          },
+          "family_ids": ["family_8"],
+          "family_names": ["Synthetic Target Family"],
+          "archetype_ids": ["058"],
+          "archetype_names": ["Synthetic Target Archetype"],
+          "artist_ids": ["artist-synthetic-target"],
+          "album_ids": ["album-synthetic-target"],
+          "song_ids": ["song|synthetic target|gateway step", "song|synthetic target|false nearby edge"],
+          "node_tier": "supporting",
+          "graph_item_role": "album_world",
+          "track_tier_within_archetype": "unknown",
+          "album_tier_within_archetype": "supporting",
+          "artist_tier_within_archetype": "major",
+          "context_overlays": ["nostalgia_context", "novelty_context"],
+          "risk_flags": ["requires_framing"],
+          "identity_flags": [],
+          "provenance": {
+            "source": "synthetic_fixture",
+            "source_refs": ["synthetic_graph:album_target"],
+            "synthetic_only": true
+          }
+        },
+        "signal_counts": {
+          "survey_love": 0,
+          "survey_like": 0,
+          "survey_ok_ignored": 0,
+          "survey_dislike": 0,
+          "mission_love": 0,
+          "mission_like": 0,
+          "mission_ok_weak": 1,
+          "mission_dislike": 0,
+          "song_review_love": 0,
+          "song_review_like": 0,
+          "song_review_ok_weak": 0,
+          "song_review_dislike": 1,
+          "unknown": 0,
+          "total_preference_signals": 1,
+          "total_non_failure_signals": 1
+        },
+        "computed_fields": {
+          "evidence_density": 0.32,
+          "positive_signal_strength": 0,
+          "negative_signal_strength": 0.7,
+          "weak_non_failure_strength": 0.12,
+          "conflict_score": 0.5,
+          "context_variability_score": 0.7,
+          "context_skew_score": 0.45,
+          "tier_coverage_score": 0.4,
+          "tier_depth_score": 0.3,
+          "coverage_gap_score": 0.72,
+          "depth_gap_score": 0.68,
+          "recency_score": 0.95,
+          "recent_surprise_score": 0.62,
+          "repetition_count": 1
+        },
+        "supporting_evidence_ids": ["ev_mission_song_ok_weak", "ev_song_review_dislike_boundary"]
+      }
+    ],
+    "by_song": [
+      {
+        "rollup_id": "rollup_song_gateway_step",
+        "target_object_ref": {
+          "object_type": "song",
+          "object_ids": ["song|synthetic target|gateway step"],
+          "display_name": "Gateway Step"
+        },
+        "graph_context": {
+          "target_object_ref": {
+            "object_type": "song",
+            "object_ids": ["song|synthetic target|gateway step"],
+            "display_name": "Gateway Step"
+          },
+          "family_ids": ["family_8"],
+          "family_names": ["Synthetic Target Family"],
+          "archetype_ids": ["058"],
+          "archetype_names": ["Synthetic Target Archetype"],
+          "artist_ids": ["artist-synthetic-target"],
+          "album_ids": ["album-synthetic-target"],
+          "song_ids": ["song|synthetic target|gateway step"],
+          "node_tier": "gateway",
+          "graph_item_role": "gateway",
+          "track_tier_within_archetype": "gateway",
+          "album_tier_within_archetype": "supporting",
+          "artist_tier_within_archetype": "major",
+          "context_overlays": ["nostalgia_context"],
+          "risk_flags": ["safe_gateway"],
+          "identity_flags": [],
+          "provenance": {
+            "source": "synthetic_fixture",
+            "source_refs": ["synthetic_graph:song_gateway_step"],
+            "synthetic_only": true
+          }
+        },
+        "signal_counts": {
+          "survey_love": 0,
+          "survey_like": 0,
+          "survey_ok_ignored": 0,
+          "survey_dislike": 0,
+          "mission_love": 0,
+          "mission_like": 0,
+          "mission_ok_weak": 1,
+          "mission_dislike": 0,
+          "song_review_love": 0,
+          "song_review_like": 0,
+          "song_review_ok_weak": 0,
+          "song_review_dislike": 0,
+          "unknown": 0,
+          "total_preference_signals": 0,
+          "total_non_failure_signals": 1
+        },
+        "computed_fields": {
+          "evidence_density": 0.2,
+          "positive_signal_strength": 0,
+          "negative_signal_strength": 0,
+          "weak_non_failure_strength": 0.12,
+          "conflict_score": 0,
+          "context_variability_score": 0.3,
+          "context_skew_score": 0.2,
+          "tier_coverage_score": 0.3,
+          "tier_depth_score": 0.1,
+          "coverage_gap_score": 0.8,
+          "depth_gap_score": 0.9,
+          "recency_score": 0.95,
+          "recent_surprise_score": 0,
+          "repetition_count": 1
+        },
+        "supporting_evidence_ids": ["ev_mission_song_ok_weak"]
+      }
+    ]
+  }
+}

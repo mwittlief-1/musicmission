@@ -1,0 +1,291 @@
+{
+  "schema_version": "mission_enrichment_input_v0_2",
+  "runtime_context": {
+    "surface": "mission_card_and_feedback_chips",
+    "mission_ordinal_for_user": 18,
+    "max_secondary_tags_per_song": 6,
+    "copy_mode": "external_alpha",
+    "language_style": "clear_warm_music_literate",
+    "avoid_founder_vocabulary": true
+  },
+  "user_atlas_context_brief": {
+    "confirmed_positive_patterns": [
+      {
+        "pattern_id": "PATTERN_001",
+        "label": "warm mood can work",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "open_questions": [
+      {
+        "question_id": "QUESTION_001",
+        "label": "Does this need album or long-form context?",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "known_boundaries": [
+      {
+        "boundary_id": "BOUNDARY_001",
+        "label": "Alternate recordings can confuse fit.",
+        "confidence": "medium",
+        "evidence_type": "survey_and_mission_feedback"
+      }
+    ],
+    "recent_learning_summary": [],
+    "coverage_notes": []
+  },
+  "mission_context": {
+    "mission_id": "MIS_ENRICH_CONTEXT_DEPENDENCE",
+    "mission_type": "context_dependence_test",
+    "risk_level": "medium",
+    "mission_hypothesis": "Check whether this material depends on setting, version, or longer context.",
+    "why_this_mission_now": "Recent feedback suggests the same traits may land differently depending on moment and format.",
+    "success_definition": "The mission is useful if reactions separate context needs from core preference."
+  },
+  "route_items": [
+    {
+      "item_id": "ITEM_CONTEXT_01",
+      "canonical_song_recording_id": "song_context_001",
+      "sequence": 1,
+      "title": "Room Take",
+      "artist": "The Lantern House",
+      "year": 2008,
+      "route_role": "probe",
+      "why_included": "Selected to test whether this version and setting affect the reaction.",
+      "song_affinity_tags": [
+        {
+          "tag": "emotion_theme:warm_reflection",
+          "facet": "emotion_theme"
+        },
+        {
+          "tag": "context_rule:album_sequence",
+          "facet": "context_rule"
+        },
+        {
+          "tag": "vocal_performance:intimate_delivery",
+          "facet": "vocal_performance"
+        },
+        {
+          "tag": "arrangement:live_room",
+          "facet": "arrangement"
+        }
+      ],
+      "user_alignment_hints": [
+        {
+          "tag": "context_rule:album_sequence",
+          "alignment": "context_dependence_check"
+        },
+        {
+          "tag": "vocal_performance:intimate_delivery",
+          "alignment": "matches_known_positive"
+        }
+      ],
+      "prefiltered_secondary_tag_ids": [
+        "ARRANGEMENT_WORKED",
+        "BUILD_WORKED",
+        "CONTEXT_DEPENDENT",
+        "MOOD_DEPENDENT",
+        "MOOD_WORKED",
+        "VOICE_WORKED",
+        "PERFORMANCE_WORKED",
+        "SURPRISED_ME",
+        "WOULD_TRY_MORE_NEARBY",
+        "GOOD_NOT_CORE",
+        "KEEP_AS_WAYPOINT",
+        "UNSURE_BUT_CURIOUS",
+        "NEEDS_ANOTHER_LISTEN",
+        "INTERESTING_NOT_MINE"
+      ],
+      "applicability_flags": {
+        "has_vocals": true,
+        "has_lyrics": true,
+        "lyrics_language_known": true,
+        "is_instrumental": false,
+        "is_live_or_alt_version": true,
+        "album_context_relevant": true,
+        "long_form_context_relevant": true
+      },
+      "artist_context_available": true
+    }
+  ],
+  "allowed_secondary_reaction_tags": {
+    "ARRANGEMENT_WORKED": {
+      "tag_id": "ARRANGEMENT_WORKED",
+      "display_label": "The arrangement worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_arrangement_signal",
+      "allowed_facets": [
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "BUILD_WORKED": {
+      "tag_id": "BUILD_WORKED",
+      "display_label": "The build worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_dynamic_shape_signal",
+      "allowed_facets": [
+        "dynamic_shape",
+        "arrangement",
+        "form_container"
+      ]
+    },
+    "CONTEXT_DEPENDENT": {
+      "tag_id": "CONTEXT_DEPENDENT",
+      "display_label": "Context-dependent",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_context_dependence",
+      "allowed_facets": [
+        "context_rule",
+        "activity_context",
+        "social_context"
+      ]
+    },
+    "GOOD_NOT_CORE": {
+      "tag_id": "GOOD_NOT_CORE",
+      "display_label": "Good, not core",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_waypoint_not_landmark",
+      "allowed_facets": []
+    },
+    "INTERESTING_NOT_MINE": {
+      "tag_id": "INTERESTING_NOT_MINE",
+      "display_label": "Interesting, not mine",
+      "valid_primary_reactions": [
+        "ok",
+        "dislike"
+      ],
+      "atlas_effect": "mark_boundary_or_low_appetite",
+      "allowed_facets": []
+    },
+    "KEEP_AS_WAYPOINT": {
+      "tag_id": "KEEP_AS_WAYPOINT",
+      "display_label": "Keep as waypoint",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "preserve_as_navigation_reference",
+      "allowed_facets": []
+    },
+    "MOOD_DEPENDENT": {
+      "tag_id": "MOOD_DEPENDENT",
+      "display_label": "Mood-dependent",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_mood_dependence",
+      "allowed_facets": [
+        "emotion_theme",
+        "atmosphere",
+        "context_rule"
+      ]
+    },
+    "MOOD_WORKED": {
+      "tag_id": "MOOD_WORKED",
+      "display_label": "The mood worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_mood_signal",
+      "allowed_facets": [
+        "emotion_theme",
+        "atmosphere"
+      ]
+    },
+    "NEEDS_ANOTHER_LISTEN": {
+      "tag_id": "NEEDS_ANOTHER_LISTEN",
+      "display_label": "Needs another listen",
+      "valid_primary_reactions": [
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "mark_uncertain_repeat_test",
+      "allowed_facets": []
+    },
+    "PERFORMANCE_WORKED": {
+      "tag_id": "PERFORMANCE_WORKED",
+      "display_label": "The performance worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_performance_signal",
+      "allowed_facets": [
+        "vocal_performance",
+        "instrumental_performance"
+      ]
+    },
+    "SURPRISED_ME": {
+      "tag_id": "SURPRISED_ME",
+      "display_label": "This surprised me",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_or_strengthen_novelty_signal",
+      "allowed_facets": []
+    },
+    "UNSURE_BUT_CURIOUS": {
+      "tag_id": "UNSURE_BUT_CURIOUS",
+      "display_label": "Unsure, but curious",
+      "valid_primary_reactions": [
+        "ok",
+        "like"
+      ],
+      "atlas_effect": "open_frontier_with_uncertainty",
+      "allowed_facets": []
+    },
+    "VOICE_WORKED": {
+      "tag_id": "VOICE_WORKED",
+      "display_label": "The voice worked",
+      "valid_primary_reactions": [
+        "love",
+        "like"
+      ],
+      "atlas_effect": "strengthen_vocal_signal",
+      "allowed_facets": [
+        "vocal_performance"
+      ]
+    },
+    "WOULD_TRY_MORE_NEARBY": {
+      "tag_id": "WOULD_TRY_MORE_NEARBY",
+      "display_label": "I'd try more nearby",
+      "valid_primary_reactions": [
+        "love",
+        "like",
+        "ok"
+      ],
+      "atlas_effect": "open_nearby_exploration",
+      "allowed_facets": []
+    }
+  },
+  "copy_guardrails": [
+    "Do not change mission or song list.",
+    "Use only allowed secondary tag IDs.",
+    "Do not invent artists, songs, genres, user history, tags, or affinity facts.",
+    "Do not use raw graph IDs in display copy.",
+    "Do not expose raw affinity tags as chip labels.",
+    "Do not claim final taste truth.",
+    "Do not use founder-specific language.",
+    "Do not assume rock, guitar music, vocals, lyrics, albums, English-language music, or advanced music knowledge.",
+    "Treat all context as provisional."
+  ]
+}

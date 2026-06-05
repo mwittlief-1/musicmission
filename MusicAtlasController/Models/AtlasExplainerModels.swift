@@ -157,8 +157,99 @@ enum AtlasExplainerCopyDepth: String, CaseIterable, Identifiable {
     }
 }
 
+enum AtlasExplainerHomeSectionKind: String, CaseIterable, Identifiable {
+    case likelyRegions
+    case frontiers
+    case boundaries
+
+    var id: String {
+        rawValue
+    }
+
+    var title: String {
+        switch self {
+        case .likelyRegions:
+            return AtlasExplainerRuntimePolicy.likelyRegionsTitle
+        case .frontiers:
+            return AtlasExplainerRuntimePolicy.frontiersTitle
+        case .boundaries:
+            return AtlasExplainerRuntimePolicy.boundariesTitle
+        }
+    }
+
+    var subtitle: String {
+        switch self {
+        case .likelyRegions:
+            return AtlasExplainerRuntimePolicy.likelyRegionsSubtitle
+        case .frontiers:
+            return AtlasExplainerRuntimePolicy.frontiersSubtitle
+        case .boundaries:
+            return AtlasExplainerRuntimePolicy.boundariesSubtitle
+        }
+    }
+}
+
+struct AtlasSurveyArchetypeScore: Equatable {
+    let archetypeID: String
+    let positiveScore: Double
+    let fineScore: Double
+    let unknownScore: Double
+    let negativeScore: Double
+    let surveySignalCount: Int
+
+    init(
+        archetypeID: String,
+        positiveScore: Double,
+        fineScore: Double,
+        unknownScore: Double,
+        negativeScore: Double,
+        surveySignalCount: Int = .max
+    ) {
+        self.archetypeID = archetypeID
+        self.positiveScore = positiveScore
+        self.fineScore = fineScore
+        self.unknownScore = unknownScore
+        self.negativeScore = negativeScore
+        self.surveySignalCount = surveySignalCount
+    }
+
+    var totalSignalScore: Double {
+        positiveScore + fineScore + unknownScore + negativeScore
+    }
+
+    var netPositiveScore: Double {
+        positiveScore + fineScore * 0.35 + unknownScore * 0.15 - negativeScore
+    }
+
+    var questionScore: Double {
+        negativeScore + fineScore * 0.65 + unknownScore
+    }
+
+    var hasLimitedSurveySignals: Bool {
+        surveySignalCount <= 3
+    }
+}
+
+struct AtlasExplainerHomeSection: Identifiable, Equatable {
+    let kind: AtlasExplainerHomeSectionKind
+    let packs: [AtlasExplainerRenderPack]
+
+    var id: String {
+        kind.rawValue
+    }
+
+    var title: String {
+        kind.title
+    }
+
+    var subtitle: String {
+        kind.subtitle
+    }
+}
+
 enum AtlasExplainerRuntimePolicy {
     static let alphaCopyDepth: AtlasExplainerCopyDepth = .standard
+    static let alphaHomePackLimit = 10
 
     static let atlasTitle = "Atlas"
     static let atlasSubtitle = "Explore the music-history roads behind the Atlas."
@@ -166,8 +257,12 @@ enum AtlasExplainerRuntimePolicy {
     static let unavailableTitle = "Atlas explainers unavailable"
     static let unavailableDetail = "Atlas explainers are temporarily unavailable."
     static let roadCountSuffix = "roads"
-    static let featuredRoadsTitle = "Featured Roads"
-    static let featuredBadge = "Featured"
+    static let likelyRegionsTitle = "Likely Regions"
+    static let likelyRegionsSubtitle = "The survey-scored roads with the clearest positive signal so far."
+    static let frontiersTitle = "Frontiers"
+    static let frontiersSubtitle = "Promising adjacent roads that need more evidence before they become centers."
+    static let boundariesTitle = "Open Questions"
+    static let boundariesSubtitle = "Mixed, negative, unknown, or context-dependent roads worth treating carefully."
     static let missionModuleTitle = "Atlas Explainer"
     static let missionModuleBadge = "Atlas context"
     static let missingMissionExplainer = "No Atlas explainer is available for this mission yet."
@@ -184,8 +279,12 @@ enum AtlasExplainerRuntimePolicy {
         unavailableTitle,
         unavailableDetail,
         roadCountSuffix,
-        featuredRoadsTitle,
-        featuredBadge,
+        likelyRegionsTitle,
+        likelyRegionsSubtitle,
+        frontiersTitle,
+        frontiersSubtitle,
+        boundariesTitle,
+        boundariesSubtitle,
         missionModuleTitle,
         missionModuleBadge,
         missingMissionExplainer,
@@ -201,6 +300,12 @@ struct AtlasExplainerCanonicalExample: Decodable, Identifiable, Equatable {
     let exampleRef: String
     let exampleType: String
     let displayLabel: String
+    let artistDisplayName: String?
+    let title: String?
+    let year: Int?
+    let recognitionBand: String?
+    let missionRole: String?
+    let ladderSection: String?
     let whyThisExampleMatters: String
     let whatToListenFor: [String]
     let graphRefValidationStatus: String
@@ -213,9 +318,31 @@ struct AtlasExplainerCanonicalExample: Decodable, Identifiable, Equatable {
         case exampleRef = "example_ref"
         case exampleType = "example_type"
         case displayLabel = "display_label"
+        case artistDisplayName = "artist_display_name"
+        case title
+        case year
+        case recognitionBand = "recognition_band"
+        case missionRole = "mission_role"
+        case ladderSection = "ladder_section"
         case whyThisExampleMatters = "why_this_example_matters"
         case whatToListenFor = "what_to_listen_for"
         case graphRefValidationStatus = "graph_ref_validation_status"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        exampleRef = try container.decode(String.self, forKey: .exampleRef)
+        exampleType = try container.decode(String.self, forKey: .exampleType)
+        displayLabel = try container.decode(String.self, forKey: .displayLabel)
+        artistDisplayName = try container.decodeIfPresent(String.self, forKey: .artistDisplayName)
+        title = try container.decodeIfPresent(String.self, forKey: .title)
+        year = try container.decodeIfPresent(Int.self, forKey: .year)
+        recognitionBand = try container.decodeIfPresent(String.self, forKey: .recognitionBand)
+        missionRole = try container.decodeIfPresent(String.self, forKey: .missionRole)
+        ladderSection = try container.decodeIfPresent(String.self, forKey: .ladderSection)
+        whyThisExampleMatters = try container.decode(String.self, forKey: .whyThisExampleMatters)
+        whatToListenFor = try container.decode([String].self, forKey: .whatToListenFor)
+        graphRefValidationStatus = try container.decode(String.self, forKey: .graphRefValidationStatus)
     }
 }
 

@@ -1,0 +1,1519 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_03_archetype_019_southern-rock-roots-jam-rock_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_3/normalized_family_3.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 3,
+    "family_slug": "classic-rock-album-rock-progressive-rock",
+    "family_name": "Classic Rock, Album Rock, Progressive Rock",
+    "archetype_id": "019",
+    "archetype_slug": "southern-rock-roots-jam-rock",
+    "canonical_graph_ref": "family_03/archetype_019",
+    "existing_graph_label_name": "Southern Rock / Roots Jam Rock",
+    "editorial_display_title": "Southern Rock / Roots Jam Rock",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:artist-allman-brothers-band",
+        "object_id": "artist-allman-brothers-band",
+        "display_label": "The Allman Brothers Band",
+        "source_membership_id": "family-3-artist-019-artist-allman-brothers-band",
+        "roles": [
+          "anchor",
+          "album_anchor",
+          "live_gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "southern roots-jam foundation",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-lynyrd-skynyrd",
+        "object_id": "artist-lynyrd-skynyrd",
+        "display_label": "Lynyrd Skynyrd",
+        "source_membership_id": "family-3-artist-019-artist-lynyrd-skynyrd",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "most mass-known southern-rock anchor",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-zz-top",
+        "object_id": "artist-zz-top",
+        "display_label": "ZZ Top",
+        "source_membership_id": "family-3-artist-019-artist-zz-top",
+        "roles": [
+          "bridge",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "hard-boogie southern bridge",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-little-feat",
+        "object_id": "artist-little-feat",
+        "display_label": "Little Feat",
+        "source_membership_id": "family-3-artist-019-artist-little-feat",
+        "roles": [
+          "anchor",
+          "bridge",
+          "live_gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "roots-jam sophistication and live pull",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-marshall-tucker-band",
+        "object_id": "artist-marshall-tucker-band",
+        "display_label": "Marshall Tucker Band",
+        "source_membership_id": "family-3-artist-019-artist-marshall-tucker-band",
+        "roles": [
+          "bridge",
+          "boundary",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "softer country-jam southern signal",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-38-special",
+        "object_id": "artist-38-special",
+        "display_label": "38 Special",
+        "source_membership_id": "family-3-artist-019-artist-38-special",
+        "roles": [
+          "bridge",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "southern-to-AOR bridge",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-molly-hatchet",
+        "object_id": "artist-molly-hatchet",
+        "display_label": "Molly Hatchet",
+        "source_membership_id": "family-3-artist-019-artist-molly-hatchet",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "boogie-metal southern lane depth",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-govt-mule",
+        "object_id": "artist-govt-mule",
+        "display_label": "Gov't Mule",
+        "source_membership_id": "family-3-artist-019-artist-govt-mule",
+        "roles": [
+          "deepening",
+          "bridge",
+          "anchor"
+        ],
+        "recognition_tier": "low",
+        "survey_tier": "edge",
+        "inclusion_reason": "ABB-descended jam continuation",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-charlie-daniels-band",
+        "object_id": "artist-charlie-daniels-band",
+        "display_label": "Charlie Daniels Band",
+        "source_membership_id": "family-3-artist-019-artist-charlie-daniels-band",
+        "roles": [
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "country-southern boundary case",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-the-black-crowes",
+        "object_id": "artist-the-black-crowes",
+        "display_label": "The Black Crowes",
+        "source_membership_id": "family-3-artist-019-artist-the-black-crowes",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "later southern revival with classic-rock salience",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-outlaws",
+        "object_id": "artist-outlaws",
+        "display_label": "Outlaws",
+        "source_membership_id": "family-3-artist-019-artist-outlaws",
+        "roles": [
+          "deepening",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "dual-guitar southern depth with one major song object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:album-pronounced-leh-nerd-skin-nerd-1973",
+        "object_id": "album-pronounced-leh-nerd-skin-nerd-1973",
+        "display_label": "Pronounced 'Leh-'nerd 'Skin-'nerd - Lynyrd Skynyrd",
+        "source_membership_id": "family-3-album-019-album-pronounced-leh-nerd-skin-nerd-1973",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "core Skynyrd origin LP",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-at-fillmore-east-1971",
+        "object_id": "album-at-fillmore-east-1971",
+        "display_label": "At Fillmore East - The Allman Brothers Band",
+        "source_membership_id": "family-3-album-019-album-at-fillmore-east-1971",
+        "roles": [
+          "live_gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "definitive southern-jam album object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-eat-a-peach-1972",
+        "object_id": "album-eat-a-peach-1972",
+        "display_label": "Eat a Peach - The Allman Brothers Band",
+        "source_membership_id": "family-3-album-019-album-eat-a-peach-1972",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "best mixed studio/live ABB gateway",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-waiting-for-columbus-1978",
+        "object_id": "album-waiting-for-columbus-1978",
+        "display_label": "Waiting for Columbus - Little Feat",
+        "source_membership_id": "family-3-album-019-album-waiting-for-columbus-1978",
+        "roles": [
+          "live_gateway",
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "true Little Feat gateway",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-second-helping-1974",
+        "object_id": "album-second-helping-1974",
+        "display_label": "Second Helping - Lynyrd Skynyrd",
+        "source_membership_id": "family-3-album-019-album-second-helping-1974",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "contains biggest southern-rock single",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-brothers-and-sisters-1973",
+        "object_id": "album-brothers-and-sisters-1973",
+        "display_label": "Brothers and Sisters - The Allman Brothers Band",
+        "source_membership_id": "family-3-album-019-album-brothers-and-sisters-1973",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "strongest ABB studio entry for casual users",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-shake-your-money-maker-1990",
+        "object_id": "album-shake-your-money-maker-1990",
+        "display_label": "Shake Your Money Maker - The Black Crowes",
+        "source_membership_id": "family-3-album-019-album-shake-your-money-maker-1990",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "later revival object with broad recognition",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-tres-hombres-1973",
+        "object_id": "album-tres-hombres-1973",
+        "display_label": "Tres Hombres - ZZ Top",
+        "source_membership_id": "family-3-album-019-album-tres-hombres-1973",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "best classic ZZ Top southern-boogie object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-searchin-for-a-rainbow-1975",
+        "object_id": "album-searchin-for-a-rainbow-1975",
+        "display_label": "Searchin' for a Rainbow - Marshall Tucker Band",
+        "source_membership_id": "family-3-album-019-album-searchin-for-a-rainbow-1975",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "core MTB survey LP",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-flirtin-with-disaster-1979",
+        "object_id": "album-flirtin-with-disaster-1979",
+        "display_label": "Flirtin' with Disaster - Molly Hatchet",
+        "source_membership_id": "family-3-album-019-album-flirtin-with-disaster-1979",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "high-value southern boogie depth object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:song-sweet-home-alabama-1974",
+        "object_id": "song-sweet-home-alabama-1974",
+        "display_label": "Sweet Home Alabama - Lynyrd Skynyrd",
+        "source_membership_id": "family-3-song-019-song-sweet-home-alabama-1974",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "biggest Skynyrd public object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-free-bird-1973",
+        "object_id": "song-free-bird-1973",
+        "display_label": "Free Bird - Lynyrd Skynyrd",
+        "source_membership_id": "family-3-song-019-song-free-bird-1973",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "southern-rock mega-object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-whipping-post-1969",
+        "object_id": "song-whipping-post-1969",
+        "display_label": "Whipping Post - The Allman Brothers Band",
+        "source_membership_id": "family-3-song-019-song-whipping-post-1969",
+        "roles": [
+          "song_first",
+          "boundary",
+          "live_gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "major jam-southern test object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-ramblin-man-1973",
+        "object_id": "song-ramblin-man-1973",
+        "display_label": "Ramblin' Man - The Allman Brothers Band",
+        "source_membership_id": "family-3-song-019-song-ramblin-man-1973",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "most accessible ABB song object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-la-grange-1973",
+        "object_id": "song-la-grange-1973",
+        "display_label": "La Grange - ZZ Top",
+        "source_membership_id": "family-3-song-019-song-la-grange-1973",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "boogie-riff bridge song",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-midnight-rider-1970",
+        "object_id": "song-midnight-rider-1970",
+        "display_label": "Midnight Rider - The Allman Brothers Band",
+        "source_membership_id": "family-3-song-019-song-midnight-rider-1970",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "softer ABB gateway",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-cant-you-see-1973",
+        "object_id": "song-cant-you-see-1973",
+        "display_label": "Can't You See - Marshall Tucker Band",
+        "source_membership_id": "family-3-song-019-song-cant-you-see-1973",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "song memory can outrun artist memory",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-jessica-1973",
+        "object_id": "song-jessica-1973",
+        "display_label": "Jessica - The Allman Brothers Band",
+        "source_membership_id": "family-3-song-019-song-jessica-1973",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "introduces instrumental-jam affinity",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-remedy-1992",
+        "object_id": "song-remedy-1992",
+        "display_label": "Remedy - The Black Crowes",
+        "source_membership_id": "family-3-song-019-song-remedy-1992",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "revival bridge for younger classic-rock fans",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-dixie-chicken-1973",
+        "object_id": "song-dixie-chicken-1973",
+        "display_label": "Dixie Chicken - Little Feat",
+        "source_membership_id": "family-3-song-019-song-dixie-chicken-1973",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "roots-jam sophistication test",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-green-grass-and-high-tides-1975",
+        "object_id": "song-green-grass-and-high-tides-1975",
+        "display_label": "Green Grass and High Tides - Outlaws",
+        "source_membership_id": "family-3-song-019-song-green-grass-and-high-tides-1975",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "southern-guitar-deep-cut test with real familiarity",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-flirtin-with-disaster-1979",
+        "object_id": "song-flirtin-with-disaster-1979",
+        "display_label": "Flirtin' with Disaster - Molly Hatchet",
+        "source_membership_id": "family-3-song-019-song-flirtin-with-disaster-1979",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "scene song more famous than act depth",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-lynyrd-skynyrd-019",
+        "candidate_id": "survey-f3-artist-artist-lynyrd-skynyrd-019",
+        "object_type": "artist",
+        "display_label": "Lynyrd Skynyrd",
+        "survey_page_role": "page1_core",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-allman-brothers-band-019",
+        "candidate_id": "survey-f3-artist-artist-allman-brothers-band-019",
+        "object_type": "artist",
+        "display_label": "The Allman Brothers Band",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-zz-top-019",
+        "candidate_id": "survey-f3-artist-artist-zz-top-019",
+        "object_type": "artist",
+        "display_label": "ZZ Top",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-little-feat-019",
+        "candidate_id": "survey-f3-artist-artist-little-feat-019",
+        "object_type": "artist",
+        "display_label": "Little Feat",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-38-special-019",
+        "candidate_id": "survey-f3-artist-artist-38-special-019",
+        "object_type": "artist",
+        "display_label": "38 Special",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-marshall-tucker-band-019",
+        "candidate_id": "survey-f3-artist-artist-marshall-tucker-band-019",
+        "object_type": "artist",
+        "display_label": "Marshall Tucker Band",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-the-black-crowes-019",
+        "candidate_id": "survey-f3-artist-artist-the-black-crowes-019",
+        "object_type": "artist",
+        "display_label": "The Black Crowes",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-charlie-daniels-band-019",
+        "candidate_id": "survey-f3-artist-artist-charlie-daniels-band-019",
+        "object_type": "artist",
+        "display_label": "Charlie Daniels Band",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-molly-hatchet-019",
+        "candidate_id": "survey-f3-artist-artist-molly-hatchet-019",
+        "object_type": "artist",
+        "display_label": "Molly Hatchet",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-govt-mule-019",
+        "candidate_id": "survey-f3-artist-artist-govt-mule-019",
+        "object_type": "artist",
+        "display_label": "Gov't Mule",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-outlaws-019",
+        "candidate_id": "survey-f3-artist-artist-outlaws-019",
+        "object_type": "artist",
+        "display_label": "Outlaws",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-pronounced-leh-nerd-skin-nerd-1973-019",
+        "candidate_id": "survey-f3-album-album-pronounced-leh-nerd-skin-nerd-1973-019",
+        "object_type": "album",
+        "display_label": "Pronounced 'Leh-'nerd 'Skin-'nerd",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-at-fillmore-east-1971-019",
+        "candidate_id": "survey-f3-album-album-at-fillmore-east-1971-019",
+        "object_type": "album",
+        "display_label": "At Fillmore East",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-eat-a-peach-1972-019",
+        "candidate_id": "survey-f3-album-album-eat-a-peach-1972-019",
+        "object_type": "album",
+        "display_label": "Eat a Peach",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-second-helping-1974-019",
+        "candidate_id": "survey-f3-album-album-second-helping-1974-019",
+        "object_type": "album",
+        "display_label": "Second Helping",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-waiting-for-columbus-1978-019",
+        "candidate_id": "survey-f3-album-album-waiting-for-columbus-1978-019",
+        "object_type": "album",
+        "display_label": "Waiting for Columbus",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-brothers-and-sisters-1973-019",
+        "candidate_id": "survey-f3-album-album-brothers-and-sisters-1973-019",
+        "object_type": "album",
+        "display_label": "Brothers and Sisters",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-shake-your-money-maker-1990-019",
+        "candidate_id": "survey-f3-album-album-shake-your-money-maker-1990-019",
+        "object_type": "album",
+        "display_label": "Shake Your Money Maker",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-tres-hombres-1973-019",
+        "candidate_id": "survey-f3-album-album-tres-hombres-1973-019",
+        "object_type": "album",
+        "display_label": "Tres Hombres",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-searchin-for-a-rainbow-1975-019",
+        "candidate_id": "survey-f3-album-album-searchin-for-a-rainbow-1975-019",
+        "object_type": "album",
+        "display_label": "Searchin' for a Rainbow",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-lynyrd-skynyrd-019",
+        "question_id": "boundary-survey-f3-artist-artist-lynyrd-skynyrd-019",
+        "display_label": "Lynyrd Skynyrd",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-marshall-tucker-band-019",
+        "question_id": "boundary-survey-f3-artist-artist-marshall-tucker-band-019",
+        "display_label": "Marshall Tucker Band",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-charlie-daniels-band-019",
+        "question_id": "boundary-survey-f3-artist-artist-charlie-daniels-band-019",
+        "display_label": "Charlie Daniels Band",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-molly-hatchet-019",
+        "question_id": "boundary-survey-f3-artist-artist-molly-hatchet-019",
+        "display_label": "Molly Hatchet",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-artist-artist-outlaws-019",
+        "question_id": "boundary-survey-f3-artist-artist-outlaws-019",
+        "display_label": "Outlaws",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-whipping-post-1969-019",
+        "question_id": "boundary-survey-f3-song_recording-song-whipping-post-1969-019",
+        "display_label": "Whipping Post",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-dixie-chicken-1973-019",
+        "question_id": "boundary-survey-f3-song_recording-song-dixie-chicken-1973-019",
+        "display_label": "Dixie Chicken",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f3-song_recording-song-green-grass-and-high-tides-1975-019",
+        "question_id": "boundary-survey-f3-song_recording-song-green-grass-and-high-tides-1975-019",
+        "display_label": "Green Grass and High Tides",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-lynyrd-skynyrd-019",
+        "probe_id": "probe-survey-f3-artist-artist-lynyrd-skynyrd-019",
+        "entity_type": "artist",
+        "display_label": "Lynyrd Skynyrd",
+        "recommended_surface": "mission"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-marshall-tucker-band-019",
+        "probe_id": "probe-survey-f3-artist-artist-marshall-tucker-band-019",
+        "entity_type": "artist",
+        "display_label": "Marshall Tucker Band",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-charlie-daniels-band-019",
+        "probe_id": "probe-survey-f3-artist-artist-charlie-daniels-band-019",
+        "entity_type": "artist",
+        "display_label": "Charlie Daniels Band",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-molly-hatchet-019",
+        "probe_id": "probe-survey-f3-artist-artist-molly-hatchet-019",
+        "entity_type": "artist",
+        "display_label": "Molly Hatchet",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-artist-artist-outlaws-019",
+        "probe_id": "probe-survey-f3-artist-artist-outlaws-019",
+        "entity_type": "artist",
+        "display_label": "Outlaws",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-whipping-post-1969-019",
+        "probe_id": "probe-survey-f3-song_recording-song-whipping-post-1969-019",
+        "entity_type": "song_recording",
+        "display_label": "Whipping Post",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-dixie-chicken-1973-019",
+        "probe_id": "probe-survey-f3-song_recording-song-dixie-chicken-1973-019",
+        "entity_type": "song_recording",
+        "display_label": "Dixie Chicken",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f3-song_recording-song-green-grass-and-high-tides-1975-019",
+        "probe_id": "probe-survey-f3-song_recording-song-green-grass-and-high-tides-1975-019",
+        "entity_type": "song_recording",
+        "display_label": "Green Grass and High Tides",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_03/archetype_018",
+      "family_03/archetype_020"
+    ],
+    "before_archetype_refs": [
+      "family_03/archetype_018"
+    ],
+    "after_archetype_refs": [
+      "family_03/archetype_020"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_3": {
+      "title": "Normalized canonical graph export, Family 3",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_3/normalized_family_3.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "019_allmusic_southern_rock": {
+      "title": "Southern Rock",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/southern-rock-ma0000002868",
+      "source_type": "music_reference",
+      "audit_use": "Directly defines Southern rock's blues, country, boogie, and rock blend.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly defines Southern rock's blues, country, boogie, and rock blend."
+    },
+    "019_rockhall_allman_brothers": {
+      "title": "The Allman Brothers Band",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/allman-brothers-band/",
+      "source_type": "museum_reference",
+      "audit_use": "Anchors the improvisational dual-guitar and jam side of the lane.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Anchors the improvisational dual-guitar and jam side of the lane."
+    },
+    "019_rockhall_lynyrd_skynyrd": {
+      "title": "Lynyrd Skynyrd",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/lynyrd-skynyrd/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the anthem, triple-guitar, and Southern-identity side of the archetype.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the anthem, triple-guitar, and Southern-identity side of the archetype."
+    },
+    "019_rockhall_zz_top": {
+      "title": "ZZ Top",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/zz-top/",
+      "source_type": "museum_reference",
+      "audit_use": "Documents the Texas blues-boogie branch and its durable riff identity.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Documents the Texas blues-boogie branch and its durable riff identity."
+    },
+    "rockhall_allman_brothers": {
+      "title": "The Allman Brothers Band",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-allman-brothers-band/",
+      "source_type": "museum_reference",
+      "audit_use": "Southern rock, blues, country, and improvisational jam lineage.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Southern rock, blues, country, and improvisational jam lineage."
+    },
+    "britannica_country_music": {
+      "title": "Country music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/country-music",
+      "source_type": "reference",
+      "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+    },
+    "britannica_rock_music": {
+      "title": "Rock music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rock-music",
+      "source_type": "reference",
+      "audit_use": "Broad rock-history context across album rock, hard rock, punk, and alternative lineages.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad rock-history context across album rock, hard rock, punk, and alternative lineages."
+    },
+    "americana_music_association": {
+      "title": "About Americana Music",
+      "publisher": "Americana Music Association",
+      "url": "https://americanamusic.org/",
+      "source_type": "industry_organization",
+      "audit_use": "Americana as roots, country, folk, blues, and rock lineage context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Americana as roots, country, folk, blues, and rock lineage context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "019-claim-01-blues-country-boogie",
+      "claim_text": "Southern rock blends blues, country, boogie, soul feel, and rock volume into a regional guitar-band language.",
+      "source_ref_ids": [
+        "019_allmusic_southern_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_03/archetype_019"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "019-claim-02-allman-jam",
+      "claim_text": "The Allman Brothers Band defines the roots-jam side through twin guitars, blues improvisation, jazz-like interplay, and long live versions.",
+      "source_ref_ids": [
+        "019_rockhall_allman_brothers"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_03/archetype_019",
+        "artist:the-allman-brothers-band",
+        "album:the-allman-brothers-band-at-fillmore-east",
+        "song_recording:the-allman-brothers-band-whipping-post"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "019-claim-03-skynyrd-anthem",
+      "claim_text": "Lynyrd Skynyrd represents the anthem side, where multiple guitars, plainspoken storytelling, and regional pride become arena-scale rock memory.",
+      "source_ref_ids": [
+        "019_rockhall_lynyrd_skynyrd"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "why_it_mattered",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_03/archetype_019",
+        "artist:lynyrd-skynyrd",
+        "song_recording:lynyrd-skynyrd-free-bird",
+        "song_recording:lynyrd-skynyrd-sweet-home-alabama"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "019-claim-04-zz-top-boogie",
+      "claim_text": "ZZ Top sharpens the Texas boogie branch: blues riffs are stripped down, tightened, and made immediately recognizable.",
+      "source_ref_ids": [
+        "019_rockhall_zz_top"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_03/archetype_019",
+        "artist:zz-top",
+        "song_recording:zz-top-la-grange"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "019-southern_rock_roots_jam_rock-boundary",
+      "claim_text": "Southern Rock / Roots Jam Rock's boundary is clearest when Dual or triple guitar lines and Blues bends inside country-rock progressions appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "019_allmusic_southern_rock",
+        "019_rockhall_allman_brothers"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_03/archetype_019",
+        "artist:artist-allman-brothers-band",
+        "artist:artist-lynyrd-skynyrd"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "The Southern guitar-rock road where blues, country, boogie, jam interplay, and regional identity meet arena-scale hooks.",
+    "history_capsule": "The Allman Brothers Band, Lynyrd Skynyrd, ZZ Top, Marshall Tucker Band, and related artists made Southern rock broad enough to include improvisational jams, hard anthems, roadhouse boogie, and rootsy storytelling.",
+    "why_it_mattered": "It gave classic rock a regional voice and created a route from blues/country roots to jam-band culture and arena standards.",
+    "what_made_it_distinct": "The guitars often converse rather than simply stack. Even the big anthems carry bar-band, blues, or country traces.",
+    "what_to_listen_for": [
+      "Dual or triple guitar lines",
+      "Blues bends inside country-rock progressions",
+      "Long live solos or call-and-response jams",
+      "Southern place names, road images, or working-band grit",
+      "Boogie rhythm that feels locomotive"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:artist-allman-brothers-band",
+        "example_type": "artist",
+        "display_label": "The Allman Brothers Band",
+        "why_this_example_matters": "The Allman Brothers Band is a graph-validated anchor for Southern Rock / Roots Jam Rock; use it to hear Dual or triple guitar lines.",
+        "what_to_listen_for": [
+          "Dual or triple guitar lines",
+          "Blues bends inside country-rock progressions"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:artist-lynyrd-skynyrd",
+        "example_type": "artist",
+        "display_label": "Lynyrd Skynyrd",
+        "why_this_example_matters": "Lynyrd Skynyrd is a graph-validated anchor for Southern Rock / Roots Jam Rock; use it to hear Blues bends inside country-rock progressions.",
+        "what_to_listen_for": [
+          "Blues bends inside country-rock progressions",
+          "Long live solos or call-and-response jams"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:album-pronounced-leh-nerd-skin-nerd-1973",
+        "example_type": "album",
+        "display_label": "Pronounced 'Leh-'nerd 'Skin-'nerd - Lynyrd Skynyrd",
+        "why_this_example_matters": "Pronounced 'Leh-'nerd 'Skin-'nerd - Lynyrd Skynyrd is a graph-validated anchor for Southern Rock / Roots Jam Rock; use it to hear Long live solos or call-and-response jams.",
+        "what_to_listen_for": [
+          "Long live solos or call-and-response jams",
+          "Southern place names, road images, or working-band grit"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:album-at-fillmore-east-1971",
+        "example_type": "album",
+        "display_label": "At Fillmore East - The Allman Brothers Band",
+        "why_this_example_matters": "At Fillmore East - The Allman Brothers Band is a graph-validated anchor for Southern Rock / Roots Jam Rock; use it to hear Southern place names, road images, or working-band grit.",
+        "what_to_listen_for": [
+          "Southern place names, road images, or working-band grit",
+          "Boogie rhythm that feels locomotive"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:song-sweet-home-alabama-1974",
+        "example_type": "song_recording",
+        "display_label": "Sweet Home Alabama - Lynyrd Skynyrd",
+        "why_this_example_matters": "Sweet Home Alabama - Lynyrd Skynyrd is a graph-validated anchor for Southern Rock / Roots Jam Rock; use it to hear Boogie rhythm that feels locomotive.",
+        "what_to_listen_for": [
+          "Boogie rhythm that feels locomotive"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:song-free-bird-1973",
+        "example_type": "song_recording",
+        "display_label": "Free Bird - Lynyrd Skynyrd",
+        "why_this_example_matters": "Free Bird - Lynyrd Skynyrd is a graph-validated anchor for Southern Rock / Roots Jam Rock; use it to hear Dual or triple guitar lines.",
+        "what_to_listen_for": [
+          "Dual or triple guitar lines",
+          "Blues bends inside country-rock progressions"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_03/archetype_018"
+      ],
+      "after": [
+        "family_03/archetype_020"
+      ],
+      "related": [
+        "family_03/archetype_018",
+        "family_03/archetype_020"
+      ],
+      "copy": "Use Southern Rock / Roots Jam Rock as a contextual road inside Classic Rock, Album Rock, Progressive Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "019-dyk-1",
+        "copy": "At Fillmore East is as important for live-rock form as for Southern identity.",
+        "source_ref_ids": [
+          "019_allmusic_southern_rock"
+        ]
+      },
+      {
+        "card_id": "019-dyk-2",
+        "copy": "ZZ Top can fit through Texas boogie even when later studio craft gets slicker.",
+        "source_ref_ids": [
+          "019_rockhall_allman_brothers"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether southern rock / roots jam rock is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "The Southern guitar-rock road where blues, country, boogie, jam interplay, and regional identity meet arena-scale hooks.",
+      "It gave classic rock a regional voice and created a route from blues/country roots to jam-band culture and arena standards.",
+      "The guitars often converse rather than simply stack. Even the big anthems carry bar-band, blues, or country traces."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat Southern identity alone as enough; the musical evidence needs blues, country, boogie, guitar interplay, or roots-jam behavior.",
+    "personalization_hooks": [
+      {
+        "hook_id": "019-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[019]",
+          "atlas_state.family_affinity[3]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[019] >= 0.65 || atlas_state.family_affinity[3] >= 0.65",
+        "copy_variant": "Your Atlas signals make Southern Rock / Roots Jam Rock useful as a contextual landmark.",
+        "fallback_copy": "Use Southern Rock / Roots Jam Rock as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "019-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_03/archetype_019 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_03/archetype_019",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Southern Rock / Roots Jam Rock before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "019-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_03/archetype_019 || atlas_state.boundary_question_results has boundary_negative for family_03/archetype_019",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Southern Rock / Roots Jam Rock.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "019-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_03/archetype_019 || atlas_state.related_mission_ids references family_03/archetype_019",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "019-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_03/archetype_019 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_03/archetype_019 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_03/archetype_019",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Southern Rock / Roots Jam Rock.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_3": {
+        "title": "Normalized canonical graph export, Family 3",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_3/normalized_family_3.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "019_allmusic_southern_rock": {
+        "title": "Southern Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/southern-rock-ma0000002868",
+        "source_type": "music_reference",
+        "audit_use": "Directly defines Southern rock's blues, country, boogie, and rock blend.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines Southern rock's blues, country, boogie, and rock blend."
+      },
+      "019_rockhall_allman_brothers": {
+        "title": "The Allman Brothers Band",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/allman-brothers-band/",
+        "source_type": "museum_reference",
+        "audit_use": "Anchors the improvisational dual-guitar and jam side of the lane.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors the improvisational dual-guitar and jam side of the lane."
+      },
+      "019_rockhall_lynyrd_skynyrd": {
+        "title": "Lynyrd Skynyrd",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/lynyrd-skynyrd/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the anthem, triple-guitar, and Southern-identity side of the archetype.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the anthem, triple-guitar, and Southern-identity side of the archetype."
+      },
+      "019_rockhall_zz_top": {
+        "title": "ZZ Top",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/zz-top/",
+        "source_type": "museum_reference",
+        "audit_use": "Documents the Texas blues-boogie branch and its durable riff identity.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the Texas blues-boogie branch and its durable riff identity."
+      },
+      "rockhall_allman_brothers": {
+        "title": "The Allman Brothers Band",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-allman-brothers-band/",
+        "source_type": "museum_reference",
+        "audit_use": "Southern rock, blues, country, and improvisational jam lineage.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Southern rock, blues, country, and improvisational jam lineage."
+      },
+      "britannica_country_music": {
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      "britannica_rock_music": {
+        "title": "Rock music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music",
+        "source_type": "reference",
+        "audit_use": "Broad rock-history context across album rock, hard rock, punk, and alternative lineages.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad rock-history context across album rock, hard rock, punk, and alternative lineages."
+      },
+      "americana_music_association": {
+        "title": "About Americana Music",
+        "publisher": "Americana Music Association",
+        "url": "https://americanamusic.org/",
+        "source_type": "industry_organization",
+        "audit_use": "Americana as roots, country, folk, blues, and rock lineage context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Americana as roots, country, folk, blues, and rock lineage context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "019-claim-01-blues-country-boogie",
+        "claim_text": "Southern rock blends blues, country, boogie, soul feel, and rock volume into a regional guitar-band language.",
+        "source_ref_ids": [
+          "019_allmusic_southern_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019-claim-02-allman-jam",
+        "claim_text": "The Allman Brothers Band defines the roots-jam side through twin guitars, blues improvisation, jazz-like interplay, and long live versions.",
+        "source_ref_ids": [
+          "019_rockhall_allman_brothers"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:the-allman-brothers-band",
+          "album:the-allman-brothers-band-at-fillmore-east",
+          "song_recording:the-allman-brothers-band-whipping-post"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019-claim-03-skynyrd-anthem",
+        "claim_text": "Lynyrd Skynyrd represents the anthem side, where multiple guitars, plainspoken storytelling, and regional pride become arena-scale rock memory.",
+        "source_ref_ids": [
+          "019_rockhall_lynyrd_skynyrd"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "why_it_mattered",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:lynyrd-skynyrd",
+          "song_recording:lynyrd-skynyrd-free-bird",
+          "song_recording:lynyrd-skynyrd-sweet-home-alabama"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019-claim-04-zz-top-boogie",
+        "claim_text": "ZZ Top sharpens the Texas boogie branch: blues riffs are stripped down, tightened, and made immediately recognizable.",
+        "source_ref_ids": [
+          "019_rockhall_zz_top"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:zz-top",
+          "song_recording:zz-top-la-grange"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "019-southern_rock_roots_jam_rock-boundary",
+        "claim_text": "Southern Rock / Roots Jam Rock's boundary is clearest when Dual or triple guitar lines and Blues bends inside country-rock progressions appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "019_allmusic_southern_rock",
+          "019_rockhall_allman_brothers"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_03/archetype_019",
+          "artist:artist-allman-brothers-band",
+          "artist:artist-lynyrd-skynyrd"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Southern Rock / Roots Jam Rock: Allman Brothers, Lynyrd Skynyrd, ZZ Top, blues-country-boogie blend, dual guitars, jam bands, regional Southern identity.",
+    "selected_sources": [
+      {
+        "source_ref_id": "019_allmusic_southern_rock",
+        "title": "Southern Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/southern-rock-ma0000002868",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines Southern rock's blues, country, boogie, and rock blend."
+      },
+      {
+        "source_ref_id": "019_rockhall_allman_brothers",
+        "title": "The Allman Brothers Band",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/allman-brothers-band/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Anchors the improvisational dual-guitar and jam side of the lane."
+      },
+      {
+        "source_ref_id": "019_rockhall_lynyrd_skynyrd",
+        "title": "Lynyrd Skynyrd",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/lynyrd-skynyrd/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the anthem, triple-guitar, and Southern-identity side of the archetype."
+      },
+      {
+        "source_ref_id": "019_rockhall_zz_top",
+        "title": "ZZ Top",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/zz-top/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the Texas blues-boogie branch and its durable riff identity."
+      },
+      {
+        "source_ref_id": "rockhall_allman_brothers",
+        "title": "The Allman Brothers Band",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-allman-brothers-band/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Southern rock, blues, country, and improvisational jam lineage."
+      },
+      {
+        "source_ref_id": "britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      {
+        "source_ref_id": "britannica_rock_music",
+        "title": "Rock music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rock-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad rock-history context across album rock, hard rock, punk, and alternative lineages."
+      },
+      {
+        "source_ref_id": "americana_music_association",
+        "title": "About Americana Music",
+        "publisher": "Americana Music Association",
+        "url": "https://americanamusic.org/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Americana as roots, country, folk, blues, and rock lineage context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "019_reject_country_pop",
+        "title": "Country pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002535",
+        "why_rejected": "Country-pop crossover is relevant to later radio, but it misses the guitar, blues, boogie, and jam-rock core.",
+        "source_type": "music_reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 019_allmusic_southern_rock anchors the named archetype rather than only its family. Example support: 019_rockhall_allman_brothers, 019_rockhall_lynyrd_skynyrd, 019_rockhall_zz_top ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 86,
+    "scene_anchor_refs": [
+      "song|lynyrd skynyrd|simple man",
+      "song|marshall tucker band|heard it in a love song",
+      "song|allman brothers band|midnight rider",
+      "song|zz top|la grange"
+    ],
+    "ladder_example_refs": [
+      "song|atlanta rhythm section|so into you",
+      "song|38 special|hold on loosely",
+      "song|black crowes|remedy",
+      "album|band|music from big pink",
+      "song|elvin bishop|fooled around and fell in love",
+      "album|widespread panic|space wrangler",
+      "album|north mississippi allstars|shake hands with shorty",
+      "song|charlie daniels band|south s gonna do it again"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

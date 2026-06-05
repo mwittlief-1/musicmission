@@ -1,0 +1,310 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/contracts/mission_enrichment/mission_enrichment_input_v0_2.schema.json",
+  "title": "Cartenza Mission Enrichment Input v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "runtime_context",
+    "user_atlas_context_brief",
+    "mission_context",
+    "route_items",
+    "allowed_secondary_reaction_tags",
+    "copy_guardrails"
+  ],
+  "properties": {
+    "schema_version": { "const": "mission_enrichment_input_v0_2" },
+    "runtime_context": { "$ref": "#/$defs/runtime_context" },
+    "user_atlas_context_brief": { "$ref": "#/$defs/user_atlas_context_brief" },
+    "mission_context": { "$ref": "#/$defs/mission_context" },
+    "route_items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/route_item" }
+    },
+    "allowed_secondary_reaction_tags": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/registry_tag" }
+    },
+    "copy_guardrails": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "$defs": {
+    "runtime_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "surface",
+        "mission_ordinal_for_user",
+        "max_secondary_tags_per_song",
+        "copy_mode",
+        "language_style",
+        "avoid_founder_vocabulary"
+      ],
+      "properties": {
+        "surface": { "const": "mission_card_and_feedback_chips" },
+        "mission_ordinal_for_user": { "type": "integer", "minimum": 1 },
+        "max_secondary_tags_per_song": { "const": 6 },
+        "copy_mode": { "enum": ["external_alpha"] },
+        "language_style": { "enum": ["clear_warm_music_literate"] },
+        "avoid_founder_vocabulary": { "const": true }
+      }
+    },
+    "confidence": {
+      "enum": ["low", "medium", "medium_high", "high"]
+    },
+    "brief_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "confidence"],
+      "properties": {
+        "pattern_id": { "type": "string", "minLength": 1 },
+        "question_id": { "type": "string", "minLength": 1 },
+        "boundary_id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "evidence_type": { "type": "string", "minLength": 1 }
+      }
+    },
+    "user_atlas_context_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmed_positive_patterns",
+        "open_questions",
+        "known_boundaries",
+        "recent_learning_summary",
+        "coverage_notes"
+      ],
+      "properties": {
+        "confirmed_positive_patterns": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/brief_entry" }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/brief_entry" }
+        },
+        "known_boundaries": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/brief_entry" }
+        },
+        "recent_learning_summary": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "coverage_notes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "mission_type": {
+      "enum": [
+        "archetype_depth_test",
+        "artist_depth_test",
+        "album_container_test",
+        "bridge_test",
+        "boundary_test",
+        "context_dependence_test",
+        "contrast_test",
+        "frontier_test",
+        "gateway_test",
+        "recovery_test",
+        "user_requested"
+      ]
+    },
+    "mission_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_id",
+        "mission_type",
+        "risk_level",
+        "mission_hypothesis",
+        "why_this_mission_now",
+        "success_definition"
+      ],
+      "properties": {
+        "mission_id": { "type": "string", "minLength": 1 },
+        "mission_type": { "$ref": "#/$defs/mission_type" },
+        "risk_level": { "enum": ["low", "medium", "high"] },
+        "mission_hypothesis": { "type": "string", "minLength": 1 },
+        "why_this_mission_now": { "type": "string", "minLength": 1 },
+        "success_definition": { "type": "string", "minLength": 1 }
+      }
+    },
+    "facet": {
+      "enum": [
+        "form_container",
+        "melody_harmony",
+        "rhythm_body",
+        "production",
+        "sonic_texture",
+        "vocal_performance",
+        "instrumental_performance",
+        "lyrics_language",
+        "narrative_theme",
+        "emotion_theme",
+        "atmosphere",
+        "energy_profile",
+        "dynamic_shape",
+        "arrangement",
+        "activity_context",
+        "social_context",
+        "context_rule"
+      ]
+    },
+    "song_affinity_tag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "facet"],
+      "properties": {
+        "tag": { "type": "string", "pattern": "^[a-z_]+:[a-z0-9_]+$" },
+        "facet": { "$ref": "#/$defs/facet" }
+      }
+    },
+    "alignment": {
+      "enum": [
+        "matches_known_positive",
+        "matches_known_negative",
+        "supports_confirmed_pattern",
+        "stretches_known_positive",
+        "tests_boundary",
+        "tests_open_question",
+        "frontier_probe",
+        "contrast_item",
+        "control_item",
+        "recovery_item",
+        "overexposure_check",
+        "novelty_check",
+        "context_dependence_check"
+      ]
+    },
+    "user_alignment_hint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "alignment"],
+      "properties": {
+        "tag": { "type": "string", "pattern": "^[a-z_]+:[a-z0-9_]+$" },
+        "alignment": { "$ref": "#/$defs/alignment" }
+      }
+    },
+    "applicability_flags": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "has_vocals",
+        "has_lyrics",
+        "lyrics_language_known",
+        "is_instrumental",
+        "is_live_or_alt_version",
+        "album_context_relevant",
+        "long_form_context_relevant"
+      ],
+      "properties": {
+        "has_vocals": { "type": "boolean" },
+        "has_lyrics": { "type": "boolean" },
+        "lyrics_language_known": { "type": "boolean" },
+        "is_instrumental": { "type": "boolean" },
+        "is_live_or_alt_version": { "type": "boolean" },
+        "album_context_relevant": { "type": "boolean" },
+        "long_form_context_relevant": { "type": "boolean" }
+      }
+    },
+    "route_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "canonical_song_recording_id",
+        "sequence",
+        "title",
+        "artist",
+        "year",
+        "route_role",
+        "why_included",
+        "song_affinity_tags",
+        "user_alignment_hints",
+        "prefiltered_secondary_tag_ids",
+        "applicability_flags"
+      ],
+      "properties": {
+        "item_id": { "type": "string", "minLength": 1 },
+        "canonical_song_recording_id": { "type": "string", "minLength": 1 },
+        "sequence": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "artist": { "type": "string", "minLength": 1 },
+        "year": { "type": ["integer", "null"], "minimum": 0 },
+        "route_role": {
+          "enum": [
+            "anchor",
+            "probe",
+            "stretch",
+            "boundary",
+            "contrast",
+            "control",
+            "bridge",
+            "context",
+            "comparator"
+          ]
+        },
+        "why_included": { "type": "string", "minLength": 1 },
+        "song_affinity_tags": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 8,
+          "items": { "$ref": "#/$defs/song_affinity_tag" }
+        },
+        "user_alignment_hints": {
+          "type": "array",
+          "minItems": 0,
+          "items": { "$ref": "#/$defs/user_alignment_hint" }
+        },
+        "prefiltered_secondary_tag_ids": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 14,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[A-Z0-9_]+$" }
+        },
+        "applicability_flags": { "$ref": "#/$defs/applicability_flags" },
+        "artist_context_available": { "type": "boolean" }
+      }
+    },
+    "primary_reaction": {
+      "enum": ["love", "like", "ok", "dislike"]
+    },
+    "registry_tag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "display_label",
+        "valid_primary_reactions",
+        "atlas_effect",
+        "allowed_facets"
+      ],
+      "properties": {
+        "tag_id": { "type": "string", "pattern": "^[A-Z0-9_]+$" },
+        "display_label": { "type": "string", "minLength": 1 },
+        "valid_primary_reactions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/primary_reaction" }
+        },
+        "atlas_effect": { "type": "string", "minLength": 1 },
+        "allowed_facets": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/facet" }
+        }
+      }
+    }
+  }
+}

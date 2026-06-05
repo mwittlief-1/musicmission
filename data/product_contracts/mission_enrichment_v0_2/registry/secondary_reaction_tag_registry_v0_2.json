@@ -1,0 +1,422 @@
+{
+  "schema_version": "secondary_reaction_tag_registry_v0_2",
+  "registry_status": "runtime_candidate",
+  "tags": {
+    "HOOK_WORKED": {
+      "tag_id": "HOOK_WORKED",
+      "display_label": "The hook worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_songcraft_signal",
+      "allowed_facets": ["form_container", "melody_harmony"],
+      "category": "positive_confirming"
+    },
+    "MELODY_WORKED": {
+      "tag_id": "MELODY_WORKED",
+      "display_label": "The melody worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_melody_signal",
+      "allowed_facets": ["melody_harmony"],
+      "category": "positive_confirming"
+    },
+    "GROOVE_WORKED": {
+      "tag_id": "GROOVE_WORKED",
+      "display_label": "The groove worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_rhythm_body_signal",
+      "allowed_facets": ["rhythm_body"],
+      "category": "positive_confirming"
+    },
+    "BEAT_WORKED": {
+      "tag_id": "BEAT_WORKED",
+      "display_label": "The beat worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_beat_or_rhythm_signal",
+      "allowed_facets": ["rhythm_body", "production"],
+      "category": "positive_confirming"
+    },
+    "VOICE_WORKED": {
+      "tag_id": "VOICE_WORKED",
+      "display_label": "The voice worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_vocal_signal",
+      "allowed_facets": ["vocal_performance"],
+      "category": "positive_confirming"
+    },
+    "PERFORMANCE_WORKED": {
+      "tag_id": "PERFORMANCE_WORKED",
+      "display_label": "The performance worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_performance_signal",
+      "allowed_facets": ["vocal_performance", "instrumental_performance"],
+      "category": "positive_confirming"
+    },
+    "LYRICS_WORKED": {
+      "tag_id": "LYRICS_WORKED",
+      "display_label": "The words worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_lyric_or_story_signal",
+      "allowed_facets": ["lyrics_language", "narrative_theme"],
+      "category": "positive_confirming"
+    },
+    "MOOD_WORKED": {
+      "tag_id": "MOOD_WORKED",
+      "display_label": "The mood worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_mood_signal",
+      "allowed_facets": ["emotion_theme", "atmosphere"],
+      "category": "positive_confirming"
+    },
+    "ENERGY_WORKED": {
+      "tag_id": "ENERGY_WORKED",
+      "display_label": "The energy worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_energy_signal",
+      "allowed_facets": ["energy_profile", "rhythm_body"],
+      "category": "positive_confirming"
+    },
+    "SOUND_WORKED": {
+      "tag_id": "SOUND_WORKED",
+      "display_label": "The sound worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_sound_or_texture_signal",
+      "allowed_facets": ["sonic_texture", "production"],
+      "category": "positive_confirming"
+    },
+    "PRODUCTION_WORKED": {
+      "tag_id": "PRODUCTION_WORKED",
+      "display_label": "The production worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_production_signal",
+      "allowed_facets": ["production", "sonic_texture"],
+      "category": "positive_confirming"
+    },
+    "ARRANGEMENT_WORKED": {
+      "tag_id": "ARRANGEMENT_WORKED",
+      "display_label": "The arrangement worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_arrangement_signal",
+      "allowed_facets": ["arrangement", "form_container"],
+      "category": "positive_confirming"
+    },
+    "STORY_WORKED": {
+      "tag_id": "STORY_WORKED",
+      "display_label": "The story worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_story_or_theme_signal",
+      "allowed_facets": ["narrative_theme", "lyrics_language"],
+      "category": "positive_confirming"
+    },
+    "BUILD_WORKED": {
+      "tag_id": "BUILD_WORKED",
+      "display_label": "The build worked",
+      "valid_primary_reactions": ["love", "like"],
+      "atlas_effect": "strengthen_dynamic_shape_signal",
+      "allowed_facets": ["dynamic_shape", "arrangement", "form_container"],
+      "category": "positive_confirming"
+    },
+    "SURPRISED_ME": {
+      "tag_id": "SURPRISED_ME",
+      "display_label": "This surprised me",
+      "valid_primary_reactions": ["love", "like", "ok"],
+      "atlas_effect": "open_or_strengthen_novelty_signal",
+      "allowed_facets": [],
+      "category": "positive_confirming"
+    },
+    "WOULD_TRY_MORE_NEARBY": {
+      "tag_id": "WOULD_TRY_MORE_NEARBY",
+      "display_label": "I'd try more nearby",
+      "valid_primary_reactions": ["love", "like", "ok"],
+      "atlas_effect": "open_nearby_exploration",
+      "allowed_facets": [],
+      "category": "positive_confirming"
+    },
+    "GOOD_NOT_CORE": {
+      "tag_id": "GOOD_NOT_CORE",
+      "display_label": "Good, not core",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "mark_waypoint_not_landmark",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "GOOD_NOT_FOR_ME": {
+      "tag_id": "GOOD_NOT_FOR_ME",
+      "display_label": "Good, not for me",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "mark_respect_without_appetite",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "RIGHT_SOUND_WRONG_SONG": {
+      "tag_id": "RIGHT_SOUND_WRONG_SONG",
+      "display_label": "Right sound, wrong song",
+      "valid_primary_reactions": ["like", "ok", "dislike"],
+      "atlas_effect": "split_affinity_from_song_object",
+      "allowed_facets": ["sonic_texture", "production", "arrangement"],
+      "category": "qualified_split_signal"
+    },
+    "RIGHT_ARTIST_WRONG_TRACK": {
+      "tag_id": "RIGHT_ARTIST_WRONG_TRACK",
+      "display_label": "Right artist, wrong track",
+      "valid_primary_reactions": ["like", "ok", "dislike"],
+      "atlas_effect": "split_artist_interest_from_track_fit",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "RIGHT_MOOD_WRONG_MOMENT": {
+      "tag_id": "RIGHT_MOOD_WRONG_MOMENT",
+      "display_label": "Right mood, wrong moment",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "mark_context_dependence",
+      "allowed_facets": ["emotion_theme", "atmosphere", "context_rule"],
+      "category": "qualified_split_signal"
+    },
+    "NEEDS_MORE_CONTEXT": {
+      "tag_id": "NEEDS_MORE_CONTEXT",
+      "display_label": "Might need more context",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "defer_until_contextual_test",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "NEEDS_ANOTHER_LISTEN": {
+      "tag_id": "NEEDS_ANOTHER_LISTEN",
+      "display_label": "Needs another listen",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "mark_uncertain_repeat_test",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "FAMILIAR_BUT_STILL_WORKS": {
+      "tag_id": "FAMILIAR_BUT_STILL_WORKS",
+      "display_label": "Familiar, but still works",
+      "valid_primary_reactions": ["love", "like", "ok"],
+      "atlas_effect": "confirm_despite_familiarity",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "RESPECT_MORE_THAN_WANT": {
+      "tag_id": "RESPECT_MORE_THAN_WANT",
+      "display_label": "I respect it more than I want it",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "mark_respect_without_appetite",
+      "allowed_facets": [],
+      "category": "qualified_split_signal"
+    },
+    "KEEP_AS_WAYPOINT": {
+      "tag_id": "KEEP_AS_WAYPOINT",
+      "display_label": "Keep as waypoint",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "preserve_as_navigation_reference",
+      "allowed_facets": [],
+      "category": "waypoint_uncertainty"
+    },
+    "INTERESTING_NOT_MINE": {
+      "tag_id": "INTERESTING_NOT_MINE",
+      "display_label": "Interesting, not mine",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "mark_boundary_or_low_appetite",
+      "allowed_facets": [],
+      "category": "waypoint_uncertainty"
+    },
+    "MOOD_DEPENDENT": {
+      "tag_id": "MOOD_DEPENDENT",
+      "display_label": "Mood-dependent",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "mark_mood_dependence",
+      "allowed_facets": ["emotion_theme", "atmosphere", "context_rule"],
+      "category": "waypoint_uncertainty"
+    },
+    "CONTEXT_DEPENDENT": {
+      "tag_id": "CONTEXT_DEPENDENT",
+      "display_label": "Context-dependent",
+      "valid_primary_reactions": ["like", "ok"],
+      "atlas_effect": "mark_context_dependence",
+      "allowed_facets": ["context_rule", "activity_context", "social_context"],
+      "category": "waypoint_uncertainty"
+    },
+    "TOO_FAMILIAR_TO_JUDGE": {
+      "tag_id": "TOO_FAMILIAR_TO_JUDGE",
+      "display_label": "Too familiar to judge",
+      "valid_primary_reactions": ["love", "like", "ok"],
+      "atlas_effect": "discount_due_to_familiarity",
+      "allowed_facets": [],
+      "category": "waypoint_uncertainty"
+    },
+    "NOT_TODAY_MAYBE_LATER": {
+      "tag_id": "NOT_TODAY_MAYBE_LATER",
+      "display_label": "Not today, maybe later",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "mark_temporal_context_dependence",
+      "allowed_facets": ["context_rule", "emotion_theme"],
+      "category": "waypoint_uncertainty"
+    },
+    "UNSURE_BUT_CURIOUS": {
+      "tag_id": "UNSURE_BUT_CURIOUS",
+      "display_label": "Unsure, but curious",
+      "valid_primary_reactions": ["ok", "like"],
+      "atlas_effect": "open_frontier_with_uncertainty",
+      "allowed_facets": [],
+      "category": "waypoint_uncertainty"
+    },
+    "TOO_INTENSE": {
+      "tag_id": "TOO_INTENSE",
+      "display_label": "Too intense",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_intensity_fit",
+      "allowed_facets": ["energy_profile", "sonic_texture", "emotion_theme", "rhythm_body"],
+      "category": "negative_boundary"
+    },
+    "TOO_LOW_ENERGY": {
+      "tag_id": "TOO_LOW_ENERGY",
+      "display_label": "Too low-energy",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_low_energy_fit",
+      "allowed_facets": ["energy_profile", "rhythm_body", "dynamic_shape"],
+      "category": "negative_boundary"
+    },
+    "TOO_SMOOTH": {
+      "tag_id": "TOO_SMOOTH",
+      "display_label": "Too smooth",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_smoothness_fit",
+      "allowed_facets": ["production", "sonic_texture", "vocal_performance"],
+      "category": "negative_boundary"
+    },
+    "TOO_ROUGH": {
+      "tag_id": "TOO_ROUGH",
+      "display_label": "Too rough",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_roughness_fit",
+      "allowed_facets": ["production", "sonic_texture", "vocal_performance"],
+      "category": "negative_boundary"
+    },
+    "TOO_BUSY": {
+      "tag_id": "TOO_BUSY",
+      "display_label": "Too busy",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_density_fit",
+      "allowed_facets": ["arrangement", "production", "rhythm_body"],
+      "category": "negative_boundary"
+    },
+    "TOO_SPARSE": {
+      "tag_id": "TOO_SPARSE",
+      "display_label": "Too sparse",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_sparseness_fit",
+      "allowed_facets": ["arrangement", "production", "dynamic_shape"],
+      "category": "negative_boundary"
+    },
+    "TOO_REPETITIVE": {
+      "tag_id": "TOO_REPETITIVE",
+      "display_label": "Too repetitive",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_repetition_fit",
+      "allowed_facets": ["form_container", "rhythm_body", "production"],
+      "category": "negative_boundary"
+    },
+    "TOO_PREDICTABLE": {
+      "tag_id": "TOO_PREDICTABLE",
+      "display_label": "Too predictable",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_predictability_fit",
+      "allowed_facets": ["form_container", "melody_harmony", "production"],
+      "category": "negative_boundary"
+    },
+    "TOO_ABSTRACT": {
+      "tag_id": "TOO_ABSTRACT",
+      "display_label": "Too abstract",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_abstraction_fit",
+      "allowed_facets": ["form_container", "lyrics_language", "melody_harmony", "production"],
+      "category": "negative_boundary"
+    },
+    "TOO_DRAMATIC": {
+      "tag_id": "TOO_DRAMATIC",
+      "display_label": "Too dramatic",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_drama_fit",
+      "allowed_facets": ["vocal_performance", "emotion_theme", "arrangement"],
+      "category": "negative_boundary"
+    },
+    "TOO_DETACHED": {
+      "tag_id": "TOO_DETACHED",
+      "display_label": "Too detached",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_detachment_fit",
+      "allowed_facets": ["vocal_performance", "emotion_theme", "production"],
+      "category": "negative_boundary"
+    },
+    "VOICE_DID_NOT_WORK": {
+      "tag_id": "VOICE_DID_NOT_WORK",
+      "display_label": "The voice did not work",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_vocal_signal",
+      "allowed_facets": ["vocal_performance"],
+      "category": "negative_boundary"
+    },
+    "BEAT_DID_NOT_WORK": {
+      "tag_id": "BEAT_DID_NOT_WORK",
+      "display_label": "The beat did not work",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_beat_or_rhythm_signal",
+      "allowed_facets": ["rhythm_body", "production"],
+      "category": "negative_boundary"
+    },
+    "LYRICS_DID_NOT_WORK": {
+      "tag_id": "LYRICS_DID_NOT_WORK",
+      "display_label": "The words did not work",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_lyric_or_story_signal",
+      "allowed_facets": ["lyrics_language", "narrative_theme"],
+      "category": "negative_boundary"
+    },
+    "PRODUCTION_DID_NOT_WORK": {
+      "tag_id": "PRODUCTION_DID_NOT_WORK",
+      "display_label": "The production did not work",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_production_signal",
+      "allowed_facets": ["production", "sonic_texture"],
+      "category": "negative_boundary"
+    },
+    "NO_CLEAR_HOOK": {
+      "tag_id": "NO_CLEAR_HOOK",
+      "display_label": "No clear hook",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_songcraft_or_hook_signal",
+      "allowed_facets": ["form_container", "melody_harmony"],
+      "category": "negative_boundary"
+    },
+    "NOT_MY_LANE": {
+      "tag_id": "NOT_MY_LANE",
+      "display_label": "Not my lane",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "mark_broad_boundary",
+      "allowed_facets": [],
+      "category": "negative_boundary"
+    },
+    "LESS_LIKE_THIS": {
+      "tag_id": "LESS_LIKE_THIS",
+      "display_label": "Less like this",
+      "valid_primary_reactions": ["dislike"],
+      "atlas_effect": "reduce_nearby_recommendation_weight",
+      "allowed_facets": [],
+      "category": "negative_boundary"
+    },
+    "DID_NOT_HOLD_ATTENTION": {
+      "tag_id": "DID_NOT_HOLD_ATTENTION",
+      "display_label": "Did not hold my attention",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "weaken_attention_or_engagement_fit",
+      "allowed_facets": ["form_container", "dynamic_shape", "arrangement", "production", "rhythm_body"],
+      "category": "negative_boundary"
+    },
+    "WRONG_VERSION_OR_RECORDING": {
+      "tag_id": "WRONG_VERSION_OR_RECORDING",
+      "display_label": "Wrong version or recording",
+      "valid_primary_reactions": ["ok", "dislike"],
+      "atlas_effect": "mark_version_or_recording_issue",
+      "allowed_facets": [],
+      "category": "negative_boundary"
+    }
+  }
+}

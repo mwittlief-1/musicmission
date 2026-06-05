@@ -44,6 +44,7 @@ struct TimeoutError: LocalizedError {
 enum AlphaMissionGenerationError: LocalizedError {
     case localStarterPackResponseDisallowed
     case emptyLiveGenerationImport
+    case missingSurveyEvidence
     case noImportableMissionsAfterAttempts(attempts: Int, lastIssue: String?)
 
     var errorDescription: String? {
@@ -52,6 +53,8 @@ enum AlphaMissionGenerationError: LocalizedError {
             return "Mission generation returned a deprecated starter-pack response that cannot be imported by this build."
         case .emptyLiveGenerationImport:
             return "Mission construction returned no importable app missions."
+        case .missingSurveyEvidence:
+            return "No saved Survey responses were found. Revisit Survey before regenerating missions."
         case .noImportableMissionsAfterAttempts(let attempts, let lastIssue):
             let suffix = lastIssue.map { " Last issue: \($0)" } ?? ""
             return "Mission construction did not return enough app-importable missions after \(attempts) build attempt\(attempts == 1 ? "" : "s").\(suffix)"
@@ -201,6 +204,7 @@ final class AppModel: ObservableObject {
     let musicAuthorization: MusicAuthorizationService
     let reactionStore = ReactionStore()
     let supabaseAuth: SupabaseAuthService
+    let atlasHomeReadoutStore: AtlasHomeReadoutStore
     let atlasExplainerStore: AtlasExplainerStore
 
     private let supabaseConfig: SupabaseAlphaConfig
@@ -233,6 +237,7 @@ final class AppModel: ObservableObject {
         exportFileStore: ExportFileStore = ExportFileStore(),
         sessionPersistenceStore: SessionPersistenceStore = SessionPersistenceStore(),
         missionProvider: any MissionProviding = LocalMissionProvider(),
+        atlasHomeReadoutStore: AtlasHomeReadoutStore = AtlasHomeReadoutStore(),
         atlasExplainerStore: AtlasExplainerStore = AtlasExplainerStore(),
         supabaseConfig: SupabaseAlphaConfig = .fromBundle(),
         supabaseAuthService: SupabaseAuthService? = nil,
@@ -256,6 +261,7 @@ final class AppModel: ObservableObject {
         self.exportFileStore = exportFileStore
         self.sessionPersistenceStore = sessionPersistenceStore
         self.missionProvider = missionProvider
+        self.atlasHomeReadoutStore = atlasHomeReadoutStore
         self.atlasExplainerStore = atlasExplainerStore
         self.supabaseConfig = supabaseConfig
         self.supabaseAuth = resolvedAuthService
@@ -297,6 +303,10 @@ final class AppModel: ObservableObject {
 
     func loadAtlasExplainers() {
         atlasExplainerStore.load()
+    }
+
+    func loadAtlasHomeReadout() {
+        atlasHomeReadoutStore.load()
     }
 
     func loadMissionLibrary() {
@@ -629,6 +639,62 @@ final class AppModel: ObservableObject {
             )
             recordClientErrorDiagnostic(error, category: "survey_opportunity_mission_generation_failed")
             lastActionMessage = error.localizedDescription
+            return false
+        }
+    }
+
+    @discardableResult
+    func regenerateMissionBatchFromCurrentSurvey() async -> Bool {
+        guard !firstMissionGenerationState.isLoading else {
+            return false
+        }
+
+        let targetMissionCount = AlphaMissionGenerationConfig.requiredMissionCount
+        firstMissionGenerationProgress = MissionGenerationProgress(
+            completedCount: 0,
+            targetCount: targetMissionCount,
+            activeMissionNumber: nil,
+            detail: "Sending saved Survey evidence through Cartenza mission generation."
+        )
+        firstMissionGenerationState = .loading
+        lastActionMessage = "Regenerating missions from current Survey evidence..."
+
+        do {
+            guard supabaseConfig.isConfiguredForRemoteCalls else {
+                throw SupabaseClientError.missingConfiguration
+            }
+
+            let session = surveyEvidenceBuilder.loadPersistedSurveySession()
+            guard !session.responses.isEmpty else {
+                throw AlphaMissionGenerationError.missingSurveyEvidence
+            }
+
+            let accessToken = try await missionGenerationAccessToken()
+            let generatedBatch = try await makeRemoteMissionBatchFromCurrentSurvey(
+                accessToken: accessToken,
+                targetMissionCount: targetMissionCount
+            )
+            try replaceReviewedMissionBatch(with: generatedBatch.responseData)
+
+            firstMissionGenerationProgress = MissionGenerationProgress(
+                completedCount: generatedBatch.assignments.count,
+                targetCount: targetMissionCount,
+                activeMissionNumber: nil,
+                detail: "Regenerated \(generatedBatch.assignments.count) missions from saved Survey evidence."
+            )
+            firstMissionGenerationState = .loaded
+            lastActionMessage = "Regenerated \(generatedBatch.assignments.count) missions from current Survey evidence. Prior mission sessions were cleared after the new batch imported."
+            return true
+        } catch {
+            firstMissionGenerationState = .failed(error.localizedDescription)
+            firstMissionGenerationProgress = MissionGenerationProgress(
+                completedCount: min(reviewedMissionAssignmentCount, targetMissionCount),
+                targetCount: targetMissionCount,
+                activeMissionNumber: nil,
+                detail: "Mission regeneration failed before replacing the current batch."
+            )
+            recordClientErrorDiagnostic(error, category: "manual_mission_regeneration_failed")
+            lastActionMessage = "Mission regeneration failed: \(error.localizedDescription)"
             return false
         }
     }
@@ -1443,6 +1509,167 @@ final class AppModel: ObservableObject {
             }
             return anonKey
         }
+    }
+
+    private struct RemoteMissionBatch {
+        let responseData: [Data]
+        let assignments: [MissionAssignment]
+    }
+
+    private func missionGenerationAccessToken() async throws -> String {
+        do {
+            return try await supabaseAuth.validAccessToken()
+        } catch {
+            guard let anonKey = supabaseConfig.anonKey,
+                  !anonKey.isEmpty else {
+                throw error
+            }
+            return anonKey
+        }
+    }
+
+    private func makeRemoteMissionBatchFromCurrentSurvey(
+        accessToken: String,
+        targetMissionCount: Int
+    ) async throws -> RemoteMissionBatch {
+        let tempDirectory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("cartenza_remote_mission_regeneration", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        defer {
+            try? FileManager.default.removeItem(at: tempDirectory)
+        }
+
+        let tempProvider = LocalMissionProvider(
+            reviewedMissionStore: ReviewedMissionStore(baseDirectoryURL: tempDirectory)
+        )
+        var responseData = [Data]()
+        var importedAssignments = [MissionAssignment]()
+        var alreadySelectedRouteItemIDs = [String]()
+        var alreadySelectedRouteDisplayIdentityKeys = [String]()
+        var lastIssue: String?
+
+        for attempt in 1...AlphaMissionGenerationConfig.maxGenerationAttemptCount {
+            if importedAssignments.count >= targetMissionCount {
+                break
+            }
+
+            let nextMissionNumber = importedAssignments.count + 1
+            firstMissionGenerationProgress = MissionGenerationProgress(
+                completedCount: importedAssignments.count,
+                targetCount: targetMissionCount,
+                activeMissionNumber: nextMissionNumber,
+                detail: "Building mission \(nextMissionNumber) of \(targetMissionCount) from saved Survey evidence."
+            )
+
+            let request = try surveyEvidenceBuilder.makeFirstMissionGenerationRequest(
+                testerAlias: supabaseConfig.testerAlias,
+                requestedBatchSize: targetMissionCount,
+                sourceAppVersion: Self.appVersion,
+                sourceAppBuild: Self.appBuild,
+                batchMissionIndex: nextMissionNumber,
+                batchMissionTotal: targetMissionCount,
+                batchSeed: "ios_manual_regeneration_\(UUID().uuidString)",
+                alreadySelectedRouteItemIDs: alreadySelectedRouteItemIDs,
+                alreadySelectedRouteDisplayIdentityKeys: alreadySelectedRouteDisplayIdentityKeys,
+                storefront: musicEnvironmentSnapshot.storefront ?? "us"
+            )
+            recordMissionGenerationRequestDiagnostic(request: request)
+
+            let data = try await missionGenerationClient.generateFirstMissionBatch(
+                request: request,
+                accessToken: accessToken
+            )
+            let responseSummary = recordMissionGenerationResultDiagnostic(
+                responseData: data,
+                request: request
+            )
+
+            if responseSummary.isLocalStarterPack {
+                throw AlphaMissionGenerationError.localStarterPackResponseDisallowed
+            }
+
+            do {
+                let assignments = try tempProvider.importSupabaseMissionBatchResponseData(
+                    data,
+                    importedAt: Date(),
+                    excludingRouteItemIDs: Set(alreadySelectedRouteItemIDs),
+                    excludingRouteDisplayIdentityKeys: Set(alreadySelectedRouteDisplayIdentityKeys)
+                )
+                guard !assignments.isEmpty else {
+                    throw AlphaMissionGenerationError.emptyLiveGenerationImport
+                }
+
+                responseData.append(data)
+                importedAssignments.append(contentsOf: assignments)
+                alreadySelectedRouteItemIDs = Array(MissionImportGate.routeItemIDs(in: importedAssignments)).sorted()
+                alreadySelectedRouteDisplayIdentityKeys = Array(MissionImportGate.routeDisplayIdentityKeys(in: importedAssignments)).sorted()
+                recordMissionImportResultDiagnostic(
+                    status: "imported",
+                    request: request,
+                    responseSummary: responseSummary,
+                    importedAssignments: assignments,
+                    validationErrors: []
+                )
+            } catch {
+                let issue = responseSummary.retryIssueDescription(fallback: error.localizedDescription)
+                lastIssue = issue
+                recordMissionImportResultDiagnostic(
+                    status: localImportStatus(for: error, generationStatus: responseSummary.status),
+                    request: request,
+                    responseSummary: responseSummary,
+                    importedAssignments: [],
+                    validationErrors: [issue]
+                )
+
+                if shouldContinueGeneration(after: error, generationStatus: responseSummary.status),
+                   attempt < AlphaMissionGenerationConfig.maxGenerationAttemptCount {
+                    firstMissionGenerationProgress = MissionGenerationProgress(
+                        completedCount: importedAssignments.count,
+                        targetCount: targetMissionCount,
+                        activeMissionNumber: nextMissionNumber,
+                        detail: "Retrying mission \(nextMissionNumber) after a blocked generation result."
+                    )
+                    continue
+                }
+
+                throw error
+            }
+        }
+
+        guard importedAssignments.count >= AlphaMissionGenerationConfig.minimumUsableMissionCount else {
+            throw AlphaMissionGenerationError.noImportableMissionsAfterAttempts(
+                attempts: AlphaMissionGenerationConfig.maxGenerationAttemptCount,
+                lastIssue: lastIssue
+            )
+        }
+
+        return RemoteMissionBatch(
+            responseData: responseData,
+            assignments: importedAssignments
+        )
+    }
+
+    private func replaceReviewedMissionBatch(with responseData: [Data]) throws {
+        try missionProvider.resetReviewedAssignments()
+        try sessionPersistenceStore.reset()
+        persistedSessionLibrary = .empty
+        savedExports = []
+        savedExport = nil
+        clearActiveMissionState()
+
+        var importedAssignments = [MissionAssignment]()
+        for data in responseData {
+            let assignments = try missionProvider.importSupabaseMissionBatchResponseData(
+                data,
+                importedAt: Date(),
+                excludingRouteItemIDs: MissionImportGate.routeItemIDs(in: importedAssignments),
+                excludingRouteDisplayIdentityKeys: MissionImportGate.routeDisplayIdentityKeys(in: importedAssignments)
+            )
+            importedAssignments.append(contentsOf: assignments)
+        }
+
+        reloadMissionCatalog(selectMissionID: importedAssignments.first?.mission.missionID)
+        persistCurrentSession()
     }
 
     func switchToLiveMusicKitForPlayback() async {

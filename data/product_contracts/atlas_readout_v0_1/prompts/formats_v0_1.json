@@ -1,0 +1,37 @@
+{
+  "schema_version": "cartenza.atlas_readout_prompt_formats.v0.1",
+  "payload_placeholder": "{{ATLAS_READOUT_EVIDENCE_BRIEF_JSON}}",
+  "variant_placeholder": "{{VARIANT_INSTRUCTION}}",
+  "formats": [
+    {
+      "format_id": "A",
+      "label": "Evidence-Led Analyst",
+      "purpose": "Most precise and grounded. Optimize for faithfulness, specificity, and low overclaim risk.",
+      "user_prompt_template": "Using the AtlasReadoutEvidenceBrief_v0_1 payload below, produce the first post-survey Atlas Landing readout.\n\nPrioritize:\n- clear evidence hierarchy;\n- strongest signal first;\n- concrete examples;\n- cautious confidence language;\n- explicit uncertainty where evidence is mixed;\n- short, app-ready copy.\n\nThe readout should feel like a smart analyst explaining what Cartenza sees so far.\n\nReturn JSON only using the shared output schema.\n\nVariant instruction:\n{{VARIANT_INSTRUCTION}}\n\nPayload:\n{{ATLAS_READOUT_EVIDENCE_BRIEF_JSON}}"
+    },
+    {
+      "format_id": "B",
+      "label": "Cartenza Guide",
+      "purpose": "Most brand/voice-forward. Optimize for warmth, intelligence, and friend-helping-you-find-your-songs energy.",
+      "user_prompt_template": "Using the AtlasReadoutEvidenceBrief_v0_1 payload below, write the first post-survey Atlas Landing readout in Cartenza's voice.\n\nCartenza should sound:\n- intelligent;\n- warm;\n- musically literate;\n- exploratory;\n- specific without being clinical;\n- humble about what it does not know yet.\n\nMake the user feel that the app has started to understand the shape of their listening, but do not overstate the evidence.\n\nReturn JSON only using the shared output schema.\n\nVariant instruction:\n{{VARIANT_INSTRUCTION}}\n\nPayload:\n{{ATLAS_READOUT_EVIDENCE_BRIEF_JSON}}"
+    },
+    {
+      "format_id": "C",
+      "label": "UI Card Composer",
+      "purpose": "Most product-surface-ready. Optimize for clean cards and direct renderability.",
+      "user_prompt_template": "Using the AtlasReadoutEvidenceBrief_v0_1 payload below, create UI-ready copy for an Atlas Landing screen.\n\nThink in sections:\n1. short opening read;\n2. signal cards;\n3. song-shape summary from affinity tags;\n4. uncertainty cards;\n5. bridge into the first missions.\n\nPrioritize scannability, short sections, and clear hierarchy. Avoid long paragraphs. Each card should have a distinct job.\n\nReturn JSON only using the shared output schema.\n\nVariant instruction:\n{{VARIANT_INSTRUCTION}}\n\nPayload:\n{{ATLAS_READOUT_EVIDENCE_BRIEF_JSON}}"
+    },
+    {
+      "format_id": "D",
+      "label": "Hypothesis + Mission Bridge",
+      "purpose": "Most mission-aware. Optimize for explaining why the first missions exist.",
+      "user_prompt_template": "Using the AtlasReadoutEvidenceBrief_v0_1 payload below, produce a post-survey Atlas Landing readout that frames Cartenza's first missions as experiments.\n\nThe readout should:\n- summarize what seems strongest so far;\n- explain what is still uncertain;\n- connect the first mission batch to those uncertainties;\n- make mission playback feel purposeful;\n- avoid implying the missions are recommendations only.\n\nUse words like test, confirm, refine, probe, clarify, and boundary.\n\nReturn JSON only using the shared output schema.\n\nVariant instruction:\n{{VARIANT_INSTRUCTION}}\n\nPayload:\n{{ATLAS_READOUT_EVIDENCE_BRIEF_JSON}}"
+    },
+    {
+      "format_id": "E",
+      "label": "Affinity-Lens First",
+      "purpose": "Most song-shape-forward. Optimize for language around the types of songs, vocal performances, textures, forms, and emotional themes that appear in positive responses.",
+      "user_prompt_template": "Using the AtlasReadoutEvidenceBrief_v0_1 payload below, produce a post-survey Atlas Landing readout that gives special attention to the positive song-affinity rollup.\n\nThe readout should explain not only which regions of music are appearing, but what kinds of songs inside those regions are working:\n- sonic texture;\n- vocal performance;\n- rhythm/body;\n- form/container;\n- emotional theme.\n\nUse the affinity tags carefully. They are early pattern evidence, not final truth.\n\nReturn JSON only using the shared output schema.\n\nVariant instruction:\n{{VARIANT_INSTRUCTION}}\n\nPayload:\n{{ATLAS_READOUT_EVIDENCE_BRIEF_JSON}}"
+    }
+  ]
+}

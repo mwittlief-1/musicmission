@@ -167,6 +167,7 @@ struct RootView: View {
         .preferredColorScheme(.dark)
         .task {
             applyAlphaStateVersionResetIfNeeded()
+            appModel.loadAtlasHomeReadout()
             appModel.loadAtlasExplainers()
             appModel.loadMissionLibrary()
             if surveyCompleted,
@@ -420,7 +421,10 @@ private struct CoreTabShell: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            AtlasExplainerHomeView(store: appModel.atlasExplainerStore)
+            AtlasExplainerHomeView(
+                store: appModel.atlasExplainerStore,
+                readoutStore: appModel.atlasHomeReadoutStore
+            )
                 .tabItem {
                     Label("Atlas", systemImage: "map")
                 }
@@ -505,11 +509,11 @@ private struct ConsentGateView: View {
             VStack(alignment: .leading, spacing: 10) {
                 WaymarkDisclosureRow(title: "Evidence is provisional", detail: "Survey, playback, notes, chips, and skips create Alpha evidence. They do not directly change Atlas truth.")
                 WaymarkDisclosureRow(title: "Music access is explicit", detail: "Apple Music permission is requested before playback or MusicKit-derived signals.")
-                WaymarkDisclosureRow(title: "Sharing is controlled", detail: "Manual Share Evidence remains the fallback. Automatic upload is blocked until final privacy and retention policy is approved.")
+                WaymarkDisclosureRow(title: "Sharing is controlled", detail: "Share Evidence prepares a support backup only when you choose it. Cartenza will say clearly if an Alpha build adds account sync later.")
             }
             .padding(.top, 8)
 
-            Text("Placeholder Alpha acknowledgement copy. Final privacy, terms, retention, deletion, and support language must be supplied before external TestFlight.")
+            Text("This private Alpha stores Survey, mission, playback, notes, and support diagnostics on this device for testing. Sharing evidence is optional and deliberate, and every Atlas signal remains provisional while Cartenza learns from your feedback.")
                 .font(.caption)
                 .foregroundStyle(WaymarkTheme.waypoint)
                 .fixedSize(horizontal: false, vertical: true)
@@ -1177,6 +1181,8 @@ private struct AccountView: View {
                         }
                         .buttonStyle(.bordered)
 
+                        MissionRegenerationPanel()
+
                         Button(role: .destructive, action: resetFirstRun) {
                             Label("Restart First-Run Flow", systemImage: "arrow.counterclockwise")
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -1200,11 +1206,11 @@ private struct AccountView: View {
         ("What does Ok mean?", "Ok means useful, tolerable, or a possible waypoint. It is not the same as Love."),
         ("What does Dislike mean?", "Dislike means Cartenza should learn what failed here."),
         ("Why are some missions risky?", "Missions are tests, not comfort playlists. A clear miss can improve the map."),
-        ("What gets shared?", "For Alpha, use Share Evidence unless a reviewed Supabase upload policy is enabled. Evidence remains provisional."),
+        ("What gets shared?", "Share Evidence prepares a support backup when you choose it. It can include Alpha evidence such as Survey responses, mission reactions, notes, and diagnostics; it remains provisional."),
         ("Can I edit reactions?", "Yes. Use Mission Review to adjust reactions, tags, and notes after listening."),
-        ("Does Cartenza write Atlas truth directly?", "No. App exports are ingestion candidates for review and downstream processing."),
+        ("Does Cartenza write Atlas truth directly?", "No. Your reactions guide the next tests; Cartenza does not treat a single response as permanent Atlas truth."),
         ("Can I restart the Alpha flow?", "Yes. Use the support reset if your local state gets stuck."),
-        ("Why does copy still say Alpha?", "Final privacy, terms, retention, deletion, and support copy is still a release blocker.")
+        ("Why is this still an Alpha?", "This build is testing the evidence loop: Survey, first missions, playback, reactions, and support diagnostics. The map should get clearer through feedback, not pretend to be final on day one.")
     ]
 }
 

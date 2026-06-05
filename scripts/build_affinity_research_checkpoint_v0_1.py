@@ -109,6 +109,7 @@ def compare_sentinels(songs_by_id: dict[str, dict[str, Any]]) -> list[dict[str, 
             continue
         expected_core = core_tags(expected)
         actual_core = core_tags(actual)
+        actual_count = core_tag_count(actual)
         missing = {
             dim: sorted(set(expected_core[dim]) - set(actual_core[dim]))
             for dim in CORE_DIMS
@@ -119,11 +120,26 @@ def compare_sentinels(songs_by_id: dict[str, dict[str, Any]]) -> list[dict[str, 
             for dim in CORE_DIMS
             if set(actual_core[dim]) - set(expected_core[dim])
         }
+        uncovered_dimensions = [
+            dim
+            for dim in CORE_DIMS
+            if expected_core[dim] and not (set(expected_core[dim]) & set(actual_core[dim]))
+        ]
+        density_ok = 4 <= actual_count <= 6
+        contract_compatible = not extra and not uncovered_dimensions and density_ok
         checks.append(
             {
                 "canonical_song_recording_id": sid,
                 "song_title": actual.get("song_title", expected.get("song_title", "")),
-                "status": "matches_sentinel_core" if not missing and not extra else "differs_from_sentinel_guidance",
+                "status": (
+                    "matches_sentinel_core"
+                    if not missing and not extra
+                    else "contract_compatible_sentinel_core"
+                    if contract_compatible
+                    else "differs_from_sentinel_guidance"
+                ),
+                "core_tag_count": actual_count,
+                "uncovered_expected_dimensions": uncovered_dimensions,
                 "missing_expected_core_tags": missing,
                 "additional_researched_core_tags": extra,
             }

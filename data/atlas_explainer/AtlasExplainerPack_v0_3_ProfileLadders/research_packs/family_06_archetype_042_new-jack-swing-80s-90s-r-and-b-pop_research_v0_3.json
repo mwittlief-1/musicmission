@@ -1,0 +1,1508 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_06_archetype_042_new-jack-swing-80s-90s-r-and-b-pop_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_6/normalized_family_6.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 6,
+    "family_slug": "soul-funk-disco-r-and-b-foundations",
+    "family_name": "Soul, Funk, Disco, R&B Foundations",
+    "archetype_id": "042",
+    "archetype_slug": "new-jack-swing-80s-90s-r-and-b-pop",
+    "canonical_graph_ref": "family_06/archetype_042",
+    "existing_graph_label_name": "New Jack Swing / 80s-90s R&B Pop",
+    "editorial_display_title": "New Jack Swing / 80s-90s R&B Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:janet-jackson",
+        "object_id": "janet-jackson",
+        "display_label": "Janet Jackson",
+        "source_membership_id": "family-6-artist-042-janet-jackson",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central 1980s/1990s R&B-pop, dance-pop, and New Jack-adjacent anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:boyz-ii-men",
+        "object_id": "boyz-ii-men",
+        "display_label": "Boyz II Men",
+        "source_membership_id": "family-6-artist-042-boyz-ii-men",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "1990s vocal-group and ballad monoculture anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:tlc",
+        "object_id": "tlc",
+        "display_label": "TLC",
+        "source_membership_id": "family-6-artist-042-tlc",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "High-recognition 1990s R&B-pop group with hip-hop and social-message edges.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:mary-j-blige",
+        "object_id": "mary-j-blige",
+        "display_label": "Mary J. Blige",
+        "source_membership_id": "family-6-artist-042-mary-j-blige",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Hip-hop soul bridge between 1990s R&B pop and neo-soul/adult R&B.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:new-edition",
+        "object_id": "new-edition",
+        "display_label": "New Edition",
+        "source_membership_id": "family-6-artist-042-new-edition",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Boy-band-to-New-Jack bridge and launchpad for Bobby Brown/BBD.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:jodeci",
+        "object_id": "jodeci",
+        "display_label": "Jodeci",
+        "source_membership_id": "family-6-artist-042-jodeci",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Rawer 1990s R&B vocal-group anchor and bridge to hip-hop soul.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:whitney-houston",
+        "object_id": "whitney-houston",
+        "display_label": "Whitney Houston",
+        "source_membership_id": "family-6-artist-042-whitney-houston",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass pop-R&B vocal anchor with enormous radio and karaoke recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:usher",
+        "object_id": "usher",
+        "display_label": "Usher",
+        "source_membership_id": "family-6-artist-042-usher",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-1990s-to-2000s R&B-pop continuity and major survey gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:beyonce",
+        "object_id": "beyonce",
+        "display_label": "Beyonce",
+        "source_membership_id": "family-6-artist-042-beyonce",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Destiny's Child-to-solo R&B-pop bridge with huge normal-user recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:aaliyah",
+        "object_id": "aaliyah",
+        "display_label": "Aaliyah",
+        "source_membership_id": "family-6-artist-042-aaliyah",
+        "roles": [
+          "bridge",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-1990s R&B-pop bridge into futuristic modern R&B production.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bobby-brown",
+        "object_id": "bobby-brown",
+        "display_label": "Bobby Brown",
+        "source_membership_id": "family-6-artist-042-bobby-brown",
+        "roles": [
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "New Jack Swing star with major pop-R&B crossover hits.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:keith-sweat",
+        "object_id": "keith-sweat",
+        "display_label": "Keith Sweat",
+        "source_membership_id": "family-6-artist-042-keith-sweat",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "New Jack and slow-jam radio gateway missing from source seed list.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:janet-jackson-control",
+        "object_id": "janet-jackson-control",
+        "display_label": "Control - Janet Jackson",
+        "source_membership_id": "family-6-album-042-janet-jackson-control",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "R&B-pop control-room album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:janet-jackson-rhythm-nation-1814",
+        "object_id": "janet-jackson-rhythm-nation-1814",
+        "display_label": "Rhythm Nation 1814 - Janet Jackson",
+        "source_membership_id": "family-6-album-042-janet-jackson-rhythm-nation-1814",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Janet's social/dance/R&B-pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:tlc-crazysexycool",
+        "object_id": "tlc-crazysexycool",
+        "display_label": "CrazySexyCool - TLC",
+        "source_membership_id": "family-6-album-042-tlc-crazysexycool",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "1990s R&B-pop album anchor with huge hit density.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:whitney-houston-whitney-houston",
+        "object_id": "whitney-houston-whitney-houston",
+        "display_label": "Whitney Houston - Whitney Houston",
+        "source_membership_id": "family-6-album-042-whitney-houston-whitney-houston",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass pop-R&B debut gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:boyz-ii-men-cooleyhighharmony",
+        "object_id": "boyz-ii-men-cooleyhighharmony",
+        "display_label": "Cooleyhighharmony - Boyz II Men",
+        "source_membership_id": "family-6-album-042-boyz-ii-men-cooleyhighharmony",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Boyz II Men debut and vocal-group gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bobby-brown-dont-be-cruel",
+        "object_id": "bobby-brown-dont-be-cruel",
+        "display_label": "Don't Be Cruel - Bobby Brown",
+        "source_membership_id": "family-6-album-042-bobby-brown-dont-be-cruel",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "New Jack Swing solo-star gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:aaliyah-one-in-a-million",
+        "object_id": "aaliyah-one-in-a-million",
+        "display_label": "One in a Million - Aaliyah",
+        "source_membership_id": "family-6-album-042-aaliyah-one-in-a-million",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Futuristic 1990s R&B-pop bridge into modern R&B.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:new-edition-heart-break",
+        "object_id": "new-edition-heart-break",
+        "display_label": "Heart Break - New Edition",
+        "source_membership_id": "family-6-album-042-new-edition-heart-break",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "New Edition's mature New Jack-era object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:jodeci-diary-of-a-mad-band",
+        "object_id": "jodeci-diary-of-a-mad-band",
+        "display_label": "Diary of a Mad Band - Jodeci",
+        "source_membership_id": "family-6-album-042-jodeci-diary-of-a-mad-band",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Core Jodeci album-world object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:usher-my-way",
+        "object_id": "usher-my-way",
+        "display_label": "My Way - Usher",
+        "source_membership_id": "family-6-album-042-usher-my-way",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Late-90s Usher gateway before Confessions.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:janet-jackson-rhythm-nation",
+        "object_id": "janet-jackson-rhythm-nation",
+        "display_label": "Rhythm Nation - Janet Jackson",
+        "source_membership_id": "family-6-song-042-janet-jackson-rhythm-nation",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dance/social-message R&B-pop mass row.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:whitney-houston-i-wanna-dance-with-somebody",
+        "object_id": "whitney-houston-i-wanna-dance-with-somebody",
+        "display_label": "I Wanna Dance with Somebody - Whitney Houston",
+        "source_membership_id": "family-6-song-042-whitney-houston-i-wanna-dance-with-somebody",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Pop-R&B dancefloor and karaoke mass gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bobby-brown-my-prerogative",
+        "object_id": "bobby-brown-my-prerogative",
+        "display_label": "My Prerogative - Bobby Brown",
+        "source_membership_id": "family-6-song-042-bobby-brown-my-prerogative",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "New Jack Swing attitude and pop crossover anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:bell-biv-devoe-poison",
+        "object_id": "bell-biv-devoe-poison",
+        "display_label": "Poison - Bell Biv DeVoe",
+        "source_membership_id": "family-6-song-042-bell-biv-devoe-poison",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "New Jack Swing cultural-furniture object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:boyz-ii-men-end-of-the-road",
+        "object_id": "boyz-ii-men-end-of-the-road",
+        "display_label": "End of the Road - Boyz II Men",
+        "source_membership_id": "family-6-song-042-boyz-ii-men-end-of-the-road",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "1990s R&B ballad mass anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:tlc-no-scrubs",
+        "object_id": "tlc-no-scrubs",
+        "display_label": "No Scrubs - TLC",
+        "source_membership_id": "family-6-song-042-tlc-no-scrubs",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-90s R&B-pop monoculture object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:janet-jackson-nasty",
+        "object_id": "janet-jackson-nasty",
+        "display_label": "Nasty - Janet Jackson",
+        "source_membership_id": "family-6-song-042-janet-jackson-nasty",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Janet/Jam-Lewis R&B-pop control statement.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:whitney-houston-how-will-i-know",
+        "object_id": "whitney-houston-how-will-i-know",
+        "display_label": "How Will I Know - Whitney Houston",
+        "source_membership_id": "family-6-song-042-whitney-houston-how-will-i-know",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Whitney early pop-R&B gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:boyz-ii-men-ill-make-love-to-you",
+        "object_id": "boyz-ii-men-ill-make-love-to-you",
+        "display_label": "I'll Make Love to You - Boyz II Men",
+        "source_membership_id": "family-6-song-042-boyz-ii-men-ill-make-love-to-you",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Boyz II Men ballad companion row.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:mary-j-blige-real-love",
+        "object_id": "mary-j-blige-real-love",
+        "display_label": "Real Love - Mary J. Blige",
+        "source_membership_id": "family-6-song-042-mary-j-blige-real-love",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Hip-hop soul breakthrough gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:aaliyah-one-in-a-million",
+        "object_id": "aaliyah-one-in-a-million",
+        "display_label": "One in a Million - Aaliyah",
+        "source_membership_id": "family-6-song-042-aaliyah-one-in-a-million",
+        "roles": [
+          "song_first",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Futuristic R&B production bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:swv-weak",
+        "object_id": "swv-weak",
+        "display_label": "Weak - SWV",
+        "source_membership_id": "family-6-song-042-swv-weak",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "1990s female R&B group ballad standard.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:en-vogue-hold-on",
+        "object_id": "en-vogue-hold-on",
+        "display_label": "Hold On - En Vogue",
+        "source_membership_id": "family-6-song-042-en-vogue-hold-on",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Female vocal-group R&B-pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:blackstreet-feat-dr-dre-no-diggity",
+        "object_id": "blackstreet-feat-dr-dre-no-diggity",
+        "display_label": "No Diggity - Blackstreet feat. Dr. Dre",
+        "source_membership_id": "family-6-song-042-blackstreet-feat-dr-dre-no-diggity",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "New Jack-to-hip-hop R&B party standard.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f6-artist-janet-jackson-042",
+        "candidate_id": "survey-f6-artist-janet-jackson-042",
+        "object_type": "artist",
+        "display_label": "Janet Jackson",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-aaliyah-042",
+        "candidate_id": "survey-f6-artist-aaliyah-042",
+        "object_type": "artist",
+        "display_label": "Aaliyah",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-beyonce-042",
+        "candidate_id": "survey-f6-artist-beyonce-042",
+        "object_type": "artist",
+        "display_label": "Beyonce",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-bobby-brown-042",
+        "candidate_id": "survey-f6-artist-bobby-brown-042",
+        "object_type": "artist",
+        "display_label": "Bobby Brown",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-boyz-ii-men-042",
+        "candidate_id": "survey-f6-artist-boyz-ii-men-042",
+        "object_type": "artist",
+        "display_label": "Boyz II Men",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-jodeci-042",
+        "candidate_id": "survey-f6-artist-jodeci-042",
+        "object_type": "artist",
+        "display_label": "Jodeci",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-mary-j-blige-042",
+        "candidate_id": "survey-f6-artist-mary-j-blige-042",
+        "object_type": "artist",
+        "display_label": "Mary J. Blige",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-new-edition-042",
+        "candidate_id": "survey-f6-artist-new-edition-042",
+        "object_type": "artist",
+        "display_label": "New Edition",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-tlc-042",
+        "candidate_id": "survey-f6-artist-tlc-042",
+        "object_type": "artist",
+        "display_label": "TLC",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-usher-042",
+        "candidate_id": "survey-f6-artist-usher-042",
+        "object_type": "artist",
+        "display_label": "Usher",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-whitney-houston-042",
+        "candidate_id": "survey-f6-artist-whitney-houston-042",
+        "object_type": "artist",
+        "display_label": "Whitney Houston",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-en-vogue-042",
+        "candidate_id": "survey-f6-artist-en-vogue-042",
+        "object_type": "artist",
+        "display_label": "En Vogue",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-bell-biv-devoe-042",
+        "candidate_id": "survey-f6-artist-bell-biv-devoe-042",
+        "object_type": "artist",
+        "display_label": "Bell Biv DeVoe",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-keith-sweat-042",
+        "candidate_id": "survey-f6-artist-keith-sweat-042",
+        "object_type": "artist",
+        "display_label": "Keith Sweat",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-artist-swv-042",
+        "candidate_id": "survey-f6-artist-swv-042",
+        "object_type": "artist",
+        "display_label": "SWV",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-janet-jackson-control-042",
+        "candidate_id": "survey-f6-album-janet-jackson-control-042",
+        "object_type": "album",
+        "display_label": "Control",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-janet-jackson-rhythm-nation-1814-042",
+        "candidate_id": "survey-f6-album-janet-jackson-rhythm-nation-1814-042",
+        "object_type": "album",
+        "display_label": "Rhythm Nation 1814",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-boyz-ii-men-cooleyhighharmony-042",
+        "candidate_id": "survey-f6-album-boyz-ii-men-cooleyhighharmony-042",
+        "object_type": "album",
+        "display_label": "Cooleyhighharmony",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-tlc-crazysexycool-042",
+        "candidate_id": "survey-f6-album-tlc-crazysexycool-042",
+        "object_type": "album",
+        "display_label": "CrazySexyCool",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f6-album-bobby-brown-dont-be-cruel-042",
+        "candidate_id": "survey-f6-album-bobby-brown-dont-be-cruel-042",
+        "object_type": "album",
+        "display_label": "Don't Be Cruel",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_06/archetype_041",
+      "family_06/archetype_043"
+    ],
+    "before_archetype_refs": [
+      "family_06/archetype_041"
+    ],
+    "after_archetype_refs": [
+      "family_06/archetype_043"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_6": {
+      "title": "Normalized canonical graph export, Family 6",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_6/normalized_family_6.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "042_allmusic_new_jack_swing": {
+      "title": "New Jack Swing",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/new-jack-swing-ma0000002754",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for new jack swing's R&B and hip-hop production fusion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for new jack swing's R&B and hip-hop production fusion."
+    },
+    "042_rockhall_janet_jackson": {
+      "title": "Janet Jackson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/janet-jackson/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Jackson as an R&B-pop and dance-pop innovator within the era.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Jackson as an R&B-pop and dance-pop innovator within the era."
+    },
+    "042_grammy_teddy_riley": {
+      "title": "Teddy Riley",
+      "publisher": "The Recording Academy",
+      "url": "https://www.grammy.com/artists/teddy-riley/11811",
+      "source_type": "artist_reference",
+      "audit_use": "Supports Riley's central producer role in new jack swing.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Riley's central producer role in new jack swing."
+    },
+    "britannica_rhythm_and_blues": {
+      "title": "Rhythm and blues",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rhythm-and-blues",
+      "source_type": "reference",
+      "audit_use": "R&B labels, crossover, and transitional figures.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "R&B labels, crossover, and transitional figures."
+    },
+    "rockhall_whitney_houston": {
+      "title": "Whitney Houston",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/whitney-houston/",
+      "source_type": "museum_reference",
+      "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+    },
+    "rockhall_michael_jackson": {
+      "title": "Michael Jackson",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/michael-jackson/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop sovereignty, dance, video, and global star image.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Pop sovereignty, dance, video, and global star image."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "042-c01",
+      "claim_text": "New jack swing fuses R&B vocals with hip-hop-influenced drum programming, clipped swing rhythms, and pop-ready choruses.",
+      "source_ref_ids": [
+        "042_allmusic_new_jack_swing",
+        "042_grammy_teddy_riley"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_06/archetype_042",
+        "artist:janet-jackson",
+        "artist:boyz-ii-men",
+        "artist:tlc"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "042-c02",
+      "claim_text": "Teddy Riley is a production anchor because his work codified the hard, syncopated R&B/hip-hop hybrid that named the style.",
+      "source_ref_ids": [
+        "042_grammy_teddy_riley",
+        "042_allmusic_new_jack_swing"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "did_you_know_card"
+      ],
+      "graph_refs": [
+        "family_06/archetype_042"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "042-c03",
+      "claim_text": "Janet Jackson's Control and Rhythm Nation-era work shows how new jack swing and R&B-pop could support choreography, social messaging, and superstar persona.",
+      "source_ref_ids": [
+        "042_rockhall_janet_jackson",
+        "042_allmusic_new_jack_swing"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "artist:janet-jackson",
+        "album:janet-jackson-control",
+        "album:janet-jackson-rhythm-nation-1814",
+        "song_recording:janet-jackson-rhythm-nation"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "042-c04",
+      "claim_text": "Boyz II Men, TLC, and Mary J. Blige show the lane's spread from vocal-group balladry to hip-hop soul attitude and radio pop crossover.",
+      "source_ref_ids": [
+        "042_allmusic_new_jack_swing",
+        "042_rockhall_janet_jackson"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "artist:boyz-ii-men",
+        "artist:tlc",
+        "artist:mary-j-blige"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "042-new_jack_swing_80s_90s_r_and_b_pop-boundary",
+      "claim_text": "New Jack Swing / 80s-90s R&B Pop's boundary is clearest when swinging programmed drums and staccato keyboard hits appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "042_allmusic_new_jack_swing",
+        "042_rockhall_janet_jackson"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_06/archetype_042",
+        "artist:janet-jackson",
+        "artist:boyz-ii-men"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "042-new_jack_swing_80s_90s_r_and_b_pop-examples",
+      "claim_text": "Janet Jackson, Boyz II Men, Control - Janet Jackson gives New Jack Swing / 80s-90s R&B Pop concrete anchors because the examples expose R&B vocal stacks inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "042_rockhall_janet_jackson",
+        "042_grammy_teddy_riley"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_06/archetype_042",
+        "artist:janet-jackson",
+        "artist:boyz-ii-men"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Late-80s and 90s R&B pop with hip-hop drums, swing rhythm, and choreographed polish.",
+    "history_capsule": "New jack swing arrived when R&B absorbed hip-hop production energy without giving up vocal hooks, dance performance, or pop ambition.",
+    "why_it_mattered": "It built the bridge from classic R&B bands and quiet storm into hip-hop soul, 90s R&B groups, and modern pop production.",
+    "what_made_it_distinct": "The beat snaps harder than smooth R&B, but the song still depends on melody and vocal arrangement.",
+    "what_to_listen_for": [
+      "swinging programmed drums",
+      "staccato keyboard hits",
+      "R&B vocal stacks",
+      "dance-pop structure"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:janet-jackson",
+        "example_type": "artist",
+        "display_label": "Janet Jackson",
+        "why_this_example_matters": "Janet Jackson anchors New Jack Swing / 80s-90s R&B Pop by making gospel-shaped vocal force and bass-and-drum groove easier to hear.",
+        "what_to_listen_for": [
+          "swinging programmed drums",
+          "staccato keyboard hits"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:boyz-ii-men",
+        "example_type": "artist",
+        "display_label": "Boyz II Men",
+        "why_this_example_matters": "Boyz II Men anchors New Jack Swing / 80s-90s R&B Pop by making bass-and-drum groove and horns or strings around the vocal easier to hear.",
+        "what_to_listen_for": [
+          "staccato keyboard hits",
+          "R&B vocal stacks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:janet-jackson-control",
+        "example_type": "album",
+        "display_label": "Control - Janet Jackson",
+        "why_this_example_matters": "Control - Janet Jackson anchors New Jack Swing / 80s-90s R&B Pop by making horns or strings around the vocal and syncopated rhythm easier to hear.",
+        "what_to_listen_for": [
+          "R&B vocal stacks",
+          "dance-pop structure"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:janet-jackson-rhythm-nation-1814",
+        "example_type": "album",
+        "display_label": "Rhythm Nation 1814 - Janet Jackson",
+        "why_this_example_matters": "Rhythm Nation 1814 - Janet Jackson anchors New Jack Swing / 80s-90s R&B Pop by making syncopated rhythm and dancefloor or late-night mood control easier to hear.",
+        "what_to_listen_for": [
+          "dance-pop structure"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:janet-jackson-rhythm-nation",
+        "example_type": "song_recording",
+        "display_label": "Rhythm Nation - Janet Jackson",
+        "why_this_example_matters": "Rhythm Nation - Janet Jackson anchors New Jack Swing / 80s-90s R&B Pop by making dancefloor or late-night mood control and gospel-shaped vocal force easier to hear.",
+        "what_to_listen_for": [
+          "swinging programmed drums",
+          "staccato keyboard hits"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:whitney-houston-i-wanna-dance-with-somebody",
+        "example_type": "song_recording",
+        "display_label": "I Wanna Dance with Somebody - Whitney Houston",
+        "why_this_example_matters": "I Wanna Dance with Somebody - Whitney Houston anchors New Jack Swing / 80s-90s R&B Pop by making gospel-shaped vocal force and bass-and-drum groove easier to hear.",
+        "what_to_listen_for": [
+          "staccato keyboard hits",
+          "R&B vocal stacks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_06/archetype_041"
+      ],
+      "after": [
+        "family_06/archetype_043"
+      ],
+      "related": [
+        "family_06/archetype_041",
+        "family_06/archetype_043"
+      ],
+      "copy": "Use New Jack Swing / 80s-90s R&B Pop as a contextual road inside Soul, Funk, Disco, R&B Foundations; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "042-dyk-1",
+        "copy": "Producer identity is unusually important in this lane.",
+        "source_ref_ids": [
+          "042_allmusic_new_jack_swing",
+          "042_grammy_teddy_riley"
+        ]
+      },
+      {
+        "card_id": "042-dyk-2",
+        "copy": "New jack swing helped make hip-hop rhythm part of mainstream R&B grammar.",
+        "source_ref_ids": [
+          "042_grammy_teddy_riley",
+          "042_allmusic_new_jack_swing"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether new jack swing / 80s-90s r&b pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Late-80s and 90s R&B pop with hip-hop drums, swing rhythm, and choreographed polish.",
+      "It built the bridge from classic R&B bands and quiet storm into hip-hop soul, 90s R&B groups, and modern pop production.",
+      "The beat snaps harder than smooth R&B, but the song still depends on melody and vocal arrangement."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not tag every 1990s R&B record as new jack swing; the rhythmic production pattern must be audible.",
+    "personalization_hooks": [
+      {
+        "hook_id": "042-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[042]",
+          "atlas_state.family_affinity[6]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[042] >= 0.65 || atlas_state.family_affinity[6] >= 0.65",
+        "copy_variant": "Your Atlas signals make New Jack Swing / 80s-90s R&B Pop useful as a contextual landmark.",
+        "fallback_copy": "Use New Jack Swing / 80s-90s R&B Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "042-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_06/archetype_042 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_06/archetype_042",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient New Jack Swing / 80s-90s R&B Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "042-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_06/archetype_042 || atlas_state.boundary_question_results has boundary_negative for family_06/archetype_042",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for New Jack Swing / 80s-90s R&B Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "042-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_06/archetype_042 || atlas_state.related_mission_ids references family_06/archetype_042",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "042-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_06/archetype_042 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_06/archetype_042 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_06/archetype_042",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for New Jack Swing / 80s-90s R&B Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_6": {
+        "title": "Normalized canonical graph export, Family 6",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_6/normalized_family_6.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "042_allmusic_new_jack_swing": {
+        "title": "New Jack Swing",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/new-jack-swing-ma0000002754",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for new jack swing's R&B and hip-hop production fusion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for new jack swing's R&B and hip-hop production fusion."
+      },
+      "042_rockhall_janet_jackson": {
+        "title": "Janet Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/janet-jackson/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Jackson as an R&B-pop and dance-pop innovator within the era.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Jackson as an R&B-pop and dance-pop innovator within the era."
+      },
+      "042_grammy_teddy_riley": {
+        "title": "Teddy Riley",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/teddy-riley/11811",
+        "source_type": "artist_reference",
+        "audit_use": "Supports Riley's central producer role in new jack swing.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Riley's central producer role in new jack swing."
+      },
+      "britannica_rhythm_and_blues": {
+        "title": "Rhythm and blues",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rhythm-and-blues",
+        "source_type": "reference",
+        "audit_use": "R&B labels, crossover, and transitional figures.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "R&B labels, crossover, and transitional figures."
+      },
+      "rockhall_whitney_houston": {
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_type": "museum_reference",
+        "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      },
+      "rockhall_michael_jackson": {
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop sovereignty, dance, video, and global star image.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "042-c01",
+        "claim_text": "New jack swing fuses R&B vocals with hip-hop-influenced drum programming, clipped swing rhythms, and pop-ready choruses.",
+        "source_ref_ids": [
+          "042_allmusic_new_jack_swing",
+          "042_grammy_teddy_riley"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_06/archetype_042",
+          "artist:janet-jackson",
+          "artist:boyz-ii-men",
+          "artist:tlc"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042-c02",
+        "claim_text": "Teddy Riley is a production anchor because his work codified the hard, syncopated R&B/hip-hop hybrid that named the style.",
+        "source_ref_ids": [
+          "042_grammy_teddy_riley",
+          "042_allmusic_new_jack_swing"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "did_you_know_card"
+        ],
+        "graph_refs": [
+          "family_06/archetype_042"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042-c03",
+        "claim_text": "Janet Jackson's Control and Rhythm Nation-era work shows how new jack swing and R&B-pop could support choreography, social messaging, and superstar persona.",
+        "source_ref_ids": [
+          "042_rockhall_janet_jackson",
+          "042_allmusic_new_jack_swing"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "artist:janet-jackson",
+          "album:janet-jackson-control",
+          "album:janet-jackson-rhythm-nation-1814",
+          "song_recording:janet-jackson-rhythm-nation"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042-c04",
+        "claim_text": "Boyz II Men, TLC, and Mary J. Blige show the lane's spread from vocal-group balladry to hip-hop soul attitude and radio pop crossover.",
+        "source_ref_ids": [
+          "042_allmusic_new_jack_swing",
+          "042_rockhall_janet_jackson"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "artist:boyz-ii-men",
+          "artist:tlc",
+          "artist:mary-j-blige"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "042-new_jack_swing_80s_90s_r_and_b_pop-boundary",
+        "claim_text": "New Jack Swing / 80s-90s R&B Pop's boundary is clearest when swinging programmed drums and staccato keyboard hits appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "042_allmusic_new_jack_swing",
+          "042_rockhall_janet_jackson"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_06/archetype_042",
+          "artist:janet-jackson",
+          "artist:boyz-ii-men"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "042-new_jack_swing_80s_90s_r_and_b_pop-examples",
+        "claim_text": "Janet Jackson, Boyz II Men, Control - Janet Jackson gives New Jack Swing / 80s-90s R&B Pop concrete anchors because the examples expose R&B vocal stacks inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "042_rockhall_janet_jackson",
+          "042_grammy_teddy_riley"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_06/archetype_042",
+          "artist:janet-jackson",
+          "artist:boyz-ii-men"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "New jack swing and 80s-90s R&B pop: Janet Jackson, Teddy Riley, Boyz II Men, TLC, Mary J. Blige, R&B with hip-hop drum programming.",
+    "selected_sources": [
+      {
+        "source_ref_id": "042_allmusic_new_jack_swing",
+        "title": "New Jack Swing",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/new-jack-swing-ma0000002754",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for new jack swing's R&B and hip-hop production fusion."
+      },
+      {
+        "source_ref_id": "042_rockhall_janet_jackson",
+        "title": "Janet Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/janet-jackson/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Jackson as an R&B-pop and dance-pop innovator within the era."
+      },
+      {
+        "source_ref_id": "042_grammy_teddy_riley",
+        "title": "Teddy Riley",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/teddy-riley/11811",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Riley's central producer role in new jack swing."
+      },
+      {
+        "source_ref_id": "britannica_rhythm_and_blues",
+        "title": "Rhythm and blues",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rhythm-and-blues",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "R&B labels, crossover, and transitional figures."
+      },
+      {
+        "source_ref_id": "rockhall_whitney_houston",
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      },
+      {
+        "source_ref_id": "rockhall_michael_jackson",
+        "title": "Michael Jackson",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/michael-jackson/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop sovereignty, dance, video, and global star image."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "example_object_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "042_reject_disco",
+        "title": "Disco",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/disco",
+        "source_type": "reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Dance-pop background is too broad and misses the hip-hop/R&B production fusion."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly identify the style, its producer vocabulary, and a canonical pop-R&B artist example."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 101,
+    "scene_anchor_refs": [
+      "song|ginuwine|pony",
+      "artist_anchor|brandy|brandy",
+      "song|whitney houston|how will i know",
+      "song|janet jackson|control"
+    ],
+    "ladder_example_refs": [
+      "song|new edition|can you stand the rain",
+      "song|bobby brown|don t be cruel",
+      "song|bell biv devoe|do me",
+      "song|en vogue|hold on",
+      "song|jodeci|come and talk to me",
+      "song|guy|groove me",
+      "artist_anchor|tevin campbell|tevin campbell",
+      "artist_anchor|tony toni tone|tony toni tone"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "atlas_readout_evidence_brief_version": "0.1",
+  "session_summary": {
+    "survey_response_count": 84,
+    "positive_count": 63,
+    "waypoint_count": 19,
+    "negative_count": 1,
+    "unknown_count": 1,
+    "positive_song_count": 23,
+    "tagged_positive_song_count": 21
+  },
+  "strong_signal_clusters": [
+    {
+      "cluster_id": "grunge_90s_alt_center",
+      "plain_label": "90s alternative and grunge center",
+      "confidence": "high",
+      "supporting_examples": [
+        "Nirvana",
+        "Soundgarden",
+        "Pearl Jam",
+        "Alice in Chains",
+        "Smashing Pumpkins",
+        "Nevermind",
+        "Badmotorfinger",
+        "Superunknown",
+        "Ten",
+        "Dirt",
+        "Jar of Flies",
+        "Siamese Dream"
+      ],
+      "scope_note": "Strong early region, not final identity."
+    },
+    {
+      "cluster_id": "pre_alt_source_code",
+      "plain_label": "pre-grunge and source-code alternative",
+      "confidence": "medium",
+      "supporting_examples": [
+        "Joy Division",
+        "Fugazi",
+        "Sonic Youth",
+        "The Replacements",
+        "R.E.M.",
+        "Pixies",
+        "Waiting Room",
+        "Transmission",
+        "Gouge Away",
+        "Doolittle"
+      ],
+      "scope_note": "Promising but less settled than the 90s alternative center."
+    },
+    {
+      "cluster_id": "classic_body_force_album_rock",
+      "plain_label": "classic album-rock with body and scale",
+      "confidence": "medium",
+      "supporting_examples": [
+        "Led Zeppelin",
+        "Led Zeppelin II",
+        "Led Zeppelin IV",
+        "The Who",
+        "Who's Next",
+        "Tommy"
+      ],
+      "scope_note": "Supporting region; do not make it the main readout."
+    },
+    {
+      "cluster_id": "hooky_alt_pop_pressure",
+      "plain_label": "hooky alternative pop with pressure",
+      "confidence": "medium",
+      "supporting_examples": [
+        "Weezer",
+        "Buddy Holly",
+        "Say It Ain't So",
+        "Fountains of Wayne",
+        "Sink to the Bottom"
+      ],
+      "scope_note": "Promising branch; not yet dominant."
+    }
+  ],
+  "positive_song_affinity_rollup": {
+    "source": "survey_positive_songs_joined_to_canonical_song_affinity_tags_v0_1",
+    "included_reactions": ["favorite", "like"],
+    "weighting": {
+      "favorite": 1.5,
+      "like": 1.0
+    },
+    "positive_song_count": 23,
+    "tagged_positive_song_count": 21,
+    "missing_affinity_tag_count": 2,
+    "top_affinity_tags": [
+      {
+        "tag": "sonic_texture:guitar_forward",
+        "facet": "sonic_texture",
+        "song_count": 11,
+        "weighted_score": 12.5,
+        "favorite_count": 3,
+        "like_count": 8,
+        "supporting_examples": [
+          "Nirvana \u2014 Come As You Are",
+          "Radiohead \u2014 Fake Plastic Trees",
+          "Nirvana \u2014 All Apologies",
+          "Creedence Clearwater Revival \u2014 Fortunate Son",
+          "Fugazi \u2014 Waiting Room"
+        ],
+        "safe_interpretation": "A lot of the early positive signal is guitar-forward."
+      },
+      {
+        "tag": "sonic_texture:distorted_guitar",
+        "facet": "sonic_texture",
+        "song_count": 10,
+        "weighted_score": 12.5,
+        "favorite_count": 5,
+        "like_count": 5,
+        "supporting_examples": [
+          "Nirvana \u2014 Smells Like Teen Spirit",
+          "Black Sabbath \u2014 Paranoid",
+          "Nirvana \u2014 In Bloom",
+          "Weezer \u2014 Say It Ain't So",
+          "Pixies \u2014 Gouge Away"
+        ],
+        "safe_interpretation": "Distortion is showing up as a real early signal, especially when it carries hooks, pressure, or emotional charge."
+      },
+      {
+        "tag": "emotion_theme:alienation",
+        "facet": "emotion_theme",
+        "song_count": 10,
+        "weighted_score": 12.0,
+        "favorite_count": 4,
+        "like_count": 6,
+        "supporting_examples": [
+          "Nirvana \u2014 Come As You Are",
+          "Black Sabbath \u2014 Paranoid",
+          "Radiohead \u2014 Fake Plastic Trees",
+          "Nirvana \u2014 Lithium",
+          "Fugazi \u2014 Waiting Room"
+        ],
+        "safe_interpretation": "There is an early emotional pattern around alienation and dislocation, but frame this as a signal to test rather than identity truth."
+      },
+      {
+        "tag": "vocal_performance:urgent_delivery",
+        "facet": "vocal_performance",
+        "song_count": 9,
+        "weighted_score": 11.5,
+        "favorite_count": 5,
+        "like_count": 4,
+        "supporting_examples": [
+          "Nirvana \u2014 Smells Like Teen Spirit",
+          "Black Sabbath \u2014 Paranoid",
+          "Fountains of Wayne \u2014 Sink to the Bottom",
+          "Fleetwood Mac \u2014 Go Your Own Way",
+          "Pixies \u2014 Monkey Gone to Heaven"
+        ],
+        "safe_interpretation": "The voice seems to matter most when it feels urgent or committed, not necessarily conventionally pretty."
+      },
+      {
+        "tag": "form_container:single_craft",
+        "facet": "form_container",
+        "song_count": 9,
+        "weighted_score": 10.5,
+        "favorite_count": 3,
+        "like_count": 6,
+        "supporting_examples": [
+          "Nirvana \u2014 Come As You Are",
+          "Black Sabbath \u2014 Paranoid",
+          "Fountains of Wayne \u2014 Sink to the Bottom",
+          "Pixies \u2014 Monkey Gone to Heaven",
+          "Fugazi \u2014 Waiting Room"
+        ],
+        "safe_interpretation": "The early positives are not only heavy or atmospheric; many are tightly built songs with strong single-level craft."
+      },
+      {
+        "tag": "form_container:anthem",
+        "facet": "form_container",
+        "song_count": 7,
+        "weighted_score": 8.5,
+        "favorite_count": 3,
+        "like_count": 4,
+        "supporting_examples": [
+          "Nirvana \u2014 Smells Like Teen Spirit",
+          "Nirvana \u2014 All Apologies",
+          "Creedence Clearwater Revival \u2014 Fortunate Son",
+          "Fleetwood Mac \u2014 Go Your Own Way",
+          "Nirvana \u2014 Lithium"
+        ],
+        "safe_interpretation": "Anthemic songs are showing up, but the stronger pattern is anthems with pressure, bite, or emotional damage."
+      },
+      {
+        "tag": "rhythm_body:driving_eighths",
+        "facet": "rhythm_body",
+        "song_count": 7,
+        "weighted_score": 8.5,
+        "favorite_count": 3,
+        "like_count": 4,
+        "supporting_examples": [
+          "Black Sabbath \u2014 Paranoid",
+          "Screaming Trees \u2014 Nearly Lost You",
+          "Fountains of Wayne \u2014 Sink to the Bottom",
+          "Creedence Clearwater Revival \u2014 Fortunate Son",
+          "Joy Division \u2014 Transmission"
+        ],
+        "safe_interpretation": "There is a physical forward-motion signal: songs that move with drive rather than drift."
+      }
+    ]
+  },
+  "tensions_and_questions": [
+    {
+      "question_id": "pixies_split_signal",
+      "plain_label": "Pixies split signal",
+      "evidence": "Pixies as artist was only Ok/Fine, but Doolittle and several Pixies songs were positive.",
+      "readout_instruction": "Frame as a useful uncertainty: song and album context may matter."
+    },
+    {
+      "question_id": "rem_context_check",
+      "plain_label": "R.E.M. context check",
+      "evidence": "R.E.M. artist was Favorite, but Murmur was only Fine/Ok.",
+      "readout_instruction": "Do not overstate R.E.M. as fully confirmed; mission feedback should clarify context."
+    },
+    {
+      "question_id": "decemberists_negative",
+      "plain_label": "Theatrical/literary indie caution",
+      "evidence": "The Decemberists received Not For Me.",
+      "readout_instruction": "Treat as caution, not permanent dead end."
+    },
+    {
+      "question_id": "wipers_unknown",
+      "plain_label": "Unknown source-code candidate",
+      "evidence": "Wipers received Don't Know.",
+      "readout_instruction": "Treat unknown as opening, not rejection."
+    }
+  ],
+  "first_mission_batch_summary": [
+    {
+      "mission_id": "MIS_ALPHA_SURVEY_OPPORTUNITY_DEPTH_01",
+      "mission_type": "archetype_depth_test",
+      "readout_label": "Strongest early signal",
+      "risk_level": "low",
+      "test_focus": "90s alternative / grunge center"
+    },
+    {
+      "mission_id": "MIS_ALPHA_SURVEY_OPPORTUNITY_DEPTH_02",
+      "mission_type": "archetype_depth_test",
+      "readout_label": "Second signal",
+      "risk_level": "low",
+      "test_focus": "pre-grunge / 80s alternative source-code"
+    },
+    {
+      "mission_id": "MIS_ALPHA_SURVEY_OPPORTUNITY_BRIDGE_01",
+      "mission_type": "bridge_test",
+      "readout_label": "Nearby bridge",
+      "risk_level": "medium",
+      "test_focus": "whether the strong 90s alt center bridges into adjacent territory"
+    },
+    {
+      "mission_id": "MIS_ALPHA_SURVEY_OPPORTUNITY_BOUNDARY_01",
+      "mission_type": "boundary_test",
+      "readout_label": "Clean edge",
+      "risk_level": "medium",
+      "test_focus": "where strong 90s alternative turns into weaker or overfamiliar territory"
+    },
+    {
+      "mission_id": "MIS_ALPHA_SURVEY_OPPORTUNITY_CONTEXT_01",
+      "mission_type": "context_dependence_test",
+      "readout_label": "Same signal, different frame",
+      "risk_level": "medium",
+      "test_focus": "whether R.E.M., Replacements, Meat Puppets, and Sonic Youth work by context"
+    },
+    {
+      "mission_id": "MIS_ALPHA_SURVEY_OPPORTUNITY_GATEWAY_01",
+      "mission_type": "gateway_test",
+      "readout_label": "Low-risk frontier",
+      "risk_level": "low",
+      "test_focus": "nearby heavy/alt gateway"
+    }
+  ],
+  "copy_guardrails": [
+    "Use early-signal language.",
+    "Be specific but cautious.",
+    "Mention missions as tests, not proof.",
+    "Do not use raw canonical IDs.",
+    "Do not say the user is a grunge listener.",
+    "Do not make unsupported claims about lyrics unless grounded in emotion_theme tags.",
+    "Do not overgeneralize from one artist, album, or song.",
+    "Do not mention Apple Music payload, graph internals, or OpenAI."
+  ],
+  "forbidden_claims": [
+    "You are a grunge fan.",
+    "We know your taste.",
+    "You dislike theatrical music permanently.",
+    "You like angry lyrics.",
+    "You only like guitar music.",
+    "This is your final map."
+  ]
+}

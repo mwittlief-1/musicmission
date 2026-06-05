@@ -159,13 +159,20 @@ def main() -> int:
             errors.append(f"{sid}: overlay membership set mismatch")
         for overlay in overlays:
             mid = overlay.get("membership_id", "")
+            overlay_notes = (overlay.get("overlay_notes") or "").strip()
             for dim in overlay:
                 if dim in CORE_DIMS:
                     errors.append(f"{sid}/{mid}: core dimension leaked into overlay: {dim}")
             for dim in OVERLAY_DIMS:
-                for tag in tags(overlay.get(dim, {})):
+                overlay_tags = tags(overlay.get(dim, {}))
+                for tag in overlay_tags:
                     if tag not in allowed_sets.get(dim, set()):
                         errors.append(f"{sid}/{mid}: noncanonical/misplaced overlay tag {tag} in {dim}")
+                if dim == "routing_caution" and {"safe_gateway", "context_dependent"} & set(overlay_tags):
+                    if len(overlay_notes) < 30:
+                        errors.append(
+                            f"{sid}/{mid}: safe_gateway/context_dependent requires specific overlay_notes"
+                        )
 
         review = song.get("review", {})
         if isinstance(review, dict):

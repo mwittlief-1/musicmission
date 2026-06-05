@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/schemas/atlas_home_what_were_seeing_so_far_v0_2.schema.json",
+  "title": "Atlas Home What We're Seeing So Far v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_fixture_id",
+    "display_model",
+    "sparse_signal_debug",
+    "acceptance_audit"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cartenza.atlas_home_what_were_seeing_so_far.v0.2"
+    },
+    "source_fixture_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "display_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "module_name",
+        "opening_insight",
+        "insight_cards",
+        "setup_line"
+      ],
+      "properties": {
+        "module_name": {
+          "const": "What We're Seeing So Far"
+        },
+        "opening_insight": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "insight_cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/insight_card"
+          }
+        },
+        "setup_line": {
+          "type": ["string", "null"],
+          "maxLength": 180
+        }
+      }
+    },
+    "sparse_signal_debug": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidates"],
+      "properties": {
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sparse_signal_candidate"
+          }
+        }
+      }
+    },
+    "acceptance_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "module_word_count",
+        "opening_word_count",
+        "card_count",
+        "card_roles",
+        "card_title_word_counts",
+        "card_body_word_counts",
+        "evidence_examples_per_card",
+        "sparse_clean_signal_present",
+        "forbidden_patterns_present",
+        "uses_synthetic_fixture_state_only",
+        "runtime_generation_required"
+      ],
+      "properties": {
+        "module_word_count": {
+          "type": "integer",
+          "minimum": 220,
+          "maximum": 425
+        },
+        "opening_word_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 35
+        },
+        "card_count": {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 5
+        },
+        "card_roles": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "contains": {
+            "const": "sparse_clean_signal"
+          },
+          "items": {
+            "$ref": "#/$defs/card_role"
+          }
+        },
+        "card_title_word_counts": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          }
+        },
+        "card_body_word_counts": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 45
+          }
+        },
+        "evidence_examples_per_card": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 5,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
+        },
+        "sparse_clean_signal_present": {
+          "const": true
+        },
+        "forbidden_patterns_present": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "uses_synthetic_fixture_state_only": {
+          "const": true
+        },
+        "runtime_generation_required": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$defs": {
+    "insight_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["signal_role", "title", "body", "evidence_examples"],
+      "properties": {
+        "signal_role": {
+          "$ref": "#/$defs/card_role"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "evidence_examples": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          }
+        }
+      }
+    },
+    "card_role": {
+      "type": "string",
+      "enum": [
+        "strongest_center",
+        "sound_shape",
+        "secondary_branch",
+        "sparse_clean_signal",
+        "open_question_boundary"
+      ]
+    },
+    "sparse_signal_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "positive_examples",
+        "negative_examples",
+        "neutral_examples",
+        "neutral_evidence_note",
+        "has_meaningful_graph_coherence",
+        "has_future_test_value",
+        "eligible",
+        "decision",
+        "surfaced_card_title"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "positive_examples": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "negative_examples": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "neutral_examples": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "neutral_evidence_note": {
+          "type": "string"
+        },
+        "has_meaningful_graph_coherence": {
+          "type": "boolean"
+        },
+        "has_future_test_value": {
+          "type": "boolean"
+        },
+        "eligible": {
+          "type": "boolean"
+        },
+        "decision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "surfaced_card_title": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}

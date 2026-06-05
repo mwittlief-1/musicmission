@@ -1,0 +1,607 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cartenza.local/schemas/atlas_explainer_render_pack_schema_v0_3.json",
+  "title": "Atlas Explainer Render Pack v0.3",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "render_pack_id",
+    "identity",
+    "graph_alignment",
+    "modules",
+    "canonical_examples",
+    "personalization_hooks",
+    "source_claim_refs",
+    "rights_status",
+    "editorial_status",
+    "non_mutation_assertion",
+    "alpha_v0_mission_boundary",
+    "example_ladder"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.3"
+    },
+    "render_pack_id": {
+      "type": "string"
+    },
+    "identity": {
+      "type": "object"
+    },
+    "graph_alignment": {
+      "type": "object"
+    },
+    "modules": {
+      "type": "object",
+      "required": [
+        "atlas_home_region_card",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "did_you_know_card",
+        "what_to_listen_for_prompt",
+        "personalized_atlas_overlay",
+        "canonical_examples_block",
+        "related_roads_lineage_module",
+        "dead_end_false_nearby_caution_module"
+      ],
+      "properties": {
+        "atlas_home_region_card": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "region_scene_page": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "mission_detail_history_module": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "did_you_know_card": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "what_to_listen_for_prompt": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "personalized_atlas_overlay": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "canonical_examples_block": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "related_roads_lineage_module": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "dead_end_false_nearby_caution_module": {
+          "type": "object",
+          "required": [
+            "compact",
+            "standard",
+            "deep"
+          ],
+          "properties": {
+            "compact": {
+              "type": "string"
+            },
+            "standard": {
+              "type": "string"
+            },
+            "deep": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "canonical_examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "example_ref",
+          "example_type",
+          "display_label",
+          "why_this_example_matters",
+          "what_to_listen_for",
+          "graph_ref_validation_status"
+        ],
+        "properties": {
+          "example_ref": {
+            "type": "string"
+          },
+          "example_type": {
+            "enum": [
+              "artist",
+              "album",
+              "song_recording",
+              "survey_candidate"
+            ]
+          },
+          "display_label": {
+            "type": "string"
+          },
+          "why_this_example_matters": {
+            "type": "string"
+          },
+          "what_to_listen_for": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "graph_ref_validation_status": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "minItems": 1
+    },
+    "personalization_hooks": {
+      "type": "array"
+    },
+    "source_claim_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "rights_status": {
+      "enum": [
+        "pass",
+        "needs_review",
+        "blocked"
+      ]
+    },
+    "editorial_status": {
+      "enum": [
+        "draft_research",
+        "pm_review_needed",
+        "visualization_candidate",
+        "alpha_render_candidate",
+        "production_copy_candidate",
+        "blocked"
+      ]
+    },
+    "non_mutation_assertion": {
+      "type": "string"
+    },
+    "alpha_v0_mission_boundary": {
+      "type": "object"
+    },
+    "example_ladder": {
+      "type": "object",
+      "required": [
+        "framework_version",
+        "source_graph_artifact",
+        "selection_policy",
+        "scene_anchor_examples",
+        "sections"
+      ],
+      "properties": {
+        "framework_version": {
+          "const": "0.3"
+        },
+        "source_graph_artifact": {
+          "type": "string"
+        },
+        "selection_policy": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "scene_anchor_examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "sections": {
+          "type": "object",
+          "required": [
+            "start_here",
+            "next_level",
+            "go_deep"
+          ],
+          "properties": {
+            "start_here": {
+              "type": "object",
+              "required": [
+                "title",
+                "intent",
+                "items"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "intent": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "example_ref",
+                      "example_type",
+                      "display_label",
+                      "artist_display_name",
+                      "title",
+                      "recognition_band",
+                      "mission_role",
+                      "current_graph_candidate_identity_key",
+                      "ladder_section",
+                      "why_this_example_matters",
+                      "what_to_listen_for",
+                      "graph_ref_validation_status"
+                    ],
+                    "properties": {
+                      "example_ref": {
+                        "type": "string"
+                      },
+                      "example_type": {
+                        "enum": [
+                          "artist",
+                          "album",
+                          "song_recording",
+                          "survey_candidate"
+                        ]
+                      },
+                      "display_label": {
+                        "type": "string"
+                      },
+                      "artist_display_name": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "recognition_band": {
+                        "type": "string"
+                      },
+                      "mission_role": {
+                        "type": "string"
+                      },
+                      "current_graph_candidate_identity_key": {
+                        "type": "string"
+                      },
+                      "ladder_section": {
+                        "type": "string"
+                      },
+                      "why_this_example_matters": {
+                        "type": "string"
+                      },
+                      "what_to_listen_for": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "graph_ref_validation_status": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            },
+            "next_level": {
+              "type": "object",
+              "required": [
+                "title",
+                "intent",
+                "items"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "intent": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "example_ref",
+                      "example_type",
+                      "display_label",
+                      "artist_display_name",
+                      "title",
+                      "recognition_band",
+                      "mission_role",
+                      "current_graph_candidate_identity_key",
+                      "ladder_section",
+                      "why_this_example_matters",
+                      "what_to_listen_for",
+                      "graph_ref_validation_status"
+                    ],
+                    "properties": {
+                      "example_ref": {
+                        "type": "string"
+                      },
+                      "example_type": {
+                        "enum": [
+                          "artist",
+                          "album",
+                          "song_recording",
+                          "survey_candidate"
+                        ]
+                      },
+                      "display_label": {
+                        "type": "string"
+                      },
+                      "artist_display_name": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "recognition_band": {
+                        "type": "string"
+                      },
+                      "mission_role": {
+                        "type": "string"
+                      },
+                      "current_graph_candidate_identity_key": {
+                        "type": "string"
+                      },
+                      "ladder_section": {
+                        "type": "string"
+                      },
+                      "why_this_example_matters": {
+                        "type": "string"
+                      },
+                      "what_to_listen_for": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "graph_ref_validation_status": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            },
+            "go_deep": {
+              "type": "object",
+              "required": [
+                "title",
+                "intent",
+                "items"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "intent": {
+                  "type": "string"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "example_ref",
+                      "example_type",
+                      "display_label",
+                      "artist_display_name",
+                      "title",
+                      "recognition_band",
+                      "mission_role",
+                      "current_graph_candidate_identity_key",
+                      "ladder_section",
+                      "why_this_example_matters",
+                      "what_to_listen_for",
+                      "graph_ref_validation_status"
+                    ],
+                    "properties": {
+                      "example_ref": {
+                        "type": "string"
+                      },
+                      "example_type": {
+                        "enum": [
+                          "artist",
+                          "album",
+                          "song_recording",
+                          "survey_candidate"
+                        ]
+                      },
+                      "display_label": {
+                        "type": "string"
+                      },
+                      "artist_display_name": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "recognition_band": {
+                        "type": "string"
+                      },
+                      "mission_role": {
+                        "type": "string"
+                      },
+                      "current_graph_candidate_identity_key": {
+                        "type": "string"
+                      },
+                      "ladder_section": {
+                        "type": "string"
+                      },
+                      "why_this_example_matters": {
+                        "type": "string"
+                      },
+                      "what_to_listen_for": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "graph_ref_validation_status": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

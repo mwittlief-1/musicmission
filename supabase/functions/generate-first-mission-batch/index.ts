@@ -25,6 +25,22 @@ type RouteIdentityValidationResult = ValidationResult & {
   summary: JsonObject;
 };
 
+type AppImportStatus = "app_import_candidate" | "review_needed" | "blocked";
+
+type GenerationAttemptOutcome = {
+  attempt: number;
+  openAIRequest: JsonObject;
+  rawOpenAIResponse: JsonObject;
+  parsedGeneration: JsonObject;
+  routeIdentityValidation: RouteIdentityValidationResult;
+  generationValidation: ValidationResult;
+  adaptedAppMissions: JsonObject[];
+  appMissionValidation: ValidationResult;
+  appImportStatus: AppImportStatus;
+  alphaImportPolicy: JsonObject;
+  usage: JsonObject | null;
+};
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
@@ -329,6 +345,25 @@ const missionOutputSchema = {
   },
 } as const;
 
+function missionOutputSchemaForCandidatePool(candidatePool: unknown): JsonObject {
+  const schema = JSON.parse(JSON.stringify(missionOutputSchema)) as JsonObject;
+  const candidates = candidateRowsFromPool(candidatePool);
+  const candidateIDs = uniqueStrings(candidates.map((candidate) => normalizedNonEmptyString(candidate.candidate_id)));
+  const appRouteItemIDs = uniqueStrings(candidates.map((candidate) => normalizedNonEmptyString(candidate.app_route_item_id)));
+  const routeCandidateKeys = uniqueStrings(candidates.map((candidate) => normalizedNonEmptyString(candidate.route_candidate_key)));
+  const routeBatchDedupeKeys = uniqueStrings(candidates.map((candidate) => normalizedNonEmptyString(candidate.route_batch_dedupe_key)));
+  const routeDisplayIdentityKeys = uniqueStrings(candidates.map((candidate) => normalizedNonEmptyString(candidate.route_display_identity_key)));
+  const itemProperties = routeItemSchemaProperties(schema);
+
+  setStringEnum(itemProperties.candidate_id, candidateIDs);
+  setStringEnum(itemProperties.item_id, appRouteItemIDs);
+  setStringEnum(itemProperties.route_candidate_key, routeCandidateKeys);
+  setStringEnum(itemProperties.route_batch_dedupe_key, routeBatchDedupeKeys);
+  setStringEnum(itemProperties.route_display_identity_key, routeDisplayIdentityKeys);
+
+  return schema;
+}
+
 Deno.serve(async (request: Request) => {
   if (request.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: corsHeaders });
@@ -376,57 +411,68 @@ Deno.serve(async (request: Request) => {
   });
 
   try {
-    const openAIRequest = buildOpenAIRequest(model, promptVersion, inputPacket);
-    await updateRun(runId, {
-      status: "generating",
-      openai_request: openAIRequest,
-    });
+    const maxAttempts = isReplayModeEnabled() && isObject(inputPacket.replay_generation_output)
+      ? 1
+      : generationAttemptLimit();
+    const attemptSummaries: JsonObject[] = [];
+    let attemptFeedback: JsonObject | undefined;
+    let finalAttempt: GenerationAttemptOutcome | undefined;
 
-    const rawOpenAIResponse = isReplayModeEnabled() && isObject(inputPacket.replay_generation_output)
-      ? buildReplayOpenAIResponse(inputPacket.replay_generation_output)
-      : await callOpenAI(openAIRequest);
-    await updateRun(runId, {
-      raw_openai_response: rawOpenAIResponse,
-    });
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      const attemptResult = await runGenerationAttempt(
+        model,
+        promptVersion,
+        inputPacket,
+        attempt,
+        attemptFeedback,
+      );
+      finalAttempt = attemptResult;
+      attemptSummaries.push(attemptSummary(attemptResult));
 
-    const generatedText = extractOutputText(rawOpenAIResponse);
-    const parsedGeneration = JSON.parse(generatedText) as JsonObject;
-    const candidateMetadata = candidateMetadataFromPool(inputPacket.candidate_pool);
-    const routeIdentityValidation = validateRouteIdentityAndCandidateMembership(
-      parsedGeneration,
-      inputPacket.candidate_pool,
-      inputPacket.prompt_context,
-    );
-    const generationValidation = combineValidationResults(
-      validateMissionOutput(parsedGeneration),
-      routeIdentityValidation,
-    );
-    const adaptedAppMissions = generationValidation.valid
-      ? [toAppMission(parsedGeneration, candidateMetadata)]
-      : [];
-    const appMissionValidation = adaptedAppMissions.length > 0
-      ? validateAppMission(adaptedAppMissions[0] as JsonObject)
-      : { valid: true, errors: [] };
-    const appImportStatus = deriveAppImportStatus(
-      generationValidation,
-      appMissionValidation,
-      parsedGeneration,
-    );
-    const alphaImportPolicy = buildAlphaImportPolicy(
-      appImportStatus,
-      parsedGeneration,
-      adaptedAppMissions,
-      appMissionValidation,
-    );
+      await updateRun(runId, {
+        status: "generating",
+        openai_request: attemptResult.openAIRequest,
+        raw_openai_response: attemptResult.rawOpenAIResponse,
+        parsed_generation: attemptResult.parsedGeneration,
+        app_missions: attemptResult.adaptedAppMissions,
+        validation: {
+          generation: attemptResult.generationValidation,
+          route_identity: attemptResult.routeIdentityValidation.summary,
+          app_mission: attemptResult.appMissionValidation,
+          alpha_import_policy: attemptResult.alphaImportPolicy,
+          generation_attempts: attemptSummaries,
+        },
+        token_usage: attemptResult.usage,
+        latency_ms: Math.round(performance.now() - startedAt),
+      });
+
+      if (attemptResult.appImportStatus !== "blocked" || attempt === maxAttempts) {
+        break;
+      }
+
+      attemptFeedback = generationAttemptFeedback(attemptResult);
+    }
+
+    if (!finalAttempt) {
+      throw new Error("No generation attempt was completed");
+    }
+
+    const parsedGeneration = finalAttempt.parsedGeneration;
+    const routeIdentityValidation = finalAttempt.routeIdentityValidation;
+    const generationValidation = finalAttempt.generationValidation;
+    const adaptedAppMissions = finalAttempt.adaptedAppMissions;
+    const appMissionValidation = finalAttempt.appMissionValidation;
+    const appImportStatus = finalAttempt.appImportStatus;
+    const alphaImportPolicy = finalAttempt.alphaImportPolicy;
     const returnedAppMissions = alphaImportPolicy.app_missions_returned ? adaptedAppMissions : [];
     const status = appImportStatus;
     const latencyMs = Math.round(performance.now() - startedAt);
-    const usage = extractUsage(rawOpenAIResponse);
+    const usage = finalAttempt.usage;
 
     await updateRun(runId, {
       status,
       app_import_status: appImportStatus,
-      raw_openai_response: rawOpenAIResponse,
+      raw_openai_response: finalAttempt.rawOpenAIResponse,
       parsed_generation: parsedGeneration,
       app_missions: adaptedAppMissions,
       validation: {
@@ -434,6 +480,7 @@ Deno.serve(async (request: Request) => {
         route_identity: routeIdentityValidation.summary,
         app_mission: appMissionValidation,
         alpha_import_policy: alphaImportPolicy,
+        generation_attempts: attemptSummaries,
       },
       token_usage: usage,
       latency_ms: latencyMs,
@@ -456,6 +503,7 @@ Deno.serve(async (request: Request) => {
         route_identity: routeIdentityValidation.summary,
         app_mission: appMissionValidation,
         alpha_import_policy: alphaImportPolicy,
+        generation_attempts: attemptSummaries,
       },
       usage,
       latency_ms: latencyMs,
@@ -493,7 +541,97 @@ function validateInputPacket(packet: AlphaGenerationRequest): ValidationResult {
   return { valid: errors.length === 0, errors };
 }
 
-function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaGenerationRequest): JsonObject {
+async function runGenerationAttempt(
+  model: string,
+  promptVersion: string,
+  inputPacket: AlphaGenerationRequest,
+  attempt: number,
+  attemptFeedback?: JsonObject,
+): Promise<GenerationAttemptOutcome> {
+  const openAIRequest = buildOpenAIRequest(model, promptVersion, inputPacket, attemptFeedback);
+  const rawOpenAIResponse = isReplayModeEnabled() && isObject(inputPacket.replay_generation_output)
+    ? buildReplayOpenAIResponse(inputPacket.replay_generation_output)
+    : await callOpenAI(openAIRequest);
+  const generatedText = extractOutputText(rawOpenAIResponse);
+  const parsedGeneration = JSON.parse(generatedText) as JsonObject;
+  const candidateMetadata = candidateMetadataFromPool(inputPacket.candidate_pool);
+  const routeIdentityValidation = validateRouteIdentityAndCandidateMembership(
+    parsedGeneration,
+    inputPacket.candidate_pool,
+    inputPacket.prompt_context,
+  );
+  const generationValidation = combineValidationResults(
+    validateMissionOutput(parsedGeneration),
+    routeIdentityValidation,
+  );
+  const adaptedAppMissions = generationValidation.valid
+    ? [toAppMission(parsedGeneration, candidateMetadata)]
+    : [];
+  const appMissionValidation = adaptedAppMissions.length > 0
+    ? validateAppMission(adaptedAppMissions[0] as JsonObject)
+    : { valid: true, errors: [] };
+  const appImportStatus = deriveAppImportStatus(
+    generationValidation,
+    appMissionValidation,
+    parsedGeneration,
+  );
+  const alphaImportPolicy = buildAlphaImportPolicy(
+    appImportStatus,
+    parsedGeneration,
+    adaptedAppMissions,
+    appMissionValidation,
+  );
+
+  return {
+    attempt,
+    openAIRequest,
+    rawOpenAIResponse,
+    parsedGeneration,
+    routeIdentityValidation,
+    generationValidation,
+    adaptedAppMissions,
+    appMissionValidation,
+    appImportStatus,
+    alphaImportPolicy,
+    usage: extractUsage(rawOpenAIResponse),
+  };
+}
+
+function generationAttemptLimit(): number {
+  const configured = parseInt(cartenzaEnv("OPENAI_GENERATION_ATTEMPT_LIMIT") ?? "3", 10);
+  return Number.isFinite(configured) ? Math.min(3, Math.max(1, configured)) : 3;
+}
+
+function attemptSummary(result: GenerationAttemptOutcome): JsonObject {
+  return withoutUndefined({
+    attempt: result.attempt,
+    app_import_status: result.appImportStatus,
+    generation_valid: result.generationValidation.valid,
+    app_mission_valid: result.appMissionValidation.valid,
+    generation_errors: result.generationValidation.errors,
+    app_mission_errors: result.appMissionValidation.errors,
+    route_identity: result.routeIdentityValidation.summary,
+    alpha_import_policy: result.alphaImportPolicy,
+  });
+}
+
+function generationAttemptFeedback(result: GenerationAttemptOutcome): JsonObject {
+  return {
+    previous_attempt: result.attempt,
+    previous_status: result.appImportStatus,
+    repair_required: "Return a new route using only candidate_pool.candidates and no repeated candidate_id, item_id, or route_display_identity_key.",
+    generation_errors: result.generationValidation.errors,
+    app_mission_errors: result.appMissionValidation.errors,
+    route_identity: result.routeIdentityValidation.summary,
+  };
+}
+
+function buildOpenAIRequest(
+  model: string,
+  promptVersion: string,
+  packet: AlphaGenerationRequest,
+  attemptFeedback?: JsonObject,
+): JsonObject {
   const maxOutputTokens = parseInt(cartenzaEnv("OPENAI_MAX_OUTPUT_TOKENS") ?? "12000", 10);
   const reasoningEffort = cartenzaEnv("OPENAI_REASONING_EFFORT");
   const systemPrompt = [
@@ -508,6 +646,7 @@ function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaG
     "Do not set review_config.ready_for_app_import false merely because a route-ready risky, frontier, trap, dead-end, waypoint, or contradiction item correctly carries review flags.",
     "Set ready_for_app_import false only for hard blockers such as schema uncertainty, pseudo-playable route items, duplicate route items, duplicate candidates, non-candidate route items, unsafe/quarantined candidates, hidden/private source leakage, or Atlas/canonical overclaiming.",
     "Every route item must use a unique item_id, unique candidate_id, and unique artist/title identity. Repeating the same track or album inside a mission is a hard import blocker.",
+    "For each route item, copy candidate_id, item_id, route_candidate_key, route_batch_dedupe_key, and route_display_identity_key from one candidate_pool.candidates row. Use the candidate row app_route_item_id as route.items[].item_id.",
     "Artist/title similarity is not enough. Every route.items[].candidate_id must exactly match a row in candidate_pool.candidates.",
     "Respect prompt_context batch memory fields such as already_selected_route_item_ids, already_selected_candidate_ids, already_selected_display_keys, excluded_route_item_ids, and excluded_candidate_ids. If the remaining pool cannot satisfy the route, block/retry instead of repeating.",
     "Return only JSON matching the provided schema.",
@@ -520,6 +659,7 @@ function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaG
     mission_generation_digest_view: packet.mission_generation_digest_view,
     candidate_pool: packet.candidate_pool ?? {},
     prompt_context: packet.prompt_context ?? {},
+    attempt_feedback: attemptFeedback,
     output_contract_notes: {
       app_gate: "Set review_config.ready_for_app_import true only when every route item is concrete and playable via MusicKit search.",
       trusted_alpha_review_tolerance: "Route-ready item-level review flags are expected Alpha diagnostics and do not by themselves block app import when the app mission adapter validates.",
@@ -537,6 +677,7 @@ function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaG
         "promoted Atlas truth or canonical graph mutation",
       ],
       uniqueness_rules: [
+        "For every route item, route.items[].item_id should equal the selected candidate row app_route_item_id.",
         "Every route.items[].item_id must be unique within the mission.",
         "Every route.items[].candidate_id must be unique within the mission.",
         "Every route artist/title/type identity must be unique within the mission.",
@@ -562,7 +703,7 @@ function buildOpenAIRequest(model: string, promptVersion: string, packet: AlphaG
         type: "json_schema",
         name: "waymark_mission_output_v0_1",
         strict: true,
-        schema: missionOutputSchema,
+        schema: missionOutputSchemaForCandidatePool(packet.candidate_pool),
       },
     },
     max_output_tokens: maxOutputTokens,
@@ -711,7 +852,7 @@ function validateRouteIdentityAndCandidateMembership(
     : [];
 
   const routeItemIDs = items
-    .map((item) => normalizedNonEmptyString(item.item_id))
+    .map((item) => routeItemID(item, candidateMetadata))
     .filter((value): value is string => value !== null);
   const routeCandidateIDs = items
     .map((item) => normalizedNonEmptyString(item.candidate_id))
@@ -933,18 +1074,22 @@ function toAppMissionItem(
   const reviewState = isObject(item.review_state) ? item.review_state : {};
 
   return withoutUndefined({
-    item_id: appID("ITEM", item.item_id, `GENERATED_${index + 1}`),
+    item_id: appID("ITEM", firstNonEmptyString(candidate?.app_route_item_id, item.item_id), `GENERATED_${index + 1}`),
     candidate_id: firstNonEmptyString(item.candidate_id, candidate?.candidate_id),
-    route_candidate_key: firstNonEmptyString(item.route_candidate_key, candidate?.route_candidate_key),
-    route_batch_dedupe_key: firstNonEmptyString(item.route_batch_dedupe_key, candidate?.route_batch_dedupe_key),
+    route_candidate_key: firstNonEmptyString(candidate?.route_candidate_key, item.route_candidate_key),
+    route_batch_dedupe_key: firstNonEmptyString(candidate?.route_batch_dedupe_key, item.route_batch_dedupe_key),
     route_display_identity_key: firstNonEmptyString(
-      item.route_display_identity_key,
       candidate?.route_display_identity_key,
+      item.route_display_identity_key,
     ),
     sequence: index + 1,
-    item_type: item.item_type === "album" ? "album" : "track",
-    artist: String(metadata.artist ?? searchHint.artist ?? "Unknown Artist"),
-    title: String(metadata.title ?? searchHint.title ?? "Unknown Title"),
+    item_type: firstNonEmptyString(candidate?.route_item_type, candidate?.object_type, item.item_type) === "album"
+      ? "album"
+      : "track",
+    artist: firstNonEmptyString(candidate?.credited_artist, candidate?.artist_name, metadata.artist, searchHint.artist) ??
+      "Unknown Artist",
+    title: firstNonEmptyString(candidate?.display_name, candidate?.display_label, candidate?.title, metadata.title, searchHint.title) ??
+      "Unknown Title",
     album: typeof metadata.album === "string" && metadata.album.length > 0 ? metadata.album : undefined,
     year: typeof metadata.release_year === "number" ? metadata.release_year : undefined,
     why_included: String(item.why_selected ?? item.route_function ?? ""),
@@ -1103,6 +1248,14 @@ function candidateMetadataFromPool(candidatePool: unknown): Map<string, JsonObje
   return metadata;
 }
 
+function candidateRowsFromPool(candidatePool: unknown): JsonObject[] {
+  if (!isObject(candidatePool) || !Array.isArray(candidatePool.candidates)) {
+    return [];
+  }
+
+  return candidatePool.candidates.filter(isObject);
+}
+
 function collectCandidateMetadata(value: unknown, metadata: Map<string, JsonObject>): void {
   if (Array.isArray(value)) {
     for (const child of value) {
@@ -1172,18 +1325,26 @@ function candidateMetadataForItem(item: JsonObject, candidateMetadata: Map<strin
   return candidateID ? candidateMetadata.get(candidateID) : undefined;
 }
 
+function routeItemID(
+  item: JsonObject,
+  candidateMetadata: Map<string, JsonObject> = new Map(),
+): string | null {
+  return normalizedNonEmptyString(candidateMetadataForItem(item, candidateMetadata)?.app_route_item_id) ??
+    normalizedNonEmptyString(item.item_id);
+}
+
 function routeDisplayIdentityKey(
   item: JsonObject,
   candidateMetadata: Map<string, JsonObject> = new Map(),
 ): string | null {
-  const explicitKey = normalizedNonEmptyString(item.route_display_identity_key);
-  if (explicitKey) {
-    return explicitKey;
-  }
-
   const candidateKey = normalizedNonEmptyString(candidateMetadataForItem(item, candidateMetadata)?.route_display_identity_key);
   if (candidateKey) {
     return candidateKey;
+  }
+
+  const explicitKey = normalizedNonEmptyString(item.route_display_identity_key);
+  if (explicitKey) {
+    return explicitKey;
   }
 
   const metadata = isObject(item.display_metadata) ? item.display_metadata : {};
@@ -1220,6 +1381,26 @@ function firstNonEmptyString(...values: unknown[]): string | undefined {
     }
   }
   return undefined;
+}
+
+function uniqueStrings(values: Array<string | null>): string[] {
+  return [...new Set(values.filter((value): value is string => value !== null))].sort();
+}
+
+function setStringEnum(property: unknown, values: string[]): void {
+  if (!isObject(property) || values.length === 0) {
+    return;
+  }
+
+  property.enum = values;
+  delete property.minLength;
+}
+
+function routeItemSchemaProperties(schema: JsonObject): JsonObject {
+  const properties = schema.properties as JsonObject;
+  const route = (properties.route as JsonObject).properties as JsonObject;
+  const items = (route.items as JsonObject).items as JsonObject;
+  return items.properties as JsonObject;
 }
 
 function normalizedIdentityPart(value: unknown): string | null {

@@ -90,6 +90,8 @@ struct MissionListView: View {
 
     @ViewBuilder
     private var loadedMissionContent: some View {
+        MissionRegenerationPanel()
+
         if let mission = appModel.mission {
             VStack(alignment: .leading, spacing: 10) {
                 Text("Now assigned")
@@ -253,6 +255,72 @@ struct MissionListView: View {
                     .disabled(importDraft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
             }
+        }
+    }
+}
+
+struct MissionRegenerationPanel: View {
+    @EnvironmentObject private var appModel: AppModel
+    @State private var showConfirmation = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .top, spacing: 12) {
+                Image(systemName: "arrow.triangle.2.circlepath")
+                    .foregroundStyle(WaymarkTheme.signal)
+                    .frame(width: 24)
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Regenerate missions")
+                        .font(.headline)
+                        .foregroundStyle(WaymarkTheme.text)
+                    Text("Send the saved Survey evidence through Cartenza generation and replace the mission batch after a new set imports.")
+                        .font(.callout)
+                        .foregroundStyle(WaymarkTheme.mutedText)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            if appModel.firstMissionGenerationState.isLoading {
+                VStack(alignment: .leading, spacing: 8) {
+                    ProgressView(value: appModel.firstMissionGenerationProgress.fractionCompleted)
+                        .tint(WaymarkTheme.signal)
+                    Text(appModel.firstMissionGenerationProgress.detail)
+                        .font(.caption)
+                        .foregroundStyle(WaymarkTheme.mutedText)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            Button {
+                showConfirmation = true
+            } label: {
+                Label("Regenerate From Survey", systemImage: "sparkles")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+            .disabled(appModel.firstMissionGenerationState.isLoading)
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(WaymarkTheme.panel, in: RoundedRectangle(cornerRadius: WaymarkTheme.radius))
+        .overlay(
+            RoundedRectangle(cornerRadius: WaymarkTheme.radius)
+                .stroke(WaymarkTheme.line, lineWidth: 1)
+        )
+        .confirmationDialog(
+            "Regenerate missions from saved Survey evidence?",
+            isPresented: $showConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Regenerate Missions", role: .destructive) {
+                Task {
+                    await appModel.regenerateMissionBatchFromCurrentSurvey()
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("A successful regenerated batch replaces current mission assignments and clears local mission-session progress. Existing missions stay in place if generation fails before import.")
         }
     }
 }

@@ -1,0 +1,1544 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_02_archetype_008_british-invasion-core-uk-beat-groups_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_2/normalized_family_2.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 2,
+    "family_slug": "beatles-british-invasion-60s-pop-rock",
+    "family_name": "Beatles, British Invasion, 60s Pop-Rock",
+    "archetype_id": "008",
+    "archetype_slug": "british-invasion-core-uk-beat-groups",
+    "canonical_graph_ref": "family_02/archetype_008",
+    "existing_graph_label_name": "British Invasion / Core UK Beat Groups",
+    "editorial_display_title": "British Invasion / Core UK Beat Groups",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:the-beatles",
+        "object_id": "the-beatles",
+        "display_label": "The Beatles",
+        "source_membership_id": "family-2-artist-008-the-beatles",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central Family 2 artist anchor across British Invasion, album-era pop-rock, and psych-pop.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-rolling-stones",
+        "object_id": "the-rolling-stones",
+        "display_label": "The Rolling Stones",
+        "source_membership_id": "family-2-artist-008-the-rolling-stones",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential Beatles counter-pole and bridge from British Invasion into blues-rock, psych, and hard rock.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-who",
+        "object_id": "the-who",
+        "display_label": "The Who",
+        "source_membership_id": "family-2-artist-008-the-who",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core mod/British Invasion act with strong bridge value into hard rock, punk, and art-rock.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-kinks",
+        "object_id": "the-kinks",
+        "display_label": "The Kinks",
+        "source_membership_id": "family-2-artist-008-the-kinks",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "British Invasion and literate pop-rock anchor with major downstream punk, new wave, and Britpop influence.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-animals",
+        "object_id": "the-animals",
+        "display_label": "The Animals",
+        "source_membership_id": "family-2-artist-008-the-animals",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious British Invasion blues-rock artist with a mass song anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-yardbirds",
+        "object_id": "the-yardbirds",
+        "display_label": "The Yardbirds",
+        "source_membership_id": "family-2-artist-008-the-yardbirds",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious British blues-rock/psych bridge into hard rock and guitar-hero lineage.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:small-faces",
+        "object_id": "small-faces",
+        "display_label": "Small Faces",
+        "source_membership_id": "family-2-artist-008-small-faces",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Mod-pop to psych transition anchor highlighted by second pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-dave-clark-five",
+        "object_id": "the-dave-clark-five",
+        "display_label": "The Dave Clark Five",
+        "source_membership_id": "family-2-artist-008-the-dave-clark-five",
+        "roles": [
+          "gateway",
+          "contrast"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Major British Invasion chart act missing from source; useful secondary gateway and contrast.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:gerry-and-the-pacemakers",
+        "object_id": "gerry-and-the-pacemakers",
+        "display_label": "Gerry and the Pacemakers",
+        "source_membership_id": "family-2-artist-008-gerry-and-the-pacemakers",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Second-pass Merseybeat mass-memory anchor missing from initial artifact.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:manfred-mann",
+        "object_id": "manfred-mann",
+        "display_label": "Manfred Mann",
+        "source_membership_id": "family-2-artist-008-manfred-mann",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "British Invasion keyboard-pop hitmaker with clear song-first value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:spencer-davis-group",
+        "object_id": "spencer-davis-group",
+        "display_label": "Spencer Davis Group",
+        "source_membership_id": "family-2-artist-008-spencer-davis-group",
+        "roles": [
+          "gateway",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blue-eyed R&B bridge into heavier British Invasion and proto-classic-rock lanes.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:hermans-hermits",
+        "object_id": "hermans-hermits",
+        "display_label": "Herman's Hermits",
+        "source_membership_id": "family-2-artist-008-hermans-hermits",
+        "roles": [
+          "false_nearby",
+          "contrast"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Useful British Invasion false-nearby for pop-facing chart success without deep family-shaping influence.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:the-beatles-a-hard-days-night",
+        "object_id": "the-beatles-a-hard-days-night",
+        "display_label": "A Hard Day's Night - The Beatles",
+        "source_membership_id": "family-2-album-008-the-beatles-a-hard-days-night",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Beatles invasion-era film/album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-rolling-stones-aftermath",
+        "object_id": "the-rolling-stones-aftermath",
+        "display_label": "Aftermath - The Rolling Stones",
+        "source_membership_id": "family-2-album-008-the-rolling-stones-aftermath",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing Stones 60s album-world transition object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-yardbirds-having-a-rave-up-with-the-yardbirds",
+        "object_id": "the-yardbirds-having-a-rave-up-with-the-yardbirds",
+        "display_label": "Having a Rave Up with The Yardbirds - The Yardbirds",
+        "source_membership_id": "family-2-album-008-the-yardbirds-having-a-rave-up-with-the-yardbirds",
+        "roles": [
+          "album_anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Missing Yardbirds album object for British blues-rock/psych transition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:the-animals-house-of-the-rising-sun",
+        "object_id": "the-animals-house-of-the-rising-sun",
+        "display_label": "House of the Rising Sun - The Animals",
+        "source_membership_id": "family-2-song-008-the-animals-house-of-the-rising-sun",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive British Invasion single-object with blues-rock force.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beatles-i-want-to-hold-your-hand",
+        "object_id": "the-beatles-i-want-to-hold-your-hand",
+        "display_label": "I Want to Hold Your Hand - The Beatles",
+        "source_membership_id": "family-2-song-008-the-beatles-i-want-to-hold-your-hand",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing obvious U.S. British Invasion breakthrough single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-beatles-a-hard-days-night",
+        "object_id": "the-beatles-a-hard-days-night",
+        "display_label": "A Hard Day's Night - The Beatles",
+        "source_membership_id": "family-2-song-008-the-beatles-a-hard-days-night",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing obvious early Beatles film/single anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-rolling-stones-satisfaction",
+        "object_id": "the-rolling-stones-satisfaction",
+        "display_label": "(I Can't Get No) Satisfaction - The Rolling Stones",
+        "source_membership_id": "family-2-song-008-the-rolling-stones-satisfaction",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Stones mass single anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-who-my-generation",
+        "object_id": "the-who-my-generation",
+        "display_label": "My Generation - The Who",
+        "source_membership_id": "family-2-song-008-the-who-my-generation",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing mod/proto-punk anthem for Who coverage.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-kinks-you-really-got-me",
+        "object_id": "the-kinks-you-really-got-me",
+        "display_label": "You Really Got Me - The Kinks",
+        "source_membership_id": "family-2-song-008-the-kinks-you-really-got-me",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Missing Kinks riff-rock mass anchor and hard-rock bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-troggs-wild-thing",
+        "object_id": "the-troggs-wild-thing",
+        "display_label": "Wild Thing - The Troggs",
+        "source_membership_id": "family-2-song-008-the-troggs-wild-thing",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing primitive garage/pop-rock mass single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-zombies-shes-not-there",
+        "object_id": "the-zombies-shes-not-there",
+        "display_label": "She's Not There - The Zombies",
+        "source_membership_id": "family-2-song-008-the-zombies-shes-not-there",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Efficient Zombies invasion-era single before album-scale psych coverage.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-kinks-all-day-and-all-of-the-night",
+        "object_id": "the-kinks-all-day-and-all-of-the-night",
+        "display_label": "All Day and All of the Night - The Kinks",
+        "source_membership_id": "family-2-song-008-the-kinks-all-day-and-all-of-the-night",
+        "roles": [
+          "song_first",
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Companion Kinks riff-pop object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-animals-we-gotta-get-out-of-this-place",
+        "object_id": "the-animals-we-gotta-get-out-of-this-place",
+        "display_label": "We Gotta Get Out of This Place - The Animals",
+        "source_membership_id": "family-2-song-008-the-animals-we-gotta-get-out-of-this-place",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing Animals working-class British Invasion anthem.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-yardbirds-for-your-love",
+        "object_id": "the-yardbirds-for-your-love",
+        "display_label": "For Your Love - The Yardbirds",
+        "source_membership_id": "family-2-song-008-the-yardbirds-for-your-love",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing Yardbirds British pop-to-psych transition single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-dave-clark-five-glad-all-over",
+        "object_id": "the-dave-clark-five-glad-all-over",
+        "display_label": "Glad All Over - The Dave Clark Five",
+        "source_membership_id": "family-2-song-008-the-dave-clark-five-glad-all-over",
+        "roles": [
+          "song_first",
+          "gateway",
+          "contrast"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing secondary British Invasion chart gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-dave-clark-five-because",
+        "object_id": "the-dave-clark-five-because",
+        "display_label": "Because - The Dave Clark Five",
+        "source_membership_id": "family-2-song-008-the-dave-clark-five-because",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Softer-side DC5 British Invasion object from second pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:gerry-and-the-pacemakers-ferry-cross-the-mersey",
+        "object_id": "gerry-and-the-pacemakers-ferry-cross-the-mersey",
+        "display_label": "Ferry Cross the Mersey - Gerry and the Pacemakers",
+        "source_membership_id": "family-2-song-008-gerry-and-the-pacemakers-ferry-cross-the-mersey",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Indispensable Merseybeat memory object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-beatles-008",
+        "candidate_id": "survey-f2-artist-the-beatles-008",
+        "object_type": "artist",
+        "display_label": "The Beatles",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-rolling-stones-008",
+        "candidate_id": "survey-f2-artist-the-rolling-stones-008",
+        "object_type": "artist",
+        "display_label": "The Rolling Stones",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-who-008",
+        "candidate_id": "survey-f2-artist-the-who-008",
+        "object_type": "artist",
+        "display_label": "The Who",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-kinks-008",
+        "candidate_id": "survey-f2-artist-the-kinks-008",
+        "object_type": "artist",
+        "display_label": "The Kinks",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-animals-008",
+        "candidate_id": "survey-f2-artist-the-animals-008",
+        "object_type": "artist",
+        "display_label": "The Animals",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-yardbirds-008",
+        "candidate_id": "survey-f2-artist-the-yardbirds-008",
+        "object_type": "artist",
+        "display_label": "The Yardbirds",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-small-faces-008",
+        "candidate_id": "survey-f2-artist-small-faces-008",
+        "object_type": "artist",
+        "display_label": "Small Faces",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-gerry-and-the-pacemakers-008",
+        "candidate_id": "survey-f2-artist-gerry-and-the-pacemakers-008",
+        "object_type": "artist",
+        "display_label": "Gerry and the Pacemakers",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-manfred-mann-008",
+        "candidate_id": "survey-f2-artist-manfred-mann-008",
+        "object_type": "artist",
+        "display_label": "Manfred Mann",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-spencer-davis-group-008",
+        "candidate_id": "survey-f2-artist-spencer-davis-group-008",
+        "object_type": "artist",
+        "display_label": "Spencer Davis Group",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-the-dave-clark-five-008",
+        "candidate_id": "survey-f2-artist-the-dave-clark-five-008",
+        "object_type": "artist",
+        "display_label": "The Dave Clark Five",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-artist-hermans-hermits-008",
+        "candidate_id": "survey-f2-artist-hermans-hermits-008",
+        "object_type": "artist",
+        "display_label": "Herman's Hermits",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-beatles-a-hard-days-night-008",
+        "candidate_id": "survey-f2-album-the-beatles-a-hard-days-night-008",
+        "object_type": "album",
+        "display_label": "A Hard Day's Night",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-rolling-stones-aftermath-008",
+        "candidate_id": "survey-f2-album-the-rolling-stones-aftermath-008",
+        "object_type": "album",
+        "display_label": "Aftermath",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-album-the-yardbirds-having-a-rave-up-with-the-yardbirds-008",
+        "candidate_id": "survey-f2-album-the-yardbirds-having-a-rave-up-with-the-yardbirds-008",
+        "object_type": "album",
+        "display_label": "Having a Rave Up with The Yardbirds",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-rolling-stones-satisfaction-008",
+        "candidate_id": "survey-f2-song_recording-the-rolling-stones-satisfaction-008",
+        "object_type": "song_recording",
+        "display_label": "(I Can't Get No) Satisfaction",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-beatles-a-hard-days-night-008",
+        "candidate_id": "survey-f2-song_recording-the-beatles-a-hard-days-night-008",
+        "object_type": "song_recording",
+        "display_label": "A Hard Day's Night",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-beatles-i-want-to-hold-your-hand-008",
+        "candidate_id": "survey-f2-song_recording-the-beatles-i-want-to-hold-your-hand-008",
+        "object_type": "song_recording",
+        "display_label": "I Want to Hold Your Hand",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-who-my-generation-008",
+        "candidate_id": "survey-f2-song_recording-the-who-my-generation-008",
+        "object_type": "song_recording",
+        "display_label": "My Generation",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f2-song_recording-the-kinks-you-really-got-me-008",
+        "candidate_id": "survey-f2-song_recording-the-kinks-you-really-got-me-008",
+        "object_type": "song_recording",
+        "display_label": "You Really Got Me",
+        "survey_page_role": "page1_core",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f2-artist-the-dave-clark-five-008",
+        "question_id": "boundary-survey-f2-artist-the-dave-clark-five-008",
+        "display_label": "The Dave Clark Five",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f2-artist-hermans-hermits-008",
+        "question_id": "boundary-survey-f2-artist-hermans-hermits-008",
+        "display_label": "Herman's Hermits",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f2-song_recording-the-dave-clark-five-glad-all-over-008",
+        "question_id": "boundary-survey-f2-song_recording-the-dave-clark-five-glad-all-over-008",
+        "display_label": "Glad All Over",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f2-song_recording-the-easybeats-friday-on-my-mind-008",
+        "question_id": "boundary-survey-f2-song_recording-the-easybeats-friday-on-my-mind-008",
+        "display_label": "Friday on My Mind",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f2-artist-the-dave-clark-five-008",
+        "probe_id": "probe-survey-f2-artist-the-dave-clark-five-008",
+        "entity_type": "artist",
+        "display_label": "The Dave Clark Five",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f2-artist-hermans-hermits-008",
+        "probe_id": "probe-survey-f2-artist-hermans-hermits-008",
+        "entity_type": "artist",
+        "display_label": "Herman's Hermits",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f2-song_recording-the-dave-clark-five-glad-all-over-008",
+        "probe_id": "probe-survey-f2-song_recording-the-dave-clark-five-glad-all-over-008",
+        "entity_type": "song_recording",
+        "display_label": "Glad All Over",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f2-song_recording-the-easybeats-friday-on-my-mind-008",
+        "probe_id": "probe-survey-f2-song_recording-the-easybeats-friday-on-my-mind-008",
+        "entity_type": "song_recording",
+        "display_label": "Friday on My Mind",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_02/archetype_009"
+    ],
+    "before_archetype_refs": [],
+    "after_archetype_refs": [
+      "family_02/archetype_009"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_2": {
+      "title": "Normalized canonical graph export, Family 2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_2/normalized_family_2.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "008_britannica_british_invasion": {
+      "title": "British Invasion",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/event/British-Invasion",
+      "source_type": "reference",
+      "audit_use": "Directly frames the 1960s wave of UK groups reshaping U.S. pop and rock markets.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly frames the 1960s wave of UK groups reshaping U.S. pop and rock markets."
+    },
+    "008_britannica_beatles": {
+      "title": "The Beatles",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beatles",
+      "source_type": "reference",
+      "audit_use": "Supports the Beatles as the central beat-group and songwriting anchor for the archetype.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the Beatles as the central beat-group and songwriting anchor for the archetype."
+    },
+    "008_britannica_rolling_stones": {
+      "title": "The Rolling Stones",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+      "source_type": "reference",
+      "audit_use": "Documents the blues/R&B-centered side of the British Invasion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Documents the blues/R&B-centered side of the British Invasion."
+    },
+    "008_rockhall_who": {
+      "title": "The Who",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-who/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the mod power, volume, and stage-destruction edge that differentiates The Who inside the lane.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the mod power, volume, and stage-destruction edge that differentiates The Who inside the lane."
+    },
+    "britannica_beatles": {
+      "title": "The Beatles",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Beatles",
+      "source_type": "reference",
+      "audit_use": "Beatles biography, British Invasion, songwriting, and album-era expansion.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+    },
+    "rockhall_beatles": {
+      "title": "The Beatles",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-beatles/",
+      "source_type": "museum_reference",
+      "audit_use": "The Beatles as core British Invasion and rock-canon anchors.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "The Beatles as core British Invasion and rock-canon anchors."
+    },
+    "britannica_rolling_stones": {
+      "title": "The Rolling Stones",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+      "source_type": "reference",
+      "audit_use": "Rolling Stones biography and blues-rock/British Invasion context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Rolling Stones biography and blues-rock/British Invasion context."
+    },
+    "rockhall_rolling_stones": {
+      "title": "The Rolling Stones",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-rolling-stones/",
+      "source_type": "museum_reference",
+      "audit_use": "Rolling Stones as British Invasion and blues-rock anchors.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Rolling Stones as British Invasion and blues-rock anchors."
+    },
+    "rockhall_who": {
+      "title": "The Who",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/the-who/",
+      "source_type": "museum_reference",
+      "audit_use": "The Who, mod energy, power trio dynamics, and album-rock bridge.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "The Who, mod energy, power trio dynamics, and album-rock bridge."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "008-claim-01-us-arrival",
+      "claim_text": "The British Invasion names the mid-1960s moment when UK beat groups entered the U.S. market and reset pop-rock expectations.",
+      "source_ref_ids": [
+        "008_britannica_british_invasion",
+        "008_britannica_beatles"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "short_definition"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "008-claim-02-american-roots-reframed",
+      "claim_text": "The lane reworks American rock and roll, R&B, blues, girl-group, and skiffle sources through self-contained guitar bands.",
+      "source_ref_ids": [
+        "008_britannica_british_invasion",
+        "008_britannica_rolling_stones"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008",
+        "artist:the-rolling-stones",
+        "artist:the-animals"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "008-claim-03-beatles-anchor",
+      "claim_text": "The Beatles make the archetype's core move audible: catchy beat music becomes a model for band identity, songwriting, and rapid stylistic growth.",
+      "source_ref_ids": [
+        "008_britannica_beatles"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008",
+        "artist:the-beatles",
+        "song_recording:the-beatles-i-want-to-hold-your-hand"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "008-claim-04-who-mod-force",
+      "claim_text": "The Who push the beat-group frame toward mod aggression, volume, power-chord drama, and album-era ambition.",
+      "source_ref_ids": [
+        "008_rockhall_who"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008",
+        "artist:the-who",
+        "song_recording:the-who-my-generation"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "008-british_invasion_core_uk_beat_groups-boundary",
+      "claim_text": "British Invasion / Core UK Beat Groups's boundary is clearest when Tight rhythm guitar and backbeat and British voices reshaping American R&B appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "008_britannica_british_invasion",
+        "008_britannica_beatles"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008",
+        "artist:the-beatles",
+        "artist:the-rolling-stones"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "008-british_invasion_core_uk_beat_groups-examples",
+      "claim_text": "The Beatles, The Rolling Stones, A Hard Day's Night - The Beatles gives British Invasion / Core UK Beat Groups concrete anchors because the examples expose Harmony hooks and call-and-response inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "008_britannica_beatles",
+        "008_britannica_rolling_stones"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008",
+        "artist:the-beatles",
+        "artist:the-rolling-stones"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "008-british_invasion_core_uk_beat_groups-distinct",
+      "claim_text": "The key musical distinction in British Invasion / Core UK Beat Groups is The sound is guitar-band direct but highly varied: Merseybeat handclaps, blues covers, rave-up solos, harmony hooks, and mod volume can all belong if the UK beat-group engine is clear, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "008_britannica_british_invasion",
+        "008_britannica_rolling_stones"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_02/archetype_008",
+        "artist:the-beatles",
+        "artist:the-rolling-stones"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "The core 1960s UK beat-group road where British bands reframe American roots music as self-contained pop-rock.",
+    "history_capsule": "Beatlemania opened the U.S. door, but the lane includes multiple UK answers: Beatles melodic craft, Stones blues bite, Who mod force, Animals R&B drama, Yardbirds guitar escalation, and Hollies/Searchers harmony. Together they turned the band into the main pop-rock unit.",
+    "why_it_mattered": "It shifted attention from solo idols toward groups that wrote, played, recorded, and visually branded themselves. Much later rock band mythology starts here.",
+    "what_made_it_distinct": "The sound is guitar-band direct but highly varied: Merseybeat handclaps, blues covers, rave-up solos, harmony hooks, and mod volume can all belong if the UK beat-group engine is clear.",
+    "what_to_listen_for": [
+      "Tight rhythm guitar and backbeat",
+      "British voices reshaping American R&B",
+      "Harmony hooks and call-and-response",
+      "Rave-up guitar breaks",
+      "Band identity as part of the song"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:the-beatles",
+        "example_type": "artist",
+        "display_label": "The Beatles",
+        "why_this_example_matters": "The Beatles is a graph-validated anchor for British Invasion / Core UK Beat Groups; use it to hear Tight rhythm guitar and backbeat.",
+        "what_to_listen_for": [
+          "Tight rhythm guitar and backbeat",
+          "British voices reshaping American R&B"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:the-rolling-stones",
+        "example_type": "artist",
+        "display_label": "The Rolling Stones",
+        "why_this_example_matters": "The Rolling Stones is a graph-validated anchor for British Invasion / Core UK Beat Groups; use it to hear British voices reshaping American R&B.",
+        "what_to_listen_for": [
+          "British voices reshaping American R&B",
+          "Harmony hooks and call-and-response"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-beatles-a-hard-days-night",
+        "example_type": "album",
+        "display_label": "A Hard Day's Night - The Beatles",
+        "why_this_example_matters": "A Hard Day's Night - The Beatles is a graph-validated anchor for British Invasion / Core UK Beat Groups; use it to hear Harmony hooks and call-and-response.",
+        "what_to_listen_for": [
+          "Harmony hooks and call-and-response",
+          "Rave-up guitar breaks"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:the-rolling-stones-aftermath",
+        "example_type": "album",
+        "display_label": "Aftermath - The Rolling Stones",
+        "why_this_example_matters": "Aftermath - The Rolling Stones is a graph-validated anchor for British Invasion / Core UK Beat Groups; use it to hear Rave-up guitar breaks.",
+        "what_to_listen_for": [
+          "Rave-up guitar breaks",
+          "Band identity as part of the song"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-animals-house-of-the-rising-sun",
+        "example_type": "song_recording",
+        "display_label": "House of the Rising Sun - The Animals",
+        "why_this_example_matters": "House of the Rising Sun - The Animals is a graph-validated anchor for British Invasion / Core UK Beat Groups; use it to hear Band identity as part of the song.",
+        "what_to_listen_for": [
+          "Band identity as part of the song"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:the-beatles-i-want-to-hold-your-hand",
+        "example_type": "song_recording",
+        "display_label": "I Want to Hold Your Hand - The Beatles",
+        "why_this_example_matters": "I Want to Hold Your Hand - The Beatles is a graph-validated anchor for British Invasion / Core UK Beat Groups; use it to hear Tight rhythm guitar and backbeat.",
+        "what_to_listen_for": [
+          "Tight rhythm guitar and backbeat",
+          "British voices reshaping American R&B"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [],
+      "after": [
+        "family_02/archetype_009"
+      ],
+      "related": [
+        "family_02/archetype_009"
+      ],
+      "copy": "Use British Invasion / Core UK Beat Groups as a contextual road inside Beatles, British Invasion, 60s Pop-Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "008-dyk-1",
+        "copy": "The Rolling Stones side of the lane is less clean-cut than the Beatles side because blues credibility was part of its identity.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_beatles"
+        ]
+      },
+      {
+        "card_id": "008-dyk-2",
+        "copy": "The Who point from beat-group singles toward hard rock and album rock.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_rolling_stones"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether british invasion / core uk beat groups is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "The core 1960s UK beat-group road where British bands reframe American roots music as self-contained pop-rock.",
+      "It shifted attention from solo idols toward groups that wrote, played, recorded, and visually branded themselves. Much later rock band mythology starts here.",
+      "The sound is guitar-band direct but highly varied: Merseybeat handclaps, blues covers, rave-up solos, harmony hooks, and mod volume can all belong if the UK beat-group engine is clear."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not label every 1960s UK record as this archetype; the core evidence is beat-group energy, not just nationality.",
+    "personalization_hooks": [
+      {
+        "hook_id": "008-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[008]",
+          "atlas_state.family_affinity[2]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[008] >= 0.65 || atlas_state.family_affinity[2] >= 0.65",
+        "copy_variant": "Your Atlas signals make British Invasion / Core UK Beat Groups useful as a contextual landmark.",
+        "fallback_copy": "Use British Invasion / Core UK Beat Groups as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "008-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_02/archetype_008 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_02/archetype_008",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient British Invasion / Core UK Beat Groups before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "008-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_02/archetype_008 || atlas_state.boundary_question_results has boundary_negative for family_02/archetype_008",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for British Invasion / Core UK Beat Groups.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "008-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_02/archetype_008 || atlas_state.related_mission_ids references family_02/archetype_008",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "008-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_02/archetype_008 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_02/archetype_008 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_02/archetype_008",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for British Invasion / Core UK Beat Groups.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_2": {
+        "title": "Normalized canonical graph export, Family 2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_2/normalized_family_2.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "008_britannica_british_invasion": {
+        "title": "British Invasion",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/event/British-Invasion",
+        "source_type": "reference",
+        "audit_use": "Directly frames the 1960s wave of UK groups reshaping U.S. pop and rock markets.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly frames the 1960s wave of UK groups reshaping U.S. pop and rock markets."
+      },
+      "008_britannica_beatles": {
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_type": "reference",
+        "audit_use": "Supports the Beatles as the central beat-group and songwriting anchor for the archetype.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Beatles as the central beat-group and songwriting anchor for the archetype."
+      },
+      "008_britannica_rolling_stones": {
+        "title": "The Rolling Stones",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+        "source_type": "reference",
+        "audit_use": "Documents the blues/R&B-centered side of the British Invasion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the blues/R&B-centered side of the British Invasion."
+      },
+      "008_rockhall_who": {
+        "title": "The Who",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-who/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the mod power, volume, and stage-destruction edge that differentiates The Who inside the lane.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the mod power, volume, and stage-destruction edge that differentiates The Who inside the lane."
+      },
+      "britannica_beatles": {
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_type": "reference",
+        "audit_use": "Beatles biography, British Invasion, songwriting, and album-era expansion.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+      },
+      "rockhall_beatles": {
+        "title": "The Beatles",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-beatles/",
+        "source_type": "museum_reference",
+        "audit_use": "The Beatles as core British Invasion and rock-canon anchors.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The Beatles as core British Invasion and rock-canon anchors."
+      },
+      "britannica_rolling_stones": {
+        "title": "The Rolling Stones",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+        "source_type": "reference",
+        "audit_use": "Rolling Stones biography and blues-rock/British Invasion context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rolling Stones biography and blues-rock/British Invasion context."
+      },
+      "rockhall_rolling_stones": {
+        "title": "The Rolling Stones",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-rolling-stones/",
+        "source_type": "museum_reference",
+        "audit_use": "Rolling Stones as British Invasion and blues-rock anchors.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Rolling Stones as British Invasion and blues-rock anchors."
+      },
+      "rockhall_who": {
+        "title": "The Who",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-who/",
+        "source_type": "museum_reference",
+        "audit_use": "The Who, mod energy, power trio dynamics, and album-rock bridge.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "The Who, mod energy, power trio dynamics, and album-rock bridge."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "008-claim-01-us-arrival",
+        "claim_text": "The British Invasion names the mid-1960s moment when UK beat groups entered the U.S. market and reset pop-rock expectations.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_beatles"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "short_definition"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008-claim-02-american-roots-reframed",
+        "claim_text": "The lane reworks American rock and roll, R&B, blues, girl-group, and skiffle sources through self-contained guitar bands.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_rolling_stones"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-rolling-stones",
+          "artist:the-animals"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008-claim-03-beatles-anchor",
+        "claim_text": "The Beatles make the archetype's core move audible: catchy beat music becomes a model for band identity, songwriting, and rapid stylistic growth.",
+        "source_ref_ids": [
+          "008_britannica_beatles"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-beatles",
+          "song_recording:the-beatles-i-want-to-hold-your-hand"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008-claim-04-who-mod-force",
+        "claim_text": "The Who push the beat-group frame toward mod aggression, volume, power-chord drama, and album-era ambition.",
+        "source_ref_ids": [
+          "008_rockhall_who"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-who",
+          "song_recording:the-who-my-generation"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008-british_invasion_core_uk_beat_groups-boundary",
+        "claim_text": "British Invasion / Core UK Beat Groups's boundary is clearest when Tight rhythm guitar and backbeat and British voices reshaping American R&B appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_beatles"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-beatles",
+          "artist:the-rolling-stones"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008-british_invasion_core_uk_beat_groups-examples",
+        "claim_text": "The Beatles, The Rolling Stones, A Hard Day's Night - The Beatles gives British Invasion / Core UK Beat Groups concrete anchors because the examples expose Harmony hooks and call-and-response inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "008_britannica_beatles",
+          "008_britannica_rolling_stones"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-beatles",
+          "artist:the-rolling-stones"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "008-british_invasion_core_uk_beat_groups-distinct",
+        "claim_text": "The key musical distinction in British Invasion / Core UK Beat Groups is The sound is guitar-band direct but highly varied: Merseybeat handclaps, blues covers, rave-up solos, harmony hooks, and mod volume can all belong if the UK beat-group engine is clear, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "008_britannica_british_invasion",
+          "008_britannica_rolling_stones"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_02/archetype_008",
+          "artist:the-beatles",
+          "artist:the-rolling-stones"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "British Invasion / Core UK Beat Groups: Beatles, Rolling Stones, Who, Animals, Yardbirds, UK beat boom, American R&B reworked through self-contained bands.",
+    "selected_sources": [
+      {
+        "source_ref_id": "008_britannica_british_invasion",
+        "title": "British Invasion",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/event/British-Invasion",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly frames the 1960s wave of UK groups reshaping U.S. pop and rock markets."
+      },
+      {
+        "source_ref_id": "008_britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the Beatles as the central beat-group and songwriting anchor for the archetype."
+      },
+      {
+        "source_ref_id": "008_britannica_rolling_stones",
+        "title": "The Rolling Stones",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents the blues/R&B-centered side of the British Invasion."
+      },
+      {
+        "source_ref_id": "008_rockhall_who",
+        "title": "The Who",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-who/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the mod power, volume, and stage-destruction edge that differentiates The Who inside the lane."
+      },
+      {
+        "source_ref_id": "britannica_beatles",
+        "title": "The Beatles",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Beatles",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Beatles biography, British Invasion, songwriting, and album-era expansion."
+      },
+      {
+        "source_ref_id": "rockhall_beatles",
+        "title": "The Beatles",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-beatles/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "The Beatles as core British Invasion and rock-canon anchors."
+      },
+      {
+        "source_ref_id": "britannica_rolling_stones",
+        "title": "The Rolling Stones",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/the-Rolling-Stones",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rolling Stones biography and blues-rock/British Invasion context."
+      },
+      {
+        "source_ref_id": "rockhall_rolling_stones",
+        "title": "The Rolling Stones",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-rolling-stones/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Rolling Stones as British Invasion and blues-rock anchors."
+      },
+      {
+        "source_ref_id": "rockhall_who",
+        "title": "The Who",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/the-who/",
+        "source_relevance": "example_object_support",
+        "why_fit": "The Who, mod energy, power trio dynamics, and album-rock bridge."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "008_reject_britpop",
+        "title": "Britpop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/britpop-ma0000002480",
+        "why_rejected": "Britpop is a 1990s revival/response and should not stand in for the original 1960s British Invasion.",
+        "source_type": "music_reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 008_britannica_british_invasion anchors the named archetype rather than only its family. Example support: 008_britannica_beatles, 008_britannica_rolling_stones, 008_rockhall_who ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 9,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 98,
+    "scene_anchor_refs": [
+      "song|beatles|please please me",
+      "song|dave clark five|bits and pieces",
+      "song|zombies|tell her no",
+      "song|kinks|tired of waiting for you"
+    ],
+    "ladder_example_refs": [
+      "song|peter and gordon|a world without love",
+      "song|gerry and the pacemakers|ferry cross the mersey",
+      "song|animals|house of the rising sun",
+      "song|rolling stones|i can t get no satisfaction",
+      "song|yardbirds|for your love",
+      "song|searchers|take me for what i m worth",
+      "song|creation|making time",
+      "song|small faces|all or nothing"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

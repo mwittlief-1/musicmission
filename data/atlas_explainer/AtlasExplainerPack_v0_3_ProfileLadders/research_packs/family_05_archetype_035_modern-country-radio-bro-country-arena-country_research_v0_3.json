@@ -1,0 +1,1505 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_05_archetype_035_modern-country-radio-bro-country-arena-country_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_5/normalized_family_5.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 5,
+    "family_slug": "country",
+    "family_name": "Country",
+    "archetype_id": "035",
+    "archetype_slug": "modern-country-radio-bro-country-arena-country",
+    "canonical_graph_ref": "family_05/archetype_035",
+    "existing_graph_label_name": "Modern Country Radio / Bro-Country / Arena Country",
+    "editorial_display_title": "Modern Country Radio / Bro-Country / Arena Country",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:florida-georgia-line",
+        "object_id": "florida-georgia-line",
+        "display_label": "Florida Georgia Line",
+        "source_membership_id": "family-5-artist-035-florida-georgia-line",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Florida Georgia Line provides a recognizable survey branch for 035 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:luke-combs",
+        "object_id": "luke-combs",
+        "display_label": "Luke Combs",
+        "source_membership_id": "family-5-artist-035-luke-combs",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Luke Combs fills a missing survey branch for 035, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:morgan-wallen",
+        "object_id": "morgan-wallen",
+        "display_label": "Morgan Wallen",
+        "source_membership_id": "family-5-artist-035-morgan-wallen",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Morgan Wallen provides a recognizable survey branch for 035 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:luke-bryan",
+        "object_id": "luke-bryan",
+        "display_label": "Luke Bryan",
+        "source_membership_id": "family-5-artist-035-luke-bryan",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Luke Bryan provides a recognizable survey branch for 035 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:carrie-underwood",
+        "object_id": "carrie-underwood",
+        "display_label": "Carrie Underwood",
+        "source_membership_id": "family-5-artist-035-carrie-underwood",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Carrie Underwood provides a recognizable survey branch for 035 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:chris-stapleton",
+        "object_id": "chris-stapleton",
+        "display_label": "Chris Stapleton",
+        "source_membership_id": "family-5-artist-035-chris-stapleton",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Chris Stapleton fills a missing survey branch for 035, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:eric-church",
+        "object_id": "eric-church",
+        "display_label": "Eric Church",
+        "source_membership_id": "family-5-artist-035-eric-church",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Eric Church provides a recognizable survey branch for 035 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:jason-aldean",
+        "object_id": "jason-aldean",
+        "display_label": "Jason Aldean",
+        "source_membership_id": "family-5-artist-035-jason-aldean",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Jason Aldean provides a recognizable survey branch for 035 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lainey-wilson",
+        "object_id": "lainey-wilson",
+        "display_label": "Lainey Wilson",
+        "source_membership_id": "family-5-artist-035-lainey-wilson",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lainey Wilson fills a missing survey branch for 035, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:dan-shay",
+        "object_id": "dan-shay",
+        "display_label": "Dan + Shay",
+        "source_membership_id": "family-5-artist-035-dan-shay",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Dan + Shay fills a missing survey branch for 035, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:darius-rucker",
+        "object_id": "darius-rucker",
+        "display_label": "Darius Rucker",
+        "source_membership_id": "family-5-artist-035-darius-rucker",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Darius Rucker fills a missing survey branch for 035, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:jelly-roll",
+        "object_id": "jelly-roll",
+        "display_label": "Jelly Roll",
+        "source_membership_id": "family-5-artist-035-jelly-roll",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Jelly Roll fills a missing survey branch for 035, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:chris-stapleton-traveller",
+        "object_id": "chris-stapleton-traveller",
+        "display_label": "Traveller - Chris Stapleton",
+        "source_membership_id": "family-5-album-035-chris-stapleton-traveller",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Traveller gives 035 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:luke-combs-this-one-s-for-you",
+        "object_id": "luke-combs-this-one-s-for-you",
+        "display_label": "This One's for You - Luke Combs",
+        "source_membership_id": "family-5-album-035-luke-combs-this-one-s-for-you",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "This One's for You gives 035 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:morgan-wallen-dangerous-the-double-album",
+        "object_id": "morgan-wallen-dangerous-the-double-album",
+        "display_label": "Dangerous: The Double Album - Morgan Wallen",
+        "source_membership_id": "family-5-album-035-morgan-wallen-dangerous-the-double-album",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dangerous: The Double Album is a useful album-level gateway for 035.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:florida-georgia-line-here-s-to-the-good-times",
+        "object_id": "florida-georgia-line-here-s-to-the-good-times",
+        "display_label": "Here's to the Good Times - Florida Georgia Line",
+        "source_membership_id": "family-5-album-035-florida-georgia-line-here-s-to-the-good-times",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Here's to the Good Times is a useful album-level gateway for 035.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:jason-aldean-my-kinda-party",
+        "object_id": "jason-aldean-my-kinda-party",
+        "display_label": "My Kinda Party - Jason Aldean",
+        "source_membership_id": "family-5-album-035-jason-aldean-my-kinda-party",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "My Kinda Party is a useful album-level gateway for 035.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kacey-musgraves-golden-hour",
+        "object_id": "kacey-musgraves-golden-hour",
+        "display_label": "Golden Hour - Kacey Musgraves",
+        "source_membership_id": "family-5-album-035-kacey-musgraves-golden-hour",
+        "roles": [
+          "contrast",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Golden Hour is a useful album-level gateway for 035.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lainey-wilson-bell-bottom-country",
+        "object_id": "lainey-wilson-bell-bottom-country",
+        "display_label": "Bell Bottom Country - Lainey Wilson",
+        "source_membership_id": "family-5-album-035-lainey-wilson-bell-bottom-country",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Bell Bottom Country gives 035 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:luke-bryan-crash-my-party",
+        "object_id": "luke-bryan-crash-my-party",
+        "display_label": "Crash My Party - Luke Bryan",
+        "source_membership_id": "family-5-album-035-luke-bryan-crash-my-party",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Crash My Party is a useful album-level gateway for 035.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:darius-rucker-true-believers",
+        "object_id": "darius-rucker-true-believers",
+        "display_label": "True Believers - Darius Rucker",
+        "source_membership_id": "family-5-album-035-darius-rucker-true-believers",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "True Believers gives 035 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:sam-hunt-montevallo",
+        "object_id": "sam-hunt-montevallo",
+        "display_label": "Montevallo - Sam Hunt",
+        "source_membership_id": "family-5-album-035-sam-hunt-montevallo",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Montevallo gives 035 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:florida-georgia-line-cruise",
+        "object_id": "florida-georgia-line-cruise",
+        "display_label": "Cruise - Florida Georgia Line",
+        "source_membership_id": "family-5-song-035-florida-georgia-line-cruise",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Cruise gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:luke-combs-beer-never-broke-my-heart",
+        "object_id": "luke-combs-beer-never-broke-my-heart",
+        "display_label": "Beer Never Broke My Heart - Luke Combs",
+        "source_membership_id": "family-5-song-035-luke-combs-beer-never-broke-my-heart",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Beer Never Broke My Heart is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:morgan-wallen-last-night",
+        "object_id": "morgan-wallen-last-night",
+        "display_label": "Last Night - Morgan Wallen",
+        "source_membership_id": "family-5-song-035-morgan-wallen-last-night",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Last Night gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:carrie-underwood-before-he-cheats",
+        "object_id": "carrie-underwood-before-he-cheats",
+        "display_label": "Before He Cheats - Carrie Underwood",
+        "source_membership_id": "family-5-song-035-carrie-underwood-before-he-cheats",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Before He Cheats gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:chris-stapleton-tennessee-whiskey",
+        "object_id": "chris-stapleton-tennessee-whiskey",
+        "display_label": "Tennessee Whiskey - Chris Stapleton",
+        "source_membership_id": "family-5-song-035-chris-stapleton-tennessee-whiskey",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Tennessee Whiskey is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sam-hunt-body-like-a-back-road",
+        "object_id": "sam-hunt-body-like-a-back-road",
+        "display_label": "Body Like a Back Road - Sam Hunt",
+        "source_membership_id": "family-5-song-035-sam-hunt-body-like-a-back-road",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Body Like a Back Road is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:darius-rucker-wagon-wheel",
+        "object_id": "darius-rucker-wagon-wheel",
+        "display_label": "Wagon Wheel - Darius Rucker",
+        "source_membership_id": "family-5-song-035-darius-rucker-wagon-wheel",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Wagon Wheel is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:luke-combs-beautiful-crazy",
+        "object_id": "luke-combs-beautiful-crazy",
+        "display_label": "Beautiful Crazy - Luke Combs",
+        "source_membership_id": "family-5-song-035-luke-combs-beautiful-crazy",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Beautiful Crazy is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:eric-church-springsteen",
+        "object_id": "eric-church-springsteen",
+        "display_label": "Springsteen - Eric Church",
+        "source_membership_id": "family-5-song-035-eric-church-springsteen",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Springsteen gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jason-aldean-dirt-road-anthem",
+        "object_id": "jason-aldean-dirt-road-anthem",
+        "display_label": "Dirt Road Anthem - Jason Aldean",
+        "source_membership_id": "family-5-song-035-jason-aldean-dirt-road-anthem",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Dirt Road Anthem gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jelly-roll-need-a-favor",
+        "object_id": "jelly-roll-need-a-favor",
+        "display_label": "Need a Favor - Jelly Roll",
+        "source_membership_id": "family-5-song-035-jelly-roll-need-a-favor",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Need a Favor is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:kacey-musgraves-slow-burn",
+        "object_id": "kacey-musgraves-slow-burn",
+        "display_label": "Slow Burn - Kacey Musgraves",
+        "source_membership_id": "family-5-song-035-kacey-musgraves-slow-burn",
+        "roles": [
+          "contrast",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Slow Burn gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lainey-wilson-heart-like-a-truck",
+        "object_id": "lainey-wilson-heart-like-a-truck",
+        "display_label": "Heart Like a Truck - Lainey Wilson",
+        "source_membership_id": "family-5-song-035-lainey-wilson-heart-like-a-truck",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Heart Like a Truck is a missing song-level survey object for 035, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:luke-bryan-country-girl-shake-it-for-me",
+        "object_id": "luke-bryan-country-girl-shake-it-for-me",
+        "display_label": "Country Girl (Shake It for Me) - Luke Bryan",
+        "source_membership_id": "family-5-song-035-luke-bryan-country-girl-shake-it-for-me",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Country Girl (Shake It for Me) gives 035 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f5-artist-carrie-underwood-035",
+        "candidate_id": "survey-f5-artist-carrie-underwood-035",
+        "object_type": "artist",
+        "display_label": "Carrie Underwood",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-chris-stapleton-035",
+        "candidate_id": "survey-f5-artist-chris-stapleton-035",
+        "object_type": "artist",
+        "display_label": "Chris Stapleton",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-florida-georgia-line-035",
+        "candidate_id": "survey-f5-artist-florida-georgia-line-035",
+        "object_type": "artist",
+        "display_label": "Florida Georgia Line",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-luke-combs-035",
+        "candidate_id": "survey-f5-artist-luke-combs-035",
+        "object_type": "artist",
+        "display_label": "Luke Combs",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-morgan-wallen-035",
+        "candidate_id": "survey-f5-artist-morgan-wallen-035",
+        "object_type": "artist",
+        "display_label": "Morgan Wallen",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-luke-bryan-035",
+        "candidate_id": "survey-f5-artist-luke-bryan-035",
+        "object_type": "artist",
+        "display_label": "Luke Bryan",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-jason-aldean-035",
+        "candidate_id": "survey-f5-artist-jason-aldean-035",
+        "object_type": "artist",
+        "display_label": "Jason Aldean",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-eric-church-035",
+        "candidate_id": "survey-f5-artist-eric-church-035",
+        "object_type": "artist",
+        "display_label": "Eric Church",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-lainey-wilson-035",
+        "candidate_id": "survey-f5-artist-lainey-wilson-035",
+        "object_type": "artist",
+        "display_label": "Lainey Wilson",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-kane-brown-035",
+        "candidate_id": "survey-f5-artist-kane-brown-035",
+        "object_type": "artist",
+        "display_label": "Kane Brown",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-thomas-rhett-035",
+        "candidate_id": "survey-f5-artist-thomas-rhett-035",
+        "object_type": "artist",
+        "display_label": "Thomas Rhett",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-kacey-musgraves-035",
+        "candidate_id": "survey-f5-artist-kacey-musgraves-035",
+        "object_type": "artist",
+        "display_label": "Kacey Musgraves",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-sam-hunt-035",
+        "candidate_id": "survey-f5-artist-sam-hunt-035",
+        "object_type": "artist",
+        "display_label": "Sam Hunt",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-dan-shay-035",
+        "candidate_id": "survey-f5-artist-dan-shay-035",
+        "object_type": "artist",
+        "display_label": "Dan + Shay",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-darius-rucker-035",
+        "candidate_id": "survey-f5-artist-darius-rucker-035",
+        "object_type": "artist",
+        "display_label": "Darius Rucker",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-jelly-roll-035",
+        "candidate_id": "survey-f5-artist-jelly-roll-035",
+        "object_type": "artist",
+        "display_label": "Jelly Roll",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-morgan-wallen-dangerous-the-double-album-035",
+        "candidate_id": "survey-f5-album-morgan-wallen-dangerous-the-double-album-035",
+        "object_type": "album",
+        "display_label": "Dangerous: The Double Album",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-luke-combs-this-one-s-for-you-035",
+        "candidate_id": "survey-f5-album-luke-combs-this-one-s-for-you-035",
+        "object_type": "album",
+        "display_label": "This One's for You",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-chris-stapleton-traveller-035",
+        "candidate_id": "survey-f5-album-chris-stapleton-traveller-035",
+        "object_type": "album",
+        "display_label": "Traveller",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-florida-georgia-line-here-s-to-the-good-times-035",
+        "candidate_id": "survey-f5-album-florida-georgia-line-here-s-to-the-good-times-035",
+        "object_type": "album",
+        "display_label": "Here's to the Good Times",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f5-artist-kacey-musgraves-035",
+        "question_id": "boundary-survey-f5-artist-kacey-musgraves-035",
+        "display_label": "Kacey Musgraves",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f5-album-kacey-musgraves-golden-hour-035",
+        "question_id": "boundary-survey-f5-album-kacey-musgraves-golden-hour-035",
+        "display_label": "Golden Hour",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f5-song_recording-kacey-musgraves-slow-burn-035",
+        "question_id": "boundary-survey-f5-song_recording-kacey-musgraves-slow-burn-035",
+        "display_label": "Slow Burn",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f5-artist-kacey-musgraves-035",
+        "probe_id": "probe-survey-f5-artist-kacey-musgraves-035",
+        "entity_type": "artist",
+        "display_label": "Kacey Musgraves",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f5-album-kacey-musgraves-golden-hour-035",
+        "probe_id": "probe-survey-f5-album-kacey-musgraves-golden-hour-035",
+        "entity_type": "album",
+        "display_label": "Golden Hour",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f5-song_recording-kacey-musgraves-slow-burn-035",
+        "probe_id": "probe-survey-f5-song_recording-kacey-musgraves-slow-burn-035",
+        "entity_type": "song_recording",
+        "display_label": "Slow Burn",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_05/archetype_034",
+      "family_05/archetype_036"
+    ],
+    "before_archetype_refs": [
+      "family_05/archetype_034"
+    ],
+    "after_archetype_refs": [
+      "family_05/archetype_036"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_5": {
+      "title": "Normalized canonical graph export, Family 5",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_5/normalized_family_5.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "035_allmusic_bro_country": {
+      "title": "Bro-Country",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/bro-country-ma0000013319",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for bro-country's party themes, pop production, and radio moment.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for bro-country's party themes, pop production, and radio moment."
+    },
+    "035_grammy_luke_combs": {
+      "title": "Luke Combs",
+      "publisher": "The Recording Academy",
+      "url": "https://www.grammy.com/artists/luke-combs/243287",
+      "source_type": "artist_reference",
+      "audit_use": "Supports Luke Combs as a contemporary arena-country and radio anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Luke Combs as a contemporary arena-country and radio anchor."
+    },
+    "035_britannica_country_music": {
+      "title": "Country music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/country-music",
+      "source_type": "reference",
+      "audit_use": "Supplies broader country context for identifying modern Nashville continuity and departures.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Supplies broader country context for identifying modern Nashville continuity and departures."
+    },
+    "britannica_garth_brooks": {
+      "title": "Garth Brooks",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Garth-Brooks",
+      "source_type": "reference",
+      "audit_use": "1990s country radio, arena-scale country, and crossover context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "1990s country radio, arena-scale country, and crossover context."
+    },
+    "britannica_country_music": {
+      "title": "Country music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/country-music",
+      "source_type": "reference",
+      "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+    },
+    "country_music_hall_history": {
+      "title": "Country Music Hall of Fame and Museum",
+      "publisher": "Country Music Hall of Fame and Museum",
+      "url": "https://www.countrymusichalloffame.org/",
+      "source_type": "museum_reference",
+      "audit_use": "Country music history, Nashville, artists, and institutional context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country music history, Nashville, artists, and institutional context."
+    },
+    "britannica_taylor_swift": {
+      "title": "Taylor Swift",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Taylor-Swift",
+      "source_type": "reference",
+      "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "035-c01",
+      "claim_text": "Modern country radio blends Nashville songwriting with pop, rock, hip-hop-adjacent rhythm, and arena production aimed at contemporary radio and streaming audiences.",
+      "source_ref_ids": [
+        "035_allmusic_bro_country",
+        "035_britannica_country_music"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_05/archetype_035",
+        "artist:florida-georgia-line",
+        "artist:luke-bryan",
+        "artist:morgan-wallen"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "035-c02",
+      "claim_text": "Florida Georgia Line's Cruise is a central bro-country signal because it foregrounds party imagery, bright hooks, and country-pop production hybrids.",
+      "source_ref_ids": [
+        "035_allmusic_bro_country"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "artist:florida-georgia-line",
+        "song_recording:florida-georgia-line-cruise"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "035-c03",
+      "claim_text": "Luke Combs represents a sturdier arena-country branch, keeping a blue-collar vocal identity while using modern radio scale.",
+      "source_ref_ids": [
+        "035_grammy_luke_combs",
+        "035_britannica_country_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:luke-combs",
+        "album:luke-combs-this-one-s-for-you",
+        "song_recording:luke-combs-beer-never-broke-my-heart"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "035-c04",
+      "claim_text": "This road differs from 1990s hat-act country because drum programming, pop-rock loudness, and streaming-era celebrity are often part of the core sound.",
+      "source_ref_ids": [
+        "035_allmusic_bro_country"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "dead_end_false_nearby_caution_module"
+      ],
+      "graph_refs": [
+        "family_05/archetype_035",
+        "family_05/archetype_034"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "035-modern_country_radio_bro_country_arena_country-boundary",
+      "claim_text": "Modern Country Radio / Bro-Country / Arena Country's boundary is clearest when big compressed drums and party or small-town imagery appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "035_allmusic_bro_country",
+        "035_grammy_luke_combs"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_05/archetype_035",
+        "artist:florida-georgia-line",
+        "artist:luke-combs"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "035-modern_country_radio_bro_country_arena_country-examples",
+      "claim_text": "Florida Georgia Line, Luke Combs, Traveller - Chris Stapleton gives Modern Country Radio / Bro-Country / Arena Country concrete anchors because the examples expose arena chorus inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "035_grammy_luke_combs",
+        "britannica_garth_brooks"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_05/archetype_035",
+        "artist:florida-georgia-line",
+        "artist:luke-combs"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Contemporary country radio built from arena hooks, party imagery, and pop-rock production power.",
+    "history_capsule": "After the 1990s country boom, Nashville radio kept scaling up, absorbing pop, rock, and hip-hop production habits while preserving enough country codes for format identity.",
+    "why_it_mattered": "It defined country's 2010s and streaming-era mainstream and reset debates about what sounds country enough.",
+    "what_made_it_distinct": "The songs are loud, bright, hook-heavy, and often built for trucks, tailgates, arenas, and playlists.",
+    "what_to_listen_for": [
+      "big compressed drums",
+      "party or small-town imagery",
+      "arena chorus",
+      "pop-country guitar sheen"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:florida-georgia-line",
+        "example_type": "artist",
+        "display_label": "Florida Georgia Line",
+        "why_this_example_matters": "Florida Georgia Line anchors Modern Country Radio / Bro-Country / Arena Country by making story-first lyrics and twang or pedal-steel color easier to hear.",
+        "what_to_listen_for": [
+          "big compressed drums",
+          "party or small-town imagery"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:luke-combs",
+        "example_type": "artist",
+        "display_label": "Luke Combs",
+        "why_this_example_matters": "Luke Combs anchors Modern Country Radio / Bro-Country / Arena Country by making twang or pedal-steel color and dance or ballad pacing easier to hear.",
+        "what_to_listen_for": [
+          "party or small-town imagery",
+          "arena chorus"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:chris-stapleton-traveller",
+        "example_type": "album",
+        "display_label": "Traveller - Chris Stapleton",
+        "why_this_example_matters": "Traveller - Chris Stapleton anchors Modern Country Radio / Bro-Country / Arena Country by making dance or ballad pacing and plainspoken vocal stance easier to hear.",
+        "what_to_listen_for": [
+          "arena chorus",
+          "pop-country guitar sheen"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:luke-combs-this-one-s-for-you",
+        "example_type": "album",
+        "display_label": "This One's for You - Luke Combs",
+        "why_this_example_matters": "This One's for You - Luke Combs anchors Modern Country Radio / Bro-Country / Arena Country by making plainspoken vocal stance and radio polish against roots texture easier to hear.",
+        "what_to_listen_for": [
+          "pop-country guitar sheen"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:florida-georgia-line-cruise",
+        "example_type": "song_recording",
+        "display_label": "Cruise - Florida Georgia Line",
+        "why_this_example_matters": "Cruise - Florida Georgia Line anchors Modern Country Radio / Bro-Country / Arena Country by making radio polish against roots texture and story-first lyrics easier to hear.",
+        "what_to_listen_for": [
+          "big compressed drums",
+          "party or small-town imagery"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:luke-combs-beer-never-broke-my-heart",
+        "example_type": "song_recording",
+        "display_label": "Beer Never Broke My Heart - Luke Combs",
+        "why_this_example_matters": "Beer Never Broke My Heart - Luke Combs anchors Modern Country Radio / Bro-Country / Arena Country by making story-first lyrics and twang or pedal-steel color easier to hear.",
+        "what_to_listen_for": [
+          "party or small-town imagery",
+          "arena chorus"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_05/archetype_034"
+      ],
+      "after": [
+        "family_05/archetype_036"
+      ],
+      "related": [
+        "family_05/archetype_034",
+        "family_05/archetype_036"
+      ],
+      "copy": "Use Modern Country Radio / Bro-Country / Arena Country as a contextual road inside Country; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "035-dyk-1",
+        "copy": "Bro-country is a narrower moment inside the larger modern country radio lane.",
+        "source_ref_ids": [
+          "035_allmusic_bro_country",
+          "035_britannica_country_music"
+        ]
+      },
+      {
+        "card_id": "035-dyk-2",
+        "copy": "Luke Combs and Florida Georgia Line show different branches of the same contemporary ecosystem.",
+        "source_ref_ids": [
+          "035_allmusic_bro_country"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether modern country radio / bro-country / arena country is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Contemporary country radio built from arena hooks, party imagery, and pop-rock production power.",
+      "It defined country's 2010s and streaming-era mainstream and reset debates about what sounds country enough.",
+      "The songs are loud, bright, hook-heavy, and often built for trucks, tailgates, arenas, and playlists."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat all recent country as bro-country; separate party-pop codes from broader arena-country radio.",
+    "personalization_hooks": [
+      {
+        "hook_id": "035-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[035]",
+          "atlas_state.family_affinity[5]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[035] >= 0.65 || atlas_state.family_affinity[5] >= 0.65",
+        "copy_variant": "Your Atlas signals make Modern Country Radio / Bro-Country / Arena Country useful as a contextual landmark.",
+        "fallback_copy": "Use Modern Country Radio / Bro-Country / Arena Country as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "035-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_05/archetype_035 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_05/archetype_035",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Modern Country Radio / Bro-Country / Arena Country before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "035-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_05/archetype_035 || atlas_state.boundary_question_results has boundary_negative for family_05/archetype_035",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Modern Country Radio / Bro-Country / Arena Country.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "035-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_05/archetype_035 || atlas_state.related_mission_ids references family_05/archetype_035",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "035-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_05/archetype_035 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_05/archetype_035 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_05/archetype_035",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Modern Country Radio / Bro-Country / Arena Country.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_5": {
+        "title": "Normalized canonical graph export, Family 5",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_5/normalized_family_5.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "035_allmusic_bro_country": {
+        "title": "Bro-Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/bro-country-ma0000013319",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for bro-country's party themes, pop production, and radio moment.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for bro-country's party themes, pop production, and radio moment."
+      },
+      "035_grammy_luke_combs": {
+        "title": "Luke Combs",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/luke-combs/243287",
+        "source_type": "artist_reference",
+        "audit_use": "Supports Luke Combs as a contemporary arena-country and radio anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Luke Combs as a contemporary arena-country and radio anchor."
+      },
+      "035_britannica_country_music": {
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "audit_use": "Supplies broader country context for identifying modern Nashville continuity and departures.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Supplies broader country context for identifying modern Nashville continuity and departures."
+      },
+      "britannica_garth_brooks": {
+        "title": "Garth Brooks",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Garth-Brooks",
+        "source_type": "reference",
+        "audit_use": "1990s country radio, arena-scale country, and crossover context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "1990s country radio, arena-scale country, and crossover context."
+      },
+      "britannica_country_music": {
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      "country_music_hall_history": {
+        "title": "Country Music Hall of Fame and Museum",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/",
+        "source_type": "museum_reference",
+        "audit_use": "Country music history, Nashville, artists, and institutional context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music history, Nashville, artists, and institutional context."
+      },
+      "britannica_taylor_swift": {
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_type": "reference",
+        "audit_use": "Modern pop authorship, country-pop crossover, and streaming-era scale.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "035-c01",
+        "claim_text": "Modern country radio blends Nashville songwriting with pop, rock, hip-hop-adjacent rhythm, and arena production aimed at contemporary radio and streaming audiences.",
+        "source_ref_ids": [
+          "035_allmusic_bro_country",
+          "035_britannica_country_music"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_05/archetype_035",
+          "artist:florida-georgia-line",
+          "artist:luke-bryan",
+          "artist:morgan-wallen"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035-c02",
+        "claim_text": "Florida Georgia Line's Cruise is a central bro-country signal because it foregrounds party imagery, bright hooks, and country-pop production hybrids.",
+        "source_ref_ids": [
+          "035_allmusic_bro_country"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "artist:florida-georgia-line",
+          "song_recording:florida-georgia-line-cruise"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035-c03",
+        "claim_text": "Luke Combs represents a sturdier arena-country branch, keeping a blue-collar vocal identity while using modern radio scale.",
+        "source_ref_ids": [
+          "035_grammy_luke_combs",
+          "035_britannica_country_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:luke-combs",
+          "album:luke-combs-this-one-s-for-you",
+          "song_recording:luke-combs-beer-never-broke-my-heart"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035-c04",
+        "claim_text": "This road differs from 1990s hat-act country because drum programming, pop-rock loudness, and streaming-era celebrity are often part of the core sound.",
+        "source_ref_ids": [
+          "035_allmusic_bro_country"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "dead_end_false_nearby_caution_module"
+        ],
+        "graph_refs": [
+          "family_05/archetype_035",
+          "family_05/archetype_034"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "035-modern_country_radio_bro_country_arena_country-boundary",
+        "claim_text": "Modern Country Radio / Bro-Country / Arena Country's boundary is clearest when big compressed drums and party or small-town imagery appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "035_allmusic_bro_country",
+          "035_grammy_luke_combs"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_05/archetype_035",
+          "artist:florida-georgia-line",
+          "artist:luke-combs"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "035-modern_country_radio_bro_country_arena_country-examples",
+        "claim_text": "Florida Georgia Line, Luke Combs, Traveller - Chris Stapleton gives Modern Country Radio / Bro-Country / Arena Country concrete anchors because the examples expose arena chorus inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "035_grammy_luke_combs",
+          "britannica_garth_brooks"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_05/archetype_035",
+          "artist:florida-georgia-line",
+          "artist:luke-combs"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Modern country radio, bro-country, and arena country: Florida Georgia Line, Luke Bryan, Luke Combs, Morgan Wallen, contemporary Nashville streaming and radio.",
+    "selected_sources": [
+      {
+        "source_ref_id": "035_allmusic_bro_country",
+        "title": "Bro-Country",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/bro-country-ma0000013319",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for bro-country's party themes, pop production, and radio moment."
+      },
+      {
+        "source_ref_id": "035_grammy_luke_combs",
+        "title": "Luke Combs",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/luke-combs/243287",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Luke Combs as a contemporary arena-country and radio anchor."
+      },
+      {
+        "source_ref_id": "035_britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Supplies broader country context for identifying modern Nashville continuity and departures."
+      },
+      {
+        "source_ref_id": "britannica_garth_brooks",
+        "title": "Garth Brooks",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Garth-Brooks",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "1990s country radio, arena-scale country, and crossover context."
+      },
+      {
+        "source_ref_id": "britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      {
+        "source_ref_id": "country_music_hall_history",
+        "title": "Country Music Hall of Fame and Museum",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music history, Nashville, artists, and institutional context."
+      },
+      {
+        "source_ref_id": "britannica_taylor_swift",
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_relevance": "example_object_support",
+        "why_fit": "Modern pop authorship, country-pop crossover, and streaming-era scale."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "035_reject_folk_revival",
+        "title": "Folk music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/folk-music",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Folk revival context does not support claims about contemporary country radio production."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly support bro-country and arena country while preserving country-family context."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 6,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 101,
+    "scene_anchor_refs": [
+      "song|keith urban|days go by",
+      "song|miranda lambert|gunpowder and lead",
+      "song|eric church|drink in my hand",
+      "song|carrie underwood|blown away"
+    ],
+    "ladder_example_refs": [
+      "song|little big town|girl crush",
+      "song|dan shay|tequila",
+      "song|luke combs|beer never broke my heart",
+      "artist_anchor|florida georgia line|florida georgia line",
+      "artist_anchor|luke bryan|luke bryan",
+      "artist_anchor|maren morris|maren morris",
+      "song|zac brown band|toes",
+      "song|kelsea ballerini|peter pan"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

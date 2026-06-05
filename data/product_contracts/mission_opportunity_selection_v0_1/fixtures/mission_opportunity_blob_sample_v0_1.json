@@ -1,0 +1,210 @@
+{
+  "contract_version": "mission_opportunity_blob_v0_1",
+  "opportunity_id": "opp_bridge_family_10_to_family_8_synthetic_v0_1",
+  "mission_type": "bridge_test",
+  "target_object_type": "family_pair",
+  "target_object_ids": ["family_10", "family_8"],
+  "target_object_ref": {
+    "object_type": "family_pair",
+    "object_ids": ["family_10", "family_8"],
+    "display_name": "Synthetic Source Family -> Synthetic Target Family"
+  },
+  "floor_passed": true,
+  "floor_details": {
+    "mission_type_score_floor": 0.8,
+    "mission_type_score_ceiling": 0.96,
+    "computed_floor_score": 0.84,
+    "floor_passed": true,
+    "failed_requirements": [],
+    "fail_reasons": [],
+    "floor_evidence_refs": [
+      "synthetic_rollup:family_pair:family_10->family_8:sample",
+      "ev_mission_song_ok_weak"
+    ]
+  },
+  "filled_requirements": {
+    "required_evidence_rollup_refs": [
+      "synthetic_rollup:family_pair:family_10->family_8:sample"
+    ],
+    "required_graph_object_refs": [
+      {
+        "object_type": "family_pair",
+        "object_ids": ["family_10", "family_8"],
+        "display_name": "Synthetic Source Family -> Synthetic Target Family"
+      }
+    ],
+    "candidate_refs": [
+      "synthetic_clean_bridge_edge:family_10_family_8:001",
+      "synthetic_gateway_candidate:family_8:001"
+    ],
+    "required_inputs_available": true
+  },
+  "source_signal_summary": {
+    "target_rollup_ref": "synthetic_rollup:family_pair:family_10->family_8:sample",
+    "target_object_type": "family_pair",
+    "target_object_ids": ["family_10", "family_8"],
+    "target_display_name": "Synthetic Source Family -> Synthetic Target Family",
+    "positive_signal_count": 1,
+    "negative_signal_count": 0,
+    "weak_non_failure_signal_count": 1,
+    "survey_ok_ignored_count": 1,
+    "mission_ok_weak_count": 1,
+    "evidence_density": 0.38,
+    "conflict_score": 0.12,
+    "recency_score": 0.92
+  },
+  "graph_context_summary": {
+    "graph_contexts": [
+      {
+        "target_object_ref": {
+          "object_type": "family_pair",
+          "object_ids": ["family_10", "family_8"],
+          "display_name": "Synthetic Source Family -> Synthetic Target Family"
+        },
+        "family_ids": ["family_10", "family_8"],
+        "family_names": ["Synthetic Source Family", "Synthetic Target Family"],
+        "archetype_ids": ["071", "058"],
+        "archetype_names": ["Synthetic Source Archetype", "Synthetic Target Archetype"],
+        "artist_ids": ["artist-synthetic-source", "artist-synthetic-target"],
+        "album_ids": ["album-synthetic-source-collection", "album-synthetic-target"],
+        "song_ids": ["song|synthetic source|bright bridge seed", "song|synthetic target|gateway step"],
+        "node_tier": "major",
+        "graph_item_role": "bridge",
+        "track_tier_within_archetype": "primary",
+        "album_tier_within_archetype": "supporting",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": ["nostalgia_context"],
+        "risk_flags": ["safe_gateway"],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_bridge_rollup:family_10_family_8"],
+          "synthetic_only": true
+        }
+      }
+    ],
+    "endpoint_graph_contexts": [
+      {
+        "target_object_ref": {
+          "object_type": "family",
+          "object_ids": ["family_10"],
+          "display_name": "Synthetic Source Family"
+        },
+        "family_ids": ["family_10"],
+        "family_names": ["Synthetic Source Family"],
+        "archetype_ids": ["071"],
+        "archetype_names": ["Synthetic Source Archetype"],
+        "artist_ids": ["artist-synthetic-source"],
+        "album_ids": ["album-synthetic-source-collection"],
+        "song_ids": ["song|synthetic source|bright bridge seed"],
+        "node_tier": "primary",
+        "graph_item_role": "canonical_anchor",
+        "track_tier_within_archetype": "primary",
+        "album_tier_within_archetype": "major",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": [],
+        "risk_flags": [],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_graph:family_source"],
+          "synthetic_only": true
+        }
+      },
+      {
+        "target_object_ref": {
+          "object_type": "family",
+          "object_ids": ["family_8"],
+          "display_name": "Synthetic Target Family"
+        },
+        "family_ids": ["family_8"],
+        "family_names": ["Synthetic Target Family"],
+        "archetype_ids": ["058"],
+        "archetype_names": ["Synthetic Target Archetype"],
+        "artist_ids": ["artist-synthetic-target"],
+        "album_ids": ["album-synthetic-target"],
+        "song_ids": ["song|synthetic target|gateway step"],
+        "node_tier": "gateway",
+        "graph_item_role": "gateway",
+        "track_tier_within_archetype": "gateway",
+        "album_tier_within_archetype": "supporting",
+        "artist_tier_within_archetype": "major",
+        "context_overlays": ["nostalgia_context"],
+        "risk_flags": ["safe_gateway"],
+        "identity_flags": [],
+        "provenance": {
+          "source": "synthetic_fixture",
+          "source_refs": ["synthetic_graph:family_target"],
+          "synthetic_only": true
+        }
+      }
+    ],
+    "tier_coverage_score": 0.55,
+    "tier_depth_score": 0.32,
+    "coverage_gap_score": 0.72,
+    "depth_gap_score": 0.68
+  },
+  "affinity_context_summary": {
+    "dominant_affinity_tags": [
+      "rhythm_body:driving_eighths",
+      "sonic_texture:guitar_forward",
+      "emotion_theme:alienation"
+    ],
+    "context_overlays": ["nostalgia_context"],
+    "bridge_readiness_score": 0.91,
+    "gateway_availability": {
+      "available": true,
+      "gateway_candidate_refs": ["synthetic_gateway_candidate:family_8:001"],
+      "gateway_to_representative_coherence_score": 0.83
+    },
+    "context_variability_score": 0.34,
+    "context_skew_score": 0.22
+  },
+  "risk_context_summary": {
+    "risk_flags": ["safe_gateway"],
+    "identity_flags": [],
+    "risk_penalty_basis": ["no_identity_or_version_risk_in_main_comparator_set"],
+    "identity_or_version_risk_present": false
+  },
+  "candidate_generation_summary": {
+    "generator_id": "synthetic_bridge_test_generator_v0_1",
+    "batch_index": 0,
+    "input_rollup_refs": ["rollup_family_family_10", "rollup_song_gateway_step"],
+    "eligible_candidate_count": 14,
+    "emitted_candidate_count": 3,
+    "pruned_candidate_count": 11,
+    "floor_failed_candidate_count": 0,
+    "cap_applied": true,
+    "cap_value": 10,
+    "batch_size": 10,
+    "generation_notes": [
+      "Synthetic clean bridge fixture only.",
+      "No runtime listener evidence was read."
+    ]
+  },
+  "score_components": {
+    "mission_type_value": 0.8,
+    "mission_fit_score": 0.86,
+    "readiness_score": 0.84,
+    "learning_value_score": 0.88,
+    "risk_penalty": 0.04,
+    "repetition_penalty": 0.02,
+    "complexity_penalty": 0.03,
+    "raw_score": 0.9,
+    "final_opportunity_score": 0.9
+  },
+  "activation_reasons": [
+    "source family has positive evidence",
+    "target family is under-tested",
+    "clean bridge readiness is available"
+  ],
+  "risk_reasons": [],
+  "suppression_reasons": [],
+  "required_inputs_available": true,
+  "opportunity_only": true,
+  "construction_status": "not_constructed",
+  "runtime_allowed": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false
+}

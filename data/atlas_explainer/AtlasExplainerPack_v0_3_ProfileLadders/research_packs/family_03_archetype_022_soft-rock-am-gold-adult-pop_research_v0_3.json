@@ -1,0 +1,1521 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_03_archetype_022_soft-rock-am-gold-adult-pop_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_3/normalized_family_3.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 3,
+    "family_slug": "classic-rock-album-rock-progressive-rock",
+    "family_name": "Classic Rock, Album Rock, Progressive Rock",
+    "archetype_id": "022",
+    "archetype_slug": "soft-rock-am-gold-adult-pop",
+    "canonical_graph_ref": "family_03/archetype_022",
+    "existing_graph_label_name": "Soft Rock / AM Gold / Adult Pop",
+    "editorial_display_title": "Soft Rock / AM Gold / Adult Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:artist-elton-john",
+        "object_id": "artist-elton-john",
+        "display_label": "Elton John",
+        "source_membership_id": "family-3-artist-022-artist-elton-john",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "massive artist and song recognition",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-billy-joel",
+        "object_id": "artist-billy-joel",
+        "display_label": "Billy Joel",
+        "source_membership_id": "family-3-artist-022-artist-billy-joel",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "major piano-pop/soft-rock survey pillar",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-fleetwood-mac",
+        "object_id": "artist-fleetwood-mac",
+        "display_label": "Fleetwood Mac",
+        "source_membership_id": "family-3-artist-022-artist-fleetwood-mac",
+        "roles": [
+          "anchor",
+          "bridge",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "selective soft-rock inclusion through softer song and LP pull",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-eagles",
+        "object_id": "artist-eagles",
+        "display_label": "Eagles",
+        "source_membership_id": "family-3-artist-022-artist-eagles",
+        "roles": [
+          "anchor",
+          "bridge",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "softer side of country-rock/classic-rock recognition",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-chicago",
+        "object_id": "artist-chicago",
+        "display_label": "Chicago",
+        "source_membership_id": "family-3-artist-022-artist-chicago",
+        "roles": [
+          "anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "huge adult-pop and soft-rock footprint",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-carpenters",
+        "object_id": "artist-carpenters",
+        "display_label": "Carpenters",
+        "source_membership_id": "family-3-artist-022-artist-carpenters",
+        "roles": [
+          "bridge",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "core AM-gold recognition object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-hall-and-oates",
+        "object_id": "artist-hall-and-oates",
+        "display_label": "Hall & Oates",
+        "source_membership_id": "family-3-artist-022-artist-hall-and-oates",
+        "roles": [
+          "bridge",
+          "anchor",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "strong soft/adult-pop recognition; not automatically yacht",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-america",
+        "object_id": "artist-america",
+        "display_label": "America",
+        "source_membership_id": "family-3-artist-022-artist-america",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "high-recognition soft-rock trio",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-bread",
+        "object_id": "artist-bread",
+        "display_label": "Bread",
+        "source_membership_id": "family-3-artist-022-artist-bread",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first",
+          "compilation_gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "quintessential soft-rock act",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-the-doobie-brothers",
+        "object_id": "artist-the-doobie-brothers",
+        "display_label": "The Doobie Brothers",
+        "source_membership_id": "family-3-artist-022-artist-the-doobie-brothers",
+        "roles": [
+          "bridge",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "softer McDonald-era and earlier California-radio overlap",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-james-taylor",
+        "object_id": "artist-james-taylor",
+        "display_label": "James Taylor",
+        "source_membership_id": "family-3-artist-022-artist-james-taylor",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Unavoidable AM/FM soft-rock crossover from second pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:artist-carole-king",
+        "object_id": "artist-carole-king",
+        "display_label": "Carole King",
+        "source_membership_id": "family-3-artist-022-artist-carole-king",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Major adult-pop/AM-gold anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:album-rumours-1977",
+        "object_id": "album-rumours-1977",
+        "display_label": "Rumours - Fleetwood Mac",
+        "source_membership_id": "family-3-album-022-album-rumours-1977",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "softer side of classic-rock spine",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-goodbye-yellow-brick-road-1973",
+        "object_id": "album-goodbye-yellow-brick-road-1973",
+        "display_label": "Goodbye Yellow Brick Road - Elton John",
+        "source_membership_id": "family-3-album-022-album-goodbye-yellow-brick-road-1973",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "strongest Elton album gateway here",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-the-stranger-1977",
+        "object_id": "album-the-stranger-1977",
+        "display_label": "The Stranger - Billy Joel",
+        "source_membership_id": "family-3-album-022-album-the-stranger-1977",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "best Billy Joel soft-rock gateway LP",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-their-greatest-hits-1971-1975-1976",
+        "object_id": "album-their-greatest-hits-1971-1975-1976",
+        "display_label": "Their Greatest Hits 1971-1975 - Eagles",
+        "source_membership_id": "family-3-album-022-album-their-greatest-hits-1971-1975-1976",
+        "roles": [
+          "compilation_gateway",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "best Eagles casual-entry object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-tapestry-1971",
+        "object_id": "album-tapestry-1971",
+        "display_label": "Tapestry - Carole King",
+        "source_membership_id": "family-3-album-022-album-tapestry-1971",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Unavoidable adult-pop/soft-rock overlap LP.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-fleetwood-mac-1975",
+        "object_id": "album-fleetwood-mac-1975",
+        "display_label": "Fleetwood Mac - Fleetwood Mac",
+        "source_membership_id": "family-3-album-022-album-fleetwood-mac-1975",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "key entry before Rumours",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-the-best-of-bread-1973",
+        "object_id": "album-the-best-of-bread-1973",
+        "display_label": "The Best of Bread - Bread",
+        "source_membership_id": "family-3-album-022-album-the-best-of-bread-1973",
+        "roles": [
+          "compilation_gateway",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "true Bread public gateway",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-history-americas-greatest-hits-1975",
+        "object_id": "album-history-americas-greatest-hits-1975",
+        "display_label": "History: America's Greatest Hits - America",
+        "source_membership_id": "family-3-album-022-album-history-americas-greatest-hits-1975",
+        "roles": [
+          "compilation_gateway",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "songs matter more than deep album exploration",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-chicago-17-1984",
+        "object_id": "album-chicago-17-1984",
+        "display_label": "Chicago 17 - Chicago",
+        "source_membership_id": "family-3-album-022-album-chicago-17-1984",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "later adult-pop gateway despite later date",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:album-sweet-baby-james-1970",
+        "object_id": "album-sweet-baby-james-1970",
+        "display_label": "Sweet Baby James - James Taylor",
+        "source_membership_id": "family-3-album-022-album-sweet-baby-james-1970",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "edge",
+        "inclusion_reason": "Core James Taylor soft-rock entry.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:song-your-song-1970",
+        "object_id": "song-your-song-1970",
+        "display_label": "Your Song - Elton John",
+        "source_membership_id": "family-3-song-022-song-your-song-1970",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "ideal Elton soft-lane song",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-dreams-1977",
+        "object_id": "song-dreams-1977",
+        "display_label": "Dreams - Fleetwood Mac",
+        "source_membership_id": "family-3-song-022-song-dreams-1977",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "softer Fleetwood core object",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-piano-man-1973",
+        "object_id": "song-piano-man-1973",
+        "display_label": "Piano Man - Billy Joel",
+        "source_membership_id": "family-3-song-022-song-piano-man-1973",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "massive Joel identifier",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-tiny-dancer-1971",
+        "object_id": "song-tiny-dancer-1971",
+        "display_label": "Tiny Dancer - Elton John",
+        "source_membership_id": "family-3-song-022-song-tiny-dancer-1971",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "huge later-life recognition",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-fire-and-rain-1970",
+        "object_id": "song-fire-and-rain-1970",
+        "display_label": "Fire and Rain - James Taylor",
+        "source_membership_id": "family-3-song-022-song-fire-and-rain-1970",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Soft-rock/AM-gold overlap song with Family 4 value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-its-too-late-1971",
+        "object_id": "song-its-too-late-1971",
+        "display_label": "It's Too Late - Carole King",
+        "source_membership_id": "family-3-song-022-song-its-too-late-1971",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Adult-pop/soft-rock radio memory object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-youre-so-vain-1972",
+        "object_id": "song-youre-so-vain-1972",
+        "display_label": "You're So Vain - Carly Simon",
+        "source_membership_id": "family-3-song-022-song-youre-so-vain-1972",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Canonical song-first soft-pop object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-rocket-man-1972",
+        "object_id": "song-rocket-man-1972",
+        "display_label": "Rocket Man - Elton John",
+        "source_membership_id": "family-3-song-022-song-rocket-man-1972",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "strong Elton crossover signal",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-just-the-way-you-are-1977",
+        "object_id": "song-just-the-way-you-are-1977",
+        "display_label": "Just the Way You Are - Billy Joel",
+        "source_membership_id": "family-3-song-022-song-just-the-way-you-are-1977",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "soft/adult-pop Joel flag",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-take-it-easy-1972",
+        "object_id": "song-take-it-easy-1972",
+        "display_label": "Take It Easy - Eagles",
+        "source_membership_id": "family-3-song-022-song-take-it-easy-1972",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Eagles' softer California side",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-if-you-leave-me-now-1976",
+        "object_id": "song-if-you-leave-me-now-1976",
+        "display_label": "If You Leave Me Now - Chicago",
+        "source_membership_id": "family-3-song-022-song-if-you-leave-me-now-1976",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "cleanest Chicago soft-lane separator",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-landslide-1975",
+        "object_id": "song-landslide-1975",
+        "display_label": "Landslide - Fleetwood Mac",
+        "source_membership_id": "family-3-song-022-song-landslide-1975",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "soft-intimate Fleetwood signal",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-time-in-a-bottle-1972",
+        "object_id": "song-time-in-a-bottle-1972",
+        "display_label": "Time in a Bottle - Jim Croce",
+        "source_membership_id": "family-3-song-022-song-time-in-a-bottle-1972",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "edge",
+        "inclusion_reason": "AM-gold memory object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:song-baker-street-1978",
+        "object_id": "song-baker-street-1978",
+        "display_label": "Baker Street - Gerry Rafferty",
+        "source_membership_id": "family-3-song-022-song-baker-street-1978",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "edge",
+        "inclusion_reason": "One-song/one-album soft-rock gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-chicago-022",
+        "candidate_id": "survey-f3-artist-artist-chicago-022",
+        "object_type": "artist",
+        "display_label": "Chicago",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-carpenters-022",
+        "candidate_id": "survey-f3-artist-artist-carpenters-022",
+        "object_type": "artist",
+        "display_label": "Carpenters",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-hall-and-oates-022",
+        "candidate_id": "survey-f3-artist-artist-hall-and-oates-022",
+        "object_type": "artist",
+        "display_label": "Hall & Oates",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-america-022",
+        "candidate_id": "survey-f3-artist-artist-america-022",
+        "object_type": "artist",
+        "display_label": "America",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-bread-022",
+        "candidate_id": "survey-f3-artist-artist-bread-022",
+        "object_type": "artist",
+        "display_label": "Bread",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-carole-king-022",
+        "candidate_id": "survey-f3-artist-artist-carole-king-022",
+        "object_type": "artist",
+        "display_label": "Carole King",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-james-taylor-022",
+        "candidate_id": "survey-f3-artist-artist-james-taylor-022",
+        "object_type": "artist",
+        "display_label": "James Taylor",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-gerry-rafferty-022",
+        "candidate_id": "survey-f3-artist-artist-gerry-rafferty-022",
+        "object_type": "artist",
+        "display_label": "Gerry Rafferty",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-seals-and-crofts-022",
+        "candidate_id": "survey-f3-artist-artist-seals-and-crofts-022",
+        "object_type": "artist",
+        "display_label": "Seals & Crofts",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-dan-fogelberg-022",
+        "candidate_id": "survey-f3-artist-artist-dan-fogelberg-022",
+        "object_type": "artist",
+        "display_label": "Dan Fogelberg",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-linda-ronstadt-022",
+        "candidate_id": "survey-f3-artist-artist-linda-ronstadt-022",
+        "object_type": "artist",
+        "display_label": "Linda Ronstadt",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-carly-simon-022",
+        "candidate_id": "survey-f3-artist-artist-carly-simon-022",
+        "object_type": "artist",
+        "display_label": "Carly Simon",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-jim-croce-022",
+        "candidate_id": "survey-f3-artist-artist-jim-croce-022",
+        "object_type": "artist",
+        "display_label": "Jim Croce",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-gordon-lightfoot-022",
+        "candidate_id": "survey-f3-artist-artist-gordon-lightfoot-022",
+        "object_type": "artist",
+        "display_label": "Gordon Lightfoot",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-little-river-band-022",
+        "candidate_id": "survey-f3-artist-artist-little-river-band-022",
+        "object_type": "artist",
+        "display_label": "Little River Band",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-artist-artist-10cc-022",
+        "candidate_id": "survey-f3-artist-artist-10cc-022",
+        "object_type": "artist",
+        "display_label": "10cc",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-goodbye-yellow-brick-road-1973-022",
+        "candidate_id": "survey-f3-album-album-goodbye-yellow-brick-road-1973-022",
+        "object_type": "album",
+        "display_label": "Goodbye Yellow Brick Road",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-the-stranger-1977-022",
+        "candidate_id": "survey-f3-album-album-the-stranger-1977-022",
+        "object_type": "album",
+        "display_label": "The Stranger",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-tapestry-1971-022",
+        "candidate_id": "survey-f3-album-album-tapestry-1971-022",
+        "object_type": "album",
+        "display_label": "Tapestry",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f3-album-album-fleetwood-mac-1975-022",
+        "candidate_id": "survey-f3-album-album-fleetwood-mac-1975-022",
+        "object_type": "album",
+        "display_label": "Fleetwood Mac",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_03/archetype_021",
+      "family_03/archetype_023"
+    ],
+    "before_archetype_refs": [
+      "family_03/archetype_021"
+    ],
+    "after_archetype_refs": [
+      "family_03/archetype_023"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_3": {
+      "title": "Normalized canonical graph export, Family 3",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_3/normalized_family_3.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "022_allmusic_soft_rock": {
+      "title": "Soft Rock",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/soft-rock-ma0000002865",
+      "source_type": "music_reference",
+      "audit_use": "Directly defines soft rock as a smoother, radio-friendly adult pop-rock style.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Directly defines soft rock as a smoother, radio-friendly adult pop-rock style."
+    },
+    "022_rockhall_elton_john": {
+      "title": "Elton John",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/elton-john/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports piano-led pop-rock, ballad craft, and broad AM/FM adult appeal.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports piano-led pop-rock, ballad craft, and broad AM/FM adult appeal."
+    },
+    "022_rockhall_billy_joel": {
+      "title": "Billy Joel",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/billy-joel/",
+      "source_type": "museum_reference",
+      "audit_use": "Documents singer-pianist adult pop-rock craft and radio storytelling.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Documents singer-pianist adult pop-rock craft and radio storytelling."
+    },
+    "022_rockhall_fleetwood_mac": {
+      "title": "Fleetwood Mac",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/fleetwood-mac/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports the polished band-pop side where soft rock overlaps with classic-rock canon.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports the polished band-pop side where soft rock overlaps with classic-rock canon."
+    },
+    "rockhall_elton_john": {
+      "title": "Elton John",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/elton-john/",
+      "source_type": "museum_reference",
+      "audit_use": "Piano-led pop-rock, AM gold, and album-era adult pop craft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Piano-led pop-rock, AM gold, and album-era adult pop craft."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad popular-music industry, audience, and stylistic context."
+    },
+    "rockhall_carole_king": {
+      "title": "Carole King",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/carole-king/",
+      "source_type": "museum_reference",
+      "audit_use": "Songwriter-to-performer transition and adult pop songcraft.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+    },
+    "rockhall_whitney_houston": {
+      "title": "Whitney Houston",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/whitney-houston/",
+      "source_type": "museum_reference",
+      "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "022-claim-01-radio-smoothness",
+      "claim_text": "Soft rock centers on smooth studio craft, adult emotional themes, gentle rock rhythm, and melodies designed for broad AM/FM radio familiarity.",
+      "source_ref_ids": [
+        "022_allmusic_soft_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "family_03/archetype_022"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "022-claim-02-piano-pop-pillar",
+      "claim_text": "Elton John and Billy Joel make piano-led songwriting a core part of adult pop-rock rather than a separate traditional-pop lane.",
+      "source_ref_ids": [
+        "022_rockhall_elton_john",
+        "022_rockhall_billy_joel"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_03/archetype_022",
+        "artist:elton-john",
+        "artist:billy-joel",
+        "song_recording:elton-john-your-song",
+        "song_recording:billy-joel-piano-man"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "022-claim-03-fleetwood-overlap",
+      "claim_text": "Fleetwood Mac shows the overlap with classic rock: soft-rock polish can still come from a band with album-era weight.",
+      "source_ref_ids": [
+        "022_rockhall_fleetwood_mac",
+        "022_allmusic_soft_rock"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_03/archetype_022",
+        "family_03/archetype_016",
+        "artist:fleetwood-mac",
+        "song_recording:fleetwood-mac-dreams"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "022-claim-04-intimacy-without-folk-only",
+      "claim_text": "James Taylor-style intimacy belongs here when the record favors polished adult radio warmth over folk revival roughness.",
+      "source_ref_ids": [
+        "022_allmusic_soft_rock"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_to_listen_for",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_03/archetype_022",
+        "artist:james-taylor",
+        "song_recording:james-taylor-fire-and-rain"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "022-soft_rock_am_gold_adult_pop-boundary",
+      "claim_text": "Soft Rock / AM Gold / Adult Pop's boundary is clearest when Piano or acoustic guitar carrying the harmony and A lead vocal mixed close and clear appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "022_allmusic_soft_rock",
+        "022_rockhall_elton_john"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_03/archetype_022",
+        "artist:artist-elton-john",
+        "artist:artist-billy-joel"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "022-soft_rock_am_gold_adult_pop-examples",
+      "claim_text": "Elton John, Billy Joel, Rumours - Fleetwood Mac gives Soft Rock / AM Gold / Adult Pop concrete anchors because the examples expose Adult relationship or memory themes inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "022_rockhall_elton_john",
+        "022_rockhall_billy_joel"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_03/archetype_022",
+        "artist:artist-elton-john",
+        "artist:artist-billy-joel"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "A polished adult pop-rock road of piano ballads, gentle band grooves, warm studio craft, and AM/FM songs built for lasting familiarity.",
+    "history_capsule": "Soft rock and AM Gold gather the gentler side of the 1970s pop-rock mainstream: Elton John, Billy Joel, Fleetwood Mac, James Taylor, Carole King, America, and related artists. The sound can be intimate or huge, but it usually avoids hard-rock attack.",
+    "why_it_mattered": "It gave adult feeling a central place in rock-era radio: breakups, memory, work, home, longing, and self-reflection could become mass singalong material.",
+    "what_made_it_distinct": "The arrangement smooths the edges without erasing songcraft. Piano, acoustic guitar, close drums, and warm backing vocals usually matter more than riffs.",
+    "what_to_listen_for": [
+      "Piano or acoustic guitar carrying the harmony",
+      "A lead vocal mixed close and clear",
+      "Adult relationship or memory themes",
+      "Soft drum grooves and warm backing vocals",
+      "A chorus built for recognition rather than shock"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:artist-elton-john",
+        "example_type": "artist",
+        "display_label": "Elton John",
+        "why_this_example_matters": "Elton John is a graph-validated anchor for Soft Rock / AM Gold / Adult Pop; use it to hear Piano or acoustic guitar carrying the harmony.",
+        "what_to_listen_for": [
+          "Piano or acoustic guitar carrying the harmony",
+          "A lead vocal mixed close and clear"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:artist-billy-joel",
+        "example_type": "artist",
+        "display_label": "Billy Joel",
+        "why_this_example_matters": "Billy Joel is a graph-validated anchor for Soft Rock / AM Gold / Adult Pop; use it to hear A lead vocal mixed close and clear.",
+        "what_to_listen_for": [
+          "A lead vocal mixed close and clear",
+          "Adult relationship or memory themes"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:album-rumours-1977",
+        "example_type": "album",
+        "display_label": "Rumours - Fleetwood Mac",
+        "why_this_example_matters": "Rumours - Fleetwood Mac is a graph-validated anchor for Soft Rock / AM Gold / Adult Pop; use it to hear Adult relationship or memory themes.",
+        "what_to_listen_for": [
+          "Adult relationship or memory themes",
+          "Soft drum grooves and warm backing vocals"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:album-goodbye-yellow-brick-road-1973",
+        "example_type": "album",
+        "display_label": "Goodbye Yellow Brick Road - Elton John",
+        "why_this_example_matters": "Goodbye Yellow Brick Road - Elton John is a graph-validated anchor for Soft Rock / AM Gold / Adult Pop; use it to hear Soft drum grooves and warm backing vocals.",
+        "what_to_listen_for": [
+          "Soft drum grooves and warm backing vocals",
+          "A chorus built for recognition rather than shock"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:song-your-song-1970",
+        "example_type": "song_recording",
+        "display_label": "Your Song - Elton John",
+        "why_this_example_matters": "Your Song - Elton John is a graph-validated anchor for Soft Rock / AM Gold / Adult Pop; use it to hear A chorus built for recognition rather than shock.",
+        "what_to_listen_for": [
+          "A chorus built for recognition rather than shock"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:song-dreams-1977",
+        "example_type": "song_recording",
+        "display_label": "Dreams - Fleetwood Mac",
+        "why_this_example_matters": "Dreams - Fleetwood Mac is a graph-validated anchor for Soft Rock / AM Gold / Adult Pop; use it to hear Piano or acoustic guitar carrying the harmony.",
+        "what_to_listen_for": [
+          "Piano or acoustic guitar carrying the harmony",
+          "A lead vocal mixed close and clear"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_03/archetype_021"
+      ],
+      "after": [
+        "family_03/archetype_023"
+      ],
+      "related": [
+        "family_03/archetype_021",
+        "family_03/archetype_023"
+      ],
+      "copy": "Use Soft Rock / AM Gold / Adult Pop as a contextual road inside Classic Rock, Album Rock, Progressive Rock; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "022-dyk-1",
+        "copy": "AM Gold is partly a radio-memory category, not only a studio style.",
+        "source_ref_ids": [
+          "022_allmusic_soft_rock"
+        ]
+      },
+      {
+        "card_id": "022-dyk-2",
+        "copy": "A song can be soft rock and classic rock when album-canon familiarity and polished adult pop meet.",
+        "source_ref_ids": [
+          "022_rockhall_elton_john",
+          "022_rockhall_billy_joel"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether soft rock / am gold / adult pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "A polished adult pop-rock road of piano ballads, gentle band grooves, warm studio craft, and AM/FM songs built for lasting familiarity.",
+      "It gave adult feeling a central place in rock-era radio: breakups, memory, work, home, longing, and self-reflection could become mass singalong material.",
+      "The arrangement smooths the edges without erasing songcraft. Piano, acoustic guitar, close drums, and warm backing vocals usually matter more than riffs."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use softness alone as evidence; the archetype needs rock-era songcraft and radio-pop structure, not background music.",
+    "personalization_hooks": [
+      {
+        "hook_id": "022-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[022]",
+          "atlas_state.family_affinity[3]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[022] >= 0.65 || atlas_state.family_affinity[3] >= 0.65",
+        "copy_variant": "Your Atlas signals make Soft Rock / AM Gold / Adult Pop useful as a contextual landmark.",
+        "fallback_copy": "Use Soft Rock / AM Gold / Adult Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "022-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_03/archetype_022 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_03/archetype_022",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Soft Rock / AM Gold / Adult Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "022-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_03/archetype_022 || atlas_state.boundary_question_results has boundary_negative for family_03/archetype_022",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Soft Rock / AM Gold / Adult Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "022-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_03/archetype_022 || atlas_state.related_mission_ids references family_03/archetype_022",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "022-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_03/archetype_022 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_03/archetype_022 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_03/archetype_022",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Soft Rock / AM Gold / Adult Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_3": {
+        "title": "Normalized canonical graph export, Family 3",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_3/normalized_family_3.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "022_allmusic_soft_rock": {
+        "title": "Soft Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/soft-rock-ma0000002865",
+        "source_type": "music_reference",
+        "audit_use": "Directly defines soft rock as a smoother, radio-friendly adult pop-rock style.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines soft rock as a smoother, radio-friendly adult pop-rock style."
+      },
+      "022_rockhall_elton_john": {
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports piano-led pop-rock, ballad craft, and broad AM/FM adult appeal.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports piano-led pop-rock, ballad craft, and broad AM/FM adult appeal."
+      },
+      "022_rockhall_billy_joel": {
+        "title": "Billy Joel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/billy-joel/",
+        "source_type": "museum_reference",
+        "audit_use": "Documents singer-pianist adult pop-rock craft and radio storytelling.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents singer-pianist adult pop-rock craft and radio storytelling."
+      },
+      "022_rockhall_fleetwood_mac": {
+        "title": "Fleetwood Mac",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/fleetwood-mac/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports the polished band-pop side where soft rock overlaps with classic-rock canon.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the polished band-pop side where soft rock overlaps with classic-rock canon."
+      },
+      "rockhall_elton_john": {
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_type": "museum_reference",
+        "audit_use": "Piano-led pop-rock, AM gold, and album-era adult pop craft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Piano-led pop-rock, AM gold, and album-era adult pop craft."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Broad popular-music industry, audience, and stylistic context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      "rockhall_carole_king": {
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_type": "museum_reference",
+        "audit_use": "Songwriter-to-performer transition and adult pop songcraft.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+      },
+      "rockhall_whitney_houston": {
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_type": "museum_reference",
+        "audit_use": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "022-claim-01-radio-smoothness",
+        "claim_text": "Soft rock centers on smooth studio craft, adult emotional themes, gentle rock rhythm, and melodies designed for broad AM/FM radio familiarity.",
+        "source_ref_ids": [
+          "022_allmusic_soft_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022-claim-02-piano-pop-pillar",
+        "claim_text": "Elton John and Billy Joel make piano-led songwriting a core part of adult pop-rock rather than a separate traditional-pop lane.",
+        "source_ref_ids": [
+          "022_rockhall_elton_john",
+          "022_rockhall_billy_joel"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "artist:elton-john",
+          "artist:billy-joel",
+          "song_recording:elton-john-your-song",
+          "song_recording:billy-joel-piano-man"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022-claim-03-fleetwood-overlap",
+        "claim_text": "Fleetwood Mac shows the overlap with classic rock: soft-rock polish can still come from a band with album-era weight.",
+        "source_ref_ids": [
+          "022_rockhall_fleetwood_mac",
+          "022_allmusic_soft_rock"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "family_03/archetype_016",
+          "artist:fleetwood-mac",
+          "song_recording:fleetwood-mac-dreams"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022-claim-04-intimacy-without-folk-only",
+        "claim_text": "James Taylor-style intimacy belongs here when the record favors polished adult radio warmth over folk revival roughness.",
+        "source_ref_ids": [
+          "022_allmusic_soft_rock"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_to_listen_for",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "artist:james-taylor",
+          "song_recording:james-taylor-fire-and-rain"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022-soft_rock_am_gold_adult_pop-boundary",
+        "claim_text": "Soft Rock / AM Gold / Adult Pop's boundary is clearest when Piano or acoustic guitar carrying the harmony and A lead vocal mixed close and clear appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "022_allmusic_soft_rock",
+          "022_rockhall_elton_john"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "artist:artist-elton-john",
+          "artist:artist-billy-joel"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "022-soft_rock_am_gold_adult_pop-examples",
+        "claim_text": "Elton John, Billy Joel, Rumours - Fleetwood Mac gives Soft Rock / AM Gold / Adult Pop concrete anchors because the examples expose Adult relationship or memory themes inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "022_rockhall_elton_john",
+          "022_rockhall_billy_joel"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_03/archetype_022",
+          "artist:artist-elton-john",
+          "artist:artist-billy-joel"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_a_families_01_03.json"
+  },
+  "research_trace": {
+    "archetype_query": "Soft Rock / AM Gold / Adult Pop: Elton John, Billy Joel, Fleetwood Mac, James Taylor, Carole King, AM radio, piano pop, polished adult songcraft.",
+    "selected_sources": [
+      {
+        "source_ref_id": "022_allmusic_soft_rock",
+        "title": "Soft Rock",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/soft-rock-ma0000002865",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Directly defines soft rock as a smoother, radio-friendly adult pop-rock style."
+      },
+      {
+        "source_ref_id": "022_rockhall_elton_john",
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports piano-led pop-rock, ballad craft, and broad AM/FM adult appeal."
+      },
+      {
+        "source_ref_id": "022_rockhall_billy_joel",
+        "title": "Billy Joel",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/billy-joel/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Documents singer-pianist adult pop-rock craft and radio storytelling."
+      },
+      {
+        "source_ref_id": "022_rockhall_fleetwood_mac",
+        "title": "Fleetwood Mac",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/fleetwood-mac/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports the polished band-pop side where soft rock overlaps with classic-rock canon."
+      },
+      {
+        "source_ref_id": "rockhall_elton_john",
+        "title": "Elton John",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/elton-john/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Piano-led pop-rock, AM gold, and album-era adult pop craft."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad popular-music industry, audience, and stylistic context."
+      },
+      {
+        "source_ref_id": "rockhall_carole_king",
+        "title": "Carole King",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/carole-king/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Songwriter-to-performer transition and adult pop songcraft."
+      },
+      {
+        "source_ref_id": "rockhall_whitney_houston",
+        "title": "Whitney Houston",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/whitney-houston/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Vocal pop, adult contemporary, R&B crossover, and blockbuster soundtrack context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "022_reject_easy_listening",
+        "title": "Easy listening",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/easy-listening-ma0000002525",
+        "why_rejected": "It is adjacent in mood, but too orchestrated and pre-rock to explain the songwriter and band-based AM Gold core.",
+        "source_type": "music_reference"
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Direct support: 022_allmusic_soft_rock anchors the named archetype rather than only its family. Example support: 022_rockhall_elton_john, 022_rockhall_billy_joel, 022_rockhall_fleetwood_mac ties claims to canonical artists, songs, albums, or scene objects."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 88,
+    "scene_anchor_refs": [
+      "song|england dan and john ford coley|i d really love to see you tonight",
+      "song|orleans|still the one",
+      "song|leo sayer|when i need you",
+      "song|air supply|lost in love"
+    ],
+    "ladder_example_refs": [
+      "song|bread|make it with you",
+      "song|seals and crofts|summer breeze",
+      "song|eagles|take it easy",
+      "song|jim croce|time in a bottle",
+      "song|carly simon|you re so vain",
+      "song|stephen bishop|on and on",
+      "song|firefall|you are the woman",
+      "song|little river band|lady"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

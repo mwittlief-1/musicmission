@@ -271,6 +271,39 @@ final class SurveyTests: XCTestCase {
         }
     }
 
+    func testRequiredAlphaSurveyPagesRespectAlbumAndSongRepetitionGovernors() throws {
+        let provider = FixtureSurveyPageProvider()
+        provider.updateAppleMusicSignalPayload(Self.makeAppleEvidencePayload())
+
+        var displayedPages = [String: SurveyGridPage]()
+        let albumPages = try [SurveyStep.albumPage1, .albumPage2].map { step in
+            let page = try XCTUnwrap(provider.page(for: step, responses: [:], displayedPages: displayedPages))
+            displayedPages[step.rawValue] = page
+            return page
+        }
+        let albumArtistCounts = Self.countsByNormalizedSubtitle(in: albumPages.flatMap(\.items))
+        XCTAssertLessThanOrEqual(albumArtistCounts.values.max() ?? 0, 2, "Album artist counts: \(albumArtistCounts)")
+
+        displayedPages.removeAll()
+        let songPages = try [SurveyStep.songPage1, .songPage2, .songPage3, .songPage4].map { step in
+            let page = try XCTUnwrap(provider.page(for: step, responses: [:], displayedPages: displayedPages))
+            displayedPages[step.rawValue] = page
+            return page
+        }
+        let songItems = songPages.flatMap(\.items)
+        let songArtistCounts = Self.countsByNormalizedSubtitle(in: songItems)
+        XCTAssertLessThanOrEqual(songArtistCounts.values.max() ?? 0, 3, "Song artist counts: \(songArtistCounts)")
+
+        let archetypeIDsBySongID = try Self.archetypeIDsBySurveySongID()
+        var songArchetypeCounts = [String: Int]()
+        for item in songItems {
+            for archetypeID in archetypeIDsBySongID[item.id] ?? [] {
+                songArchetypeCounts[archetypeID, default: 0] += 1
+            }
+        }
+        XCTAssertLessThanOrEqual(songArchetypeCounts.values.max() ?? 0, 6, "Song archetype counts: \(songArchetypeCounts)")
+    }
+
     func testDisplayedPageHistoryPreventsLaterArtistRepeatsAndCurrentPageReshuffle() throws {
         let tempDirectory = FileManager.default.temporaryDirectory
             .appendingPathComponent("survey-displayed-history-repeat-\(UUID().uuidString)", isDirectory: true)
@@ -1145,6 +1178,33 @@ final class SurveyTests: XCTestCase {
         "\(normalized(item.title))::\(normalized(item.subtitle ?? ""))"
     }
 
+    private static func countsByNormalizedSubtitle(in items: [SurveyItem]) -> [String: Int] {
+        items.reduce(into: [String: Int]()) { counts, item in
+            guard let subtitle = item.subtitle, !subtitle.isEmpty else {
+                return
+            }
+            counts[normalized(subtitle), default: 0] += 1
+        }
+    }
+
+    private static func archetypeIDsBySurveySongID() throws -> [String: [String]] {
+        let data = try bundledResourceData(named: "canonical_song_recordings")
+        let songs = try JSONDecoder().decode([SurveyTestCanonicalSongRecord].self, from: data)
+        var result = [String: [String]]()
+        for song in songs {
+            result["ALPHA_SONG_\(song.canonicalSongRecordingID)"] = song.archetypeIDs
+        }
+        return result
+    }
+
+    private static func bundledResourceData(named name: String) throws -> Data {
+        let bundles = [Bundle(for: SurveyTests.self), Bundle.main] + Bundle.allBundles + Bundle.allFrameworks
+        if let url = bundles.lazy.compactMap({ $0.url(forResource: name, withExtension: "json") }).first {
+            return try Data(contentsOf: url)
+        }
+        throw XCTSkip("Missing bundled resource \(name).json")
+    }
+
     private static func normalized(_ value: String) -> String {
         value
             .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
@@ -1161,5 +1221,15 @@ final class SurveyTests: XCTestCase {
             .appendingPathComponent("Fixtures", isDirectory: true)
             .appendingPathComponent("\(name).json", isDirectory: false)
         return try Data(contentsOf: fixtureURL)
+    }
+}
+
+private struct SurveyTestCanonicalSongRecord: Decodable {
+    let canonicalSongRecordingID: String
+    let archetypeIDs: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case canonicalSongRecordingID = "canonical_song_recording_id"
+        case archetypeIDs = "archetype_ids"
     }
 }

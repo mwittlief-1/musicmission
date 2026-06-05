@@ -12,7 +12,8 @@ This subtree is mixed product data. It includes active Atlas explainer contracts
 | `atlas_explainer_render_pack_runtime_schema_v0_1_1.md` | Product/technical contract | Human-readable runtime schema contract. |
 | `render_pack_v0_1_hardened/` | Test/source fixture | Current hardened loader fixture referenced by `scripts/validate_atlas_explainer_render_pack.py` and the loader tech review. |
 | `source_recovery_research_notes/` | Product source/provenance | Curated source-recovery notes used by the v0.2.2 and v0.2.3 builder chain. |
-| `AtlasExplainerPack_v0_2_3_RenderHardened/` | Product/technical handoff and generated fixture | Latest 120-archetype render-hardened candidate pack. It is a tracked alpha candidate surface, not yet PM-approved production copy. |
+| `AtlasExplainerPack_v0_2_3_RenderHardened/` | Product/technical handoff and generated fixture | Source predecessor for v0.3. Keep tracked for lineage and rebuildability. |
+| `AtlasExplainerPack_v0_3_ProfileLadders/` | Product/technical handoff and generated fixture | PM-approved 120-archetype Alpha production copy. The app bundle consumes `render_packs/` through `MusicAtlasController/Resources/atlas_explainer_render_packs_v0_3.json`. |
 
 ## Keep Local Or Archive Externally
 

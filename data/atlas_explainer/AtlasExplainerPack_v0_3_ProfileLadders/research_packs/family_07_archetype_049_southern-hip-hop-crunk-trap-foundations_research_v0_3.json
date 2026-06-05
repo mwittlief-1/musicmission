@@ -1,0 +1,1556 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_07_archetype_049_southern-hip-hop-crunk-trap-foundations_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_7/normalized_family_7.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 7,
+    "family_slug": "hip-hop",
+    "family_name": "Hip-Hop",
+    "archetype_id": "049",
+    "archetype_slug": "southern-hip-hop-crunk-trap-foundations",
+    "canonical_graph_ref": "family_07/archetype_049",
+    "existing_graph_label_name": "Southern Hip-Hop / Crunk / Trap Foundations",
+    "editorial_display_title": "Southern Hip-Hop / Crunk / Trap Foundations",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:outkast",
+        "object_id": "outkast",
+        "display_label": "OutKast",
+        "source_membership_id": "family-7-artist-049-outkast",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "The central Southern album-world and pop-crossover anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lil-wayne",
+        "object_id": "lil-wayne",
+        "display_label": "Lil Wayne",
+        "source_membership_id": "family-7-artist-049-lil-wayne",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Southern mixtape, pop-rap, and modern rap bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ti",
+        "object_id": "ti",
+        "display_label": "T.I.",
+        "source_membership_id": "family-7-artist-049-ti",
+        "roles": [
+          "anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Atlanta trap-foundation and pop-crossover bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ludacris",
+        "object_id": "ludacris",
+        "display_label": "Ludacris",
+        "source_membership_id": "family-7-artist-049-ludacris",
+        "roles": [
+          "gateway",
+          "song_first",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Atlanta party/pop-rap center with high normal-user recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ugk",
+        "object_id": "ugk",
+        "display_label": "UGK",
+        "source_membership_id": "family-7-artist-049-ugk",
+        "roles": [
+          "anchor",
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Texas/Southern canon anchor and major feature-era bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:three-6-mafia",
+        "object_id": "three-6-mafia",
+        "display_label": "Three 6 Mafia",
+        "source_membership_id": "family-7-artist-049-three-6-mafia",
+        "roles": [
+          "anchor",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Memphis crunk and trap-source bridge with major party-song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:gucci-mane",
+        "object_id": "gucci-mane",
+        "display_label": "Gucci Mane",
+        "source_membership_id": "family-7-artist-049-gucci-mane",
+        "roles": [
+          "anchor",
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Atlanta trap ecosystem anchor whose influence exceeds some single-song recall.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:jeezy",
+        "object_id": "jeezy",
+        "display_label": "Jeezy",
+        "source_membership_id": "family-7-artist-049-jeezy",
+        "roles": [
+          "anchor",
+          "bridge",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Trap street-rap gateway with strong mid-2000s recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:master-p",
+        "object_id": "master-p",
+        "display_label": "Master P",
+        "source_membership_id": "family-7-artist-049-master-p",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "No Limit-era business, regional, and chant-rap gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:juvenile",
+        "object_id": "juvenile",
+        "display_label": "Juvenile",
+        "source_membership_id": "family-7-artist-049-juvenile",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Cash Money and New Orleans bounce-to-mainstream gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lil-jon-and-the-east-side-boyz",
+        "object_id": "lil-jon-and-the-east-side-boyz",
+        "display_label": "Lil Jon & The East Side Boyz",
+        "source_membership_id": "family-7-artist-049-lil-jon-and-the-east-side-boyz",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Crunk's normal-user party entry point.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:clipse",
+        "object_id": "clipse",
+        "display_label": "Clipse",
+        "source_membership_id": "family-7-artist-049-clipse",
+        "roles": [
+          "bridge",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Neptunes-era Virginia coke-rap bridge into Southern and alternative canon.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:lil-wayne-tha-carter-iii",
+        "object_id": "lil-wayne-tha-carter-iii",
+        "display_label": "Tha Carter III - Lil Wayne",
+        "source_membership_id": "family-7-album-049-lil-wayne-tha-carter-iii",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Lil Wayne's mass album-world and pop-rap bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:outkast-southernplayalisticadillacmuzik",
+        "object_id": "outkast-southernplayalisticadillacmuzik",
+        "display_label": "Southernplayalisticadillacmuzik - OutKast",
+        "source_membership_id": "family-7-album-049-outkast-southernplayalisticadillacmuzik",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Atlanta/Southern album-world arrival object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:outkast-aquemini",
+        "object_id": "outkast-aquemini",
+        "display_label": "Aquemini - OutKast",
+        "source_membership_id": "family-7-album-049-outkast-aquemini",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "OutKast's consensus Southern album-canon anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:juvenile-400-degreez",
+        "object_id": "juvenile-400-degreez",
+        "display_label": "400 Degreez - Juvenile",
+        "source_membership_id": "family-7-album-049-juvenile-400-degreez",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Cash Money/New Orleans album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ti-trap-muzik",
+        "object_id": "ti-trap-muzik",
+        "display_label": "Trap Muzik - T.I.",
+        "source_membership_id": "family-7-album-049-ti-trap-muzik",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Trap-foundation album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:jeezy-lets-get-it-thug-motivation-101",
+        "object_id": "jeezy-lets-get-it-thug-motivation-101",
+        "display_label": "Let's Get It: Thug Motivation 101 - Jeezy",
+        "source_membership_id": "family-7-album-049-jeezy-lets-get-it-thug-motivation-101",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Trap street-rap gateway album.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:outkast-stankonia",
+        "object_id": "outkast-stankonia",
+        "display_label": "Stankonia - OutKast",
+        "source_membership_id": "family-7-album-049-outkast-stankonia",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass OutKast album connecting Southern rap and pop crossover.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:outkast-atliens",
+        "object_id": "outkast-atliens",
+        "display_label": "ATLiens - OutKast",
+        "source_membership_id": "family-7-album-049-outkast-atliens",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "OutKast's alienated Southern album branch.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ugk-ridin-dirty",
+        "object_id": "ugk-ridin-dirty",
+        "display_label": "Ridin' Dirty - UGK",
+        "source_membership_id": "family-7-album-049-ugk-ridin-dirty",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Texas/Southern rap album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ludacris-word-of-mouf",
+        "object_id": "ludacris-word-of-mouf",
+        "display_label": "Word of Mouf - Ludacris",
+        "source_membership_id": "family-7-album-049-ludacris-word-of-mouf",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Atlanta pop-rap/party album with major single value.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+        "object_id": "juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+        "display_label": "Back That Azz Up - Juvenile feat. Mannie Fresh and Lil Wayne",
+        "source_membership_id": "family-7-song-049-juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "New Orleans/Cash Money party-rap cultural furniture.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lil-wayne-a-milli",
+        "object_id": "lil-wayne-a-milli",
+        "display_label": "A Milli - Lil Wayne",
+        "source_membership_id": "family-7-song-049-lil-wayne-a-milli",
+        "roles": [
+          "song_first",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Lil Wayne's rapid-fire mass survey object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ti-what-you-know",
+        "object_id": "ti-what-you-know",
+        "display_label": "What You Know - T.I.",
+        "source_membership_id": "family-7-song-049-ti-what-you-know",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "T.I.'s most durable trap/pop crossover object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+        "object_id": "lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+        "display_label": "Get Low - Lil Jon & The East Side Boyz feat. Ying Yang Twins",
+        "source_membership_id": "family-7-song-049-lil-jon-and-the-east-side-boyz-feat-ying-yang-twins-get-low",
+        "roles": [
+          "song_first",
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Crunk party-rap cultural furniture.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:outkast-rosa-parks",
+        "object_id": "outkast-rosa-parks",
+        "display_label": "Rosa Parks - OutKast",
+        "source_membership_id": "family-7-song-049-outkast-rosa-parks",
+        "roles": [
+          "song_first",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Aquemini-era OutKast and Southern album-canon gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:outkast-ms-jackson",
+        "object_id": "outkast-ms-jackson",
+        "display_label": "Ms. Jackson - OutKast",
+        "source_membership_id": "family-7-song-049-outkast-ms-jackson",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "OutKast's mainstream Southern pop-rap gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lil-wayne-lollipop",
+        "object_id": "lil-wayne-lollipop",
+        "display_label": "Lollipop - Lil Wayne",
+        "source_membership_id": "family-7-song-049-lil-wayne-lollipop",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Lil Wayne pop-rap crossover hit.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ugk-feat-outkast-intl-players-anthem",
+        "object_id": "ugk-feat-outkast-intl-players-anthem",
+        "display_label": "Int'l Players Anthem - UGK feat. OutKast",
+        "source_membership_id": "family-7-song-049-ugk-feat-outkast-intl-players-anthem",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Southern all-star song-first gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:three-6-mafia-stay-fly",
+        "object_id": "three-6-mafia-stay-fly",
+        "display_label": "Stay Fly - Three 6 Mafia",
+        "source_membership_id": "family-7-song-049-three-6-mafia-stay-fly",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Three 6 Mafia's most mainstream rap gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jeezy-feat-akon-soul-survivor",
+        "object_id": "jeezy-feat-akon-soul-survivor",
+        "display_label": "Soul Survivor - Jeezy feat. Akon",
+        "source_membership_id": "family-7-song-049-jeezy-feat-akon-soul-survivor",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Jeezy street-rap and radio bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ludacris-feat-shawnna-stand-up",
+        "object_id": "ludacris-feat-shawnna-stand-up",
+        "display_label": "Stand Up - Ludacris feat. Shawnna",
+        "source_membership_id": "family-7-song-049-ludacris-feat-shawnna-stand-up",
+        "roles": [
+          "song_first",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Ludacris party/pop-rap gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:outkast-players-ball",
+        "object_id": "outkast-players-ball",
+        "display_label": "Player's Ball - OutKast",
+        "source_membership_id": "family-7-song-049-outkast-players-ball",
+        "roles": [
+          "song_first",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "OutKast and Atlanta arrival single.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:outkast-elevators-me-and-you",
+        "object_id": "outkast-elevators-me-and-you",
+        "display_label": "Elevators (Me & You) - OutKast",
+        "source_membership_id": "family-7-song-049-outkast-elevators-me-and-you",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "ATLiens-era Southern rap gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:outkast-bob",
+        "object_id": "outkast-bob",
+        "display_label": "B.O.B. - OutKast",
+        "source_membership_id": "family-7-song-049-outkast-bob",
+        "roles": [
+          "song_first",
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "High-energy OutKast object bridging rap, rave tempo, and rock listeners.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f7-artist-lil-wayne-049",
+        "candidate_id": "survey-f7-artist-lil-wayne-049",
+        "object_type": "artist",
+        "display_label": "Lil Wayne",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-ludacris-049",
+        "candidate_id": "survey-f7-artist-ludacris-049",
+        "object_type": "artist",
+        "display_label": "Ludacris",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-outkast-049",
+        "candidate_id": "survey-f7-artist-outkast-049",
+        "object_type": "artist",
+        "display_label": "OutKast",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-ti-049",
+        "candidate_id": "survey-f7-artist-ti-049",
+        "object_type": "artist",
+        "display_label": "T.I.",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-ugk-049",
+        "candidate_id": "survey-f7-artist-ugk-049",
+        "object_type": "artist",
+        "display_label": "UGK",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-gucci-mane-049",
+        "candidate_id": "survey-f7-artist-gucci-mane-049",
+        "object_type": "artist",
+        "display_label": "Gucci Mane",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-jeezy-049",
+        "candidate_id": "survey-f7-artist-jeezy-049",
+        "object_type": "artist",
+        "display_label": "Jeezy",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-three-6-mafia-049",
+        "candidate_id": "survey-f7-artist-three-6-mafia-049",
+        "object_type": "artist",
+        "display_label": "Three 6 Mafia",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-lil-jon-and-the-east-side-boyz-049",
+        "candidate_id": "survey-f7-artist-lil-jon-and-the-east-side-boyz-049",
+        "object_type": "artist",
+        "display_label": "Lil Jon & The East Side Boyz",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-juvenile-049",
+        "candidate_id": "survey-f7-artist-juvenile-049",
+        "object_type": "artist",
+        "display_label": "Juvenile",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-master-p-049",
+        "candidate_id": "survey-f7-artist-master-p-049",
+        "object_type": "artist",
+        "display_label": "Master P",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-clipse-049",
+        "candidate_id": "survey-f7-artist-clipse-049",
+        "object_type": "artist",
+        "display_label": "Clipse",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-waka-flocka-flame-049",
+        "candidate_id": "survey-f7-artist-waka-flocka-flame-049",
+        "object_type": "artist",
+        "display_label": "Waka Flocka Flame",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-artist-2-live-crew-049",
+        "candidate_id": "survey-f7-artist-2-live-crew-049",
+        "object_type": "artist",
+        "display_label": "2 Live Crew",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-juvenile-400-degreez-049",
+        "candidate_id": "survey-f7-album-juvenile-400-degreez-049",
+        "object_type": "album",
+        "display_label": "400 Degreez",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-outkast-atliens-049",
+        "candidate_id": "survey-f7-album-outkast-atliens-049",
+        "object_type": "album",
+        "display_label": "ATLiens",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-outkast-aquemini-049",
+        "candidate_id": "survey-f7-album-outkast-aquemini-049",
+        "object_type": "album",
+        "display_label": "Aquemini",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-outkast-southernplayalisticadillacmuzik-049",
+        "candidate_id": "survey-f7-album-outkast-southernplayalisticadillacmuzik-049",
+        "object_type": "album",
+        "display_label": "Southernplayalisticadillacmuzik",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-outkast-stankonia-049",
+        "candidate_id": "survey-f7-album-outkast-stankonia-049",
+        "object_type": "album",
+        "display_label": "Stankonia",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f7-album-lil-wayne-tha-carter-iii-049",
+        "candidate_id": "survey-f7-album-lil-wayne-tha-carter-iii-049",
+        "object_type": "album",
+        "display_label": "Tha Carter III",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f7-artist-2-live-crew-049",
+        "question_id": "boundary-survey-f7-artist-2-live-crew-049",
+        "display_label": "2 Live Crew",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-outkast-bob-049",
+        "question_id": "boundary-survey-f7-song_recording-outkast-bob-049",
+        "display_label": "B.O.B.",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f7-song_recording-soulja-boy-tellem-crank-that-049",
+        "question_id": "boundary-survey-f7-song_recording-soulja-boy-tellem-crank-that-049",
+        "display_label": "Crank That",
+        "question_intent": "false_nearby_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f7-artist-2-live-crew-049",
+        "probe_id": "probe-survey-f7-artist-2-live-crew-049",
+        "entity_type": "artist",
+        "display_label": "2 Live Crew",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-outkast-bob-049",
+        "probe_id": "probe-survey-f7-song_recording-outkast-bob-049",
+        "entity_type": "song_recording",
+        "display_label": "B.O.B.",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f7-song_recording-soulja-boy-tellem-crank-that-049",
+        "probe_id": "probe-survey-f7-song_recording-soulja-boy-tellem-crank-that-049",
+        "entity_type": "song_recording",
+        "display_label": "Crank That",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_07/archetype_048",
+      "family_07/archetype_050"
+    ],
+    "before_archetype_refs": [
+      "family_07/archetype_048"
+    ],
+    "after_archetype_refs": [
+      "family_07/archetype_050"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_7": {
+      "title": "Normalized canonical graph export, Family 7",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_7/normalized_family_7.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "049_allmusic_southern_rap": {
+      "title": "Southern Rap",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/southern-rap-ma0000002769",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for southern rap's regional development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for southern rap's regional development."
+    },
+    "049_rockhall_outkast": {
+      "title": "OutKast",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/outkast/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports OutKast as a defining southern hip-hop anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports OutKast as a defining southern hip-hop anchor."
+    },
+    "049_britannica_trap_music": {
+      "title": "Trap music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/trap-music",
+      "source_type": "reference",
+      "audit_use": "Supports the trap-foundations branch of the archetype.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Supports the trap-foundations branch of the archetype."
+    },
+    "britannica_hip_hop": {
+      "title": "Hip-hop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/hip-hop",
+      "source_type": "reference",
+      "audit_use": "Hip-hop culture, DJing, MCing, dance, art, and social context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+    },
+    "britannica_rap": {
+      "title": "Rap",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/rap",
+      "source_type": "reference",
+      "audit_use": "Rap as vocal/rhythmic practice and popular music form.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+    },
+    "carnegie_hall_hiphop": {
+      "title": "Hip-Hop",
+      "publisher": "Carnegie Hall Timeline of African American Music",
+      "url": "https://timeline.carnegiehall.org/genres/hip-hop",
+      "source_type": "educational_archive",
+      "audit_use": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context."
+    },
+    "rockhall_nwa": {
+      "title": "N.W.A",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/nwa/",
+      "source_type": "museum_reference",
+      "audit_use": "West Coast gangsta rap and late-1980s hip-hop impact.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "West Coast gangsta rap and late-1980s hip-hop impact."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "049-c01",
+      "claim_text": "Southern hip-hop is not one sound; it links Atlanta, New Orleans, Houston, Memphis, and other scenes through regional flows, bass weight, club function, and local identity.",
+      "source_ref_ids": [
+        "049_allmusic_southern_rap",
+        "049_rockhall_outkast",
+        "049_britannica_trap_music"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_07/archetype_049",
+        "artist:outkast",
+        "artist:lil-wayne",
+        "artist:ti",
+        "artist:ludacris"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "049-c02",
+      "claim_text": "OutKast anchors the Atlanta art-rap and funk-soul branch, proving southern rap could be regionally specific, experimental, and commercially major.",
+      "source_ref_ids": [
+        "049_rockhall_outkast",
+        "049_allmusic_southern_rap"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "artist:outkast",
+        "album:outkast-southernplayalisticadillacmuzik"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "049-c03",
+      "claim_text": "Trap foundations connect southern street narratives to hi-hat patterns, 808 low end, and Atlanta-centered production language.",
+      "source_ref_ids": [
+        "049_britannica_trap_music",
+        "049_allmusic_southern_rap"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "artist:ti",
+        "family_07/archetype_049",
+        "family_07/archetype_052"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "049-c04",
+      "claim_text": "Lil Wayne, Juvenile, and Ludacris show the lane's mix of punchline charisma, bounce and club rhythm, and southern mainstream takeover.",
+      "source_ref_ids": [
+        "049_allmusic_southern_rap"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "artist:lil-wayne",
+        "artist:ludacris",
+        "song_recording:juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+        "song_recording:lil-wayne-a-milli"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "049-southern_hip_hop_crunk_trap_foundations-boundary",
+      "claim_text": "Southern Hip-Hop / Crunk / Trap Foundations's boundary is clearest when 808 bass and southern drawl appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "049_allmusic_southern_rap",
+        "049_rockhall_outkast"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_07/archetype_049",
+        "artist:outkast",
+        "artist:lil-wayne"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "049-southern_hip_hop_crunk_trap_foundations-examples",
+      "claim_text": "OutKast, Lil Wayne, Tha Carter III - Lil Wayne gives Southern Hip-Hop / Crunk / Trap Foundations concrete anchors because the examples expose club chant inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "049_rockhall_outkast",
+        "049_britannica_trap_music"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_07/archetype_049",
+        "artist:outkast",
+        "artist:lil-wayne"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Regional southern rap power: bass, drawl, club function, eccentricity, and trap's early blueprint.",
+    "history_capsule": "Southern hip-hop grew from multiple city scenes that were often under-recognized by coastal rap media before becoming central to mainstream rap.",
+    "why_it_mattered": "It shifted hip-hop's geographic center and laid foundations for crunk, trap, and streaming-era rap.",
+    "what_made_it_distinct": "The rhythm often feels lower, looser, more bass-driven, and more regionally coded than East Coast boom bap.",
+    "what_to_listen_for": [
+      "808 bass",
+      "southern drawl",
+      "club chant",
+      "double-time flow",
+      "regional slang"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:outkast",
+        "example_type": "artist",
+        "display_label": "OutKast",
+        "why_this_example_matters": "OutKast anchors Southern Hip-Hop / Crunk / Trap Foundations by making beat architecture and flow and cadence easier to hear.",
+        "what_to_listen_for": [
+          "808 bass",
+          "southern drawl"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:lil-wayne",
+        "example_type": "artist",
+        "display_label": "Lil Wayne",
+        "why_this_example_matters": "Lil Wayne anchors Southern Hip-Hop / Crunk / Trap Foundations by making flow and cadence and sample or synth signature easier to hear.",
+        "what_to_listen_for": [
+          "southern drawl",
+          "club chant"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:lil-wayne-tha-carter-iii",
+        "example_type": "album",
+        "display_label": "Tha Carter III - Lil Wayne",
+        "why_this_example_matters": "Tha Carter III - Lil Wayne anchors Southern Hip-Hop / Crunk / Trap Foundations by making sample or synth signature and regional production color easier to hear.",
+        "what_to_listen_for": [
+          "club chant",
+          "double-time flow"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:outkast-southernplayalisticadillacmuzik",
+        "example_type": "album",
+        "display_label": "Southernplayalisticadillacmuzik - OutKast",
+        "why_this_example_matters": "Southernplayalisticadillacmuzik - OutKast anchors Southern Hip-Hop / Crunk / Trap Foundations by making regional production color and hook strategy against dense verses easier to hear.",
+        "what_to_listen_for": [
+          "double-time flow",
+          "regional slang"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+        "example_type": "song_recording",
+        "display_label": "Back That Azz Up - Juvenile feat. Mannie Fresh and Lil Wayne",
+        "why_this_example_matters": "Back That Azz Up - Juvenile feat. Mannie Fresh and Lil Wayne anchors Southern Hip-Hop / Crunk / Trap Foundations by making hook strategy against dense verses and beat architecture easier to hear.",
+        "what_to_listen_for": [
+          "regional slang"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:lil-wayne-a-milli",
+        "example_type": "song_recording",
+        "display_label": "A Milli - Lil Wayne",
+        "why_this_example_matters": "A Milli - Lil Wayne anchors Southern Hip-Hop / Crunk / Trap Foundations by making beat architecture and flow and cadence easier to hear.",
+        "what_to_listen_for": [
+          "808 bass",
+          "southern drawl"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_07/archetype_048"
+      ],
+      "after": [
+        "family_07/archetype_050"
+      ],
+      "related": [
+        "family_07/archetype_048",
+        "family_07/archetype_050"
+      ],
+      "copy": "Use Southern Hip-Hop / Crunk / Trap Foundations as a contextual road inside Hip-Hop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "049-dyk-1",
+        "copy": "Southern rap's rise was a multi-city story, not only Atlanta.",
+        "source_ref_ids": [
+          "049_allmusic_southern_rap",
+          "049_rockhall_outkast",
+          "049_britannica_trap_music"
+        ]
+      },
+      {
+        "card_id": "049-dyk-2",
+        "copy": "Trap begins as a specific southern street-rap context before becoming a global pop rhythm.",
+        "source_ref_ids": [
+          "049_rockhall_outkast",
+          "049_allmusic_southern_rap"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether southern hip-hop / crunk / trap foundations is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Regional southern rap power: bass, drawl, club function, eccentricity, and trap's early blueprint.",
+      "It shifted hip-hop's geographic center and laid foundations for crunk, trap, and streaming-era rap.",
+      "The rhythm often feels lower, looser, more bass-driven, and more regionally coded than East Coast boom bap."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not merge all southern rap into trap; crunk, bounce, Houston, Atlanta, and New Orleans signals differ.",
+    "personalization_hooks": [
+      {
+        "hook_id": "049-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[049]",
+          "atlas_state.family_affinity[7]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[049] >= 0.65 || atlas_state.family_affinity[7] >= 0.65",
+        "copy_variant": "Your Atlas signals make Southern Hip-Hop / Crunk / Trap Foundations useful as a contextual landmark.",
+        "fallback_copy": "Use Southern Hip-Hop / Crunk / Trap Foundations as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "049-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_07/archetype_049 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_07/archetype_049",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Southern Hip-Hop / Crunk / Trap Foundations before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "049-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_07/archetype_049 || atlas_state.boundary_question_results has boundary_negative for family_07/archetype_049",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Southern Hip-Hop / Crunk / Trap Foundations.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "049-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_07/archetype_049 || atlas_state.related_mission_ids references family_07/archetype_049",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "049-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_07/archetype_049 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_07/archetype_049 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_07/archetype_049",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Southern Hip-Hop / Crunk / Trap Foundations.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_7": {
+        "title": "Normalized canonical graph export, Family 7",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_7/normalized_family_7.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "049_allmusic_southern_rap": {
+        "title": "Southern Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/southern-rap-ma0000002769",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for southern rap's regional development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for southern rap's regional development."
+      },
+      "049_rockhall_outkast": {
+        "title": "OutKast",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/outkast/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports OutKast as a defining southern hip-hop anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports OutKast as a defining southern hip-hop anchor."
+      },
+      "049_britannica_trap_music": {
+        "title": "Trap music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trap-music",
+        "source_type": "reference",
+        "audit_use": "Supports the trap-foundations branch of the archetype.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports the trap-foundations branch of the archetype."
+      },
+      "britannica_hip_hop": {
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_type": "reference",
+        "audit_use": "Hip-hop culture, DJing, MCing, dance, art, and social context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+      },
+      "britannica_rap": {
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_type": "reference",
+        "audit_use": "Rap as vocal/rhythmic practice and popular music form.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+      },
+      "carnegie_hall_hiphop": {
+        "title": "Hip-Hop",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/hip-hop",
+        "source_type": "educational_archive",
+        "audit_use": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context."
+      },
+      "rockhall_nwa": {
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_type": "museum_reference",
+        "audit_use": "West Coast gangsta rap and late-1980s hip-hop impact.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "West Coast gangsta rap and late-1980s hip-hop impact."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "049-c01",
+        "claim_text": "Southern hip-hop is not one sound; it links Atlanta, New Orleans, Houston, Memphis, and other scenes through regional flows, bass weight, club function, and local identity.",
+        "source_ref_ids": [
+          "049_allmusic_southern_rap",
+          "049_rockhall_outkast",
+          "049_britannica_trap_music"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_07/archetype_049",
+          "artist:outkast",
+          "artist:lil-wayne",
+          "artist:ti",
+          "artist:ludacris"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049-c02",
+        "claim_text": "OutKast anchors the Atlanta art-rap and funk-soul branch, proving southern rap could be regionally specific, experimental, and commercially major.",
+        "source_ref_ids": [
+          "049_rockhall_outkast",
+          "049_allmusic_southern_rap"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "artist:outkast",
+          "album:outkast-southernplayalisticadillacmuzik"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049-c03",
+        "claim_text": "Trap foundations connect southern street narratives to hi-hat patterns, 808 low end, and Atlanta-centered production language.",
+        "source_ref_ids": [
+          "049_britannica_trap_music",
+          "049_allmusic_southern_rap"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "artist:ti",
+          "family_07/archetype_049",
+          "family_07/archetype_052"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049-c04",
+        "claim_text": "Lil Wayne, Juvenile, and Ludacris show the lane's mix of punchline charisma, bounce and club rhythm, and southern mainstream takeover.",
+        "source_ref_ids": [
+          "049_allmusic_southern_rap"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "artist:lil-wayne",
+          "artist:ludacris",
+          "song_recording:juvenile-feat-mannie-fresh-and-lil-wayne-back-that-azz-up",
+          "song_recording:lil-wayne-a-milli"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "049-southern_hip_hop_crunk_trap_foundations-boundary",
+        "claim_text": "Southern Hip-Hop / Crunk / Trap Foundations's boundary is clearest when 808 bass and southern drawl appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "049_allmusic_southern_rap",
+          "049_rockhall_outkast"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_07/archetype_049",
+          "artist:outkast",
+          "artist:lil-wayne"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "049-southern_hip_hop_crunk_trap_foundations-examples",
+        "claim_text": "OutKast, Lil Wayne, Tha Carter III - Lil Wayne gives Southern Hip-Hop / Crunk / Trap Foundations concrete anchors because the examples expose club chant inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "049_rockhall_outkast",
+          "049_britannica_trap_music"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_07/archetype_049",
+          "artist:outkast",
+          "artist:lil-wayne"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Southern hip-hop, crunk, and trap foundations: OutKast, Lil Wayne, T.I., Ludacris, Juvenile, Atlanta, New Orleans, Memphis, Houston, southern rap emergence.",
+    "selected_sources": [
+      {
+        "source_ref_id": "049_allmusic_southern_rap",
+        "title": "Southern Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/southern-rap-ma0000002769",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for southern rap's regional development."
+      },
+      {
+        "source_ref_id": "049_rockhall_outkast",
+        "title": "OutKast",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/outkast/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports OutKast as a defining southern hip-hop anchor."
+      },
+      {
+        "source_ref_id": "049_britannica_trap_music",
+        "title": "Trap music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trap-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Supports the trap-foundations branch of the archetype."
+      },
+      {
+        "source_ref_id": "britannica_hip_hop",
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+      },
+      {
+        "source_ref_id": "britannica_rap",
+        "title": "Rap",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/rap",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Rap as vocal/rhythmic practice and popular music form."
+      },
+      {
+        "source_ref_id": "carnegie_hall_hiphop",
+        "title": "Hip-Hop",
+        "publisher": "Carnegie Hall Timeline of African American Music",
+        "url": "https://timeline.carnegiehall.org/genres/hip-hop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop's Black musical roots, DJ/MC practices, and cultural context."
+      },
+      {
+        "source_ref_id": "rockhall_nwa",
+        "title": "N.W.A",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/nwa/",
+        "source_relevance": "example_object_support",
+        "why_fit": "West Coast gangsta rap and late-1980s hip-hop impact."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "049_reject_east_coast_rap",
+        "title": "East Coast Rap",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/east-coast-rap-ma0000002556",
+        "source_type": "genre_reference",
+        "source_relevance": "weak_context",
+        "why_rejected": "Useful contrast, but not direct support for southern regional rap claims."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The source set covers southern rap broadly, OutKast's canonical regional breakthrough, and trap's later southern sub-branch."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 115,
+    "scene_anchor_refs": [
+      "song|outkast|player s ball",
+      "song|master p|make em say uhh",
+      "song|juvenile feat mannie fresh and lil wayne|back that azz up",
+      "song|three 6 mafia feat ugk|sippin on some syrup"
+    ],
+    "ladder_example_refs": [
+      "song|project pat|chickenhead",
+      "song|lil jon and the east side boyz feat ying yang twins|get low",
+      "song|big tymers|still fly",
+      "song|bone crusher feat killer mike and t i|never scared",
+      "song|ludacris feat shawnna|stand up",
+      "artist_anchor|goodie mob|goodie mob",
+      "song|scarface|i seen a man die",
+      "song|8ball and mjg|space age pimpin"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

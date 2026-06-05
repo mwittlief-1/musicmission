@@ -1,0 +1,104 @@
+{
+  "contract_version": "mission_opportunity_blob_v0_1",
+  "opportunity_id": "negative_missing_graph_context_v0_1",
+  "mission_type": "gateway_test",
+  "target_object_type": "family",
+  "target_object_ids": ["family_negative_missing_graph"],
+  "target_object_ref": {
+    "object_type": "family",
+    "object_ids": ["family_negative_missing_graph"],
+    "display_name": "Negative Missing Graph Family"
+  },
+  "floor_passed": true,
+  "floor_details": {
+    "mission_type_score_floor": 0.5,
+    "mission_type_score_ceiling": 0.68,
+    "computed_floor_score": 0.6,
+    "floor_passed": true,
+    "failed_requirements": [],
+    "fail_reasons": [],
+    "floor_evidence_refs": ["ev_negative_missing_graph_context"]
+  },
+  "filled_requirements": {
+    "required_evidence_rollup_refs": ["rollup_negative_missing_graph_context"],
+    "required_graph_object_refs": [
+      {
+        "object_type": "family",
+        "object_ids": ["family_negative_missing_graph"],
+        "display_name": "Negative Missing Graph Family"
+      }
+    ],
+    "candidate_refs": ["negative_gateway_candidate:001"],
+    "required_inputs_available": true
+  },
+  "source_signal_summary": {
+    "positive_signal_count": 1,
+    "negative_signal_count": 0,
+    "weak_non_failure_signal_count": 0,
+    "survey_ok_ignored_count": 0,
+    "mission_ok_weak_count": 0,
+    "evidence_density": 0.22,
+    "conflict_score": 0,
+    "recency_score": 0.8
+  },
+  "graph_context_summary": {
+    "graph_contexts": [],
+    "endpoint_graph_contexts": [],
+    "tier_coverage_score": 0.3,
+    "tier_depth_score": 0.1,
+    "coverage_gap_score": 0.8,
+    "depth_gap_score": 0.9
+  },
+  "affinity_context_summary": {
+    "dominant_affinity_tags": ["negative:missing_graph_context"],
+    "context_overlays": [],
+    "bridge_readiness_score": null,
+    "gateway_availability": {
+      "available": true,
+      "gateway_candidate_refs": ["negative_gateway_candidate:001"],
+      "gateway_to_representative_coherence_score": 0.7
+    },
+    "context_variability_score": 0.1,
+    "context_skew_score": 0.1
+  },
+  "risk_context_summary": {
+    "risk_flags": [],
+    "identity_flags": [],
+    "risk_penalty_basis": [],
+    "identity_or_version_risk_present": false
+  },
+  "candidate_generation_summary": {
+    "generator_id": "negative_gateway_generator_v0_1",
+    "batch_index": 0,
+    "input_rollup_refs": ["rollup_negative_missing_graph_context"],
+    "eligible_candidate_count": 1,
+    "emitted_candidate_count": 1,
+    "pruned_candidate_count": 0,
+    "floor_failed_candidate_count": 0,
+    "cap_applied": true,
+    "cap_value": 1,
+    "batch_size": 1,
+    "generation_notes": ["Invalid by design: graph context is required."]
+  },
+  "score_components": {
+    "mission_type_value": 0.5,
+    "mission_fit_score": 0.6,
+    "readiness_score": 0.6,
+    "learning_value_score": 0.62,
+    "risk_penalty": 0,
+    "repetition_penalty": 0,
+    "complexity_penalty": 0,
+    "raw_score": 0.6,
+    "final_opportunity_score": 0.6
+  },
+  "activation_reasons": ["negative fixture would otherwise look eligible"],
+  "risk_reasons": [],
+  "suppression_reasons": [],
+  "required_inputs_available": true,
+  "opportunity_only": true,
+  "construction_status": "not_constructed",
+  "runtime_allowed": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false
+}

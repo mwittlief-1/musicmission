@@ -1,0 +1,227 @@
+{
+  "contract_version": "selector_output_v0_1",
+  "fixture_status": "synthetic_contract_fixture",
+  "selector_run_id": "synthetic_selector_run_v0_1",
+  "created_at": "2026-05-28T12:05:00Z",
+  "runtime_allowed": false,
+  "production_mission_generation_allowed": false,
+  "canonical_graph_mutation_allowed": false,
+  "listener_preference_inference_from_affinity_allowed": false,
+  "opportunity_only": true,
+  "source_registry_ref": "fixtures/mission_type_registry_sample_v0_1.json",
+  "source_evidence_rollup_ref": "fixtures/evidence_rollup_sample_v0_1.json",
+  "global_top_k_opportunities": 25,
+  "selector_audit": {
+    "selection_mode": "offline_synthetic_fixture",
+    "mission_types_considered": ["boundary_test"],
+    "mission_types_skipped_by_early_stop": [],
+    "mission_types_sorted_by_descending_ceiling": true,
+    "global_heap_maintained": true,
+    "heap_max_size": 25,
+    "candidate_blobs_generated": 8,
+    "candidate_blobs_floor_passed": 6,
+    "candidate_blobs_scored": 6,
+    "candidate_blobs_pruned": 5,
+    "final_heap_size": 1,
+    "early_stop_applied": false,
+    "early_stop_reason": null,
+    "remaining_ceiling_at_stop": null,
+    "cutoff_score": 0.87,
+    "floor_failure_examples": [
+      {
+        "mission_type": "boundary_test",
+        "opportunity_id": "synthetic_boundary_floor_fail_example",
+        "failed_requirements": ["clear_comparison_basis"],
+        "fail_reasons": ["Synthetic floor-fail example for selector audit coverage."]
+      }
+    ],
+    "non_generation_reasons": [],
+    "candidate_generation_summaries": [
+      {
+        "mission_type": "boundary_test",
+        "generator_id": "synthetic_boundary_test_generator_v0_1",
+        "eligible_candidate_count": 8,
+        "emitted_candidate_count": 1,
+        "floor_failed_candidate_count": 2,
+        "pruned_candidate_count": 5,
+        "cap_applied": true,
+        "cap_value": 12
+      }
+    ],
+    "duplicate_control_summary": {
+      "exact_duplicate_mission_type_target_count": 0,
+      "duplicate_target_object_count": 0,
+      "mission_type_concentration": [
+        {
+          "mission_type": "boundary_test",
+          "count": 1,
+          "share": 1
+        }
+      ],
+      "suppressed_exact_duplicate_count": 0,
+      "suppressed_duplicate_examples": []
+    },
+    "audit_notes": [
+      "Synthetic selector output fixture only.",
+      "No runtime listener evidence was read and no production mission content was constructed."
+    ]
+  },
+  "ranked_opportunities": [
+    {
+      "contract_version": "mission_opportunity_blob_v0_1",
+      "opportunity_id": "opp_boundary_cluster_synthetic_v0_1",
+      "mission_type": "boundary_test",
+      "target_object_type": "song_cluster",
+      "target_object_ids": ["cluster_boundary_1"],
+      "target_object_ref": {
+        "object_type": "song_cluster",
+        "object_ids": ["cluster_boundary_1"],
+        "display_name": "Synthetic Boundary Cluster"
+      },
+      "floor_passed": true,
+      "floor_details": {
+        "mission_type_score_floor": 0.82,
+        "mission_type_score_ceiling": 0.98,
+        "computed_floor_score": 0.86,
+        "floor_passed": true,
+        "failed_requirements": [],
+        "fail_reasons": [],
+        "floor_evidence_refs": [
+          "synthetic_rollup:song_cluster:cluster_boundary_1:sample",
+          "ev_song_review_dislike_boundary"
+        ]
+      },
+      "filled_requirements": {
+        "required_evidence_rollup_refs": [
+          "synthetic_rollup:song_cluster:cluster_boundary_1:sample"
+        ],
+        "required_graph_object_refs": [
+          {
+            "object_type": "song_cluster",
+            "object_ids": ["cluster_boundary_1"],
+            "display_name": "Synthetic Boundary Cluster"
+          }
+        ],
+        "candidate_refs": [
+          "synthetic_boundary_candidate:001",
+          "synthetic_boundary_candidate:002"
+        ],
+        "required_inputs_available": true
+      },
+      "source_signal_summary": {
+        "target_rollup_ref": "synthetic_rollup:song_cluster:cluster_boundary_1:sample",
+        "target_object_type": "song_cluster",
+        "target_object_ids": ["cluster_boundary_1"],
+        "target_display_name": "Synthetic Boundary Cluster",
+        "positive_signal_count": 1,
+        "negative_signal_count": 1,
+        "weak_non_failure_signal_count": 1,
+        "survey_ok_ignored_count": 1,
+        "mission_ok_weak_count": 1,
+        "evidence_density": 0.44,
+        "conflict_score": 0.68,
+        "recency_score": 0.94
+      },
+      "graph_context_summary": {
+        "graph_contexts": [
+          {
+            "target_object_ref": {
+              "object_type": "song_cluster",
+              "object_ids": ["cluster_boundary_1"],
+              "display_name": "Synthetic Boundary Cluster"
+            },
+            "family_ids": ["family_10", "family_8"],
+            "family_names": ["Synthetic Source Family", "Synthetic Target Family"],
+            "archetype_ids": ["071", "058"],
+            "archetype_names": ["Synthetic Source Archetype", "Synthetic Target Archetype"],
+            "artist_ids": ["artist-synthetic-source", "artist-synthetic-target"],
+            "album_ids": ["album-synthetic-source-collection", "album-synthetic-target"],
+            "song_ids": [
+              "song|synthetic source|bright bridge seed",
+              "song|synthetic target|false nearby edge"
+            ],
+            "node_tier": "contextual",
+            "graph_item_role": "boundary",
+            "track_tier_within_archetype": "contextual",
+            "album_tier_within_archetype": "supporting",
+            "artist_tier_within_archetype": "major",
+            "context_overlays": ["nostalgia_context", "novelty_context"],
+            "risk_flags": ["requires_framing"],
+            "identity_flags": [],
+            "provenance": {
+              "source": "synthetic_fixture",
+              "source_refs": ["synthetic_graph:boundary_cluster"],
+              "synthetic_only": true
+            }
+          }
+        ],
+        "endpoint_graph_contexts": [],
+        "tier_coverage_score": 0.58,
+        "tier_depth_score": 0.34,
+        "coverage_gap_score": 0.52,
+        "depth_gap_score": 0.66
+      },
+      "affinity_context_summary": {
+        "dominant_affinity_tags": [
+          "rhythm_body:driving_eighths",
+          "sonic_texture:guitar_forward"
+        ],
+        "context_overlays": ["nostalgia_context", "novelty_context"],
+        "bridge_readiness_score": null,
+        "gateway_availability": {
+          "available": false,
+          "gateway_candidate_refs": [],
+          "gateway_to_representative_coherence_score": null
+        },
+        "context_variability_score": 0.71,
+        "context_skew_score": 0.48
+      },
+      "risk_context_summary": {
+        "risk_flags": ["requires_framing"],
+        "identity_flags": [],
+        "risk_penalty_basis": ["high_context_variability_requires_clear_comparator_balance"],
+        "identity_or_version_risk_present": false
+      },
+      "candidate_generation_summary": {
+        "generator_id": "synthetic_boundary_test_generator_v0_1",
+        "batch_index": 0,
+        "input_rollup_refs": ["rollup_archetype_071", "rollup_album_synthetic_target"],
+        "eligible_candidate_count": 8,
+        "emitted_candidate_count": 1,
+        "pruned_candidate_count": 5,
+        "floor_failed_candidate_count": 2,
+        "cap_applied": true,
+        "cap_value": 12,
+        "batch_size": 8,
+        "generation_notes": [
+          "Synthetic nearby mixed-reaction boundary fixture only.",
+          "No runtime selector loop was executed."
+        ]
+      },
+      "score_components": {
+        "mission_type_value": 0.82,
+        "mission_fit_score": 0.86,
+        "readiness_score": 0.84,
+        "learning_value_score": 0.9,
+        "risk_penalty": 0.06,
+        "repetition_penalty": 0.01,
+        "complexity_penalty": 0.04,
+        "raw_score": 0.87,
+        "final_opportunity_score": 0.87
+      },
+      "activation_reasons": [
+        "nearby graph objects have mixed synthetic reactions",
+        "comparison set has a shared basis and differentiating context overlays"
+      ],
+      "risk_reasons": ["context-heavy candidate requires careful framing"],
+      "suppression_reasons": [],
+      "required_inputs_available": true,
+      "opportunity_only": true,
+      "construction_status": "not_constructed",
+      "runtime_allowed": false,
+      "production_mission_generation_allowed": false,
+      "canonical_graph_mutation_allowed": false,
+      "listener_preference_inference_from_affinity_allowed": false
+    }
+  ]
+}

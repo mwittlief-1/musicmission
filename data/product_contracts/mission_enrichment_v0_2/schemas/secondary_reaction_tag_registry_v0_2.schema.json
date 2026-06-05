@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/contracts/mission_enrichment/secondary_reaction_tag_registry_v0_2.schema.json",
+  "title": "Cartenza Secondary Reaction Tag Registry v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "registry_status", "tags"],
+  "properties": {
+    "schema_version": { "const": "secondary_reaction_tag_registry_v0_2" },
+    "registry_status": { "enum": ["runtime_candidate"] },
+    "tags": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/tag" }
+    }
+  },
+  "$defs": {
+    "primary_reaction": {
+      "enum": ["love", "like", "ok", "dislike"]
+    },
+    "category": {
+      "enum": [
+        "positive_confirming",
+        "qualified_split_signal",
+        "waypoint_uncertainty",
+        "negative_boundary"
+      ]
+    },
+    "facet": {
+      "enum": [
+        "form_container",
+        "melody_harmony",
+        "rhythm_body",
+        "production",
+        "sonic_texture",
+        "vocal_performance",
+        "instrumental_performance",
+        "lyrics_language",
+        "narrative_theme",
+        "emotion_theme",
+        "atmosphere",
+        "energy_profile",
+        "dynamic_shape",
+        "arrangement",
+        "activity_context",
+        "social_context",
+        "context_rule"
+      ]
+    },
+    "tag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tag_id",
+        "display_label",
+        "valid_primary_reactions",
+        "atlas_effect",
+        "allowed_facets",
+        "category"
+      ],
+      "properties": {
+        "tag_id": { "type": "string", "pattern": "^[A-Z0-9_]+$" },
+        "display_label": { "type": "string", "minLength": 1 },
+        "valid_primary_reactions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/primary_reaction" }
+        },
+        "atlas_effect": { "type": "string", "minLength": 1 },
+        "allowed_facets": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/facet" }
+        },
+        "category": { "$ref": "#/$defs/category" }
+      }
+    }
+  }
+}

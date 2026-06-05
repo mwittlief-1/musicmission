@@ -1,0 +1,380 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cartenza.local/contracts/mission_opportunity_selection/mission_opportunity_blob_v0_1.schema.json",
+  "title": "Cartenza Mission Opportunity Blob v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "opportunity_id",
+    "mission_type",
+    "target_object_type",
+    "target_object_ids",
+    "target_object_ref",
+    "floor_passed",
+    "floor_details",
+    "filled_requirements",
+    "source_signal_summary",
+    "graph_context_summary",
+    "affinity_context_summary",
+    "risk_context_summary",
+    "candidate_generation_summary",
+    "score_components",
+    "activation_reasons",
+    "risk_reasons",
+    "suppression_reasons",
+    "required_inputs_available",
+    "opportunity_only",
+    "construction_status",
+    "runtime_allowed",
+    "production_mission_generation_allowed",
+    "canonical_graph_mutation_allowed",
+    "listener_preference_inference_from_affinity_allowed"
+  ],
+  "properties": {
+    "contract_version": { "const": "mission_opportunity_blob_v0_1" },
+    "opportunity_id": { "type": "string", "minLength": 1 },
+    "mission_type": { "$ref": "#/$defs/mission_type" },
+    "target_object_type": { "$ref": "#/$defs/target_object_type" },
+    "target_object_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "target_object_ref": { "$ref": "#/$defs/target_object_ref" },
+    "floor_passed": { "type": "boolean" },
+    "floor_details": { "$ref": "#/$defs/floor_details" },
+    "filled_requirements": { "$ref": "#/$defs/filled_requirements" },
+    "source_signal_summary": { "$ref": "#/$defs/source_signal_summary" },
+    "graph_context_summary": { "$ref": "#/$defs/graph_context_summary" },
+    "affinity_context_summary": { "$ref": "#/$defs/affinity_context_summary" },
+    "risk_context_summary": { "$ref": "#/$defs/risk_context_summary" },
+    "candidate_generation_summary": { "$ref": "#/$defs/candidate_generation_summary" },
+    "score_components": { "$ref": "#/$defs/score_components" },
+    "activation_reasons": { "$ref": "#/$defs/string_array" },
+    "risk_reasons": { "$ref": "#/$defs/string_array" },
+    "suppression_reasons": { "$ref": "#/$defs/string_array" },
+    "required_inputs_available": { "type": "boolean" },
+    "opportunity_only": { "const": true },
+    "construction_status": { "const": "not_constructed" },
+    "runtime_allowed": { "const": false },
+    "production_mission_generation_allowed": { "const": false },
+    "canonical_graph_mutation_allowed": { "const": false },
+    "listener_preference_inference_from_affinity_allowed": { "const": false }
+  },
+  "$defs": {
+    "mission_type": {
+      "enum": [
+        "initial_profile_survey",
+        "family_survey",
+        "archetype_survey",
+        "gateway_test",
+        "song_to_archetype_test",
+        "artist_depth_test",
+        "album_container_test",
+        "archetype_depth_test",
+        "exception_scope_test",
+        "false_nearby_test",
+        "context_dependence_test",
+        "bridge_test",
+        "boundary_test",
+        "evidence_repair_test"
+      ]
+    },
+    "target_object_type": {
+      "enum": ["family", "archetype", "artist", "album", "song", "archetype_pair", "family_pair", "song_cluster"]
+    },
+    "node_tier": {
+      "enum": ["primary", "major", "supporting", "deep", "contextual", "gateway", "unknown"]
+    },
+    "graph_item_role": {
+      "enum": [
+        "canonical_anchor",
+        "major_representative",
+        "gateway",
+        "bridge",
+        "deep_cut",
+        "contextual_object",
+        "boundary",
+        "false_nearby",
+        "album_world",
+        "artist_anchor",
+        "unknown"
+      ]
+    },
+    "string_array": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "bounded_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "target_object_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "object_ids", "display_name"],
+      "properties": {
+        "object_type": { "$ref": "#/$defs/target_object_type" },
+        "object_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "display_name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "graph_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_object_ref",
+        "family_ids",
+        "family_names",
+        "archetype_ids",
+        "archetype_names",
+        "artist_ids",
+        "album_ids",
+        "song_ids",
+        "node_tier",
+        "graph_item_role",
+        "track_tier_within_archetype",
+        "album_tier_within_archetype",
+        "artist_tier_within_archetype",
+        "context_overlays",
+        "risk_flags",
+        "identity_flags",
+        "provenance"
+      ],
+      "properties": {
+        "target_object_ref": { "$ref": "#/$defs/target_object_ref" },
+        "family_ids": { "$ref": "#/$defs/string_array" },
+        "family_names": { "$ref": "#/$defs/string_array" },
+        "archetype_ids": { "$ref": "#/$defs/string_array" },
+        "archetype_names": { "$ref": "#/$defs/string_array" },
+        "artist_ids": { "$ref": "#/$defs/string_array" },
+        "album_ids": { "$ref": "#/$defs/string_array" },
+        "song_ids": { "$ref": "#/$defs/string_array" },
+        "node_tier": { "$ref": "#/$defs/node_tier" },
+        "graph_item_role": { "$ref": "#/$defs/graph_item_role" },
+        "track_tier_within_archetype": { "$ref": "#/$defs/node_tier" },
+        "album_tier_within_archetype": { "$ref": "#/$defs/node_tier" },
+        "artist_tier_within_archetype": { "$ref": "#/$defs/node_tier" },
+        "context_overlays": { "$ref": "#/$defs/string_array" },
+        "risk_flags": { "$ref": "#/$defs/string_array" },
+        "identity_flags": { "$ref": "#/$defs/string_array" },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source", "source_refs", "synthetic_only"],
+          "properties": {
+            "source": { "type": "string", "minLength": 1 },
+            "source_refs": { "$ref": "#/$defs/string_array" },
+            "synthetic_only": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "floor_details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_type_score_floor",
+        "mission_type_score_ceiling",
+        "computed_floor_score",
+        "floor_passed",
+        "failed_requirements",
+        "fail_reasons",
+        "floor_evidence_refs"
+      ],
+      "properties": {
+        "mission_type_score_floor": { "$ref": "#/$defs/bounded_score" },
+        "mission_type_score_ceiling": { "$ref": "#/$defs/bounded_score" },
+        "computed_floor_score": { "$ref": "#/$defs/bounded_score" },
+        "floor_passed": { "type": "boolean" },
+        "failed_requirements": { "$ref": "#/$defs/string_array" },
+        "fail_reasons": { "$ref": "#/$defs/string_array" },
+        "floor_evidence_refs": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "filled_requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required_evidence_rollup_refs",
+        "required_graph_object_refs",
+        "candidate_refs",
+        "required_inputs_available"
+      ],
+      "properties": {
+        "required_evidence_rollup_refs": { "$ref": "#/$defs/string_array" },
+        "required_graph_object_refs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/target_object_ref" }
+        },
+        "candidate_refs": { "$ref": "#/$defs/string_array" },
+        "required_inputs_available": { "type": "boolean" }
+      }
+    },
+    "source_signal_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_rollup_ref",
+        "target_object_type",
+        "target_object_ids",
+        "target_display_name",
+        "positive_signal_count",
+        "negative_signal_count",
+        "weak_non_failure_signal_count",
+        "survey_ok_ignored_count",
+        "mission_ok_weak_count",
+        "evidence_density",
+        "conflict_score",
+        "recency_score"
+      ],
+      "properties": {
+        "target_rollup_ref": { "type": "string", "minLength": 1 },
+        "target_object_type": { "$ref": "#/$defs/target_object_type" },
+        "target_object_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "target_display_name": { "type": "string", "minLength": 1 },
+        "positive_signal_count": { "type": "integer", "minimum": 0 },
+        "negative_signal_count": { "type": "integer", "minimum": 0 },
+        "weak_non_failure_signal_count": { "type": "integer", "minimum": 0 },
+        "survey_ok_ignored_count": { "type": "integer", "minimum": 0 },
+        "mission_ok_weak_count": { "type": "integer", "minimum": 0 },
+        "evidence_density": { "$ref": "#/$defs/bounded_score" },
+        "conflict_score": { "$ref": "#/$defs/bounded_score" },
+        "recency_score": { "$ref": "#/$defs/bounded_score" }
+      }
+    },
+    "graph_context_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "graph_contexts",
+        "endpoint_graph_contexts",
+        "tier_coverage_score",
+        "tier_depth_score",
+        "coverage_gap_score",
+        "depth_gap_score"
+      ],
+      "properties": {
+        "graph_contexts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/graph_context" }
+        },
+        "endpoint_graph_contexts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/graph_context" }
+        },
+        "tier_coverage_score": { "$ref": "#/$defs/bounded_score" },
+        "tier_depth_score": { "$ref": "#/$defs/bounded_score" },
+        "coverage_gap_score": { "$ref": "#/$defs/bounded_score" },
+        "depth_gap_score": { "$ref": "#/$defs/bounded_score" }
+      }
+    },
+    "affinity_context_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dominant_affinity_tags",
+        "context_overlays",
+        "bridge_readiness_score",
+        "gateway_availability",
+        "context_variability_score",
+        "context_skew_score"
+      ],
+      "properties": {
+        "dominant_affinity_tags": { "$ref": "#/$defs/string_array" },
+        "context_overlays": { "$ref": "#/$defs/string_array" },
+        "bridge_readiness_score": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "gateway_availability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["available", "gateway_candidate_refs", "gateway_to_representative_coherence_score"],
+          "properties": {
+            "available": { "type": "boolean" },
+            "gateway_candidate_refs": { "$ref": "#/$defs/string_array" },
+            "gateway_to_representative_coherence_score": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+          }
+        },
+        "context_variability_score": { "$ref": "#/$defs/bounded_score" },
+        "context_skew_score": { "$ref": "#/$defs/bounded_score" }
+      }
+    },
+    "risk_context_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["risk_flags", "identity_flags", "risk_penalty_basis", "identity_or_version_risk_present"],
+      "properties": {
+        "risk_flags": { "$ref": "#/$defs/string_array" },
+        "identity_flags": { "$ref": "#/$defs/string_array" },
+        "risk_penalty_basis": { "$ref": "#/$defs/string_array" },
+        "identity_or_version_risk_present": { "type": "boolean" }
+      }
+    },
+    "candidate_generation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generator_id",
+        "batch_index",
+        "input_rollup_refs",
+        "eligible_candidate_count",
+        "emitted_candidate_count",
+        "pruned_candidate_count",
+        "floor_failed_candidate_count",
+        "cap_applied",
+        "cap_value",
+        "batch_size",
+        "generation_notes"
+      ],
+      "properties": {
+        "generator_id": { "type": "string", "minLength": 1 },
+        "batch_index": { "type": "integer", "minimum": 0 },
+        "input_rollup_refs": { "$ref": "#/$defs/string_array" },
+        "eligible_candidate_count": { "type": "integer", "minimum": 0 },
+        "emitted_candidate_count": { "type": "integer", "minimum": 0 },
+        "pruned_candidate_count": { "type": "integer", "minimum": 0 },
+        "floor_failed_candidate_count": { "type": "integer", "minimum": 0 },
+        "cap_applied": { "type": "boolean" },
+        "cap_value": { "type": "integer", "minimum": 1 },
+        "batch_size": { "type": "integer", "minimum": 1 },
+        "generation_notes": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "score_components": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_type_value",
+        "mission_fit_score",
+        "readiness_score",
+        "learning_value_score",
+        "risk_penalty",
+        "repetition_penalty",
+        "complexity_penalty",
+        "raw_score",
+        "final_opportunity_score"
+      ],
+      "properties": {
+        "mission_type_value": { "$ref": "#/$defs/bounded_score" },
+        "mission_fit_score": { "$ref": "#/$defs/bounded_score" },
+        "readiness_score": { "$ref": "#/$defs/bounded_score" },
+        "learning_value_score": { "$ref": "#/$defs/bounded_score" },
+        "risk_penalty": { "$ref": "#/$defs/bounded_score" },
+        "repetition_penalty": { "$ref": "#/$defs/bounded_score" },
+        "complexity_penalty": { "$ref": "#/$defs/bounded_score" },
+        "raw_score": { "$ref": "#/$defs/bounded_score" },
+        "final_opportunity_score": { "$ref": "#/$defs/bounded_score" }
+      }
+    }
+  }
+}

@@ -1,0 +1,1454 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_05_archetype_033_country-pop-crossover-country_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_5/normalized_family_5.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 5,
+    "family_slug": "country",
+    "family_name": "Country",
+    "archetype_id": "033",
+    "archetype_slug": "country-pop-crossover-country",
+    "canonical_graph_ref": "family_05/archetype_033",
+    "existing_graph_label_name": "Country-Pop / Crossover Country",
+    "editorial_display_title": "Country-Pop / Crossover Country",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:dolly-parton",
+        "object_id": "dolly-parton",
+        "display_label": "Dolly Parton",
+        "source_membership_id": "family-5-artist-033-dolly-parton",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Dolly Parton provides a recognizable survey branch for 033 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:shania-twain",
+        "object_id": "shania-twain",
+        "display_label": "Shania Twain",
+        "source_membership_id": "family-5-artist-033-shania-twain",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Shania Twain provides a recognizable survey branch for 033 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:kenny-rogers",
+        "object_id": "kenny-rogers",
+        "display_label": "Kenny Rogers",
+        "source_membership_id": "family-5-artist-033-kenny-rogers",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Kenny Rogers provides a recognizable survey branch for 033 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:taylor-swift",
+        "object_id": "taylor-swift",
+        "display_label": "Taylor Swift",
+        "source_membership_id": "family-5-artist-033-taylor-swift",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Taylor Swift fills a missing survey branch for 033, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:glen-campbell",
+        "object_id": "glen-campbell",
+        "display_label": "Glen Campbell",
+        "source_membership_id": "family-5-artist-033-glen-campbell",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Glen Campbell provides a recognizable survey branch for 033 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:alabama",
+        "object_id": "alabama",
+        "display_label": "Alabama",
+        "source_membership_id": "family-5-artist-033-alabama",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Alabama fills a missing survey branch for 033, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:rascal-flatts",
+        "object_id": "rascal-flatts",
+        "display_label": "Rascal Flatts",
+        "source_membership_id": "family-5-artist-033-rascal-flatts",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rascal Flatts fills a missing survey branch for 033, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-chicks",
+        "object_id": "the-chicks",
+        "display_label": "The Chicks",
+        "source_membership_id": "family-5-artist-033-the-chicks",
+        "roles": [
+          "bridge",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Chicks provides a recognizable survey branch for 033 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:john-denver",
+        "object_id": "john-denver",
+        "display_label": "John Denver",
+        "source_membership_id": "family-5-artist-033-john-denver",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "John Denver fills a missing survey branch for 033, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:faith-hill",
+        "object_id": "faith-hill",
+        "display_label": "Faith Hill",
+        "source_membership_id": "family-5-artist-033-faith-hill",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Faith Hill provides a recognizable survey branch for 033 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lady-a",
+        "object_id": "lady-a",
+        "display_label": "Lady A",
+        "source_membership_id": "family-5-artist-033-lady-a",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lady A fills a missing survey branch for 033, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:leann-rimes",
+        "object_id": "leann-rimes",
+        "display_label": "LeAnn Rimes",
+        "source_membership_id": "family-5-artist-033-leann-rimes",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "LeAnn Rimes fills a missing survey branch for 033, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:shania-twain-come-on-over",
+        "object_id": "shania-twain-come-on-over",
+        "display_label": "Come On Over - Shania Twain",
+        "source_membership_id": "family-5-album-033-shania-twain-come-on-over",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Come On Over is a useful album-level gateway for 033.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:taylor-swift-fearless",
+        "object_id": "taylor-swift-fearless",
+        "display_label": "Fearless - Taylor Swift",
+        "source_membership_id": "family-5-album-033-taylor-swift-fearless",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Fearless gives 033 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:dolly-parton-coat-of-many-colors",
+        "object_id": "dolly-parton-coat-of-many-colors",
+        "display_label": "Coat of Many Colors - Dolly Parton",
+        "source_membership_id": "family-5-album-033-dolly-parton-coat-of-many-colors",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Coat of Many Colors is a useful album-level gateway for 033.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kenny-rogers-the-gambler",
+        "object_id": "kenny-rogers-the-gambler",
+        "display_label": "The Gambler - Kenny Rogers",
+        "source_membership_id": "family-5-album-033-kenny-rogers-the-gambler",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "The Gambler is a useful album-level gateway for 033.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:alabama-mountain-music",
+        "object_id": "alabama-mountain-music",
+        "display_label": "Mountain Music - Alabama",
+        "source_membership_id": "family-5-album-033-alabama-mountain-music",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Mountain Music gives 033 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lady-a-need-you-now",
+        "object_id": "lady-a-need-you-now",
+        "display_label": "Need You Now - Lady A",
+        "source_membership_id": "family-5-album-033-lady-a-need-you-now",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Need You Now gives 033 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:the-chicks-wide-open-spaces",
+        "object_id": "the-chicks-wide-open-spaces",
+        "display_label": "Wide Open Spaces - The Chicks",
+        "source_membership_id": "family-5-album-033-the-chicks-wide-open-spaces",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Wide Open Spaces is a useful album-level gateway for 033.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:glen-campbell-rhinestone-cowboy",
+        "object_id": "glen-campbell-rhinestone-cowboy",
+        "display_label": "Rhinestone Cowboy - Glen Campbell",
+        "source_membership_id": "family-5-album-033-glen-campbell-rhinestone-cowboy",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Rhinestone Cowboy is a useful album-level gateway for 033.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:leann-rimes-blue",
+        "object_id": "leann-rimes-blue",
+        "display_label": "Blue - LeAnn Rimes",
+        "source_membership_id": "family-5-album-033-leann-rimes-blue",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blue gives 033 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:dolly-parton-jolene",
+        "object_id": "dolly-parton-jolene",
+        "display_label": "Jolene - Dolly Parton",
+        "source_membership_id": "family-5-song-033-dolly-parton-jolene",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Jolene gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:kenny-rogers-the-gambler",
+        "object_id": "kenny-rogers-the-gambler",
+        "display_label": "The Gambler - Kenny Rogers",
+        "source_membership_id": "family-5-song-033-kenny-rogers-the-gambler",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "The Gambler gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:shania-twain-man-i-feel-like-a-woman",
+        "object_id": "shania-twain-man-i-feel-like-a-woman",
+        "display_label": "Man! I Feel Like a Woman! - Shania Twain",
+        "source_membership_id": "family-5-song-033-shania-twain-man-i-feel-like-a-woman",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Man! I Feel Like a Woman! gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:glen-campbell-wichita-lineman",
+        "object_id": "glen-campbell-wichita-lineman",
+        "display_label": "Wichita Lineman - Glen Campbell",
+        "source_membership_id": "family-5-song-033-glen-campbell-wichita-lineman",
+        "roles": [
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Wichita Lineman is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dolly-parton-9-to-5",
+        "object_id": "dolly-parton-9-to-5",
+        "display_label": "9 to 5 - Dolly Parton",
+        "source_membership_id": "family-5-song-033-dolly-parton-9-to-5",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "9 to 5 gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:glen-campbell-rhinestone-cowboy",
+        "object_id": "glen-campbell-rhinestone-cowboy",
+        "display_label": "Rhinestone Cowboy - Glen Campbell",
+        "source_membership_id": "family-5-song-033-glen-campbell-rhinestone-cowboy",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Rhinestone Cowboy gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:john-denver-take-me-home-country-roads",
+        "object_id": "john-denver-take-me-home-country-roads",
+        "display_label": "Take Me Home, Country Roads - John Denver",
+        "source_membership_id": "family-5-song-033-john-denver-take-me-home-country-roads",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Take Me Home, Country Roads is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:kenny-rogers-and-dolly-parton-islands-in-the-stream",
+        "object_id": "kenny-rogers-and-dolly-parton-islands-in-the-stream",
+        "display_label": "Islands in the Stream - Kenny Rogers and Dolly Parton",
+        "source_membership_id": "family-5-song-033-kenny-rogers-and-dolly-parton-islands-in-the-stream",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Islands in the Stream is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lady-a-need-you-now",
+        "object_id": "lady-a-need-you-now",
+        "display_label": "Need You Now - Lady A",
+        "source_membership_id": "family-5-song-033-lady-a-need-you-now",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Need You Now is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:shania-twain-you-re-still-the-one",
+        "object_id": "shania-twain-you-re-still-the-one",
+        "display_label": "You're Still the One - Shania Twain",
+        "source_membership_id": "family-5-song-033-shania-twain-you-re-still-the-one",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "You're Still the One gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:taylor-swift-love-story",
+        "object_id": "taylor-swift-love-story",
+        "display_label": "Love Story - Taylor Swift",
+        "source_membership_id": "family-5-song-033-taylor-swift-love-story",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Love Story is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:leann-rimes-how-do-i-live",
+        "object_id": "leann-rimes-how-do-i-live",
+        "display_label": "How Do I Live - LeAnn Rimes",
+        "source_membership_id": "family-5-song-033-leann-rimes-how-do-i-live",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "How Do I Live is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:faith-hill-breathe",
+        "object_id": "faith-hill-breathe",
+        "display_label": "Breathe - Faith Hill",
+        "source_membership_id": "family-5-song-033-faith-hill-breathe",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Breathe gives 033 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lee-ann-womack-i-hope-you-dance",
+        "object_id": "lee-ann-womack-i-hope-you-dance",
+        "display_label": "I Hope You Dance - Lee Ann Womack",
+        "source_membership_id": "family-5-song-033-lee-ann-womack-i-hope-you-dance",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "I Hope You Dance is a missing song-level survey object for 033, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f5-artist-dolly-parton-033",
+        "candidate_id": "survey-f5-artist-dolly-parton-033",
+        "object_type": "artist",
+        "display_label": "Dolly Parton",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-kenny-rogers-033",
+        "candidate_id": "survey-f5-artist-kenny-rogers-033",
+        "object_type": "artist",
+        "display_label": "Kenny Rogers",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-shania-twain-033",
+        "candidate_id": "survey-f5-artist-shania-twain-033",
+        "object_type": "artist",
+        "display_label": "Shania Twain",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-taylor-swift-033",
+        "candidate_id": "survey-f5-artist-taylor-swift-033",
+        "object_type": "artist",
+        "display_label": "Taylor Swift",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-alabama-033",
+        "candidate_id": "survey-f5-artist-alabama-033",
+        "object_type": "artist",
+        "display_label": "Alabama",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-the-chicks-033",
+        "candidate_id": "survey-f5-artist-the-chicks-033",
+        "object_type": "artist",
+        "display_label": "The Chicks",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-glen-campbell-033",
+        "candidate_id": "survey-f5-artist-glen-campbell-033",
+        "object_type": "artist",
+        "display_label": "Glen Campbell",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-rascal-flatts-033",
+        "candidate_id": "survey-f5-artist-rascal-flatts-033",
+        "object_type": "artist",
+        "display_label": "Rascal Flatts",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-faith-hill-033",
+        "candidate_id": "survey-f5-artist-faith-hill-033",
+        "object_type": "artist",
+        "display_label": "Faith Hill",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-john-denver-033",
+        "candidate_id": "survey-f5-artist-john-denver-033",
+        "object_type": "artist",
+        "display_label": "John Denver",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-lady-a-033",
+        "candidate_id": "survey-f5-artist-lady-a-033",
+        "object_type": "artist",
+        "display_label": "Lady A",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-leann-rimes-033",
+        "candidate_id": "survey-f5-artist-leann-rimes-033",
+        "object_type": "artist",
+        "display_label": "LeAnn Rimes",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-lee-ann-womack-033",
+        "candidate_id": "survey-f5-artist-lee-ann-womack-033",
+        "object_type": "artist",
+        "display_label": "Lee Ann Womack",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-shania-twain-come-on-over-033",
+        "candidate_id": "survey-f5-album-shania-twain-come-on-over-033",
+        "object_type": "album",
+        "display_label": "Come On Over",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-taylor-swift-fearless-033",
+        "candidate_id": "survey-f5-album-taylor-swift-fearless-033",
+        "object_type": "album",
+        "display_label": "Fearless",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-dolly-parton-coat-of-many-colors-033",
+        "candidate_id": "survey-f5-album-dolly-parton-coat-of-many-colors-033",
+        "object_type": "album",
+        "display_label": "Coat of Many Colors",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-kenny-rogers-the-gambler-033",
+        "candidate_id": "survey-f5-album-kenny-rogers-the-gambler-033",
+        "object_type": "album",
+        "display_label": "The Gambler",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-the-chicks-wide-open-spaces-033",
+        "candidate_id": "survey-f5-album-the-chicks-wide-open-spaces-033",
+        "object_type": "album",
+        "display_label": "Wide Open Spaces",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-alabama-mountain-music-033",
+        "candidate_id": "survey-f5-album-alabama-mountain-music-033",
+        "object_type": "album",
+        "display_label": "Mountain Music",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-lady-a-need-you-now-033",
+        "candidate_id": "survey-f5-album-lady-a-need-you-now-033",
+        "object_type": "album",
+        "display_label": "Need You Now",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [],
+    "dead_end_probe_refs": [],
+    "related_archetype_refs": [
+      "family_05/archetype_032",
+      "family_05/archetype_034"
+    ],
+    "before_archetype_refs": [
+      "family_05/archetype_032"
+    ],
+    "after_archetype_refs": [
+      "family_05/archetype_034"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_5": {
+      "title": "Normalized canonical graph export, Family 5",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_5/normalized_family_5.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "033_britannica_dolly_parton": {
+      "title": "Dolly Parton",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Dolly-Parton",
+      "source_type": "reference",
+      "audit_use": "Supports Parton's role as a country artist with broad pop-cultural reach.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Parton's role as a country artist with broad pop-cultural reach."
+    },
+    "033_grammy_shania_twain": {
+      "title": "Shania Twain",
+      "publisher": "The Recording Academy",
+      "url": "https://www.grammy.com/artists/shania-twain/7642",
+      "source_type": "artist_reference",
+      "audit_use": "Supports Twain as a central country-pop crossover figure.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Twain as a central country-pop crossover figure."
+    },
+    "033_allmusic_country_pop": {
+      "title": "Country-Pop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/country-pop-ma0000002532",
+      "source_type": "genre_reference",
+      "audit_use": "Direct style reference for country-pop's crossover sound.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct style reference for country-pop's crossover sound."
+    },
+    "britannica_dolly_parton": {
+      "title": "Dolly Parton",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Dolly-Parton",
+      "source_type": "reference",
+      "audit_use": "Country-pop crossover, songwriting, and performer/persona context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country-pop crossover, songwriting, and performer/persona context."
+    },
+    "britannica_garth_brooks": {
+      "title": "Garth Brooks",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Garth-Brooks",
+      "source_type": "reference",
+      "audit_use": "1990s country radio, arena-scale country, and crossover context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "1990s country radio, arena-scale country, and crossover context."
+    },
+    "britannica_country_music": {
+      "title": "Country music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/country-music",
+      "source_type": "reference",
+      "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+    },
+    "country_music_hall_history": {
+      "title": "Country Music Hall of Fame and Museum",
+      "publisher": "Country Music Hall of Fame and Museum",
+      "url": "https://www.countrymusichalloffame.org/",
+      "source_type": "museum_reference",
+      "audit_use": "Country music history, Nashville, artists, and institutional context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Country music history, Nashville, artists, and institutional context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "033-c01",
+      "claim_text": "Country-pop crossover keeps country signifiers but smooths arrangement, chorus, and image for broader pop and adult-radio audiences.",
+      "source_ref_ids": [
+        "033_allmusic_country_pop",
+        "033_grammy_shania_twain",
+        "033_britannica_dolly_parton"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_05/archetype_033",
+        "artist:shania-twain",
+        "artist:dolly-parton"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "033-c02",
+      "claim_text": "Dolly Parton anchors the songwriter-celebrity side of crossover country, where country authorship travels through pop, television, and film visibility.",
+      "source_ref_ids": [
+        "033_britannica_dolly_parton"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "artist:dolly-parton",
+        "song_recording:dolly-parton-jolene"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "033-c03",
+      "claim_text": "Shania Twain represents the 1990s pop-production breakthrough of country crossover, with arena hooks and polished sound expanding the format's audience.",
+      "source_ref_ids": [
+        "033_grammy_shania_twain",
+        "033_allmusic_country_pop"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:shania-twain",
+        "album:shania-twain-come-on-over"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "033-c04",
+      "claim_text": "The lane is distinct from classic country because the production often treats country elements as pop color rather than as a strict honky-tonk or Nashville foundation.",
+      "source_ref_ids": [
+        "033_allmusic_country_pop"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "dead_end_false_nearby_caution_module",
+        "related_roads_lineage_module"
+      ],
+      "graph_refs": [
+        "family_05/archetype_033",
+        "family_05/archetype_031"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "033-country_pop_crossover_country-boundary",
+      "claim_text": "Country-Pop / Crossover Country's boundary is clearest when big pop chorus and smoothed twang appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "033_britannica_dolly_parton",
+        "033_grammy_shania_twain"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_05/archetype_033",
+        "artist:dolly-parton",
+        "artist:shania-twain"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "033-country_pop_crossover_country-examples",
+      "claim_text": "Dolly Parton, Shania Twain, Come On Over - Shania Twain gives Country-Pop / Crossover Country concrete anchors because the examples expose clean studio drums inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "033_grammy_shania_twain",
+        "033_allmusic_country_pop"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_05/archetype_033",
+        "artist:dolly-parton",
+        "artist:shania-twain"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Country music built to cross the fence into pop radio and mass entertainment.",
+    "history_capsule": "Country-pop has appeared in waves, from smooth crossover singers to 1990s blockbuster albums and younger artists moving between country and pop markets.",
+    "why_it_mattered": "It expanded country audiences and showed how country songwriting could live inside pop-scale production.",
+    "what_made_it_distinct": "The hook is polished and immediate, while twang, narrative, or country imagery remains legible.",
+    "what_to_listen_for": [
+      "big pop chorus",
+      "smoothed twang",
+      "clean studio drums",
+      "country lyric frame with pop lift"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:dolly-parton",
+        "example_type": "artist",
+        "display_label": "Dolly Parton",
+        "why_this_example_matters": "Dolly Parton anchors Country-Pop / Crossover Country by making story-first lyrics and twang or pedal-steel color easier to hear.",
+        "what_to_listen_for": [
+          "big pop chorus",
+          "smoothed twang"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:shania-twain",
+        "example_type": "artist",
+        "display_label": "Shania Twain",
+        "why_this_example_matters": "Shania Twain anchors Country-Pop / Crossover Country by making twang or pedal-steel color and dance or ballad pacing easier to hear.",
+        "what_to_listen_for": [
+          "smoothed twang",
+          "clean studio drums"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:shania-twain-come-on-over",
+        "example_type": "album",
+        "display_label": "Come On Over - Shania Twain",
+        "why_this_example_matters": "Come On Over - Shania Twain anchors Country-Pop / Crossover Country by making dance or ballad pacing and plainspoken vocal stance easier to hear.",
+        "what_to_listen_for": [
+          "clean studio drums",
+          "country lyric frame with pop lift"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:taylor-swift-fearless",
+        "example_type": "album",
+        "display_label": "Fearless - Taylor Swift",
+        "why_this_example_matters": "Fearless - Taylor Swift anchors Country-Pop / Crossover Country by making plainspoken vocal stance and radio polish against roots texture easier to hear.",
+        "what_to_listen_for": [
+          "country lyric frame with pop lift"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:dolly-parton-jolene",
+        "example_type": "song_recording",
+        "display_label": "Jolene - Dolly Parton",
+        "why_this_example_matters": "Jolene - Dolly Parton anchors Country-Pop / Crossover Country by making radio polish against roots texture and story-first lyrics easier to hear.",
+        "what_to_listen_for": [
+          "big pop chorus",
+          "smoothed twang"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:kenny-rogers-the-gambler",
+        "example_type": "song_recording",
+        "display_label": "The Gambler - Kenny Rogers",
+        "why_this_example_matters": "The Gambler - Kenny Rogers anchors Country-Pop / Crossover Country by making story-first lyrics and twang or pedal-steel color easier to hear.",
+        "what_to_listen_for": [
+          "smoothed twang",
+          "clean studio drums"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_05/archetype_032"
+      ],
+      "after": [
+        "family_05/archetype_034"
+      ],
+      "related": [
+        "family_05/archetype_032",
+        "family_05/archetype_034"
+      ],
+      "copy": "Use Country-Pop / Crossover Country as a contextual road inside Country; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "033-dyk-1",
+        "copy": "Country-pop is often controversial because crossover success can blur genre identity.",
+        "source_ref_ids": [
+          "033_allmusic_country_pop",
+          "033_grammy_shania_twain",
+          "033_britannica_dolly_parton"
+        ]
+      },
+      {
+        "card_id": "033-dyk-2",
+        "copy": "Dolly Parton and Shania Twain represent very different routes to pop reach.",
+        "source_ref_ids": [
+          "033_britannica_dolly_parton"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether country-pop / crossover country is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Country music built to cross the fence into pop radio and mass entertainment.",
+      "It expanded country audiences and showed how country songwriting could live inside pop-scale production.",
+      "The hook is polished and immediate, while twang, narrative, or country imagery remains legible."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not use chart size alone as proof; listen for the country-pop blend in arrangement and image.",
+    "personalization_hooks": [
+      {
+        "hook_id": "033-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[033]",
+          "atlas_state.family_affinity[5]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[033] >= 0.65 || atlas_state.family_affinity[5] >= 0.65",
+        "copy_variant": "Your Atlas signals make Country-Pop / Crossover Country useful as a contextual landmark.",
+        "fallback_copy": "Use Country-Pop / Crossover Country as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "033-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_05/archetype_033 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_05/archetype_033",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Country-Pop / Crossover Country before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "033-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_05/archetype_033 || atlas_state.boundary_question_results has boundary_negative for family_05/archetype_033",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Country-Pop / Crossover Country.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "033-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_05/archetype_033 || atlas_state.related_mission_ids references family_05/archetype_033",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "033-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_05/archetype_033 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_05/archetype_033 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_05/archetype_033",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Country-Pop / Crossover Country.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_5": {
+        "title": "Normalized canonical graph export, Family 5",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_5/normalized_family_5.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "033_britannica_dolly_parton": {
+        "title": "Dolly Parton",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dolly-Parton",
+        "source_type": "reference",
+        "audit_use": "Supports Parton's role as a country artist with broad pop-cultural reach.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Parton's role as a country artist with broad pop-cultural reach."
+      },
+      "033_grammy_shania_twain": {
+        "title": "Shania Twain",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/shania-twain/7642",
+        "source_type": "artist_reference",
+        "audit_use": "Supports Twain as a central country-pop crossover figure.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Twain as a central country-pop crossover figure."
+      },
+      "033_allmusic_country_pop": {
+        "title": "Country-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002532",
+        "source_type": "genre_reference",
+        "audit_use": "Direct style reference for country-pop's crossover sound.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for country-pop's crossover sound."
+      },
+      "britannica_dolly_parton": {
+        "title": "Dolly Parton",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dolly-Parton",
+        "source_type": "reference",
+        "audit_use": "Country-pop crossover, songwriting, and performer/persona context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country-pop crossover, songwriting, and performer/persona context."
+      },
+      "britannica_garth_brooks": {
+        "title": "Garth Brooks",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Garth-Brooks",
+        "source_type": "reference",
+        "audit_use": "1990s country radio, arena-scale country, and crossover context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "1990s country radio, arena-scale country, and crossover context."
+      },
+      "britannica_country_music": {
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      "country_music_hall_history": {
+        "title": "Country Music Hall of Fame and Museum",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/",
+        "source_type": "museum_reference",
+        "audit_use": "Country music history, Nashville, artists, and institutional context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Country music history, Nashville, artists, and institutional context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "033-c01",
+        "claim_text": "Country-pop crossover keeps country signifiers but smooths arrangement, chorus, and image for broader pop and adult-radio audiences.",
+        "source_ref_ids": [
+          "033_allmusic_country_pop",
+          "033_grammy_shania_twain",
+          "033_britannica_dolly_parton"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_05/archetype_033",
+          "artist:shania-twain",
+          "artist:dolly-parton"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033-c02",
+        "claim_text": "Dolly Parton anchors the songwriter-celebrity side of crossover country, where country authorship travels through pop, television, and film visibility.",
+        "source_ref_ids": [
+          "033_britannica_dolly_parton"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "artist:dolly-parton",
+          "song_recording:dolly-parton-jolene"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033-c03",
+        "claim_text": "Shania Twain represents the 1990s pop-production breakthrough of country crossover, with arena hooks and polished sound expanding the format's audience.",
+        "source_ref_ids": [
+          "033_grammy_shania_twain",
+          "033_allmusic_country_pop"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:shania-twain",
+          "album:shania-twain-come-on-over"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033-c04",
+        "claim_text": "The lane is distinct from classic country because the production often treats country elements as pop color rather than as a strict honky-tonk or Nashville foundation.",
+        "source_ref_ids": [
+          "033_allmusic_country_pop"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "dead_end_false_nearby_caution_module",
+          "related_roads_lineage_module"
+        ],
+        "graph_refs": [
+          "family_05/archetype_033",
+          "family_05/archetype_031"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "033-country_pop_crossover_country-boundary",
+        "claim_text": "Country-Pop / Crossover Country's boundary is clearest when big pop chorus and smoothed twang appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "033_britannica_dolly_parton",
+          "033_grammy_shania_twain"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_05/archetype_033",
+          "artist:dolly-parton",
+          "artist:shania-twain"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "033-country_pop_crossover_country-examples",
+        "claim_text": "Dolly Parton, Shania Twain, Come On Over - Shania Twain gives Country-Pop / Crossover Country concrete anchors because the examples expose clean studio drums inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "033_grammy_shania_twain",
+          "033_allmusic_country_pop"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_05/archetype_033",
+          "artist:dolly-parton",
+          "artist:shania-twain"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Country-pop and crossover country: Dolly Parton, Shania Twain, Kenny Rogers, Taylor Swift, country songs designed for pop-scale audiences.",
+    "selected_sources": [
+      {
+        "source_ref_id": "033_britannica_dolly_parton",
+        "title": "Dolly Parton",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dolly-Parton",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Parton's role as a country artist with broad pop-cultural reach."
+      },
+      {
+        "source_ref_id": "033_grammy_shania_twain",
+        "title": "Shania Twain",
+        "publisher": "The Recording Academy",
+        "url": "https://www.grammy.com/artists/shania-twain/7642",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Twain as a central country-pop crossover figure."
+      },
+      {
+        "source_ref_id": "033_allmusic_country_pop",
+        "title": "Country-Pop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/country-pop-ma0000002532",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct style reference for country-pop's crossover sound."
+      },
+      {
+        "source_ref_id": "britannica_dolly_parton",
+        "title": "Dolly Parton",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Dolly-Parton",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country-pop crossover, songwriting, and performer/persona context."
+      },
+      {
+        "source_ref_id": "britannica_garth_brooks",
+        "title": "Garth Brooks",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Garth-Brooks",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "1990s country radio, arena-scale country, and crossover context."
+      },
+      {
+        "source_ref_id": "britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      {
+        "source_ref_id": "country_music_hall_history",
+        "title": "Country Music Hall of Fame and Museum",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Country music history, Nashville, artists, and institutional context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "033_reject_stax",
+        "title": "Stax History",
+        "publisher": "Stax Museum of American Soul Music",
+        "url": "https://staxmuseum.com/stax-history/",
+        "source_type": "museum_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Southern soul context is unrelated to country-pop crossover claims."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources pair the direct country-pop style frame with object-specific examples from the classic and 1990s crossover sides."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 95,
+    "scene_anchor_refs": [
+      "song|glen campbell|by the time i get to phoenix",
+      "song|crystal gayle|don t it make my brown eyes blue",
+      "song|dolly parton|here you come again",
+      "song|kenny rogers|lucille"
+    ],
+    "ladder_example_refs": [
+      "song|eddie rabbitt|drivin my life away",
+      "song|ronnie milsap|there s no gettin over me",
+      "artist_anchor|shania twain|shania twain",
+      "song|john denver|take me home country roads",
+      "song|linda ronstadt|blue bayou",
+      "artist_anchor|anne murray|anne murray",
+      "song|olivia newton john|please mr please",
+      "song|barbara mandrell|sleeping single in a double bed"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

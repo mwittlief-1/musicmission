@@ -1,0 +1,1575 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_09_archetype_061_traditional-heavy-metal-nwobhm_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_9/normalized_family_9.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 9,
+    "family_slug": "metal-and-heavy-music",
+    "family_name": "Metal and Heavy Music",
+    "archetype_id": "061",
+    "archetype_slug": "traditional-heavy-metal-nwobhm",
+    "canonical_graph_ref": "family_09/archetype_061",
+    "existing_graph_label_name": "Traditional Heavy Metal / NWOBHM",
+    "editorial_display_title": "Traditional Heavy Metal / NWOBHM",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:black-sabbath",
+        "object_id": "black-sabbath",
+        "display_label": "Black Sabbath",
+        "source_membership_id": "family-9-artist-061-black-sabbath",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Central true-heavy root that can test metal affinity before later subgenre branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:judas-priest",
+        "object_id": "judas-priest",
+        "display_label": "Judas Priest",
+        "source_membership_id": "family-9-artist-061-judas-priest",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Defines the leather-and-riff traditional metal center after Sabbath.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:iron-maiden",
+        "object_id": "iron-maiden",
+        "display_label": "Iron Maiden",
+        "source_membership_id": "family-9-artist-061-iron-maiden",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Clean NWOBHM and galloping-album-canon anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:motorhead",
+        "object_id": "motorhead",
+        "display_label": "Motorhead",
+        "source_membership_id": "family-9-artist-061-motorhead",
+        "roles": [
+          "bridge",
+          "anchor",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Fast, raw heavy-rock bridge from traditional metal into speed metal, punk, and thrash.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ozzy-osbourne",
+        "object_id": "ozzy-osbourne",
+        "display_label": "Ozzy Osbourne",
+        "source_membership_id": "family-9-artist-061-ozzy-osbourne",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition solo gateway for users who know metal through songs more than album canon.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:dio",
+        "object_id": "dio",
+        "display_label": "Dio",
+        "source_membership_id": "family-9-artist-061-dio",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential fantasy-metal and post-Sabbath voice anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:rainbow",
+        "object_id": "rainbow",
+        "display_label": "Rainbow",
+        "source_membership_id": "family-9-artist-061-rainbow",
+        "roles": [
+          "bridge",
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Hard-rock-to-metal bridge needed for Dio and early metal genealogy.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:scorpions",
+        "object_id": "scorpions",
+        "display_label": "Scorpions",
+        "source_membership_id": "family-9-artist-061-scorpions",
+        "roles": [
+          "gateway",
+          "bridge",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Arena-metal bridge with broad recognition but softer radio overlap.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ghost",
+        "object_id": "ghost",
+        "display_label": "Ghost",
+        "source_membership_id": "family-9-artist-061-ghost",
+        "roles": [
+          "gateway",
+          "boundary",
+          "contrast"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Modern theatrical heavy-rock gateway that tests occult-metal imagery versus pop hooks.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:saxon",
+        "object_id": "saxon",
+        "display_label": "Saxon",
+        "source_membership_id": "family-9-artist-061-saxon",
+        "roles": [
+          "deepening",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "NWOBHM depth without forcing Page 1 recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:accept",
+        "object_id": "accept",
+        "display_label": "Accept",
+        "source_membership_id": "family-9-artist-061-accept",
+        "roles": [
+          "deepening",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "European heavy/speed bridge with one strong survey hook.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:deep-purple",
+        "object_id": "deep-purple",
+        "display_label": "Deep Purple",
+        "source_membership_id": "family-9-artist-061-deep-purple",
+        "roles": [
+          "boundary",
+          "bridge",
+          "false_nearby"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "edge",
+        "inclusion_reason": "Necessary hard-rock boundary because many users reach heavy music through riffs before metal identity.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:black-sabbath-paranoid",
+        "object_id": "black-sabbath-paranoid",
+        "display_label": "Paranoid - Black Sabbath",
+        "source_membership_id": "family-9-album-061-black-sabbath-paranoid",
+        "roles": [
+          "album_anchor",
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core mass-recognition Sabbath album and true-metal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:black-sabbath-black-sabbath",
+        "object_id": "black-sabbath-black-sabbath",
+        "display_label": "Black Sabbath - Black Sabbath",
+        "source_membership_id": "family-9-album-061-black-sabbath-black-sabbath",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "The heavy-music origin-story album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:iron-maiden-the-number-of-the-beast",
+        "object_id": "iron-maiden-the-number-of-the-beast",
+        "display_label": "The Number of the Beast - Iron Maiden",
+        "source_membership_id": "family-9-album-061-iron-maiden-the-number-of-the-beast",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Definitive Maiden/NWOBHM album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ozzy-osbourne-blizzard-of-ozz",
+        "object_id": "ozzy-osbourne-blizzard-of-ozz",
+        "display_label": "Blizzard of Ozz - Ozzy Osbourne",
+        "source_membership_id": "family-9-album-061-ozzy-osbourne-blizzard-of-ozz",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Solo Ozzy album object anchored by mass song recognition.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:black-sabbath-master-of-reality",
+        "object_id": "black-sabbath-master-of-reality",
+        "display_label": "Master of Reality - Black Sabbath",
+        "source_membership_id": "family-9-album-061-black-sabbath-master-of-reality",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential slow/heavy riff document bridging 061 and 064.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:judas-priest-british-steel",
+        "object_id": "judas-priest-british-steel",
+        "display_label": "British Steel - Judas Priest",
+        "source_membership_id": "family-9-album-061-judas-priest-british-steel",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Most survey-useful Judas Priest album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:judas-priest-screaming-for-vengeance",
+        "object_id": "judas-priest-screaming-for-vengeance",
+        "display_label": "Screaming for Vengeance - Judas Priest",
+        "source_membership_id": "family-9-album-061-judas-priest-screaming-for-vengeance",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Adds the American-radio side of Priest.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:motorhead-ace-of-spades",
+        "object_id": "motorhead-ace-of-spades",
+        "display_label": "Ace of Spades - Motorhead",
+        "source_membership_id": "family-9-album-061-motorhead-ace-of-spades",
+        "roles": [
+          "album_anchor",
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Best Motorhead album gateway and speed-metal bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:dio-holy-diver",
+        "object_id": "dio-holy-diver",
+        "display_label": "Holy Diver - Dio",
+        "source_membership_id": "family-9-album-061-dio-holy-diver",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Essential Dio album and traditional-metal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:iron-maiden-powerslave",
+        "object_id": "iron-maiden-powerslave",
+        "display_label": "Powerslave - Iron Maiden",
+        "source_membership_id": "family-9-album-061-iron-maiden-powerslave",
+        "roles": [
+          "album_anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Strong second-step Maiden album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:black-sabbath-paranoid",
+        "object_id": "black-sabbath-paranoid",
+        "display_label": "Paranoid - Black Sabbath",
+        "source_membership_id": "family-9-song-061-black-sabbath-paranoid",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass Sabbath song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:black-sabbath-iron-man",
+        "object_id": "black-sabbath-iron-man",
+        "display_label": "Iron Man - Black Sabbath",
+        "source_membership_id": "family-9-song-061-black-sabbath-iron-man",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "One of the safest normal-user heavy prompts.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:black-sabbath-war-pigs",
+        "object_id": "black-sabbath-war-pigs",
+        "display_label": "War Pigs - Black Sabbath",
+        "source_membership_id": "family-9-song-061-black-sabbath-war-pigs",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Broadly recognized heavy/antiwar Sabbath anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:judas-priest-breaking-the-law",
+        "object_id": "judas-priest-breaking-the-law",
+        "display_label": "Breaking the Law - Judas Priest",
+        "source_membership_id": "family-9-song-061-judas-priest-breaking-the-law",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Most accessible Priest song gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:judas-priest-you-ve-got-another-thing-comin",
+        "object_id": "judas-priest-you-ve-got-another-thing-comin",
+        "display_label": "You've Got Another Thing Comin' - Judas Priest",
+        "source_membership_id": "family-9-song-061-judas-priest-you-ve-got-another-thing-comin",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass Priest radio gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:iron-maiden-the-trooper",
+        "object_id": "iron-maiden-the-trooper",
+        "display_label": "The Trooper - Iron Maiden",
+        "source_membership_id": "family-9-song-061-iron-maiden-the-trooper",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition Maiden song-first trigger.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:motorhead-ace-of-spades",
+        "object_id": "motorhead-ace-of-spades",
+        "display_label": "Ace of Spades - Motorhead",
+        "source_membership_id": "family-9-song-061-motorhead-ace-of-spades",
+        "roles": [
+          "gateway",
+          "anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Fast-heavy cultural furniture and speed bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ozzy-osbourne-crazy-train",
+        "object_id": "ozzy-osbourne-crazy-train",
+        "display_label": "Crazy Train - Ozzy Osbourne",
+        "source_membership_id": "family-9-song-061-ozzy-osbourne-crazy-train",
+        "roles": [
+          "anchor",
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Solo Ozzy mass entry song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:black-sabbath-black-sabbath",
+        "object_id": "black-sabbath-black-sabbath",
+        "display_label": "Black Sabbath - Black Sabbath",
+        "source_membership_id": "family-9-song-061-black-sabbath-black-sabbath",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Doom-laden origin song and true-heavy test.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:iron-maiden-the-number-of-the-beast",
+        "object_id": "iron-maiden-the-number-of-the-beast",
+        "display_label": "The Number of the Beast - Iron Maiden",
+        "source_membership_id": "family-9-song-061-iron-maiden-the-number-of-the-beast",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Maiden signature song and NWOBHM gate.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dio-holy-diver",
+        "object_id": "dio-holy-diver",
+        "display_label": "Holy Diver - Dio",
+        "source_membership_id": "family-9-song-061-dio-holy-diver",
+        "roles": [
+          "gateway",
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dio signature and classic-metal gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dio-rainbow-in-the-dark",
+        "object_id": "dio-rainbow-in-the-dark",
+        "display_label": "Rainbow in the Dark - Dio",
+        "source_membership_id": "family-9-song-061-dio-rainbow-in-the-dark",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass-recognition Dio song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:judas-priest-living-after-midnight",
+        "object_id": "judas-priest-living-after-midnight",
+        "display_label": "Living After Midnight - Judas Priest",
+        "source_membership_id": "family-9-song-061-judas-priest-living-after-midnight",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Party-side Priest recognition object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:iron-maiden-run-to-the-hills",
+        "object_id": "iron-maiden-run-to-the-hills",
+        "display_label": "Run to the Hills - Iron Maiden",
+        "source_membership_id": "family-9-song-061-iron-maiden-run-to-the-hills",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Broad Maiden survey object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f9-artist-black-sabbath-061",
+        "candidate_id": "survey-f9-artist-black-sabbath-061",
+        "object_type": "artist",
+        "display_label": "Black Sabbath",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-dio-061",
+        "candidate_id": "survey-f9-artist-dio-061",
+        "object_type": "artist",
+        "display_label": "Dio",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-iron-maiden-061",
+        "candidate_id": "survey-f9-artist-iron-maiden-061",
+        "object_type": "artist",
+        "display_label": "Iron Maiden",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-judas-priest-061",
+        "candidate_id": "survey-f9-artist-judas-priest-061",
+        "object_type": "artist",
+        "display_label": "Judas Priest",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-ozzy-osbourne-061",
+        "candidate_id": "survey-f9-artist-ozzy-osbourne-061",
+        "object_type": "artist",
+        "display_label": "Ozzy Osbourne",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-motorhead-061",
+        "candidate_id": "survey-f9-artist-motorhead-061",
+        "object_type": "artist",
+        "display_label": "Motorhead",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-saxon-061",
+        "candidate_id": "survey-f9-artist-saxon-061",
+        "object_type": "artist",
+        "display_label": "Saxon",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-accept-061",
+        "candidate_id": "survey-f9-artist-accept-061",
+        "object_type": "artist",
+        "display_label": "Accept",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-rainbow-061",
+        "candidate_id": "survey-f9-artist-rainbow-061",
+        "object_type": "artist",
+        "display_label": "Rainbow",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-scorpions-061",
+        "candidate_id": "survey-f9-artist-scorpions-061",
+        "object_type": "artist",
+        "display_label": "Scorpions",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-ghost-061",
+        "candidate_id": "survey-f9-artist-ghost-061",
+        "object_type": "artist",
+        "display_label": "Ghost",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-deep-purple-061",
+        "candidate_id": "survey-f9-artist-deep-purple-061",
+        "object_type": "artist",
+        "display_label": "Deep Purple",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "false_nearby_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-thin-lizzy-061",
+        "candidate_id": "survey-f9-artist-thin-lizzy-061",
+        "object_type": "artist",
+        "display_label": "Thin Lizzy",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-mercyful-fate-061",
+        "candidate_id": "survey-f9-artist-mercyful-fate-061",
+        "object_type": "artist",
+        "display_label": "Mercyful Fate",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-artist-diamond-head-061",
+        "candidate_id": "survey-f9-artist-diamond-head-061",
+        "object_type": "artist",
+        "display_label": "Diamond Head",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-ozzy-osbourne-blizzard-of-ozz-061",
+        "candidate_id": "survey-f9-album-ozzy-osbourne-blizzard-of-ozz-061",
+        "object_type": "album",
+        "display_label": "Blizzard of Ozz",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-judas-priest-british-steel-061",
+        "candidate_id": "survey-f9-album-judas-priest-british-steel-061",
+        "object_type": "album",
+        "display_label": "British Steel",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-dio-holy-diver-061",
+        "candidate_id": "survey-f9-album-dio-holy-diver-061",
+        "object_type": "album",
+        "display_label": "Holy Diver",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-black-sabbath-paranoid-061",
+        "candidate_id": "survey-f9-album-black-sabbath-paranoid-061",
+        "object_type": "album",
+        "display_label": "Paranoid",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f9-album-judas-priest-screaming-for-vengeance-061",
+        "candidate_id": "survey-f9-album-judas-priest-screaming-for-vengeance-061",
+        "object_type": "album",
+        "display_label": "Screaming for Vengeance",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-rainbow-061",
+        "question_id": "boundary-survey-f9-artist-rainbow-061",
+        "display_label": "Rainbow",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-scorpions-061",
+        "question_id": "boundary-survey-f9-artist-scorpions-061",
+        "display_label": "Scorpions",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-ghost-061",
+        "question_id": "boundary-survey-f9-artist-ghost-061",
+        "display_label": "Ghost",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-deep-purple-061",
+        "question_id": "boundary-survey-f9-artist-deep-purple-061",
+        "display_label": "Deep Purple",
+        "question_intent": "false_nearby_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-thin-lizzy-061",
+        "question_id": "boundary-survey-f9-artist-thin-lizzy-061",
+        "display_label": "Thin Lizzy",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-artist-mercyful-fate-061",
+        "question_id": "boundary-survey-f9-artist-mercyful-fate-061",
+        "display_label": "Mercyful Fate",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-album-mercyful-fate-melissa-061",
+        "question_id": "boundary-survey-f9-album-mercyful-fate-melissa-061",
+        "display_label": "Melissa",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f9-song_recording-black-sabbath-black-sabbath-061",
+        "question_id": "boundary-survey-f9-song_recording-black-sabbath-black-sabbath-061",
+        "display_label": "Black Sabbath",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-rainbow-061",
+        "probe_id": "probe-survey-f9-artist-rainbow-061",
+        "entity_type": "artist",
+        "display_label": "Rainbow",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-scorpions-061",
+        "probe_id": "probe-survey-f9-artist-scorpions-061",
+        "entity_type": "artist",
+        "display_label": "Scorpions",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-ghost-061",
+        "probe_id": "probe-survey-f9-artist-ghost-061",
+        "entity_type": "artist",
+        "display_label": "Ghost",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-deep-purple-061",
+        "probe_id": "probe-survey-f9-artist-deep-purple-061",
+        "entity_type": "artist",
+        "display_label": "Deep Purple",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-thin-lizzy-061",
+        "probe_id": "probe-survey-f9-artist-thin-lizzy-061",
+        "entity_type": "artist",
+        "display_label": "Thin Lizzy",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-artist-mercyful-fate-061",
+        "probe_id": "probe-survey-f9-artist-mercyful-fate-061",
+        "entity_type": "artist",
+        "display_label": "Mercyful Fate",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-album-mercyful-fate-melissa-061",
+        "probe_id": "probe-survey-f9-album-mercyful-fate-melissa-061",
+        "entity_type": "album",
+        "display_label": "Melissa",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f9-song_recording-black-sabbath-black-sabbath-061",
+        "probe_id": "probe-survey-f9-song_recording-black-sabbath-black-sabbath-061",
+        "entity_type": "song_recording",
+        "display_label": "Black Sabbath",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_09/archetype_062"
+    ],
+    "before_archetype_refs": [],
+    "after_archetype_refs": [
+      "family_09/archetype_062"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_9": {
+      "title": "Normalized canonical graph export, Family 9",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_9/normalized_family_9.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "061_britannica_metal": {
+      "title": "Heavy metal",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/heavy-metal-music",
+      "source_type": "reference",
+      "audit_use": "Broad reference support for heavy metal's volume, riffs, theatricality, and subgenre development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Broad reference support for heavy metal's volume, riffs, theatricality, and subgenre development."
+    },
+    "061_rockhall_sabbath": {
+      "title": "Black Sabbath",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/black-sabbath/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Black Sabbath as a foundational heavy-riff and doom/metal anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Black Sabbath as a foundational heavy-riff and doom/metal anchor."
+    },
+    "061_rockhall_priest": {
+      "title": "Judas Priest",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/judas-priest/",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Judas Priest as a codifier of twin-guitar, leather-clad traditional metal style.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Judas Priest as a codifier of twin-guitar, leather-clad traditional metal style."
+    },
+    "061_allmusic_nwobhm": {
+      "title": "New Wave of British Heavy Metal",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/new-wave-of-british-heavy-metal",
+      "source_type": "genre_overview",
+      "audit_use": "Direct context for the late-1970s/early-1980s British metal wave around Iron Maiden and peers.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct context for the late-1970s/early-1980s British metal wave around Iron Maiden and peers."
+    },
+    "britannica_heavy_metal": {
+      "title": "Heavy metal",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/heavy-metal-music",
+      "source_type": "reference",
+      "audit_use": "Heavy metal's riffs, amplification, theatricality, and subgenre development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+    },
+    "rockhall_judas_priest": {
+      "title": "Judas Priest",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/judas-priest/",
+      "source_type": "museum_reference",
+      "audit_use": "Traditional heavy metal and NWOBHM-adjacent style context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Traditional heavy metal and NWOBHM-adjacent style context."
+    },
+    "rockhall_black_sabbath": {
+      "title": "Black Sabbath",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/black-sabbath/",
+      "source_type": "museum_reference",
+      "audit_use": "Heavy-riff, metal, doom, and hard-rock lineage context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Heavy-riff, metal, doom, and hard-rock lineage context."
+    },
+    "rockhall_iron_maiden": {
+      "title": "Iron Maiden",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/iron-maiden/",
+      "source_type": "museum_reference",
+      "audit_use": "NWOBHM and traditional heavy-metal context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "NWOBHM and traditional heavy-metal context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "061-claim-01",
+      "claim_text": "Traditional heavy metal centers the riff, amplified power, modal darkness, and dramatic vocal/guitar display, with Black Sabbath as the gravity well.",
+      "source_ref_ids": [
+        "061_britannica_metal",
+        "061_rockhall_sabbath"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_09/archetype_061",
+        "artist:black-sabbath"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "061-claim-02",
+      "claim_text": "Judas Priest helped codify metal's twin-guitar attack, high-register vocals, and leather-and-studs visual grammar.",
+      "source_ref_ids": [
+        "061_rockhall_priest",
+        "061_britannica_metal"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_09/archetype_061",
+        "artist:judas-priest"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "061-claim-03",
+      "claim_text": "NWOBHM sharpened metal into faster, more disciplined song forms that fed Iron Maiden, thrash, and later extreme metal.",
+      "source_ref_ids": [
+        "061_allmusic_nwobhm",
+        "061_britannica_metal"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "why_it_mattered"
+      ],
+      "graph_refs": [
+        "family_09/archetype_061",
+        "artist:iron-maiden",
+        "family_09/archetype_062"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "061-claim-04",
+      "claim_text": "This road should be separated from hard rock by the sustained metal identity: riff weight, mythic or ominous atmosphere, and codified metal performance language.",
+      "source_ref_ids": [
+        "061_britannica_metal",
+        "061_rockhall_priest"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "caution",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_061"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "061-traditional_heavy_metal_nwobhm-boundary",
+      "claim_text": "Traditional Heavy Metal / NWOBHM's boundary is clearest when heavy riff and twin-guitar leads appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "061_britannica_metal",
+        "061_rockhall_sabbath"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_09/archetype_061",
+        "artist:black-sabbath",
+        "artist:judas-priest"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "The core metal language: heavy riffs, drama, power, and British codification.",
+    "history_capsule": "From Sabbath's dark heaviness to Priest and Maiden's sharpened attack, this road gives metal its central grammar.",
+    "why_it_mattered": "It built the vocabulary that thrash, doom, power metal, and modern heavy music keep reusing.",
+    "what_made_it_distinct": "The focus is not just loud rock; it is riff architecture, theatrical force, and a metal-specific identity.",
+    "what_to_listen_for": [
+      "heavy riff",
+      "twin-guitar leads",
+      "high or commanding vocals",
+      "dark modal harmony",
+      "galloping rhythm"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:black-sabbath",
+        "example_type": "artist",
+        "display_label": "Black Sabbath",
+        "why_this_example_matters": "Black Sabbath anchors Traditional Heavy Metal / NWOBHM by making distorted riff architecture and drum weight and speed easier to hear.",
+        "what_to_listen_for": [
+          "heavy riff",
+          "twin-guitar leads"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:judas-priest",
+        "example_type": "artist",
+        "display_label": "Judas Priest",
+        "why_this_example_matters": "Judas Priest anchors Traditional Heavy Metal / NWOBHM by making drum weight and speed and minor-mode tension easier to hear.",
+        "what_to_listen_for": [
+          "twin-guitar leads",
+          "high or commanding vocals"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:black-sabbath-paranoid",
+        "example_type": "album",
+        "display_label": "Paranoid - Black Sabbath",
+        "why_this_example_matters": "Paranoid - Black Sabbath anchors Traditional Heavy Metal / NWOBHM by making minor-mode tension and vocal force easier to hear.",
+        "what_to_listen_for": [
+          "high or commanding vocals",
+          "dark modal harmony"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:black-sabbath-black-sabbath",
+        "example_type": "album",
+        "display_label": "Black Sabbath - Black Sabbath",
+        "why_this_example_matters": "Black Sabbath - Black Sabbath anchors Traditional Heavy Metal / NWOBHM by making vocal force and precision or abrasion as identity easier to hear.",
+        "what_to_listen_for": [
+          "dark modal harmony",
+          "galloping rhythm"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:black-sabbath-paranoid",
+        "example_type": "song_recording",
+        "display_label": "Paranoid - Black Sabbath",
+        "why_this_example_matters": "Paranoid - Black Sabbath anchors Traditional Heavy Metal / NWOBHM by making precision or abrasion as identity and distorted riff architecture easier to hear.",
+        "what_to_listen_for": [
+          "galloping rhythm"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:black-sabbath-iron-man",
+        "example_type": "song_recording",
+        "display_label": "Iron Man - Black Sabbath",
+        "why_this_example_matters": "Iron Man - Black Sabbath anchors Traditional Heavy Metal / NWOBHM by making distorted riff architecture and drum weight and speed easier to hear.",
+        "what_to_listen_for": [
+          "heavy riff",
+          "twin-guitar leads"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [],
+      "after": [
+        "family_09/archetype_062"
+      ],
+      "related": [
+        "family_09/archetype_062"
+      ],
+      "copy": "Use Traditional Heavy Metal / NWOBHM as a contextual road inside Metal and Heavy Music; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "061-dyk-1",
+        "copy": "NWOBHM is a bridge between classic heavy metal and thrash speed.",
+        "source_ref_ids": [
+          "061_britannica_metal",
+          "061_rockhall_sabbath"
+        ]
+      },
+      {
+        "card_id": "061-dyk-2",
+        "copy": "Sabbath belongs here even though they also feed doom and stoner roads.",
+        "source_ref_ids": [
+          "061_rockhall_priest",
+          "061_britannica_metal"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether traditional heavy metal / nwobhm is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "The core metal language: heavy riffs, drama, power, and British codification.",
+      "It built the vocabulary that thrash, doom, power metal, and modern heavy music keep reusing.",
+      "The focus is not just loud rock; it is riff architecture, theatrical force, and a metal-specific identity."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not collapse traditional metal into every hard-rock band with loud guitars.",
+    "personalization_hooks": [
+      {
+        "hook_id": "061-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[061]",
+          "atlas_state.family_affinity[9]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[061] >= 0.65 || atlas_state.family_affinity[9] >= 0.65",
+        "copy_variant": "Your Atlas signals make Traditional Heavy Metal / NWOBHM useful as a contextual landmark.",
+        "fallback_copy": "Use Traditional Heavy Metal / NWOBHM as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "061-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_09/archetype_061 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_09/archetype_061",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Traditional Heavy Metal / NWOBHM before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "061-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_09/archetype_061 || atlas_state.boundary_question_results has boundary_negative for family_09/archetype_061",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Traditional Heavy Metal / NWOBHM.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "061-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_09/archetype_061 || atlas_state.related_mission_ids references family_09/archetype_061",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "061-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_09/archetype_061 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_09/archetype_061 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_09/archetype_061",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Traditional Heavy Metal / NWOBHM.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_9": {
+        "title": "Normalized canonical graph export, Family 9",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_9/normalized_family_9.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "061_britannica_metal": {
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_type": "reference",
+        "audit_use": "Broad reference support for heavy metal's volume, riffs, theatricality, and subgenre development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad reference support for heavy metal's volume, riffs, theatricality, and subgenre development."
+      },
+      "061_rockhall_sabbath": {
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Black Sabbath as a foundational heavy-riff and doom/metal anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Black Sabbath as a foundational heavy-riff and doom/metal anchor."
+      },
+      "061_rockhall_priest": {
+        "title": "Judas Priest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/judas-priest/",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Judas Priest as a codifier of twin-guitar, leather-clad traditional metal style.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Judas Priest as a codifier of twin-guitar, leather-clad traditional metal style."
+      },
+      "061_allmusic_nwobhm": {
+        "title": "New Wave of British Heavy Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/new-wave-of-british-heavy-metal",
+        "source_type": "genre_overview",
+        "audit_use": "Direct context for the late-1970s/early-1980s British metal wave around Iron Maiden and peers.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct context for the late-1970s/early-1980s British metal wave around Iron Maiden and peers."
+      },
+      "britannica_heavy_metal": {
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_type": "reference",
+        "audit_use": "Heavy metal's riffs, amplification, theatricality, and subgenre development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+      },
+      "rockhall_judas_priest": {
+        "title": "Judas Priest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/judas-priest/",
+        "source_type": "museum_reference",
+        "audit_use": "Traditional heavy metal and NWOBHM-adjacent style context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Traditional heavy metal and NWOBHM-adjacent style context."
+      },
+      "rockhall_black_sabbath": {
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_type": "museum_reference",
+        "audit_use": "Heavy-riff, metal, doom, and hard-rock lineage context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy-riff, metal, doom, and hard-rock lineage context."
+      },
+      "rockhall_iron_maiden": {
+        "title": "Iron Maiden",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/iron-maiden/",
+        "source_type": "museum_reference",
+        "audit_use": "NWOBHM and traditional heavy-metal context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "NWOBHM and traditional heavy-metal context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "061-claim-01",
+        "claim_text": "Traditional heavy metal centers the riff, amplified power, modal darkness, and dramatic vocal/guitar display, with Black Sabbath as the gravity well.",
+        "source_ref_ids": [
+          "061_britannica_metal",
+          "061_rockhall_sabbath"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_09/archetype_061",
+          "artist:black-sabbath"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "061-claim-02",
+        "claim_text": "Judas Priest helped codify metal's twin-guitar attack, high-register vocals, and leather-and-studs visual grammar.",
+        "source_ref_ids": [
+          "061_rockhall_priest",
+          "061_britannica_metal"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_09/archetype_061",
+          "artist:judas-priest"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "061-claim-03",
+        "claim_text": "NWOBHM sharpened metal into faster, more disciplined song forms that fed Iron Maiden, thrash, and later extreme metal.",
+        "source_ref_ids": [
+          "061_allmusic_nwobhm",
+          "061_britannica_metal"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "why_it_mattered"
+        ],
+        "graph_refs": [
+          "family_09/archetype_061",
+          "artist:iron-maiden",
+          "family_09/archetype_062"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "061-claim-04",
+        "claim_text": "This road should be separated from hard rock by the sustained metal identity: riff weight, mythic or ominous atmosphere, and codified metal performance language.",
+        "source_ref_ids": [
+          "061_britannica_metal",
+          "061_rockhall_priest"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "caution",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_061"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "061-traditional_heavy_metal_nwobhm-boundary",
+        "claim_text": "Traditional Heavy Metal / NWOBHM's boundary is clearest when heavy riff and twin-guitar leads appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "061_britannica_metal",
+          "061_rockhall_sabbath"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_09/archetype_061",
+          "artist:black-sabbath",
+          "artist:judas-priest"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Traditional Heavy Metal / NWOBHM: Black Sabbath, Judas Priest, Iron Maiden, Motorhead, Dio, early heavy metal riff canon and British metal codification.",
+    "selected_sources": [
+      {
+        "source_ref_id": "061_britannica_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Broad reference support for heavy metal's volume, riffs, theatricality, and subgenre development."
+      },
+      {
+        "source_ref_id": "061_rockhall_sabbath",
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Black Sabbath as a foundational heavy-riff and doom/metal anchor."
+      },
+      {
+        "source_ref_id": "061_rockhall_priest",
+        "title": "Judas Priest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/judas-priest/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Judas Priest as a codifier of twin-guitar, leather-clad traditional metal style."
+      },
+      {
+        "source_ref_id": "061_allmusic_nwobhm",
+        "title": "New Wave of British Heavy Metal",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/new-wave-of-british-heavy-metal",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct context for the late-1970s/early-1980s British metal wave around Iron Maiden and peers."
+      },
+      {
+        "source_ref_id": "britannica_heavy_metal",
+        "title": "Heavy metal",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/heavy-metal-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy metal's riffs, amplification, theatricality, and subgenre development."
+      },
+      {
+        "source_ref_id": "rockhall_judas_priest",
+        "title": "Judas Priest",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/judas-priest/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Traditional heavy metal and NWOBHM-adjacent style context."
+      },
+      {
+        "source_ref_id": "rockhall_black_sabbath",
+        "title": "Black Sabbath",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/black-sabbath/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Heavy-riff, metal, doom, and hard-rock lineage context."
+      },
+      {
+        "source_ref_id": "rockhall_iron_maiden",
+        "title": "Iron Maiden",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/iron-maiden/",
+        "source_relevance": "example_object_support",
+        "why_fit": "NWOBHM and traditional heavy-metal context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "061_reject_punk",
+        "title": "Punk",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/punk",
+        "source_type": "reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Punk is adjacent in time and energy, but it does not explain the metal riff canon or NWOBHM codification."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The set covers the broad metal definition, Sabbath's origin gravity, Priest's style codification, and the specific NWOBHM branch."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 83,
+    "scene_anchor_refs": [
+      "song|diamond head|am i evil",
+      "song|accept|balls to the wall",
+      "song|black sabbath|iron man",
+      "song|motorhead|ace of spades"
+    ],
+    "ladder_example_refs": [
+      "song|judas priest|breaking the law",
+      "song|ozzy osbourne|crazy train",
+      "song|iron maiden|run to the hills",
+      "song|dio|holy diver",
+      "song|scorpions|rock you like a hurricane",
+      "artist_anchor|budgie|budgie",
+      "artist_anchor|tygers of pan tang|tygers of pan tang",
+      "song|saxon|princess of the night"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

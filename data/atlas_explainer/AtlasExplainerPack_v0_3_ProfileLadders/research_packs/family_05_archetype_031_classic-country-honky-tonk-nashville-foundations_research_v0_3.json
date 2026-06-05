@@ -1,0 +1,1483 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_05_archetype_031_classic-country-honky-tonk-nashville-foundations_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_5/normalized_family_5.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 5,
+    "family_slug": "country",
+    "family_name": "Country",
+    "archetype_id": "031",
+    "archetype_slug": "classic-country-honky-tonk-nashville-foundations",
+    "canonical_graph_ref": "family_05/archetype_031",
+    "existing_graph_label_name": "Classic Country / Honky-Tonk / Nashville Foundations",
+    "editorial_display_title": "Classic Country / Honky-Tonk / Nashville Foundations",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:johnny-cash",
+        "object_id": "johnny-cash",
+        "display_label": "Johnny Cash",
+        "source_membership_id": "family-5-artist-031-johnny-cash",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Johnny Cash provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:patsy-cline",
+        "object_id": "patsy-cline",
+        "display_label": "Patsy Cline",
+        "source_membership_id": "family-5-artist-031-patsy-cline",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Patsy Cline provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:george-jones",
+        "object_id": "george-jones",
+        "display_label": "George Jones",
+        "source_membership_id": "family-5-artist-031-george-jones",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "George Jones provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:hank-williams",
+        "object_id": "hank-williams",
+        "display_label": "Hank Williams",
+        "source_membership_id": "family-5-artist-031-hank-williams",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Hank Williams provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:loretta-lynn",
+        "object_id": "loretta-lynn",
+        "display_label": "Loretta Lynn",
+        "source_membership_id": "family-5-artist-031-loretta-lynn",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Loretta Lynn provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:jimmie-rodgers",
+        "object_id": "jimmie-rodgers",
+        "display_label": "Jimmie Rodgers",
+        "source_membership_id": "family-5-artist-031-jimmie-rodgers",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Jimmie Rodgers fills a missing survey branch for 031, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:the-carter-family",
+        "object_id": "the-carter-family",
+        "display_label": "The Carter Family",
+        "source_membership_id": "family-5-artist-031-the-carter-family",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Carter Family fills a missing survey branch for 031, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:charley-pride",
+        "object_id": "charley-pride",
+        "display_label": "Charley Pride",
+        "source_membership_id": "family-5-artist-031-charley-pride",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Charley Pride fills a missing survey branch for 031, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:tammy-wynette",
+        "object_id": "tammy-wynette",
+        "display_label": "Tammy Wynette",
+        "source_membership_id": "family-5-artist-031-tammy-wynette",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Tammy Wynette provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:marty-robbins",
+        "object_id": "marty-robbins",
+        "display_label": "Marty Robbins",
+        "source_membership_id": "family-5-artist-031-marty-robbins",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Marty Robbins fills a missing survey branch for 031, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:roger-miller",
+        "object_id": "roger-miller",
+        "display_label": "Roger Miller",
+        "source_membership_id": "family-5-artist-031-roger-miller",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Roger Miller fills a missing survey branch for 031, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:buck-owens",
+        "object_id": "buck-owens",
+        "display_label": "Buck Owens",
+        "source_membership_id": "family-5-artist-031-buck-owens",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Buck Owens provides a recognizable survey branch for 031 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:johnny-cash-at-folsom-prison",
+        "object_id": "johnny-cash-at-folsom-prison",
+        "display_label": "At Folsom Prison - Johnny Cash",
+        "source_membership_id": "family-5-album-031-johnny-cash-at-folsom-prison",
+        "roles": [
+          "live_gateway",
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "At Folsom Prison is a useful album-level gateway for 031.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:hank-williams-40-greatest-hits",
+        "object_id": "hank-williams-40-greatest-hits",
+        "display_label": "40 Greatest Hits - Hank Williams",
+        "source_membership_id": "family-5-album-031-hank-williams-40-greatest-hits",
+        "roles": [
+          "compilation_gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "40 Greatest Hits is a useful album-level gateway for 031.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:patsy-cline-showcase",
+        "object_id": "patsy-cline-showcase",
+        "display_label": "Showcase - Patsy Cline",
+        "source_membership_id": "family-5-album-031-patsy-cline-showcase",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Showcase is a useful album-level gateway for 031.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:george-jones-i-am-what-i-am",
+        "object_id": "george-jones-i-am-what-i-am",
+        "display_label": "I Am What I Am - George Jones",
+        "source_membership_id": "family-5-album-031-george-jones-i-am-what-i-am",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "I Am What I Am is a useful album-level gateway for 031.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:loretta-lynn-coal-miner-s-daughter",
+        "object_id": "loretta-lynn-coal-miner-s-daughter",
+        "display_label": "Coal Miner's Daughter - Loretta Lynn",
+        "source_membership_id": "family-5-album-031-loretta-lynn-coal-miner-s-daughter",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Coal Miner's Daughter is a useful album-level gateway for 031.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:marty-robbins-gunfighter-ballads-and-trail-songs",
+        "object_id": "marty-robbins-gunfighter-ballads-and-trail-songs",
+        "display_label": "Gunfighter Ballads and Trail Songs - Marty Robbins",
+        "source_membership_id": "family-5-album-031-marty-robbins-gunfighter-ballads-and-trail-songs",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Gunfighter Ballads and Trail Songs gives 031 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:charley-pride-the-essential-charley-pride",
+        "object_id": "charley-pride-the-essential-charley-pride",
+        "display_label": "The Essential Charley Pride - Charley Pride",
+        "source_membership_id": "family-5-album-031-charley-pride-the-essential-charley-pride",
+        "roles": [
+          "compilation_gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Essential Charley Pride gives 031 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:jimmie-rodgers-the-essential-jimmie-rodgers",
+        "object_id": "jimmie-rodgers-the-essential-jimmie-rodgers",
+        "display_label": "The Essential Jimmie Rodgers - Jimmie Rodgers",
+        "source_membership_id": "family-5-album-031-jimmie-rodgers-the-essential-jimmie-rodgers",
+        "roles": [
+          "compilation_gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Essential Jimmie Rodgers gives 031 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:kitty-wells-the-queen-of-country-music",
+        "object_id": "kitty-wells-the-queen-of-country-music",
+        "display_label": "The Queen of Country Music - Kitty Wells",
+        "source_membership_id": "family-5-album-031-kitty-wells-the-queen-of-country-music",
+        "roles": [
+          "compilation_gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Queen of Country Music gives 031 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:johnny-cash-ring-of-fire",
+        "object_id": "johnny-cash-ring-of-fire",
+        "display_label": "Ring of Fire - Johnny Cash",
+        "source_membership_id": "family-5-song-031-johnny-cash-ring-of-fire",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Ring of Fire gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:patsy-cline-crazy",
+        "object_id": "patsy-cline-crazy",
+        "display_label": "Crazy - Patsy Cline",
+        "source_membership_id": "family-5-song-031-patsy-cline-crazy",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Crazy gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:george-jones-he-stopped-loving-her-today",
+        "object_id": "george-jones-he-stopped-loving-her-today",
+        "display_label": "He Stopped Loving Her Today - George Jones",
+        "source_membership_id": "family-5-song-031-george-jones-he-stopped-loving-her-today",
+        "roles": [
+          "anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "He Stopped Loving Her Today gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:hank-williams-i-m-so-lonesome-i-could-cry",
+        "object_id": "hank-williams-i-m-so-lonesome-i-could-cry",
+        "display_label": "I'm So Lonesome I Could Cry - Hank Williams",
+        "source_membership_id": "family-5-song-031-hank-williams-i-m-so-lonesome-i-could-cry",
+        "roles": [
+          "anchor",
+          "deepening"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "I'm So Lonesome I Could Cry gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:hank-williams-your-cheatin-heart",
+        "object_id": "hank-williams-your-cheatin-heart",
+        "display_label": "Your Cheatin' Heart - Hank Williams",
+        "source_membership_id": "family-5-song-031-hank-williams-your-cheatin-heart",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Your Cheatin' Heart gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:jimmie-rodgers-blue-yodel-no-1-t-for-texas",
+        "object_id": "jimmie-rodgers-blue-yodel-no-1-t-for-texas",
+        "display_label": "Blue Yodel No. 1 (T for Texas) - Jimmie Rodgers",
+        "source_membership_id": "family-5-song-031-jimmie-rodgers-blue-yodel-no-1-t-for-texas",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Blue Yodel No. 1 (T for Texas) is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:the-carter-family-wildwood-flower",
+        "object_id": "the-carter-family-wildwood-flower",
+        "display_label": "Wildwood Flower - The Carter Family",
+        "source_membership_id": "family-5-song-031-the-carter-family-wildwood-flower",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Wildwood Flower is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:buck-owens-act-naturally",
+        "object_id": "buck-owens-act-naturally",
+        "display_label": "Act Naturally - Buck Owens",
+        "source_membership_id": "family-5-song-031-buck-owens-act-naturally",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Act Naturally is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:charley-pride-kiss-an-angel-good-mornin",
+        "object_id": "charley-pride-kiss-an-angel-good-mornin",
+        "display_label": "Kiss an Angel Good Mornin' - Charley Pride",
+        "source_membership_id": "family-5-song-031-charley-pride-kiss-an-angel-good-mornin",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Kiss an Angel Good Mornin' is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:loretta-lynn-coal-miner-s-daughter",
+        "object_id": "loretta-lynn-coal-miner-s-daughter",
+        "display_label": "Coal Miner's Daughter - Loretta Lynn",
+        "source_membership_id": "family-5-song-031-loretta-lynn-coal-miner-s-daughter",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Coal Miner's Daughter gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:marty-robbins-el-paso",
+        "object_id": "marty-robbins-el-paso",
+        "display_label": "El Paso - Marty Robbins",
+        "source_membership_id": "family-5-song-031-marty-robbins-el-paso",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "El Paso is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:patsy-cline-i-fall-to-pieces",
+        "object_id": "patsy-cline-i-fall-to-pieces",
+        "display_label": "I Fall to Pieces - Patsy Cline",
+        "source_membership_id": "family-5-song-031-patsy-cline-i-fall-to-pieces",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "I Fall to Pieces gives 031 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:roger-miller-king-of-the-road",
+        "object_id": "roger-miller-king-of-the-road",
+        "display_label": "King of the Road - Roger Miller",
+        "source_membership_id": "family-5-song-031-roger-miller-king-of-the-road",
+        "roles": [
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "King of the Road is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:tammy-wynette-stand-by-your-man",
+        "object_id": "tammy-wynette-stand-by-your-man",
+        "display_label": "Stand by Your Man - Tammy Wynette",
+        "source_membership_id": "family-5-song-031-tammy-wynette-stand-by-your-man",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Stand by Your Man is a missing song-level survey object for 031, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f5-artist-hank-williams-031",
+        "candidate_id": "survey-f5-artist-hank-williams-031",
+        "object_type": "artist",
+        "display_label": "Hank Williams",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-johnny-cash-031",
+        "candidate_id": "survey-f5-artist-johnny-cash-031",
+        "object_type": "artist",
+        "display_label": "Johnny Cash",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-patsy-cline-031",
+        "candidate_id": "survey-f5-artist-patsy-cline-031",
+        "object_type": "artist",
+        "display_label": "Patsy Cline",
+        "survey_page_role": "page1_core",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-george-jones-031",
+        "candidate_id": "survey-f5-artist-george-jones-031",
+        "object_type": "artist",
+        "display_label": "George Jones",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-loretta-lynn-031",
+        "candidate_id": "survey-f5-artist-loretta-lynn-031",
+        "object_type": "artist",
+        "display_label": "Loretta Lynn",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-tammy-wynette-031",
+        "candidate_id": "survey-f5-artist-tammy-wynette-031",
+        "object_type": "artist",
+        "display_label": "Tammy Wynette",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-charley-pride-031",
+        "candidate_id": "survey-f5-artist-charley-pride-031",
+        "object_type": "artist",
+        "display_label": "Charley Pride",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-marty-robbins-031",
+        "candidate_id": "survey-f5-artist-marty-robbins-031",
+        "object_type": "artist",
+        "display_label": "Marty Robbins",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-roger-miller-031",
+        "candidate_id": "survey-f5-artist-roger-miller-031",
+        "object_type": "artist",
+        "display_label": "Roger Miller",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-buck-owens-031",
+        "candidate_id": "survey-f5-artist-buck-owens-031",
+        "object_type": "artist",
+        "display_label": "Buck Owens",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-jimmie-rodgers-031",
+        "candidate_id": "survey-f5-artist-jimmie-rodgers-031",
+        "object_type": "artist",
+        "display_label": "Jimmie Rodgers",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-the-carter-family-031",
+        "candidate_id": "survey-f5-artist-the-carter-family-031",
+        "object_type": "artist",
+        "display_label": "The Carter Family",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-ernest-tubb-031",
+        "candidate_id": "survey-f5-artist-ernest-tubb-031",
+        "object_type": "artist",
+        "display_label": "Ernest Tubb",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-artist-kitty-wells-031",
+        "candidate_id": "survey-f5-artist-kitty-wells-031",
+        "object_type": "artist",
+        "display_label": "Kitty Wells",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-johnny-cash-at-folsom-prison-031",
+        "candidate_id": "survey-f5-album-johnny-cash-at-folsom-prison-031",
+        "object_type": "album",
+        "display_label": "At Folsom Prison",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-hank-williams-40-greatest-hits-031",
+        "candidate_id": "survey-f5-album-hank-williams-40-greatest-hits-031",
+        "object_type": "album",
+        "display_label": "40 Greatest Hits",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-patsy-cline-showcase-031",
+        "candidate_id": "survey-f5-album-patsy-cline-showcase-031",
+        "object_type": "album",
+        "display_label": "Showcase",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-marty-robbins-gunfighter-ballads-and-trail-songs-031",
+        "candidate_id": "survey-f5-album-marty-robbins-gunfighter-ballads-and-trail-songs-031",
+        "object_type": "album",
+        "display_label": "Gunfighter Ballads and Trail Songs",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-loretta-lynn-coal-miner-s-daughter-031",
+        "candidate_id": "survey-f5-album-loretta-lynn-coal-miner-s-daughter-031",
+        "object_type": "album",
+        "display_label": "Coal Miner's Daughter",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f5-album-george-jones-i-am-what-i-am-031",
+        "candidate_id": "survey-f5-album-george-jones-i-am-what-i-am-031",
+        "object_type": "album",
+        "display_label": "I Am What I Am",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f5-song_recording-jimmie-rodgers-blue-yodel-no-1-t-for-texas-031",
+        "question_id": "boundary-survey-f5-song_recording-jimmie-rodgers-blue-yodel-no-1-t-for-texas-031",
+        "display_label": "Blue Yodel No. 1 (T for Texas)",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f5-song_recording-the-carter-family-wildwood-flower-031",
+        "question_id": "boundary-survey-f5-song_recording-the-carter-family-wildwood-flower-031",
+        "display_label": "Wildwood Flower",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f5-song_recording-jimmie-rodgers-blue-yodel-no-1-t-for-texas-031",
+        "probe_id": "probe-survey-f5-song_recording-jimmie-rodgers-blue-yodel-no-1-t-for-texas-031",
+        "entity_type": "song_recording",
+        "display_label": "Blue Yodel No. 1 (T for Texas)",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f5-song_recording-the-carter-family-wildwood-flower-031",
+        "probe_id": "probe-survey-f5-song_recording-the-carter-family-wildwood-flower-031",
+        "entity_type": "song_recording",
+        "display_label": "Wildwood Flower",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_05/archetype_032"
+    ],
+    "before_archetype_refs": [],
+    "after_archetype_refs": [
+      "family_05/archetype_032"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_5": {
+      "title": "Normalized canonical graph export, Family 5",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_5/normalized_family_5.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "031_loc_country_music": {
+      "title": "Country Music",
+      "publisher": "Library of Congress Songs of America",
+      "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+      "source_type": "institutional_reference",
+      "audit_use": "Provides historical background on country music's roots and development.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Provides historical background on country music's roots and development."
+    },
+    "031_country_hall_hank_williams": {
+      "title": "Hank Williams",
+      "publisher": "Country Music Hall of Fame and Museum",
+      "url": "https://www.countrymusichalloffame.org/hall-of-fame/hank-williams",
+      "source_type": "museum_reference",
+      "audit_use": "Supports Williams as a foundational honky-tonk and country songwriting anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Williams as a foundational honky-tonk and country songwriting anchor."
+    },
+    "031_opry_history": {
+      "title": "Opry History",
+      "publisher": "Grand Ole Opry",
+      "url": "https://www.opry.com/history",
+      "source_type": "venue_history",
+      "audit_use": "Documents the broadcast and Nashville institution central to classic country canon formation.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Documents the broadcast and Nashville institution central to classic country canon formation."
+    },
+    "britannica_country_music": {
+      "title": "Country music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/country-music",
+      "source_type": "reference",
+      "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+    },
+    "country_music_hall_history": {
+      "title": "Country Music Hall of Fame and Museum",
+      "publisher": "Country Music Hall of Fame and Museum",
+      "url": "https://www.countrymusichalloffame.org/",
+      "source_type": "museum_reference",
+      "audit_use": "Country music history, Nashville, artists, and institutional context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Country music history, Nashville, artists, and institutional context."
+    },
+    "grand_ole_opry_history": {
+      "title": "Opry History",
+      "publisher": "Grand Ole Opry",
+      "url": "https://www.opry.com/history",
+      "source_type": "official_venue",
+      "audit_use": "Grand Ole Opry, country broadcast culture, and Nashville institution context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Grand Ole Opry, country broadcast culture, and Nashville institution context."
+    },
+    "loc_country_music": {
+      "title": "Country Music",
+      "publisher": "Library of Congress Songs of America",
+      "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+      "source_type": "archive_reference",
+      "audit_use": "Country music roots, styles, and historical recording context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Country music roots, styles, and historical recording context."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "031-c01",
+      "claim_text": "Classic country foundations blend rural string-band, blues, gospel, cowboy, and commercial radio traditions into a song-centered popular form.",
+      "source_ref_ids": [
+        "031_loc_country_music",
+        "031_opry_history"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "short_definition"
+      ],
+      "graph_refs": [
+        "family_05/archetype_031",
+        "artist:hank-williams",
+        "artist:johnny-cash"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "031-c02",
+      "claim_text": "Hank Williams anchors the honky-tonk side: compact heartbreak writing, nasal vocal edge, and songs that became country standards.",
+      "source_ref_ids": [
+        "031_country_hall_hank_williams",
+        "031_loc_country_music"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "artist:hank-williams",
+        "album:hank-williams-40-greatest-hits"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "031-c03",
+      "claim_text": "The Grand Ole Opry matters because radio and stage institutions helped turn regional country styles into a national canon.",
+      "source_ref_ids": [
+        "031_opry_history",
+        "031_loc_country_music"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "why_it_mattered",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_05/archetype_031"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "031-c04",
+      "claim_text": "Johnny Cash, Patsy Cline, and George Jones show the lane's range from boom-chicka austerity to countrypolitan drama and hard-country vocal anguish.",
+      "source_ref_ids": [
+        "031_loc_country_music",
+        "031_opry_history"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "artist:johnny-cash",
+        "artist:patsy-cline",
+        "artist:george-jones",
+        "song_recording:johnny-cash-ring-of-fire",
+        "song_recording:patsy-cline-crazy"
+      ],
+      "audit_status": "supported_by_selected_sources"
+    },
+    {
+      "claim_id": "031-classic_country_honky_tonk_nashville_foundations-boundary",
+      "claim_text": "Classic Country / Honky-Tonk / Nashville Foundations's boundary is clearest when steel guitar and fiddle or tic-tac rhythm appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "031_loc_country_music",
+        "031_country_hall_hank_williams"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_05/archetype_031",
+        "artist:johnny-cash",
+        "artist:patsy-cline"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "031-classic_country_honky_tonk_nashville_foundations-examples",
+      "claim_text": "Johnny Cash, Patsy Cline, At Folsom Prison - Johnny Cash gives Classic Country / Honky-Tonk / Nashville Foundations concrete anchors because the examples expose plainspoken heartbreak inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "031_country_hall_hank_williams",
+        "031_opry_history"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_05/archetype_031",
+        "artist:johnny-cash",
+        "artist:patsy-cline"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "The core country songbook: honky-tonk heartbreak, Nashville broadcast polish, and plainspoken vocal authority.",
+    "history_capsule": "Classic country crystallized through radio, touring, the Opry, and Nashville songcraft, carrying rural and working-class stories into national popular culture.",
+    "why_it_mattered": "It built the reference vocabulary that later outlaw, country-pop, red dirt, and Americana lanes either inherit or react against.",
+    "what_made_it_distinct": "The songs are concise, emotionally direct, and built around voice, lyric, fiddle, steel, and rhythm-guitar feel.",
+    "what_to_listen_for": [
+      "steel guitar",
+      "fiddle or tic-tac rhythm",
+      "plainspoken heartbreak",
+      "close vocal presence"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:johnny-cash",
+        "example_type": "artist",
+        "display_label": "Johnny Cash",
+        "why_this_example_matters": "Johnny Cash anchors Classic Country / Honky-Tonk / Nashville Foundations by making story-first lyrics and twang or pedal-steel color easier to hear.",
+        "what_to_listen_for": [
+          "steel guitar",
+          "fiddle or tic-tac rhythm"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:patsy-cline",
+        "example_type": "artist",
+        "display_label": "Patsy Cline",
+        "why_this_example_matters": "Patsy Cline anchors Classic Country / Honky-Tonk / Nashville Foundations by making twang or pedal-steel color and dance or ballad pacing easier to hear.",
+        "what_to_listen_for": [
+          "fiddle or tic-tac rhythm",
+          "plainspoken heartbreak"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:johnny-cash-at-folsom-prison",
+        "example_type": "album",
+        "display_label": "At Folsom Prison - Johnny Cash",
+        "why_this_example_matters": "At Folsom Prison - Johnny Cash anchors Classic Country / Honky-Tonk / Nashville Foundations by making dance or ballad pacing and plainspoken vocal stance easier to hear.",
+        "what_to_listen_for": [
+          "plainspoken heartbreak",
+          "close vocal presence"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:hank-williams-40-greatest-hits",
+        "example_type": "album",
+        "display_label": "40 Greatest Hits - Hank Williams",
+        "why_this_example_matters": "40 Greatest Hits - Hank Williams anchors Classic Country / Honky-Tonk / Nashville Foundations by making plainspoken vocal stance and radio polish against roots texture easier to hear.",
+        "what_to_listen_for": [
+          "close vocal presence"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:johnny-cash-ring-of-fire",
+        "example_type": "song_recording",
+        "display_label": "Ring of Fire - Johnny Cash",
+        "why_this_example_matters": "Ring of Fire - Johnny Cash anchors Classic Country / Honky-Tonk / Nashville Foundations by making radio polish against roots texture and story-first lyrics easier to hear.",
+        "what_to_listen_for": [
+          "steel guitar",
+          "fiddle or tic-tac rhythm"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:patsy-cline-crazy",
+        "example_type": "song_recording",
+        "display_label": "Crazy - Patsy Cline",
+        "why_this_example_matters": "Crazy - Patsy Cline anchors Classic Country / Honky-Tonk / Nashville Foundations by making story-first lyrics and twang or pedal-steel color easier to hear.",
+        "what_to_listen_for": [
+          "fiddle or tic-tac rhythm",
+          "plainspoken heartbreak"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [],
+      "after": [
+        "family_05/archetype_032"
+      ],
+      "related": [
+        "family_05/archetype_032"
+      ],
+      "copy": "Use Classic Country / Honky-Tonk / Nashville Foundations as a contextual road inside Country; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "031-dyk-1",
+        "copy": "The Opry helped country become a national broadcast language.",
+        "source_ref_ids": [
+          "031_loc_country_music",
+          "031_opry_history"
+        ]
+      },
+      {
+        "card_id": "031-dyk-2",
+        "copy": "Many classic country songs became standards through repeated interpretation.",
+        "source_ref_ids": [
+          "031_country_hall_hank_williams",
+          "031_loc_country_music"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether classic country / honky-tonk / nashville foundations is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "The core country songbook: honky-tonk heartbreak, Nashville broadcast polish, and plainspoken vocal authority.",
+      "It built the reference vocabulary that later outlaw, country-pop, red dirt, and Americana lanes either inherit or react against.",
+      "The songs are concise, emotionally direct, and built around voice, lyric, fiddle, steel, and rhythm-guitar feel."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not treat all older country as the same; honky-tonk, countrypolitan, and Cash-style minimalism point to different internal signals.",
+    "personalization_hooks": [
+      {
+        "hook_id": "031-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[031]",
+          "atlas_state.family_affinity[5]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[031] >= 0.65 || atlas_state.family_affinity[5] >= 0.65",
+        "copy_variant": "Your Atlas signals make Classic Country / Honky-Tonk / Nashville Foundations useful as a contextual landmark.",
+        "fallback_copy": "Use Classic Country / Honky-Tonk / Nashville Foundations as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "031-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_05/archetype_031 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_05/archetype_031",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Classic Country / Honky-Tonk / Nashville Foundations before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "031-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_05/archetype_031 || atlas_state.boundary_question_results has boundary_negative for family_05/archetype_031",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Classic Country / Honky-Tonk / Nashville Foundations.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "031-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_05/archetype_031 || atlas_state.related_mission_ids references family_05/archetype_031",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "031-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_05/archetype_031 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_05/archetype_031 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_05/archetype_031",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Classic Country / Honky-Tonk / Nashville Foundations.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_5": {
+        "title": "Normalized canonical graph export, Family 5",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_5/normalized_family_5.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "031_loc_country_music": {
+        "title": "Country Music",
+        "publisher": "Library of Congress Songs of America",
+        "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+        "source_type": "institutional_reference",
+        "audit_use": "Provides historical background on country music's roots and development.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides historical background on country music's roots and development."
+      },
+      "031_country_hall_hank_williams": {
+        "title": "Hank Williams",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/hank-williams",
+        "source_type": "museum_reference",
+        "audit_use": "Supports Williams as a foundational honky-tonk and country songwriting anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Williams as a foundational honky-tonk and country songwriting anchor."
+      },
+      "031_opry_history": {
+        "title": "Opry History",
+        "publisher": "Grand Ole Opry",
+        "url": "https://www.opry.com/history",
+        "source_type": "venue_history",
+        "audit_use": "Documents the broadcast and Nashville institution central to classic country canon formation.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Documents the broadcast and Nashville institution central to classic country canon formation."
+      },
+      "britannica_country_music": {
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_type": "reference",
+        "audit_use": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      "country_music_hall_history": {
+        "title": "Country Music Hall of Fame and Museum",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/",
+        "source_type": "museum_reference",
+        "audit_use": "Country music history, Nashville, artists, and institutional context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music history, Nashville, artists, and institutional context."
+      },
+      "grand_ole_opry_history": {
+        "title": "Opry History",
+        "publisher": "Grand Ole Opry",
+        "url": "https://www.opry.com/history",
+        "source_type": "official_venue",
+        "audit_use": "Grand Ole Opry, country broadcast culture, and Nashville institution context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Grand Ole Opry, country broadcast culture, and Nashville institution context."
+      },
+      "loc_country_music": {
+        "title": "Country Music",
+        "publisher": "Library of Congress Songs of America",
+        "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+        "source_type": "archive_reference",
+        "audit_use": "Country music roots, styles, and historical recording context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Country music roots, styles, and historical recording context."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "031-c01",
+        "claim_text": "Classic country foundations blend rural string-band, blues, gospel, cowboy, and commercial radio traditions into a song-centered popular form.",
+        "source_ref_ids": [
+          "031_loc_country_music",
+          "031_opry_history"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "short_definition"
+        ],
+        "graph_refs": [
+          "family_05/archetype_031",
+          "artist:hank-williams",
+          "artist:johnny-cash"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031-c02",
+        "claim_text": "Hank Williams anchors the honky-tonk side: compact heartbreak writing, nasal vocal edge, and songs that became country standards.",
+        "source_ref_ids": [
+          "031_country_hall_hank_williams",
+          "031_loc_country_music"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "artist:hank-williams",
+          "album:hank-williams-40-greatest-hits"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031-c03",
+        "claim_text": "The Grand Ole Opry matters because radio and stage institutions helped turn regional country styles into a national canon.",
+        "source_ref_ids": [
+          "031_opry_history",
+          "031_loc_country_music"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "why_it_mattered",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_05/archetype_031"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031-c04",
+        "claim_text": "Johnny Cash, Patsy Cline, and George Jones show the lane's range from boom-chicka austerity to countrypolitan drama and hard-country vocal anguish.",
+        "source_ref_ids": [
+          "031_loc_country_music",
+          "031_opry_history"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "artist:johnny-cash",
+          "artist:patsy-cline",
+          "artist:george-jones",
+          "song_recording:johnny-cash-ring-of-fire",
+          "song_recording:patsy-cline-crazy"
+        ],
+        "audit_status": "supported_by_selected_sources"
+      },
+      {
+        "claim_id": "031-classic_country_honky_tonk_nashville_foundations-boundary",
+        "claim_text": "Classic Country / Honky-Tonk / Nashville Foundations's boundary is clearest when steel guitar and fiddle or tic-tac rhythm appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "031_loc_country_music",
+          "031_country_hall_hank_williams"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_05/archetype_031",
+          "artist:johnny-cash",
+          "artist:patsy-cline"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "031-classic_country_honky_tonk_nashville_foundations-examples",
+        "claim_text": "Johnny Cash, Patsy Cline, At Folsom Prison - Johnny Cash gives Classic Country / Honky-Tonk / Nashville Foundations concrete anchors because the examples expose plainspoken heartbreak inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "031_country_hall_hank_williams",
+          "031_opry_history"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_05/archetype_031",
+          "artist:johnny-cash",
+          "artist:patsy-cline"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_b_families_04_07.json"
+  },
+  "research_trace": {
+    "archetype_query": "Classic country, honky-tonk, and Nashville foundations: Hank Williams, Johnny Cash, Patsy Cline, George Jones, Grand Ole Opry, Nashville songcraft.",
+    "selected_sources": [
+      {
+        "source_ref_id": "031_loc_country_music",
+        "title": "Country Music",
+        "publisher": "Library of Congress Songs of America",
+        "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Provides historical background on country music's roots and development."
+      },
+      {
+        "source_ref_id": "031_country_hall_hank_williams",
+        "title": "Hank Williams",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/hall-of-fame/hank-williams",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Williams as a foundational honky-tonk and country songwriting anchor."
+      },
+      {
+        "source_ref_id": "031_opry_history",
+        "title": "Opry History",
+        "publisher": "Grand Ole Opry",
+        "url": "https://www.opry.com/history",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Documents the broadcast and Nashville institution central to classic country canon formation."
+      },
+      {
+        "source_ref_id": "britannica_country_music",
+        "title": "Country music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/country-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music origins, honky-tonk, Nashville, outlaw, and radio eras."
+      },
+      {
+        "source_ref_id": "country_music_hall_history",
+        "title": "Country Music Hall of Fame and Museum",
+        "publisher": "Country Music Hall of Fame and Museum",
+        "url": "https://www.countrymusichalloffame.org/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Country music history, Nashville, artists, and institutional context."
+      },
+      {
+        "source_ref_id": "grand_ole_opry_history",
+        "title": "Opry History",
+        "publisher": "Grand Ole Opry",
+        "url": "https://www.opry.com/history",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Grand Ole Opry, country broadcast culture, and Nashville institution context."
+      },
+      {
+        "source_ref_id": "loc_country_music",
+        "title": "Country Music",
+        "publisher": "Library of Congress Songs of America",
+        "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/country/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Country music roots, styles, and historical recording context."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "031_reject_indie_folk",
+        "title": "Indie Folk",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/indie-folk-ma0000012141",
+        "source_type": "genre_reference",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Modern indie acoustic context is not direct evidence for honky-tonk or Nashville foundations."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The sources cover country lineage, a canonical honky-tonk songwriter, and the Opry/Nashville broadcast infrastructure."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 7,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 98,
+    "scene_anchor_refs": [
+      "song|hank snow|i m moving on",
+      "song|tom t hall|old dogs children and watermelon wine",
+      "song|gene watson|farewell party",
+      "song|vern gosdin|chiseled in stone"
+    ],
+    "ladder_example_refs": [
+      "song|hank williams|your cheatin heart",
+      "song|marty robbins|el paso",
+      "artist_anchor|george jones|george jones",
+      "artist_anchor|loretta lynn|loretta lynn",
+      "song|jim reeves|he ll have to go",
+      "song|louvin brothers|when i stop dreaming",
+      "song|ray price|crazy arms",
+      "artist_anchor|jimmie rodgers|jimmie rodgers"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

@@ -1,0 +1,1314 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_12_archetype_091_2010s-persona-pop-architectural-pop_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_12/normalized_family_12.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 12,
+    "family_slug": "pop-monoculture-and-persona-pop",
+    "family_name": "Pop Monoculture and Persona Pop",
+    "archetype_id": "091",
+    "archetype_slug": "2010s-persona-pop-architectural-pop",
+    "canonical_graph_ref": "family_12/archetype_091",
+    "existing_graph_label_name": "2010s Persona Pop / Architectural Pop",
+    "editorial_display_title": "2010s Persona Pop / Architectural Pop",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:taylor-swift",
+        "object_id": "taylor-swift",
+        "display_label": "Taylor Swift",
+        "source_membership_id": "family-12-artist-091-taylor-swift",
+        "roles": [
+          "anchor",
+          "artist_anchor",
+          "album_anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Persona-pop and album-world anchor whose pop rows must not be reduced to country-pop boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lorde",
+        "object_id": "lorde",
+        "display_label": "Lorde",
+        "source_membership_id": "family-12-artist-091-lorde",
+        "roles": [
+          "anchor",
+          "album_anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Architectural pop and anti-monoculture pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:lana-del-rey",
+        "object_id": "lana-del-rey",
+        "display_label": "Lana Del Rey",
+        "source_membership_id": "family-12-artist-091-lana-del-rey",
+        "roles": [
+          "anchor",
+          "album_anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Persona-pop mood-world anchor with indie and adult-pop boundaries.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:billie-eilish",
+        "object_id": "billie-eilish",
+        "display_label": "Billie Eilish",
+        "source_membership_id": "family-12-artist-091-billie-eilish",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-2010s persona-pop and streaming-era bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:ariana-grande",
+        "object_id": "ariana-grande",
+        "display_label": "Ariana Grande",
+        "source_membership_id": "family-12-artist-091-ariana-grande",
+        "roles": [
+          "gateway",
+          "artist_anchor",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Vocal-pop, streaming-pop, and dance-pop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:harry-styles",
+        "object_id": "harry-styles",
+        "display_label": "Harry Styles",
+        "source_membership_id": "family-12-artist-091-harry-styles",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Missing-obvious post-boy-band persona-pop bridge.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:miley-cyrus",
+        "object_id": "miley-cyrus",
+        "display_label": "Miley Cyrus",
+        "source_membership_id": "family-12-artist-091-miley-cyrus",
+        "roles": [
+          "gateway",
+          "bridge",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Disney-to-adult persona-pop bridge with song-first recognition spikes.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:taylor-swift-1989",
+        "object_id": "taylor-swift-1989",
+        "display_label": "1989 - Taylor Swift",
+        "source_membership_id": "family-12-album-091-taylor-swift-1989",
+        "roles": [
+          "album_anchor",
+          "anchor"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Core architectural/persona-pop album object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:beyonce-lemonade",
+        "object_id": "beyonce-lemonade",
+        "display_label": "Lemonade - Beyonce",
+        "source_membership_id": "family-12-album-091-beyonce-lemonade",
+        "roles": [
+          "album_anchor",
+          "bridge"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Persona-pop album-world anchor with R&B boundary.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:billie-eilish-when-we-all-fall-asleep-where-do-we-go",
+        "object_id": "billie-eilish-when-we-all-fall-asleep-where-do-we-go",
+        "display_label": "When We All Fall Asleep, Where Do We Go? - Billie Eilish",
+        "source_membership_id": "family-12-album-091-billie-eilish-when-we-all-fall-asleep-where-do-we-go",
+        "roles": [
+          "album_anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-2010s streaming-persona album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lorde-pure-heroine",
+        "object_id": "lorde-pure-heroine",
+        "display_label": "Pure Heroine - Lorde",
+        "source_membership_id": "family-12-album-091-lorde-pure-heroine",
+        "roles": [
+          "album_anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Anti-monoculture pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:lana-del-rey-born-to-die",
+        "object_id": "lana-del-rey-born-to-die",
+        "display_label": "Born to Die - Lana Del Rey",
+        "source_membership_id": "family-12-album-091-lana-del-rey-born-to-die",
+        "roles": [
+          "album_anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Mood/persona-pop album anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:ariana-grande-thank-u-next",
+        "object_id": "ariana-grande-thank-u-next",
+        "display_label": "Thank U, Next - Ariana Grande",
+        "source_membership_id": "family-12-album-091-ariana-grande-thank-u-next",
+        "roles": [
+          "gateway",
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming/vocal-pop album gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:taylor-swift-blank-space",
+        "object_id": "taylor-swift-blank-space",
+        "display_label": "Blank Space - Taylor Swift",
+        "source_membership_id": "family-12-song-091-taylor-swift-blank-space",
+        "roles": [
+          "anchor",
+          "gateway"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Persona-pop self-mythology anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lorde-royals",
+        "object_id": "lorde-royals",
+        "display_label": "Royals - Lorde",
+        "source_membership_id": "family-12-song-091-lorde-royals",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Anti-monoculture pop anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:beyonce-formation",
+        "object_id": "beyonce-formation",
+        "display_label": "Formation - Beyonce",
+        "source_membership_id": "family-12-song-091-beyonce-formation",
+        "roles": [
+          "anchor",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Persona-pop and R&B boundary anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:taylor-swift-shake-it-off",
+        "object_id": "taylor-swift-shake-it-off",
+        "display_label": "Shake It Off - Taylor Swift",
+        "source_membership_id": "family-12-song-091-taylor-swift-shake-it-off",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Mass 2010s pop pivot song.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:billie-eilish-bad-guy",
+        "object_id": "billie-eilish-bad-guy",
+        "display_label": "Bad Guy - Billie Eilish",
+        "source_membership_id": "family-12-song-091-billie-eilish-bad-guy",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Late-2010s streaming persona-pop gateway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:ariana-grande-thank-u-next",
+        "object_id": "ariana-grande-thank-u-next",
+        "display_label": "Thank U, Next - Ariana Grande",
+        "source_membership_id": "family-12-song-091-ariana-grande-thank-u-next",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "core",
+        "inclusion_reason": "Streaming/vocal-pop persona anchor.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:lana-del-rey-video-games",
+        "object_id": "lana-del-rey-video-games",
+        "display_label": "Video Games - Lana Del Rey",
+        "source_membership_id": "family-12-song-091-lana-del-rey-video-games",
+        "roles": [
+          "gateway",
+          "boundary"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Mood/persona-pop doorway.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:miley-cyrus-wrecking-ball",
+        "object_id": "miley-cyrus-wrecking-ball",
+        "display_label": "Wrecking Ball - Miley Cyrus",
+        "source_membership_id": "family-12-song-091-miley-cyrus-wrecking-ball",
+        "roles": [
+          "gateway",
+          "song_first"
+        ],
+        "recognition_tier": "mass",
+        "survey_tier": "standard",
+        "inclusion_reason": "Disney-to-adult persona-pop song-first object.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f12-artist-taylor-swift-091",
+        "candidate_id": "survey-f12-artist-taylor-swift-091",
+        "object_type": "artist",
+        "display_label": "Taylor Swift",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-ariana-grande-091",
+        "candidate_id": "survey-f12-artist-ariana-grande-091",
+        "object_type": "artist",
+        "display_label": "Ariana Grande",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-billie-eilish-091",
+        "candidate_id": "survey-f12-artist-billie-eilish-091",
+        "object_type": "artist",
+        "display_label": "Billie Eilish",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-harry-styles-091",
+        "candidate_id": "survey-f12-artist-harry-styles-091",
+        "object_type": "artist",
+        "display_label": "Harry Styles",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-lana-del-rey-091",
+        "candidate_id": "survey-f12-artist-lana-del-rey-091",
+        "object_type": "artist",
+        "display_label": "Lana Del Rey",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-lorde-091",
+        "candidate_id": "survey-f12-artist-lorde-091",
+        "object_type": "artist",
+        "display_label": "Lorde",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-artist-miley-cyrus-091",
+        "candidate_id": "survey-f12-artist-miley-cyrus-091",
+        "object_type": "artist",
+        "display_label": "Miley Cyrus",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-taylor-swift-1989-091",
+        "candidate_id": "survey-f12-album-taylor-swift-1989-091",
+        "object_type": "album",
+        "display_label": "1989",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-beyonce-lemonade-091",
+        "candidate_id": "survey-f12-album-beyonce-lemonade-091",
+        "object_type": "album",
+        "display_label": "Lemonade",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-lana-del-rey-born-to-die-091",
+        "candidate_id": "survey-f12-album-lana-del-rey-born-to-die-091",
+        "object_type": "album",
+        "display_label": "Born to Die",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-lorde-pure-heroine-091",
+        "candidate_id": "survey-f12-album-lorde-pure-heroine-091",
+        "object_type": "album",
+        "display_label": "Pure Heroine",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-ariana-grande-thank-u-next-091",
+        "candidate_id": "survey-f12-album-ariana-grande-thank-u-next-091",
+        "object_type": "album",
+        "display_label": "Thank U, Next",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-album-billie-eilish-when-we-all-fall-asleep-where-do-we-go-091",
+        "candidate_id": "survey-f12-album-billie-eilish-when-we-all-fall-asleep-where-do-we-go-091",
+        "object_type": "album",
+        "display_label": "When We All Fall Asleep, Where Do We Go?",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-taylor-swift-blank-space-091",
+        "candidate_id": "survey-f12-song_recording-taylor-swift-blank-space-091",
+        "object_type": "song_recording",
+        "display_label": "Blank Space",
+        "survey_page_role": "page1_core",
+        "survey_intent": "recognition_anchor",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-billie-eilish-bad-guy-091",
+        "candidate_id": "survey-f12-song_recording-billie-eilish-bad-guy-091",
+        "object_type": "song_recording",
+        "display_label": "Bad Guy",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-beyonce-formation-091",
+        "candidate_id": "survey-f12-song_recording-beyonce-formation-091",
+        "object_type": "song_recording",
+        "display_label": "Formation",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-lorde-royals-091",
+        "candidate_id": "survey-f12-song_recording-lorde-royals-091",
+        "object_type": "song_recording",
+        "display_label": "Royals",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-taylor-swift-shake-it-off-091",
+        "candidate_id": "survey-f12-song_recording-taylor-swift-shake-it-off-091",
+        "object_type": "song_recording",
+        "display_label": "Shake It Off",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-ariana-grande-thank-u-next-091",
+        "candidate_id": "survey-f12-song_recording-ariana-grande-thank-u-next-091",
+        "object_type": "song_recording",
+        "display_label": "Thank U, Next",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "song_first_memory",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f12-song_recording-lana-del-rey-video-games-091",
+        "candidate_id": "survey-f12-song_recording-lana-del-rey-video-games-091",
+        "object_type": "song_recording",
+        "display_label": "Video Games",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-lana-del-rey-091",
+        "question_id": "boundary-survey-f12-artist-lana-del-rey-091",
+        "display_label": "Lana Del Rey",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-artist-lorde-091",
+        "question_id": "boundary-survey-f12-artist-lorde-091",
+        "display_label": "Lorde",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-album-lana-del-rey-born-to-die-091",
+        "question_id": "boundary-survey-f12-album-lana-del-rey-born-to-die-091",
+        "display_label": "Born to Die",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-album-lorde-pure-heroine-091",
+        "question_id": "boundary-survey-f12-album-lorde-pure-heroine-091",
+        "display_label": "Pure Heroine",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-beyonce-formation-091",
+        "question_id": "boundary-survey-f12-song_recording-beyonce-formation-091",
+        "display_label": "Formation",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-lorde-royals-091",
+        "question_id": "boundary-survey-f12-song_recording-lorde-royals-091",
+        "display_label": "Royals",
+        "question_intent": "boundary_test"
+      },
+      {
+        "ref": "boundary_question:boundary-survey-f12-song_recording-lana-del-rey-video-games-091",
+        "question_id": "boundary-survey-f12-song_recording-lana-del-rey-video-games-091",
+        "display_label": "Video Games",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-lana-del-rey-091",
+        "probe_id": "probe-survey-f12-artist-lana-del-rey-091",
+        "entity_type": "artist",
+        "display_label": "Lana Del Rey",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-artist-lorde-091",
+        "probe_id": "probe-survey-f12-artist-lorde-091",
+        "entity_type": "artist",
+        "display_label": "Lorde",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-album-lana-del-rey-born-to-die-091",
+        "probe_id": "probe-survey-f12-album-lana-del-rey-born-to-die-091",
+        "entity_type": "album",
+        "display_label": "Born to Die",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-album-lorde-pure-heroine-091",
+        "probe_id": "probe-survey-f12-album-lorde-pure-heroine-091",
+        "entity_type": "album",
+        "display_label": "Pure Heroine",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-beyonce-formation-091",
+        "probe_id": "probe-survey-f12-song_recording-beyonce-formation-091",
+        "entity_type": "song_recording",
+        "display_label": "Formation",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-lorde-royals-091",
+        "probe_id": "probe-survey-f12-song_recording-lorde-royals-091",
+        "entity_type": "song_recording",
+        "display_label": "Royals",
+        "recommended_surface": "deep_survey"
+      },
+      {
+        "ref": "dead_end_probe:probe-survey-f12-song_recording-lana-del-rey-video-games-091",
+        "probe_id": "probe-survey-f12-song_recording-lana-del-rey-video-games-091",
+        "entity_type": "song_recording",
+        "display_label": "Video Games",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_12/archetype_090",
+      "family_12/archetype_092"
+    ],
+    "before_archetype_refs": [
+      "family_12/archetype_090"
+    ],
+    "after_archetype_refs": [
+      "family_12/archetype_092"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_12": {
+      "title": "Normalized canonical graph export, Family 12",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_12/normalized_family_12.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "britannica_taylor_swift": {
+      "title": "Taylor Swift",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Taylor-Swift",
+      "source_type": "reference",
+      "audit_use": "Supports Taylor Swift as a central 2010s pop persona and album-era example.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Taylor Swift as a central 2010s pop persona and album-era example."
+    },
+    "grammy_lorde_pure_heroine": {
+      "title": "Lorde On Pure Heroine, Royals & Her Rise To Pop Stardom",
+      "publisher": "Recording Academy / Grammy.com",
+      "url": "https://www.grammy.com/news/lorde-pure-heroine-royals-grammy-winning-album-10-year-anniversary",
+      "source_type": "reference",
+      "audit_use": "Supports Lorde as a minimalist, anti-bombast persona-pop example.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Lorde as a minimalist, anti-bombast persona-pop example."
+    },
+    "britannica_beyonce": {
+      "title": "Beyonce",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Beyonce",
+      "source_type": "reference",
+      "audit_use": "Supports Beyonce and Lemonade-era album/persona architecture context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Supports Beyonce and Lemonade-era album/persona architecture context."
+    },
+    "britannica_popular_music": {
+      "title": "Popular music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/popular-music",
+      "source_type": "reference",
+      "audit_use": "Frames the broad pop industry context while the example sources do the archetype-specific work.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "family_context_only",
+      "why_fit": "Frames the broad pop industry context while the example sources do the archetype-specific work."
+    },
+    "rockhall_prince": {
+      "title": "Prince",
+      "publisher": "Rock & Roll Hall of Fame",
+      "url": "https://rockhall.com/inductees/prince/",
+      "source_type": "museum_reference",
+      "audit_use": "Pop, funk, rock, R&B, authorship, and persona innovation.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Pop, funk, rock, R&B, authorship, and persona innovation."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "091-d-01",
+      "claim_text": "This lane treats the 2010s pop star as an architect of eras: albums, visuals, persona shifts, and fan interpretation become part of the listening experience.",
+      "source_ref_ids": [
+        "britannica_taylor_swift",
+        "britannica_beyonce",
+        "britannica_popular_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_12/archetype_091",
+        "artist:taylor-swift",
+        "album:taylor-swift-1989",
+        "album:beyonce-lemonade"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "091-d-02",
+      "claim_text": "Taylor Swift anchors the route because 1989-era pop foregrounds narrative persona, hook precision, and controlled stylistic reinvention.",
+      "source_ref_ids": [
+        "britannica_taylor_swift",
+        "britannica_popular_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct"
+      ],
+      "graph_refs": [
+        "artist:taylor-swift",
+        "album:taylor-swift-1989",
+        "song_recording:taylor-swift-blank-space"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "091-d-03",
+      "claim_text": "Lorde makes the minimalist side audible: sparse beats, clipped hooks, and youth-subculture observation could still create mainstream pop force.",
+      "source_ref_ids": [
+        "grammy_lorde_pure_heroine",
+        "britannica_popular_music"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "did_you_know",
+        "what_to_listen_for"
+      ],
+      "graph_refs": [
+        "artist:lorde",
+        "song_recording:lorde-royals"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "091-d-04",
+      "claim_text": "Beyonce expands the route toward album-scale visual and narrative architecture, making the project frame as important as the single.",
+      "source_ref_ids": [
+        "britannica_beyonce",
+        "britannica_taylor_swift"
+      ],
+      "confidence": "medium_high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "history_capsule",
+        "caution"
+      ],
+      "graph_refs": [
+        "artist:beyonce",
+        "album:beyonce-lemonade"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "091-2010s_persona_pop_architectural_pop-boundary",
+      "claim_text": "2010s Persona Pop / Architectural Pop's boundary is clearest when era-specific sonic palette and self-aware lyric persona appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "britannica_taylor_swift",
+        "grammy_lorde_pure_heroine"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_091",
+        "artist:taylor-swift",
+        "artist:lorde"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "091-2010s_persona_pop_architectural_pop-examples",
+      "claim_text": "Taylor Swift, Lorde, 1989 - Taylor Swift gives 2010s Persona Pop / Architectural Pop concrete anchors because the examples expose album-world continuity inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "grammy_lorde_pure_heroine",
+        "britannica_beyonce"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_12/archetype_091",
+        "artist:taylor-swift",
+        "artist:lorde"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "2010s pop where era-building, persona design, and album architecture are part of the musical signal.",
+    "history_capsule": "Taylor Swift, Lorde, Beyonce, and peers made pop feel like a sequence of authored worlds rather than only a run of singles.",
+    "why_it_mattered": "It explains how fan culture, visual framing, songwriting voice, and streaming-era albums fused into one interpretive surface.",
+    "what_made_it_distinct": "The hook is still central, but the surrounding persona system changes how the listener hears the record.",
+    "what_to_listen_for": [
+      "era-specific sonic palette",
+      "self-aware lyric persona",
+      "album-world continuity",
+      "minimalist pop tension",
+      "visual/narrative framing"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:taylor-swift",
+        "example_type": "artist",
+        "display_label": "Taylor Swift",
+        "why_this_example_matters": "Taylor Swift anchors 2010s Persona Pop / Architectural Pop by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "era-specific sonic palette",
+          "self-aware lyric persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:lorde",
+        "example_type": "artist",
+        "display_label": "Lorde",
+        "why_this_example_matters": "Lorde anchors 2010s Persona Pop / Architectural Pop by making vocal persona and high-definition production easier to hear.",
+        "what_to_listen_for": [
+          "self-aware lyric persona",
+          "album-world continuity"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:taylor-swift-1989",
+        "example_type": "album",
+        "display_label": "1989 - Taylor Swift",
+        "why_this_example_matters": "1989 - Taylor Swift anchors 2010s Persona Pop / Architectural Pop by making high-definition production and dance or video-ready structure easier to hear.",
+        "what_to_listen_for": [
+          "album-world continuity",
+          "minimalist pop tension"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:beyonce-lemonade",
+        "example_type": "album",
+        "display_label": "Lemonade - Beyonce",
+        "why_this_example_matters": "Lemonade - Beyonce anchors 2010s Persona Pop / Architectural Pop by making dance or video-ready structure and direct emotional address easier to hear.",
+        "what_to_listen_for": [
+          "minimalist pop tension",
+          "visual/narrative framing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:taylor-swift-blank-space",
+        "example_type": "song_recording",
+        "display_label": "Blank Space - Taylor Swift",
+        "why_this_example_matters": "Blank Space - Taylor Swift anchors 2010s Persona Pop / Architectural Pop by making direct emotional address and instant chorus recognition easier to hear.",
+        "what_to_listen_for": [
+          "visual/narrative framing"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:lorde-royals",
+        "example_type": "song_recording",
+        "display_label": "Royals - Lorde",
+        "why_this_example_matters": "Royals - Lorde anchors 2010s Persona Pop / Architectural Pop by making instant chorus recognition and vocal persona easier to hear.",
+        "what_to_listen_for": [
+          "era-specific sonic palette",
+          "self-aware lyric persona"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_12/archetype_090"
+      ],
+      "after": [
+        "family_12/archetype_092"
+      ],
+      "related": [
+        "family_12/archetype_090",
+        "family_12/archetype_092"
+      ],
+      "copy": "Use 2010s Persona Pop / Architectural Pop as a contextual road inside Pop Monoculture and Persona Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "091-dyk-1",
+        "copy": "Lorde is a useful counterweight because the route can be sparse and anti-glamorous.",
+        "source_ref_ids": [
+          "britannica_taylor_swift",
+          "britannica_beyonce",
+          "britannica_popular_music"
+        ]
+      },
+      {
+        "card_id": "091-dyk-2",
+        "copy": "Lemonade shows why a pop archetype can need album-level rather than only single-level evidence.",
+        "source_ref_ids": [
+          "britannica_taylor_swift",
+          "britannica_popular_music"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether 2010s persona pop / architectural pop is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "2010s pop where era-building, persona design, and album architecture are part of the musical signal.",
+      "It explains how fan culture, visual framing, songwriting voice, and streaming-era albums fused into one interpretive surface.",
+      "The hook is still central, but the surrounding persona system changes how the listener hears the record."
+    ],
+    "dead_end_false_nearby_caution_language": "Avoid treating every 2010s hit as architectural pop; the route needs a strong authored persona or project frame.",
+    "personalization_hooks": [
+      {
+        "hook_id": "091-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[091]",
+          "atlas_state.family_affinity[12]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[091] >= 0.65 || atlas_state.family_affinity[12] >= 0.65",
+        "copy_variant": "Your Atlas signals make 2010s Persona Pop / Architectural Pop useful as a contextual landmark.",
+        "fallback_copy": "Use 2010s Persona Pop / Architectural Pop as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "091-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_12/archetype_091 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_12/archetype_091",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient 2010s Persona Pop / Architectural Pop before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "091-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_12/archetype_091 || atlas_state.boundary_question_results has boundary_negative for family_12/archetype_091",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for 2010s Persona Pop / Architectural Pop.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "091-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_12/archetype_091 || atlas_state.related_mission_ids references family_12/archetype_091",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "091-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_12/archetype_091 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_12/archetype_091 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_12/archetype_091",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for 2010s Persona Pop / Architectural Pop.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_12": {
+        "title": "Normalized canonical graph export, Family 12",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_12/normalized_family_12.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "britannica_taylor_swift": {
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_type": "reference",
+        "audit_use": "Supports Taylor Swift as a central 2010s pop persona and album-era example.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Taylor Swift as a central 2010s pop persona and album-era example."
+      },
+      "grammy_lorde_pure_heroine": {
+        "title": "Lorde On Pure Heroine, Royals & Her Rise To Pop Stardom",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/lorde-pure-heroine-royals-grammy-winning-album-10-year-anniversary",
+        "source_type": "reference",
+        "audit_use": "Supports Lorde as a minimalist, anti-bombast persona-pop example.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Lorde as a minimalist, anti-bombast persona-pop example."
+      },
+      "britannica_beyonce": {
+        "title": "Beyonce",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Beyonce",
+        "source_type": "reference",
+        "audit_use": "Supports Beyonce and Lemonade-era album/persona architecture context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Beyonce and Lemonade-era album/persona architecture context."
+      },
+      "britannica_popular_music": {
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_type": "reference",
+        "audit_use": "Frames the broad pop industry context while the example sources do the archetype-specific work.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames the broad pop industry context while the example sources do the archetype-specific work."
+      },
+      "rockhall_prince": {
+        "title": "Prince",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/prince/",
+        "source_type": "museum_reference",
+        "audit_use": "Pop, funk, rock, R&B, authorship, and persona innovation.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop, funk, rock, R&B, authorship, and persona innovation."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "091-d-01",
+        "claim_text": "This lane treats the 2010s pop star as an architect of eras: albums, visuals, persona shifts, and fan interpretation become part of the listening experience.",
+        "source_ref_ids": [
+          "britannica_taylor_swift",
+          "britannica_beyonce",
+          "britannica_popular_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_12/archetype_091",
+          "artist:taylor-swift",
+          "album:taylor-swift-1989",
+          "album:beyonce-lemonade"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "091-d-02",
+        "claim_text": "Taylor Swift anchors the route because 1989-era pop foregrounds narrative persona, hook precision, and controlled stylistic reinvention.",
+        "source_ref_ids": [
+          "britannica_taylor_swift",
+          "britannica_popular_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct"
+        ],
+        "graph_refs": [
+          "artist:taylor-swift",
+          "album:taylor-swift-1989",
+          "song_recording:taylor-swift-blank-space"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "091-d-03",
+        "claim_text": "Lorde makes the minimalist side audible: sparse beats, clipped hooks, and youth-subculture observation could still create mainstream pop force.",
+        "source_ref_ids": [
+          "grammy_lorde_pure_heroine",
+          "britannica_popular_music"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "did_you_know",
+          "what_to_listen_for"
+        ],
+        "graph_refs": [
+          "artist:lorde",
+          "song_recording:lorde-royals"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "091-d-04",
+        "claim_text": "Beyonce expands the route toward album-scale visual and narrative architecture, making the project frame as important as the single.",
+        "source_ref_ids": [
+          "britannica_beyonce",
+          "britannica_taylor_swift"
+        ],
+        "confidence": "medium_high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "history_capsule",
+          "caution"
+        ],
+        "graph_refs": [
+          "artist:beyonce",
+          "album:beyonce-lemonade"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "091-2010s_persona_pop_architectural_pop-boundary",
+        "claim_text": "2010s Persona Pop / Architectural Pop's boundary is clearest when era-specific sonic palette and self-aware lyric persona appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "britannica_taylor_swift",
+          "grammy_lorde_pure_heroine"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_091",
+          "artist:taylor-swift",
+          "artist:lorde"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "091-2010s_persona_pop_architectural_pop-examples",
+        "claim_text": "Taylor Swift, Lorde, 1989 - Taylor Swift gives 2010s Persona Pop / Architectural Pop concrete anchors because the examples expose album-world continuity inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "grammy_lorde_pure_heroine",
+          "britannica_beyonce"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_12/archetype_091",
+          "artist:taylor-swift",
+          "artist:lorde"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_d_families_12_18.json"
+  },
+  "research_trace": {
+    "archetype_query": "2010s persona pop architectural pop Taylor Swift 1989 Lorde Royals Beyonce Lemonade album era",
+    "selected_sources": [
+      {
+        "source_ref_id": "britannica_taylor_swift",
+        "title": "Taylor Swift",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Taylor-Swift",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Taylor Swift as a central 2010s pop persona and album-era example."
+      },
+      {
+        "source_ref_id": "grammy_lorde_pure_heroine",
+        "title": "Lorde On Pure Heroine, Royals & Her Rise To Pop Stardom",
+        "publisher": "Recording Academy / Grammy.com",
+        "url": "https://www.grammy.com/news/lorde-pure-heroine-royals-grammy-winning-album-10-year-anniversary",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Lorde as a minimalist, anti-bombast persona-pop example."
+      },
+      {
+        "source_ref_id": "britannica_beyonce",
+        "title": "Beyonce",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/biography/Beyonce",
+        "source_relevance": "example_object_support",
+        "why_fit": "Supports Beyonce and Lemonade-era album/persona architecture context."
+      },
+      {
+        "source_ref_id": "britannica_popular_music",
+        "title": "Popular music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/popular-music",
+        "source_relevance": "family_context_only",
+        "why_fit": "Frames the broad pop industry context while the example sources do the archetype-specific work."
+      },
+      {
+        "source_ref_id": "rockhall_prince",
+        "title": "Prince",
+        "publisher": "Rock & Roll Hall of Fame",
+        "url": "https://rockhall.com/inductees/prince/",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Pop, funk, rock, R&B, authorship, and persona innovation."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "britannica_reggaeton",
+        "title": "Reggaeton",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/reggaeton",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Reggaeton is a separate Latin-pop route and would not support this archetype."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "Contemporary pop and R&B persona, authorship, and visual album context. Modern pop authorship, country-pop crossover, and streaming-era scale. Pop, funk, rock, R&B, authorship, and persona innovation. Broad popular-music industry, audience, and stylistic context."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 4,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 107,
+    "scene_anchor_refs": [
+      "song|miley cyrus|party in the u s a",
+      "song|lana del rey|born to die",
+      "song|taylor swift|22",
+      "song|lorde|team"
+    ],
+    "ladder_example_refs": [
+      "song|ariana grande|break free",
+      "song|dua lipa|be the one",
+      "song|carly rae jepsen|run away with me",
+      "song|billie eilish|ocean eyes",
+      "song|camila cabello featuring young thug|havana",
+      "song|harry styles|kiwi",
+      "song|halsey|without me",
+      "album|lady gaga|artpop"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}

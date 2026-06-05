@@ -1,0 +1,1527 @@
+{
+  "schema_version": "0.3",
+  "pack_id": "family_11_archetype_084_trip-hop-downtempo-nocturnal-electronic_research_v0_3",
+  "generated_at": "2026-06-04",
+  "source_graph_bundle": {
+    "canonical_graph_export": "data/canonical_graph/family_11/normalized_family_11.json",
+    "normalization_pass_2_manifest": "data/canonical_graph/normalization_pass_2/normalization_pass_2_manifest.json",
+    "graph_review_bundle": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md"
+  },
+  "identity": {
+    "family_id": 11,
+    "family_slug": "electronic-dance-club-industrial-experimental-pop",
+    "family_name": "Electronic, Dance, Club, Industrial, Experimental Pop",
+    "archetype_id": "084",
+    "archetype_slug": "trip-hop-downtempo-nocturnal-electronic",
+    "canonical_graph_ref": "family_11/archetype_084",
+    "existing_graph_label_name": "Trip-Hop / Downtempo / Nocturnal Electronic",
+    "editorial_display_title": "Trip-Hop / Downtempo / Nocturnal Electronic",
+    "non_mutation_assertion": "This research pack is a sidecar only; it does not create, rename, delete, merge, or reclassify canonical graph identities."
+  },
+  "graph_alignment": {
+    "canonical_artist_refs": [
+      {
+        "ref": "artist:massive-attack",
+        "object_id": "massive-attack",
+        "display_label": "Massive Attack",
+        "source_membership_id": "family-11-artist-084-massive-attack",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Massive Attack provides a recognizable survey branch for 084 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:portishead",
+        "object_id": "portishead",
+        "display_label": "Portishead",
+        "source_membership_id": "family-11-artist-084-portishead",
+        "roles": [
+          "anchor",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Portishead provides a recognizable survey branch for 084 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:zero-7",
+        "object_id": "zero-7",
+        "display_label": "Zero 7",
+        "source_membership_id": "family-11-artist-084-zero-7",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Zero 7 fills a missing survey branch for 084, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:bonobo",
+        "object_id": "bonobo",
+        "display_label": "Bonobo",
+        "source_membership_id": "family-11-artist-084-bonobo",
+        "roles": [
+          "gateway",
+          "artist_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Bonobo fills a missing survey branch for 084, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:dj-shadow",
+        "object_id": "dj-shadow",
+        "display_label": "DJ Shadow",
+        "source_membership_id": "family-11-artist-084-dj-shadow",
+        "roles": [
+          "bridge",
+          "album_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "DJ Shadow provides a recognizable survey branch for 084 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:moby",
+        "object_id": "moby",
+        "display_label": "Moby",
+        "source_membership_id": "family-11-artist-084-moby",
+        "roles": [
+          "gateway",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Moby provides a recognizable survey branch for 084 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:air",
+        "object_id": "air",
+        "display_label": "Air",
+        "source_membership_id": "family-11-artist-084-air",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Air provides a recognizable survey branch for 084 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:morcheeba",
+        "object_id": "morcheeba",
+        "display_label": "Morcheeba",
+        "source_membership_id": "family-11-artist-084-morcheeba",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Morcheeba fills a missing survey branch for 084, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:thievery-corporation",
+        "object_id": "thievery-corporation",
+        "display_label": "Thievery Corporation",
+        "source_membership_id": "family-11-artist-084-thievery-corporation",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Thievery Corporation fills a missing survey branch for 084, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:tricky",
+        "object_id": "tricky",
+        "display_label": "Tricky",
+        "source_membership_id": "family-11-artist-084-tricky",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Tricky provides a recognizable survey branch for 084 without requiring collector-only context.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nicolas-jaar",
+        "object_id": "nicolas-jaar",
+        "display_label": "Nicolas Jaar",
+        "source_membership_id": "family-11-artist-084-nicolas-jaar",
+        "roles": [
+          "boundary",
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Nicolas Jaar fills a missing survey branch for 084, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "artist:nightmares-on-wax",
+        "object_id": "nightmares-on-wax",
+        "display_label": "Nightmares on Wax",
+        "source_membership_id": "family-11-artist-084-nightmares-on-wax",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Nightmares on Wax fills a missing survey branch for 084, adding anchor, bridge, or boundary coverage beyond the first generated pass.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_album_refs": [
+      {
+        "ref": "album:massive-attack-blue-lines",
+        "object_id": "massive-attack-blue-lines",
+        "display_label": "Blue Lines - Massive Attack",
+        "source_membership_id": "family-11-album-084-massive-attack-blue-lines",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Blue Lines is a useful album-level gateway for 084.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:massive-attack-mezzanine",
+        "object_id": "massive-attack-mezzanine",
+        "display_label": "Mezzanine - Massive Attack",
+        "source_membership_id": "family-11-album-084-massive-attack-mezzanine",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Mezzanine is a useful album-level gateway for 084.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:portishead-dummy",
+        "object_id": "portishead-dummy",
+        "display_label": "Dummy - Portishead",
+        "source_membership_id": "family-11-album-084-portishead-dummy",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Dummy is a useful album-level gateway for 084.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:air-moon-safari",
+        "object_id": "air-moon-safari",
+        "display_label": "Moon Safari - Air",
+        "source_membership_id": "family-11-album-084-air-moon-safari",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Moon Safari gives 084 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:tricky-maxinquaye",
+        "object_id": "tricky-maxinquaye",
+        "display_label": "Maxinquaye - Tricky",
+        "source_membership_id": "family-11-album-084-tricky-maxinquaye",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Maxinquaye gives 084 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:dj-shadow-endtroducing",
+        "object_id": "dj-shadow-endtroducing",
+        "display_label": "Endtroducing..... - DJ Shadow",
+        "source_membership_id": "family-11-album-084-dj-shadow-endtroducing",
+        "roles": [
+          "album_anchor"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Endtroducing..... is a useful album-level gateway for 084.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:moby-play",
+        "object_id": "moby-play",
+        "display_label": "Play - Moby",
+        "source_membership_id": "family-11-album-084-moby-play",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Play is a useful album-level gateway for 084.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:zero-7-simple-things",
+        "object_id": "zero-7-simple-things",
+        "display_label": "Simple Things - Zero 7",
+        "source_membership_id": "family-11-album-084-zero-7-simple-things",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Simple Things gives 084 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:bonobo-black-sands",
+        "object_id": "bonobo-black-sands",
+        "display_label": "Black Sands - Bonobo",
+        "source_membership_id": "family-11-album-084-bonobo-black-sands",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Black Sands gives 084 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "album:thievery-corporation-the-mirror-conspiracy",
+        "object_id": "thievery-corporation-the-mirror-conspiracy",
+        "display_label": "The Mirror Conspiracy - Thievery Corporation",
+        "source_membership_id": "family-11-album-084-thievery-corporation-the-mirror-conspiracy",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "The Mirror Conspiracy gives 084 an album, compilation, or EP gateway that the initial pass was missing.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "canonical_song_recording_refs": [
+      {
+        "ref": "song_recording:massive-attack-teardrop",
+        "object_id": "massive-attack-teardrop",
+        "display_label": "Teardrop - Massive Attack",
+        "source_membership_id": "family-11-song-084-massive-attack-teardrop",
+        "roles": [
+          "anchor",
+          "song_first"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "core",
+        "inclusion_reason": "Teardrop gives 084 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:portishead-sour-times",
+        "object_id": "portishead-sour-times",
+        "display_label": "Sour Times - Portishead",
+        "source_membership_id": "family-11-song-084-portishead-sour-times",
+        "roles": [
+          "anchor"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Sour Times gives 084 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:massive-attack-unfinished-sympathy",
+        "object_id": "massive-attack-unfinished-sympathy",
+        "display_label": "Unfinished Sympathy - Massive Attack",
+        "source_membership_id": "family-11-song-084-massive-attack-unfinished-sympathy",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Unfinished Sympathy gives 084 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:massive-attack-protection",
+        "object_id": "massive-attack-protection",
+        "display_label": "Protection - Massive Attack",
+        "source_membership_id": "family-11-song-084-massive-attack-protection",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Protection is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:moby-porcelain",
+        "object_id": "moby-porcelain",
+        "display_label": "Porcelain - Moby",
+        "source_membership_id": "family-11-song-084-moby-porcelain",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Porcelain gives 084 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:portishead-glory-box",
+        "object_id": "portishead-glory-box",
+        "display_label": "Glory Box - Portishead",
+        "source_membership_id": "family-11-song-084-portishead-glory-box",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Glory Box gives 084 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:portishead-roads",
+        "object_id": "portishead-roads",
+        "display_label": "Roads - Portishead",
+        "source_membership_id": "family-11-song-084-portishead-roads",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Roads is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:sneaker-pimps-6-underground",
+        "object_id": "sneaker-pimps-6-underground",
+        "display_label": "6 Underground - Sneaker Pimps",
+        "source_membership_id": "family-11-song-084-sneaker-pimps-6-underground",
+        "roles": [
+          "song_first",
+          "bridge"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "6 Underground is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:zero-7-destiny",
+        "object_id": "zero-7-destiny",
+        "display_label": "Destiny - Zero 7",
+        "source_membership_id": "family-11-song-084-zero-7-destiny",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "high",
+        "survey_tier": "standard",
+        "inclusion_reason": "Destiny is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:dj-shadow-midnight-in-a-perfect-world",
+        "object_id": "dj-shadow-midnight-in-a-perfect-world",
+        "display_label": "Midnight in a Perfect World - DJ Shadow",
+        "source_membership_id": "family-11-song-084-dj-shadow-midnight-in-a-perfect-world",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Midnight in a Perfect World gives 084 a clear song-level tap for recognition, contrast, or branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:massive-attack-black-milk",
+        "object_id": "massive-attack-black-milk",
+        "display_label": "Black Milk - Massive Attack",
+        "source_membership_id": "family-11-song-084-massive-attack-black-milk",
+        "roles": [
+          "deepening"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Black Milk is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:thievery-corporation-lebanese-blonde",
+        "object_id": "thievery-corporation-lebanese-blonde",
+        "display_label": "Lebanese Blonde - Thievery Corporation",
+        "source_membership_id": "family-11-song-084-thievery-corporation-lebanese-blonde",
+        "roles": [
+          "gateway"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "standard",
+        "inclusion_reason": "Lebanese Blonde is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "ref": "song_recording:rjd2-ghostwriter",
+        "object_id": "rjd2-ghostwriter",
+        "display_label": "Ghostwriter - RJD2",
+        "source_membership_id": "family-11-song-084-rjd2-ghostwriter",
+        "roles": [
+          "bridge"
+        ],
+        "recognition_tier": "medium",
+        "survey_tier": "edge",
+        "inclusion_reason": "Ghostwriter is a missing song-level survey object for 084, useful for recognition, bridge, contrast, or adaptive branching.",
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "survey_candidate_refs": [
+      {
+        "ref": "survey_candidate:survey-f11-artist-massive-attack-084",
+        "candidate_id": "survey-f11-artist-massive-attack-084",
+        "object_type": "artist",
+        "display_label": "Massive Attack",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-portishead-084",
+        "candidate_id": "survey-f11-artist-portishead-084",
+        "object_type": "artist",
+        "display_label": "Portishead",
+        "survey_page_role": "page1_core",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-zero-7-084",
+        "candidate_id": "survey-f11-artist-zero-7-084",
+        "object_type": "artist",
+        "display_label": "Zero 7",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-dj-shadow-084",
+        "candidate_id": "survey-f11-artist-dj-shadow-084",
+        "object_type": "artist",
+        "display_label": "DJ Shadow",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-bonobo-084",
+        "candidate_id": "survey-f11-artist-bonobo-084",
+        "object_type": "artist",
+        "display_label": "Bonobo",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-moby-084",
+        "candidate_id": "survey-f11-artist-moby-084",
+        "object_type": "artist",
+        "display_label": "Moby",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-air-084",
+        "candidate_id": "survey-f11-artist-air-084",
+        "object_type": "artist",
+        "display_label": "Air",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-thievery-corporation-084",
+        "candidate_id": "survey-f11-artist-thievery-corporation-084",
+        "object_type": "artist",
+        "display_label": "Thievery Corporation",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-morcheeba-084",
+        "candidate_id": "survey-f11-artist-morcheeba-084",
+        "object_type": "artist",
+        "display_label": "Morcheeba",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "artist_affinity_probe",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-tricky-084",
+        "candidate_id": "survey-f11-artist-tricky-084",
+        "object_type": "artist",
+        "display_label": "Tricky",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-unkle-084",
+        "candidate_id": "survey-f11-artist-unkle-084",
+        "object_type": "artist",
+        "display_label": "UNKLE",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-nightmares-on-wax-084",
+        "candidate_id": "survey-f11-artist-nightmares-on-wax-084",
+        "object_type": "artist",
+        "display_label": "Nightmares on Wax",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "deepening_only",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-rjd2-084",
+        "candidate_id": "survey-f11-artist-rjd2-084",
+        "object_type": "artist",
+        "display_label": "RJD2",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "bridge_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-artist-nicolas-jaar-084",
+        "candidate_id": "survey-f11-artist-nicolas-jaar-084",
+        "object_type": "artist",
+        "display_label": "Nicolas Jaar",
+        "survey_page_role": "page3_deep",
+        "survey_intent": "boundary_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-album-massive-attack-blue-lines-084",
+        "candidate_id": "survey-f11-album-massive-attack-blue-lines-084",
+        "object_type": "album",
+        "display_label": "Blue Lines",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-album-portishead-dummy-084",
+        "candidate_id": "survey-f11-album-portishead-dummy-084",
+        "object_type": "album",
+        "display_label": "Dummy",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-album-massive-attack-mezzanine-084",
+        "candidate_id": "survey-f11-album-massive-attack-mezzanine-084",
+        "object_type": "album",
+        "display_label": "Mezzanine",
+        "survey_page_role": "page1_core",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-album-tricky-maxinquaye-084",
+        "candidate_id": "survey-f11-album-tricky-maxinquaye-084",
+        "object_type": "album",
+        "display_label": "Maxinquaye",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-album-air-moon-safari-084",
+        "candidate_id": "survey-f11-album-air-moon-safari-084",
+        "object_type": "album",
+        "display_label": "Moon Safari",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      },
+      {
+        "ref": "survey_candidate:survey-f11-album-moby-play-084",
+        "candidate_id": "survey-f11-album-moby-play-084",
+        "object_type": "album",
+        "display_label": "Play",
+        "survey_page_role": "page2_adaptive",
+        "survey_intent": "album_world_test",
+        "review_status": "approved"
+      }
+    ],
+    "boundary_question_refs": [
+      {
+        "ref": "boundary_question:boundary-survey-f11-artist-nicolas-jaar-084",
+        "question_id": "boundary-survey-f11-artist-nicolas-jaar-084",
+        "display_label": "Nicolas Jaar",
+        "question_intent": "boundary_test"
+      }
+    ],
+    "dead_end_probe_refs": [
+      {
+        "ref": "dead_end_probe:probe-survey-f11-artist-nicolas-jaar-084",
+        "probe_id": "probe-survey-f11-artist-nicolas-jaar-084",
+        "entity_type": "artist",
+        "display_label": "Nicolas Jaar",
+        "recommended_surface": "deep_survey"
+      }
+    ],
+    "related_archetype_refs": [
+      "family_11/archetype_083",
+      "family_11/archetype_085"
+    ],
+    "before_archetype_refs": [
+      "family_11/archetype_083"
+    ],
+    "after_archetype_refs": [
+      "family_11/archetype_085"
+    ]
+  },
+  "source_references": {
+    "canonical_graph_family_11": {
+      "title": "Normalized canonical graph export, Family 11",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/family_11/normalized_family_11.json",
+      "source_type": "internal_graph_export",
+      "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "canonical_graph_review_bundle": {
+      "title": "Cartenza Canonical Graph Review Bundle v0.1",
+      "publisher": "Cartenza internal graph review",
+      "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+      "source_type": "internal_graph_audit",
+      "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+      "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "survey_candidate_sidecars_v0_2": {
+      "title": "Survey candidate sidecars v0.2",
+      "publisher": "Cartenza internal canonical graph",
+      "url": "data/canonical_graph/normalization_pass_2",
+      "source_type": "internal_graph_sidecar",
+      "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+      "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+      "source_relevance": "family_context_only"
+    },
+    "084_britannica_triphop": {
+      "title": "Trip-hop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/trip-hop",
+      "source_type": "reference",
+      "audit_use": "Direct support for trip-hop's Bristol roots, slowed beats, hip-hop/dub/soul mix, and moody atmosphere.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Direct support for trip-hop's Bristol roots, slowed beats, hip-hop/dub/soul mix, and moody atmosphere."
+    },
+    "084_allmusic_triphop": {
+      "title": "Trip-Hop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/trip-hop",
+      "source_type": "genre_overview",
+      "audit_use": "Style overview for downtempo breaks, samples, noir texture, and 1990s trip-hop identity.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Style overview for downtempo breaks, samples, noir texture, and 1990s trip-hop identity."
+    },
+    "084_massive_official": {
+      "title": "Massive Attack",
+      "publisher": "Massive Attack",
+      "url": "https://massiveattack.com/",
+      "source_type": "official_artist",
+      "audit_use": "Object support for Massive Attack as Bristol/trip-hop anchor.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Object support for Massive Attack as Bristol/trip-hop anchor."
+    },
+    "084_portishead_official": {
+      "title": "Portishead",
+      "publisher": "Portishead",
+      "url": "https://www.portishead.co.uk/",
+      "source_type": "official_artist",
+      "audit_use": "Object support for Portishead's noir, sample-based, vocal-centered trip-hop branch.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Object support for Portishead's noir, sample-based, vocal-centered trip-hop branch."
+    },
+    "allmusic_trip_hop": {
+      "title": "Trip-Hop",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/trip-hop-ma0000002902",
+      "source_type": "music_reference",
+      "audit_use": "Style markers for trip-hop and downtempo.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Style markers for trip-hop and downtempo."
+    },
+    "britannica_electronic_music": {
+      "title": "Electronic music",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/electronic-music",
+      "source_type": "reference",
+      "audit_use": "Electronic music technologies, composition, and popular-music applications.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Electronic music technologies, composition, and popular-music applications."
+    },
+    "britannica_hip_hop": {
+      "title": "Hip-hop",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/hip-hop",
+      "source_type": "reference",
+      "audit_use": "Hip-hop culture, DJing, MCing, dance, art, and social context.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "direct_archetype_support",
+      "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+    },
+    "allmusic_idm": {
+      "title": "IDM",
+      "publisher": "AllMusic",
+      "url": "https://www.allmusic.com/style/idm-ma0000004477",
+      "source_type": "music_reference",
+      "audit_use": "Style markers for IDM and experimental electronic music.",
+      "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+      "source_relevance": "example_object_support",
+      "why_fit": "Style markers for IDM and experimental electronic music."
+    }
+  },
+  "claim_level_source_audit": [
+    {
+      "claim_id": "084-claim-01",
+      "claim_text": "Trip-hop slows hip-hop breakbeat logic into dubby, nocturnal, sample-based atmosphere, with Bristol as the key scene marker.",
+      "source_ref_ids": [
+        "084_britannica_triphop",
+        "084_allmusic_triphop"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "short_definition",
+        "history_capsule"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "084-claim-02",
+      "claim_text": "Massive Attack anchor the spacious, dub-soul side where bass weight, guest voices, and political/mood intensity move slowly but heavily.",
+      "source_ref_ids": [
+        "084_massive_official",
+        "084_britannica_triphop"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "canonical_examples_block",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084",
+        "artist:massive-attack",
+        "album:massive-attack-blue-lines"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "084-claim-03",
+      "claim_text": "Portishead make the noir branch audible through spy-film guitar, turntable texture, haunted vocals, and breakbeats that feel suspended in smoke.",
+      "source_ref_ids": [
+        "084_portishead_official",
+        "084_allmusic_triphop"
+      ],
+      "confidence": "high",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "what_made_it_distinct",
+        "canonical_examples_block"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084",
+        "artist:portishead",
+        "song_recording:portishead-sour-times"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "084-claim-04",
+      "claim_text": "DJ Shadow and Tricky widen the road toward instrumental sample collage and darker vocal/persona experiments without turning it into festival dance music.",
+      "source_ref_ids": [
+        "084_allmusic_triphop",
+        "084_britannica_triphop"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+      "module_usage": [
+        "related_roads_lineage_module",
+        "caution"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084",
+        "artist:dj-shadow",
+        "artist:tricky"
+      ],
+      "audit_status": "external_source_supported"
+    },
+    {
+      "claim_id": "084-trip_hop_downtempo_nocturnal_electronic-boundary",
+      "claim_text": "Trip-Hop / Downtempo / Nocturnal Electronic's boundary is clearest when slow breakbeat and deep bass appear together rather than as isolated period markers.",
+      "source_ref_ids": [
+        "084_britannica_triphop",
+        "084_allmusic_triphop"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084",
+        "artist:massive-attack",
+        "artist:portishead"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "084-trip_hop_downtempo_nocturnal_electronic-examples",
+      "claim_text": "Massive Attack, Portishead, Blue Lines - Massive Attack gives Trip-Hop / Downtempo / Nocturnal Electronic concrete anchors because the examples expose sample haze inside the approved Atlas object set.",
+      "source_ref_ids": [
+        "084_allmusic_triphop",
+        "084_massive_official"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084",
+        "artist:massive-attack",
+        "artist:portishead"
+      ],
+      "audit_status": "source_supported"
+    },
+    {
+      "claim_id": "084-trip_hop_downtempo_nocturnal_electronic-distinct",
+      "claim_text": "The key musical distinction in Trip-Hop / Downtempo / Nocturnal Electronic is The distinct feature is restraint: heavy feeling without festival impact, groove without rush, which separates it from neighboring roads even when era or audience overlaps.",
+      "source_ref_ids": [
+        "084_britannica_triphop",
+        "084_massive_official"
+      ],
+      "confidence": "medium",
+      "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+      "module_usage": [
+        "history_capsule",
+        "region_scene_page",
+        "mission_detail_history_module",
+        "what_to_listen_for_prompt"
+      ],
+      "graph_refs": [
+        "family_11/archetype_084",
+        "artist:massive-attack",
+        "artist:portishead"
+      ],
+      "audit_status": "source_supported"
+    }
+  ],
+  "explainer_content": {
+    "short_definition": "Slow breaks, dub bass, haunted samples, and late-night electronic atmosphere.",
+    "history_capsule": "Trip-hop and downtempo emerged around Bristol and adjacent sample culture by slowing the dance impulse into mood, shadow, and groove.",
+    "why_it_mattered": "It gave electronic music a cinematic, intimate, nocturnal vocabulary that crossed into alternative and pop listening.",
+    "what_made_it_distinct": "The distinct feature is restraint: heavy feeling without festival impact, groove without rush.",
+    "what_to_listen_for": [
+      "slow breakbeat",
+      "deep bass",
+      "sample haze",
+      "noir vocal",
+      "dub space"
+    ],
+    "canonical_example_rationales": [
+      {
+        "example_ref": "artist:massive-attack",
+        "example_type": "artist",
+        "display_label": "Massive Attack",
+        "why_this_example_matters": "Massive Attack anchors Trip-Hop / Downtempo / Nocturnal Electronic by making programmed pulse and bass movement easier to hear.",
+        "what_to_listen_for": [
+          "slow breakbeat",
+          "deep bass"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "artist:portishead",
+        "example_type": "artist",
+        "display_label": "Portishead",
+        "why_this_example_matters": "Portishead anchors Trip-Hop / Downtempo / Nocturnal Electronic by making bass movement and synth timbre as hook easier to hear.",
+        "what_to_listen_for": [
+          "deep bass",
+          "sample haze"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:massive-attack-blue-lines",
+        "example_type": "album",
+        "display_label": "Blue Lines - Massive Attack",
+        "why_this_example_matters": "Blue Lines - Massive Attack anchors Trip-Hop / Downtempo / Nocturnal Electronic by making synth timbre as hook and build-and-release structure easier to hear.",
+        "what_to_listen_for": [
+          "sample haze",
+          "noir vocal"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "album:massive-attack-mezzanine",
+        "example_type": "album",
+        "display_label": "Mezzanine - Massive Attack",
+        "why_this_example_matters": "Mezzanine - Massive Attack anchors Trip-Hop / Downtempo / Nocturnal Electronic by making build-and-release structure and texture and space as emotion easier to hear.",
+        "what_to_listen_for": [
+          "noir vocal",
+          "dub space"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:massive-attack-teardrop",
+        "example_type": "song_recording",
+        "display_label": "Teardrop - Massive Attack",
+        "why_this_example_matters": "Teardrop - Massive Attack anchors Trip-Hop / Downtempo / Nocturnal Electronic by making texture and space as emotion and programmed pulse easier to hear.",
+        "what_to_listen_for": [
+          "dub space"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      },
+      {
+        "example_ref": "song_recording:portishead-sour-times",
+        "example_type": "song_recording",
+        "display_label": "Sour Times - Portishead",
+        "why_this_example_matters": "Sour Times - Portishead anchors Trip-Hop / Downtempo / Nocturnal Electronic by making programmed pulse and bass movement easier to hear.",
+        "what_to_listen_for": [
+          "slow breakbeat",
+          "deep bass"
+        ],
+        "graph_ref_validation_status": "validated_in_normalized_family_export"
+      }
+    ],
+    "before_after_related_roads": {
+      "before": [
+        "family_11/archetype_083"
+      ],
+      "after": [
+        "family_11/archetype_085"
+      ],
+      "related": [
+        "family_11/archetype_083",
+        "family_11/archetype_085"
+      ],
+      "copy": "Use Trip-Hop / Downtempo / Nocturnal Electronic as a contextual road inside Electronic, Dance, Club, Industrial, Experimental Pop; related roads explain contrast, sequence, and survey uncertainty while staying inside Alpha scope."
+    },
+    "did_you_know_cards": [
+      {
+        "card_id": "084-dyk-1",
+        "copy": "Bristol is central, but trip-hop also includes instrumental and international downtempo branches.",
+        "source_ref_ids": [
+          "084_britannica_triphop",
+          "084_allmusic_triphop"
+        ]
+      },
+      {
+        "card_id": "084-dyk-2",
+        "copy": "Portishead and Massive Attack are different emotional temperatures inside the same road.",
+        "source_ref_ids": [
+          "084_massive_official",
+          "084_britannica_triphop"
+        ]
+      }
+    ],
+    "mission_description_snippets": [
+      "What this route tests: whether trip-hop / downtempo / nocturnal electronic is a useful listening-history doorway for this user.",
+      "Why this region explains the batch: it gives context around canonical anchors while staying inside Alpha scope."
+    ],
+    "atlas_region_page_copy_blocks": [
+      "Slow breaks, dub bass, haunted samples, and late-night electronic atmosphere.",
+      "It gave electronic music a cinematic, intimate, nocturnal vocabulary that crossed into alternative and pop listening.",
+      "The distinct feature is restraint: heavy feeling without festival impact, groove without rush."
+    ],
+    "dead_end_false_nearby_caution_language": "Do not classify all chilled electronic music as trip-hop; listen for breakbeat, dub/soul, and noir sample language.",
+    "personalization_hooks": [
+      {
+        "hook_id": "084-affinity-positive",
+        "required_state_fields": [
+          "atlas_state.archetype_affinity[084]",
+          "atlas_state.family_affinity[11]"
+        ],
+        "predicate": "atlas_state.archetype_affinity[084] >= 0.65 || atlas_state.family_affinity[11] >= 0.65",
+        "copy_variant": "Your Atlas signals make Trip-Hop / Downtempo / Nocturnal Electronic useful as a contextual landmark.",
+        "fallback_copy": "Use Trip-Hop / Downtempo / Nocturnal Electronic as context until repeated evidence makes it a stronger personal lane.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "084-known-song",
+        "required_state_fields": [
+          "atlas_state.user_known_song_refs",
+          "atlas_state.survey_positive_candidate_refs"
+        ],
+        "predicate": "atlas_state.user_known_song_refs intersects canonical_song_recording_refs for family_11/archetype_084 || atlas_state.survey_positive_candidate_refs intersects survey_candidate_refs for family_11/archetype_084",
+        "copy_variant": "Known songs can make this road easier to place because they expose its core listening clues.",
+        "fallback_copy": "Use the canonical examples to orient Trip-Hop / Downtempo / Nocturnal Electronic before personalizing it.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "084-false-nearby-caution",
+        "required_state_fields": [
+          "atlas_state.dead_end_probe_results",
+          "atlas_state.boundary_question_results",
+          "atlas_state.survey_negative_candidate_refs"
+        ],
+        "predicate": "atlas_state.dead_end_probe_results has repeated_negative for family_11/archetype_084 || atlas_state.boundary_question_results has boundary_negative for family_11/archetype_084",
+        "copy_variant": "A familiar anchor here can mean nostalgia, context, or one-song recognition rather than a strong personal lane. Treat the signal as stronger only when explicit Atlas state repeats across songs, artists, albums, or survey candidates.",
+        "fallback_copy": "No false-nearby caution is active for Trip-Hop / Downtempo / Nocturnal Electronic.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "084-alpha-context",
+        "required_state_fields": [
+          "atlas_state.completed_mission_ids",
+          "atlas_state.active_mission_id",
+          "atlas_state.first_batch_mission_ids",
+          "atlas_state.related_mission_ids"
+        ],
+        "predicate": "atlas_state.active_mission_id in atlas_state.first_batch_mission_ids || atlas_state.completed_mission_ids intersects atlas_state.related_mission_ids for family_11/archetype_084 || atlas_state.related_mission_ids references family_11/archetype_084",
+        "copy_variant": "This road can explain why the active Alpha route points nearby.",
+        "fallback_copy": "This road is not in Alpha batch yet; you may encounter this road later.",
+        "state_field_status": "proposed"
+      },
+      {
+        "hook_id": "084-saved-or-skipped-object",
+        "required_state_fields": [
+          "atlas_state.user_saved_artist_refs",
+          "atlas_state.user_skipped_artist_refs",
+          "atlas_state.user_disliked_song_refs"
+        ],
+        "predicate": "atlas_state.user_saved_artist_refs intersects canonical_artist_refs for family_11/archetype_084 || atlas_state.user_skipped_artist_refs intersects canonical_artist_refs for family_11/archetype_084 || atlas_state.user_disliked_song_refs intersects canonical_song_recording_refs for family_11/archetype_084",
+        "copy_variant": "Saved, skipped, or disliked objects can tune this road without changing its canonical identity.",
+        "fallback_copy": "No saved, skipped, or disliked object signal is active for Trip-Hop / Downtempo / Nocturnal Electronic.",
+        "state_field_status": "proposed"
+      }
+    ],
+    "source_references": {
+      "canonical_graph_family_11": {
+        "title": "Normalized canonical graph export, Family 11",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/family_11/normalized_family_11.json",
+        "source_type": "internal_graph_export",
+        "audit_use": "Family, archetype, membership, role, survey-tier, and non-mutation graph identity.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "canonical_graph_review_bundle": {
+        "title": "Cartenza Canonical Graph Review Bundle v0.1",
+        "publisher": "Cartenza internal graph review",
+        "url": "docs/reviews/canonical_graph/waymark_canonical_graph_review_bundle_v0_1.md",
+        "source_type": "internal_graph_audit",
+        "audit_use": "Archetype summary, object counts, boundary risks, and graph gap posture.",
+        "rights_note": "Internal factual audit metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "survey_candidate_sidecars_v0_2": {
+        "title": "Survey candidate sidecars v0.2",
+        "publisher": "Cartenza internal canonical graph",
+        "url": "data/canonical_graph/normalization_pass_2",
+        "source_type": "internal_graph_sidecar",
+        "audit_use": "Survey candidate refs, boundary-question refs, and dead-end probe refs.",
+        "rights_note": "Internal factual graph metadata; no third-party prose copied.",
+        "source_relevance": "family_context_only"
+      },
+      "084_britannica_triphop": {
+        "title": "Trip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trip-hop",
+        "source_type": "reference",
+        "audit_use": "Direct support for trip-hop's Bristol roots, slowed beats, hip-hop/dub/soul mix, and moody atmosphere.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for trip-hop's Bristol roots, slowed beats, hip-hop/dub/soul mix, and moody atmosphere."
+      },
+      "084_allmusic_triphop": {
+        "title": "Trip-Hop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/trip-hop",
+        "source_type": "genre_overview",
+        "audit_use": "Style overview for downtempo breaks, samples, noir texture, and 1990s trip-hop identity.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Style overview for downtempo breaks, samples, noir texture, and 1990s trip-hop identity."
+      },
+      "084_massive_official": {
+        "title": "Massive Attack",
+        "publisher": "Massive Attack",
+        "url": "https://massiveattack.com/",
+        "source_type": "official_artist",
+        "audit_use": "Object support for Massive Attack as Bristol/trip-hop anchor.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for Massive Attack as Bristol/trip-hop anchor."
+      },
+      "084_portishead_official": {
+        "title": "Portishead",
+        "publisher": "Portishead",
+        "url": "https://www.portishead.co.uk/",
+        "source_type": "official_artist",
+        "audit_use": "Object support for Portishead's noir, sample-based, vocal-centered trip-hop branch.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for Portishead's noir, sample-based, vocal-centered trip-hop branch."
+      },
+      "allmusic_trip_hop": {
+        "title": "Trip-Hop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/trip-hop-ma0000002902",
+        "source_type": "music_reference",
+        "audit_use": "Style markers for trip-hop and downtempo.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Style markers for trip-hop and downtempo."
+      },
+      "britannica_electronic_music": {
+        "title": "Electronic music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-music",
+        "source_type": "reference",
+        "audit_use": "Electronic music technologies, composition, and popular-music applications.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Electronic music technologies, composition, and popular-music applications."
+      },
+      "britannica_hip_hop": {
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_type": "reference",
+        "audit_use": "Hip-hop culture, DJing, MCing, dance, art, and social context.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+      },
+      "allmusic_idm": {
+        "title": "IDM",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/idm-ma0000004477",
+        "source_type": "music_reference",
+        "audit_use": "Style markers for IDM and experimental electronic music.",
+        "rights_note": "Use for factual paraphrase only; no lyrics, long quotations, proprietary images, or third-party prose blocks.",
+        "source_relevance": "example_object_support",
+        "why_fit": "Style markers for IDM and experimental electronic music."
+      }
+    },
+    "claim_level_source_audit": [
+      {
+        "claim_id": "084-claim-01",
+        "claim_text": "Trip-hop slows hip-hop breakbeat logic into dubby, nocturnal, sample-based atmosphere, with Bristol as the key scene marker.",
+        "source_ref_ids": [
+          "084_britannica_triphop",
+          "084_allmusic_triphop"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "short_definition",
+          "history_capsule"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "084-claim-02",
+        "claim_text": "Massive Attack anchor the spacious, dub-soul side where bass weight, guest voices, and political/mood intensity move slowly but heavily.",
+        "source_ref_ids": [
+          "084_massive_official",
+          "084_britannica_triphop"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "canonical_examples_block",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084",
+          "artist:massive-attack",
+          "album:massive-attack-blue-lines"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "084-claim-03",
+        "claim_text": "Portishead make the noir branch audible through spy-film guitar, turntable texture, haunted vocals, and breakbeats that feel suspended in smoke.",
+        "source_ref_ids": [
+          "084_portishead_official",
+          "084_allmusic_triphop"
+        ],
+        "confidence": "high",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "what_made_it_distinct",
+          "canonical_examples_block"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084",
+          "artist:portishead",
+          "song_recording:portishead-sour-times"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "084-claim-04",
+        "claim_text": "DJ Shadow and Tricky widen the road toward instrumental sample collage and darker vocal/persona experiments without turning it into festival dance music.",
+        "source_ref_ids": [
+          "084_allmusic_triphop",
+          "084_britannica_triphop"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 source-recovery claim; archetype-specific and tied to selected source relevance metadata.",
+        "module_usage": [
+          "related_roads_lineage_module",
+          "caution"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084",
+          "artist:dj-shadow",
+          "artist:tricky"
+        ],
+        "audit_status": "external_source_supported"
+      },
+      {
+        "claim_id": "084-trip_hop_downtempo_nocturnal_electronic-boundary",
+        "claim_text": "Trip-Hop / Downtempo / Nocturnal Electronic's boundary is clearest when slow breakbeat and deep bass appear together rather than as isolated period markers.",
+        "source_ref_ids": [
+          "084_britannica_triphop",
+          "084_allmusic_triphop"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084",
+          "artist:massive-attack",
+          "artist:portishead"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "084-trip_hop_downtempo_nocturnal_electronic-examples",
+        "claim_text": "Massive Attack, Portishead, Blue Lines - Massive Attack gives Trip-Hop / Downtempo / Nocturnal Electronic concrete anchors because the examples expose sample haze inside the approved Atlas object set.",
+        "source_ref_ids": [
+          "084_allmusic_triphop",
+          "084_massive_official"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084",
+          "artist:massive-attack",
+          "artist:portishead"
+        ],
+        "audit_status": "source_supported"
+      },
+      {
+        "claim_id": "084-trip_hop_downtempo_nocturnal_electronic-distinct",
+        "claim_text": "The key musical distinction in Trip-Hop / Downtempo / Nocturnal Electronic is The distinct feature is restraint: heavy feeling without festival impact, groove without rush, which separates it from neighboring roads even when era or audience overlaps.",
+        "source_ref_ids": [
+          "084_britannica_triphop",
+          "084_massive_official"
+        ],
+        "confidence": "medium",
+        "notes": "v0.2.2 density-pass claim derived from the archetype-specific render seed and relevant source set.",
+        "module_usage": [
+          "history_capsule",
+          "region_scene_page",
+          "mission_detail_history_module",
+          "what_to_listen_for_prompt"
+        ],
+        "graph_refs": [
+          "family_11/archetype_084",
+          "artist:massive-attack",
+          "artist:portishead"
+        ],
+        "audit_status": "source_supported"
+      }
+    ],
+    "editorial_status": "draft_research",
+    "source_coverage_status": "source_recovered_v0_2_2"
+  },
+  "graph_gap_observations": [],
+  "rights_policy": {
+    "rights_status": "pass",
+    "rights_notes": "Original Cartenza Atlas educational prose and factual source summaries. No lyrics, long quotations, third-party copy blocks, album art, artist photos, or scraping-derived proprietary metadata dependencies."
+  },
+  "alpha_v0_mission_boundary": {
+    "allowed_language_policy": "Contextual Alpha language only: related mission, included in first batch, what this route tests, why this region explains the batch, not in Alpha batch yet, you may encounter this road later.",
+    "forbidden_language_policy": "No runtime route-creation language."
+  },
+  "non_mutation_policy": {
+    "status": "pass",
+    "assertion": "Sidecar-only explainer pack. Canonical graph identity remains unchanged."
+  },
+  "editorial_status": "draft_research",
+  "process_audit_metadata": {
+    "source_package": "AtlasExplainerPack_v0_2_1_SourceDeepened",
+    "patch_action": "v0.2.2 source-recovery pass using archetype-specific notes, source relevance metadata, proof-pack restoration, and anti-template validation.",
+    "non_mutation_assertion": "No canonical graph identity, membership, candidate, boundary, or dead-end refs were changed.",
+    "research_note_file": "data/atlas_explainer/source_recovery_research_notes/agent_c_families_08_11.json"
+  },
+  "research_trace": {
+    "archetype_query": "Trip-Hop / Downtempo / Nocturnal Electronic: Massive Attack, Portishead, Tricky, DJ Shadow, Morcheeba, Bristol, slowed breakbeats, dub, soul, noir atmosphere.",
+    "selected_sources": [
+      {
+        "source_ref_id": "084_britannica_triphop",
+        "title": "Trip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/trip-hop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Direct support for trip-hop's Bristol roots, slowed beats, hip-hop/dub/soul mix, and moody atmosphere."
+      },
+      {
+        "source_ref_id": "084_allmusic_triphop",
+        "title": "Trip-Hop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/trip-hop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Style overview for downtempo breaks, samples, noir texture, and 1990s trip-hop identity."
+      },
+      {
+        "source_ref_id": "084_massive_official",
+        "title": "Massive Attack",
+        "publisher": "Massive Attack",
+        "url": "https://massiveattack.com/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for Massive Attack as Bristol/trip-hop anchor."
+      },
+      {
+        "source_ref_id": "084_portishead_official",
+        "title": "Portishead",
+        "publisher": "Portishead",
+        "url": "https://www.portishead.co.uk/",
+        "source_relevance": "example_object_support",
+        "why_fit": "Object support for Portishead's noir, sample-based, vocal-centered trip-hop branch."
+      },
+      {
+        "source_ref_id": "allmusic_trip_hop",
+        "title": "Trip-Hop",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/trip-hop-ma0000002902",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Style markers for trip-hop and downtempo."
+      },
+      {
+        "source_ref_id": "britannica_electronic_music",
+        "title": "Electronic music",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/electronic-music",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Electronic music technologies, composition, and popular-music applications."
+      },
+      {
+        "source_ref_id": "britannica_hip_hop",
+        "title": "Hip-hop",
+        "publisher": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/art/hip-hop",
+        "source_relevance": "direct_archetype_support",
+        "why_fit": "Hip-hop culture, DJing, MCing, dance, art, and social context."
+      },
+      {
+        "source_ref_id": "allmusic_idm",
+        "title": "IDM",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/idm-ma0000004477",
+        "source_relevance": "example_object_support",
+        "why_fit": "Style markers for IDM and experimental electronic music."
+      }
+    ],
+    "rejected_sources": [
+      {
+        "source_ref_id": "084_reject_edm",
+        "title": "EDM",
+        "publisher": "AllMusic",
+        "url": "https://www.allmusic.com/style/edm",
+        "source_type": "genre_overview",
+        "source_relevance": "wrong_context",
+        "why_rejected": "Festival EDM's drop-maximalism is the wrong context for trip-hop's slow, nocturnal, downtempo language."
+      },
+      {
+        "title": "generic web-summary",
+        "url": "",
+        "why_rejected": "Rejected as wrong_context or too generic for this archetype-level claim audit."
+      }
+    ],
+    "why_selected_sources_fit": "The selected sources directly support trip-hop/downtempo and the Massive Attack/Portishead object poles, avoiding generic electronic-dance framing."
+  },
+  "source_relevance_validation": {
+    "direct_or_example_source_count": 8,
+    "wrong_context_source_count": 0
+  },
+  "current_graph_profile_ladder_trace": {
+    "source_graph_artifact": "data/canonical_graph/current/canonical_graph_active_inventory.json",
+    "active_inventory_candidates_for_archetype": 79,
+    "scene_anchor_refs": [
+      "song|portishead|sour times",
+      "artist_anchor|massive attack|massive attack",
+      "song|sneaker pimps|6 underground",
+      "song|air|sexy boy"
+    ],
+    "ladder_example_refs": [
+      "song|moby|natural blues",
+      "song|zero 7|destiny",
+      "song|xx|intro",
+      "album|tricky|maxinquaye",
+      "song|morcheeba|trigger hippie",
+      "song|kruder and dorfmeister|black baby",
+      "song|bowery electric|fear of flying",
+      "song|hooverphonic|2 wicky"
+    ],
+    "non_mutation_assertion": "v0.3 profile ladders select render examples from current graph rows only; they do not mutate canonical graph identity, membership, refs, or recognition bands."
+  }
+}
